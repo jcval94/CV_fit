@@ -9,6 +9,7 @@ from typing import Any
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from vacancy_pipeline import CANONICAL_VACANCY_SCHEMA_VERSION
+from vacancy_pipeline.language import infer_application_language
 from vacancy_pipeline.models import ProvenanceRef, VacancyRecord
 
 
@@ -104,8 +105,6 @@ def normalize_posted_date(value: Any) -> tuple[str | None, str | None]:
 
 
 def stable_identity(company: str, role_title: str, location_raw: str | None, url: str | None) -> tuple[str, str]:
-    # Source-agnostic identity allows GPTW and Vacantes feeds to collapse the
-    # same opening even when source-native IDs differ.
     base = "|".join((_norm_key(company), _norm_key(role_title), _norm_key(location_raw)))
     if not _norm_key(location_raw) and url:
         base += "|" + _norm_key(url)
@@ -135,6 +134,11 @@ def _validate_score(value: Any, label: str, errors: list[str]) -> None:
         errors.append(f"{label} must be a number between 0 and 100")
 
 
+def _validate_optional_language(value: Any, label: str, errors: list[str]) -> None:
+    if value is not None and not isinstance(value, str):
+        errors.append(f"{label} must be a string when provided")
+
+
 def validate_source_document(data: Any, source_path: str) -> str:
     errors: list[str] = []
     source_format = detect_source_format(data)
@@ -160,6 +164,7 @@ def validate_source_document(data: Any, source_path: str) -> str:
             if item.get("location") is not None and not isinstance(item.get("location"), dict):
                 errors.append(f"{prefix}.location must be an object")
             _validate_score(item.get("fit_score"), f"{prefix}.fit_score", errors)
+            _validate_optional_language(item.get("application_language", item.get("language")), f"{prefix}.application_language", errors)
     else:
         entries = data["vacantes"]
         metadata = data.get("metadata") or {}
@@ -183,6 +188,7 @@ def validate_source_document(data: Any, source_path: str) -> str:
             if item.get("razon_ajuste") is not None and not isinstance(item.get("razon_ajuste"), dict):
                 errors.append(f"{prefix}.razon_ajuste must be an object")
             _validate_score(item.get("porcentaje_ajuste"), f"{prefix}.porcentaje_ajuste", errors)
+            _validate_optional_language(item.get("idioma_postulacion", item.get("application_language")), f"{prefix}.idioma_postulacion", errors)
 
     if errors:
         raise VacancyValidationError(source_path, errors)
@@ -215,6 +221,17 @@ def adapt_source_document(
             posted_date, posted_raw = normalize_posted_date(item.get("posted_date"))
             url = extract_url(item.get("url"))
             vacancy_id, identity_key = stable_identity(company, role, location_raw, url)
+            tech_stack = _clean_list(item.get("tech_stack"))
+            requirements = _clean_list(item.get("requirements"))
+            responsibilities = _clean_list(item.get("responsibilities"))
+            description = _clean_string(item.get("description"))
+            language, language_confidence, language_source = infer_application_language(
+                role_title=role,
+                description=description,
+                requirements=requirements,
+                responsibilities=responsibilities,
+                explicit_language=_clean_string(item.get("application_language", item.get("language"))),
+            )
             kwargs = dict(
                 schema_version=CANONICAL_VACANCY_SCHEMA_VERSION,
                 vacancy_id=vacancy_id,
@@ -229,10 +246,13 @@ def adapt_source_document(
                 posted_date_raw=posted_raw,
                 url=url,
                 salary=_clean_string(item.get("salary")),
-                tech_stack=_clean_list(item.get("tech_stack")),
-                requirements=_clean_list(item.get("requirements")),
-                responsibilities=_clean_list(item.get("responsibilities")),
-                description=_clean_string(item.get("description")),
+                tech_stack=tech_stack,
+                requirements=requirements,
+                responsibilities=responsibilities,
+                description=description,
+                application_language=language,
+                language_confidence=language_confidence,
+                language_source=language_source,
                 fit_score=float(item["fit_score"]) if item.get("fit_score") is not None else None,
                 fit_summary=_clean_string(item.get("fit_evaluation")),
                 fit_strengths=_clean_list(item.get("fit_strengths")),
@@ -263,6 +283,17 @@ def adapt_source_document(
             posted_date, posted_raw = normalize_posted_date(item.get("fecha_publicacion"))
             url = extract_url(item.get("url_postulacion"))
             vacancy_id, identity_key = stable_identity(company, role, location_raw, url)
+            tech_stack = _clean_list(item.get("stack_clave_detectado"))
+            requirements = _clean_list(item.get("requirements"))
+            responsibilities = _clean_list(item.get("responsibilities"))
+            description = _clean_string(item.get("description"))
+            language, language_confidence, language_source = infer_application_language(
+                role_title=role,
+                description=description,
+                requirements=requirements,
+                responsibilities=responsibilities,
+                explicit_language=_clean_string(item.get("idioma_postulacion", item.get("application_language"))),
+            )
             kwargs = dict(
                 schema_version=CANONICAL_VACANCY_SCHEMA_VERSION,
                 vacancy_id=vacancy_id,
@@ -277,10 +308,13 @@ def adapt_source_document(
                 posted_date_raw=posted_raw,
                 url=url,
                 salary=_clean_string(item.get("rango_salarial")),
-                tech_stack=_clean_list(item.get("stack_clave_detectado")),
-                requirements=_clean_list(item.get("requirements")),
-                responsibilities=_clean_list(item.get("responsibilities")),
-                description=_clean_string(item.get("description")),
+                tech_stack=tech_stack,
+                requirements=requirements,
+                responsibilities=responsibilities,
+                description=description,
+                application_language=language,
+                language_confidence=language_confidence,
+                language_source=language_source,
                 fit_score=float(item["porcentaje_ajuste"]) if item.get("porcentaje_ajuste") is not None else None,
                 fit_summary=_clean_string(reason.get("resumen")),
                 fit_strengths=_clean_list(reason.get("puntos_fuertes")),
