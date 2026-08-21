@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-21",
+    "total_vacantes_encontradas": 5,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "09a0aee1be74",
+      "puesto": "Machine Learning Engineer - Fraud",
+      "empresa": "PayJoy",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "Mexico City, CDMX",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "Hace 1 semana",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Fintech con foco directo en fraude y riesgo crediticio.",
+          "Responsabilidad de desarrollar, optimizar y desplegar modelos de ML en producción.",
+          "Aprovecha experiencia bancaria, detección de fraude, scoring, Python/SQL y modelos end-to-end."
+        ],
+        "posibles_gaps": [
+          "El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.",
+          "La publicación oficial no muestra rango salarial."
+        ],
+        "resumen": "Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "Fraud detection",
+        "Credit risk",
+        "Model deployment",
+        "Python",
+        "Data Science"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.lever.co/payjoy/4eabe147-7c4c-44a1-bc36-6cec2c47d5c5"
+    },
+    {
+      "id_vacante": "fd925341b8ab",
+      "puesto": "Data Scientist NLP (AI) Engineer",
+      "empresa": "Ford Motor Company",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Mexico City, Mexico / Remote",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 1-2 días",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol remoto para México con foco explícito en NLP, LLMs y aplicaciones de IA.",
+          "Incluye colaboración con producto, ingeniería, analytics y negocio.",
+          "Encaja con GenAI, evaluación de modelos, responsible AI y traducción de problemas complejos a soluciones aplicadas."
+        ],
+        "posibles_gaps": [
+          "No aprovecha directamente banca, fraude o riesgo.",
+          "Puede ser más especializado en NLP/AI engineering que en data science financiero."
+        ],
+        "resumen": "Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global."
+      },
+      "stack_clave_detectado": [
+        "NLP",
+        "LLMs",
+        "GCP",
+        "Responsible AI",
+        "Model evaluation",
+        "AI applications"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://www.careers.ford.com/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056"
+    },
+    {
+      "id_vacante": "e2b3da2d04b9",
+      "puesto": "Senior Decision Scientist",
+      "empresa": "Instructure",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Mexico City, Mexico",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 1-7 días",
+      "porcentaje_ajuste": 91,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol senior orientado a decisiones estratégicas, producto, crecimiento e impacto de negocio.",
+          "Requiere ownership end-to-end de iniciativas analíticas y trabajo con stakeholders senior.",
+          "Fuerte ajuste con experimentación, modelado, storytelling ejecutivo y liderazgo técnico."
+        ],
+        "posibles_gaps": [
+          "Menor conexión directa con banca, fraude y riesgo.",
+          "La fuente oficial de postulación no fue visible; el enlace disponible proviene de un agregador con detalle salarial."
+        ],
+        "resumen": "Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible."
+      },
+      "stack_clave_detectado": [
+        "Decision Science",
+        "Machine Learning",
+        "A/B testing",
+        "SQL",
+        "Product analytics",
+        "Stakeholder management"
+      ],
+      "rango_salarial": "MEX$911,000 - MEX$1,100,000 por año",
+      "url_postulacion": "https://startup.jobs/senior-decision-scientist-instructure-inc-8029739"
+    },
+    {
+      "id_vacante": "992c76d717b4",
+      "puesto": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
+      "empresa": "Infor",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Ciudad de México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "Hace 3-6 días",
+      "porcentaje_ajuste": 89,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Senior individual contributor con ownership de workstreams analíticos end-to-end.",
+          "Trabaja con adopción, retención, expansión y crecimiento, traduciendo problemas estratégicos en análisis rigurosos.",
+          "Buen ajuste con Python, SQL, modelos de negocio, comunicación ejecutiva y liderazgo técnico sin gestión formal."
+        ],
+        "posibles_gaps": [
+          "No se observa foco explícito en banca, riesgo, fraude o GenAI.",
+          "La información pública recuperada no muestra rango salarial ni stack completo."
+        ],
+        "resumen": "Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Growth analytics",
+        "Strategy analytics",
+        "Stakeholder management"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/scientist-senior-at-infor-4441024382"
+    },
+    {
+      "id_vacante": "d4591a7e5f49",
+      "puesto": "Data Scientist (Python/SQL) - Remote",
+      "empresa": "DataKnow",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 6-7 días",
+      "porcentaje_ajuste": 87,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Descripción en español y modalidad remota en México.",
+          "Responsabilidad clara de desarrollar e implementar modelos de ML desde experimentación hasta producción.",
+          "Pide Python, SQL, MLOps end-to-end y diseño de experimentos rigurosos."
+        ],
+        "posibles_gaps": [
+          "No está marcado como Senior/Lead y no muestra foco financiero.",
+          "Empresa menos prioritaria que fintech, banca o big tech."
+        ],
+        "resumen": "Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "MLOps",
+        "Experimentación",
+        "Producción"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/data-scientist-at-dataknow-4453274739"
+    }
+  ]
+}
