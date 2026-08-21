@@ -4,6 +4,10 @@ artifacts/rag/
 # Live/generated CV application outputs
 outputs/
 
+# Local presentation identity/contact overrides
+cv_presentation/identity.local.yaml
+cv_presentation/identity.private.yaml
+
 # Local secrets
 .env
 

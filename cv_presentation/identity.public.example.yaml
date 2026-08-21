@@ -1,0 +1,8 @@
+# Only fields intentionally safe for a public repository belong here.
+# Keep email and phone out of this file; provide them through environment variables
+# only when rendering through a private artifact path.
+name: null
+location: null
+linkedin: null
+github: null
+website: null

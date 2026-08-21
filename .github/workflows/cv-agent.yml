@@ -7,6 +7,7 @@ on:
       - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
+      - "cv_presentation/**"
       - "rag/**"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
@@ -23,6 +24,7 @@ on:
       - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
+      - "cv_presentation/**"
       - "rag/**"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
@@ -55,13 +57,14 @@ jobs:
           python-version: "3.12"
       - name: Install ADK project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Run deterministic agent, matching, fidelity and telemetry tests
+      - name: Run deterministic agent, matching, fidelity, telemetry and presentation tests
         run: >-
           python -m unittest
           tests.test_cv_matching
           tests.test_cv_validators
           tests.test_cv_agent_workflow
           tests.test_cv_telemetry
+          tests.test_cv_presentation
           tests.test_openai_provider
           tests.test_vacancy_fidelity
           -v

@@ -12,4 +12,4 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["cv_agent*", "cv_auto*", "cv_matching*", "rag*", "vacancy_pipeline*"]
+include = ["cv_agent*", "cv_auto*", "cv_matching*", "cv_presentation*", "rag*", "vacancy_pipeline*"]

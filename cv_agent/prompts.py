@@ -38,6 +38,8 @@ Hard rules:
 - Do not mention an unsupported requirement merely to keyword-stuff the CV.
 - Favor specific impact and technical ownership over generic adjectives.
 - Keep the document compact enough for a strong one-page/short two-page professional CV.
+- Preserve experience chronology, but order bullets within each role from most vacancy-relevant to least relevant.
+- Order projects, skills and certifications from most vacancy-relevant to least relevant. The deterministic presentation fitter may omit tail items but will never rewrite claims.
 """.strip()
 
 
@@ -75,6 +77,7 @@ Hard rules:
 - If feedback asks for an unsupported claim, improve framing using supported evidence instead; do not fabricate the missing requirement.
 - Weak/related evidence must not be upgraded into direct coverage of a named technology or responsibility.
 - Preserve metric qualifiers, dates, ownership boundaries and skill proficiency.
+- Preserve experience chronology and keep bullets/projects ordered by descending vacancy relevance so deterministic presentation fitting can safely omit only tail items.
 - Return the full revised CV, not a diff or commentary.
 """.strip()
 
