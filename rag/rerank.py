@@ -9,7 +9,8 @@ from cv_agent.openai_provider import prepare_openai_environment, validate_openai
 
 
 DEFAULT_RERANK_MODEL = "gpt-5.6-luna"
-MAX_RERANK_CANDIDATES = 12
+MAX_RERANK_CANDIDATES = 8
+MAX_RERANK_TEXT_CHARS = 1400
 
 
 class RerankClient(Protocol):
@@ -28,7 +29,7 @@ class OpenAIRerankClient:
         compact = [
             {
                 "chunk_id": hit["chunk_id"],
-                "text": hit.get("text", "")[:2400],
+                "text": hit.get("text", "")[:MAX_RERANK_TEXT_CHARS],
                 "proficiency": hit.get("proficiency"),
                 "constraints": hit.get("constraints", []),
             }
