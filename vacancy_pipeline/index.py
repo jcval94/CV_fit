@@ -9,6 +9,7 @@ from typing import Any
 from vacancy_pipeline.models import RetrievalHit, VacancyChunk
 
 INDEX_SCHEMA_VERSION = 1
+DEFAULT_RETRIEVAL_CHUNK_TYPES = {"core", "requirements"}
 
 
 def tokenize(text: str) -> list[str]:
@@ -59,15 +60,30 @@ def add_chunks(index: dict[str, Any], chunks: list[VacancyChunk]) -> None:
                 posting.sort()
 
 
-def retrieve(index: dict[str, Any], query: str, top_k: int = 5) -> list[RetrievalHit]:
+def retrieve(
+    index: dict[str, Any],
+    query: str,
+    top_k: int = 5,
+    *,
+    include_source_fit: bool = False,
+) -> list[RetrievalHit]:
     query_terms = Counter(tokenize(query))
     if not query_terms:
         return []
     chunks = index.get("chunks", {})
-    total_docs = max(len(chunks), 1)
+    eligible_chunk_ids = {
+        chunk_id
+        for chunk_id, meta in chunks.items()
+        if include_source_fit or meta.get("chunk_type") in DEFAULT_RETRIEVAL_CHUNK_TYPES
+    }
+    total_docs = max(len(eligible_chunk_ids), 1)
     candidate_ids: set[str] = set()
     for token in query_terms:
-        candidate_ids.update(index.get("postings", {}).get(token, []))
+        candidate_ids.update(
+            chunk_id
+            for chunk_id in index.get("postings", {}).get(token, [])
+            if chunk_id in eligible_chunk_ids
+        )
 
     scored: list[RetrievalHit] = []
     for chunk_id in candidate_ids:
@@ -78,7 +94,11 @@ def retrieve(index: dict[str, Any], query: str, top_k: int = 5) -> list[Retrieva
             tf = terms.get(token, 0)
             if not tf:
                 continue
-            df = len(index.get("postings", {}).get(token, []))
+            df = sum(
+                1
+                for posting_id in index.get("postings", {}).get(token, [])
+                if posting_id in eligible_chunk_ids
+            )
             idf = math.log((total_docs + 1) / (df + 1)) + 1.0
             score += (1.0 + math.log(tf)) * idf * qtf
         if score > 0:
