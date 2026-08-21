@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import unicodedata
 from collections import defaultdict
 from typing import Any
 
@@ -11,13 +12,113 @@ DEFAULT_LEXICAL_WEIGHT = 1.0
 DEFAULT_DENSE_WEIGHT = 1.0
 
 
-def normalize_relations(payload: Any) -> list[dict[str, str]]:
-    """Normalize the persisted relation contract into a list of relation edges.
+def _search_text(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value or "")
+    return " ".join(
+        "".join(ch for ch in normalized if not unicodedata.combining(ch)).casefold().split()
+    )
 
-    `rag_state/relations.json` is versioned as an envelope with a top-level
-    `relations` array. Unit callers may also pass the edge list directly. Any
-    other shape is rejected loudly so graph expansion never silently degrades.
+
+def _index_hit(chunk_id: str, meta: dict[str, Any], *, reason: str) -> dict[str, Any]:
+    return {
+        "chunk_id": chunk_id,
+        "record_id": meta.get("record_id"),
+        "score": 1.0,
+        "chunk_type": meta.get("chunk_type"),
+        "source_path": meta.get("source_path"),
+        "proficiency": meta.get("proficiency"),
+        "constraints": meta.get("constraints", []),
+        "metric_refs": meta.get("metric_refs", []),
+        "text": meta.get("text", ""),
+        "retrieval_source": "anchor",
+        "anchor_reason": reason,
+    }
+
+
+def deterministic_anchors(
+    query: str,
+    *,
+    lexical_index: dict[str, Any],
+    max_anchors: int = 4,
+) -> list[dict[str, Any]]:
+    """Return high-value structural candidates that semantic ranking can miss.
+
+    Anchors do not assert support and do not bypass the reranker. They only make
+    canonical evidence available to downstream ranking when the query itself
+    explicitly asks for a structure represented in the source of truth:
+
+    * a named skill/technology -> the exact `skills` chunk;
+    * professional duration/years -> canonical employment-period role chunks.
+
+    All candidates come from the active lexical index, so public/CV eligibility
+    remains identical to normal retrieval policy.
     """
+    if max_anchors <= 0:
+        return []
+
+    query_norm = _search_text(query)
+    chunks = lexical_index.get("chunks", {})
+    anchors: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    def add(chunk_id: str, meta: dict[str, Any], reason: str) -> None:
+        if len(anchors) >= max_anchors or chunk_id in seen:
+            return
+        seen.add(chunk_id)
+        anchors.append(_index_hit(chunk_id, meta, reason=reason))
+
+    # Exact named-skill anchoring. The first line is the canonical skill title.
+    for chunk_id, meta in sorted(chunks.items()):
+        if meta.get("record_id") != "skills" or meta.get("chunk_type") != "skill":
+            continue
+        title = _search_text((meta.get("text") or "").splitlines()[0] if meta.get("text") else "")
+        if title and len(title) >= 2 and title in query_norm:
+            add(chunk_id, meta, "exact_named_skill")
+
+    # Duration questions need chronology, not certifications that merely mention
+    # the same domain. These anchors are still judged by the semantic reranker.
+    asks_duration = (
+        any(term in query_norm.split() for term in ("anos", "years", "year"))
+        and any(term in query_norm.split() for term in ("experiencia", "experience"))
+    )
+    if asks_duration:
+        canonical_roles: list[tuple[str, dict[str, Any]]] = []
+        other_roles: list[tuple[str, dict[str, Any]]] = []
+        for chunk_id, meta in sorted(chunks.items()):
+            if not str(meta.get("record_id") or "").startswith("role-"):
+                continue
+            if meta.get("chunk_type") != "role_detail":
+                continue
+            text_norm = _search_text(meta.get("text") or "")
+            if "period" not in text_norm and "periodo" not in text_norm:
+                continue
+            pair = (chunk_id, meta)
+            if chunk_id.endswith("canonical-employment-record") or "overall period" in text_norm:
+                canonical_roles.append(pair)
+            else:
+                other_roles.append(pair)
+        for chunk_id, meta in canonical_roles + other_roles:
+            add(chunk_id, meta, "career_chronology")
+
+    return anchors
+
+
+def inject_deterministic_anchors(
+    query: str,
+    hits: list[dict[str, Any]],
+    *,
+    lexical_index: dict[str, Any],
+    max_anchors: int = 4,
+) -> list[dict[str, Any]]:
+    anchors = deterministic_anchors(query, lexical_index=lexical_index, max_anchors=max_anchors)
+    if not anchors:
+        return hits
+    anchored_ids = {hit["chunk_id"] for hit in anchors}
+    return anchors + [hit for hit in hits if hit["chunk_id"] not in anchored_ids]
+
+
+def normalize_relations(payload: Any) -> list[dict[str, str]]:
+    """Normalize the persisted relation contract into a list of relation edges."""
     if payload is None:
         return []
     if isinstance(payload, dict):
@@ -45,7 +146,6 @@ def reciprocal_rank_fusion(
     top_k: int = 8,
 ) -> list[dict[str, Any]]:
     """Fuse lexical and dense rankings without pretending their raw scores are comparable."""
-
     if rrf_k <= 0:
         raise ValueError("rrf_k must be positive")
     by_id: dict[str, dict[str, Any]] = {}
@@ -81,12 +181,7 @@ def expand_graph(
     relations: Any,
     max_expansions: int = 8,
 ) -> list[dict[str, Any]]:
-    """Add one-hop eligible evidence linked to retrieved records.
-
-    Policy/router content never enters because expansion can only resolve chunks
-    already present in the active CV-eligible lexical index.
-    """
-
+    """Add one-hop eligible evidence linked to retrieved records."""
     if max_expansions <= 0:
         return hits
 
@@ -151,6 +246,12 @@ def hybrid_retrieve(
 ) -> list[dict[str, Any]]:
     lexical_hits = retrieve_evidence(lexical_index, query, top_k=candidate_k)
     fused = reciprocal_rank_fusion(lexical_hits, dense_hits[:candidate_k], top_k=top_k)
+    fused = inject_deterministic_anchors(
+        query,
+        fused,
+        lexical_index=lexical_index,
+        max_anchors=max(2, min(4, top_k // 2)),
+    )
     if graph_expansion and relations:
         return expand_graph(
             fused,
