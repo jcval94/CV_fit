@@ -7,6 +7,14 @@ from cv_agent.schemas import CVDocument, HeadhunterReview, QualityGateResult, Va
 
 
 QUANTIFIED_RE = re.compile(r"(?:\b\d+(?:[.,]\d+)?\s*%|\b\d+(?:[.,]\d+)?\s*[xX]\b|\bMXN\b|\bUSD\b|\$\s*\d|\b\d+\s*->\s*\d+)")
+NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)?")
+YEARS_RE = re.compile(r"\b(\d{1,2})\+?\s*(?:years?|años?)\b", re.IGNORECASE)
+PEOPLE_MANAGEMENT_RE = re.compile(
+    r"(?:direct reports?|people manager|managed (?:a )?team of \d+|led (?:a )?team of \d+|"
+    r"reportes directos|gestion(?:ó| de)? (?:un )?equipo de \d+|dirigi(?:ó|r) (?:un )?equipo de \d+)",
+    re.IGNORECASE,
+)
+SPECIALIZATION_TERMS = ("arima", "sarima", "prophet")
 EN_MARKERS = {"the", "and", "with", "for", "led", "built", "developed", "designed", "improved", "model", "data", "business", "production"}
 ES_MARKERS = {"el", "la", "los", "las", "con", "para", "lideró", "desarrolló", "diseñó", "mejoró", "modelo", "datos", "negocio", "producción"}
 EXPERT_TERMS = {"expert", "expertise", "advanced", "mastery", "experto", "experta", "dominio avanzado"}
@@ -40,6 +48,51 @@ def _refs_for_line(line: Any) -> list[str]:
     return list(getattr(line, "evidence_refs", []) or [])
 
 
+def _evidence_text(refs: list[str], evidence_catalog: dict[str, dict[str, Any]]) -> str:
+    return "\n".join(str(evidence_catalog.get(ref, {}).get("text", "")) for ref in refs)
+
+
+def _normalize_number(value: str) -> str:
+    return value.replace(",", ".")
+
+
+def _validate_metric_value_and_qualifiers(
+    text: str,
+    metric_refs: list[str],
+    evidence_catalog: dict[str, dict[str, Any]],
+    location: str,
+) -> list[ValidationIssue]:
+    issues: list[ValidationIssue] = []
+    metric_text = _evidence_text(metric_refs, evidence_catalog)
+    supported_numbers = {_normalize_number(value) for value in NUMBER_RE.findall(metric_text)}
+    claim_numbers = {_normalize_number(value) for value in NUMBER_RE.findall(text)}
+    unsupported = sorted(claim_numbers - supported_numbers)
+    if unsupported:
+        issues.append(ValidationIssue(
+            code="metric_value_not_in_evidence",
+            message=f"Quantified values are not present in referenced ACH evidence: {unsupported}",
+            location=location,
+        ))
+
+    constraints = " ".join(
+        constraint for ref in metric_refs for constraint in evidence_catalog.get(ref, {}).get("constraints", [])
+    ).casefold()
+    lowered = text.casefold()
+    if "up to" in constraints and not ("up to" in lowered or "hasta" in lowered):
+        issues.append(ValidationIssue(code="metric_qualifier_lost", message="Referenced metric requires the 'up to/hasta' qualifier.", location=location))
+    if "approximately" in constraints and not any(term in lowered for term in ("approximately", "approx.", "approx ", "aproximadamente")):
+        issues.append(ValidationIssue(code="metric_qualifier_lost", message="Referenced metric requires an approximate qualifier.", location=location))
+    if "do not attribute" in constraints:
+        forbidden = [term for term in ("llm", "nora", "assistant") if term in constraints and term in lowered]
+        if forbidden:
+            issues.append(ValidationIssue(
+                code="forbidden_metric_attribution",
+                message=f"Referenced metric constraint forbids this attribution: {forbidden}",
+                location=location,
+            ))
+    return issues
+
+
 def validate_claims(
     cv: CVDocument,
     evidence_catalog: dict[str, dict[str, Any]],
@@ -65,12 +118,41 @@ def validate_claims(
         if ineligible:
             issues.append(ValidationIssue(code="ineligible_evidence", message=f"Evidence is not eligible for automatic CV reuse: {ineligible}", location=location))
 
+        evidence_text = _evidence_text(refs, evidence_catalog)
+        lowered = text.casefold()
+        evidence_lowered = evidence_text.casefold()
+
+        years = [int(match) for match in YEARS_RE.findall(text)]
+        supported_years = [int(match) for match in YEARS_RE.findall(evidence_text)]
+        if years and (not supported_years or max(years) > max(supported_years)):
+            issues.append(ValidationIssue(
+                code="unsupported_years_claim",
+                message=f"Years-of-experience claim {max(years)} is not supported by referenced evidence.",
+                location=location,
+            ))
+
+        if PEOPLE_MANAGEMENT_RE.search(text) and not PEOPLE_MANAGEMENT_RE.search(evidence_text):
+            issues.append(ValidationIssue(
+                code="unsupported_people_management",
+                message="Formal people-management/direct-report claim is not present in referenced evidence.",
+                location=location,
+            ))
+
+        for term in SPECIALIZATION_TERMS:
+            if term in lowered and term not in evidence_lowered:
+                issues.append(ValidationIssue(
+                    code="unsupported_specialization",
+                    message=f"Named specialization {term!r} is not present in referenced evidence.",
+                    location=location,
+                ))
+
         if location.startswith(("summary", "experience", "projects")) and QUANTIFIED_RE.search(text):
             metric_refs = [ref for ref in refs if evidence_catalog[ref].get("chunk_type") == "achievement_metric"]
             if not metric_refs:
                 issues.append(ValidationIssue(code="quantified_claim_without_metric", message="Quantified claim requires an approved ACH-* metric evidence chunk.", location=location))
+            else:
+                issues.extend(_validate_metric_value_and_qualifiers(text, metric_refs, evidence_catalog, location))
 
-        lowered = text.casefold()
         for ref in refs:
             chunk = evidence_catalog.get(ref, {})
             if (chunk.get("proficiency") or "").casefold() == "familiarity" and any(term in lowered for term in EXPERT_TERMS):
