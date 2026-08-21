@@ -1,0 +1,192 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "d174eff3392da5e57d2a3db7e674ea842aa692c8fcad02b69be37c4814ad390a",
+  "embedding_candidate": false,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "governance-data-contract",
+  "record_type": "governance",
+  "retrieval_class": "policy",
+  "sections": [
+    {
+      "content": "This repository is a canonical evidence base for career artifacts. It stores broad, traceable facts; generated CVs and applications select only the approved subset relevant to a target role.",
+      "end_line": 16,
+      "heading_path": [
+        "Experience Data Contract"
+      ],
+      "level": 1,
+      "section_id": "governance-data-contract::experience-data-contract",
+      "semantic_type": "section",
+      "start_line": 13,
+      "title": "Experience Data Contract"
+    },
+    {
+      "content": "Every Markdown file under `experience/` must declare:\n\n```yaml\nschema_version: 3\nrecord_id: unique-kebab-case-id\nrecord_type: profile | education | certifications | skills | role | project | achievement_registry | governance | conflict_log\nstatus: draft | needs_reconciliation | canonical | validated_public | validated_public_supporting | deprecated\nlast_updated: YYYY-MM-DD\nconfidence: high | medium | low\nvisibility: public\npublic_safe: true\nsource_refs:\n  - SRC-REGISTERED-ID\n```\n\nThis repository is public. Canonical records committed here must use `visibility: public` and `public_safe: true`. Internal or restricted evidence may be named in the source registry, but its raw content and sensitive values must not be committed.",
+      "end_line": 35,
+      "heading_path": [
+        "Experience Data Contract",
+        "Required frontmatter"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::required-frontmatter",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "Required frontmatter"
+    },
+    {
+      "content": "When two sources disagree, use this order:\n\n1. current user confirmation\n2. primary artifact or official credential\n3. observable public repository or code\n4. current public professional profile\n5. curated derivative document\n6. inference\n\nRecency breaks ties only between sources with comparable authority. Never average conflicting metrics.\n\nThis ordering is global. Individual records should not redefine `source_priority` unless an explicit, documented exception is necessary for that record type.",
+      "end_line": 50,
+      "heading_path": [
+        "Experience Data Contract",
+        "Source priority"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::source-priority",
+      "semantic_type": "section",
+      "start_line": 36,
+      "title": "Source priority"
+    },
+    {
+      "content": "For exact credential metadata — official title, issuer, issue date, credential status and credential identifier — an **official credential artifact/record outranks recollection or profile prose**. `certifications.md` may therefore use the explicit order `public_credential_record -> linkedin_public_profile -> user_confirmed_history` for those fields. User confirmation still governs contextual interpretation and can flag a conflict, but should not silently overwrite an official credential record.",
+      "end_line": 54,
+      "heading_path": [
+        "Experience Data Contract",
+        "Source priority",
+        "Credential metadata exception"
+      ],
+      "level": 3,
+      "section_id": "governance-data-contract::experience-data-contract::source-priority::credential-metadata-exception",
+      "semantic_type": "section",
+      "start_line": 51,
+      "title": "Credential metadata exception"
+    },
+    {
+      "content": "- `high`: direct primary evidence or multiple consistent sources\n- `medium`: coherent and interview-defensible, but incomplete or derivative\n- `low`: recovery lead only; not eligible for automatic CV use\n\nConfidence measures evidence strength, not project importance.\n\nFrontmatter confidence describes the record as a container; it does **not** override a lower-confidence or unresolved claim inside the record. Disputed claims must carry their own status/constraint in the body or be logged in `_meta/conflicts.md`, and open conflicts block automatic use of that disputed detail.",
+      "end_line": 64,
+      "heading_path": [
+        "Experience Data Contract",
+        "Confidence"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::confidence",
+      "semantic_type": "section",
+      "start_line": 55,
+      "title": "Confidence"
+    },
+    {
+      "content": "Use the strongest term supported by evidence:\n\n- `owned` / `designed` / `built`: individual implementation and decisions are evidenced\n- `led`: accountable direction and delivery are evidenced\n- `co-developed` / `collaborated`: shared design or implementation\n- `contributed`: a bounded personal contribution is observable\n- `operated` / `maintained`: recurring execution, monitoring or release\n- `reviewed`: code or quality-gate responsibility\n- `exposure`: topic is visible but no substantive action is evidenced; do not turn it into a CV bullet\n\nA profile-level summary may describe the range of ownership patterns, but project records are authoritative for the exact ownership verb.",
+      "end_line": 78,
+      "heading_path": [
+        "Experience Data Contract",
+        "Ownership vocabulary"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::ownership-vocabulary",
+      "semantic_type": "ownership",
+      "start_line": 65,
+      "title": "Ownership vocabulary"
+    },
+    {
+      "content": "Professional-experience duration must be calculated from the documented professional chronology. Academic teaching, social service, student leadership, volunteering and similar experiences may strengthen leadership or communication evidence, but they must not be added automatically to formal professional-employment tenure.",
+      "end_line": 82,
+      "heading_path": [
+        "Experience Data Contract",
+        "Professional-tenure semantics"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::professional-tenure-semantics",
+      "semantic_type": "section",
+      "start_line": 79,
+      "title": "Professional-tenure semantics"
+    },
+    {
+      "content": "Every technical or professional skill using a `Level` field must use exactly one of:\n\n- `core`: repeated professional use and/or substantial independently owned implementation with strong interview-level defensibility\n- `working`: meaningful hands-on implementation, but not necessarily the primary specialization\n- `familiarity`: exposure, training or limited implementation; never present as expert-level without additional evidence\n\nDo **not** use hybrid level values such as `working-to-core`, `core-to-working`, `familiarity-to-working`, `working / historical` or `core differentiator`.\n\nModifiers belong in separate fields, for example:\n\n- `Recency: current | recent | historical`\n- `Evidence: ...`\n- `Usage note: ...`\n\nLanguage proficiency is separate from this technical-skill enum and should use `Proficiency`, not `Level`.\n\nThe most granular record wins: `skills.md` is authoritative for proficiency, while `profile.md` may summarize broad capability areas but must not flatten familiarity into working/core expertise.",
+      "end_line": 102,
+      "heading_path": [
+        "Experience Data Contract",
+        "Skill proficiency"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::skill-proficiency",
+      "semantic_type": "skill_group",
+      "start_line": 83,
+      "title": "Skill proficiency"
+    },
+    {
+      "content": "- `profile.md`: stable identity and positioning\n- `roles/`: chronology, scope and progression by employer or teaching engagement\n- `roles/index.md`: retrieval-oriented role routing when present\n- `projects/`: problem, personal contribution, implementation, result and usage boundaries\n- `projects/index.md`: retrieval-oriented project routing when present\n- `achievements/metrics.md`: the only canonical home for exact numerical claims\n- `skills.md`: proficiency backed by roles, projects or public code\n- `education.md` and `certifications.md`: exact academic or credential records\n- `_meta/sources.yaml`: source provenance and permitted use\n- `_meta/conflicts.md`: open and resolved contradictions\n\nProject files should reference metric IDs instead of creating independent numeric interpretations. If a number is repeated for readability, it must preserve the same metric ID, qualifier, unit and comparison and must not become a second semantic definition.",
+      "end_line": 117,
+      "heading_path": [
+        "Experience Data Contract",
+        "Canonical routing"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::canonical-routing",
+      "semantic_type": "section",
+      "start_line": 103,
+      "title": "Canonical routing"
+    },
+    {
+      "content": "Every metric must identify, when known:\n\n- baseline and comparator\n- period and population\n- unit and denominator\n- absolute value, relative percent or percentage points\n- achieved result, target, projection or technical benchmark\n- attribution boundary\n- public-safety and CV-use status\n- approved wording and forbidden rewrites\n\nRatios must be normalized into an explicit numerator/denominator meaning before CV use. Targets are never reported as achieved results. Synthetic benchmarks are never reported as business outcomes.",
+      "end_line": 132,
+      "heading_path": [
+        "Experience Data Contract",
+        "Metric semantics"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::metric-semantics",
+      "semantic_type": "section",
+      "start_line": 118,
+      "title": "Metric semantics"
+    },
+    {
+      "content": "- Do not commit raw employer documents, emails, screenshots, credentials or datasets.\n- Do not expose account identifiers, credential IDs containing contact data, internal paths or PII.\n- A source marked internal/restricted may support public wording only when that wording is independently public or explicitly approved.\n- Redacted values must never be restored from memory by an automated process.\n- Use market-readable titles externally while preserving internal levels as metadata.",
+      "end_line": 140,
+      "heading_path": [
+        "Experience Data Contract",
+        "Privacy and confidentiality"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::privacy-and-confidentiality",
+      "semantic_type": "section",
+      "start_line": 133,
+      "title": "Privacy and confidentiality"
+    },
+    {
+      "content": "1. Register the source in `_meta/sources.yaml`.\n2. Extract atomic claims and label period, confidence, visibility and ownership.\n3. Search for an existing canonical home before creating a file.\n4. Reconcile conflicts or add them to `_meta/conflicts.md`.\n5. Update the relevant role/project/metric/skill record.\n6. Run `python tools/validate_experience.py`.\n7. Review the diff for overclaiming and privacy before publishing.",
+      "end_line": 150,
+      "heading_path": [
+        "Experience Data Contract",
+        "Ingestion workflow"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::ingestion-workflow",
+      "semantic_type": "section",
+      "start_line": 141,
+      "title": "Ingestion workflow"
+    },
+    {
+      "content": "Generated public CVs may use only public-safe records and metrics whose CV usage is approved or whose conditional requirement has been satisfied. Preserve qualifiers such as `up to`, `approximately`, `pilot`, `projected` and `synthetic benchmark`.\n\nWhen a general summary and a granular record differ, the granular record governs:\n\n- project ownership beats profile-level ownership language\n- metric registry beats copied numeric prose\n- skill-level enum beats flat technology lists\n- conflict log blocks disputed details until resolved",
+      "end_line": 160,
+      "heading_path": [
+        "Experience Data Contract",
+        "Output policy"
+      ],
+      "level": 2,
+      "section_id": "governance-data-contract::experience-data-contract::output-policy",
+      "semantic_type": "section",
+      "start_line": 151,
+      "title": "Output policy"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/_meta/data_contract.md",
+  "source_refs": [],
+  "status": "canonical",
+  "visibility": "public"
+}

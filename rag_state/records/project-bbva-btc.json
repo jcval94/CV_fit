@@ -1,0 +1,163 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2022-2024"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "1faa4c6ec32fa29c3675ab9a9695137a345b54d2da034ab08d0ec5abc43eaa55",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-BBVA-BTC-PRIVATE"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-btc",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 20,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "BBVA — Best Time to Call (BTC)"
+    },
+    {
+      "content": "Best Time to Call is a remote-banking contact-prioritization workstream designed to identify useful days/time windows and order outbound activity using observed contact behavior rather than manual heuristics alone.\n\nThe evidence supports a progression from a 2022 contactability pilot to recurring operational releases and monitoring during 2023–2024.",
+      "end_line": 26,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::summary",
+      "semantic_type": "summary",
+      "start_line": 21,
+      "title": "Summary"
+    },
+    {
+      "content": "Remote bankers faced low contactability, repeated unsuccessful calls and inefficient prioritization. The analytical need was to decide when to contact each customer, feed actionable outputs into the dialing workflow and measure whether users followed the recommendation.",
+      "end_line": 30,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Business problem"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::business-problem",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Business problem"
+    },
+    {
+      "content": "",
+      "end_line": 32,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 31,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "- participated in validation of a Bayesian/contactability pilot\n- contributed to feature and population work\n- supported demo and audit follow-up\n- **Ownership boundary:** the final experimental result and sole authorship of the base model are not established",
+      "end_line": 39,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Contribution and ownership",
+        "2022 pilot"
+      ],
+      "level": 3,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2022-pilot",
+      "semantic_type": "section",
+      "start_line": 33,
+      "title": "2022 pilot"
+    },
+    {
+      "content": "- operated recurring scoring/release workflows\n- validated output quality and drift\n- prepared operational layouts/bases for downstream contact systems\n- monitored adherence, contactability and effectiveness\n- analyzed first-call behavior, repeated-call penalties and cooling-time implications\n- **Ownership boundary:** evidence is strongest for execution, monitoring, release and analytical improvement, not exclusive invention of the original algorithm",
+      "end_line": 48,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Contribution and ownership",
+        "2023–2024 recurring operation"
+      ],
+      "level": 3,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2023-2024-recurring-operation",
+      "semantic_type": "section",
+      "start_line": 40,
+      "title": "2023–2024 recurring operation"
+    },
+    {
+      "content": "- Python and PySpark\n- Teradata and Oracle\n- distributed analytical processing\n- recurring CSV/layout releases\n- quality-assurance notebooks\n- Looker Studio / Google Sites reporting\n- integration with commercial contact tooling",
+      "end_line": 58,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Implementation evidence"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+      "semantic_type": "section",
+      "start_line": 49,
+      "title": "Implementation evidence"
+    },
+    {
+      "content": "The project produced recurring operational recommendations and a measurable improvement in contact outcomes. Curated sources contain differing uplift values from different periods/definitions; exact internal values remain governed by `ACH-BBVA-BTC-PRIVATE` and are not published here.",
+      "end_line": 62,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Results"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::results",
+      "semantic_type": "outcome",
+      "start_line": 59,
+      "title": "Results"
+    },
+    {
+      "content": "> Operated and monitored a recurring Best Time to Call pipeline for remote banking, validating outputs and releasing contact-prioritization recommendations into commercial workflows.\n\n> Analyzed adherence, first-call success and repeated-call behavior to improve customer-contact prioritization.",
+      "end_line": 68,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Approved public narratives"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::approved-public-narratives",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Approved public narratives"
+    },
+    {
+      "content": "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts.",
+      "end_line": 74,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-btc::bbva-best-time-to-call-btc::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 69,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/bbva_btc.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2021-2023-CURATED",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

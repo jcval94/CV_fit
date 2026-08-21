@@ -1,0 +1,335 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "source_priority": [
+      "public_credential_record",
+      "linkedin_public_profile",
+      "user_confirmed_history"
+    ],
+    "usage_policy": "Only status=verified credentials may be automatically promoted into generated CVs. Pending credentials require metadata reconciliation first."
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "23e49584b36a89378d4b17ede3a1ea2c96aa702c8f1c370cecd4145532668239",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "certifications",
+  "record_type": "certifications",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "Canonical inventory of professional certifications and credentials for José Carlos Del Valle.\n\nThe purpose of this file is not to maximize the number of credentials shown on a CV. It is to preserve exact credential names, issuers, dates and identifiers so downstream CV generation can select only the certifications relevant to a vacancy.",
+      "end_line": 26,
+      "heading_path": [
+        "Certifications"
+      ],
+      "level": 1,
+      "section_id": "certifications::certifications",
+      "semantic_type": "section",
+      "start_line": 21,
+      "title": "Certifications"
+    },
+    {
+      "content": "",
+      "end_line": 28,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials"
+      ],
+      "level": 2,
+      "section_id": "certifications::certifications::verified-credentials",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Verified credentials"
+    },
+    {
+      "content": "- **Credential:** CS50's Introduction to Computer Science\n- **Issuer:** HarvardX — An Online Learning Initiative by Harvard University through edX\n- **Issued:** July 2020\n- **Credential ID:** `1986a0a4d3864cdf94fd71e77d1c2b1e`\n- **Status:** verified\n- **Category:** Computer Science / Software Foundations\n- **CV priority:** high for software-heavy Data Science, ML Engineering and AI roles\n- **Source:** public LinkedIn credential record\n- **Notes:** LinkedIn also contains a June 2020 CS50 entry for the same course. Treat the two entries as the same learning achievement unless a future reconciliation proves they are distinct credentials.",
+      "end_line": 40,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-CS50-HARVARDX-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-cs50-harvardx-2020",
+      "semantic_type": "credential",
+      "start_line": 29,
+      "title": "CERT-CS50-HARVARDX-2020"
+    },
+    {
+      "content": "- **Credential:** Tableau Desktop Specialist\n- **Issuer:** Tableau Software\n- **Issued:** June 2020\n- **Credential ID / legacy badge reference:** `https://www.youracclaim.com/badges/e9fbb7ad-21f2-4d66-bb5c-73019cb70747/linked_i`\n- **Status:** verified\n- **Category:** Data Visualization / Business Intelligence\n- **CV priority:** high when visualization, BI or stakeholder communication is relevant\n- **Source:** public LinkedIn credential record",
+      "end_line": 51,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-TABLEAU-DESKTOP-SPECIALIST-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-tableau-desktop-specialist-2020",
+      "semantic_type": "credential",
+      "start_line": 41,
+      "title": "CERT-TABLEAU-DESKTOP-SPECIALIST-2020"
+    },
+    {
+      "content": "- **Credential:** Professional Scrum Master I\n- **Issuer:** Scrum.org\n- **Issued:** February 2020\n- **Credential ID:** `507770`\n- **Credential URL:** `https://www.scrum.org/certificates/507770`\n- **Status:** verified\n- **Category:** Agile / Delivery\n- **CV priority:** medium-high for roles requiring project ownership, agile delivery or cross-functional work\n- **Source:** public professional portfolio and official public certificate URL\n- **Privacy note:** use the numeric official certificate ID; do not reproduce the unrelated email-like value exposed by an older LinkedIn record.",
+      "end_line": 64,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-PSM-I-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-psm-i-2020",
+      "semantic_type": "credential",
+      "start_line": 52,
+      "title": "CERT-PSM-I-2020"
+    },
+    {
+      "content": "- **Credential:** Certificación en Ciencia de Datos\n- **Issuer:** Universidad de Navarra\n- **Issued:** January 2022\n- **Status:** verified\n- **Category:** Data Science\n- **CV priority:** high when formal Data Science training is useful\n- **Source:** current public professional portfolio with certificate link\n- **Usage note:** do not rewrite this credential as a degree or as a Universidad Carlos III credential.",
+      "end_line": 75,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-DATA-SCIENCE-NAVARRA-2022"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-data-science-navarra-2022",
+      "semantic_type": "credential",
+      "start_line": 65,
+      "title": "CERT-DATA-SCIENCE-NAVARRA-2022"
+    },
+    {
+      "content": "- **Credential:** Supply Chain Logistics\n- **Issuer:** Rutgers University\n- **Platform:** Coursera\n- **Issued:** March 2022\n- **Credential ID:** `5AA3T6BTEFJW`\n- **Status:** verified\n- **Category:** Supply Chain / Operations\n- **CV priority:** medium for operations, logistics or CPG roles; otherwise omit\n- **Source:** current public professional portfolio and public Coursera credential URL",
+      "end_line": 87,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-RUTGERS-SUPPLY-CHAIN-2022"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-rutgers-supply-chain-2022",
+      "semantic_type": "credential",
+      "start_line": 76,
+      "title": "CERT-RUTGERS-SUPPLY-CHAIN-2022"
+    },
+    {
+      "content": "- **Credential:** AWS Amazon SageMaker\n- **Issuer / platform:** edX\n- **Issued:** September 2021\n- **Credential ID:** `f9ec849f8629416f9919f84d0d910267`\n- **Status:** verified\n- **Category:** Cloud / Machine Learning\n- **CV priority:** medium-high for cloud ML roles\n- **Source:** current public professional portfolio and public edX certificate URL\n- **Usage note:** this is a course certificate, not an AWS professional certification.",
+      "end_line": 99,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-AWS-SAGEMAKER-2021"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-aws-sagemaker-2021",
+      "semantic_type": "credential",
+      "start_line": 88,
+      "title": "CERT-AWS-SAGEMAKER-2021"
+    },
+    {
+      "content": "- **Credential:** CS50's Introduction to Artificial Intelligence with Python\n- **Issuer:** CS50 / Harvard University\n- **Issued:** December 2020\n- **Credential ID:** `9e83890f-a03c-4421-b11a-5cba23e1ea08`\n- **Status:** verified\n- **Category:** Artificial Intelligence / Computer Science\n- **CV priority:** high for AI/ML roles when space permits\n- **Source:** current public professional portfolio and public CS50 certificate URL",
+      "end_line": 110,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-CS50-AI-PYTHON-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-cs50-ai-python-2020",
+      "semantic_type": "credential",
+      "start_line": 100,
+      "title": "CERT-CS50-AI-PYTHON-2020"
+    },
+    {
+      "content": "- **Credential:** Salesforce Certified Einstein Analytics\n- **Issuer:** Salesforce\n- **Issued:** September 2020\n- **Expired:** April 2022\n- **Status:** verified_expired\n- **Category:** Analytics / BI / Salesforce\n- **CV priority:** conditional; use only when Salesforce analytics is directly relevant and mark it as expired/inactive if status matters\n- **Source:** current public professional portfolio and public Salesforce profile link",
+      "end_line": 121,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-SALESFORCE-EINSTEIN-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-salesforce-einstein-2020",
+      "semantic_type": "credential",
+      "start_line": 111,
+      "title": "CERT-SALESFORCE-EINSTEIN-2020"
+    },
+    {
+      "content": "- **Credential:** Analyzing Data with Python\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `92c5bc10cbe143648237f259ec667c2d`\n- **Status:** verified\n- **Category:** Python / Data Analysis\n- **CV priority:** medium\n- **Source:** public LinkedIn credential record",
+      "end_line": 132,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-ANALYZING-DATA-PYTHON-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-analyzing-data-python-2019",
+      "semantic_type": "credential",
+      "start_line": 122,
+      "title": "CERT-IBM-ANALYZING-DATA-PYTHON-2019"
+    },
+    {
+      "content": "- **Credential:** Data Science and Machine Learning Capstone Project\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `7551cd1904674ba0aad8d5ade7d1eb5e`\n- **Status:** verified\n- **Category:** Data Science / Machine Learning\n- **CV priority:** medium\n- **Source:** public LinkedIn credential record",
+      "end_line": 143,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-DS-ML-CAPSTONE-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-ds-ml-capstone-2019",
+      "semantic_type": "credential",
+      "start_line": 133,
+      "title": "CERT-IBM-DS-ML-CAPSTONE-2019"
+    },
+    {
+      "content": "- **Credential:** Machine Learning with Python: A Practical Introduction\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `65985b23a4964c5f85f8682a62e8471f`\n- **Status:** verified\n- **Category:** Machine Learning / Python\n- **CV priority:** medium-high for ML-focused applications\n- **Source:** public LinkedIn credential record",
+      "end_line": 154,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-ML-PYTHON-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-ml-python-2019",
+      "semantic_type": "credential",
+      "start_line": 144,
+      "title": "CERT-IBM-ML-PYTHON-2019"
+    },
+    {
+      "content": "- **Credential:** Python Data Science\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `604110ed243a4c5d924da31f02949a68`\n- **Status:** verified\n- **Category:** Python / Data Science\n- **CV priority:** medium\n- **Source:** public LinkedIn credential record",
+      "end_line": 165,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-PYTHON-DATA-SCIENCE-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-python-data-science-2019",
+      "semantic_type": "credential",
+      "start_line": 155,
+      "title": "CERT-IBM-PYTHON-DATA-SCIENCE-2019"
+    },
+    {
+      "content": "- **Credential:** Visualizing Data with Python\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `75ca7e15b6b24dc89ea1cc6798f277aa`\n- **Status:** verified\n- **Category:** Python / Data Visualization\n- **CV priority:** medium\n- **Source:** public LinkedIn credential record",
+      "end_line": 176,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-VISUALIZING-DATA-PYTHON-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-visualizing-data-python-2019",
+      "semantic_type": "credential",
+      "start_line": 166,
+      "title": "CERT-IBM-VISUALIZING-DATA-PYTHON-2019"
+    },
+    {
+      "content": "- **Credential:** Python 101 for Data Science\n- **Issuer:** IBM\n- **Issued:** September 2019\n- **Credential ID:** `e42a19bb06674c849a995272cfa6f42b`\n- **Status:** verified\n- **Category:** Python / Data Science Foundations\n- **CV priority:** low for senior roles; useful only when a vacancy explicitly values formal Python training\n- **Source:** public LinkedIn credential record",
+      "end_line": 187,
+      "heading_path": [
+        "Certifications",
+        "Verified credentials",
+        "CERT-IBM-PYTHON-101-2019"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::verified-credentials::cert-ibm-python-101-2019",
+      "semantic_type": "credential",
+      "start_line": 177,
+      "title": "CERT-IBM-PYTHON-101-2019"
+    },
+    {
+      "content": "",
+      "end_line": 189,
+      "heading_path": [
+        "Certifications",
+        "Duplicate / related credential records"
+      ],
+      "level": 2,
+      "section_id": "certifications::certifications::duplicate-related-credential-records",
+      "semantic_type": "section",
+      "start_line": 188,
+      "title": "Duplicate / related credential records"
+    },
+    {
+      "content": "- **Credential:** CS50's Introduction to Computer Science\n- **Issuer:** CS50\n- **Issued:** June 2020\n- **Status:** verified_record_but_duplicate_candidate\n- **Relationship:** likely represents the same course as `CERT-CS50-HARVARDX-2020`\n- **Usage rule:** never count both CS50 records as two independent major certifications in a generated CV",
+      "end_line": 198,
+      "heading_path": [
+        "Certifications",
+        "Duplicate / related credential records",
+        "CERT-CS50-COURSE-RECORD-2020"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::duplicate-related-credential-records::cert-cs50-course-record-2020",
+      "semantic_type": "credential",
+      "start_line": 190,
+      "title": "CERT-CS50-COURSE-RECORD-2020"
+    },
+    {
+      "content": "The following credentials are part of the known professional history but should **not** yet be automatically inserted into generated CVs because the exact credential title, issuer, issue date or identifier still needs reconciliation against the original certificate or profile record.",
+      "end_line": 202,
+      "heading_path": [
+        "Certifications",
+        "Known credentials requiring metadata reconciliation"
+      ],
+      "level": 2,
+      "section_id": "certifications::certifications::known-credentials-requiring-metadata-reconciliation",
+      "semantic_type": "section",
+      "start_line": 199,
+      "title": "Known credentials requiring metadata reconciliation"
+    },
+    {
+      "content": "- **Known topic:** Applied Generative AI\n- **Status:** needs_metadata_verification\n- **Likely category:** Generative AI / LLMs\n- **Action required:** recover exact credential name, issuer and date",
+      "end_line": 209,
+      "heading_path": [
+        "Certifications",
+        "Known credentials requiring metadata reconciliation",
+        "CERT-PENDING-GENAI"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::known-credentials-requiring-metadata-reconciliation::cert-pending-genai",
+      "semantic_type": "credential",
+      "start_line": 203,
+      "title": "CERT-PENDING-GENAI"
+    },
+    {
+      "content": "- **Known topic:** Machine Learning\n- **Known institution/provider:** Universidad Carlos III de Madrid\n- **Status:** needs_metadata_verification\n- **Likely category:** Machine Learning\n- **Action required:** recover exact credential name and date",
+      "end_line": 217,
+      "heading_path": [
+        "Certifications",
+        "Known credentials requiring metadata reconciliation",
+        "CERT-PENDING-UC3M-ML"
+      ],
+      "level": 3,
+      "section_id": "certifications::certifications::known-credentials-requiring-metadata-reconciliation::cert-pending-uc3m-ml",
+      "semantic_type": "credential",
+      "start_line": 210,
+      "title": "CERT-PENDING-UC3M-ML"
+    },
+    {
+      "content": "1. Do not list every credential by default.\n2. Prefer certifications that reinforce the target role rather than foundational certificates that are already implied by senior experience.\n3. For senior Data Science / AI roles, prioritize roughly: role-specific GenAI/ML credential if verified → CS50 AI / CS50 → Data Science credential → AWS SageMaker course when cloud ML matters → Tableau when relevant → PSM I when delivery/leadership matters → selected IBM ML credential.\n4. Never fabricate a credential identifier, issue date, issuer or certification level.\n5. Do not describe a course completion certificate as a professional certification unless the issuer explicitly classifies it that way.\n6. Do not expose credential identifiers that contain personal contact information.\n7. Do not present expired credentials as active; an expired credential may be included only when directly relevant and clearly labeled.",
+      "end_line": 226,
+      "heading_path": [
+        "Certifications",
+        "Selection rules for generated CVs"
+      ],
+      "level": 2,
+      "section_id": "certifications::certifications::selection-rules-for-generated-cvs",
+      "semantic_type": "section",
+      "start_line": 218,
+      "title": "Selection rules for generated CVs"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/certifications.md",
+  "source_refs": [
+    "SRC-LINKEDIN-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-USER-CONFIRMED-2026-08-20"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

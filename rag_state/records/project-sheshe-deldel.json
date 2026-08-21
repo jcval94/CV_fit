@@ -1,0 +1,188 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "open_source_ml_research",
+    "source_repos": [
+      "https://github.com/jcval94/SheShe",
+      "https://github.com/jcval94/PureSheShe"
+    ]
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "7ef60183a33de89d4178090a9f912a9434e78894a71a8348210385bdb56dd366",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-sheshe-deldel",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 20,
+      "heading_path": [
+        "SheShe / DelDel"
+      ],
+      "level": 1,
+      "section_id": "project-sheshe-deldel::sheshe-deldel",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "SheShe / DelDel"
+    },
+    {
+      "content": "SheShe (**Smart High-dimensional Edge Segmentation & Hyperboundary Explorer**) and its experimental DelDel/PureSheShe work form a public research-oriented toolkit for turning probabilistic models into guided explorers of decision surfaces and discovering **human-readable rules in low-dimensional subspaces**.\n\nThis project family is direct evidence of algorithmic experimentation, model interpretation, numerical search and reproducible benchmark design.",
+      "end_line": 26,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::summary",
+      "semantic_type": "summary",
+      "start_line": 21,
+      "title": "Summary"
+    },
+    {
+      "content": "- supervised clustering for classification and regression\n- rule extraction\n- subspace exploration\n- decision-surface exploration via local probability/predicted-value maxima\n- 2D/3D visualization\n- integration with InsideForest\n- reusable package installation from PyPI\n- pytest-based development workflow",
+      "end_line": 37,
+      "heading_path": [
+        "SheShe / DelDel",
+        "SheShe capabilities"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::sheshe-capabilities",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "SheShe capabilities"
+    },
+    {
+      "content": "The public documentation describes an optimization view based on approximating `max_x f(x)` through gradient-ascent paths toward local maxima and delineating neighborhoods around those maxima.\n\nRelated implementation patterns include:\n\n- boundary / frontier plane discovery\n- rule pruning and orientation\n- low-dimensional conjunction search\n- AND / OR / DNF rule search\n- greedy, beam, random and diversity-oriented search strategies\n- F1 / precision / recall / lift-based regional evaluation\n- Pareto-style rule ranking",
+      "end_line": 51,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Mathematical / algorithmic ideas"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::mathematical-algorithmic-ideas",
+      "semantic_type": "section",
+      "start_line": 38,
+      "title": "Mathematical / algorithmic ideas"
+    },
+    {
+      "content": "The PureSheShe/DelDel repository defines a mandatory experiment protocol. Experiments record metrics including:\n\n- F1\n- precision / recall\n- precision lift\n- runtime\n- per-class and global summaries\n\nThe project also defines a composite `compass_score` based on the geometric mean of F1, lift precision and minimum class lift for selected regions.",
+      "end_line": 63,
+      "heading_path": [
+        "SheShe / DelDel",
+        "DelDel experimental discipline"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+      "semantic_type": "section",
+      "start_line": 52,
+      "title": "DelDel experimental discipline"
+    },
+    {
+      "content": "The repository documents multi-seed experiments on synthetic datasets with:\n\n- `30,000` samples\n- `25` informative variables\n- seeds `11`, `17`, `23`\n\nAcross the documented runs, the low-dimensional search stage completed in approximately `6.97–8.32 s`.\n\nDocumented best 2D results span roughly:\n\n- F1: `0.619–0.684`\n- precision: `0.802–0.967`\n\nThese are **synthetic technical benchmarks**, not production/business performance.",
+      "end_line": 80,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Public benchmark evidence"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::public-benchmark-evidence",
+      "semantic_type": "section",
+      "start_line": 64,
+      "title": "Public benchmark evidence"
+    },
+    {
+      "content": "Primary repository dependencies include:\n\n- NumPy\n- Pandas\n- scikit-learn\n- Matplotlib\n- hnswlib\n\nOptional ecosystem integrations include LightGBM, SHAP and InterpretML. Optional dependency presence alone must not be treated as expert-level evidence.",
+      "end_line": 92,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Dependencies / ecosystem demonstrated"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::dependencies-ecosystem-demonstrated",
+      "semantic_type": "section",
+      "start_line": 81,
+      "title": "Dependencies / ecosystem demonstrated"
+    },
+    {
+      "content": "- algorithm design\n- high-dimensional ML\n- interpretable ML / XAI\n- classification / regression\n- supervised clustering\n- numerical optimization/search\n- rule extraction\n- beam / greedy search patterns\n- feature/subspace exploration\n- benchmark design\n- reproducible experimentation\n- Python package engineering\n- pytest\n- developer documentation",
+      "end_line": 109,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 93,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "",
+      "end_line": 111,
+      "heading_path": [
+        "SheShe / DelDel",
+        "CV positioning"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning",
+      "semantic_type": "section",
+      "start_line": 110,
+      "title": "CV positioning"
+    },
+    {
+      "content": "> Designed interpretable rule-discovery and decision-surface exploration methods for classification/regression, with reproducible multi-seed benchmarks on 30k × 25 synthetic datasets.",
+      "end_line": 115,
+      "heading_path": [
+        "SheShe / DelDel",
+        "CV positioning",
+        "Applied Scientist / Research DS"
+      ],
+      "level": 3,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+      "semantic_type": "section",
+      "start_line": 112,
+      "title": "Applied Scientist / Research DS"
+    },
+    {
+      "content": "> Built Python tooling that transforms complex model decision surfaces into low-dimensional, human-readable regions evaluated by precision, recall, F1 and lift.",
+      "end_line": 119,
+      "heading_path": [
+        "SheShe / DelDel",
+        "CV positioning",
+        "Explainable ML"
+      ],
+      "level": 3,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning::explainable-ml",
+      "semantic_type": "section",
+      "start_line": 116,
+      "title": "Explainable ML"
+    },
+    {
+      "content": "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth.",
+      "end_line": 124,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-sheshe-deldel::sheshe-deldel::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 120,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/sheshe_deldel.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

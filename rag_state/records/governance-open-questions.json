@@ -1,0 +1,218 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "e8f6430d3eff18e8b30129387d6673cbc7b84540ad1325734ac2754aea15b5c2",
+  "embedding_candidate": false,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "governance-open-questions",
+  "record_type": "governance",
+  "retrieval_class": "policy",
+  "sections": [
+    {
+      "content": "This backlog turns uncertainty into explicit collection work. An open item does not invalidate related records; it limits only the unsupported detail.",
+      "end_line": 21,
+      "heading_path": [
+        "Open Evidence Questions"
+      ],
+      "level": 1,
+      "section_id": "governance-open-questions::open-evidence-questions",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Open Evidence Questions"
+    },
+    {
+      "content": "",
+      "end_line": 23,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims"
+      ],
+      "level": 2,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims",
+      "semantic_type": "section",
+      "start_line": 22,
+      "title": "Priority 1 — blocks strong CV claims"
+    },
+    {
+      "content": "- **Need:** period, population, denominator and outcome definition for each BTC/contactability uplift value found in restricted sources.\n- **Why:** derivative sources appear to describe different windows or success measures.\n- **Best evidence:** approved dashboard definition, experiment readout or public artifact.\n- **Close when:** each value has its own comparison, unit, period and attribution boundary, or is intentionally excluded.",
+      "end_line": 30,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-BBVA-BTC-METRIC-SEMANTICS"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-btc-metric-semantics",
+      "semantic_type": "open_question",
+      "start_line": 24,
+      "title": "Q-BBVA-BTC-METRIC-SEMANTICS"
+    },
+    {
+      "content": "- **Need:** separate definitions for uplift, treatment/control level comparison and alignment measurement.\n- **Why:** combining them would create a false continuous improvement series.\n- **Best evidence:** experiment specification, measurement note or approved public statement.\n- **Close when:** every value is mapped to a distinct metric record or intentionally excluded.",
+      "end_line": 37,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-BBVA-CRMI-METRIC-SEMANTICS"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-crmi-metric-semantics",
+      "semantic_type": "open_question",
+      "start_line": 31,
+      "title": "Q-BBVA-CRMI-METRIC-SEMANTICS"
+    },
+    {
+      "content": "- **Need:** confirm the public portfolio wording about migration scale and its unit.\n- **Why:** the current phrasing is unusually large and is not safe to normalize by inference.\n- **Best evidence:** project scope document or explicit user confirmation.\n- **Close when:** exact wording is verified; until then, use only the approved qualitative description.",
+      "end_line": 44,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-MS-MIGRATION-SCALE"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-ms-migration-scale",
+      "semantic_type": "open_question",
+      "start_line": 38,
+      "title": "Q-MS-MIGRATION-SCALE"
+    },
+    {
+      "content": "",
+      "end_line": 46,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth"
+      ],
+      "level": 2,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth",
+      "semantic_type": "ownership",
+      "start_line": 45,
+      "title": "Priority 2 — improves ownership and project depth"
+    },
+    {
+      "content": "- **Need:** personal contribution and lifecycle stage for AIFE, selected internal GenAI/model-lifecycle prototypes, credential-misuse analytics and the internal InsideForest-related methodology.\n- **Why:** the curated material mixes individual, team and reconstructed authorship.\n- **Best evidence:** dated code, design document, review record or concise user confirmation per project.\n- **Close when:** each project can use a supported ownership verb and delivery stage.",
+      "end_line": 53,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-BBVA-PROJECT-OWNERSHIP"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-bbva-project-ownership",
+      "semantic_type": "open_question",
+      "start_line": 47,
+      "title": "Q-BBVA-PROJECT-OWNERSHIP"
+    },
+    {
+      "content": "- **Need:** deployment state, active-user scope and measurable outcomes for internal assistants and agentic tools beyond the already public NorA adoption metrics.\n- **Why:** prototypes, pilots and production services require different CV wording.\n- **Best evidence:** release note, usage report, approved architecture artifact or public demonstration.\n- **Close when:** each tool is labeled prototype, pilot, production or discontinued with a dated scope.",
+      "end_line": 60,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-GENAI-PRODUCTION-BOUNDARIES"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-genai-production-boundaries",
+      "semantic_type": "open_question",
+      "start_line": 54,
+      "title": "Q-GENAI-PRODUCTION-BOUNDARIES"
+    },
+    {
+      "content": "- **Need:** stronger external-usage or maintenance evidence for public projects that currently prove implementation but not broad adoption, especially COI and smaller R/RStudio utilities.\n- **Why:** repository existence supports implementation, but not production adoption or active external use.\n- **Best evidence:** package registry, releases, citations, dependent repositories or analytics.\n- **Close when:** adoption claims are evidence-backed or intentionally omitted.",
+      "end_line": 67,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-OPEN-SOURCE-ADOPTION"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-open-source-adoption",
+      "semantic_type": "open_question",
+      "start_line": 61,
+      "title": "Q-OPEN-SOURCE-ADOPTION"
+    },
+    {
+      "content": "",
+      "end_line": 69,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 3 — completeness"
+      ],
+      "level": 2,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-3-completeness",
+      "semantic_type": "section",
+      "start_line": 68,
+      "title": "Priority 3 — completeness"
+    },
+    {
+      "content": "- **Need:** issuer, completion date, status and credential URL for the remaining pending **Applied Generative AI** and **Universidad Carlos III de Madrid Machine Learning** entries.\n- **Why:** incomplete credentials are excluded from automatic CV generation.\n- **Best evidence:** official badge, certificate or issuer verification page.\n- **Close when:** every field is verified or the entry is deprecated.",
+      "end_line": 76,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 3 — completeness",
+        "Q-CREDENTIAL-METADATA"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-3-completeness::q-credential-metadata",
+      "semantic_type": "open_question",
+      "start_line": 70,
+      "title": "Q-CREDENTIAL-METADATA"
+    },
+    {
+      "content": "- **Need:** primary artifacts for high-value claims currently supported only by curated derivative documents.\n- **Why:** primary evidence increases confidence and permits more precise attribution.\n- **Best evidence:** public repository, redacted deliverable, official credential, approved performance record or dated publication.\n- **Close when:** each high-value derivative claim has a primary reference or remains explicitly supporting-only.",
+      "end_line": 83,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 3 — completeness",
+        "Q-ORIGINAL-ARTIFACTS"
+      ],
+      "level": 3,
+      "section_id": "governance-open-questions::open-evidence-questions::priority-3-completeness::q-original-artifacts",
+      "semantic_type": "open_question",
+      "start_line": 77,
+      "title": "Q-ORIGINAL-ARTIFACTS"
+    },
+    {
+      "content": "- Professional-experience duration is now intentionally calibrated to **8+ years** based on formal chronology; university teaching/service and IMEF leadership remain supporting experience rather than employment tenure.\n- The fraud review-efficiency ratio is normalized as **450 -> 34 cases reviewed per relevant finding** and is no longer an open wording question.",
+      "end_line": 88,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Resolved items removed from this backlog"
+      ],
+      "level": 2,
+      "section_id": "governance-open-questions::open-evidence-questions::resolved-items-removed-from-this-backlog",
+      "semantic_type": "section",
+      "start_line": 84,
+      "title": "Resolved items removed from this backlog"
+    },
+    {
+      "content": "New material should close or refine an existing question whenever possible. If it introduces a new claim, register the source first, record conflicts before selecting a value and route the result to the canonical file defined by the data contract.",
+      "end_line": 91,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Intake rule"
+      ],
+      "level": 2,
+      "section_id": "governance-open-questions::open-evidence-questions::intake-rule",
+      "semantic_type": "section",
+      "start_line": 89,
+      "title": "Intake rule"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/_meta/open_questions.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2021-2023-CURATED",
+    "SRC-TRAJECTORY-2024-2026-CURATED",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

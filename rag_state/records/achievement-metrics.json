@@ -1,0 +1,490 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "repository_visibility": "public",
+    "usage_policy": "Only achievements marked public_safe=true and cv_usage=approved may be automatically inserted into externally generated CVs from this repository. Internal metrics must remain redacted unless the repository becomes private or the user explicitly confirms public disclosure. Synthetic benchmark metrics must be labeled as technical benchmarks and never presented as business outcomes."
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "7a3c09fb2cdfb9303405e6d368d89729a64bb3d015a911e23e76c4a2ebe4d79b",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-BBVA-ATM-001",
+    "ACH-BBVA-BTC-PRIVATE",
+    "ACH-BBVA-COMPLIANCE-INTERNAL",
+    "ACH-BBVA-FRAUD-DETECTION-001",
+    "ACH-BBVA-FRAUD-REVIEW-001",
+    "ACH-BBVA-NBO-PRIVATE",
+    "ACH-BBVA-REMOTE-BANKING-PRIVATE",
+    "ACH-BBVA-SEGMENTATION-001",
+    "ACH-GENAI-NORA-001",
+    "ACH-GENAI-NORA-002",
+    "ACH-GENAI-NORA-003",
+    "ACH-GENAI-NORA-004",
+    "ACH-GITHUB-DELDEL-001",
+    "ACH-GITHUB-NARRATIVE-DNA-001",
+    "ACH-GITHUB-NARRATIVE-DNA-002",
+    "ACH-MS-CLARIFICATIONS-001",
+    "ACH-MS-CLARIFICATIONS-002",
+    "ACH-MS-FRAUD-001",
+    "ACH-MS-MIGRATION-001",
+    "ACH-OSS-INSIDEFOREST-001",
+    "ACH-OSS-INSIDEFOREST-002",
+    "ACH-OSS-INSIDEFOREST-003",
+    "ACH-OSS-INSIDEFOREST-004",
+    "ACH-REPORTING-TIME-001",
+    "ACH-RESEARCH-RISK-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "achievement-metrics",
+  "record_type": "achievement_registry",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "Canonical registry of quantified professional and technical achievements for José Carlos Del Valle.\n\nThis file preserves not only the number, but also what the number actually means. A metric is useful for CV generation only when its context, comparison and wording are defensible in an interview.",
+      "end_line": 24,
+      "heading_path": [
+        "Validated Achievement Metrics"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::validated-achievement-metrics",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "Validated Achievement Metrics"
+    },
+    {
+      "content": "- **validated_public:** publicly stated or directly observable in a public source and suitable for reuse\n- **validated_public_technical:** reproducible public technical benchmark; safe to discuss but not a business-impact metric\n- **validated_private:** known and validated, but not safe for a public repository\n- **needs_reconciliation:** metric exists but its exact definition, denominator, period or interpretation needs validation\n- **redacted:** known internal achievement whose sensitive value is deliberately omitted from this public repository\n\n---",
+      "end_line": 34,
+      "heading_path": [
+        "Validated Achievement Metrics",
+        "Status model"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::validated-achievement-metrics::status-model",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "Status model"
+    },
+    {
+      "content": "",
+      "end_line": 36,
+      "heading_path": [
+        "Public-safe professional achievements"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::public-safe-professional-achievements",
+      "semantic_type": "section",
+      "start_line": 35,
+      "title": "Public-safe professional achievements"
+    },
+    {
+      "content": "- **Project:** NorA / internal normative AI assistant\n- **Organization:** BBVA México\n- **Domain:** Generative AI / Knowledge Management / Banking Operations\n- **Metric:** active reach / users served\n- **Result:** `200+ collaborators`\n- **Period:** publicly reported in 2025/2026 professional profile activity\n- **Business context:** assistant specialized in internal normative knowledge, designed to make answers available without manually navigating hundreds of manuals\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** José Carlos's public LinkedIn activity\n- **Approved CV wording:** \"Implemented an AI-powered normative knowledge assistant serving 200+ collaborators.\"\n- **Interview note:** explain the problem first: normative answers previously required manual consultation across a large documentation base.",
+      "end_line": 52,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-GENAI-NORA-001 — Internal normative AI assistant adoption"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-genai-nora-001-internal-normative-ai-assistant-adoption",
+      "semantic_type": "metric",
+      "start_line": 37,
+      "title": "ACH-GENAI-NORA-001 — Internal normative AI assistant adoption"
+    },
+    {
+      "content": "- **Project:** NorA / internal normative AI assistant\n- **Organization:** BBVA México\n- **Metric:** speed of attention / response handling\n- **Result:** `up to 15x faster`\n- **Business context:** acceleration of normative consultation handling after introducing the AI-based assistant\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** José Carlos's public LinkedIn activity\n- **Approved CV wording:** \"Accelerated normative consultation handling by up to 15x through an AI-powered knowledge assistant.\"\n- **Usage constraint:** retain \"up to\"; do not rewrite as a guaranteed 15x improvement across every request.",
+      "end_line": 66,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-GENAI-NORA-002 — Consultation handling speed"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-genai-nora-002-consultation-handling-speed",
+      "semantic_type": "metric",
+      "start_line": 53,
+      "title": "ACH-GENAI-NORA-002 — Consultation handling speed"
+    },
+    {
+      "content": "- **Project:** NorA / internal normative AI assistant\n- **Organization:** BBVA México\n- **Metric:** consultation demand handled\n- **Result:** `up to 13x demand`\n- **Business context:** the AI-enabled workflow allowed the service to absorb materially higher consultation demand\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** José Carlos's public LinkedIn activity\n- **Approved CV wording:** \"Enabled the normative consultation service to handle up to 13x higher demand.\"\n- **Usage constraint:** retain \"up to\" and avoid presenting the value as direct revenue impact.",
+      "end_line": 80,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-GENAI-NORA-003 — Capacity / demand scaling"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-genai-nora-003-capacity-demand-scaling",
+      "semantic_type": "metric",
+      "start_line": 67,
+      "title": "ACH-GENAI-NORA-003 — Capacity / demand scaling"
+    },
+    {
+      "content": "- **Project:** NorA / internal normative AI assistant\n- **Organization:** BBVA México\n- **Metric:** operational capacity implication\n- **Result:** `manual handling would have required approximately one additional quarter of capacity per year`\n- **Status:** needs_reconciliation\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** José Carlos's public LinkedIn activity describing the manual alternative as requiring an additional \"Q\" per year\n- **Approved wording:** none yet\n- **Usage constraint:** do not automatically put this claim into a CV until the meaning of \"Q adicional al año\" is explicitly normalized and defendable.",
+      "end_line": 93,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-GENAI-NORA-004 — Avoided manual capacity expansion"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-genai-nora-004-avoided-manual-capacity-expansion",
+      "semantic_type": "metric",
+      "start_line": 81,
+      "title": "ACH-GENAI-NORA-004 — Avoided manual capacity expansion"
+    },
+    {
+      "content": "- **Project:** ATM and physical-network analytics\n- **Organization:** BBVA México\n- **Metric:** annual savings per redistributed ATM\n- **Result:** `approximately MXN 1 million per ATM per year`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Contributed to an ATM/branch decision-support model publicly reported to save approximately MXN 1 million annually per redistributed ATM.\"\n- **Usage constraint:** preserve `approximately` and the per-ATM denominator; present as project impact, not as individual cash savings personally realized.",
+      "end_line": 106,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-BBVA-ATM-001 — Annual savings per redistributed ATM"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-bbva-atm-001-annual-savings-per-redistributed-atm",
+      "semantic_type": "metric",
+      "start_line": 94,
+      "title": "ACH-BBVA-ATM-001 — Annual savings per redistributed ATM"
+    },
+    {
+      "content": "- **Project:** customer segmentation / remote banking prioritization\n- **Organization:** BBVA México\n- **Metric:** estimated value per customer in selected versus filtered segment\n- **Result:** `MXN 80,000 versus MXN 102 per customer`\n- **Status:** needs_reconciliation\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** current public professional portfolio\n- **Approved wording:** none yet\n- **Usage constraint:** do not use automatically until the definition of \"value,\" estimation window and comparability of both groups are documented.",
+      "end_line": 119,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-BBVA-SEGMENTATION-001 — Customer-value separation"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-bbva-segmentation-001-customer-value-separation",
+      "semantic_type": "metric",
+      "start_line": 107,
+      "title": "ACH-BBVA-SEGMENTATION-001 — Customer-value separation"
+    },
+    {
+      "content": "- **Project:** hybrid claim/fraud prioritization\n- **Organization:** BBVA México\n- **Metric:** cases reviewed per relevant finding\n- **Result:** `450 -> 34 cases reviewed per relevant finding`\n- **Direction:** lower is better\n- **Interpretation:** analysts needed to inspect materially fewer cases to surface one relevant finding after prioritization\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio; current user confirmation\n- **Approved CV wording:** \"Reduced the number of cases reviewed per relevant finding from 450 to 34 through hybrid fraud-prioritization logic.\"\n- **Usage constraint:** describe this as review prioritization/efficiency, not accuracy. Do not rewrite it as `1 in 450 -> 1 in 34 cases requiring evaluation`, because that representation reverses the intuitive direction of the review-effort metric.",
+      "end_line": 134,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-BBVA-FRAUD-REVIEW-001 — Review-efficiency improvement"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-bbva-fraud-review-001-review-efficiency-improvement",
+      "semantic_type": "metric",
+      "start_line": 120,
+      "title": "ACH-BBVA-FRAUD-REVIEW-001 — Review-efficiency improvement"
+    },
+    {
+      "content": "- **Project:** hybrid rules + anomaly-detection workstream\n- **Organization:** BBVA México\n- **Metric:** fraud/malpractice detection rate\n- **Result:** `19% -> 37%`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio; current user confirmation\n- **Approved CV wording:** \"Improved the detection rate from 19% to 37% through a hybrid rules, anomaly-detection and statistical-validation approach while reducing false positives.\"\n- **Usage constraint:** do not attribute this improvement to the normative LLM assistant; the public portfolio places the statements together, but current user confirmation identifies them as separate workstreams.",
+      "end_line": 147,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-BBVA-FRAUD-DETECTION-001 — Detection-rate improvement"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-bbva-fraud-detection-001-detection-rate-improvement",
+      "semantic_type": "metric",
+      "start_line": 135,
+      "title": "ACH-BBVA-FRAUD-DETECTION-001 — Detection-rate improvement"
+    },
+    {
+      "content": "- **Project:** insurance fraud monitoring\n- **Organization:** Management Solutions\n- **Metric:** fraud cases identified per month\n- **Result:** `8 cases per month`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Designed fraud-monitoring KPIs using PCA and outlier detection in a program that identified eight insurance fraud cases per month.\"\n- **Usage constraint:** retain project/team attribution; do not imply every case was identified solely by one algorithm.",
+      "end_line": 160,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-MS-FRAUD-001 — Insurance fraud cases identified"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-ms-fraud-001-insurance-fraud-cases-identified",
+      "semantic_type": "metric",
+      "start_line": 148,
+      "title": "ACH-MS-FRAUD-001 — Insurance fraud cases identified"
+    },
+    {
+      "content": "- **Project:** clarification prioritization\n- **Organization:** Management Solutions\n- **Metric:** quarterly savings\n- **Result:** `up to MXN 1.8 million per quarter`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Contributed to a clarification-prioritization model and dashboard associated with savings of up to MXN 1.8 million per quarter.\"\n- **Usage constraint:** preserve `up to` and project-level attribution.",
+      "end_line": 173,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-MS-CLARIFICATIONS-001 — Quarterly savings"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-ms-clarifications-001-quarterly-savings",
+      "semantic_type": "metric",
+      "start_line": 161,
+      "title": "ACH-MS-CLARIFICATIONS-001 — Quarterly savings"
+    },
+    {
+      "content": "- **Project:** clarification prioritization\n- **Organization:** Management Solutions\n- **Metric:** cases processed per analyst per day\n- **Result:** `25 -> 120`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Helped increase clarification-processing capacity from 25 to 120 cases per analyst per day through ML-based prioritization and interactive reporting.\"\n- **Usage constraint:** preserve the per-analyst/day denominator and team/project attribution.",
+      "end_line": 186,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-MS-CLARIFICATIONS-002 — Daily analyst capacity"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-ms-clarifications-002-daily-analyst-capacity",
+      "semantic_type": "metric",
+      "start_line": 174,
+      "title": "ACH-MS-CLARIFICATIONS-002 — Daily analyst capacity"
+    },
+    {
+      "content": "- **Project:** data-lake-to-data-warehouse migration\n- **Organization:** Management Solutions\n- **Metric:** migrated rows\n- **Publicly stated result:** `20,000 million rows`\n- **Status:** needs_reconciliation\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** current public professional portfolio\n- **Approved wording:** \"Supported a large-scale data-lake-to-data-warehouse migration by defining layouts, formats and relationships.\"\n- **Usage constraint:** do not normalize the stated value to `20 billion` or use the exact figure until the source unit and counting method are confirmed.",
+      "end_line": 199,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-MS-MIGRATION-001 — Data migration scale"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-ms-migration-001-data-migration-scale",
+      "semantic_type": "metric",
+      "start_line": 187,
+      "title": "ACH-MS-MIGRATION-001 — Data migration scale"
+    },
+    {
+      "content": "- **Project:** SQL Reporting tool\n- **Metric:** weekly analyst time saved\n- **Result:** `approximately 10 hours per week`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Built an SQL/R reporting tool that integrated Office/PDF outputs and saved approximately 10 hours per week.\"\n- **Usage constraint:** preserve `approximately`; do not attribute the value to the separate shortcuts package.\n\n---",
+      "end_line": 213,
+      "heading_path": [
+        "Public-safe professional achievements",
+        "ACH-REPORTING-TIME-001 — SQL/R reporting time saved"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-professional-achievements::ach-reporting-time-001-sql-r-reporting-time-saved",
+      "semantic_type": "metric",
+      "start_line": 200,
+      "title": "ACH-REPORTING-TIME-001 — SQL/R reporting time saved"
+    },
+    {
+      "content": "",
+      "end_line": 215,
+      "heading_path": [
+        "Public-safe open-source adoption achievements"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::public-safe-open-source-adoption-achievements",
+      "semantic_type": "section",
+      "start_line": 214,
+      "title": "Public-safe open-source adoption achievements"
+    },
+    {
+      "content": "- **Project:** InsideForest\n- **Domain:** Machine Learning / Explainability / Open Source\n- **Metric:** package installations\n- **Result:** `30,000+ pip installs`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** José Carlos's public LinkedIn activity\n- **Repository:** `https://github.com/jcval94/InsideForest`\n- **Approved CV wording:** \"Built and maintained InsideForest, an open-source ML interpretability library with 30,000+ pip installs.\"",
+      "end_line": 228,
+      "heading_path": [
+        "Public-safe open-source adoption achievements",
+        "ACH-OSS-INSIDEFOREST-001 — Open-source adoption"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-open-source-adoption-achievements::ach-oss-insideforest-001-open-source-adoption",
+      "semantic_type": "metric",
+      "start_line": 216,
+      "title": "ACH-OSS-INSIDEFOREST-001 — Open-source adoption"
+    },
+    {
+      "content": "- **Project:** InsideForest\n- **Metric:** geographic reach\n- **Result:** `50+ countries`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** José Carlos's public LinkedIn activity\n- **Repository:** `https://github.com/jcval94/InsideForest`\n- **Approved CV wording:** \"Reached users across 50+ countries with the InsideForest open-source ML interpretability library.\"",
+      "end_line": 240,
+      "heading_path": [
+        "Public-safe open-source adoption achievements",
+        "ACH-OSS-INSIDEFOREST-002 — Geographic adoption"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-open-source-adoption-achievements::ach-oss-insideforest-002-geographic-adoption",
+      "semantic_type": "metric",
+      "start_line": 229,
+      "title": "ACH-OSS-INSIDEFOREST-002 — Geographic adoption"
+    },
+    {
+      "content": "- **Project:** InsideForest\n- **Metric:** development scale / codebase growth\n- **Result:** `hundreds → tens of thousands of lines of code`\n- **Context:** public description attributes the acceleration in development to an AI-agent-assisted workflow\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** José Carlos's public LinkedIn activity\n- **Approved wording:** \"Used agentic AI-assisted development workflows to scale an open-source ML project from hundreds to tens of thousands of lines of code.\"\n- **Usage constraint:** prefer adoption metrics (`30,000+ installs`, `50+ countries`) over lines of code in a standard CV; LOC is not a quality metric.",
+      "end_line": 253,
+      "heading_path": [
+        "Public-safe open-source adoption achievements",
+        "ACH-OSS-INSIDEFOREST-003 — AI-assisted development scale"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-open-source-adoption-achievements::ach-oss-insideforest-003-ai-assisted-development-scale",
+      "semantic_type": "metric",
+      "start_line": 241,
+      "title": "ACH-OSS-INSIDEFOREST-003 — AI-assisted development scale"
+    },
+    {
+      "content": "- **Project:** InsideForest\n- **Metric:** public maintenance window\n- **Result:** `3+ years`\n- **Observed period:** repository created February 2023; publicly updated/pushed through July 2026\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** GitHub repository metadata\n- **Approved CV wording:** \"Maintained and evolved an open-source ML library over 3+ years, including public API changes, tests, benchmarks and documentation.\"\n- **Usage constraint:** use mainly for open-source, staff-level or software-ownership narratives; adoption metrics are stronger in a standard CV.\n\n---",
+      "end_line": 268,
+      "heading_path": [
+        "Public-safe open-source adoption achievements",
+        "ACH-OSS-INSIDEFOREST-004 — Multi-year maintenance"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-safe-open-source-adoption-achievements::ach-oss-insideforest-004-multi-year-maintenance",
+      "semantic_type": "metric",
+      "start_line": 254,
+      "title": "ACH-OSS-INSIDEFOREST-004 — Multi-year maintenance"
+    },
+    {
+      "content": "These metrics demonstrate engineering/research quality. They are **not business outcomes** and must be labeled accordingly.",
+      "end_line": 272,
+      "heading_path": [
+        "Public GitHub technical validation metrics"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::public-github-technical-validation-metrics",
+      "semantic_type": "technology",
+      "start_line": 269,
+      "title": "Public GitHub technical validation metrics"
+    },
+    {
+      "content": "- **Project:** DelDel / PureSheShe\n- **Domain:** Interpretable ML / Rule Discovery / Numerical Search\n- **Benchmark dataset:** `30,000 samples × 25 informative variables`\n- **Seeds documented:** `11`, `17`, `23`\n- **Low-dimensional search runtime:** approximately `6.97–8.32 seconds` across the documented runs\n- **Best 2D F1 range:** approximately `0.619–0.684`\n- **Best 2D precision range:** approximately `0.802–0.967`\n- **Regions evaluated:** `100` per documented run (`50` in 1D + `50` in 2D)\n- **Status:** validated_public_technical\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** public `PureSheShe` / DelDel README benchmark summary\n- **Repository:** `https://github.com/jcval94/PureSheShe`\n- **Approved CV wording:** \"Designed and benchmarked interpretable rule-search methods on synthetic datasets with 30k samples and 25 variables, with reproducible multi-seed evaluation of F1, precision, lift and runtime.\"\n- **Usage constraint:** do not quote the F1/precision values as real-world model performance; they come from synthetic benchmark datasets.",
+      "end_line": 290,
+      "heading_path": [
+        "Public GitHub technical validation metrics",
+        "ACH-GITHUB-DELDEL-001 — High-dimensional rule-search benchmark"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-github-technical-validation-metrics::ach-github-deldel-001-high-dimensional-rule-search-benchmark",
+      "semantic_type": "metric",
+      "start_line": 273,
+      "title": "ACH-GITHUB-DELDEL-001 — High-dimensional rule-search benchmark"
+    },
+    {
+      "content": "- **Project:** narrative_dna / ADNarrativa\n- **Domain:** Generative AI / LLM Evaluation / Structured Outputs\n- **Metric:** golden regression pass rate\n- **Result:** `1.0` on the repository's high-confidence synthetic-gold regression fixture\n- **Status:** validated_public_technical\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** public `ADNarrativa` README\n- **Repository:** `https://github.com/jcval94/ADNarrativa`\n- **Approved CV wording:** \"Built an auditable LLM classification pipeline with schema validation, synthetic review/adjudication and a golden-regression quality gate reaching a 1.0 pass rate on the maintained high-confidence fixture.\"\n- **Usage constraint:** explicitly preserve that this is the maintained regression fixture, not an external benchmark or production accuracy claim.",
+      "end_line": 304,
+      "heading_path": [
+        "Public GitHub technical validation metrics",
+        "ACH-GITHUB-NARRATIVE-DNA-001 — Golden regression quality gate"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-github-technical-validation-metrics::ach-github-narrative-dna-001-golden-regression-quality-gate",
+      "semantic_type": "metric",
+      "start_line": 291,
+      "title": "ACH-GITHUB-NARRATIVE-DNA-001 — Golden regression quality gate"
+    },
+    {
+      "content": "- **Project:** narrative_dna / ADNarrativa\n- **Metric:** implemented master-plan steps\n- **Result:** `Steps 0–21 complete`\n- **Status:** validated_public_technical\n- **Public safe:** true\n- **CV usage:** not_default\n- **Source:** public repository README\n- **Interpretation:** demonstrates breadth of independent implementation across contracts, validation, LLM classification, adjudication, semantic audit, synthetic review, evaluation, CLI and end-to-end pipeline\n- **Usage constraint:** use the architectural scope rather than the raw step count in most CVs.\n\n---",
+      "end_line": 318,
+      "heading_path": [
+        "Public GitHub technical validation metrics",
+        "ACH-GITHUB-NARRATIVE-DNA-002 — End-to-end implementation scope"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-github-technical-validation-metrics::ach-github-narrative-dna-002-end-to-end-implementation-scope",
+      "semantic_type": "metric",
+      "start_line": 305,
+      "title": "ACH-GITHUB-NARRATIVE-DNA-002 — End-to-end implementation scope"
+    },
+    {
+      "content": "",
+      "end_line": 320,
+      "heading_path": [
+        "Public research achievement"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::public-research-achievement",
+      "semantic_type": "section",
+      "start_line": 319,
+      "title": "Public research achievement"
+    },
+    {
+      "content": "- **Project:** Actuarial professional thesis / statistical risk modeling\n- **Domain:** Statistics / Actuarial Science / Healthcare Risk\n- **Metric:** dataset/model coverage successfully fitted\n- **Publicly stated result:** `95% fitted; remaining 5% handled under a normality assumption`\n- **Public comparison:** prior state described as approximately `90% without fit`\n- **Status:** needs_reconciliation\n- **Public safe:** true\n- **CV usage:** conditional\n- **Source:** José Carlos's public LinkedIn activity about his professional examination and thesis; supporting public thesis-code repository exists\n- **Repository:** `https://github.com/jcval94/Tesis`\n- **Approved wording:** \"Developed statistical distribution-fitting methods for medical risk modeling, substantially increasing the share of data represented by fitted distributions.\"\n- **Usage constraint:** use exact percentages only in research-oriented contexts where methodology and denominator can be explained clearly.\n\n---",
+      "end_line": 337,
+      "heading_path": [
+        "Public research achievement",
+        "ACH-RESEARCH-RISK-001 — Statistical distribution fitting research"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::public-research-achievement::ach-research-risk-001-statistical-distribution-fitting-research",
+      "semantic_type": "metric",
+      "start_line": 321,
+      "title": "ACH-RESEARCH-RISK-001 — Statistical distribution fitting research"
+    },
+    {
+      "content": "These entries intentionally preserve the *existence and semantic role* of important achievements without exposing non-public employer metrics. The exact figures should live in a private source-of-truth layer before being used for automated CV generation.",
+      "end_line": 341,
+      "heading_path": [
+        "Internal professional achievements — values redacted from public repository"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::internal-professional-achievements-values-redacted-from-public-repository",
+      "semantic_type": "section",
+      "start_line": 338,
+      "title": "Internal professional achievements — values redacted from public repository"
+    },
+    {
+      "content": "- **Project:** Best Time to Call (BTC)\n- **Domain:** Machine Learning / Contact Optimization / Banking\n- **Metric family:** contact effectiveness\n- **Exact value:** `[REDACTED — PRIVATE SOURCE REQUIRED]`\n- **Status:** redacted\n- **Public safe:** false\n- **CV usage:** blocked_from_public_source\n- **Known significance:** measurable improvement in contact effectiveness after analytical/model implementation\n- **Private source should preserve:** baseline, uplift, evaluation window, experiment/control definition and whether uplift is relative percent or percentage points",
+      "end_line": 353,
+      "heading_path": [
+        "Internal professional achievements — values redacted from public repository",
+        "ACH-BBVA-BTC-PRIVATE — Best Time to Call"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::internal-professional-achievements-values-redacted-from-public-repository::ach-bbva-btc-private-best-time-to-call",
+      "semantic_type": "metric",
+      "start_line": 342,
+      "title": "ACH-BBVA-BTC-PRIVATE — Best Time to Call"
+    },
+    {
+      "content": "- **Project:** Next Best Offer / CRMi multiproduct\n- **Domain:** Machine Learning / Commercial Optimization / Banking\n- **Metric family:** sales effectiveness per contact/call\n- **Exact value:** `[REDACTED — PRIVATE SOURCE REQUIRED]`\n- **Status:** redacted\n- **Public safe:** false\n- **CV usage:** blocked_from_public_source\n- **Known scope:** multiproduct commercial modeling across banking/financial products\n- **Private source should preserve:** product scope, baseline conversion, uplift semantics and evaluation period",
+      "end_line": 365,
+      "heading_path": [
+        "Internal professional achievements — values redacted from public repository",
+        "ACH-BBVA-NBO-PRIVATE — Next Best Offer / CRMi"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::internal-professional-achievements-values-redacted-from-public-repository::ach-bbva-nbo-private-next-best-offer-crmi",
+      "semantic_type": "metric",
+      "start_line": 354,
+      "title": "ACH-BBVA-NBO-PRIVATE — Next Best Offer / CRMi"
+    },
+    {
+      "content": "- **Project family:** conduct-risk and insurance-malpractice alerting\n- **Domain:** Compliance Analytics / Fraud / Banking\n- **Metric families:** alert effectiveness; severe-irregularity share; disciplinary-action share; preventive-intervention reduction\n- **Exact values:** `[REDACTED — PRIVATE SOURCE REQUIRED]`\n- **Status:** redacted\n- **Public safe:** false\n- **CV usage:** blocked_from_public_source\n- **Usage constraint:** these populations are distinct from `ACH-BBVA-FRAUD-REVIEW-001` and `ACH-BBVA-FRAUD-DETECTION-001`; never merge them into one trend.",
+      "end_line": 376,
+      "heading_path": [
+        "Internal professional achievements — values redacted from public repository",
+        "ACH-BBVA-COMPLIANCE-INTERNAL — Additional compliance alert metrics"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::internal-professional-achievements-values-redacted-from-public-repository::ach-bbva-compliance-internal-additional-compliance-alert-metrics",
+      "semantic_type": "metric",
+      "start_line": 366,
+      "title": "ACH-BBVA-COMPLIANCE-INTERNAL — Additional compliance alert metrics"
+    },
+    {
+      "content": "- **Project family:** Remote Banking / Advanced Analytics\n- **Domain:** Business Analytics / Profitability / Productivity\n- **Metric families:** PRV evolution; absolute business value; banker productivity; profitability vs comparison group\n- **Exact values:** `[REDACTED — PRIVATE SOURCE REQUIRED]`\n- **Status:** redacted\n- **Public safe:** false\n- **CV usage:** blocked_from_public_source\n- **Private source should preserve:** metric definitions, periods, exclusions, comparison-group methodology and attribution boundaries\n\n---",
+      "end_line": 389,
+      "heading_path": [
+        "Internal professional achievements — values redacted from public repository",
+        "ACH-BBVA-REMOTE-BANKING-PRIVATE — Remote banking business impact"
+      ],
+      "level": 2,
+      "section_id": "achievement-metrics::internal-professional-achievements-values-redacted-from-public-repository::ach-bbva-remote-banking-private-remote-banking-business-impact",
+      "semantic_type": "metric",
+      "start_line": 377,
+      "title": "ACH-BBVA-REMOTE-BANKING-PRIVATE — Remote banking business impact"
+    },
+    {
+      "content": "1. Prefer **business outcome + technical mechanism + scope** in one bullet.\n2. Never combine unrelated metrics into a synthetic claim.\n3. Preserve qualifiers such as `up to`, `approximately`, `more than` and comparison-group definitions.\n4. Never convert a relative percentage into percentage points or vice versa without explicit source semantics.\n5. Do not attribute the entire business result to a model when the result depended on a broader operational process.\n6. For public CV generation from this repository, use only `public_safe=true` achievements.\n7. Internal/redacted achievements may only be hydrated from a private source or after explicit confirmation that the values are safe for public disclosure.\n8. Synthetic benchmark metrics must always be described as benchmarks, never as customer/business performance.\n9. Prefer adoption/outcome metrics over lines of code, stars, repository size or other vanity metrics.\n10. Prefer the strongest relevant metric rather than maximizing metric count.\n11. Ratios must state their unit and denominator explicitly; avoid ambiguous `1:x` shorthand when it can reverse the intuitive direction of improvement.",
+      "end_line": 403,
+      "heading_path": [
+        "Metric selection rules for CV generation"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::metric-selection-rules-for-cv-generation",
+      "semantic_type": "section",
+      "start_line": 390,
+      "title": "Metric selection rules for CV generation"
+    },
+    {
+      "content": "For most Data Science / AI applications, prioritize:\n\n- BBVA hybrid detection: cases reviewed per relevant finding `450 -> 34`\n- BBVA hybrid detection: detection rate `19% -> 37%`\n- NorA: `200+ collaborators`\n- NorA: `up to 15x faster consultation handling`\n- NorA: `up to 13x higher demand capacity`\n- BBVA ATM analytics: `approximately MXN 1 million per redistributed ATM per year`\n- Management Solutions: `up to MXN 1.8 million quarterly savings`\n- Management Solutions: capacity `25 -> 120 cases per analyst per day`\n- InsideForest: `30,000+ pip installs`\n- InsideForest: `50+ countries`\n\nFor technical/research-heavy roles, additional evidence can include:\n\n- DelDel: reproducible benchmarks on `30k × 25` synthetic datasets\n- narrative_dna: golden-regression fixture with `1.0` pass rate\n- InsideForest: `3+ years` of public maintenance and evolution",
+      "end_line": 423,
+      "heading_path": [
+        "Current strongest public-safe metrics"
+      ],
+      "level": 1,
+      "section_id": "achievement-metrics::current-strongest-public-safe-metrics",
+      "semantic_type": "section",
+      "start_line": 404,
+      "title": "Current strongest public-safe metrics"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/achievements/metrics.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-LINKEDIN-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

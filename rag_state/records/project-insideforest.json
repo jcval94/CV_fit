@@ -1,0 +1,242 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "license": "MIT",
+    "primary_language": "Python",
+    "project_type": "open_source_library",
+    "source_repo": "https://github.com/jcval94/InsideForest"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "dff109baf62aae757eda2af4250476d60216de4abb55f9350f9f6d8ef9f7a3f7",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-insideforest",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 20,
+      "heading_path": [
+        "InsideForest"
+      ],
+      "level": 1,
+      "section_id": "project-insideforest::insideforest",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "InsideForest"
+    },
+    {
+      "content": "InsideForest is an independently authored open-source Python library for discovering **interpretable regions in tabular data through supervised clustering**. Random forests are used as generators of candidate leaves; the library then selects, scores, describes and assigns observations to useful human-readable regions.\n\nThe project is strong evidence of José Carlos's ability to move beyond model consumption into **algorithm design, reusable library engineering, evaluation and public API ownership**.",
+      "end_line": 26,
+      "heading_path": [
+        "InsideForest",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::summary",
+      "semantic_type": "summary",
+      "start_line": 21,
+      "title": "Summary"
+    },
+    {
+      "content": "- Repository created: February 2023\n- Publicly maintained through at least July 2026\n- Current release documented in repository: `0.4.3`\n- Primary language: Python\n- License: MIT\n- Installable with `pip`\n- Includes documentation site, API/migration docs, changelog, examples, benchmarks and pytest suite",
+      "end_line": 36,
+      "heading_path": [
+        "InsideForest",
+        "Public repository facts"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::public-repository-facts",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Public repository facts"
+    },
+    {
+      "content": "- `InsideForestRegionClusterer` — general categorical targets\n- `InsideForestClassRegionClusterer` — class-aware regions retaining class distributions and diagnostics\n- `InsideForestContinuousRegionClusterer` — continuous targets",
+      "end_line": 42,
+      "heading_path": [
+        "InsideForest",
+        "Canonical estimators"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::canonical-estimators",
+      "semantic_type": "section",
+      "start_line": 37,
+      "title": "Canonical estimators"
+    },
+    {
+      "content": "Canonical estimators expose:\n\n- `fit`\n- `fit_predict`\n- `predict`\n- `transform`\n- `score`\n- `get_params`\n- `set_params`\n- `save`\n- `load`\n- region assignment and explanation methods\n- quality-reporting methods\n\nThe library also maintains migration aliases with deprecation behavior, demonstrating awareness of backward compatibility and API evolution.",
+      "end_line": 60,
+      "heading_path": [
+        "InsideForest",
+        "Public API / engineering evidence"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::public-api-engineering-evidence",
+      "semantic_type": "section",
+      "start_line": 43,
+      "title": "Public API / engineering evidence"
+    },
+    {
+      "content": "",
+      "end_line": 62,
+      "heading_path": [
+        "InsideForest",
+        "ML / statistical concepts demonstrated"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::ml-statistical-concepts-demonstrated",
+      "semantic_type": "section",
+      "start_line": 61,
+      "title": "ML / statistical concepts demonstrated"
+    },
+    {
+      "content": "Quality reporting includes:\n\n- adjusted mutual information (AMI)\n- coverage / unmatched rate\n- NMI\n- ARI\n- homogeneity\n- completeness\n- purity\n- lift\n- entropy\n- class-level diagnostics",
+      "end_line": 77,
+      "heading_path": [
+        "InsideForest",
+        "ML / statistical concepts demonstrated",
+        "Categorical targets"
+      ],
+      "level": 3,
+      "section_id": "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::categorical-targets",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Categorical targets"
+    },
+    {
+      "content": "Regions preserve statistics such as:\n\n- support / coverage\n- mean / median\n- standard deviation\n- IQR / range\n- target shift\n- dispersion reduction\n- separation\n- region score\n\nThe canonical continuous score is η², measuring the fraction of target variance explained by the returned clusters.",
+      "end_line": 92,
+      "heading_path": [
+        "InsideForest",
+        "ML / statistical concepts demonstrated",
+        "Continuous targets"
+      ],
+      "level": 3,
+      "section_id": "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::continuous-targets",
+      "semantic_type": "section",
+      "start_line": 78,
+      "title": "Continuous targets"
+    },
+    {
+      "content": "The repository contains reproducible benchmark scripts for:\n\n- class-region quality\n- coverage\n- unmatched rate\n- clustering agreement\n- regional quality\n- stability\n- runtime\n- memory\n- regression-region quality\n- dispersion reduction\n- assignment/geometric stability\n- branch compression\n\nA complete pytest suite is also documented.",
+      "end_line": 111,
+      "heading_path": [
+        "InsideForest",
+        "Validation engineering"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::validation-engineering",
+      "semantic_type": "section",
+      "start_line": 93,
+      "title": "Validation engineering"
+    },
+    {
+      "content": "- Python package engineering\n- scikit-learn-style estimator design\n- Random Forests\n- supervised clustering\n- interpretable / explainable ML\n- classification and continuous-target analysis\n- statistical metrics\n- benchmarking\n- model validation\n- testing with pytest\n- API design\n- persistence / serialization\n- backward compatibility\n- technical documentation\n- open-source maintenance",
+      "end_line": 129,
+      "heading_path": [
+        "InsideForest",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 112,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "Use `../achievements/metrics.md` as the canonical source for numeric claims.\n\nCurrently approved public metrics include:\n\n- `30,000+ pip installs`\n- adoption across `50+ countries`\n- `3+ years` of public maintenance/evolution\n\nDo not infer current download counts from GitHub itself; the adoption numbers originate from José Carlos's public professional statements.",
+      "end_line": 141,
+      "heading_path": [
+        "InsideForest",
+        "Quantified public outcomes"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::quantified-public-outcomes",
+      "semantic_type": "outcome",
+      "start_line": 130,
+      "title": "Quantified public outcomes"
+    },
+    {
+      "content": "",
+      "end_line": 143,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::strong-cv-narratives",
+      "semantic_type": "section",
+      "start_line": 142,
+      "title": "Strong CV narratives"
+    },
+    {
+      "content": "> Built and maintained InsideForest, an open-source Python library for interpretable supervised clustering and rule-region discovery in tabular ML, with 30,000+ pip installs across 50+ countries.",
+      "end_line": 147,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "General Data Science / ML"
+      ],
+      "level": 3,
+      "section_id": "project-insideforest::insideforest::strong-cv-narratives::general-data-science-ml",
+      "semantic_type": "section",
+      "start_line": 144,
+      "title": "General Data Science / ML"
+    },
+    {
+      "content": "> Designed a reusable scikit-learn-style ML library with stable estimator APIs, persistence, pytest coverage, benchmark suites, documentation and backward-compatible API migration.",
+      "end_line": 151,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "ML Engineering"
+      ],
+      "level": 3,
+      "section_id": "project-insideforest::insideforest::strong-cv-narratives::ml-engineering",
+      "semantic_type": "section",
+      "start_line": 148,
+      "title": "ML Engineering"
+    },
+    {
+      "content": "> Developed supervised region-discovery methods over tree-generated candidate spaces, with class/continuous-target diagnostics, stability evaluation and human-readable region explanations.",
+      "end_line": 155,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "Applied Scientist / XAI"
+      ],
+      "level": 3,
+      "section_id": "project-insideforest::insideforest::strong-cv-narratives::applied-scientist-xai",
+      "semantic_type": "section",
+      "start_line": 152,
+      "title": "Applied Scientist / XAI"
+    },
+    {
+      "content": "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric.",
+      "end_line": 161,
+      "heading_path": [
+        "InsideForest",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-insideforest::insideforest::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 156,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/insideforest.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-LINKEDIN-PUBLIC"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

@@ -1,0 +1,365 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log",
+      "chunk_type": "policy_section",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "bee5f555c0171db1840e96b2606063fc24aab28319633e5eaf22dde21460841b",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Conflict and Reconciliation Log\nThis log prevents silent overwrites when sources disagree. Open conflicts block automatic use of the disputed detail, not use of the entire record.",
+      "title": "Conflict and Reconciliation Log"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-bbva-expert-start",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "a99950aaab1a81bec98b66e0fcee07b5ba8ee6042cc21b664e5e5513918bdfa6",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-BBVA-EXPERT-START"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-BBVA-EXPERT-START\n- **Subject:** start of BBVA Expert level\n- **User-confirmed value:** April 2024\n- **Public portfolio value:** March 2024\n- **Status:** resolved_for_current_use\n- **Decision:** use April 2024 in canonical role chronology because current user confirmation outranks the older public self-description; retain the portfolio discrepancy here.",
+      "title": "CONFLICT-BBVA-EXPERT-START"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-btc-uplift",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "05d96a4f26d2128e9ffc69e138b85ba341e5462a243352eb7b98234651a61721",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-BTC-UPLIFT"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-BTC-UPLIFT\n- **Subject:** contactability/effectiveness uplift\n- **Source discrepancy:** two restricted derivative sources report different uplift values and use different outcome labels\n- **Status:** open_semantics\n- **Decision:** treat them as measurements from different periods or definitions. Do not publish or auto-insert an exact BTC uplift until each value has a separately reconciled metric definition with period, population, denominator and unit.",
+      "title": "CONFLICT-BTC-UPLIFT"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-crmi-metrics",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "839337d71aa16f810216d510efeb457c3fb99947507b32422795751d1fb1ed25",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-CRMI-METRICS"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-CRMI-METRICS\n- **Subject:** commercial recommendation impact\n- **Source discrepancy:** restricted derivative sources contain an uplift claim, a later treatment/control level comparison and an alignment measure\n- **Status:** open_semantics\n- **Decision:** preserve as separate measurements. The first is an uplift claim; the second is a level comparison in a later window. Do not rewrite either as percentage points without denominator evidence.",
+      "title": "CONFLICT-CRMI-METRICS"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-llm-attribution",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "0dc0fa8004fcbec055932e32673a85af8be8822aecab6583abea2ff24894f581",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-FRAUD-LLM-ATTRIBUTION"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-FRAUD-LLM-ATTRIBUTION\n- **Subject:** attribution of the public detection-rate improvement\n- **Current user-confirmed account:** hybrid business rules, anomaly detection and statistical validation drove the detection improvement; LLM tooling was a separate normative-use case.\n- **Public portfolio wording:** places the metric immediately after the LLM sentence and can be read as causal attribution to LLM deployment.\n- **Status:** resolved_for_current_use\n- **Decision:** use the user-confirmed hybrid-detection attribution and keep the LLM impact separate. Do not claim the LLM caused the detection-rate change.",
+      "title": "CONFLICT-FRAUD-LLM-ATTRIBUTION"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-metric-families",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "f9d35d227e78d12104a20593bfa17590bcd2e5ac6e2253a1b3a51ed7f766efb2",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-FRAUD-METRIC-FAMILIES"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-FRAUD-METRIC-FAMILIES\n- **Subject:** public hybrid-detection metrics versus additional restricted alert-effectiveness, irregularity and disciplinary-action measures\n- **Status:** resolved_as_distinct\n- **Decision:** these belong to different models, alert populations, periods and denominators. Never present them as one continuous improvement series.",
+      "title": "CONFLICT-FRAUD-METRIC-FAMILIES"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-review-efficiency-wording",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "521edec97a53e7977854d94fb59d376f4ccfeed0a4cb497245bfc48cffd5d01d",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-FRAUD-REVIEW-EFFICIENCY-WORDING"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-FRAUD-REVIEW-EFFICIENCY-WORDING\n- **Subject:** ambiguous representation of the `1:450 -> 1:34` review-efficiency metric\n- **Previous wording risk:** phrasing the result as `1 in 450 -> 1 in 34 cases requiring evaluation` can be read mathematically as an increase in event frequency rather than a reduction in review effort.\n- **Status:** resolved_for_current_use\n- **Decision:** normalize the metric as **cases reviewed per relevant finding: 450 -> 34**. Generated wording must describe fewer cases needing review per relevant finding; it must not call the ratio an accuracy metric or a reduction from `1 in 450` to `1 in 34` cases.",
+      "title": "CONFLICT-FRAUD-REVIEW-EFFICIENCY-WORDING"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-aife-date",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "74d870dd85182c72f21c1d0575af25e820bb65f7ed1f8bc81edbaac1e196ea88",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-AIFE-DATE"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-AIFE-DATE\n- **Subject:** AIFE/Open Market execution period\n- **Source values:** July 2022 and an internal annotation suggesting 2024\n- **Status:** open\n- **Decision:** keep AIFE as supporting evidence with medium/low confidence and do not use an exact date in a generated CV until a primary artifact resolves it.",
+      "title": "CONFLICT-AIFE-DATE"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-insideforest-scope",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "b6c1ae82175a69d9d1198b02b4cd0b3147b52fa212eca94379c6cd2a0a638a7c",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-INSIDEFOREST-SCOPE"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-INSIDEFOREST-SCOPE\n- **Subject:** relationship between the 2023 internal methodology and the public open-source library\n- **Status:** resolved_as_related_not_identical\n- **Decision:** describe them as a related methodological line. Do not claim that the public package was deployed internally or that every internal component exists in the public library without direct evidence.",
+      "title": "CONFLICT-INSIDEFOREST-SCOPE"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-devf-end-date",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c51de4885d8241edfe15ca2bcba0ee1f7c71ced151fc3e03cb1ec7c3f38c051a",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-DEVF-END-DATE"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-DEVF-END-DATE\n- **Subject:** end of DEV.F teaching engagement\n- **User-confirmed value:** January 2023\n- **Curated trajectory value:** through February 2023\n- **Status:** resolved_for_current_use\n- **Decision:** use January 2023; retain the one-month discrepancy as a source-quality note.",
+      "title": "CONFLICT-DEVF-END-DATE"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-experience-duration",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "34ce7259989dc4b3222af63434bf53ee56e69d20b31b330966a0c710a634de15",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-EXPERIENCE-DURATION"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-EXPERIENCE-DURATION\n- **Subject:** formal professional tenure versus broader early experience\n- **Previous positioning:** `9+ years`, partly counting university teaching/service and IMEF leadership as career experience\n- **Enumerated professional chronology:** formal professional roles begin in October 2017, with the separately documented 2019 development pause\n- **Status:** resolved_for_current_use\n- **Decision:** use **8+ years of professional experience** as the canonical external figure. Preserve university teaching/service, IMEF leadership and academic activities as valuable supporting experience, but do not add them to formal-employment tenure.",
+      "title": "CONFLICT-EXPERIENCE-DURATION"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-conflict-log::conflict-and-reconciliation-log::conflict-platform-naming",
+      "chunk_type": "policy_conflict",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "2f40fede515ee498a3497d7dcb43e27eee1a66e332fd3873f8bc76a221452149",
+      "cv_eligible": false,
+      "heading_path": [
+        "Conflict and Reconciliation Log",
+        "CONFLICT-PLATFORM-NAMING"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-conflict-log",
+      "record_type": "conflict_log",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/conflicts.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "CONFLICT-PLATFORM-NAMING\n- **Subject:** legacy/internal platform names versus external CV terminology\n- **Status:** resolved_output_policy\n- **Decision:** preserve the evidenced capability while preferring market-readable technology such as AWS, PySpark, Teradata and Oracle. Do not reintroduce deprecated/internal platform names in generated CVs unless explicitly requested.",
+      "title": "CONFLICT-PLATFORM-NAMING"
+    }
+  ],
+  "record_id": "governance-conflict-log",
+  "schema_version": 1
+}

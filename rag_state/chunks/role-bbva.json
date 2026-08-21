@@ -1,0 +1,306 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::canonical-employment-record",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "5358813af56f528dfcdd7ba6d7b67dc4d671d1fd088cb080fecfc929a6364f9b",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Canonical employment record"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Canonical employment record\n- **Employment period:** May 2021 – present\n- **Functional track:** Data Science / Advanced Analytics\n- **Current corporate level:** Expert\n- **Current market-facing title:** Senior Data Scientist\n- **Primary domains:** banking operations, remote banking, commercial analytics, fraud, compliance, risk, data engineering and Generative AI\n\nThe corporate level **Expert** is retained for internal chronology. External career materials should normally use a market-readable title such as **Senior Data Scientist** or the user-approved general positioning **Líder de Data Science, Modelado e Inteligencia Artificial**.",
+      "title": "Canonical employment record"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "10d76af01c3843680bdf75031abdd864238d01a2790ebb39b3e3a6c9be7ab8fe",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Role chronology",
+        "Data Scientist — Analyst"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Data Scientist — Analyst\n- **Period:** May 2021 – April 2022\n- **Primary scope:** analytical infrastructure, forecasting, ATM/branch strategy and operational automation\n- **Observable contributions:**\n  - evaluated and adapted ML models and ETL processes for forecasting cash demand\n  - supported ATM/branch deployment and decommissioning decisions with clustering, market-potential analysis and visualization\n  - contributed to predictive-maintenance, footprint and operational-dashboard work\n  - built Python-based forecasting and recurring-data automation for infrastructure use cases\n- **Canonical projects:** [ATM and physical-network analytics](../projects/bbva_atm_analytics.md)",
+      "title": "Data Scientist — Analyst"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "292a7fed8f84fd79a309a7827283a80d6db5e354c34fb7eeb8213c5613d5a176",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Role chronology",
+        "Data Scientist — Associate"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Data Scientist — Associate\n- **Period:** May 2022 – March 2024\n- **Primary scope:** remote banking, customer segmentation, contact optimization and recommendation strategy\n- **Observable contributions:**\n  - supported and refined geospatial/footprint analysis for remote ATMs\n  - participated in contactability pilots and later operated recurring Best Time to Call releases\n  - built population, segmentation and prioritization logic in SQL/PySpark for commercial workflows\n  - contributed to CRMi/Next Best Offer releases and treatment/control evaluation\n  - diagnosed sampling bias in an experimental control group and helped align commercial restrictions\n  - developed prototypes that translated analytical recommendations into interactive business-facing experiences\n- **Canonical projects:**\n  - [Best Time to Call](../projects/bbva_btc.md)\n  - [Next Best Offer / CRMi](../projects/bbva_next_best_offer.md)",
+      "title": "Data Scientist — Associate"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "6972da406623d6277fd35b6f1d72cc6d0a006a207396d4f8f08923fe90014f23",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Role chronology",
+        "Data Scientist — Expert"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Data Scientist — Expert\n- **Period:** April 2024 – present\n- **Primary scope:** fraud and compliance analytics, production quality, data architecture and applied GenAI\n- **Observable contributions:**\n  - led and contributed to hybrid rule/ML systems for claim, malpractice and conduct-risk detection\n  - translated investigation hypotheses into auditable analytical extractions and alert logic\n  - calibrated alert thresholds and investigated false positives across transactional, HR and security data\n  - worked on fuzzy identity matching, relational fraud analysis and external-data enrichment\n  - reviewed production code and refactored distributed pipelines affected by deprecated inputs, temporal ambiguity or memory limits\n  - helped productize data engines and design secure automation under corporate constraints\n  - curated knowledge sources and measured operational impact for internal normative assistants\n  - designed process/state/SLA architectures and GenAI-assisted workflows for regulatory operations\n  - supported technical adoption of NotebookLM, Gemini, ChatGPT and Google Workspace automation\n- **Canonical projects:**\n  - [Fraud and inappropriate-practice detection](../projects/fraud_detection.md)\n  - [Internal LLM tools](../projects/llm_internal_tools.md)\n  - [Data quality, MLOps and analytical engines](../projects/bbva_data_quality_mlops.md)\n  - [Supervisory Relations To-Be](../projects/bbva_supervisory_relations.md)",
+      "title": "Data Scientist — Expert"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::end-to-end-scope",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "0c11fe7505aeef53c0332ab7228fce5f826fa889afa5e854d9daa82c7b900efb",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "End-to-end scope"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "End-to-end scope\nAcross the three levels, the role can defensibly include:\n\n1. framing ambiguous business or control problems\n2. extracting and validating data from multiple corporate sources\n3. building analytical logic, statistical models or ML components\n4. writing Python, PySpark and SQL\n5. producing recurring pipelines, layouts, reports, dashboards or APIs\n6. monitoring adoption, quality, drift and operational outcomes\n7. coordinating with business, technology, compliance, legal/data and senior leadership\n8. communicating trade-offs and impact to management",
+      "title": "End-to-end scope"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::technologies-with-role-evidence",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "e8fc83f6899edce28a03182552f58ed593f539f17675aef78f149659fe67eeb9",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Technologies with role evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Technologies with role evidence\n- Python, PySpark, SQL and R\n- Spark-based distributed processing\n- Teradata and Oracle\n- AWS analytical workloads\n- Google Cloud and Google Workspace\n- Apps Script, Google Sheets, Forms and Looker Studio\n- Tableau and MicroStrategy/BI environments\n- Git/Bitbucket/GitHub, code review and CI/CD practices\n- OpenAI, Gemini and NotebookLM\n\nInternal or deprecated platform names are not required in generated CVs.",
+      "title": "Technologies with role evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::stakeholders",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "e64982290c8d09a11ae9c18242e9eec278af6cbf4b3e12ba7d0e0b024f5121ad",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Stakeholders"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Stakeholders\nEvidence supports work with:\n\n- business and commercial teams\n- risk, compliance and investigation teams\n- technology and data teams\n- legal/data/privacy stakeholders\n- division, cell and senior-management leadership\n\nExact team sizes and reporting lines should not be inferred.",
+      "title": "Stakeholders"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::impact-usage",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "a127e5155c836083242f912f2c101aa966c100fa89e91ec28aef100c24376206",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Impact usage"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Impact usage\nExact numerical claims must come from [the achievement registry](../achievements/metrics.md). Metrics from different projects, periods or alert populations must never be merged.",
+      "title": "Impact usage"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-bbva::bbva-m-xico::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "content_hash": "64c5ed7f5be19e1644fd7a30eae4c12c5b3ef0bc714bdcb0367b854db8f33cda",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA México",
+        "Boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-bbva",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/bbva.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "role-bbva",
+  "schema_version": 1
+}

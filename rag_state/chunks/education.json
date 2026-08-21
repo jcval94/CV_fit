@@ -1,0 +1,322 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "education::education::master-s-degree-in-data-science",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "de7b5538b4d529c90f996b879bc791b9cb987bc6785b818daf304584cbd9740c",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Master's Degree in Data Science\n- **Institution:** Universidad Panamericana\n- **Degree:** Maestría en Ciencia de Datos\n- **Period:** June 2023 – December 2024\n- **Final grade:** 9.6 / 10\n- **Location:** Mexico\n- **Status:** Completed",
+      "title": "Master's Degree in Data Science"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::master-s-degree-in-data-science::academic-depth",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "a9902615e8f120e2ecd5cb2c5302c7462964924b3b8b22e6adc4e1766cccc32b",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science",
+        "Academic depth"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Academic depth\nGraduate-level training focused on the mathematical, statistical and computational foundations required to design and implement Data Science solutions. The program strengthened practical and theoretical capabilities in areas such as statistical modeling, machine learning, data engineering, cloud-based analytics, model evaluation, visualization and applied AI.\n\nThe degree complements José Carlos's actuarial background by extending his quantitative training toward modern production-oriented Data Science and AI workflows.",
+      "title": "Academic depth"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "7282a58eb021dcb1617d132441d8bd7675e443ca3bf2fa4e3713c01c67b0ff0c",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science",
+        "How to represent this degree"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "How to represent this degree\nPreferred concise CV form:\n\n> **M.Sc. / Master's in Data Science — Universidad Panamericana, 2023–2024**\n\nWhen academic performance is relevant, the final grade **9.6/10** may be included.\n\n---",
+      "title": "How to represent this degree"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "f9cc1fc2fe6d82c8dc3e7802eb16e60fc16a088258de73084bed7aa6b60703f3",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Bachelor's Degree in Actuarial Science\n- **Institution:** Universidad Nacional Autónoma de México (UNAM)\n- **Degree:** Licenciatura en Actuaría\n- **Period:** 2013 – 2018\n- **Status:** Completed",
+      "title": "Bachelor's Degree in Actuarial Science"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science::quantitative-foundation",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "c61ef547ee49670765a8357d729edadde782518893aea5b47e6292a2e999e868",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "Quantitative foundation"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Quantitative foundation\nActuarial training provided a rigorous foundation in mathematics, probability, statistics, financial and risk-oriented quantitative reasoning. This background underpins later work in statistical modeling, machine learning, experimentation, forecasting and risk analytics.\n\nRelevant areas of quantitative depth include:\n\n- Probability and statistical inference\n- Mathematical analysis and calculus\n- Regression and statistical modeling\n- Risk and uncertainty modeling\n- Financial and actuarial mathematics\n- Optimization-oriented quantitative reasoning\n- Data analysis and computational problem solving\n\nThese areas describe the degree's quantitative foundation and should not be interpreted as an exhaustive list of exact course titles.",
+      "title": "Quantitative foundation"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science::academic-activities-and-distinctions",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "e6538809000c6979c1a68a6e7406463542f729b1a55afa096ab4ed4582050766",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "Academic activities and distinctions"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Academic activities and distinctions\nPublic profile evidence plus current user confirmation support the following activities during the UNAM period:\n\n- Assistant in **Mathematical Analysis** for approximately six months.\n- University teaching/instruction in a preventive academic program for subjects with high failure rates for approximately six months.\n- Current user confirmation clarifies that university teaching also formed part of his **social-service experience** in the faculty.\n- Participation in **IMEF Universitario**, including service as **VP of Social Responsibility** and involvement in research/social-impact projects.\n- **Second place in the Gauss Test**.\n\nThese activities are valuable evidence of early quantitative communication, teaching and leadership. They are not added to formal professional-employment tenure.",
+      "title": "Academic activities and distinctions"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "9ea8e4d545cf91311172373e92e8b21507b8087d5eaada00c374c166125d053d",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "How to represent this degree"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "How to represent this degree\nPreferred concise CV form:\n\n> **B.Sc. / Bachelor's in Actuarial Science — Universidad Nacional Autónoma de México (UNAM), 2013–2018**\n\nFor roles requiring deeper quantitative evidence, emphasize the degree's grounding in probability, statistics, mathematics and risk modeling rather than listing generic Data Science keywords.\n\n---",
+      "title": "How to represent this degree"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::education-positioning",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "4f75fcd2fe0025b01fdb659670333ccc00128614137e8831dac43a2fa5e90f28",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Education positioning"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Education positioning\nThe combination of Actuarial Science and a Master's in Data Science is a core part of José Carlos's professional positioning:\n\n1. **Actuarial Science** provides the mathematical, statistical and risk-oriented base.\n2. **Data Science** extends that base into modern machine learning, data engineering and AI applications.\n3. Professional experience connects both degrees to production systems and measurable business outcomes.\n4. Earlier teaching, social-service and IMEF leadership provide supporting evidence of communication and leadership without being counted as formal employment years.",
+      "title": "Education positioning"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::technical-education::computer-systems-technician",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "3ea30c07b97266b58bc2bd6f5fe00ecb6f9babab9e4a438c534c1263084602d6",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Technical Education",
+        "Computer Systems Technician"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Computer Systems Technician\n- **Institution:** Centro de Computación Profesional de México (CCPM)\n- **Program:** Técnico en Sistemas Computacionales / Systems Computer Technician\n- **Period:** December 2011 – August 2013\n- **Status:** Completed\n- **Source:** current public professional portfolio\n- **CV priority:** supporting only; normally omit from senior one-page CVs unless early technical formation is relevant",
+      "title": "Computer Systems Technician"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "education::education::usage-rules",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "content_hash": "591f8e72f11783dbe4c9d5ab263dff93a98e3757f47b000276d6e7cd0c259c91",
+      "cv_eligible": true,
+      "heading_path": [
+        "Education",
+        "Usage rules"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "education",
+      "record_type": "education",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/education.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Usage rules\n- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure.",
+      "title": "Usage rules"
+    }
+  ],
+  "record_id": "education",
+  "schema_version": 1
+}

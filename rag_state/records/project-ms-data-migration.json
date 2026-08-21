@@ -1,0 +1,137 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "Management Solutions",
+    "period": "2019-2020"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "b9c7cac44a79a151df6ad49b2faf4f5368ec67e78b46e9fc9ec95835b9b7eb8c",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [
+    "../achievements/metrics.md",
+    "../roles/previous_roles.md"
+  ],
+  "metric_refs": [
+    "ACH-MS-MIGRATION-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-ms-data-migration",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA"
+      ],
+      "level": 1,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Management Solutions — Data Migration, Reconciliation & QA"
+    },
+    {
+      "content": "Client-delivery work supporting migration and transformation of corporate tools and data across platforms, with emphasis on business-rule preservation, data consistency, reconciliation and deployment validation.",
+      "end_line": 23,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "Evidence supports:\n\n- supporting migration of corporate tools to Salesforce\n- translating business rules into front-end behavior\n- performing A/B testing on deployed solutions\n- supporting a data-lake-to-data-warehouse migration\n- defining layouts, formats and relationships to preserve information consistency\n- validating migrated outputs and investigating discrepancies\n- coordinating analytical/technical findings with client stakeholders\n\nThe role supports strong data-quality and migration evidence; it does not establish sole architecture ownership of the target platforms.",
+      "end_line": 37,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 24,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "- data migration and reconciliation\n- SQL / data manipulation\n- schema/layout definition\n- data-quality validation\n- A/B testing\n- Salesforce delivery context\n- cross-platform traceability",
+      "end_line": 47,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Methods and technologies"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+      "semantic_type": "technology",
+      "start_line": 38,
+      "title": "Methods and technologies"
+    },
+    {
+      "content": "- `ACH-MS-MIGRATION-001` — migration-scale claim, currently conditional pending unit reconciliation\n\nThe exact row-count figure must not be used until the achievement registry marks the metric as reconciled.",
+      "end_line": 53,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Outcome reference"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::outcome-reference",
+      "semantic_type": "outcome",
+      "start_line": 48,
+      "title": "Outcome reference"
+    },
+    {
+      "content": "> Supported large-scale data migration and QA across corporate platforms, defining layouts, formats, relationships and validation logic to preserve business meaning and traceability.",
+      "end_line": 57,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 54,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA.",
+      "end_line": 63,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 58,
+      "title": "Boundaries"
+    },
+    {
+      "content": "- [Management Solutions role](../roles/previous_roles.md)\n- [Achievement registry](../achievements/metrics.md)",
+      "end_line": 67,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Related records"
+      ],
+      "level": 2,
+      "section_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::related-records",
+      "semantic_type": "section",
+      "start_line": 64,
+      "title": "Related records"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/consulting_data_migration.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public_supporting",
+  "visibility": "public"
+}

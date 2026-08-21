@@ -1,0 +1,119 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "fraud_compliance_toolkit",
+    "source_repo": "https://github.com/jcval94/coi"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "3f270860e3beca0bb525dd835d8fc414ce5343ff0614fc45465ac091cb586a1e",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-coi-fraud-toolkit",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit"
+      ],
+      "level": 1,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "COI / Fraud Analysis Toolkit"
+    },
+    {
+      "content": "A public Python toolkit for analyzing transaction histories, detecting suspicious patterns and producing interpretable reports for conflict-of-interest and fraud review.\n\nThe project is strong public evidence that José Carlos can translate sensitive fraud/compliance questions into reusable analytical software without relying on confidential employer code.",
+      "end_line": 25,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "- CSV/DataFrame input and reusable package installation\n- person-, pair- and transaction-level summaries\n- monthly and multi-window analysis\n- suspicious text/concept matching in transaction descriptions\n- imbalance, repeated-reference, centralizer and quid-pro-quo style patterns\n- guided Q&A tables with plain-language interpretability fields\n- Seaborn/Matplotlib visualizations\n- export of case-specific outputs to CSV\n- reproducible Google Colab workflow\n- synthetic data generation for demonstrations",
+      "end_line": 38,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Observable capabilities"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::observable-capabilities",
+      "semantic_type": "section",
+      "start_line": 26,
+      "title": "Observable capabilities"
+    },
+    {
+      "content": "- Python\n- Pandas and NumPy\n- scikit-learn and SciPy where optional analytical components are used\n- Seaborn and Matplotlib\n- package installation / editable development\n- Google Colab\n- NLP-style text categorization and interpretable rules",
+      "end_line": 48,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Technologies"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+      "semantic_type": "technology",
+      "start_line": 39,
+      "title": "Technologies"
+    },
+    {
+      "content": "The README documents local and Colab installation, package imports, a callable pipeline, automated/manual paths, explicit input columns, interpretation guidance, output conventions and safe synthetic data.",
+      "end_line": 52,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Engineering evidence"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::engineering-evidence",
+      "semantic_type": "section",
+      "start_line": 49,
+      "title": "Engineering evidence"
+    },
+    {
+      "content": "> Built a reusable Python toolkit for conflict-of-interest and fraud analysis, combining transaction-pattern detection, text signals, guided Q&A, visual reporting and interpretable case exports.",
+      "end_line": 56,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 53,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Do not claim production use or employer adoption from the public repository alone.\n- Do not publish real sensitive transaction data.\n- Do not infer model precision or business impact without an evaluated dataset.\n- Describe optional embeddings/NLP components only to the level implemented in the repository.",
+      "end_line": 62,
+      "heading_path": [
+        "COI / Fraud Analysis Toolkit",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 57,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/coi_fraud_toolkit.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

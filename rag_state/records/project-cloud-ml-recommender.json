@@ -1,0 +1,161 @@
+{
+  "attributes": {
+    "cloud": "Google Cloud",
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "cloud_ml_deployment",
+    "source_repo": "https://github.com/jcval94/cloud_function"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "1407f7cd8901f183f236768d83d2920a3e525b8979312b2b8c0b22a96f0c9df1",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-cloud-ml-recommender",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 20,
+      "heading_path": [
+        "Cloud ML Recommender"
+      ],
+      "level": 1,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "Cloud ML Recommender"
+    },
+    {
+      "content": "Public Google Cloud Function implementation for serving a text-based TV-series recommendation workflow. The project combines cloud-hosted model artifacts, Transformer embeddings, a Keras model, cosine similarity and OpenAI-assisted translation behind an HTTP-triggered serverless function.\n\nThis repository provides direct evidence that José Carlos has implemented **cloud model serving and end-to-end ML inference plumbing**, not only offline modeling.",
+      "end_line": 26,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+      "semantic_type": "summary",
+      "start_line": 21,
+      "title": "Summary"
+    },
+    {
+      "content": "The public deployment script uses Google Cloud Functions Gen2 with:\n\n- Python 3.10 runtime\n- HTTP trigger\n- `us-central1`\n- explicit CPU / memory allocation\n- explicit timeout configuration\n- environment-variable based OpenAI credential injection\n\nThe exact infrastructure settings are implementation details and should not normally be shown on a CV.",
+      "end_line": 39,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Deployment evidence"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Deployment evidence"
+    },
+    {
+      "content": "The public code demonstrates a pipeline that:\n\n1. receives request data through an HTTP function\n2. translates Spanish text to English through OpenAI when required\n3. loads model/data artifacts from Google Cloud Storage\n4. loads a Keras model\n5. loads a Transformer tokenizer/model\n6. generates text embeddings\n7. predicts genre-score representations\n8. computes cosine similarity against stored series representations\n9. returns top recommendations in JSON-friendly structures\n10. translates recommendation text back to Spanish",
+      "end_line": 54,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "ML inference workflow"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+      "semantic_type": "section",
+      "start_line": 40,
+      "title": "ML inference workflow"
+    },
+    {
+      "content": "- Google Cloud Functions Gen2\n- Google Cloud Storage\n- Python\n- Flask request/JSON patterns\n- TensorFlow / Keras\n- Hugging Face Transformers\n- BERT / TinyBERT-style text embeddings\n- scikit-learn cosine similarity\n- Pandas / NumPy\n- OpenAI API\n- model artifact loading\n- logging\n- exception handling / fallback paths\n- HTTP model serving",
+      "end_line": 71,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Technologies evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+      "semantic_type": "technology",
+      "start_line": 55,
+      "title": "Technologies evidenced"
+    },
+    {
+      "content": "The code contains:\n\n- explicit logging setup\n- staged exception handling for artifact/model loading\n- local temporary-file handling\n- fallbacks when local Transformer loading fails\n- batch embedding generation\n- separation between representation generation, similarity ranking and output formatting",
+      "end_line": 82,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Production-minded patterns"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::production-minded-patterns",
+      "semantic_type": "section",
+      "start_line": 72,
+      "title": "Production-minded patterns"
+    },
+    {
+      "content": "",
+      "end_line": 84,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "CV positioning"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning",
+      "semantic_type": "section",
+      "start_line": 83,
+      "title": "CV positioning"
+    },
+    {
+      "content": "> Implemented a serverless ML recommendation endpoint on Google Cloud Functions, integrating Cloud Storage model artifacts, Transformer embeddings, Keras inference, similarity ranking and OpenAI-assisted language handling.",
+      "end_line": 88,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "CV positioning",
+        "ML Engineer / Production Data Scientist"
+      ],
+      "level": 3,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+      "semantic_type": "section",
+      "start_line": 85,
+      "title": "ML Engineer / Production Data Scientist"
+    },
+    {
+      "content": "> Built the inference path from HTTP request through cloud artifact loading, NLP embeddings and model scoring to ranked recommendation output.",
+      "end_line": 92,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "CV positioning",
+        "End-to-End Data Scientist"
+      ],
+      "level": 3,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+      "semantic_type": "section",
+      "start_line": 89,
+      "title": "End-to-End Data Scientist"
+    },
+    {
+      "content": "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed.",
+      "end_line": 97,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-cloud-ml-recommender::cloud-ml-recommender::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 93,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/cloud_ml_recommender.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

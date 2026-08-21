@@ -1,0 +1,401 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "61dcc524f0238b675be6e989701ff12168fe11477f6af2cb709323f02a08182f",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Summary\nInsideForest is an independently authored open-source Python library for discovering **interpretable regions in tabular data through supervised clustering**. Random forests are used as generators of candidate leaves; the library then selects, scores, describes and assigns observations to useful human-readable regions.\n\nThe project is strong evidence of José Carlos's ability to move beyond model consumption into **algorithm design, reusable library engineering, evaluation and public API ownership**.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::public-repository-facts",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "2765410d49997c966eb58ff2204d848239b4004af17070946e11e26653f28903",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Public repository facts"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Public repository facts\n- Repository created: February 2023\n- Publicly maintained through at least July 2026\n- Current release documented in repository: `0.4.3`\n- Primary language: Python\n- License: MIT\n- Installable with `pip`\n- Includes documentation site, API/migration docs, changelog, examples, benchmarks and pytest suite",
+      "title": "Public repository facts"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::canonical-estimators",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "f1a3b62cb5534bab90ea45f870ecd1bead2f5643daacdd2e4426e4a3a5636937",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Canonical estimators"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Canonical estimators\n- `InsideForestRegionClusterer` — general categorical targets\n- `InsideForestClassRegionClusterer` — class-aware regions retaining class distributions and diagnostics\n- `InsideForestContinuousRegionClusterer` — continuous targets",
+      "title": "Canonical estimators"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::public-api-engineering-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "8cfc54690aed172d420a16d0eb3135c01f0a8d2c03ab8aa32c6caf5efa4143a7",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Public API / engineering evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Public API / engineering evidence\nCanonical estimators expose:\n\n- `fit`\n- `fit_predict`\n- `predict`\n- `transform`\n- `score`\n- `get_params`\n- `set_params`\n- `save`\n- `load`\n- region assignment and explanation methods\n- quality-reporting methods\n\nThe library also maintains migration aliases with deprecation behavior, demonstrating awareness of backward compatibility and API evolution.",
+      "title": "Public API / engineering evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::categorical-targets",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "ff4f3fa189bcc576e3130169fc1d3178fc80e1c10aee659a4f7af73ea0be553d",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "ML / statistical concepts demonstrated",
+        "Categorical targets"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Categorical targets\nQuality reporting includes:\n\n- adjusted mutual information (AMI)\n- coverage / unmatched rate\n- NMI\n- ARI\n- homogeneity\n- completeness\n- purity\n- lift\n- entropy\n- class-level diagnostics",
+      "title": "Categorical targets"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::continuous-targets",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "02f13ed1435f426148eaccbd04c9adea4a3a6e014872f7c39e84946efb922f89",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "ML / statistical concepts demonstrated",
+        "Continuous targets"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Continuous targets\nRegions preserve statistics such as:\n\n- support / coverage\n- mean / median\n- standard deviation\n- IQR / range\n- target shift\n- dispersion reduction\n- separation\n- region score\n\nThe canonical continuous score is η², measuring the fraction of target variance explained by the returned clusters.",
+      "title": "Continuous targets"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::validation-engineering",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "d54998e399aeb5e3d6f24b84e0819bc3635ec70341f6d2383e7e5632a9b06d90",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Validation engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Validation engineering\nThe repository contains reproducible benchmark scripts for:\n\n- class-region quality\n- coverage\n- unmatched rate\n- clustering agreement\n- regional quality\n- stability\n- runtime\n- memory\n- regression-region quality\n- dispersion reduction\n- assignment/geometric stability\n- branch compression\n\nA complete pytest suite is also documented.",
+      "title": "Validation engineering"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "201c8d4a8fa09eb15361128544b63627a85d5ea87467b660158661c854855f4d",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Skills evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Skills evidenced\n- Python package engineering\n- scikit-learn-style estimator design\n- Random Forests\n- supervised clustering\n- interpretable / explainable ML\n- classification and continuous-target analysis\n- statistical metrics\n- benchmarking\n- model validation\n- testing with pytest\n- API design\n- persistence / serialization\n- backward compatibility\n- technical documentation\n- open-source maintenance",
+      "title": "Skills evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::quantified-public-outcomes",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "e9af6ab5ca4ee19e24b67062782dd17353d13dec6d72cb6fab315c4ead3528d1",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Quantified public outcomes"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Quantified public outcomes\nUse `../achievements/metrics.md` as the canonical source for numeric claims.\n\nCurrently approved public metrics include:\n\n- `30,000+ pip installs`\n- adoption across `50+ countries`\n- `3+ years` of public maintenance/evolution\n\nDo not infer current download counts from GitHub itself; the adoption numbers originate from José Carlos's public professional statements.",
+      "title": "Quantified public outcomes"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::strong-cv-narratives::general-data-science-ml",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "2a014291b90c773b5b83afbbc908842091be598b7827e3dbc1ba61cf68458c99",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "General Data Science / ML"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "General Data Science / ML\n> Built and maintained InsideForest, an open-source Python library for interpretable supervised clustering and rule-region discovery in tabular ML, with 30,000+ pip installs across 50+ countries.",
+      "title": "General Data Science / ML"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::strong-cv-narratives::ml-engineering",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "f0d42b16587246b03b21cbfd68e7314ad185c3c3797aba49fe5f899f885e2fc1",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "ML Engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "ML Engineering\n> Designed a reusable scikit-learn-style ML library with stable estimator APIs, persistence, pytest coverage, benchmark suites, documentation and backward-compatible API migration.",
+      "title": "ML Engineering"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::strong-cv-narratives::applied-scientist-xai",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "07c4c46c41af85604f844f0e4128db2508bcb8a8e3438ab69ea51b1ef15bf22a",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Strong CV narratives",
+        "Applied Scientist / XAI"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Applied Scientist / XAI\n> Developed supervised region-discovery methods over tree-generated candidate spaces, with class/continuous-target diagnostics, stability evaluation and human-readable region explanations.",
+      "title": "Applied Scientist / XAI"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-insideforest::insideforest::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric."
+      ],
+      "content_hash": "efdf9d2549f8b390f611a718e4014df8587e78a5242103e1c5361f56e39d359a",
+      "cv_eligible": true,
+      "heading_path": [
+        "InsideForest",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-insideforest",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/insideforest.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-LINKEDIN-PUBLIC"
+      ],
+      "text": "Usage constraints\n- Do not describe InsideForest as a replacement for Random Forest prediction; its canonical estimators return region-cluster IDs.\n- Do not claim external academic peer review unless independently verified.\n- Do not convert package downloads into active users.\n- Do not use lines of code as a primary quality metric.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-insideforest",
+  "schema_version": 1
+}

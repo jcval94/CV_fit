@@ -1,0 +1,237 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "9aa2ce693d21fe73c5f18507be225d5f359bf0e9a2cfc6d356eee50d697bdc21",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Summary\nClient-delivery work supporting migration and transformation of corporate tools and data across platforms, with emphasis on business-rule preservation, data consistency, reconciliation and deployment validation.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::contribution-and-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "284766b2b41628b3335da857f2ca6d66a5d6cad9cc31e222d27c7d5715a2e7db",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Contribution and ownership"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Contribution and ownership\nEvidence supports:\n\n- supporting migration of corporate tools to Salesforce\n- translating business rules into front-end behavior\n- performing A/B testing on deployed solutions\n- supporting a data-lake-to-data-warehouse migration\n- defining layouts, formats and relationships to preserve information consistency\n- validating migrated outputs and investigating discrepancies\n- coordinating analytical/technical findings with client stakeholders\n\nThe role supports strong data-quality and migration evidence; it does not establish sole architecture ownership of the target platforms.",
+      "title": "Contribution and ownership"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "83da4ba6c5f66f6087733a67f69c35862484a1f2545917869e21fe69b4eb6fc0",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Methods and technologies"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Methods and technologies\n- data migration and reconciliation\n- SQL / data manipulation\n- schema/layout definition\n- data-quality validation\n- A/B testing\n- Salesforce delivery context\n- cross-platform traceability",
+      "title": "Methods and technologies"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::outcome-reference",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "2717a5a14dba3091eb0089eebca797ffb82cb3364f047122034ca46651e9863e",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Outcome reference"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Outcome reference\n- `ACH-MS-MIGRATION-001` — migration-scale claim, currently conditional pending unit reconciliation\n\nThe exact row-count figure must not be used until the achievement registry marks the metric as reconciled.",
+      "title": "Outcome reference"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::approved-public-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "a0c8e0d59d35bd423b7f3777220023119268b11a7c58cd383a2a43444b7ea491",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Approved public narrative"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Approved public narrative\n> Supported large-scale data migration and QA across corporate platforms, defining layouts, formats, relationships and validation logic to preserve business meaning and traceability.",
+      "title": "Approved public narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "ffaa8ea13ec671e6903afe8f3c852e9be660d0cb34c303a78e6961f8b51ceb89",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Boundaries"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Boundaries\n- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA.",
+      "title": "Boundaries"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::related-records",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "content_hash": "ceee4c9d44b8ea7379e268bf37e5ce224beb6265383111d86ad973ec35f42c9c",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Data Migration, Reconciliation & QA",
+        "Related records"
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-data-migration",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Related records\n- [Management Solutions role](../roles/previous_roles.md)\n- [Achievement registry](../achievements/metrics.md)",
+      "title": "Related records"
+    }
+  ],
+  "record_id": "project-ms-data-migration",
+  "schema_version": 1
+}

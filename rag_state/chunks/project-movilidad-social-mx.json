@@ -1,0 +1,156 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::summary",
+      "chunk_type": "summary",
+      "confidence": "medium",
+      "constraints": [
+        "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project."
+      ],
+      "content_hash": "9f88e8b13670deb60ef93c9aa9ac1aa58dcc5632b2c3625aa4fc7fbfbb34b485",
+      "cv_eligible": true,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-movilidad-social-mx",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/movilidad_social_mx.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Summary\nA public Streamlit application for exploring social mobility in Mexico through cohort comparisons, transition views, probabilistic classification and interpretable recommendation patterns.\n\nThe strongest signal is analytical product design for mixed audiences: the repository explicitly separates value for technical users from clear explanations for the general public.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+      "chunk_type": "project_detail",
+      "confidence": "medium",
+      "constraints": [
+        "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project."
+      ],
+      "content_hash": "3effa924cb925df2f877836ff9f9a837ea58143a6b556a01de4833c2ad260401",
+      "cv_eligible": true,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Observable capabilities"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-movilidad-social-mx",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/movilidad_social_mx.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Observable capabilities\n- modular Streamlit application\n- filters and base-versus-subgroup comparisons\n- cohort/time evolution views\n- probabilistic socioeconomic-class display\n- KNN/descriptive-cluster recommendation patterns\n- methodological interpretation guidance\n- explicit warnings against causal overreach and small-sample conclusions\n- public deployment and local setup instructions\n- Gemini/OpenAI explanation layer configured through secrets\n- container/Kubernetes deployment materials present in the repository",
+      "title": "Observable capabilities"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::data-and-methods",
+      "chunk_type": "project_detail",
+      "confidence": "medium",
+      "constraints": [
+        "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project."
+      ],
+      "content_hash": "557d64bce38b6d6dd05d2778d746ec0799e9724b0bdb79bbc09e1eb5c8347217",
+      "cv_eligible": true,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Data and methods"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-movilidad-social-mx",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/movilidad_social_mx.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Data and methods\nThe README identifies EMOVI 2017 data and describes model/data artifacts used by the application. Results are framed as probabilistic or descriptive rather than causal guarantees.",
+      "title": "Data and methods"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::approved-public-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "medium",
+      "constraints": [
+        "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project."
+      ],
+      "content_hash": "7f7e0ed759779414637c8c31ec7216a633a9bb3ee47d082f78c68ba80ab410c4",
+      "cv_eligible": true,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Approved public narrative"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-movilidad-social-mx",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/movilidad_social_mx.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Approved public narrative\n> Developed a Streamlit experience for exploring social mobility in Mexico, combining cohort analysis, probabilistic classification, interpretable patterns and guidance for technical and non-technical audiences.",
+      "title": "Approved public narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "medium",
+      "constraints": [
+        "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project."
+      ],
+      "content_hash": "10b8d175462ecaf36e5ec47a4341b6f65ddf66cdd9243bdda110520948a4d5bf",
+      "cv_eligible": true,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-movilidad-social-mx",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/movilidad_social_mx.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Boundaries\n- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-movilidad-social-mx",
+  "schema_version": 1
+}

@@ -1,0 +1,258 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "data_quality_toolkit",
+    "source_repo": "https://github.com/jcval94/MetaCraft"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "230b0569e90050441362bf32eadba827371c042f3666d23c553c315138ae9c06",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-metacraft",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 18,
+      "heading_path": [
+        "MetaCraft"
+      ],
+      "level": 1,
+      "section_id": "project-metacraft::metacraft",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "MetaCraft"
+    },
+    {
+      "content": "MetaCraft is a Python toolkit for **enriching, validating, comparing and transforming metadata/schema definitions** around pandas DataFrames. It uses YAML as a portable schema representation and adds data-quality, drift and AI-assisted research capabilities.\n\nThe project is strong evidence for data quality, metadata engineering and reusable analytical tooling.",
+      "end_line": 24,
+      "heading_path": [
+        "MetaCraft",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::summary",
+      "semantic_type": "summary",
+      "start_line": 19,
+      "title": "Summary"
+    },
+    {
+      "content": "",
+      "end_line": 26,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::core-capabilities",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "Core capabilities"
+    },
+    {
+      "content": "Enriches YAML schemas with observed statistics and sketches from a DataFrame.\n\nDocumented statistical sketches include:\n\n- t-digest\n- HyperLogLog",
+      "end_line": 34,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`update`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::update",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "`update`"
+    },
+    {
+      "content": "Checks consistency between a DataFrame and schema definitions, including:\n\n- data types\n- ranges\n- nullability / missingness",
+      "end_line": 41,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`validate`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::validate",
+      "semantic_type": "section",
+      "start_line": 35,
+      "title": "`validate`"
+    },
+    {
+      "content": "Detects schema drift between schema versions.",
+      "end_line": 44,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`compare`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::compare",
+      "semantic_type": "section",
+      "start_line": 42,
+      "title": "`compare`"
+    },
+    {
+      "content": "Converts schema definitions into formats such as:\n\n- Spark\n- SQL",
+      "end_line": 50,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`export_schema`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::export-schema",
+      "semantic_type": "section",
+      "start_line": 45,
+      "title": "`export_schema`"
+    },
+    {
+      "content": "Generates Great Expectations suites from schema/metadata definitions.",
+      "end_line": 53,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`generate_expectations`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::generate-expectations",
+      "semantic_type": "section",
+      "start_line": 51,
+      "title": "`generate_expectations`"
+    },
+    {
+      "content": "Adjusts a DataFrame to conform to schema definitions.",
+      "end_line": 56,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`transform`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::transform",
+      "semantic_type": "section",
+      "start_line": 54,
+      "title": "`transform`"
+    },
+    {
+      "content": "Produces a simple data-quality score combining completeness and drift signals.",
+      "end_line": 59,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`quality_report`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::quality-report",
+      "semantic_type": "section",
+      "start_line": 57,
+      "title": "`quality_report`"
+    },
+    {
+      "content": "Uses OpenAI integration to explore relationships and anomalies in data/metadata context.",
+      "end_line": 62,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`research`"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::core-capabilities::research",
+      "semantic_type": "section",
+      "start_line": 60,
+      "title": "`research`"
+    },
+    {
+      "content": "- YAML files can be read locally or from URLs\n- remote ZIP archives containing multiple schemas can be downloaded and processed\n- optional local cache\n- internal schema representation exposed through editable `metadata.df`\n- DataFrame-side edits can be propagated back to YAML\n- configurable logging\n- reusable OpenAI client / API configuration\n- per-call overrides of model parameters",
+      "end_line": 73,
+      "heading_path": [
+        "MetaCraft",
+        "Engineering features"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::engineering-features",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Engineering features"
+    },
+    {
+      "content": "- Python\n- Pandas\n- YAML\n- data validation\n- data quality\n- schema drift\n- metadata management\n- Spark/SQL schema generation\n- Great Expectations\n- approximate statistics / sketches\n- t-digest\n- HyperLogLog / cardinality estimation\n- remote resource handling\n- OpenAI API integration\n- configurable software APIs",
+      "end_line": 91,
+      "heading_path": [
+        "MetaCraft",
+        "Technologies / concepts evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::technologies-concepts-evidenced",
+      "semantic_type": "technology",
+      "start_line": 74,
+      "title": "Technologies / concepts evidenced"
+    },
+    {
+      "content": "",
+      "end_line": 93,
+      "heading_path": [
+        "MetaCraft",
+        "CV positioning"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::cv-positioning",
+      "semantic_type": "section",
+      "start_line": 92,
+      "title": "CV positioning"
+    },
+    {
+      "content": "> Built a Python metadata and data-quality toolkit supporting schema enrichment, validation, drift detection, Spark/SQL export and Great Expectations generation.",
+      "end_line": 97,
+      "heading_path": [
+        "MetaCraft",
+        "CV positioning",
+        "Data Scientist / Data Platform"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+      "semantic_type": "section",
+      "start_line": 94,
+      "title": "Data Scientist / Data Platform"
+    },
+    {
+      "content": "> Integrated OpenAI-assisted analysis into a schema-driven data-quality toolkit while preserving deterministic validation and metadata contracts.",
+      "end_line": 101,
+      "heading_path": [
+        "MetaCraft",
+        "CV positioning",
+        "GenAI + Data Quality"
+      ],
+      "level": 3,
+      "section_id": "project-metacraft::metacraft::cv-positioning::genai-data-quality",
+      "semantic_type": "section",
+      "start_line": 98,
+      "title": "GenAI + Data Quality"
+    },
+    {
+      "content": "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere.",
+      "end_line": 106,
+      "heading_path": [
+        "MetaCraft",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-metacraft::metacraft::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 102,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/metacraft.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

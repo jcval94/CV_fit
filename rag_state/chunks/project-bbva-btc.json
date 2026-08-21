@@ -1,0 +1,280 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "e838be43c6ed9650276bd202667e11c9b878b31e28bff870e22fd55b5e6e2195",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Summary\nBest Time to Call is a remote-banking contact-prioritization workstream designed to identify useful days/time windows and order outbound activity using observed contact behavior rather than manual heuristics alone.\n\nThe evidence supports a progression from a 2022 contactability pilot to recurring operational releases and monitoring during 2023–2024.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::business-problem",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "8966430a3c0363dece74f0316770df021118dd04e752dc904620dc1fa12aee45",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Business problem"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Business problem\nRemote bankers faced low contactability, repeated unsuccessful calls and inefficient prioritization. The analytical need was to decide when to contact each customer, feed actionable outputs into the dialing workflow and measure whether users followed the recommendation.",
+      "title": "Business problem"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2022-pilot",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "c13d5cf3011b2f7e3ce39bc5f94afd6c865c02677520cdf08df2c7978d88c93d",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Contribution and ownership",
+        "2022 pilot"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "2022 pilot\n- participated in validation of a Bayesian/contactability pilot\n- contributed to feature and population work\n- supported demo and audit follow-up\n- **Ownership boundary:** the final experimental result and sole authorship of the base model are not established",
+      "title": "2022 pilot"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2023-2024-recurring-operation",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "1e2bf0cef4c6cecf594d66ec2a3241f405f6b87085c7041a23d5535effa08826",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Contribution and ownership",
+        "2023–2024 recurring operation"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "2023–2024 recurring operation\n- operated recurring scoring/release workflows\n- validated output quality and drift\n- prepared operational layouts/bases for downstream contact systems\n- monitored adherence, contactability and effectiveness\n- analyzed first-call behavior, repeated-call penalties and cooling-time implications\n- **Ownership boundary:** evidence is strongest for execution, monitoring, release and analytical improvement, not exclusive invention of the original algorithm",
+      "title": "2023–2024 recurring operation"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "303300c111ae98afef63af7773eda199342a4ebb3304944995dd5332ea1f9f5e",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Implementation evidence"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Implementation evidence\n- Python and PySpark\n- Teradata and Oracle\n- distributed analytical processing\n- recurring CSV/layout releases\n- quality-assurance notebooks\n- Looker Studio / Google Sites reporting\n- integration with commercial contact tooling",
+      "title": "Implementation evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::results",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "6c244007247014c569cf1a585161c83987692397790bde4bb23ec4df806b367a",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Results"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Results\nThe project produced recurring operational recommendations and a measurable improvement in contact outcomes. Curated sources contain differing uplift values from different periods/definitions; exact internal values remain governed by `ACH-BBVA-BTC-PRIVATE` and are not published here.",
+      "title": "Results"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "8512b020257281664b3e88ad1aaf5db3b0b8c451096863225bb106d91cf3c8c4",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Approved public narratives"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Approved public narratives\n> Operated and monitored a recurring Best Time to Call pipeline for remote banking, validating outputs and releasing contact-prioritization recommendations into commercial workflows.\n\n> Analyzed adherence, first-call success and repeated-call behavior to improve customer-contact prioritization.",
+      "title": "Approved public narratives"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-btc::bbva-best-time-to-call-btc::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts."
+      ],
+      "content_hash": "f960d00a2da4d6bcb7958b55013b603003bfefffcb5d89cdce67bffd476a3f36",
+      "cv_eligible": true,
+      "heading_path": [
+        "BBVA — Best Time to Call (BTC)",
+        "Boundaries"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-BTC-PRIVATE"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-btc",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_btc.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not merge uplift values from different years.\n- Do not state that the model was retrained weekly unless a primary artifact confirms it.\n- Do not attribute full algorithm design or deployment ownership to one person.\n- Do not expose customer or banker counts from restricted sources in public artifacts.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-bbva-btc",
+  "schema_version": 1
+}

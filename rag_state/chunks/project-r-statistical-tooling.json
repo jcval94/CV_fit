@@ -1,0 +1,589 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "f08dd3e22e275fbdb9bce1bddb340f81ce271d134bbb4fb1afbbe3af82379fdb",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Summary\nPublic repositories and deployed apps from 2019 onward provide evidence that José Carlos's software/ML trajectory is grounded in **actuarial statistics, R package development, forecasting and analyst-productivity tooling**, rather than beginning only with recent Generative AI work.\n\nFitUltD is strong enough to lead for statistical/actuarial roles. The remaining repositories should usually support newer projects rather than take prime CV space.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "d74b7b646bc2f38296ebb279bf106a4694613a6a788c8713ebea3ab55b64d60f",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUltD"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "FitUltD\nFitUltD is a public CRAN package for fitting univariate data that is not well represented by ordinary single-density functions, including multimodal mixtures.\n\nObservable repository/package evidence includes:\n\n- released installation from CRAN\n- mixture/cluster-based distribution fitting\n- Anderson-Darling and Kolmogorov-Smirnov goodness-of-fit results\n- reproducible examples and visual comparison of fitted components\n- multi-year public maintenance",
+      "title": "FitUltD"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "d0c6a7999f4a88aaa666f6b6abe83cb0a2494815a6c04da4ade93ce2f0f81fae",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUltD",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- R/CRAN package ownership\n- distribution fitting and statistical testing\n- actuarial/risk modeling foundations\n- translating research into reusable public software",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "3b968dc48510e3813deafcb1115d5979660eb0947e6081e13d69effc75160320",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "DataMiningTools"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "DataMiningTools\n`DataMiningTools` is structured as a formal R package rather than a collection of loose scripts.\n\nPublic repository evidence includes:\n\n- `DESCRIPTION`\n- `NAMESPACE`\n- `R/`\n- `man/`\n- R project metadata\n- package dependencies\n\nThe public package metadata identifies José Carlos as author/maintainer and version `1.0.0`.\n\nDependencies include statistical/data-mining and visualization tools such as:\n\n- `mclust`\n- `ADGofTest`\n- `tibble`\n- `purrr`\n- `ggplot2`\n- `dplyr`\n- base statistical methods",
+      "title": "DataMiningTools"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "0f5bbd74e3029d7502e583a4080b186ce56f72518b80e41cbae65240e4759cd7",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "DataMiningTools",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- R package engineering\n- statistical/data-mining tooling\n- documentation structure\n- dependency management\n- reusable analytical software",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "9f68878478e8736eb5c98b2f4a17a4d95b25f67652b66fe10ec6126647e811f2",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUlt_V00"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "FitUlt_V00\nPublic R repository described as a `FitUlt package`, associated with José Carlos's distribution-fitting / actuarial modeling work.",
+      "title": "FitUlt_V00"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "7c9ee69d7a8cd2e054a2fcfaf231bc9b7dea2b95120dd9fefb420e930c731c2c",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUlt_V00",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- statistical distribution fitting\n- actuarial modeling\n- R package development\n- statistical research translated into reusable code\n\nUse the thesis/research records for exact methodological or quantitative claims rather than inferring them solely from the repository name.",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "76203d532247b08724b88da586304b40d2fcd035c49b6feba3a5964be5040eea",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Tesis"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Tesis\nPublic repository containing documents, files and code used in José Carlos's actuarial thesis.",
+      "title": "Tesis"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "54f3d45b01c0e925518b04db157e0f608e7c811f8320c585c1d9c8b9b3897d46",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Tesis",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- reproducible research orientation\n- statistical modeling\n- actuarial / healthcare-risk context\n- relationship between academic methodology and code\n\nCanonical thesis metrics, if used, belong in `../achievements/metrics.md` and require methodology-aware wording.",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "3152faae3d4eedcbce50666d2475349effff4f7f1cef26b197b37f822557b3bc",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Ensemble-Learning-for-Time-Series"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Ensemble-Learning-for-Time-Series\nPublic extension of an ensemble-learning approach for time-series forecasting in R.\n\nThe repository also references a deployed Shiny application.",
+      "title": "Ensemble-Learning-for-Time-Series"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "7be2377d42787e18c8913a750c009b46a687593a2fe2294502320bb25fbc0256",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Ensemble-Learning-for-Time-Series",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- time-series forecasting\n- ensemble learning\n- R\n- interactive analytical delivery through Shiny",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "181ca3fadefa798f63e1b62fc4664894f3aa1b64f48f91cc56af83d922d69b9e",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "shortcuts and copypaste"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "shortcuts and copypaste\nThe `shortcuts` CRAN package and related `copypaste` work address recurring RStudio friction through add-ins and clipboard-oriented data import.\n\nObservable capabilities include:\n\n- importing copied browser/Excel/Sheets tables into R\n- expanding function arguments into editable code\n- running/installing libraries referenced in a script\n- RStudio add-in integration\n- CRAN distribution for `shortcuts`",
+      "title": "shortcuts and copypaste"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "707d67a8081026196e9be94cd58ddb56992b5a04b8f660f07d77d4f99939f3fc",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "shortcuts and copypaste",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- developer experience and analyst-productivity design\n- RStudio API/add-in development\n- public package distribution\n- solving small operational problems with reusable tooling",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "ef5ed17802bfd6f0ca9167aa083c362371cdf10e511f59f4f00798af59b3b592",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "SQL Reporting tool"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "SQL Reporting tool\nThe public portfolio and ShinyApps index document a tool that combined SQL queries and R code with Excel/Word/PDF outputs and real-time analysis.\n\nCanonical impact is stored under `ACH-REPORTING-TIME-001` in the achievement registry.",
+      "title": "SQL Reporting tool"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "ad8244e5076eac15bd9ede8df2cadb00992c819ef6917c9c00858358bfe194ab",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "SQL Reporting tool",
+        "Evidence value"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Evidence value\n- SQL/R workflow integration\n- automated reporting\n- Office/PDF delivery\n- measurable analyst time savings",
+      "title": "Evidence value"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::skills-evidenced-across-this-project-family",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "6f9ec44a409fd853cf2678fd38e2702b62826a775cc44ff74bcdf67061b184dc",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Skills evidenced across this project family"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Skills evidenced across this project family\n- R\n- CRAN package publication\n- RStudio add-ins\n- statistical modeling\n- probability/distribution fitting\n- package development\n- forecasting\n- ensemble methods\n- Shiny\n- SQL/R reporting automation\n- ggplot2 / analytical visualization\n- reproducible quantitative research",
+      "title": "Skills evidenced across this project family"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::portfolio-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "4ea4a91e5d6258758b6540097d01005034541969be52cd0745d4c777a97db242",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Portfolio narrative"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Portfolio narrative\nA useful interview narrative is:\n\n> My open-source work started from actuarial statistics and R tooling — distribution fitting, data-mining packages and forecasting — and later evolved toward Python ML libraries, cloud inference, data-quality tooling and Generative AI systems.\n\nThis is a stronger use of these repositories than presenting each older repository as an isolated current project.",
+      "title": "Portfolio narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "content_hash": "f6262fd93abb3b3b800ba6797538f9ba0258d32b007f47f40a12a234d3c3b98e",
+      "cv_eligible": true,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Usage constraints"
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-r-statistical-tooling",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Usage constraints\n- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-r-statistical-tooling",
+  "schema_version": 1
+}

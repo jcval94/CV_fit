@@ -1,0 +1,298 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "777e93e9fab11249cec22ebac2038f912ef7de4a536f0ccc26bc64381e2f44d5",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Summary\nSheShe (**Smart High-dimensional Edge Segmentation & Hyperboundary Explorer**) and its experimental DelDel/PureSheShe work form a public research-oriented toolkit for turning probabilistic models into guided explorers of decision surfaces and discovering **human-readable rules in low-dimensional subspaces**.\n\nThis project family is direct evidence of algorithmic experimentation, model interpretation, numerical search and reproducible benchmark design.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::sheshe-capabilities",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "49d8f3e4091622489153cdb744f669f1d5f59e7a00e5e686bc7a0183eacda246",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "SheShe capabilities"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "SheShe capabilities\n- supervised clustering for classification and regression\n- rule extraction\n- subspace exploration\n- decision-surface exploration via local probability/predicted-value maxima\n- 2D/3D visualization\n- integration with InsideForest\n- reusable package installation from PyPI\n- pytest-based development workflow",
+      "title": "SheShe capabilities"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::mathematical-algorithmic-ideas",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "b786c2b945ecaf910276954ec0d4ff5152e0bc3884c4055ca7e1f261d21229a7",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Mathematical / algorithmic ideas"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Mathematical / algorithmic ideas\nThe public documentation describes an optimization view based on approximating `max_x f(x)` through gradient-ascent paths toward local maxima and delineating neighborhoods around those maxima.\n\nRelated implementation patterns include:\n\n- boundary / frontier plane discovery\n- rule pruning and orientation\n- low-dimensional conjunction search\n- AND / OR / DNF rule search\n- greedy, beam, random and diversity-oriented search strategies\n- F1 / precision / recall / lift-based regional evaluation\n- Pareto-style rule ranking",
+      "title": "Mathematical / algorithmic ideas"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "a80235846ceac864356e14b31ecc112c32d7801e3e1f209fb87236a103d216b7",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "DelDel experimental discipline"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "DelDel experimental discipline\nThe PureSheShe/DelDel repository defines a mandatory experiment protocol. Experiments record metrics including:\n\n- F1\n- precision / recall\n- precision lift\n- runtime\n- per-class and global summaries\n\nThe project also defines a composite `compass_score` based on the geometric mean of F1, lift precision and minimum class lift for selected regions.",
+      "title": "DelDel experimental discipline"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::public-benchmark-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "72c3155146d074242e20477bb506aec854b9f199998448c0a12753dd9cb0ee71",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Public benchmark evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Public benchmark evidence\nThe repository documents multi-seed experiments on synthetic datasets with:\n\n- `30,000` samples\n- `25` informative variables\n- seeds `11`, `17`, `23`\n\nAcross the documented runs, the low-dimensional search stage completed in approximately `6.97–8.32 s`.\n\nDocumented best 2D results span roughly:\n\n- F1: `0.619–0.684`\n- precision: `0.802–0.967`\n\nThese are **synthetic technical benchmarks**, not production/business performance.",
+      "title": "Public benchmark evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::dependencies-ecosystem-demonstrated",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "dd720cf01ec385de2f3e4e738440196049d298645d3b2274d9c111060e89e2f1",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Dependencies / ecosystem demonstrated"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Dependencies / ecosystem demonstrated\nPrimary repository dependencies include:\n\n- NumPy\n- Pandas\n- scikit-learn\n- Matplotlib\n- hnswlib\n\nOptional ecosystem integrations include LightGBM, SHAP and InterpretML. Optional dependency presence alone must not be treated as expert-level evidence.",
+      "title": "Dependencies / ecosystem demonstrated"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "b191c6fed9f93f8df4057e0a3d91a40aaeebb521a6585ab6d218658e90273b45",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Skills evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Skills evidenced\n- algorithm design\n- high-dimensional ML\n- interpretable ML / XAI\n- classification / regression\n- supervised clustering\n- numerical optimization/search\n- rule extraction\n- beam / greedy search patterns\n- feature/subspace exploration\n- benchmark design\n- reproducible experimentation\n- Python package engineering\n- pytest\n- developer documentation",
+      "title": "Skills evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "0201ea453e12d5162d6ba635dbb5322c6b200612cdbb0122e4a79798373fb293",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "CV positioning",
+        "Applied Scientist / Research DS"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Applied Scientist / Research DS\n> Designed interpretable rule-discovery and decision-surface exploration methods for classification/regression, with reproducible multi-seed benchmarks on 30k × 25 synthetic datasets.",
+      "title": "Applied Scientist / Research DS"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning::explainable-ml",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "b57b095cce1eb06d3a35ae95c8c43687ef8e754247fd72d250a0d0b91ad121df",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "CV positioning",
+        "Explainable ML"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Explainable ML\n> Built Python tooling that transforms complex model decision surfaces into low-dimensional, human-readable regions evaluated by precision, recall, F1 and lift.",
+      "title": "Explainable ML"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "content_hash": "b1733e031ff6a259ad91b2e8d117e0916574ebdc4a2bbbfcc1c0c0d3b099df2d",
+      "cv_eligible": true,
+      "heading_path": [
+        "SheShe / DelDel",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-sheshe-deldel",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Usage constraints\n- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-sheshe-deldel",
+  "schema_version": 1
+}

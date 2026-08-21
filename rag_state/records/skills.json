@@ -1,0 +1,1329 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "usage_policy": "Generated CVs must prefer demonstrated skills over inferred keywords and must preserve the exact core/working/familiarity level recorded here. Public GitHub repositories may be used as direct technical evidence when the capability is observable in code, packaging, tests, documentation or reproducible benchmarks."
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "aebc3759579b4c6c2b49afcf729f87db54b21f0eac737acb7989e305cdae24d6",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "skills",
+  "record_type": "skills",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "Canonical inventory of technical, analytical, business and leadership skills for José Carlos Del Valle.\n\nThis file is designed for RAG and CV generation, not keyword stuffing. It uses a strict three-level proficiency model so downstream systems do not have to interpret ambiguous labels.",
+      "end_line": 23,
+      "heading_path": [
+        "Skills"
+      ],
+      "level": 1,
+      "section_id": "skills::skills",
+      "semantic_type": "skill_group",
+      "start_line": 18,
+      "title": "Skills"
+    },
+    {
+      "content": "- **core:** repeated professional use and/or substantial independently owned implementation with strong interview-level defensibility\n- **working:** meaningful hands-on implementation, but not necessarily the primary specialization\n- **familiarity:** exposure, training or limited implementation; never present as expert-level without additional evidence\n\nOnly these three values are allowed in `Level`. Recency, context and caveats belong in separate fields.",
+      "end_line": 31,
+      "heading_path": [
+        "Skills",
+        "Proficiency model"
+      ],
+      "level": 2,
+      "section_id": "skills::skills::proficiency-model",
+      "semantic_type": "section",
+      "start_line": 24,
+      "title": "Proficiency model"
+    },
+    {
+      "content": "1. production or professional role evidence\n2. independently owned public software / open-source implementation\n3. documented project implementation with tests or benchmarks\n4. formal education / certification\n5. training or conceptual exposure\n\nA vacancy keyword is never evidence by itself.\n\n---",
+      "end_line": 43,
+      "heading_path": [
+        "Skills",
+        "Evidence hierarchy"
+      ],
+      "level": 2,
+      "section_id": "skills::skills::evidence-hierarchy",
+      "semantic_type": "section",
+      "start_line": 32,
+      "title": "Evidence hierarchy"
+    },
+    {
+      "content": "",
+      "end_line": 45,
+      "heading_path": [
+        "1. Programming & Data"
+      ],
+      "level": 1,
+      "section_id": "skills::1-programming-data",
+      "semantic_type": "section",
+      "start_line": 44,
+      "title": "1. Programming & Data"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** repeated professional Data Science/ML work plus independently authored Python libraries and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and fraud/compliance tooling\n- **Typical use:** modeling, statistical analysis, package development, pipelines, APIs, experimentation, automation, GenAI workflows, CLI tooling and validation",
+      "end_line": 50,
+      "heading_path": [
+        "1. Programming & Data",
+        "Python"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::python",
+      "semantic_type": "section",
+      "start_line": 46,
+      "title": "Python"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** repeated professional analytical, migration, segmentation, reporting and data-processing workflows\n- **Typical use:** extraction, transformation, aggregation, analytical datasets, validation and feature preparation",
+      "end_line": 55,
+      "heading_path": [
+        "1. Programming & Data",
+        "SQL"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::sql",
+      "semantic_type": "section",
+      "start_line": 51,
+      "title": "SQL"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** large-scale banking analytics and production-oriented distributed processing\n- **Typical use:** distributed ETL, feature engineering, matching, large joins, analytical pipelines and production refactoring",
+      "end_line": 60,
+      "heading_path": [
+        "1. Programming & Data",
+        "PySpark / Apache Spark"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::pyspark-apache-spark",
+      "semantic_type": "section",
+      "start_line": 56,
+      "title": "PySpark / Apache Spark"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** actuarial/statistical modeling, CRAN/public package development, thesis work, forecasting and reporting automation\n- **Typical use:** statistical modeling, distributions, risk modeling, research, visualization and package development",
+      "end_line": 65,
+      "heading_path": [
+        "1. Programming & Data",
+        "R"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::r",
+      "semantic_type": "section",
+      "start_line": 61,
+      "title": "R"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** repeated use across public Python packages and analytical systems",
+      "end_line": 69,
+      "heading_path": [
+        "1. Programming & Data",
+        "Pandas / NumPy"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::pandas-numpy",
+      "semantic_type": "section",
+      "start_line": 66,
+      "title": "Pandas / NumPy"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** multi-year ownership of public repositories, versioned packages, documentation, tests and repository-driven workflows",
+      "end_line": 73,
+      "heading_path": [
+        "1. Programming & Data",
+        "Git / GitHub"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::git-github",
+      "semantic_type": "section",
+      "start_line": 70,
+      "title": "Git / GitHub"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** MetaCraft schema tooling, narrative_dna JSON-first architecture and artifact-driven pipelines\n\n---",
+      "end_line": 79,
+      "heading_path": [
+        "1. Programming & Data",
+        "YAML / JSON / JSONL data contracts"
+      ],
+      "level": 3,
+      "section_id": "skills::1-programming-data::yaml-json-jsonl-data-contracts",
+      "semantic_type": "section",
+      "start_line": 74,
+      "title": "YAML / JSON / JSONL data contracts"
+    },
+    {
+      "content": "",
+      "end_line": 81,
+      "heading_path": [
+        "2. Machine Learning & Statistics"
+      ],
+      "level": 1,
+      "section_id": "skills::2-machine-learning-statistics",
+      "semantic_type": "section",
+      "start_line": 80,
+      "title": "2. Machine Learning & Statistics"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** classification, regression, feature engineering, model evaluation and business-oriented predictive modeling",
+      "end_line": 85,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Supervised Machine Learning"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::supervised-machine-learning",
+      "semantic_type": "section",
+      "start_line": 82,
+      "title": "Supervised Machine Learning"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** classification/regression, leaf/region extraction, feature importance and interpretable rule discovery\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "end_line": 90,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Tree-based Machine Learning / Random Forests"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::tree-based-machine-learning-random-forests",
+      "semantic_type": "section",
+      "start_line": 86,
+      "title": "Tree-based Machine Learning / Random Forests"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** target-guided region discovery, regional quality measurement, stable cluster assignment and human-readable decision regions\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "end_line": 95,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Supervised Clustering & Region Discovery"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::supervised-clustering-region-discovery",
+      "semantic_type": "section",
+      "start_line": 91,
+      "title": "Supervised Clustering & Region Discovery"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** anomaly detection, outlier analysis and hybrid rule + ML systems\n- **Evidence:** banking fraud/malpractice analytics and public analytical tooling",
+      "end_line": 100,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Unsupervised / Anomaly Detection"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::unsupervised-anomaly-detection",
+      "semantic_type": "section",
+      "start_line": 96,
+      "title": "Unsupervised / Anomaly Detection"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation, regression and risk modeling\n- **Evidence:** actuarial education, thesis/research, R packages and professional analytics",
+      "end_line": 105,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Statistical Modeling"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::statistical-modeling",
+      "semantic_type": "section",
+      "start_line": 101,
+      "title": "Statistical Modeling"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** baselines, train/test or temporal validation, precision, recall, F1, lift, stability, clustering agreement, business validation and statistical fit",
+      "end_line": 109,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Model Evaluation & Validation"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::model-evaluation-validation",
+      "semantic_type": "section",
+      "start_line": 106,
+      "title": "Model Evaluation & Validation"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** region-based explainability, low-dimensional rule extraction, subspace exploration, class diagnostics and model behavior translated into human-readable structures\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "end_line": 114,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Explainable / Interpretable Machine Learning"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::explainable-interpretable-machine-learning",
+      "semantic_type": "section",
+      "start_line": 110,
+      "title": "Explainable / Interpretable Machine Learning"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** professional ML usage plus independently authored estimator-style APIs with `fit`, `predict`, `transform`, scoring, persistence and parameter interfaces",
+      "end_line": 118,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "scikit-learn ecosystem"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::scikit-learn-ecosystem",
+      "semantic_type": "section",
+      "start_line": 115,
+      "title": "scikit-learn ecosystem"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** name normalization, edit-distance similarity, candidate review and distributed matching against regulatory/watch lists",
+      "end_line": 122,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Fuzzy Matching / Identity Resolution"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::fuzzy-matching-identity-resolution",
+      "semantic_type": "section",
+      "start_line": 119,
+      "title": "Fuzzy Matching / Identity Resolution"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** forecasting, trend analysis, seasonality, temporal validation and ensemble-learning concepts\n- **Evidence:** professional demand/operations forecasting plus public time-series work\n- **Usage note:** do not claim specialization in ARIMA, SARIMA, Prophet or another named family without project-specific evidence",
+      "end_line": 128,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Time Series & Forecasting"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::time-series-forecasting",
+      "semantic_type": "section",
+      "start_line": 123,
+      "title": "Time Series & Forecasting"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** coordinate aggregation, footprint analysis, ATM/branch location strategy, geolocation and spatial-temporal analytical features",
+      "end_line": 132,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Geospatial Analytics"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::geospatial-analytics",
+      "semantic_type": "section",
+      "start_line": 129,
+      "title": "Geospatial Analytics"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** prioritization, low-dimensional rule search, greedy/beam search patterns, decision support and analytical allocation problems\n- **Usage note:** do not claim deep mixed-integer programming specialization without project-specific evidence",
+      "end_line": 137,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Optimization / Decision Modeling"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::optimization-decision-modeling",
+      "semantic_type": "section",
+      "start_line": 133,
+      "title": "Optimization / Decision Modeling"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** public Google Cloud model-serving implementation using Keras artifacts",
+      "end_line": 141,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "TensorFlow / Keras"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::tensorflow-keras",
+      "semantic_type": "section",
+      "start_line": 138,
+      "title": "TensorFlow / Keras"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** public cloud recommender using Transformer tokenizers/models and BERT-style embeddings",
+      "end_line": 145,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Hugging Face Transformers / BERT-family models"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::hugging-face-transformers-bert-family-models",
+      "semantic_type": "section",
+      "start_line": 142,
+      "title": "Hugging Face Transformers / BERT-family models"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** cosine-similarity recommendation and semantic-auditing implementations",
+      "end_line": 149,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Semantic Similarity / Embeddings"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::semantic-similarity-embeddings",
+      "semantic_type": "section",
+      "start_line": 146,
+      "title": "Semantic Similarity / Embeddings"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** hnswlib used in public ML tooling",
+      "end_line": 153,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Approximate Nearest-Neighbor Search"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::approximate-nearest-neighbor-search",
+      "semantic_type": "section",
+      "start_line": 150,
+      "title": "Approximate Nearest-Neighbor Search"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure",
+      "end_line": 157,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "LightGBM"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::lightgbm",
+      "semantic_type": "section",
+      "start_line": 154,
+      "title": "LightGBM"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure",
+      "end_line": 161,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "SHAP"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::shap",
+      "semantic_type": "section",
+      "start_line": 158,
+      "title": "SHAP"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure\n\n---",
+      "end_line": 167,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "InterpretML"
+      ],
+      "level": 3,
+      "section_id": "skills::2-machine-learning-statistics::interpretml",
+      "semantic_type": "section",
+      "start_line": 162,
+      "title": "InterpretML"
+    },
+    {
+      "content": "",
+      "end_line": 169,
+      "heading_path": [
+        "3. Generative AI & LLM Systems"
+      ],
+      "level": 1,
+      "section_id": "skills::3-generative-ai-llm-systems",
+      "semantic_type": "section",
+      "start_line": 168,
+      "title": "3. Generative AI & LLM Systems"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** business use-case design, grounded workflows, structured generation, validation, deterministic fallbacks and integration into analytical processes\n- **Evidence:** internal knowledge tooling plus public narrative_dna, MetaCraft and agent-oriented projects",
+      "end_line": 174,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Application Design"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::llm-application-design",
+      "semantic_type": "section",
+      "start_line": 170,
+      "title": "LLM Application Design"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** source-based answering, knowledge-base design, corpus curation, context control and hallucination mitigation\n- **Boundary:** application-level RAG/retrieval grounding is supported; do not infer ownership of a specific vector database or ingestion platform unless a project confirms it",
+      "end_line": 179,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Retrieval-Augmented / Retrieval-Grounded Generation"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::retrieval-augmented-retrieval-grounded-generation",
+      "semantic_type": "section",
+      "start_line": 175,
+      "title": "Retrieval-Augmented / Retrieval-Grounded Generation"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** task decomposition, structured outputs, extraction, summarization, evaluation, adjudication and reusable workflow prompts",
+      "end_line": 183,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Prompt Engineering"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::prompt-engineering",
+      "semantic_type": "section",
+      "start_line": 180,
+      "title": "Prompt Engineering"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** JSON Schema constrained outputs, typed validation and deterministic post-generation checks\n- **Repository evidence:** narrative_dna",
+      "end_line": 188,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Structured LLM Outputs"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::structured-llm-outputs",
+      "semantic_type": "section",
+      "start_line": 184,
+      "title": "Structured LLM Outputs"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** multi-step agent workflows, skill/role contracts, task delegation, evaluation and iterative quality gates\n- **Repository evidence:** mvp-agent-factory, narrative_dna and AI-assisted open-source development",
+      "end_line": 193,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Agentic Workflows"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::agentic-workflows",
+      "semantic_type": "section",
+      "start_line": 189,
+      "title": "Agentic Workflows"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** rubrics, regression cases, reviewer aggregation, synthetic-gold workflows, deterministic validation and quality gates",
+      "end_line": 197,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Evaluation / Evals"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::llm-evaluation-evals",
+      "semantic_type": "section",
+      "start_line": 194,
+      "title": "LLM Evaluation / Evals"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** grounding, conservative adjudication, schema constraints, validation, source constraints, confidence gates and fallback behavior",
+      "end_line": 201,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Safety / Hallucination Mitigation"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::llm-safety-hallucination-mitigation",
+      "semantic_type": "section",
+      "start_line": 198,
+      "title": "LLM Safety / Hallucination Mitigation"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** public structured-output, embedding and LLM workflow implementations",
+      "end_line": 205,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "OpenAI API / Responses API"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::openai-api-responses-api",
+      "semantic_type": "section",
+      "start_line": 202,
+      "title": "OpenAI API / Responses API"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** professional/internal workflow use and Google Workspace AI initiatives",
+      "end_line": 209,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Google Gemini"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::google-gemini",
+      "semantic_type": "section",
+      "start_line": 206,
+      "title": "Google Gemini"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** internal normative/knowledge workflows and adoption analysis",
+      "end_line": 213,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "NotebookLM"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::notebooklm",
+      "semantic_type": "section",
+      "start_line": 210,
+      "title": "NotebookLM"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** Apps Script/Workspace automation, Gemini/NotebookLM use cases and workflow design",
+      "end_line": 217,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Google Workspace AI workflows"
+      ],
+      "level": 3,
+      "section_id": "skills::3-generative-ai-llm-systems::google-workspace-ai-workflows",
+      "semantic_type": "section",
+      "start_line": 214,
+      "title": "Google Workspace AI workflows"
+    },
+    {
+      "content": "Do not convert application-level GenAI experience into claims of foundation-model pretraining, large-scale GPU training, custom model fine-tuning infrastructure or autonomous decision making unless a project provides direct evidence.\n\n---",
+      "end_line": 223,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "GenAI boundary"
+      ],
+      "level": 2,
+      "section_id": "skills::3-generative-ai-llm-systems::genai-boundary",
+      "semantic_type": "boundary",
+      "start_line": 218,
+      "title": "GenAI boundary"
+    },
+    {
+      "content": "",
+      "end_line": 225,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production"
+      ],
+      "level": 1,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production",
+      "semantic_type": "section",
+      "start_line": 224,
+      "title": "4. Data Engineering, Data Quality, MLOps & Production"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** extraction, transformation, integration, validation, reconciliation, data-quality controls and analytical dataset construction",
+      "end_line": 229,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "ETL & Data Quality"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::etl-data-quality",
+      "semantic_type": "section",
+      "start_line": 226,
+      "title": "ETL & Data Quality"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** moving analytical logic from exploration to repeatable business processes, recurring releases, APIs, packages, operational integration and monitoring",
+      "end_line": 233,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Productionization of Data Science Solutions"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::productionization-of-data-science-solutions",
+      "semantic_type": "section",
+      "start_line": 230,
+      "title": "Productionization of Data Science Solutions"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** package layouts, dependency management, public APIs, backward compatibility, documentation, release/version management and distribution\n- **Repository evidence:** InsideForest, SheShe/DelDel and MetaCraft",
+      "end_line": 238,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Python Package Engineering"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::python-package-engineering",
+      "semantic_type": "section",
+      "start_line": 234,
+      "title": "Python Package Engineering"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** YAML schemas, schema enrichment, drift detection, conversion and contract-driven validation\n- **Repository evidence:** MetaCraft",
+      "end_line": 243,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Schema Engineering / Metadata Management"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::schema-engineering-metadata-management",
+      "semantic_type": "section",
+      "start_line": 239,
+      "title": "Schema Engineering / Metadata Management"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** t-digest and HyperLogLog-based metadata/statistical sketches",
+      "end_line": 247,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Data Sketches / Approximate Statistics"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::data-sketches-approximate-statistics",
+      "semantic_type": "section",
+      "start_line": 244,
+      "title": "Data Sketches / Approximate Statistics"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** expectation-suite generation from metadata/schema definitions",
+      "end_line": 251,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Great Expectations"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::great-expectations",
+      "semantic_type": "section",
+      "start_line": 248,
+      "title": "Great Expectations"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** HTTP endpoints, command-line workflows and stable callable APIs",
+      "end_line": 255,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "API / CLI Design"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::api-cli-design",
+      "semantic_type": "section",
+      "start_line": 252,
+      "title": "API / CLI Design"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** pytest suites, golden regression, deterministic validation and experiment protocols",
+      "end_line": 259,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Automated Testing / Regression Testing"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::automated-testing-regression-testing",
+      "semantic_type": "section",
+      "start_line": 256,
+      "title": "Automated Testing / Regression Testing"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** pull-request review, forensic debugging, source-to-report lineage, schema normalization and false-positive remediation",
+      "end_line": 263,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Code Review / Production QA"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::code-review-production-qa",
+      "semantic_type": "section",
+      "start_line": 260,
+      "title": "Code Review / Production QA"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** repository-driven testing/deployment practices and automated delivery concepts",
+      "end_line": 267,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "CI/CD"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::ci-cd",
+      "semantic_type": "section",
+      "start_line": 264,
+      "title": "CI/CD"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** containerization and reproducible deployment environments",
+      "end_line": 271,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Docker"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::docker",
+      "semantic_type": "section",
+      "start_line": 268,
+      "title": "Docker"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** experiment tracking and model-lifecycle workflows",
+      "end_line": 275,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "MLflow"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::mlflow",
+      "semantic_type": "section",
+      "start_line": 272,
+      "title": "MLflow"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** workflow orchestration and scheduled analytical pipelines",
+      "end_line": 279,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Airflow"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::airflow",
+      "semantic_type": "section",
+      "start_line": 276,
+      "title": "Airflow"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** browser automation, retries, logs, batch execution and secure local processing\n- **Evidence:** Python/Selenium provider-validation workflow",
+      "end_line": 284,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "RPA / Web Automation"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::rpa-web-automation",
+      "semantic_type": "section",
+      "start_line": 280,
+      "title": "RPA / Web Automation"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Usage note:** suitable as supporting MLOps knowledge; do not position as Kubernetes platform engineering expertise",
+      "end_line": 288,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kubernetes"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::kubernetes",
+      "semantic_type": "section",
+      "start_line": 285,
+      "title": "Kubernetes"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Usage note:** mention only where orchestration/MLOps context is relevant and avoid implying deep production ownership",
+      "end_line": 292,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kubeflow"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::kubeflow",
+      "semantic_type": "section",
+      "start_line": 289,
+      "title": "Kubeflow"
+    },
+    {
+      "content": "- **Level:** familiarity\n- **Usage note:** do not present as a core streaming specialization without stronger project evidence\n\n---",
+      "end_line": 298,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kafka"
+      ],
+      "level": 3,
+      "section_id": "skills::4-data-engineering-data-quality-mlops-production::kafka",
+      "semantic_type": "section",
+      "start_line": 293,
+      "title": "Kafka"
+    },
+    {
+      "content": "",
+      "end_line": 300,
+      "heading_path": [
+        "5. Cloud & Data Platforms"
+      ],
+      "level": 1,
+      "section_id": "skills::5-cloud-data-platforms",
+      "semantic_type": "section",
+      "start_line": 299,
+      "title": "5. Cloud & Data Platforms"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** professional AWS/EMR/PySpark analytical workloads plus SageMaker-related formal training\n- **Usage note:** do not claim AWS architecture certification",
+      "end_line": 305,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "AWS"
+      ],
+      "level": 3,
+      "section_id": "skills::5-cloud-data-platforms::aws",
+      "semantic_type": "section",
+      "start_line": 301,
+      "title": "AWS"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** Cloud Functions Gen2, Cloud Storage, HTTP model serving and cloud-hosted model artifacts in public code",
+      "end_line": 309,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Google Cloud"
+      ],
+      "level": 3,
+      "section_id": "skills::5-cloud-data-platforms::google-cloud",
+      "semantic_type": "section",
+      "start_line": 306,
+      "title": "Google Cloud"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** Apps Script, Sheets, Forms, Looker Studio, Gemini, NotebookLM and AI-enabled workflows",
+      "end_line": 313,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Google Workspace ecosystem"
+      ],
+      "level": 3,
+      "section_id": "skills::5-cloud-data-platforms::google-workspace-ecosystem",
+      "semantic_type": "section",
+      "start_line": 310,
+      "title": "Google Workspace ecosystem"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** professional analytical and operational workflows",
+      "end_line": 317,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Teradata"
+      ],
+      "level": 3,
+      "section_id": "skills::5-cloud-data-platforms::teradata",
+      "semantic_type": "section",
+      "start_line": 314,
+      "title": "Teradata"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** professional analytical/operational data workflows\n\n---",
+      "end_line": 323,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Oracle"
+      ],
+      "level": 3,
+      "section_id": "skills::5-cloud-data-platforms::oracle",
+      "semantic_type": "section",
+      "start_line": 318,
+      "title": "Oracle"
+    },
+    {
+      "content": "",
+      "end_line": 325,
+      "heading_path": [
+        "6. Visualization & Business Intelligence"
+      ],
+      "level": 1,
+      "section_id": "skills::6-visualization-business-intelligence",
+      "semantic_type": "section",
+      "start_line": 324,
+      "title": "6. Visualization & Business Intelligence"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** Tableau Desktop Specialist credential and professional reporting",
+      "end_line": 329,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Tableau"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::tableau",
+      "semantic_type": "section",
+      "start_line": 326,
+      "title": "Tableau"
+    },
+    {
+      "content": "- **Level:** working",
+      "end_line": 332,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Power BI"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::power-bi",
+      "semantic_type": "section",
+      "start_line": 330,
+      "title": "Power BI"
+    },
+    {
+      "content": "- **Level:** working",
+      "end_line": 335,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Looker Studio"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::looker-studio",
+      "semantic_type": "section",
+      "start_line": 333,
+      "title": "Looker Studio"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** analytical and model/rule visualization work",
+      "end_line": 339,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Matplotlib / Plotly / Analytical Visualization"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::matplotlib-plotly-analytical-visualization",
+      "semantic_type": "section",
+      "start_line": 336,
+      "title": "Matplotlib / Plotly / Analytical Visualization"
+    },
+    {
+      "content": "- **Level:** working\n- **Recency:** historical\n- **Evidence:** public time-series/analytical applications",
+      "end_line": 344,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Shiny"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::shiny",
+      "semantic_type": "section",
+      "start_line": 340,
+      "title": "Shiny"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** public analytical apps and professional prototypes",
+      "end_line": 348,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Streamlit"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::streamlit",
+      "semantic_type": "section",
+      "start_line": 345,
+      "title": "Streamlit"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** translating analytical outputs into business decisions, executive communication and visual narratives\n\n---",
+      "end_line": 354,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Data Storytelling"
+      ],
+      "level": 3,
+      "section_id": "skills::6-visualization-business-intelligence::data-storytelling",
+      "semantic_type": "section",
+      "start_line": 349,
+      "title": "Data Storytelling"
+    },
+    {
+      "content": "",
+      "end_line": 356,
+      "heading_path": [
+        "7. Software Engineering & Open Source"
+      ],
+      "level": 1,
+      "section_id": "skills::7-software-engineering-open-source",
+      "semantic_type": "section",
+      "start_line": 355,
+      "title": "7. Software Engineering & Open Source"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** independently authored reusable Python and R libraries rather than only notebooks or one-off scripts",
+      "end_line": 360,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Library / Framework Design"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::library-framework-design",
+      "semantic_type": "section",
+      "start_line": 357,
+      "title": "Library / Framework Design"
+    },
+    {
+      "content": "- **Level:** core\n- **Evidence:** public repositories and packages spanning statistical tooling, interpretable ML, data quality, GenAI evaluation and agent architecture across multiple years",
+      "end_line": 364,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Open-Source Ownership"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::open-source-ownership",
+      "semantic_type": "ownership",
+      "start_line": 361,
+      "title": "Open-Source Ownership"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** public API migration/deprecation patterns in InsideForest",
+      "end_line": 368,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Backward Compatibility & API Migration"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::backward-compatibility-api-migration",
+      "semantic_type": "section",
+      "start_line": 365,
+      "title": "Backward Compatibility & API Migration"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** CRAN-published FitUltD/shortcuts ecosystem and analyst-productivity utilities",
+      "end_line": 372,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "R / RStudio Add-in Engineering"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::r-rstudio-add-in-engineering",
+      "semantic_type": "section",
+      "start_line": 369,
+      "title": "R / RStudio Add-in Engineering"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** README quickstarts, API/migration docs, operating guides, Colab examples and technical documentation across public projects",
+      "end_line": 376,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Documentation & Developer Experience"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::documentation-developer-experience",
+      "semantic_type": "section",
+      "start_line": 373,
+      "title": "Documentation & Developer Experience"
+    },
+    {
+      "content": "- **Level:** working\n- **Evidence:** multi-seed benchmarks, experiment protocols and golden-regression fixtures\n\n---",
+      "end_line": 382,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Reproducible Experiment Design"
+      ],
+      "level": 3,
+      "section_id": "skills::7-software-engineering-open-source::reproducible-experiment-design",
+      "semantic_type": "section",
+      "start_line": 377,
+      "title": "Reproducible Experiment Design"
+    },
+    {
+      "content": "",
+      "end_line": 384,
+      "heading_path": [
+        "8. Business & Domain Skills"
+      ],
+      "level": 1,
+      "section_id": "skills::8-business-domain-skills",
+      "semantic_type": "skill_group",
+      "start_line": 383,
+      "title": "8. Business & Domain Skills"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** remote banking, commercial analytics, contactability, product recommendation, operational analytics, profitability/productivity measurement and physical-network analytics",
+      "end_line": 388,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Banking Analytics"
+      ],
+      "level": 3,
+      "section_id": "skills::8-business-domain-skills::banking-analytics",
+      "semantic_type": "section",
+      "start_line": 385,
+      "title": "Banking Analytics"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** statistical anomaly detection, hybrid rule + ML approaches, monitoring, prioritization, interpretability and investigation support",
+      "end_line": 392,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Risk & Fraud Analytics"
+      ],
+      "level": 3,
+      "section_id": "skills::8-business-domain-skills::risk-fraud-analytics",
+      "semantic_type": "section",
+      "start_line": 389,
+      "title": "Risk & Fraud Analytics"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** probability, risk modeling, statistical distributions and quantitative decision making",
+      "end_line": 396,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Insurance / Actuarial Reasoning"
+      ],
+      "level": 3,
+      "section_id": "skills::8-business-domain-skills::insurance-actuarial-reasoning",
+      "semantic_type": "section",
+      "start_line": 393,
+      "title": "Insurance / Actuarial Reasoning"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** statistical modeling and distribution fitting applied to medical/risk contexts\n\n---",
+      "end_line": 402,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Healthcare / Risk Modeling"
+      ],
+      "level": 3,
+      "section_id": "skills::8-business-domain-skills::healthcare-risk-modeling",
+      "semantic_type": "section",
+      "start_line": 397,
+      "title": "Healthcare / Risk Modeling"
+    },
+    {
+      "content": "",
+      "end_line": 404,
+      "heading_path": [
+        "9. Leadership & Delivery"
+      ],
+      "level": 1,
+      "section_id": "skills::9-leadership-delivery",
+      "semantic_type": "section",
+      "start_line": 403,
+      "title": "9. Leadership & Delivery"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** problem framing, data contracts, modeling, validation, implementation, productionization, monitoring and business communication",
+      "end_line": 408,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "End-to-End Technical Ownership"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::end-to-end-technical-ownership",
+      "semantic_type": "ownership",
+      "start_line": 405,
+      "title": "End-to-End Technical Ownership"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** collaboration with business, technology, compliance, data/legal, risk and senior leadership stakeholders",
+      "end_line": 412,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Stakeholder Management"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::stakeholder-management",
+      "semantic_type": "section",
+      "start_line": 409,
+      "title": "Stakeholder Management"
+    },
+    {
+      "content": "- **Level:** core\n- **Coverage:** project direction, solution architecture, quality/evaluation criteria, mentoring, technical presentations and cross-functional coordination\n- **Boundary:** project/technical leadership must not be converted into formal people-management claims without direct evidence",
+      "end_line": 417,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Technical / Project Leadership"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::technical-project-leadership",
+      "semantic_type": "technology",
+      "start_line": 413,
+      "title": "Technical / Project Leadership"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** As-Is/To-Be mapping, state models, SLAs, escalation, RACI and phased automation design",
+      "end_line": 421,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Process / Workflow Architecture"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::process-workflow-architecture",
+      "semantic_type": "section",
+      "start_line": 418,
+      "title": "Process / Workflow Architecture"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** Python instruction, technical mentoring, AI/GenAI workshops, internal talks, documentation and examples",
+      "end_line": 425,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Teaching & Knowledge Transfer"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::teaching-knowledge-transfer",
+      "semantic_type": "section",
+      "start_line": 422,
+      "title": "Teaching & Knowledge Transfer"
+    },
+    {
+      "content": "- **Level:** working\n- **Coverage:** Scrum principles, iterative development and cross-functional coordination\n\n---",
+      "end_line": 431,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Agile Delivery"
+      ],
+      "level": 3,
+      "section_id": "skills::9-leadership-delivery::agile-delivery",
+      "semantic_type": "section",
+      "start_line": 426,
+      "title": "Agile Delivery"
+    },
+    {
+      "content": "",
+      "end_line": 433,
+      "heading_path": [
+        "10. Languages"
+      ],
+      "level": 1,
+      "section_id": "skills::10-languages",
+      "semantic_type": "section",
+      "start_line": 432,
+      "title": "10. Languages"
+    },
+    {
+      "content": "- **Proficiency:** native",
+      "end_line": 436,
+      "heading_path": [
+        "10. Languages",
+        "Spanish"
+      ],
+      "level": 3,
+      "section_id": "skills::10-languages::spanish",
+      "semantic_type": "section",
+      "start_line": 434,
+      "title": "Spanish"
+    },
+    {
+      "content": "- **Proficiency:** C1 / advanced professional\n- **Evidence:** professional and academic use plus international experience in Dublin",
+      "end_line": 440,
+      "heading_path": [
+        "10. Languages",
+        "English"
+      ],
+      "level": 3,
+      "section_id": "skills::10-languages::english",
+      "semantic_type": "section",
+      "start_line": 437,
+      "title": "English"
+    },
+    {
+      "content": "- **Proficiency:** A2\n\n---",
+      "end_line": 445,
+      "heading_path": [
+        "10. Languages",
+        "French"
+      ],
+      "level": 3,
+      "section_id": "skills::10-languages::french",
+      "semantic_type": "section",
+      "start_line": 441,
+      "title": "French"
+    },
+    {
+      "content": "| Repository | Strongest evidence |\n|---|---|\n| `InsideForest` | Python package engineering, estimator APIs, supervised clustering, interpretable ML, validation, pytest, persistence, documentation |\n| `SheShe` / `PureSheShe` | decision-surface exploration, low-dimensional rule discovery, numerical search, experiment design and packaging |\n| `MetaCraft` | data quality, schema drift, YAML metadata, Great Expectations, sketches and OpenAI integration |\n| `ADNarrativa` / `narrative_dna` | OpenAI Responses API, Structured Outputs, Pydantic, JSON Schema, embeddings, LLM evals, adjudication and golden regression |\n| `mvp-agent-factory` | agent architecture, skill contracts, eval rubrics, PRDs and AI-assisted SDLC structure |\n| `cloud_function` | GCP Cloud Functions Gen2, Cloud Storage, Keras, Transformers, embeddings and HTTP model serving |\n| `coi` | transaction-pattern analysis, fraud/compliance tooling, text signals, visual reporting and interpretable case exports |\n| `floor` / `yahoo` | financial-data pipelines, temporal validation, GitHub Actions, SQLite/JSON artifacts and static dashboards |\n| `FitUltD` / `shortcuts` | CRAN package engineering, distribution fitting, statistical tests, RStudio add-ins and analyst productivity |\n| `movilidad_social_mx` | Streamlit analytical product and probabilistic storytelling; fork boundary applies |\n| `DataMiningTools` / `FitUlt_V00` | R package development and statistical tooling |\n| `Ensemble-Learning-for-Time-Series` | R time-series ensemble forecasting and Shiny delivery |\n\n---",
+      "end_line": 464,
+      "heading_path": [
+        "11. GitHub-backed evidence map"
+      ],
+      "level": 1,
+      "section_id": "skills::11-github-backed-evidence-map",
+      "semantic_type": "section",
+      "start_line": 446,
+      "title": "11. GitHub-backed evidence map"
+    },
+    {
+      "content": "1. A vacancy keyword alone is never enough to promote a skill into the CV.\n2. Prefer skills with direct evidence in `projects/`, `roles/`, `achievements/` or observable public repositories.\n3. Preserve the exact `core`, `working` or `familiarity` value; never upgrade it for ATS matching.\n4. Never infer a hybrid level. If evidence grows, update the canonical level explicitly.\n5. Optional dependency presence is weaker evidence than code/API ownership.\n6. For senior Data Science roles, lead with Python, SQL, PySpark/Spark, ML, statistics, interpretable ML, GenAI/LLMs and end-to-end ownership when relevant.\n7. For ML Engineering/MLOps roles, add package engineering, tests, APIs, cloud model serving, Docker, CI/CD and lifecycle tools while keeping Kubernetes/Kubeflow/Kafka at familiarity unless new evidence is added.\n8. For GenAI roles, emphasize Structured Outputs, validation, evals, RAG, prompting, adjudication, agentic workflows and auditable system design rather than unsupported foundation-model training claims.\n9. For data-quality/platform roles, MetaCraft and professional production-quality work provide evidence for schema contracts, drift detection, metadata, QA and reconciliation.\n10. For explainable-ML roles, InsideForest and SheShe/DelDel are primary evidence.\n11. For leadership roles, combine technical/project leadership with measurable outcomes; do not invent formal people-management scope.",
+      "end_line": 477,
+      "heading_path": [
+        "12. CV generation rules"
+      ],
+      "level": 1,
+      "section_id": "skills::12-cv-generation-rules",
+      "semantic_type": "section",
+      "start_line": 465,
+      "title": "12. CV generation rules"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/skills.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-TRAJECTORY-2021-2023-CURATED",
+    "SRC-TRAJECTORY-2024-2026-CURATED",
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

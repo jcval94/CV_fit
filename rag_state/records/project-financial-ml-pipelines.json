@@ -1,0 +1,122 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "educational_financial_ml_pipelines",
+    "source_repos": [
+      "https://github.com/jcval94/floor",
+      "https://github.com/jcval94/yahoo"
+    ]
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "3375c00639219660f2e22e90a0cde1e3b0215c693c37d91c63dda793124a7736",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-financial-ml-pipelines",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 21,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo"
+      ],
+      "level": 1,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo",
+      "semantic_type": "section",
+      "start_line": 20,
+      "title": "Financial ML Pipelines — floor and yahoo"
+    },
+    {
+      "content": "Two public Python repositories demonstrate end-to-end thinking for financial data: ingestion, feature construction, model training, prediction, evaluation, portfolio/signaling logic, artifact persistence and static dashboard publication.\n\nTheir value is architectural and educational. They are not validated trading systems.",
+      "end_line": 27,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::summary",
+      "semantic_type": "summary",
+      "start_line": 22,
+      "title": "Summary"
+    },
+    {
+      "content": "The repository documents a modular educational flow for selecting tickers, downloading market data, preprocessing, feature engineering, training, prediction, evaluation, portfolio optimization, configuration-driven execution, temporal validation and GitHub Pages publication.",
+      "end_line": 31,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "yahoo"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+      "semantic_type": "section",
+      "start_line": 28,
+      "title": "yahoo"
+    },
+    {
+      "content": "The repository documents a more operations-oriented flow involving market-data ingestion, feature construction, champion/challenger artifacts, forecasts or signals, SQLite persistence, JSON/JSONL snapshots, GitHub Actions and static dashboard generation.\n\nIts own documentation records incomplete or degraded components. That honesty is part of the evidence: the system must be described as implemented-and-audited, not as fully stable production infrastructure.",
+      "end_line": 37,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "floor"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::floor",
+      "semantic_type": "section",
+      "start_line": 32,
+      "title": "floor"
+    },
+    {
+      "content": "- Python pipeline architecture\n- time-series and market-data handling\n- feature engineering and temporal validation\n- training/evaluation separation\n- artifact and snapshot contracts\n- SQLite and JSON/JSONL\n- GitHub Actions\n- static dashboard delivery\n- operational documentation and state transparency",
+      "end_line": 49,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 38,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "> Built and documented modular financial-ML pipelines from market-data ingestion through temporal validation, model artifacts and static dashboard publication using Python, GitHub Actions, SQLite and JSON contracts.",
+      "end_line": 53,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 50,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family.",
+      "end_line": 59,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 54,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/financial_ml_pipelines.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public_supporting",
+  "visibility": "public"
+}

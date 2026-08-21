@@ -1,0 +1,131 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": 2026
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "a662ffdd9137f2740220a458096217a43e957bba8152b7d17e3b66cbf65ab61b",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-supervisory-relations",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 18,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "Supervisory Relations To-Be Architecture"
+    },
+    {
+      "content": "A 2026 process-architecture initiative for regulatory operations, combining workflow/state design, SLAs, role clarity, Google Workspace automation and proposed LLM assistance.",
+      "end_line": 22,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
+      "semantic_type": "summary",
+      "start_line": 19,
+      "title": "Summary"
+    },
+    {
+      "content": "The existing regulatory workflow relied on manual capture, ambiguous status definitions and limited visibility. The goal was to define a more traceable operating model that could support faster handling, explicit escalation and later automation.",
+      "end_line": 26,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Business problem"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem",
+      "semantic_type": "section",
+      "start_line": 23,
+      "title": "Business problem"
+    },
+    {
+      "content": "Evidence supports technical leadership in:\n\n- mapping the As-Is process and designing the To-Be workflow\n- defining ticket states and transitions\n- parameterizing SLAs and escalation logic\n- documenting roles and responsibilities through RACI\n- producing flow diagrams and executive infographics\n- proposing Gemini/LLM assistance for summarizing regulatory changes and pre-assessing possible impact\n- connecting Google Sheets, Forms, Apps Script, workflow tooling and reporting concepts",
+      "end_line": 38,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 27,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "The design was approved for phased implementation. Time reductions were projected targets, not fully validated production outcomes at the source cutoff.",
+      "end_line": 42,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Lifecycle"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::lifecycle",
+      "semantic_type": "section",
+      "start_line": 39,
+      "title": "Lifecycle"
+    },
+    {
+      "content": "- Google Sheets and Forms\n- Apps Script\n- Google Workspace workflow tooling\n- Looker/reporting concepts\n- Gemini / LLM-assisted semantic analysis\n- RACI, state models and process diagrams",
+      "end_line": 51,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Technologies and artifacts"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::technologies-and-artifacts",
+      "semantic_type": "technology",
+      "start_line": 43,
+      "title": "Technologies and artifacts"
+    },
+    {
+      "content": "> Led the To-Be design of a regulatory workflow with explicit states, SLAs, escalation and Google Workspace automation, incorporating proposed Gemini assistance for semantic change analysis.",
+      "end_line": 55,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 52,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation.",
+      "end_line": 60,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 56,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/bbva_supervisory_relations.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

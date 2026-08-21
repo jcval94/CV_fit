@@ -1,0 +1,158 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "Management Solutions",
+    "period": "2017-2021"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "1ed8783ae17f7bc064b2e9d4287186081980d287b26a5b6550f3768ec48d73d2",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [
+    "../projects/consulting_clarification_prioritization.md",
+    "../projects/consulting_data_migration.md",
+    "../projects/consulting_insurance_fraud_monitoring.md"
+  ],
+  "metric_refs": [
+    "ACH-MS-CLARIFICATIONS-001",
+    "ACH-MS-CLARIFICATIONS-002",
+    "ACH-MS-FRAUD-001",
+    "ACH-MS-MIGRATION-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "role-management-solutions",
+  "record_type": "role",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Management Solutions"
+      ],
+      "level": 1,
+      "section_id": "role-management-solutions::management-solutions",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Management Solutions"
+    },
+    {
+      "content": "- **Organization:** Management Solutions\n- **Overall period:** October 2017 – May 2021\n- **Location:** Mexico City\n- **Professional context:** data and business consulting across insurance, fraud, technology migration, cost forecasting and operational analytics\n\nThe public portfolio shows a deliberate pause during 2019 for an exchange in Ireland, English development and open-source/statistical work. It also explains that a new corporate user was assigned on return, which can make external employment records appear to start later than the original October 2017 date.",
+      "end_line": 28,
+      "heading_path": [
+        "Management Solutions",
+        "Canonical employment record"
+      ],
+      "level": 2,
+      "section_id": "role-management-solutions::management-solutions::canonical-employment-record",
+      "semantic_type": "section",
+      "start_line": 20,
+      "title": "Canonical employment record"
+    },
+    {
+      "content": "",
+      "end_line": 30,
+      "heading_path": [
+        "Management Solutions",
+        "Role chronology"
+      ],
+      "level": 2,
+      "section_id": "role-management-solutions::management-solutions::role-chronology",
+      "semantic_type": "section",
+      "start_line": 29,
+      "title": "Role chronology"
+    },
+    {
+      "content": "- **Period:** October 2017 – March 2019\n- **Contributions:**\n  - designed fraud-monitoring KPIs for excessive sales/prescriptions\n  - applied principal component analysis and outlier detection\n  - developed supporting R tooling\n  - defined unsupervised indicators related to willingness and ability to pay\n  - helped deliver a monitoring application for insurance-portfolio health\n- **Canonical project:** [Insurance Fraud Monitoring](../projects/consulting_insurance_fraud_monitoring.md)\n- **Public outcome:** `ACH-MS-FRAUD-001` in the achievement registry",
+      "end_line": 42,
+      "heading_path": [
+        "Management Solutions",
+        "Role chronology",
+        "Business Consultant — Data Specialist (Assistant)"
+      ],
+      "level": 3,
+      "section_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+      "semantic_type": "section",
+      "start_line": 31,
+      "title": "Business Consultant — Data Specialist (Assistant)"
+    },
+    {
+      "content": "- **Period:** 2019\n- **Purpose:** exchange in Ireland, strengthening English and developing/publishing early R work including FitUltD\n- **Usage:** describe as an intentional development period, not as unexplained unemployment",
+      "end_line": 48,
+      "heading_path": [
+        "Management Solutions",
+        "Role chronology",
+        "Professional-development pause"
+      ],
+      "level": 3,
+      "section_id": "role-management-solutions::management-solutions::role-chronology::professional-development-pause",
+      "semantic_type": "section",
+      "start_line": 43,
+      "title": "Professional-development pause"
+    },
+    {
+      "content": "- **Period:** November 2019 – July 2020\n- **Contributions:**\n  - supported migration of corporate tools to Salesforce\n  - translated business rules into front-end behavior\n  - performed A/B testing on deployed solutions\n  - supported data-lake-to-data-warehouse migration\n  - defined layouts, formats and relationships to preserve information consistency\n- **Canonical project:** [Data Migration, Reconciliation & QA](../projects/consulting_data_migration.md)\n- **Public outcome:** `ACH-MS-MIGRATION-001` remains conditional until its unit representation is reconciled",
+      "end_line": 60,
+      "heading_path": [
+        "Management Solutions",
+        "Role chronology",
+        "Business Consultant — Data Specialist (Assistant II)"
+      ],
+      "level": 3,
+      "section_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+      "semantic_type": "section",
+      "start_line": 49,
+      "title": "Business Consultant — Data Specialist (Assistant II)"
+    },
+    {
+      "content": "- **Period:** July 2020 – May 2021\n- **Contributions:**\n  - led a multidisciplinary effort to forecast monthly mainframe operating costs using Bayesian linear regression\n  - developed a PySpark/MicroStrategy model and dashboard to predict/prioritize false clarifications\n  - collaborated with fraud-prevention specialists to incorporate expert insight into prioritization\n- **Canonical project:** [Clarification Prioritization](../projects/consulting_clarification_prioritization.md)\n- **Public outcomes:** `ACH-MS-CLARIFICATIONS-001` and `ACH-MS-CLARIFICATIONS-002`",
+      "end_line": 70,
+      "heading_path": [
+        "Management Solutions",
+        "Role chronology",
+        "Business Consultant — Senior Data Scientist"
+      ],
+      "level": 3,
+      "section_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+      "semantic_type": "section",
+      "start_line": 61,
+      "title": "Business Consultant — Senior Data Scientist"
+    },
+    {
+      "content": "- R, Python, PySpark and SQL\n- PCA, outlier detection and unsupervised learning\n- Bayesian regression and forecasting\n- A/B testing\n- data migration and layout/schema definition\n- Salesforce delivery\n- MicroStrategy and operational dashboards\n- fraud/insurance analytics\n- cross-functional consulting and technical leadership",
+      "end_line": 82,
+      "heading_path": [
+        "Management Solutions",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "role-management-solutions::management-solutions::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 71,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording.",
+      "end_line": 88,
+      "heading_path": [
+        "Management Solutions",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "role-management-solutions::management-solutions::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 83,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/roles/previous_roles.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

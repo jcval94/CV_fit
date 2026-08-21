@@ -1,0 +1,134 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2021-2022"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "4ac2b5538767381257fcf9801b291006180177e15c44941685a4b7d180d16dd1",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-BBVA-ATM-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-atm-analytics",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "ATM and Physical-Network Analytics"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "ATM and Physical-Network Analytics"
+    },
+    {
+      "content": "A portfolio of 2021–2022 analytics for cash demand, ATM maintenance and physical-network decisions. This is the clearest bridge between early banking operations work and later customer/commercial analytics.",
+      "end_line": 23,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "- forecast banknote/coin demand across financial subsidiaries\n- reduce manual operational work and data-refresh error\n- support ATM/branch placement, redistribution or removal decisions\n- diagnose remote devices and refine geospatial footprint recommendations\n- modernize recurring analytical components",
+      "end_line": 31,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Business problems"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::business-problems",
+      "semantic_type": "section",
+      "start_line": 24,
+      "title": "Business problems"
+    },
+    {
+      "content": "Evidence supports:\n\n- evaluation/adaptation of ML and ETL processes for cash-demand forecasting\n- Python-based forecasting for infrastructure demand/capacity\n- contribution to predictive-maintenance and device/component analysis\n- clustering, market-potential analysis and data visualization for physical-network decisions\n- automated ingestion/refresh of recurring ATM status files and dashboards\n- support and calibration of footprint tooling, including resolution of a geographic-indexing issue\n- delivery of diagnostics and KPI reporting\n\nThe evidence varies by subproject: participation is strongest overall; full authorship is not assumed for every underlying model.",
+      "end_line": 45,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Contribution"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution",
+      "semantic_type": "ownership",
+      "start_line": 32,
+      "title": "Contribution"
+    },
+    {
+      "content": "- Python, PySpark and SQL\n- Teradata and corporate data platforms\n- clustering and geospatial analysis\n- forecasting / time-series reasoning\n- ETL and recurring automation\n- Tableau and other BI reporting\n- model modernization and validation",
+      "end_line": 55,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Technologies and methods"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+      "semantic_type": "technology",
+      "start_line": 46,
+      "title": "Technologies and methods"
+    },
+    {
+      "content": "- `ACH-BBVA-ATM-001`: annual savings per redistributed ATM\n\nOther internal portfolio-level figures remain restricted and are not published in this repository.",
+      "end_line": 61,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Public outcome"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::public-outcome",
+      "semantic_type": "outcome",
+      "start_line": 56,
+      "title": "Public outcome"
+    },
+    {
+      "content": "> Evaluated and adapted forecasting, clustering and ETL workflows for ATM/branch strategy, contributing to a decision-support model with publicly reported annual savings per redistributed ATM.",
+      "end_line": 65,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 62,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Do not present every ATM subproject as one personally owned model.\n- Do not add internal device counts, redistribution percentages or licensing savings without explicit public approval.\n- Use market-readable technologies in generated CVs; internal/deprecated platform names are unnecessary.",
+      "end_line": 70,
+      "heading_path": [
+        "ATM and Physical-Network Analytics",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 66,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/bbva_atm_analytics.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2021-2023-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

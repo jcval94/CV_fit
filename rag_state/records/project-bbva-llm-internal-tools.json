@@ -1,0 +1,153 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2023-present"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "0696bdb81d73a1209001e1989aa565d7da3938cf618664a15d5f147371eb8a10",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [
+    "../achievements/metrics.md"
+  ],
+  "metric_refs": [
+    "ACH-GENAI-NORA-001",
+    "ACH-GENAI-NORA-002",
+    "ACH-GENAI-NORA-003"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-llm-internal-tools",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 21,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools",
+      "semantic_type": "section",
+      "start_line": 20,
+      "title": "Internal LLM and Normative Knowledge Tools"
+    },
+    {
+      "content": "This project family covers the design, curation, evaluation and impact measurement of LLM-assisted tools that make internal knowledge easier to use in regulated workflows. The strongest documented case is **NorA**, a normative knowledge assistant for risk/operational users.",
+      "end_line": 25,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::summary",
+      "semantic_type": "summary",
+      "start_line": 22,
+      "title": "Summary"
+    },
+    {
+      "content": "Internal normative questions required experts to search across many documents, producing slow and inconsistent response times. The challenge was not only answering with an LLM; it was curating the corpus, preventing semantic contamination, defining safe usage and proving operational value.",
+      "end_line": 29,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Business problem"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::business-problem",
+      "semantic_type": "section",
+      "start_line": 26,
+      "title": "Business problem"
+    },
+    {
+      "content": "Evidence supports:\n\n- curation and segregation of document corpora by domain/portfolio\n- design of use cases and prompts for grounded normative questions\n- operational follow-up and adoption analysis\n- conversion of usage telemetry into time, capacity and FTE/ROI narratives\n- definition of KPIs for reach, response speed and demand handling\n- communication of results to management\n- support for user enablement and responsible adoption",
+      "end_line": 41,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "NorA contribution"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::nora-contribution",
+      "semantic_type": "ownership",
+      "start_line": 30,
+      "title": "NorA contribution"
+    },
+    {
+      "content": "- NotebookLM\n- Google Gemini\n- ChatGPT / OpenAI-enabled workflows\n- retrieval-grounded / RAG-style knowledge use\n- source-constrained answering\n- prompt engineering\n- corpus curation and document segregation\n- telemetry and KPI analysis\n- Google Workspace and Apps Script\n- structured workflows and human review\n\nThe exact vector database, embedding architecture and automated ingestion stack are not confirmed and must not be invented.",
+      "end_line": 56,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Technologies and patterns"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+      "semantic_type": "technology",
+      "start_line": 42,
+      "title": "Technologies and patterns"
+    },
+    {
+      "content": "Canonical public metrics live in [the achievement registry](../achievements/metrics.md):\n\n- `ACH-GENAI-NORA-001`: collaborator reach\n- `ACH-GENAI-NORA-002`: consultation-handling speed\n- `ACH-GENAI-NORA-003`: demand-capacity scaling",
+      "end_line": 64,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Public outcomes"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::public-outcomes",
+      "semantic_type": "outcome",
+      "start_line": 57,
+      "title": "Public outcomes"
+    },
+    {
+      "content": "- business-facing Streamlit prototype for recommendation/communication strategy\n- process and state architecture for regulatory workflows using Gemini and Google Workspace\n- participation in a technical GenAI community/champion program\n- training, cases and practical guidance for NotebookLM, Gemini and ChatGPT\n- exploration of AI-assisted code refactoring with deterministic formatting tools\n\nThese related items are not all equivalent to production deployment.",
+      "end_line": 74,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Related GenAI work"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
+      "semantic_type": "section",
+      "start_line": 65,
+      "title": "Related GenAI work"
+    },
+    {
+      "content": "> Curated and measured the impact of an AI-powered normative assistant, translating usage telemetry into reach, speed and capacity KPIs.\n\n> Designed grounded knowledge workflows, corpus-segregation rules and adoption KPIs for GenAI use in a regulated environment.",
+      "end_line": 80,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Approved public narratives"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
+      "semantic_type": "section",
+      "start_line": 75,
+      "title": "Approved public narratives"
+    },
+    {
+      "content": "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states.",
+      "end_line": 86,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 81,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/llm_internal_tools.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-LINKEDIN-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2021-2023-CURATED",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

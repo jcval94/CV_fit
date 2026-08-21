@@ -1,0 +1,327 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "79b5c9ed670b545ab38b9de7ffd9e6b61e60419d680969a7055da39444cdf9e7",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Summary\n`mvp-agent-factory` is a versioned documentation and architecture system for converting vague MVP ideas into development-ready packages for coding agents such as Codex, Claude Code, Cursor or human engineering teams.\n\nIts strongest professional signal is not an end-user app; it demonstrates **agent-system design, scope control, skill contracts, eval design and repeatable AI-assisted software development methodology**.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::problem-addressed",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "69bd7a27efca403aa1ddf15614325081aa8c2401bbab7206bed2f4c85ecbc8dc",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Problem addressed"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Problem addressed\nThe repository explicitly targets common failure modes in agent-assisted product development:\n\n- unclear target users\n- inflated MVP scope\n- ambiguous success criteria\n- agents without clear boundaries\n- non-repeatable prompts\n- premature coding before product/architecture decisions",
+      "title": "Problem addressed"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::canonical-workflow",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "ea426950ea2786d7b0195fd1d41c790bb1ca1e5b3024b37e070de3b5d024e688",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Canonical workflow"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Canonical workflow\n1. capture idea\n2. generate structured product/technical documents\n3. validate against evals\n4. define a small vertical slice\n5. build the MVP\n6. iterate",
+      "title": "Canonical workflow"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "00cdf65f82cd3ef32aed5715f0bf901fb64e57e26978f159538dfb7c799d47aa",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Artifacts generated / designed"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Artifacts generated / designed\n- Product Brief\n- PRD\n- Agent Operating Spec\n- Skill Map\n- Skill Contracts\n- Eval Suite\n- Harness Spec\n- Project Structure\n- Implementation Plan\n- Codex / Claude prompts",
+      "title": "Artifacts generated / designed"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::agent-skill-methodology",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "8a9313d559844c68bd372efba7263790d4996fd197eac91bee105ab84d13e912",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Agent skill methodology"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Agent skill methodology\nSkills are treated as explicit contracts defining:\n\n- activation conditions\n- inputs\n- outputs\n- acceptance criteria\n- boundaries / prohibited behavior\n\nThis is stronger evidence than merely stating “agentic workflows”: it shows a systematic approach to making agent behavior reusable and reviewable.",
+      "title": "Agent skill methodology"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::evaluation-methodology",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "a57bfd8eb3fa5bbf8d502bf17fc9248a198a37ab7db82c2edd88b1dda9dd3293",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Evaluation methodology"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Evaluation methodology\nThe repo includes:\n\n- rubrics\n- checklists\n- regression cases\n- explicit Definition of Ready\n- quality gates before product coding\n\nA documented readiness criterion requires the eval rubric to reach an average score of `4+`; this is a **methodological threshold**, not a measured business KPI.",
+      "title": "Evaluation methodology"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::developer-tooling",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "d68720ac8178cb925b8affb0fcfb64a14e487f9e232bfa32edb2316418d40378",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Developer tooling"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Developer tooling\nA Python scaffold script can create a minimal new MVP project structure with idea, documentation, eval, skill, example and application directories.\n\nThe repo explicitly supports workflows with:\n\n- OpenAI Codex\n- Claude Code\n- Cursor\n- human engineering teams",
+      "title": "Developer tooling"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "1da836331f6ba728c8c1c95804e6cd2292e12b58ed77103eada9e792bcc35a0b",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Skills evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Skills evidenced\n- agent architecture\n- AI-assisted SDLC design\n- skill / tool contract design\n- evaluation rubric design\n- prompt engineering\n- requirements engineering\n- PRD design\n- scope control\n- vertical-slice planning\n- technical documentation\n- software scaffolding\n- regression-thinking for agent outputs",
+      "title": "Skills evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "21c57d3c12bf2d6bba79b5f2954f33eaa74b115d2c9457dad86a4131cc88cad1",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "CV positioning",
+        "Agentic AI / AI Engineer"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Agentic AI / AI Engineer\n> Designed a reusable agent-development framework with explicit skill contracts, eval rubrics, operating specs and quality gates for converting ambiguous MVP ideas into development-ready vertical slices.",
+      "title": "Agentic AI / AI Engineer"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "14c06d64cc693c9d61fa8665d5824033e8bf801e70b419366d476d7a96693e7a",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "CV positioning",
+        "Technical Leadership / AI Product"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Technical Leadership / AI Product\n> Built a documentation-first methodology for coordinating AI coding agents and human teams around PRDs, architecture decisions, acceptance criteria and regression-oriented evals.",
+      "title": "Technical Leadership / AI Product"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "content_hash": "a3c5183c0dc8f3dfc245f5be978e25e9ab66129a02575c22d6651a1dc02becb3",
+      "cv_eligible": true,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-mvp-agent-factory",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Usage constraints\n- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-mvp-agent-factory",
+  "schema_version": 1
+}

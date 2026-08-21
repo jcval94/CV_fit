@@ -1,0 +1,246 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "03369e0e915af08d5615c779edbe7b1254784998ce0e7237574526ddd57213c6",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Summary\nThis record consolidates production-quality contributions that sit outside a single model: forensic debugging, schema cleanup, code review, distributed-pipeline refactoring, cloud productization and resilient automation.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::quality-and-debugging",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "bc20aaad600e215381686ca8230d959f4be928c416bbec6a00101c8dda468cb7",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Quality and debugging"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Quality and debugging\nEvidence supports:\n\n- tracing a false positive from final report back to a typographical/source-data error\n- correcting the attribution before an incorrect sanction\n- automating column/schema normalization with regular expressions and the PySpark DataFrame API\n- improving interoperability and reducing repeat failures",
+      "title": "Quality and debugging"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "7442e0394dcd30c7fed46317cc684a7b2f58526a2c10167acceeab9d99e0e070",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Code review and MLOps"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Code review and MLOps\n- reviewed and approved pull requests in critical analytical repositories\n- validated PySpark components before integration\n- worked with versioned deployment and internal MLOps practices\n- used internal deployment frameworks primarily as a user/reviewer rather than claiming framework authorship",
+      "title": "Code review and MLOps"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "f2d0f9c7ccf52830831c27c4b8cc5b727840f81421079a33184dd87eb4cea521",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Engine and pipeline refactoring"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Engine and pipeline refactoring\nEvidence supports:\n\n- replacing deprecated input dependencies\n- making temporal cutoff logic deterministic\n- partitioning a memory-intensive engine to support more frequent execution\n- resolving out-of-memory bottlenecks in distributed workloads\n- improving traceability through dictionaries and explicit data contracts",
+      "title": "Engine and pipeline refactoring"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "8e85e83e990c46d1f686860a589a3dae0a297c99da1b464f79fd7d5d2369cc95",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Cloud and production delivery"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Cloud and production delivery\n- helped move a geolocation/data-integration engine from sandbox to production\n- coordinated environment approval/certification with development stakeholders\n- worked with PySpark and AWS-based analytical execution\n- produced reusable master outputs for downstream analytics\n\nNo downstream financial recovery metric is currently approved.",
+      "title": "Cloud and production delivery"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::secure-automation",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "c3a3fab3f812adb727924db86267f92dc3b358795aa032a9856c96aad1fa30a7",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Secure automation"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Secure automation\nA supporting vendor-validation workstream demonstrates:\n\n- Python/Selenium automation under InfoSec constraints\n- local execution when cloud agents were not permitted\n- retries, logs, batch processing and CSV outputs\n- recognition of later recalibration needs when false positives or operational saturation appeared",
+      "title": "Secure automation"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "52965c60cecaa3e246f1e8f6e5695c619ea6bc2a254a718d6937b435b11241f7",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Approved public narratives"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Approved public narratives\n> Refactored distributed analytical pipelines affected by deprecated inputs and memory bottlenecks, improving temporal determinism, traceability and execution frequency.\n\n> Resolved production false positives through forensic data lineage and automated PySpark schema normalization.\n\n> Reviewed critical analytical code and supported production deployment of AWS/PySpark data engines in a regulated environment.",
+      "title": "Approved public narratives"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "content_hash": "9f09f37e9cea28b1d398519ea6fb1bd013c5ad9a669ef15a48a5a054bc21674a",
+      "cv_eligible": true,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-data-quality-mlops",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-bbva-data-quality-mlops",
+  "schema_version": 1
+}

@@ -1,0 +1,248 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "b1be43219fcb0866cac88e604e9d0d4b6dc6639d600b7fe5f3c9eeac831bf3c3",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Summary\nPublic Google Cloud Function implementation for serving a text-based TV-series recommendation workflow. The project combines cloud-hosted model artifacts, Transformer embeddings, a Keras model, cosine similarity and OpenAI-assisted translation behind an HTTP-triggered serverless function.\n\nThis repository provides direct evidence that José Carlos has implemented **cloud model serving and end-to-end ML inference plumbing**, not only offline modeling.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "2fdb2736837f45e03ec0cec2d56dd601e1c643403aa8585ee8942380c82d3415",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Deployment evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Deployment evidence\nThe public deployment script uses Google Cloud Functions Gen2 with:\n\n- Python 3.10 runtime\n- HTTP trigger\n- `us-central1`\n- explicit CPU / memory allocation\n- explicit timeout configuration\n- environment-variable based OpenAI credential injection\n\nThe exact infrastructure settings are implementation details and should not normally be shown on a CV.",
+      "title": "Deployment evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "40159857d118139184758ae285b981a9e205e87a5fe593196ea513b9d3c91faa",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "ML inference workflow"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "ML inference workflow\nThe public code demonstrates a pipeline that:\n\n1. receives request data through an HTTP function\n2. translates Spanish text to English through OpenAI when required\n3. loads model/data artifacts from Google Cloud Storage\n4. loads a Keras model\n5. loads a Transformer tokenizer/model\n6. generates text embeddings\n7. predicts genre-score representations\n8. computes cosine similarity against stored series representations\n9. returns top recommendations in JSON-friendly structures\n10. translates recommendation text back to Spanish",
+      "title": "ML inference workflow"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "580b88196292aa1ee48f874c823a7107ab8fe0f742047d91b1e75de37dcc0a40",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Technologies evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Technologies evidenced\n- Google Cloud Functions Gen2\n- Google Cloud Storage\n- Python\n- Flask request/JSON patterns\n- TensorFlow / Keras\n- Hugging Face Transformers\n- BERT / TinyBERT-style text embeddings\n- scikit-learn cosine similarity\n- Pandas / NumPy\n- OpenAI API\n- model artifact loading\n- logging\n- exception handling / fallback paths\n- HTTP model serving",
+      "title": "Technologies evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::production-minded-patterns",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "177e4e4e8d60e1d49045e8d986c6f640c29c414da43b3cc674e98d52288d7dd1",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Production-minded patterns"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Production-minded patterns\nThe code contains:\n\n- explicit logging setup\n- staged exception handling for artifact/model loading\n- local temporary-file handling\n- fallbacks when local Transformer loading fails\n- batch embedding generation\n- separation between representation generation, similarity ranking and output formatting",
+      "title": "Production-minded patterns"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "a5ccbc192a94638b9c9d6de16b2679c1ea7bac84f42f21d3acb64fddcb3fd4ac",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "CV positioning",
+        "ML Engineer / Production Data Scientist"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "ML Engineer / Production Data Scientist\n> Implemented a serverless ML recommendation endpoint on Google Cloud Functions, integrating Cloud Storage model artifacts, Transformer embeddings, Keras inference, similarity ranking and OpenAI-assisted language handling.",
+      "title": "ML Engineer / Production Data Scientist"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "2bc2df4973e42048a26e1c1376be8444c0c557e68577e75fb29ffc0c3559cbd1",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "CV positioning",
+        "End-to-End Data Scientist"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "End-to-End Data Scientist\n> Built the inference path from HTTP request through cloud artifact loading, NLP embeddings and model scoring to ranked recommendation output.",
+      "title": "End-to-End Data Scientist"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "content_hash": "bd704760d14b5da75d524b801963f62648a7b5477b9872d310139a49c1ce6ca7",
+      "cv_eligible": true,
+      "heading_path": [
+        "Cloud ML Recommender",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-cloud-ml-recommender",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08"
+      ],
+      "text": "Usage constraints\n- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-cloud-ml-recommender",
+  "schema_version": 1
+}

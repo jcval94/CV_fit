@@ -1,0 +1,196 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "99f552fb72b1d8e7f41e2b875dd0a0d2fe9c9806a03d71d0d2f8abf30d99da6d",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "professional-profile",
+  "record_type": "profile",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 18,
+      "heading_path": [
+        "Professional Profile"
+      ],
+      "level": 1,
+      "section_id": "professional-profile::professional-profile",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "Professional Profile"
+    },
+    {
+      "content": "- **Full name:** José Carlos Del Valle López\n- **Professional name:** José Carlos Del Valle\n- **Location:** Mexico City, Mexico\n- **LinkedIn:** https://www.linkedin.com/in/jose-carlos-del-valle/\n- **GitHub:** https://github.com/jcval94",
+      "end_line": 26,
+      "heading_path": [
+        "Professional Profile",
+        "Identity"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::identity",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "Identity"
+    },
+    {
+      "content": "- **Current company:** BBVA México\n- **Current corporate level:** Expert\n- **Market-facing role:** Senior Data Scientist\n- **Preferred general CV positioning:** Líder de Data Science, Modelado e Inteligencia Artificial\n- **Professional experience:** 8+ years\n- **Primary focus:** Data Science, Machine Learning, Generative AI, Advanced Analytics and production-grade analytical systems",
+      "end_line": 35,
+      "heading_path": [
+        "Professional Profile",
+        "Professional positioning"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::professional-positioning",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Professional positioning"
+    },
+    {
+      "content": "The canonical **8+ years** figure is based on the enumerated professional chronology beginning in October 2017. Earlier university teaching/service, IMEF leadership and academic activities are valuable supporting experience, but they are tracked separately and are not used to inflate formal professional tenure.",
+      "end_line": 39,
+      "heading_path": [
+        "Professional Profile",
+        "Professional-experience basis"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::professional-experience-basis",
+      "semantic_type": "section",
+      "start_line": 36,
+      "title": "Professional-experience basis"
+    },
+    {
+      "content": "Actuary and Data Scientist with 8+ years of professional experience building analytical, statistical and AI solutions across banking, consulting and other business environments. Holds a Master's degree in Data Science and combines a strong quantitative foundation with hands-on ownership of Python, PySpark, SQL, ML pipelines, production code and business-facing analytical products.\n\nExperience spans the full lifecycle of data products: problem framing, data extraction and quality, feature engineering, statistical and machine-learning modeling, validation, deployment, monitoring, automation, visualization and communication with senior business stakeholders. Has led and independently owned end-to-end initiatives while also contributing to broader team-owned systems where the evidence supports shared rather than exclusive ownership.\n\nParticularly strong at translating complex data into measurable business outcomes and production systems rather than treating modeling as an isolated activity. Comfortable operating between business, analytics, engineering, technology, compliance and executive stakeholders.",
+      "end_line": 47,
+      "heading_path": [
+        "Professional Profile",
+        "Canonical summary"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::canonical-summary",
+      "semantic_type": "summary",
+      "start_line": 40,
+      "title": "Canonical summary"
+    },
+    {
+      "content": "- Data Science and statistical modeling\n- Machine Learning and predictive analytics\n- Generative AI, LLM applications, RAG and agentic workflows\n- Fraud, anomaly and behavioral detection\n- Customer analytics and commercial optimization\n- Forecasting and time-series analysis\n- Big Data processing and analytical ETLs\n- Productionization, data quality and model monitoring\n- Business Intelligence and executive analytics\n- Analytical governance and decision support",
+      "end_line": 60,
+      "heading_path": [
+        "Professional Profile",
+        "Core professional areas"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::core-professional-areas",
+      "semantic_type": "section",
+      "start_line": 48,
+      "title": "Core professional areas"
+    },
+    {
+      "content": "José Carlos typically works beyond isolated model development. Depending on the project, his scope can include:\n\n1. Translating a business problem into an analytical design.\n2. Extracting, integrating and validating large datasets.\n3. Developing statistical, ML or AI approaches.\n4. Writing and maintaining production-oriented Python, PySpark and SQL code.\n5. Building reusable pipelines and automated analytical processes.\n6. Integrating outputs into operational or business workflows.\n7. Monitoring performance, data quality and model behavior.\n8. Presenting findings, trade-offs and business impact to senior stakeholders.\n\nProject files remain authoritative for the exact ownership verb: `owned`, `led`, `co-developed`, `contributed`, `operated`, `maintained` or `reviewed`.",
+      "end_line": 75,
+      "heading_path": [
+        "Professional Profile",
+        "Technical ownership"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::technical-ownership",
+      "semantic_type": "ownership",
+      "start_line": 61,
+      "title": "Technical ownership"
+    },
+    {
+      "content": "This profile intentionally lists only broad, defensible capability areas. Exact proficiency must be read from `skills.md` and must never be flattened during CV generation.\n\n- **Programming / data:** Python, SQL, PySpark / Spark, R\n- **Machine Learning / statistics:** supervised and unsupervised learning, tree-based methods, anomaly detection, interpretable ML, statistical modeling, model evaluation and forecasting\n- **Generative AI:** LLM application design, retrieval-grounded / RAG workflows, prompting, structured outputs, evaluation, guardrails and agentic patterns\n- **Data engineering / production:** ETL, data quality, analytical pipelines, testing, productionization, monitoring and CI/CD-oriented delivery\n- **Cloud / platforms:** AWS and Google Cloud / Google Workspace analytical workloads at project-dependent depth\n- **BI / visualization:** Tableau, Power BI, Looker Studio and analytical visualization\n\nSupporting MLOps or platform technologies such as Docker, MLflow, Airflow, Kubernetes, Kubeflow and Kafka must be represented only at the proficiency level recorded in `skills.md`.",
+      "end_line": 88,
+      "heading_path": [
+        "Professional Profile",
+        "Technical themes"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::technical-themes",
+      "semantic_type": "technology",
+      "start_line": 76,
+      "title": "Technical themes"
+    },
+    {
+      "content": "Strongest domain experience is in financial services and banking, including:\n\n- Remote and assisted banking\n- Customer contact strategy\n- Product recommendation and cross-sell\n- Fraud and inappropriate-practice detection\n- Operational and commercial analytics\n- Profitability and productivity measurement\n- Forecasting and demand analysis\n- ATM / physical-network analytics\n- Sustainability and carbon-footprint KPIs\n\nAdditional professional exposure includes insurance, healthcare and consulting-oriented analytical environments.",
+      "end_line": 104,
+      "heading_path": [
+        "Professional Profile",
+        "Business and domain experience"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::business-and-domain-experience",
+      "semantic_type": "section",
+      "start_line": 89,
+      "title": "Business and domain experience"
+    },
+    {
+      "content": "- Strong actuarial, mathematical and statistical foundation.\n- Bridges modeling, software ownership and business implementation.\n- Has delivered measurable improvements in commercial, operational, fraud/compliance and knowledge-management workflows.\n- Comfortable leading projects while remaining deeply hands-on technically.\n- Experience communicating with senior management and cross-functional stakeholders.\n- Builds reusable analytical tooling and open-source projects in addition to enterprise work.\n- Practical experience with modern AI-assisted development, evaluation and agentic workflows.",
+      "end_line": 114,
+      "heading_path": [
+        "Professional Profile",
+        "Differentiators"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::differentiators",
+      "semantic_type": "section",
+      "start_line": 105,
+      "title": "Differentiators"
+    },
+    {
+      "content": "- **Spanish:** Native\n- **English:** C1 / advanced professional proficiency\n- **French:** A2",
+      "end_line": 120,
+      "heading_path": [
+        "Professional Profile",
+        "Languages"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::languages",
+      "semantic_type": "section",
+      "start_line": 115,
+      "title": "Languages"
+    },
+    {
+      "content": "This source of truth may be tailored toward roles such as:\n\n- Senior Data Scientist\n- Lead Data Scientist\n- Applied Scientist\n- Senior AI / ML Engineer\n- Machine Learning Engineer\n- Generative AI Engineer\n- AI / Data Science Technical Lead\n- leadership-oriented Data & AI roles where technical/project leadership is the primary requirement\n\nFormal people-management scope must not be inferred from project leadership alone.",
+      "end_line": 135,
+      "heading_path": [
+        "Professional Profile",
+        "Target role families"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::target-role-families",
+      "semantic_type": "section",
+      "start_line": 121,
+      "title": "Target role families"
+    },
+    {
+      "content": "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy.",
+      "end_line": 144,
+      "heading_path": [
+        "Professional Profile",
+        "Usage rules"
+      ],
+      "level": 2,
+      "section_id": "professional-profile::professional-profile::usage-rules",
+      "semantic_type": "boundary",
+      "start_line": 136,
+      "title": "Usage rules"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/profile.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-LINKEDIN-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

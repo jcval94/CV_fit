@@ -1,0 +1,282 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "generative_ai_system",
+    "source_repo": "https://github.com/jcval94/ADNarrativa"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "159a7c10a4232e136db166747df707198c85e6b2b186afc71a33998044048b4b",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-narrative-dna",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 18,
+      "heading_path": [
+        "narrative_dna / ADNarrativa"
+      ],
+      "level": 1,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "narrative_dna / ADNarrativa"
+    },
+    {
+      "content": "`narrative_dna` is a JSON-first system for converting speech transcripts into a stable, interpretable and auditable representation of narrative structure.\n\nIt is one of the strongest public repositories for demonstrating José Carlos's **production-minded Generative AI engineering** because it combines strict data contracts, deterministic validators, LLM classification, adjudication, semantic auditing, synthetic review, evaluation and an end-to-end CLI pipeline.",
+      "end_line": 24,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::summary",
+      "semantic_type": "summary",
+      "start_line": 19,
+      "title": "Summary"
+    },
+    {
+      "content": "- JSON is the source of truth.\n- Derived compact notation is compiled from validated JSON rather than edited manually.\n- precision is preferred over false coverage\n- high-temperature synthetic reviewers provide diversity, not final authority\n- aggregation/adjudication remains conservative\n- only high-confidence synthetic gold is eligible for regression testing\n- CSV outputs are derived artifacts, not the canonical record",
+      "end_line": 34,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Architectural principles"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::architectural-principles",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "Architectural principles"
+    },
+    {
+      "content": "The project uses:\n\n- Pydantic models\n- JSON Schemas\n- strict validation\n- versioned taxonomies\n- versioned prompts\n- deterministic validators\n- explicit rejected labels / review flags",
+      "end_line": 46,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Structured output / contract layer"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::structured-output-contract-layer",
+      "semantic_type": "section",
+      "start_line": 35,
+      "title": "Structured output / contract layer"
+    },
+    {
+      "content": "The documented LLM client:\n\n- uses the OpenAI Responses API\n- uses strict Structured Outputs with JSON Schema\n- validates every response with Pydantic\n- reads credentials from environment variables\n- uses configurable LLM parameters\n- caches responses by versioned hash\n- supports retries\n- supports `dry_run`\n- returns controlled failures so deterministic heuristics can act as fallback",
+      "end_line": 60,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "OpenAI implementation evidence"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::openai-implementation-evidence",
+      "semantic_type": "section",
+      "start_line": 47,
+      "title": "OpenAI implementation evidence"
+    },
+    {
+      "content": "The system includes:",
+      "end_line": 64,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture",
+      "semantic_type": "section",
+      "start_line": 61,
+      "title": "Evaluation / adjudication architecture"
+    },
+    {
+      "content": "Combines contextual LLM classification with heuristic locks and deterministic revalidation.",
+      "end_line": 67,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Unit classifier"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::unit-classifier",
+      "semantic_type": "section",
+      "start_line": 65,
+      "title": "Unit classifier"
+    },
+    {
+      "content": "Escalates low-confidence or conflicting cases and can remove weak labels rather than maximizing label coverage.",
+      "end_line": 70,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Conservative adjudicator"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::conservative-adjudicator",
+      "semantic_type": "section",
+      "start_line": 68,
+      "title": "Conservative adjudicator"
+    },
+    {
+      "content": "- configurable local/OpenAI embeddings\n- cosine similarity\n- nearest-neighbor comparison\n- notation-distance analysis\n- conflict outputs for review",
+      "end_line": 77,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Similarity auditor"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::similarity-auditor",
+      "semantic_type": "section",
+      "start_line": 71,
+      "title": "Similarity auditor"
+    },
+    {
+      "content": "- prioritized review sets\n- multiple configured synthetic reviewers\n- conservative aggregation\n- final adjudication\n- reliability measurement\n- high/medium/rejected confidence buckets\n- controlled promotion to synthetic gold",
+      "end_line": 87,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Synthetic review workflow"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::synthetic-review-workflow",
+      "semantic_type": "section",
+      "start_line": 78,
+      "title": "Synthetic review workflow"
+    },
+    {
+      "content": "Deterministic relationship logic builds auditable narrative relations and multi-unit narrative chains while retaining evidence spans and version information.",
+      "end_line": 91,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Relationship / chain detection"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::relationship-chain-detection",
+      "semantic_type": "section",
+      "start_line": 88,
+      "title": "Relationship / chain detection"
+    },
+    {
+      "content": "The evaluator can produce:\n\n- overall evaluation metrics\n- label-level metrics\n- confusion-group reports\n- audit reports\n- JSON and Markdown artifacts\n\nThe repository documents a maintained golden-regression fixture using only `synthetic_gold_high_confidence` with:\n\n- `regression_pass_rate = 1.0`\n\nThis is a project regression quality gate, not an external production-accuracy benchmark.",
+      "end_line": 107,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation outputs"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-outputs",
+      "semantic_type": "section",
+      "start_line": 92,
+      "title": "Evaluation outputs"
+    },
+    {
+      "content": "The project includes:\n\n- installable Python package structure\n- CLI commands\n- local no-LLM mode\n- LLM-enabled mode\n- manifests / run IDs\n- JSONL outputs\n- audit reports\n- schema export\n- inspection commands\n- evaluation commands\n- regression tests\n- operating guide\n- Colab quickstart",
+      "end_line": 125,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "End-to-end engineering"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::end-to-end-engineering",
+      "semantic_type": "section",
+      "start_line": 108,
+      "title": "End-to-end engineering"
+    },
+    {
+      "content": "- Generative AI application architecture\n- OpenAI Responses API\n- Structured Outputs\n- JSON Schema\n- Pydantic\n- prompt/version management\n- LLM evaluation / evals\n- adjudication\n- hallucination/error control\n- embeddings / semantic similarity\n- caching and retries\n- deterministic fallbacks\n- synthetic-data review workflows\n- regression testing\n- CLI / package engineering\n- traceability / auditability",
+      "end_line": 144,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 126,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "",
+      "end_line": 146,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives",
+      "semantic_type": "section",
+      "start_line": 145,
+      "title": "Strong CV narratives"
+    },
+    {
+      "content": "> Built a JSON-first LLM analysis pipeline using OpenAI Structured Outputs, Pydantic validation, deterministic fallbacks, semantic auditing, synthetic review/adjudication and regression evaluation.",
+      "end_line": 150,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "Generative AI / AI Engineer"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+      "semantic_type": "section",
+      "start_line": 147,
+      "title": "Generative AI / AI Engineer"
+    },
+    {
+      "content": "> Designed a traceable LLM evaluation architecture with review-set prioritization, multi-reviewer synthetic evaluation, conservative adjudication and controlled promotion to high-confidence regression gold.",
+      "end_line": 154,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "LLM Evaluation"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+      "semantic_type": "section",
+      "start_line": 151,
+      "title": "LLM Evaluation"
+    },
+    {
+      "content": "> Combined strict output schemas, deterministic validators, confidence escalation and fallback paths to keep an LLM classification pipeline auditable and bounded.",
+      "end_line": 158,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "AI Safety / Reliability"
+      ],
+      "level": 3,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+      "semantic_type": "section",
+      "start_line": 155,
+      "title": "AI Safety / Reliability"
+    },
+    {
+      "content": "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration.",
+      "end_line": 163,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-narrative-dna::narrative-dna-adnarrativa::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 159,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/narrative_dna.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

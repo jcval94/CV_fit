@@ -1,0 +1,237 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "d0672b70481432a5c2ca21f40d141aeed6b33b1dfd1755429eb3fbcd63a1b223",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Summary\nClient-delivery analytics focused on insurance fraud/risk monitoring and operational controls during the early Management Solutions period.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::contribution-and-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "c11b6849e6cf0a26fae42995fdb752995c0482bf9a65439028221e59b52eb848",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Contribution and ownership"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Contribution and ownership\nEvidence supports:\n\n- designing fraud-monitoring KPIs for excessive sales/prescriptions and related risk patterns\n- applying principal component analysis and outlier detection\n- contributing unsupervised indicators for risk/behavioral monitoring\n- developing supporting R tooling\n- helping deliver a monitoring application for insurance-portfolio health\n- translating analytical outputs into controls and client-facing reporting\n\nThe evidence supports meaningful implementation and analytical design, but not exclusive ownership of every control, case decision or downstream investigation.",
+      "title": "Contribution and ownership"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::methods-and-technologies",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "d5426a51534c563fa72a41d422ae66e1f60c7b0ac4c5bcc8974dafad20e28fe5",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Methods and technologies"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Methods and technologies\n- R\n- statistical analysis\n- PCA\n- outlier/anomaly detection\n- unsupervised analysis\n- KPI/control design\n- analytical reporting",
+      "title": "Methods and technologies"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::outcome-reference",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "4289098c31689c3945b6d2af0343e265c60ee23faaebfe0cc0d68562f2ed89a4",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Outcome reference"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Outcome reference\n- `ACH-MS-FRAUD-001` — canonical public project outcome\n\nExact wording and numeric use must come from the achievement registry rather than being reinterpreted here.",
+      "title": "Outcome reference"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::approved-public-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "4173160d665475d3c64cb39f0b71f03707527de086fd592377deb96a1e4a7859",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Approved public narrative"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Approved public narrative\n> Designed insurance fraud-monitoring KPIs and analytical controls using PCA, outlier detection and supporting R tooling, contributing to a recurring client review workflow.",
+      "title": "Approved public narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "faa25ef72faca895f07ca727a22f570b23181c343e6f1d2c623c792913bd5a85",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Boundaries"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Boundaries\n- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams.",
+      "title": "Boundaries"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::related-records",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "content_hash": "934e20b1947497e12171d57e9a87932cf752c74ac68d0091263b8ad9cb4e9960",
+      "cv_eligible": true,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Related records"
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Related records\n- [Management Solutions role](../roles/previous_roles.md)\n- [Achievement registry](../achievements/metrics.md)",
+      "title": "Related records"
+    }
+  ],
+  "record_id": "project-ms-insurance-fraud-monitoring",
+  "schema_version": 1
+}

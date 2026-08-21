@@ -1,0 +1,3167 @@
+{
+  "chunks": [
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "repeated professional Data Science/ML work plus independently authored Python libraries and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and fraud/compliance tooling",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::python",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "e22332bcbd62320a536ac3258444e36b958c3c46560ebad733a26eb93fa62a19",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "Python"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Python\n- **Level:** core\n- **Evidence:** repeated professional Data Science/ML work plus independently authored Python libraries and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and fraud/compliance tooling\n- **Typical use:** modeling, statistical analysis, package development, pipelines, APIs, experimentation, automation, GenAI workflows, CLI tooling and validation",
+      "title": "Python"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "repeated professional analytical, migration, segmentation, reporting and data-processing workflows",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::sql",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "73c021dffe2d2a233f54061cba357dd5f471e4309363407a0e2af572b275bf5a",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "SQL"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "SQL\n- **Level:** core\n- **Evidence:** repeated professional analytical, migration, segmentation, reporting and data-processing workflows\n- **Typical use:** extraction, transformation, aggregation, analytical datasets, validation and feature preparation",
+      "title": "SQL"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "large-scale banking analytics and production-oriented distributed processing",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::pyspark-apache-spark",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "689b4a7d298b49ed84795a2ff413e9bf12b86c1ad6f07a7e2b60a5bdc3256f53",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "PySpark / Apache Spark"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "PySpark / Apache Spark\n- **Level:** core\n- **Evidence:** large-scale banking analytics and production-oriented distributed processing\n- **Typical use:** distributed ETL, feature engineering, matching, large joins, analytical pipelines and production refactoring",
+      "title": "PySpark / Apache Spark"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "actuarial/statistical modeling, CRAN/public package development, thesis work, forecasting and reporting automation",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::r",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "0407f2aaba1b1cb17ec038001d9c44e1aacfa23d11c31941cd54770c777053f7",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "R"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "R\n- **Level:** core\n- **Evidence:** actuarial/statistical modeling, CRAN/public package development, thesis work, forecasting and reporting automation\n- **Typical use:** statistical modeling, distributions, risk modeling, research, visualization and package development",
+      "title": "R"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "repeated use across public Python packages and analytical systems",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::pandas-numpy",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "74d7291f53dfb24f516676e86e6bce60fa2ddfc76e8ec29bd987c2dea0e9346b",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "Pandas / NumPy"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Pandas / NumPy\n- **Level:** working\n- **Evidence:** repeated use across public Python packages and analytical systems",
+      "title": "Pandas / NumPy"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "multi-year ownership of public repositories, versioned packages, documentation, tests and repository-driven workflows",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::git-github",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "485cfeb9f400983cdf0ccd9315368ac6de1e078fe738d2e837c5ba2407d5c310",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "Git / GitHub"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Git / GitHub\n- **Level:** working\n- **Evidence:** multi-year ownership of public repositories, versioned packages, documentation, tests and repository-driven workflows",
+      "title": "Git / GitHub"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "MetaCraft schema tooling, narrative_dna JSON-first architecture and artifact-driven pipelines",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::yaml-json-jsonl-data-contracts",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "edf4fd0abf826569f80763c61fa8bf27a9deb4b763b4c569389144dd29ae49c5",
+      "cv_eligible": true,
+      "heading_path": [
+        "1. Programming & Data",
+        "YAML / JSON / JSONL data contracts"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "YAML / JSON / JSONL data contracts\n- **Level:** working\n- **Evidence:** MetaCraft schema tooling, narrative_dna JSON-first architecture and artifact-driven pipelines\n\n---",
+      "title": "YAML / JSON / JSONL data contracts"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "classification, regression, feature engineering, model evaluation and business-oriented predictive modeling",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::supervised-machine-learning",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "4af40221332bd1731fd504d0eea14230f21af69d2cdd33268891b72274a3b005",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Supervised Machine Learning"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Supervised Machine Learning\n- **Level:** core\n- **Coverage:** classification, regression, feature engineering, model evaluation and business-oriented predictive modeling",
+      "title": "Supervised Machine Learning"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "classification/regression, leaf/region extraction, feature importance and interpretable rule discovery",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::tree-based-machine-learning-random-forests",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "4ef78608fefd81df8cfab583cefe2420cc59c7ae12d9087eeed7a93a849624d3",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Tree-based Machine Learning / Random Forests"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Tree-based Machine Learning / Random Forests\n- **Level:** core\n- **Coverage:** classification/regression, leaf/region extraction, feature importance and interpretable rule discovery\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "title": "Tree-based Machine Learning / Random Forests"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "target-guided region discovery, regional quality measurement, stable cluster assignment and human-readable decision regions",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::supervised-clustering-region-discovery",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "a9630258061f15875afb1bb410c62aef05bc3fc089394d57722eff6dfc9c75ac",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Supervised Clustering & Region Discovery"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Supervised Clustering & Region Discovery\n- **Level:** core\n- **Coverage:** target-guided region discovery, regional quality measurement, stable cluster assignment and human-readable decision regions\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "title": "Supervised Clustering & Region Discovery"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "anomaly detection, outlier analysis and hybrid rule + ML systems",
+        "evidence": "banking fraud/malpractice analytics and public analytical tooling",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::unsupervised-anomaly-detection",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "5bb2905eab959c7f594c6b16e0cd975ded875cebacf4e44e3292d41d126743dc",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Unsupervised / Anomaly Detection"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Unsupervised / Anomaly Detection\n- **Level:** core\n- **Coverage:** anomaly detection, outlier analysis and hybrid rule + ML systems\n- **Evidence:** banking fraud/malpractice analytics and public analytical tooling",
+      "title": "Unsupervised / Anomaly Detection"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "probability distributions, hypothesis testing, model fitting, statistical validation, regression and risk modeling",
+        "evidence": "actuarial education, thesis/research, R packages and professional analytics",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::statistical-modeling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "5c711286d7d728439d60574afa32068ddb1d2aa948cd15b139e8e7ee0f45257e",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Statistical Modeling"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Statistical Modeling\n- **Level:** core\n- **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation, regression and risk modeling\n- **Evidence:** actuarial education, thesis/research, R packages and professional analytics",
+      "title": "Statistical Modeling"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "baselines, train/test or temporal validation, precision, recall, F1, lift, stability, clustering agreement, business validation and statistical fit",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::model-evaluation-validation",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "80bd648202e87734cab78a00aaba607660b857112886fc9a1be3626beb220bcd",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Model Evaluation & Validation"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Model Evaluation & Validation\n- **Level:** core\n- **Coverage:** baselines, train/test or temporal validation, precision, recall, F1, lift, stability, clustering agreement, business validation and statistical fit",
+      "title": "Model Evaluation & Validation"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "region-based explainability, low-dimensional rule extraction, subspace exploration, class diagnostics and model behavior translated into human-readable structures",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::explainable-interpretable-machine-learning",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "da20b700190ba372faecee2423e1802b5e70b2cf302a780cc75abda35eda8981",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Explainable / Interpretable Machine Learning"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Explainable / Interpretable Machine Learning\n- **Level:** core\n- **Coverage:** region-based explainability, low-dimensional rule extraction, subspace exploration, class diagnostics and model behavior translated into human-readable structures\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "title": "Explainable / Interpretable Machine Learning"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional ML usage plus independently authored estimator-style APIs with `fit`, `predict`, `transform`, scoring, persistence and parameter interfaces",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::scikit-learn-ecosystem",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "4f7dc7262a12c7c072e3eb139726df0ca1ce57b57962ed39ffe00fc3b1e18664",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "scikit-learn ecosystem"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "scikit-learn ecosystem\n- **Level:** core\n- **Evidence:** professional ML usage plus independently authored estimator-style APIs with `fit`, `predict`, `transform`, scoring, persistence and parameter interfaces",
+      "title": "scikit-learn ecosystem"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "name normalization, edit-distance similarity, candidate review and distributed matching against regulatory/watch lists",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::fuzzy-matching-identity-resolution",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c2dc531c3a9b7bf2efde39d37cb0b5a3a602b0075440d60aa46867a6ecc88a06",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Fuzzy Matching / Identity Resolution"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Fuzzy Matching / Identity Resolution\n- **Level:** working\n- **Coverage:** name normalization, edit-distance similarity, candidate review and distributed matching against regulatory/watch lists",
+      "title": "Fuzzy Matching / Identity Resolution"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "forecasting, trend analysis, seasonality, temporal validation and ensemble-learning concepts",
+        "evidence": "professional demand/operations forecasting plus public time-series work",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": "do not claim specialization in ARIMA, SARIMA, Prophet or another named family without project-specific evidence"
+      },
+      "chunk_id": "skills::time-series-forecasting",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "do not claim specialization in ARIMA, SARIMA, Prophet or another named family without project-specific evidence"
+      ],
+      "content_hash": "6f62db93a2bd00d7a9696c3bbb699cf9bb317019a7b4068335e4a411591f56a9",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Time Series & Forecasting"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Time Series & Forecasting\n- **Level:** working\n- **Coverage:** forecasting, trend analysis, seasonality, temporal validation and ensemble-learning concepts\n- **Evidence:** professional demand/operations forecasting plus public time-series work\n- **Usage note:** do not claim specialization in ARIMA, SARIMA, Prophet or another named family without project-specific evidence",
+      "title": "Time Series & Forecasting"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "coordinate aggregation, footprint analysis, ATM/branch location strategy, geolocation and spatial-temporal analytical features",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::geospatial-analytics",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "ecd6d80e63cca8aeb3558d7c6df9b6ba5f7101101f3aad1848d86e0f0b257c1f",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Geospatial Analytics"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Geospatial Analytics\n- **Level:** working\n- **Coverage:** coordinate aggregation, footprint analysis, ATM/branch location strategy, geolocation and spatial-temporal analytical features",
+      "title": "Geospatial Analytics"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "prioritization, low-dimensional rule search, greedy/beam search patterns, decision support and analytical allocation problems",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": "do not claim deep mixed-integer programming specialization without project-specific evidence"
+      },
+      "chunk_id": "skills::optimization-decision-modeling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "do not claim deep mixed-integer programming specialization without project-specific evidence"
+      ],
+      "content_hash": "23415386b148af4ff37a9b9506d1eddabfaf1dc63f5f17a671b61d59b2872dc7",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Optimization / Decision Modeling"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Optimization / Decision Modeling\n- **Level:** working\n- **Coverage:** prioritization, low-dimensional rule search, greedy/beam search patterns, decision support and analytical allocation problems\n- **Usage note:** do not claim deep mixed-integer programming specialization without project-specific evidence",
+      "title": "Optimization / Decision Modeling"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public Google Cloud model-serving implementation using Keras artifacts",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::tensorflow-keras",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "43ec12070b5df6ae298875583e5ffc78e481268d485d351266a4b3c466d5d9ee",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "TensorFlow / Keras"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "TensorFlow / Keras\n- **Level:** working\n- **Evidence:** public Google Cloud model-serving implementation using Keras artifacts",
+      "title": "TensorFlow / Keras"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public cloud recommender using Transformer tokenizers/models and BERT-style embeddings",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::hugging-face-transformers-bert-family-models",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "8ccf62c0daadf56b414e45d7d1d4f67d0fd851bbfdf18f46dbcf5d5d73446f38",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Hugging Face Transformers / BERT-family models"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Hugging Face Transformers / BERT-family models\n- **Level:** working\n- **Evidence:** public cloud recommender using Transformer tokenizers/models and BERT-style embeddings",
+      "title": "Hugging Face Transformers / BERT-family models"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "cosine-similarity recommendation and semantic-auditing implementations",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::semantic-similarity-embeddings",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c9e2d91160800ea5c4c8ea8938b09dac9c2b368e2a8951bf5eea70296a6bc954",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Semantic Similarity / Embeddings"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Semantic Similarity / Embeddings\n- **Level:** working\n- **Evidence:** cosine-similarity recommendation and semantic-auditing implementations",
+      "title": "Semantic Similarity / Embeddings"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "hnswlib used in public ML tooling",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::approximate-nearest-neighbor-search",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "f471762613fb81a3bb465534d64d4fcbee305f65987f29e0b32075ea805a6845",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "Approximate Nearest-Neighbor Search"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Approximate Nearest-Neighbor Search\n- **Level:** working\n- **Evidence:** hnswlib used in public ML tooling",
+      "title": "Approximate Nearest-Neighbor Search"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "optional/public project ecosystem exposure",
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": null
+      },
+      "chunk_id": "skills::lightgbm",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "6fee9516ef4378d9fb8dcf0780c02a8146511c73caad75d0a45ee0b57f3a7ef5",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "LightGBM"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "LightGBM\n- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure",
+      "title": "LightGBM"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "optional/public project ecosystem exposure",
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": null
+      },
+      "chunk_id": "skills::shap",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1b46df19a4999234680524808b861d839627cd225c781aea98dd4a4acb22afcb",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "SHAP"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "SHAP\n- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure",
+      "title": "SHAP"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "optional/public project ecosystem exposure",
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": null
+      },
+      "chunk_id": "skills::interpretml",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "438ac0839afdbce840c64e3d8d370197359b65ce77ea405dc5ed827cd277301b",
+      "cv_eligible": true,
+      "heading_path": [
+        "2. Machine Learning & Statistics",
+        "InterpretML"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "InterpretML\n- **Level:** familiarity\n- **Evidence:** optional/public project ecosystem exposure\n\n---",
+      "title": "InterpretML"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "business use-case design, grounded workflows, structured generation, validation, deterministic fallbacks and integration into analytical processes",
+        "evidence": "internal knowledge tooling plus public narrative_dna, MetaCraft and agent-oriented projects",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::llm-application-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "753f4a654905130c272cef97fa6cb274387db404e5ca6719d1d4fd5fda6c3d06",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Application Design"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "LLM Application Design\n- **Level:** core\n- **Coverage:** business use-case design, grounded workflows, structured generation, validation, deterministic fallbacks and integration into analytical processes\n- **Evidence:** internal knowledge tooling plus public narrative_dna, MetaCraft and agent-oriented projects",
+      "title": "LLM Application Design"
+    },
+    {
+      "attributes": {
+        "boundary": "application-level RAG/retrieval grounding is supported; do not infer ownership of a specific vector database or ingestion platform unless a project confirms it",
+        "coverage": "source-based answering, knowledge-base design, corpus curation, context control and hallucination mitigation",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::retrieval-augmented-retrieval-grounded-generation",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "application-level RAG/retrieval grounding is supported; do not infer ownership of a specific vector database or ingestion platform unless a project confirms it"
+      ],
+      "content_hash": "6998696a6e8d182a22986209e695e8dd99066ec0d31f9cd4985f0f52bd70ae55",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Retrieval-Augmented / Retrieval-Grounded Generation"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Retrieval-Augmented / Retrieval-Grounded Generation\n- **Level:** core\n- **Coverage:** source-based answering, knowledge-base design, corpus curation, context control and hallucination mitigation\n- **Boundary:** application-level RAG/retrieval grounding is supported; do not infer ownership of a specific vector database or ingestion platform unless a project confirms it",
+      "title": "Retrieval-Augmented / Retrieval-Grounded Generation"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "task decomposition, structured outputs, extraction, summarization, evaluation, adjudication and reusable workflow prompts",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::prompt-engineering",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "862be1454af66f5bd53be963cbdf2c8e8c7e17bb82ce2f390b75b2747cedea77",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Prompt Engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Prompt Engineering\n- **Level:** core\n- **Coverage:** task decomposition, structured outputs, extraction, summarization, evaluation, adjudication and reusable workflow prompts",
+      "title": "Prompt Engineering"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "JSON Schema constrained outputs, typed validation and deterministic post-generation checks",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::structured-llm-outputs",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "f64044d5fc352722871867c04a6ae2236e8d8cf4e360992655bde4fd00c23cd6",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Structured LLM Outputs"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Structured LLM Outputs\n- **Level:** working\n- **Coverage:** JSON Schema constrained outputs, typed validation and deterministic post-generation checks\n- **Repository evidence:** narrative_dna",
+      "title": "Structured LLM Outputs"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "multi-step agent workflows, skill/role contracts, task delegation, evaluation and iterative quality gates",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::agentic-workflows",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "00b3b63ff866251f286e4aec9e8d93040aae97e1709711112f672de055cee420",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Agentic Workflows"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Agentic Workflows\n- **Level:** working\n- **Coverage:** multi-step agent workflows, skill/role contracts, task delegation, evaluation and iterative quality gates\n- **Repository evidence:** mvp-agent-factory, narrative_dna and AI-assisted open-source development",
+      "title": "Agentic Workflows"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "rubrics, regression cases, reviewer aggregation, synthetic-gold workflows, deterministic validation and quality gates",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::llm-evaluation-evals",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "97a21479b288fcd8c226fe94c8ffe6717b0f5cbc71a02d76c6f9c86f6b00e34c",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Evaluation / Evals"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "LLM Evaluation / Evals\n- **Level:** working\n- **Coverage:** rubrics, regression cases, reviewer aggregation, synthetic-gold workflows, deterministic validation and quality gates",
+      "title": "LLM Evaluation / Evals"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "grounding, conservative adjudication, schema constraints, validation, source constraints, confidence gates and fallback behavior",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::llm-safety-hallucination-mitigation",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "83a128c80362494c6d058e450e95b6bfb25751e2de43761ce94e92cdf025aabf",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "LLM Safety / Hallucination Mitigation"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "LLM Safety / Hallucination Mitigation\n- **Level:** working\n- **Coverage:** grounding, conservative adjudication, schema constraints, validation, source constraints, confidence gates and fallback behavior",
+      "title": "LLM Safety / Hallucination Mitigation"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public structured-output, embedding and LLM workflow implementations",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::openai-api-responses-api",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "999f1b218a4ced4389146074a8e1aad2d7450e20316d755f5c1950e60de25bd1",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "OpenAI API / Responses API"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "OpenAI API / Responses API\n- **Level:** working\n- **Evidence:** public structured-output, embedding and LLM workflow implementations",
+      "title": "OpenAI API / Responses API"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional/internal workflow use and Google Workspace AI initiatives",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::google-gemini",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "241efbe1de12e606395b154fb7d63007bf8449f247d08a7975dcb6852f26261e",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Google Gemini"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Google Gemini\n- **Level:** working\n- **Evidence:** professional/internal workflow use and Google Workspace AI initiatives",
+      "title": "Google Gemini"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "internal normative/knowledge workflows and adoption analysis",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::notebooklm",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "330992e6729a15919bf84546383462eaa64e90b0791f4f012e19e9f26bbb5a03",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "NotebookLM"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "NotebookLM\n- **Level:** working\n- **Evidence:** internal normative/knowledge workflows and adoption analysis",
+      "title": "NotebookLM"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "Apps Script/Workspace automation, Gemini/NotebookLM use cases and workflow design",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::google-workspace-ai-workflows",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "e0203329b72490ef882b286698d976eeeac8c7b058271b8b550bb72ed802f49f",
+      "cv_eligible": true,
+      "heading_path": [
+        "3. Generative AI & LLM Systems",
+        "Google Workspace AI workflows"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Google Workspace AI workflows\n- **Level:** working\n- **Evidence:** Apps Script/Workspace automation, Gemini/NotebookLM use cases and workflow design",
+      "title": "Google Workspace AI workflows"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "extraction, transformation, integration, validation, reconciliation, data-quality controls and analytical dataset construction",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::etl-data-quality",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "8313aaa777488b8fe527d99e9595fcc1e1bf088fca80c824b4617eb1956f4955",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "ETL & Data Quality"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "ETL & Data Quality\n- **Level:** core\n- **Coverage:** extraction, transformation, integration, validation, reconciliation, data-quality controls and analytical dataset construction",
+      "title": "ETL & Data Quality"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "moving analytical logic from exploration to repeatable business processes, recurring releases, APIs, packages, operational integration and monitoring",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::productionization-of-data-science-solutions",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c08cf20233b544076cd5b06e1df5cfb314794ba9396c106bbf5a2c9fbc9d392a",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Productionization of Data Science Solutions"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Productionization of Data Science Solutions\n- **Level:** core\n- **Coverage:** moving analytical logic from exploration to repeatable business processes, recurring releases, APIs, packages, operational integration and monitoring",
+      "title": "Productionization of Data Science Solutions"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "package layouts, dependency management, public APIs, backward compatibility, documentation, release/version management and distribution",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::python-package-engineering",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "a1d749b11e0646549ea23b64f80d8c274ad197ac1d2a0a458d59c1d8095b2855",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Python Package Engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Python Package Engineering\n- **Level:** core\n- **Coverage:** package layouts, dependency management, public APIs, backward compatibility, documentation, release/version management and distribution\n- **Repository evidence:** InsideForest, SheShe/DelDel and MetaCraft",
+      "title": "Python Package Engineering"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "YAML schemas, schema enrichment, drift detection, conversion and contract-driven validation",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::schema-engineering-metadata-management",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "7a3ed2a2580202cab5bd1940e94495641ea0a0508ec4d701021326b3e6b452ec",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Schema Engineering / Metadata Management"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Schema Engineering / Metadata Management\n- **Level:** working\n- **Coverage:** YAML schemas, schema enrichment, drift detection, conversion and contract-driven validation\n- **Repository evidence:** MetaCraft",
+      "title": "Schema Engineering / Metadata Management"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "t-digest and HyperLogLog-based metadata/statistical sketches",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::data-sketches-approximate-statistics",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "7f66300faf11e59073c4f9765b082efbb648b71408684d19f6499a28e672d9cb",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Data Sketches / Approximate Statistics"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Data Sketches / Approximate Statistics\n- **Level:** working\n- **Coverage:** t-digest and HyperLogLog-based metadata/statistical sketches",
+      "title": "Data Sketches / Approximate Statistics"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "expectation-suite generation from metadata/schema definitions",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::great-expectations",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "e79417aa4e934a197fda0e9f2d00c8ebca6b3b1f0f42b627e2a3d829c505cdfb",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Great Expectations"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Great Expectations\n- **Level:** working\n- **Coverage:** expectation-suite generation from metadata/schema definitions",
+      "title": "Great Expectations"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "HTTP endpoints, command-line workflows and stable callable APIs",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::api-cli-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "85b3e749342978d919d2dbb65e0501bd54f2ea9885f7c5339fdc26b695319079",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "API / CLI Design"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "API / CLI Design\n- **Level:** working\n- **Coverage:** HTTP endpoints, command-line workflows and stable callable APIs",
+      "title": "API / CLI Design"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "pytest suites, golden regression, deterministic validation and experiment protocols",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::automated-testing-regression-testing",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1fbe694755554f22f7d79537edc2393fb121ba5e9977d91d8b75b00f1d3c159b",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Automated Testing / Regression Testing"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Automated Testing / Regression Testing\n- **Level:** working\n- **Coverage:** pytest suites, golden regression, deterministic validation and experiment protocols",
+      "title": "Automated Testing / Regression Testing"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "pull-request review, forensic debugging, source-to-report lineage, schema normalization and false-positive remediation",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::code-review-production-qa",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "bd05c11f9dc23102d42d5b23bd48edd2495ae0b82762abd6a8e213783156a474",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Code Review / Production QA"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Code Review / Production QA\n- **Level:** working\n- **Coverage:** pull-request review, forensic debugging, source-to-report lineage, schema normalization and false-positive remediation",
+      "title": "Code Review / Production QA"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "repository-driven testing/deployment practices and automated delivery concepts",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::ci-cd",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "5903e16c4e3a2025b03b30cd0040e9425297b226fb0f77cc387407234a687169",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "CI/CD"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "CI/CD\n- **Level:** working\n- **Coverage:** repository-driven testing/deployment practices and automated delivery concepts",
+      "title": "CI/CD"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "containerization and reproducible deployment environments",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::docker",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "672e9cfb1e77f0f20d20589bbcdb7b4e98e57a77fd4eba847b6ade3de9e27154",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Docker"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Docker\n- **Level:** working\n- **Coverage:** containerization and reproducible deployment environments",
+      "title": "Docker"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "experiment tracking and model-lifecycle workflows",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::mlflow",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "b71d8e7119a370e5f0a10951c57b6362f477ec5b17e87c8bf1aabeb24ad42d6f",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "MLflow"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "MLflow\n- **Level:** working\n- **Coverage:** experiment tracking and model-lifecycle workflows",
+      "title": "MLflow"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "workflow orchestration and scheduled analytical pipelines",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::airflow",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "eb2fdc03406aea428eaea081e2257b45ed1a5a1e72fc26bd4a9225b07b3c26ce",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Airflow"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Airflow\n- **Level:** working\n- **Coverage:** workflow orchestration and scheduled analytical pipelines",
+      "title": "Airflow"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "browser automation, retries, logs, batch execution and secure local processing",
+        "evidence": "Python/Selenium provider-validation workflow",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::rpa-web-automation",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "23b74b3c066cfc973512f83a66ca47ddc8593619f839d387e41e28e5adaa0491",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "RPA / Web Automation"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "RPA / Web Automation\n- **Level:** working\n- **Coverage:** browser automation, retries, logs, batch execution and secure local processing\n- **Evidence:** Python/Selenium provider-validation workflow",
+      "title": "RPA / Web Automation"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": "suitable as supporting MLOps knowledge; do not position as Kubernetes platform engineering expertise"
+      },
+      "chunk_id": "skills::kubernetes",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "suitable as supporting MLOps knowledge; do not position as Kubernetes platform engineering expertise"
+      ],
+      "content_hash": "82477860531f070f4f0ecfed96944d86720793b0c2c3e4d660334bfff7e88f32",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kubernetes"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Kubernetes\n- **Level:** familiarity\n- **Usage note:** suitable as supporting MLOps knowledge; do not position as Kubernetes platform engineering expertise",
+      "title": "Kubernetes"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": "mention only where orchestration/MLOps context is relevant and avoid implying deep production ownership"
+      },
+      "chunk_id": "skills::kubeflow",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "mention only where orchestration/MLOps context is relevant and avoid implying deep production ownership"
+      ],
+      "content_hash": "fce1cb89eaf464828b7d22332214b1cf7b5d5c00bc7a480b4593d85a09ca6e63",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kubeflow"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Kubeflow\n- **Level:** familiarity\n- **Usage note:** mention only where orchestration/MLOps context is relevant and avoid implying deep production ownership",
+      "title": "Kubeflow"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": "familiarity",
+        "proficiency": "familiarity",
+        "usage_note": "do not present as a core streaming specialization without stronger project evidence"
+      },
+      "chunk_id": "skills::kafka",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "do not present as a core streaming specialization without stronger project evidence"
+      ],
+      "content_hash": "074f9688564da81d15508ed0832da6325aa03177da1f9ec360329125066a2ef3",
+      "cv_eligible": true,
+      "heading_path": [
+        "4. Data Engineering, Data Quality, MLOps & Production",
+        "Kafka"
+      ],
+      "metric_refs": [],
+      "proficiency": "familiarity",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Kafka\n- **Level:** familiarity\n- **Usage note:** do not present as a core streaming specialization without stronger project evidence\n\n---",
+      "title": "Kafka"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional AWS/EMR/PySpark analytical workloads plus SageMaker-related formal training",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": "do not claim AWS architecture certification"
+      },
+      "chunk_id": "skills::aws",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "do not claim AWS architecture certification"
+      ],
+      "content_hash": "684152682076ebf28ad6c14020e69966536e52f2b7851e9c03f72203d8ca0e88",
+      "cv_eligible": true,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "AWS"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "AWS\n- **Level:** working\n- **Evidence:** professional AWS/EMR/PySpark analytical workloads plus SageMaker-related formal training\n- **Usage note:** do not claim AWS architecture certification",
+      "title": "AWS"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "Cloud Functions Gen2, Cloud Storage, HTTP model serving and cloud-hosted model artifacts in public code",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::google-cloud",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "d648409073d1683d21ce23ad49a2d3add1811ee1d54109c52f4618294deee841",
+      "cv_eligible": true,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Google Cloud"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Google Cloud\n- **Level:** working\n- **Evidence:** Cloud Functions Gen2, Cloud Storage, HTTP model serving and cloud-hosted model artifacts in public code",
+      "title": "Google Cloud"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "Apps Script, Sheets, Forms, Looker Studio, Gemini, NotebookLM and AI-enabled workflows",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::google-workspace-ecosystem",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "36f20e5c70d5aaa9de31d2cbb6f8276ec4b45244336689a423760b0a6d722eb1",
+      "cv_eligible": true,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Google Workspace ecosystem"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Google Workspace ecosystem\n- **Level:** working\n- **Coverage:** Apps Script, Sheets, Forms, Looker Studio, Gemini, NotebookLM and AI-enabled workflows",
+      "title": "Google Workspace ecosystem"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional analytical and operational workflows",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::teradata",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1509461532d0eed7fe1d31c24b93f4698e5575a467965b973a2a440b84d8eb08",
+      "cv_eligible": true,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Teradata"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Teradata\n- **Level:** working\n- **Evidence:** professional analytical and operational workflows",
+      "title": "Teradata"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional analytical/operational data workflows",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::oracle",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "4fedf8f6e26ea93f8960c637cf224f3fd307ae22de1e1d0ab8c3086411c09ca2",
+      "cv_eligible": true,
+      "heading_path": [
+        "5. Cloud & Data Platforms",
+        "Oracle"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Oracle\n- **Level:** working\n- **Evidence:** professional analytical/operational data workflows\n\n---",
+      "title": "Oracle"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "Tableau Desktop Specialist credential and professional reporting",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::tableau",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "56b3b34c5e96fba3762466fc9720f0b4138c275eba561cb0203bc295b71cd9f8",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Tableau"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Tableau\n- **Level:** working\n- **Evidence:** Tableau Desktop Specialist credential and professional reporting",
+      "title": "Tableau"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::power-bi",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1a74a379b1f000290138b02f94864136f7e3726cb0c9b3d261466b81077fdae3",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Power BI"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Power BI\n- **Level:** working",
+      "title": "Power BI"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::looker-studio",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "99eb4a3f9de2642e382a567176b818886f6366b4059f7b94172f060775888692",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Looker Studio"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Looker Studio\n- **Level:** working",
+      "title": "Looker Studio"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "analytical and model/rule visualization work",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::matplotlib-plotly-analytical-visualization",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "9aa330fe6cb78a6a72785e75ef4c90d8c005b9bf6744acc08fb7bbaafc7776a7",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Matplotlib / Plotly / Analytical Visualization"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Matplotlib / Plotly / Analytical Visualization\n- **Level:** working\n- **Evidence:** analytical and model/rule visualization work",
+      "title": "Matplotlib / Plotly / Analytical Visualization"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public time-series/analytical applications",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::shiny",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "bc98580b827d6c87572e32042285bc3c9e0ed7ef3fc9617ef212185224e69039",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Shiny"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Shiny\n- **Level:** working\n- **Recency:** historical\n- **Evidence:** public time-series/analytical applications",
+      "title": "Shiny"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public analytical apps and professional prototypes",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::streamlit",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "7179cabd1cdd0b06df106fd76081b2ef6c5bac44d645b96441b6fd5d0c8ec79b",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Streamlit"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Streamlit\n- **Level:** working\n- **Evidence:** public analytical apps and professional prototypes",
+      "title": "Streamlit"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "translating analytical outputs into business decisions, executive communication and visual narratives",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::data-storytelling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "236699d455542065b0f486cb03c4c1e799285db340ccb5d677b6632ef815941d",
+      "cv_eligible": true,
+      "heading_path": [
+        "6. Visualization & Business Intelligence",
+        "Data Storytelling"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Data Storytelling\n- **Level:** core\n- **Coverage:** translating analytical outputs into business decisions, executive communication and visual narratives\n\n---",
+      "title": "Data Storytelling"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "independently authored reusable Python and R libraries rather than only notebooks or one-off scripts",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::library-framework-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "9630ab181f8554ba7f2d1358173d9bdeac9be75d623085d7a43a9dfeb4fc6ff3",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Library / Framework Design"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Library / Framework Design\n- **Level:** core\n- **Evidence:** independently authored reusable Python and R libraries rather than only notebooks or one-off scripts",
+      "title": "Library / Framework Design"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public repositories and packages spanning statistical tooling, interpretable ML, data quality, GenAI evaluation and agent architecture across multiple years",
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::open-source-ownership",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "6e7ab6232f2c1e5aaf9830400c637e8f1b893fff3036e58a6ef6a16b7ee1f979",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Open-Source Ownership"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Open-Source Ownership\n- **Level:** core\n- **Evidence:** public repositories and packages spanning statistical tooling, interpretable ML, data quality, GenAI evaluation and agent architecture across multiple years",
+      "title": "Open-Source Ownership"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "public API migration/deprecation patterns in InsideForest",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::backward-compatibility-api-migration",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "ff9a6e0d8d74d1445663717b4b81d56983dcc402af782eb69d3111e7dfcd1c07",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Backward Compatibility & API Migration"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Backward Compatibility & API Migration\n- **Level:** working\n- **Evidence:** public API migration/deprecation patterns in InsideForest",
+      "title": "Backward Compatibility & API Migration"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "CRAN-published FitUltD/shortcuts ecosystem and analyst-productivity utilities",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::r-rstudio-add-in-engineering",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "0a81d3b34fa9ed52aa33e6437ce55a9ad0f98394a3edaf8596ebc8695722f865",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "R / RStudio Add-in Engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "R / RStudio Add-in Engineering\n- **Level:** working\n- **Evidence:** CRAN-published FitUltD/shortcuts ecosystem and analyst-productivity utilities",
+      "title": "R / RStudio Add-in Engineering"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "README quickstarts, API/migration docs, operating guides, Colab examples and technical documentation across public projects",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::documentation-developer-experience",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "e2eb27133d2d19db689a8b0b421d7e04128f56eaaea68b2998983af13bbe2fa3",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Documentation & Developer Experience"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Documentation & Developer Experience\n- **Level:** working\n- **Evidence:** README quickstarts, API/migration docs, operating guides, Colab examples and technical documentation across public projects",
+      "title": "Documentation & Developer Experience"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "multi-seed benchmarks, experiment protocols and golden-regression fixtures",
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::reproducible-experiment-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1f72f376d0205b4853568674fc90e57e61611bad33267df2dfd5164d0656589c",
+      "cv_eligible": true,
+      "heading_path": [
+        "7. Software Engineering & Open Source",
+        "Reproducible Experiment Design"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Reproducible Experiment Design\n- **Level:** working\n- **Evidence:** multi-seed benchmarks, experiment protocols and golden-regression fixtures\n\n---",
+      "title": "Reproducible Experiment Design"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "remote banking, commercial analytics, contactability, product recommendation, operational analytics, profitability/productivity measurement and physical-network analytics",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::banking-analytics",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "13614e28caa3634a59af207a4e70fd770dfae51e9e40cf2cf000fb091a3374ab",
+      "cv_eligible": true,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Banking Analytics"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Banking Analytics\n- **Level:** core\n- **Coverage:** remote banking, commercial analytics, contactability, product recommendation, operational analytics, profitability/productivity measurement and physical-network analytics",
+      "title": "Banking Analytics"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "statistical anomaly detection, hybrid rule + ML approaches, monitoring, prioritization, interpretability and investigation support",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::risk-fraud-analytics",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "82855f80e8bc6a0e6c0033e4eb7723df7bcf804e3a696c371d7421809abef665",
+      "cv_eligible": true,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Risk & Fraud Analytics"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Risk & Fraud Analytics\n- **Level:** core\n- **Coverage:** statistical anomaly detection, hybrid rule + ML approaches, monitoring, prioritization, interpretability and investigation support",
+      "title": "Risk & Fraud Analytics"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "probability, risk modeling, statistical distributions and quantitative decision making",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::insurance-actuarial-reasoning",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "8b9344071c12835161a4a2050bc95a90d35dec838ac9fe8a0636865b94492b71",
+      "cv_eligible": true,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Insurance / Actuarial Reasoning"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Insurance / Actuarial Reasoning\n- **Level:** core\n- **Coverage:** probability, risk modeling, statistical distributions and quantitative decision making",
+      "title": "Insurance / Actuarial Reasoning"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "statistical modeling and distribution fitting applied to medical/risk contexts",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::healthcare-risk-modeling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "97cf0c14e5cf4030560ff616c442f496800b8c7bada703a8dc09d86f0ee5d4d9",
+      "cv_eligible": true,
+      "heading_path": [
+        "8. Business & Domain Skills",
+        "Healthcare / Risk Modeling"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Healthcare / Risk Modeling\n- **Level:** working\n- **Coverage:** statistical modeling and distribution fitting applied to medical/risk contexts\n\n---",
+      "title": "Healthcare / Risk Modeling"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "problem framing, data contracts, modeling, validation, implementation, productionization, monitoring and business communication",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::end-to-end-technical-ownership",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "4071ea31548a087869851e9f08d1f88939f86f95ace2861af541f7649c8d1ed8",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "End-to-End Technical Ownership"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "End-to-End Technical Ownership\n- **Level:** core\n- **Coverage:** problem framing, data contracts, modeling, validation, implementation, productionization, monitoring and business communication",
+      "title": "End-to-End Technical Ownership"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "collaboration with business, technology, compliance, data/legal, risk and senior leadership stakeholders",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::stakeholder-management",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c1c4064199f42c4dfcfeebc9b341846bc7c41044821d60f74bef70d80dbda30d",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Stakeholder Management"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Stakeholder Management\n- **Level:** core\n- **Coverage:** collaboration with business, technology, compliance, data/legal, risk and senior leadership stakeholders",
+      "title": "Stakeholder Management"
+    },
+    {
+      "attributes": {
+        "boundary": "project/technical leadership must not be converted into formal people-management claims without direct evidence",
+        "coverage": "project direction, solution architecture, quality/evaluation criteria, mentoring, technical presentations and cross-functional coordination",
+        "evidence": null,
+        "level": "core",
+        "proficiency": "core",
+        "usage_note": null
+      },
+      "chunk_id": "skills::technical-project-leadership",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "project/technical leadership must not be converted into formal people-management claims without direct evidence"
+      ],
+      "content_hash": "fb3d7c75c90b5de7dfbc97cf2c60e720265bd31c1493451b75676eb2f45de803",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Technical / Project Leadership"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Technical / Project Leadership\n- **Level:** core\n- **Coverage:** project direction, solution architecture, quality/evaluation criteria, mentoring, technical presentations and cross-functional coordination\n- **Boundary:** project/technical leadership must not be converted into formal people-management claims without direct evidence",
+      "title": "Technical / Project Leadership"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "As-Is/To-Be mapping, state models, SLAs, escalation, RACI and phased automation design",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::process-workflow-architecture",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "c2b81a0be4896013a7ea74f4f13f6ef976a6778ee3a74159234c550b36cbc4d3",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Process / Workflow Architecture"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Process / Workflow Architecture\n- **Level:** working\n- **Coverage:** As-Is/To-Be mapping, state models, SLAs, escalation, RACI and phased automation design",
+      "title": "Process / Workflow Architecture"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "Python instruction, technical mentoring, AI/GenAI workshops, internal talks, documentation and examples",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::teaching-knowledge-transfer",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "1a20ba7cf23efea995b7f05352ba9790b75ade2e08a98c8305fe395f9c077909",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Teaching & Knowledge Transfer"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Teaching & Knowledge Transfer\n- **Level:** working\n- **Coverage:** Python instruction, technical mentoring, AI/GenAI workshops, internal talks, documentation and examples",
+      "title": "Teaching & Knowledge Transfer"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": "Scrum principles, iterative development and cross-functional coordination",
+        "evidence": null,
+        "level": "working",
+        "proficiency": "working",
+        "usage_note": null
+      },
+      "chunk_id": "skills::agile-delivery",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "ff54d0e85fe218e147e14bfa365d0d6067fe2027346d02dc89b6eb8c603cbf56",
+      "cv_eligible": true,
+      "heading_path": [
+        "9. Leadership & Delivery",
+        "Agile Delivery"
+      ],
+      "metric_refs": [],
+      "proficiency": "working",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Agile Delivery\n- **Level:** working\n- **Coverage:** Scrum principles, iterative development and cross-functional coordination\n\n---",
+      "title": "Agile Delivery"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": null,
+        "proficiency": "native",
+        "usage_note": null
+      },
+      "chunk_id": "skills::spanish",
+      "chunk_type": "language",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "e9fc585adc20b4fa132d0480aa830a1841b2abc8b4f698421d05d7931b991abd",
+      "cv_eligible": true,
+      "heading_path": [
+        "10. Languages",
+        "Spanish"
+      ],
+      "metric_refs": [],
+      "proficiency": "native",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Spanish\n- **Proficiency:** native",
+      "title": "Spanish"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": "professional and academic use plus international experience in Dublin",
+        "level": null,
+        "proficiency": "C1 / advanced professional",
+        "usage_note": null
+      },
+      "chunk_id": "skills::english",
+      "chunk_type": "language",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "d323ea92339fbda6b6b266b135955d3899ef465dd3e6344aa7dbd007757ae17a",
+      "cv_eligible": true,
+      "heading_path": [
+        "10. Languages",
+        "English"
+      ],
+      "metric_refs": [],
+      "proficiency": "C1 / advanced professional",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "English\n- **Proficiency:** C1 / advanced professional\n- **Evidence:** professional and academic use plus international experience in Dublin",
+      "title": "English"
+    },
+    {
+      "attributes": {
+        "boundary": null,
+        "coverage": null,
+        "evidence": null,
+        "level": null,
+        "proficiency": "A2",
+        "usage_note": null
+      },
+      "chunk_id": "skills::french",
+      "chunk_type": "language",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "7afc97d2b5dff15ce789bda6d9bd550a801e6366e71dc6563817007f7d5711ed",
+      "cv_eligible": true,
+      "heading_path": [
+        "10. Languages",
+        "French"
+      ],
+      "metric_refs": [],
+      "proficiency": "A2",
+      "public_safe": true,
+      "record_id": "skills",
+      "record_type": "skills",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/skills.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "French\n- **Proficiency:** A2\n\n---",
+      "title": "French"
+    }
+  ],
+  "record_id": "skills",
+  "schema_version": 1
+}

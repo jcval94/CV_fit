@@ -1,0 +1,383 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "d62a6139b56f523fd39953713606b5c1f30618365516b55be36a7efc900bcb9a",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Summary\nThis record consolidates a family of related but non-identical fraud/compliance workstreams. The common pattern is translating ambiguous investigation or policy concerns into auditable data logic, prioritization models, calibrated alerts and operational review workflows.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::problem",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "913293f280a7c5ec6a28c9c4c9be793549a1cbd0a5de654de90ce3e191825ab7",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Problem"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Problem\nManual review pools were too broad and business rules alone generated avoidable false positives.",
+      "title": "Problem"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "1f02fdf5a0cc07ce885569c32a612f995c72ad8e7d472caca222d925e2976878",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Contribution"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Contribution\n- led/co-developed a hybrid approach combining expert rules, supervised/unsupervised modeling, anomaly detection and statistical validation\n- used techniques including Isolation Forest, distribution/goodness-of-fit reasoning and Benford-oriented checks where appropriate\n- created claim-probability/prioritization logic and identified factors associated with higher risk\n- translated model outputs into an investigation workflow rather than treating scoring as the final deliverable",
+      "title": "Contribution"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::public-results",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "2d116ad48fa20b4a3290173541c88091b7d4415aeddeefaa78c1a6e287c421ae",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Public results"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Public results\n- `ACH-BBVA-FRAUD-REVIEW-001`: review-pool reduction\n- `ACH-BBVA-FRAUD-DETECTION-001`: detection-rate improvement\n\nThe detection-rate improvement is attributed to the hybrid detection workstream, not to the separate normative LLM assistant.",
+      "title": "Public results"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "c20cb4733472c2779824d575e3e25c44e2711c3e39662506ee6bda9791fe03aa",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "2. Conduct and operational-risk alert calibration"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "2. Conduct and operational-risk alert calibration\nEvidence supports:\n\n- recurring monitoring of alert effectiveness\n- root-cause analysis of false positives\n- threshold and rule calibration\n- contextual joins across transactional, HR and security data\n- stronger evidence packages for investigators\n\nInternal alert-effectiveness figures from different populations are not published or merged with the hybrid model metrics.",
+      "title": "2. Conduct and operational-risk alert calibration"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::3-insurance-sales-malpractice-pyman",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "a3e05a83cac4f58f0969887c642b2c0d76787e9ffe18a4ca63a63f2bba01c3b2",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "3. Insurance-sales malpractice / PyMAN"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "3. Insurance-sales malpractice / PyMAN\nThe multi-year workstream includes:\n\n- analytical reconciliation across policy, subscription, incentive and transactional sources\n- logic for tied sales, early cancellation and other irregular commercial patterns\n- recurring reports and forensic KPIs\n- evidence packages for control and disciplinary follow-up\n\nThe analytical role does not imply ownership of final HR or disciplinary decisions.",
+      "title": "3. Insurance-sales malpractice / PyMAN"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::4-identity-network-and-fuzzy-matching-analysis",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "f56c36f8ff7541ce927d334906be2f6c694d6fa189c6c0eab8d4cdf403a14814",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "4. Identity, network and fuzzy-matching analysis"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "4. Identity, network and fuzzy-matching analysis\nSupporting initiatives include:\n\n- fuzzy name matching against regulatory/watch lists using distributed processing and Levenshtein-style similarity\n- extraction of entities and relationships from claim narratives and operational metadata\n- cross-checking phone numbers, identities and representatives to identify possible collusion\n- transformation of investigation hypotheses into targeted relational/transactional queries\n\nSpecific graph libraries, matching thresholds and production precision must not be inferred.",
+      "title": "4. Identity, network and fuzzy-matching analysis"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::5-credential-misuse-and-channel-security-redesign",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "9b45d1a606331b9c6cd04fc150b10ff009f36d1ff6d647bb81863b6676a1b631",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "5. Credential misuse and channel-security redesign"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "5. Credential misuse and channel-security redesign\nEvidence supports:\n\n- invalidating a noisy multi-login heuristic through exploratory analysis\n- designing more contextual signals using role, time, location and HR status\n- exploring impossible-travel and credential-lending patterns\n- producing parameters/manuals for operational analysts\n\nThe final production effectiveness of this workstream is not yet a public approved metric.",
+      "title": "5. Credential misuse and channel-security redesign"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "2e78ace5bb868c18c5da84608fe62f4f6c8e6095aecba2f9466972e0042623e5",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Technologies and methods"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Technologies and methods\n- Python, PySpark and SQL\n- distributed ETL and large-scale joins\n- Isolation Forest and supervised/unsupervised models\n- anomaly and outlier detection\n- descriptive statistics and goodness-of-fit reasoning\n- fuzzy matching / identity resolution\n- relational analysis and text-derived signals\n- dashboards, recurring reports and investigation support\n- code review and reproducible pipeline practices",
+      "title": "Technologies and methods"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "3823cdbbd5d4ba90408685d16f6f14217dd2969189b300414cea885428336aeb",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Approved public narratives"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Approved public narratives\n> Led hybrid fraud/compliance analytics combining expert rules, anomaly detection and statistical validation, materially narrowing the review pool and improving detection.\n\n> Translated sensitive investigation hypotheses into auditable analytical extractions, calibrated alerts and prioritized review workflows.",
+      "title": "Approved public narratives"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "content_hash": "d06c569908b10801c7c11ad578b416f546f47a3801608370c69238c7f8e6ab55",
+      "cv_eligible": true,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Boundaries"
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-fraud-detection",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/fraud_detection.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-bbva-fraud-detection",
+  "schema_version": 1
+}

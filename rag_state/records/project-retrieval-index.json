@@ -1,0 +1,555 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "ea7565ea5dc2e6364ac87a24a4888d40efc3fa86465c3af31ce222f1c3feb6c9",
+  "embedding_candidate": false,
+  "linked_markdown_paths": [
+    "bbva_atm_analytics.md",
+    "bbva_btc.md",
+    "bbva_data_quality_mlops.md",
+    "bbva_next_best_offer.md",
+    "bbva_supervisory_relations.md",
+    "cloud_ml_recommender.md",
+    "coi_fraud_toolkit.md",
+    "consulting_clarification_prioritization.md",
+    "consulting_data_migration.md",
+    "consulting_insurance_fraud_monitoring.md",
+    "financial_ml_pipelines.md",
+    "fraud_detection.md",
+    "github_portfolio.md",
+    "insideforest.md",
+    "llm_internal_tools.md",
+    "metacraft.md",
+    "movilidad_social_mx.md",
+    "mvp_agent_factory.md",
+    "narrative_dna.md",
+    "r_statistical_tooling.md",
+    "sheshe_deldel.md"
+  ],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-retrieval-index",
+  "record_type": "governance",
+  "retrieval_class": "router",
+  "sections": [
+    {
+      "content": "Routing layer for RAG and CV generation. This index does not create new evidence; it ranks canonical project records by relevance and evidence strength.",
+      "end_line": 16,
+      "heading_path": [
+        "Project Retrieval Index"
+      ],
+      "level": 1,
+      "section_id": "project-retrieval-index::project-retrieval-index",
+      "semantic_type": "section",
+      "start_line": 13,
+      "title": "Project Retrieval Index"
+    },
+    {
+      "content": "1. Retrieve **2–4 projects** for a standard one-page CV unless the requested format allows more.\n2. Prefer projects that jointly match the vacancy's **problem domain + technical stack + seniority signal**.\n3. Prefer professional projects for business-impact claims and public projects for directly observable engineering evidence.\n4. Project ownership comes from the project file, not from this index.\n5. Exact metrics come only from `../achievements/metrics.md` by `ACH-*` ID.\n6. Avoid selecting two projects that communicate essentially the same capability unless both are central to the target role.\n\n---",
+      "end_line": 27,
+      "heading_path": [
+        "Project Retrieval Index",
+        "Retrieval rules"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::project-retrieval-index::retrieval-rules",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "Retrieval rules"
+    },
+    {
+      "content": "",
+      "end_line": 29,
+      "heading_path": [
+        "Professional projects — BBVA México"
+      ],
+      "level": 1,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico",
+      "semantic_type": "section",
+      "start_line": 28,
+      "title": "Professional projects — BBVA México"
+    },
+    {
+      "content": "",
+      "end_line": 31,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1",
+      "semantic_type": "section",
+      "start_line": 30,
+      "title": "Tier 1"
+    },
+    {
+      "content": "- **Signals:** fraud analytics · anomaly detection · Isolation Forest · statistical validation · fuzzy matching · investigation workflows\n- **Best for:** Senior Data Scientist · Fraud/Risk DS · Applied ML · Compliance Analytics",
+      "end_line": 35,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1",
+        "[Fraud, Malpractice and Conduct-Risk Detection](fraud_detection.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1::fraud-malpractice-and-conduct-risk-detection-fraud-detection-md",
+      "semantic_type": "section",
+      "start_line": 32,
+      "title": "[Fraud, Malpractice and Conduct-Risk Detection](fraud_detection.md)"
+    },
+    {
+      "content": "- **Signals:** GenAI · retrieval-grounded knowledge · prompt design · corpus curation · adoption/impact measurement\n- **Best for:** GenAI · Applied AI · AI Product · regulated AI workflows",
+      "end_line": 39,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1",
+        "[Internal LLM and Normative Knowledge Tools](llm_internal_tools.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1::internal-llm-and-normative-knowledge-tools-llm-internal-tools-md",
+      "semantic_type": "section",
+      "start_line": 36,
+      "title": "[Internal LLM and Normative Knowledge Tools](llm_internal_tools.md)"
+    },
+    {
+      "content": "- **Signals:** contactability · predictive prioritization · recurring scoring/release · monitoring · operational analytics\n- **Best for:** Senior Data Scientist · Decision Science · Customer Analytics",
+      "end_line": 43,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1",
+        "[Best Time to Call](bbva_btc.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1::best-time-to-call-bbva-btc-md",
+      "semantic_type": "section",
+      "start_line": 40,
+      "title": "[Best Time to Call](bbva_btc.md)"
+    },
+    {
+      "content": "- **Signals:** segmentation · recommendation · propensity · eligibility logic · treatment/control evaluation\n- **Best for:** Senior Data Scientist · Recommender/Decision Science · Commercial Analytics",
+      "end_line": 47,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1",
+        "[Next Best Offer / CRMi](bbva_next_best_offer.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1::next-best-offer-crmi-bbva-next-best-offer-md",
+      "semantic_type": "section",
+      "start_line": 44,
+      "title": "[Next Best Offer / CRMi](bbva_next_best_offer.md)"
+    },
+    {
+      "content": "- **Signals:** PySpark · production QA · code review · pipeline refactoring · AWS · data lineage · resilient automation\n- **Best for:** ML Engineering · Production Data Science · Data Quality · MLOps-oriented roles",
+      "end_line": 51,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 1",
+        "[Data Quality, MLOps and Analytical Engines](bbva_data_quality_mlops.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-1::data-quality-mlops-and-analytical-engines-bbva-data-quality-mlops-md",
+      "semantic_type": "section",
+      "start_line": 48,
+      "title": "[Data Quality, MLOps and Analytical Engines](bbva_data_quality_mlops.md)"
+    },
+    {
+      "content": "",
+      "end_line": 53,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 2"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-2",
+      "semantic_type": "section",
+      "start_line": 52,
+      "title": "Tier 2"
+    },
+    {
+      "content": "- **Signals:** forecasting · clustering · geospatial analytics · ETL · infrastructure decision support",
+      "end_line": 56,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 2",
+        "[ATM and Physical-Network Analytics](bbva_atm_analytics.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-2::atm-and-physical-network-analytics-bbva-atm-analytics-md",
+      "semantic_type": "section",
+      "start_line": 54,
+      "title": "[ATM and Physical-Network Analytics](bbva_atm_analytics.md)"
+    },
+    {
+      "content": "- **Signals:** workflow architecture · state models · SLAs · RACI · Google Workspace · proposed Gemini assistance\n- **Lifecycle boundary:** approved phased design; projected improvements are not production outcomes\n\n---",
+      "end_line": 62,
+      "heading_path": [
+        "Professional projects — BBVA México",
+        "Tier 2",
+        "[Supervisory Relations To-Be Architecture](bbva_supervisory_relations.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-bbva-m-xico::tier-2::supervisory-relations-to-be-architecture-bbva-supervisory-relations-md",
+      "semantic_type": "section",
+      "start_line": 57,
+      "title": "[Supervisory Relations To-Be Architecture](bbva_supervisory_relations.md)"
+    },
+    {
+      "content": "",
+      "end_line": 64,
+      "heading_path": [
+        "Professional projects — Management Solutions"
+      ],
+      "level": 1,
+      "section_id": "project-retrieval-index::professional-projects-management-solutions",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Professional projects — Management Solutions"
+    },
+    {
+      "content": "",
+      "end_line": 66,
+      "heading_path": [
+        "Professional projects — Management Solutions",
+        "Tier 1 / 2"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::professional-projects-management-solutions::tier-1-2",
+      "semantic_type": "section",
+      "start_line": 65,
+      "title": "Tier 1 / 2"
+    },
+    {
+      "content": "- **Signals:** PySpark · ML prioritization · operational capacity · MicroStrategy · domain-expert integration\n- **Best for:** Data Science · Fraud/Risk Analytics · Operational Analytics",
+      "end_line": 70,
+      "heading_path": [
+        "Professional projects — Management Solutions",
+        "Tier 1 / 2",
+        "[Clarification Prioritization](consulting_clarification_prioritization.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-management-solutions::tier-1-2::clarification-prioritization-consulting-clarification-prioritization-md",
+      "semantic_type": "section",
+      "start_line": 67,
+      "title": "[Clarification Prioritization](consulting_clarification_prioritization.md)"
+    },
+    {
+      "content": "- **Signals:** PCA · outlier detection · unsupervised analytics · R · KPI/control design\n- **Best for:** Fraud/Risk DS · Statistical Analytics · Consulting",
+      "end_line": 74,
+      "heading_path": [
+        "Professional projects — Management Solutions",
+        "Tier 1 / 2",
+        "[Insurance Fraud Monitoring](consulting_insurance_fraud_monitoring.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-management-solutions::tier-1-2::insurance-fraud-monitoring-consulting-insurance-fraud-monitoring-md",
+      "semantic_type": "section",
+      "start_line": 71,
+      "title": "[Insurance Fraud Monitoring](consulting_insurance_fraud_monitoring.md)"
+    },
+    {
+      "content": "- **Signals:** data migration · reconciliation · schema/layout design · QA · A/B testing · Salesforce context\n- **Best for:** Data Quality · Analytics Engineering · Data/ML roles with migration ownership\n\n---",
+      "end_line": 80,
+      "heading_path": [
+        "Professional projects — Management Solutions",
+        "Tier 1 / 2",
+        "[Data Migration, Reconciliation & QA](consulting_data_migration.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::professional-projects-management-solutions::tier-1-2::data-migration-reconciliation-qa-consulting-data-migration-md",
+      "semantic_type": "section",
+      "start_line": 75,
+      "title": "[Data Migration, Reconciliation & QA](consulting_data_migration.md)"
+    },
+    {
+      "content": "",
+      "end_line": 82,
+      "heading_path": [
+        "Public technical / open-source projects"
+      ],
+      "level": 1,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects",
+      "semantic_type": "technology",
+      "start_line": 81,
+      "title": "Public technical / open-source projects"
+    },
+    {
+      "content": "",
+      "end_line": 84,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1",
+      "semantic_type": "section",
+      "start_line": 83,
+      "title": "Tier 1"
+    },
+    {
+      "content": "- **Signals:** interpretable ML · supervised clustering · Python package engineering · estimator APIs · tests · benchmarks · public adoption\n- **Best for:** Senior Data Scientist · Applied Scientist · ML Engineer · XAI",
+      "end_line": 88,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1",
+        "[InsideForest](insideforest.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1::insideforest-insideforest-md",
+      "semantic_type": "section",
+      "start_line": 85,
+      "title": "[InsideForest](insideforest.md)"
+    },
+    {
+      "content": "- **Signals:** OpenAI Responses API · Structured Outputs · Pydantic · evals · adjudication · semantic audit · regression testing\n- **Best for:** GenAI Engineer · Applied AI · AI Reliability",
+      "end_line": 92,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1",
+        "[narrative_dna / ADNarrativa](narrative_dna.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1::narrative-dna-adnarrativa-narrative-dna-md",
+      "semantic_type": "section",
+      "start_line": 89,
+      "title": "[narrative_dna / ADNarrativa](narrative_dna.md)"
+    },
+    {
+      "content": "- **Signals:** data quality · metadata/schema engineering · drift · Great Expectations · OpenAI integration\n- **Best for:** Data/ML Platform · Data Quality · Senior Data Science",
+      "end_line": 96,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1",
+        "[MetaCraft](metacraft.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1::metacraft-metacraft-md",
+      "semantic_type": "section",
+      "start_line": 93,
+      "title": "[MetaCraft](metacraft.md)"
+    },
+    {
+      "content": "- **Signals:** interpretable ML · rule discovery · numerical search · reproducible synthetic benchmarks\n- **Best for:** Applied Scientist · Research-oriented DS · XAI",
+      "end_line": 100,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1",
+        "[SheShe / DelDel](sheshe_deldel.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1::sheshe-deldel-sheshe-deldel-md",
+      "semantic_type": "section",
+      "start_line": 97,
+      "title": "[SheShe / DelDel](sheshe_deldel.md)"
+    },
+    {
+      "content": "- **Signals:** public fraud/compliance tooling · transaction patterns · text signals · interpretable case exports\n- **Best for:** Fraud Analytics · Compliance Analytics · analytical-tooling roles",
+      "end_line": 104,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 1",
+        "[COI / Fraud Analysis Toolkit](coi_fraud_toolkit.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-1::coi-fraud-analysis-toolkit-coi-fraud-toolkit-md",
+      "semantic_type": "section",
+      "start_line": 101,
+      "title": "[COI / Fraud Analysis Toolkit](coi_fraud_toolkit.md)"
+    },
+    {
+      "content": "",
+      "end_line": 106,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2",
+      "semantic_type": "section",
+      "start_line": 105,
+      "title": "Tier 2"
+    },
+    {
+      "content": "- **Signals:** GCP Cloud Functions · Keras · Transformers · embeddings · HTTP model serving",
+      "end_line": 109,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[Cloud ML Recommender](cloud_ml_recommender.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::cloud-ml-recommender-cloud-ml-recommender-md",
+      "semantic_type": "section",
+      "start_line": 107,
+      "title": "[Cloud ML Recommender](cloud_ml_recommender.md)"
+    },
+    {
+      "content": "- **Signals:** agent architecture · skill contracts · eval rubrics · PRDs · AI-assisted SDLC",
+      "end_line": 112,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[MVP Agent Factory](mvp_agent_factory.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::mvp-agent-factory-mvp-agent-factory-md",
+      "semantic_type": "section",
+      "start_line": 110,
+      "title": "[MVP Agent Factory](mvp_agent_factory.md)"
+    },
+    {
+      "content": "- **Signals:** temporal validation · GitHub Actions · SQLite/JSON artifacts · static dashboards\n- **Boundary:** educational/partially degraded; not validated trading production",
+      "end_line": 116,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[Financial ML Pipelines](financial_ml_pipelines.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::financial-ml-pipelines-financial-ml-pipelines-md",
+      "semantic_type": "section",
+      "start_line": 113,
+      "title": "[Financial ML Pipelines](financial_ml_pipelines.md)"
+    },
+    {
+      "content": "- **Signals:** CRAN · R packages · distribution fitting · forecasting · RStudio add-ins · reporting automation",
+      "end_line": 119,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[R Statistical Tooling](r_statistical_tooling.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::r-statistical-tooling-r-statistical-tooling-md",
+      "semantic_type": "section",
+      "start_line": 117,
+      "title": "[R Statistical Tooling](r_statistical_tooling.md)"
+    },
+    {
+      "content": "- **Signals:** Streamlit · analytical storytelling · probabilistic interpretation\n- **Boundary:** fork/contribution scope must be preserved",
+      "end_line": 123,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[Movilidad Social en México](movilidad_social_mx.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::movilidad-social-en-m-xico-movilidad-social-mx-md",
+      "semantic_type": "section",
+      "start_line": 120,
+      "title": "[Movilidad Social en México](movilidad_social_mx.md)"
+    },
+    {
+      "content": "- **Purpose:** repository-level evidence inventory and evidence-strength routing\n\n---",
+      "end_line": 128,
+      "heading_path": [
+        "Public technical / open-source projects",
+        "Tier 2",
+        "[GitHub Portfolio Evidence Map](github_portfolio.md)"
+      ],
+      "level": 3,
+      "section_id": "project-retrieval-index::public-technical-open-source-projects::tier-2::github-portfolio-evidence-map-github-portfolio-md",
+      "semantic_type": "section",
+      "start_line": 124,
+      "title": "[GitHub Portfolio Evidence Map](github_portfolio.md)"
+    },
+    {
+      "content": "",
+      "end_line": 130,
+      "heading_path": [
+        "Suggested retrieval bundles"
+      ],
+      "level": 1,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles",
+      "semantic_type": "section",
+      "start_line": 129,
+      "title": "Suggested retrieval bundles"
+    },
+    {
+      "content": "- Fraud Detection or Next Best Offer\n- Best Time to Call or Data Quality/MLOps\n- InsideForest\n- one domain-relevant supporting project",
+      "end_line": 136,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "Senior Data Scientist"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::senior-data-scientist",
+      "semantic_type": "section",
+      "start_line": 131,
+      "title": "Senior Data Scientist"
+    },
+    {
+      "content": "- Internal LLM Tools\n- narrative_dna\n- MVP Agent Factory or MetaCraft\n- one professional production/analytics project",
+      "end_line": 142,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "GenAI / Applied AI"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::genai-applied-ai",
+      "semantic_type": "section",
+      "start_line": 137,
+      "title": "GenAI / Applied AI"
+    },
+    {
+      "content": "- Data Quality/MLOps\n- InsideForest\n- Cloud ML Recommender\n- BTC or NBO for enterprise operationalization evidence",
+      "end_line": 148,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "ML Engineer / Production DS"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::ml-engineer-production-ds",
+      "semantic_type": "section",
+      "start_line": 143,
+      "title": "ML Engineer / Production DS"
+    },
+    {
+      "content": "- Fraud Detection\n- Clarification Prioritization\n- Insurance Fraud Monitoring\n- COI or InsideForest",
+      "end_line": 154,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "Fraud / Risk Data Science"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::fraud-risk-data-science",
+      "semantic_type": "section",
+      "start_line": 149,
+      "title": "Fraud / Risk Data Science"
+    },
+    {
+      "content": "- Next Best Offer\n- Best Time to Call\n- ATM Analytics\n- InsideForest",
+      "end_line": 160,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "Decision Science / Customer Analytics"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::decision-science-customer-analytics",
+      "semantic_type": "section",
+      "start_line": 155,
+      "title": "Decision Science / Customer Analytics"
+    },
+    {
+      "content": "- Data Quality/MLOps\n- Management Solutions Data Migration\n- MetaCraft\n- one business-facing professional project",
+      "end_line": 165,
+      "heading_path": [
+        "Suggested retrieval bundles",
+        "Data Quality / Analytics Engineering"
+      ],
+      "level": 2,
+      "section_id": "project-retrieval-index::suggested-retrieval-bundles::data-quality-analytics-engineering",
+      "semantic_type": "section",
+      "start_line": 161,
+      "title": "Data Quality / Analytics Engineering"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/index.md",
+  "source_refs": [],
+  "status": "canonical",
+  "visibility": "public"
+}

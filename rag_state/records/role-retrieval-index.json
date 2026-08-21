@@ -1,0 +1,94 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "f9c4142fd7896bdd870eebb99b721c1450f3ef74381b704716f5145577bb5439",
+  "embedding_candidate": false,
+  "linked_markdown_paths": [
+    "../projects/consulting_clarification_prioritization.md",
+    "../projects/consulting_data_migration.md",
+    "../projects/consulting_insurance_fraud_monitoring.md",
+    "bbva.md",
+    "previous_roles.md",
+    "teaching.md"
+  ],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "role-retrieval-index",
+  "record_type": "governance",
+  "retrieval_class": "router",
+  "sections": [
+    {
+      "content": "Routing layer for professional chronology. Detailed scope and ownership live in the linked role/project records.",
+      "end_line": 16,
+      "heading_path": [
+        "Role Retrieval Index"
+      ],
+      "level": 1,
+      "section_id": "role-retrieval-index::role-retrieval-index",
+      "semantic_type": "section",
+      "start_line": 13,
+      "title": "Role Retrieval Index"
+    },
+    {
+      "content": "- **Period:** May 2021 – present\n- **Progression:** Data Scientist — Analyst → Associate → Expert\n- **External positioning:** Senior Data Scientist / technical-project leadership\n- **Strongest signals:** production Data Science · PySpark/Spark · banking analytics · fraud/compliance · recommendation · GenAI · data quality\n- **Usage boundary:** `Expert` is an internal level; do not infer formal people management",
+      "end_line": 24,
+      "heading_path": [
+        "Role Retrieval Index",
+        "[BBVA México](bbva.md)"
+      ],
+      "level": 2,
+      "section_id": "role-retrieval-index::role-retrieval-index::bbva-m-xico-bbva-md",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "[BBVA México](bbva.md)"
+    },
+    {
+      "content": "- **Period:** October 2017 – May 2021, with a documented 2019 professional-development pause\n- **Progression:** Data Specialist / Consultant roles → Senior Data Scientist\n- **Strongest signals:** insurance/fraud analytics · statistical modeling · PySpark · data migration · operational prioritization · consulting\n- **Canonical supporting projects:**\n  - [Insurance Fraud Monitoring](../projects/consulting_insurance_fraud_monitoring.md)\n  - [Clarification Prioritization](../projects/consulting_clarification_prioritization.md)\n  - [Data Migration, Reconciliation & QA](../projects/consulting_data_migration.md)",
+      "end_line": 34,
+      "heading_path": [
+        "Role Retrieval Index",
+        "[Management Solutions](previous_roles.md)"
+      ],
+      "level": 2,
+      "section_id": "role-retrieval-index::role-retrieval-index::management-solutions-previous-roles-md",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "[Management Solutions](previous_roles.md)"
+    },
+    {
+      "content": "- **Formal teaching:** DEV.F / Bécalos, January 2022 – January 2023, part-time\n- **Supporting academic experience:** UNAM teaching/assistant activities\n- **Strongest signals:** Python instruction · technical communication · mentoring · knowledge transfer\n- **Usage boundary:** academic/service activities strengthen leadership/teaching evidence but are not added to formal professional-employment tenure",
+      "end_line": 41,
+      "heading_path": [
+        "Role Retrieval Index",
+        "[Teaching and Knowledge Transfer](teaching.md)"
+      ],
+      "level": 2,
+      "section_id": "role-retrieval-index::role-retrieval-index::teaching-and-knowledge-transfer-teaching-md",
+      "semantic_type": "section",
+      "start_line": 35,
+      "title": "[Teaching and Knowledge Transfer](teaching.md)"
+    },
+    {
+      "content": "1. Standard professional CVs should normally include BBVA and Management Solutions.\n2. Add DEV.F when teaching, mentoring or technical communication is relevant.\n3. Preserve exact employer chronology from the linked role records.\n4. Use project records for implementation detail and `../achievements/metrics.md` for numeric claims.\n5. Do not convert project leadership into formal people-management scope.",
+      "end_line": 48,
+      "heading_path": [
+        "Role Retrieval Index",
+        "Selection rules"
+      ],
+      "level": 2,
+      "section_id": "role-retrieval-index::role-retrieval-index::selection-rules",
+      "semantic_type": "section",
+      "start_line": 42,
+      "title": "Selection rules"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/roles/index.md",
+  "source_refs": [],
+  "status": "canonical",
+  "visibility": "public"
+}

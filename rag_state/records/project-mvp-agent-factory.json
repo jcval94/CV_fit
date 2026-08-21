@@ -1,0 +1,197 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "project_type": "agent_architecture_methodology",
+    "source_repo": "https://github.com/jcval94/mvp-agent-factory"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "4e7e37313a67fb6c09463da7df3483c93b19953f7df34c7b59e6e884d386b8cb",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-mvp-agent-factory",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 17,
+      "heading_path": [
+        "mvp-agent-factory"
+      ],
+      "level": 1,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory",
+      "semantic_type": "section",
+      "start_line": 16,
+      "title": "mvp-agent-factory"
+    },
+    {
+      "content": "`mvp-agent-factory` is a versioned documentation and architecture system for converting vague MVP ideas into development-ready packages for coding agents such as Codex, Claude Code, Cursor or human engineering teams.\n\nIts strongest professional signal is not an end-user app; it demonstrates **agent-system design, scope control, skill contracts, eval design and repeatable AI-assisted software development methodology**.",
+      "end_line": 23,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::summary",
+      "semantic_type": "summary",
+      "start_line": 18,
+      "title": "Summary"
+    },
+    {
+      "content": "The repository explicitly targets common failure modes in agent-assisted product development:\n\n- unclear target users\n- inflated MVP scope\n- ambiguous success criteria\n- agents without clear boundaries\n- non-repeatable prompts\n- premature coding before product/architecture decisions",
+      "end_line": 34,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Problem addressed"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::problem-addressed",
+      "semantic_type": "section",
+      "start_line": 24,
+      "title": "Problem addressed"
+    },
+    {
+      "content": "1. capture idea\n2. generate structured product/technical documents\n3. validate against evals\n4. define a small vertical slice\n5. build the MVP\n6. iterate",
+      "end_line": 43,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Canonical workflow"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::canonical-workflow",
+      "semantic_type": "section",
+      "start_line": 35,
+      "title": "Canonical workflow"
+    },
+    {
+      "content": "- Product Brief\n- PRD\n- Agent Operating Spec\n- Skill Map\n- Skill Contracts\n- Eval Suite\n- Harness Spec\n- Project Structure\n- Implementation Plan\n- Codex / Claude prompts",
+      "end_line": 56,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Artifacts generated / designed"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed",
+      "semantic_type": "section",
+      "start_line": 44,
+      "title": "Artifacts generated / designed"
+    },
+    {
+      "content": "Skills are treated as explicit contracts defining:\n\n- activation conditions\n- inputs\n- outputs\n- acceptance criteria\n- boundaries / prohibited behavior\n\nThis is stronger evidence than merely stating “agentic workflows”: it shows a systematic approach to making agent behavior reusable and reviewable.",
+      "end_line": 68,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Agent skill methodology"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::agent-skill-methodology",
+      "semantic_type": "skill_group",
+      "start_line": 57,
+      "title": "Agent skill methodology"
+    },
+    {
+      "content": "The repo includes:\n\n- rubrics\n- checklists\n- regression cases\n- explicit Definition of Ready\n- quality gates before product coding\n\nA documented readiness criterion requires the eval rubric to reach an average score of `4+`; this is a **methodological threshold**, not a measured business KPI.",
+      "end_line": 80,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Evaluation methodology"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::evaluation-methodology",
+      "semantic_type": "section",
+      "start_line": 69,
+      "title": "Evaluation methodology"
+    },
+    {
+      "content": "A Python scaffold script can create a minimal new MVP project structure with idea, documentation, eval, skill, example and application directories.\n\nThe repo explicitly supports workflows with:\n\n- OpenAI Codex\n- Claude Code\n- Cursor\n- human engineering teams",
+      "end_line": 91,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Developer tooling"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::developer-tooling",
+      "semantic_type": "section",
+      "start_line": 81,
+      "title": "Developer tooling"
+    },
+    {
+      "content": "- agent architecture\n- AI-assisted SDLC design\n- skill / tool contract design\n- evaluation rubric design\n- prompt engineering\n- requirements engineering\n- PRD design\n- scope control\n- vertical-slice planning\n- technical documentation\n- software scaffolding\n- regression-thinking for agent outputs",
+      "end_line": 106,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Skills evidenced"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+      "semantic_type": "skill_group",
+      "start_line": 92,
+      "title": "Skills evidenced"
+    },
+    {
+      "content": "",
+      "end_line": 108,
+      "heading_path": [
+        "mvp-agent-factory",
+        "CV positioning"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning",
+      "semantic_type": "section",
+      "start_line": 107,
+      "title": "CV positioning"
+    },
+    {
+      "content": "> Designed a reusable agent-development framework with explicit skill contracts, eval rubrics, operating specs and quality gates for converting ambiguous MVP ideas into development-ready vertical slices.",
+      "end_line": 112,
+      "heading_path": [
+        "mvp-agent-factory",
+        "CV positioning",
+        "Agentic AI / AI Engineer"
+      ],
+      "level": 3,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+      "semantic_type": "section",
+      "start_line": 109,
+      "title": "Agentic AI / AI Engineer"
+    },
+    {
+      "content": "> Built a documentation-first methodology for coordinating AI coding agents and human teams around PRDs, architecture decisions, acceptance criteria and regression-oriented evals.",
+      "end_line": 116,
+      "heading_path": [
+        "mvp-agent-factory",
+        "CV positioning",
+        "Technical Leadership / AI Product"
+      ],
+      "level": 3,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+      "semantic_type": "technology",
+      "start_line": 113,
+      "title": "Technical Leadership / AI Product"
+    },
+    {
+      "content": "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology.",
+      "end_line": 121,
+      "heading_path": [
+        "mvp-agent-factory",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-mvp-agent-factory::mvp-agent-factory::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 117,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/mvp_agent_factory.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

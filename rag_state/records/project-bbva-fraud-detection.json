@@ -1,0 +1,203 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2024-present"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "bc996120bcc0f658a783c96d7196bc2512d8fbf077743c60d56e3786561b8e93",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-BBVA-FRAUD-DETECTION-001",
+    "ACH-BBVA-FRAUD-REVIEW-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-fraud-detection",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Fraud, Malpractice and Conduct-Risk Detection"
+    },
+    {
+      "content": "This record consolidates a family of related but non-identical fraud/compliance workstreams. The common pattern is translating ambiguous investigation or policy concerns into auditable data logic, prioritization models, calibrated alerts and operational review workflows.",
+      "end_line": 23,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "",
+      "end_line": 25,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization",
+      "semantic_type": "section",
+      "start_line": 24,
+      "title": "1. Hybrid claim and malpractice prioritization"
+    },
+    {
+      "content": "Manual review pools were too broad and business rules alone generated avoidable false positives.",
+      "end_line": 29,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Problem"
+      ],
+      "level": 3,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::problem",
+      "semantic_type": "section",
+      "start_line": 26,
+      "title": "Problem"
+    },
+    {
+      "content": "- led/co-developed a hybrid approach combining expert rules, supervised/unsupervised modeling, anomaly detection and statistical validation\n- used techniques including Isolation Forest, distribution/goodness-of-fit reasoning and Benford-oriented checks where appropriate\n- created claim-probability/prioritization logic and identified factors associated with higher risk\n- translated model outputs into an investigation workflow rather than treating scoring as the final deliverable",
+      "end_line": 36,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Contribution"
+      ],
+      "level": 3,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+      "semantic_type": "ownership",
+      "start_line": 30,
+      "title": "Contribution"
+    },
+    {
+      "content": "- `ACH-BBVA-FRAUD-REVIEW-001`: review-pool reduction\n- `ACH-BBVA-FRAUD-DETECTION-001`: detection-rate improvement\n\nThe detection-rate improvement is attributed to the hybrid detection workstream, not to the separate normative LLM assistant.",
+      "end_line": 43,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "1. Hybrid claim and malpractice prioritization",
+        "Public results"
+      ],
+      "level": 3,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::public-results",
+      "semantic_type": "outcome",
+      "start_line": 37,
+      "title": "Public results"
+    },
+    {
+      "content": "Evidence supports:\n\n- recurring monitoring of alert effectiveness\n- root-cause analysis of false positives\n- threshold and rule calibration\n- contextual joins across transactional, HR and security data\n- stronger evidence packages for investigators\n\nInternal alert-effectiveness figures from different populations are not published or merged with the hybrid model metrics.",
+      "end_line": 55,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "2. Conduct and operational-risk alert calibration"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
+      "semantic_type": "section",
+      "start_line": 44,
+      "title": "2. Conduct and operational-risk alert calibration"
+    },
+    {
+      "content": "The multi-year workstream includes:\n\n- analytical reconciliation across policy, subscription, incentive and transactional sources\n- logic for tied sales, early cancellation and other irregular commercial patterns\n- recurring reports and forensic KPIs\n- evidence packages for control and disciplinary follow-up\n\nThe analytical role does not imply ownership of final HR or disciplinary decisions.",
+      "end_line": 66,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "3. Insurance-sales malpractice / PyMAN"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::3-insurance-sales-malpractice-pyman",
+      "semantic_type": "section",
+      "start_line": 56,
+      "title": "3. Insurance-sales malpractice / PyMAN"
+    },
+    {
+      "content": "Supporting initiatives include:\n\n- fuzzy name matching against regulatory/watch lists using distributed processing and Levenshtein-style similarity\n- extraction of entities and relationships from claim narratives and operational metadata\n- cross-checking phone numbers, identities and representatives to identify possible collusion\n- transformation of investigation hypotheses into targeted relational/transactional queries\n\nSpecific graph libraries, matching thresholds and production precision must not be inferred.",
+      "end_line": 77,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "4. Identity, network and fuzzy-matching analysis"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::4-identity-network-and-fuzzy-matching-analysis",
+      "semantic_type": "section",
+      "start_line": 67,
+      "title": "4. Identity, network and fuzzy-matching analysis"
+    },
+    {
+      "content": "Evidence supports:\n\n- invalidating a noisy multi-login heuristic through exploratory analysis\n- designing more contextual signals using role, time, location and HR status\n- exploring impossible-travel and credential-lending patterns\n- producing parameters/manuals for operational analysts\n\nThe final production effectiveness of this workstream is not yet a public approved metric.",
+      "end_line": 88,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "5. Credential misuse and channel-security redesign"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::5-credential-misuse-and-channel-security-redesign",
+      "semantic_type": "section",
+      "start_line": 78,
+      "title": "5. Credential misuse and channel-security redesign"
+    },
+    {
+      "content": "- Python, PySpark and SQL\n- distributed ETL and large-scale joins\n- Isolation Forest and supervised/unsupervised models\n- anomaly and outlier detection\n- descriptive statistics and goodness-of-fit reasoning\n- fuzzy matching / identity resolution\n- relational analysis and text-derived signals\n- dashboards, recurring reports and investigation support\n- code review and reproducible pipeline practices",
+      "end_line": 100,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Technologies and methods"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+      "semantic_type": "technology",
+      "start_line": 89,
+      "title": "Technologies and methods"
+    },
+    {
+      "content": "> Led hybrid fraud/compliance analytics combining expert rules, anomaly detection and statistical validation, materially narrowing the review pool and improving detection.\n\n> Translated sensitive investigation hypotheses into auditable analytical extractions, calibrated alerts and prioritized review workflows.",
+      "end_line": 106,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Approved public narratives"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::approved-public-narratives",
+      "semantic_type": "section",
+      "start_line": 101,
+      "title": "Approved public narratives"
+    },
+    {
+      "content": "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment.",
+      "end_line": 112,
+      "heading_path": [
+        "Fraud, Malpractice and Conduct-Risk Detection",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 107,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/fraud_detection.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

@@ -1,0 +1,440 @@
+{
+  "relations": [
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-ATM-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-BTC-PRIVATE"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-COMPLIANCE-INTERNAL"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-FRAUD-DETECTION-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-FRAUD-REVIEW-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-NBO-PRIVATE"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-REMOTE-BANKING-PRIVATE"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-BBVA-SEGMENTATION-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GENAI-NORA-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GENAI-NORA-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GENAI-NORA-003"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GENAI-NORA-004"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GITHUB-DELDEL-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GITHUB-NARRATIVE-DNA-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-GITHUB-NARRATIVE-DNA-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-MS-CLARIFICATIONS-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-MS-CLARIFICATIONS-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-MS-FRAUD-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-MS-MIGRATION-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-OSS-INSIDEFOREST-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-OSS-INSIDEFOREST-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-OSS-INSIDEFOREST-003"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-OSS-INSIDEFOREST-004"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-REPORTING-TIME-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "achievement-metrics",
+      "target": "ACH-RESEARCH-RISK-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-atm-analytics",
+      "target": "ACH-BBVA-ATM-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-btc",
+      "target": "ACH-BBVA-BTC-PRIVATE"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-fraud-detection",
+      "target": "ACH-BBVA-FRAUD-DETECTION-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-fraud-detection",
+      "target": "ACH-BBVA-FRAUD-REVIEW-001"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-bbva-llm-internal-tools",
+      "target": "achievement-metrics"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-llm-internal-tools",
+      "target": "ACH-GENAI-NORA-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-llm-internal-tools",
+      "target": "ACH-GENAI-NORA-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-llm-internal-tools",
+      "target": "ACH-GENAI-NORA-003"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-bbva-next-best-offer",
+      "target": "ACH-BBVA-NBO-PRIVATE"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-clarification-prioritization",
+      "target": "achievement-metrics"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-clarification-prioritization",
+      "target": "role-management-solutions"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-ms-clarification-prioritization",
+      "target": "ACH-MS-CLARIFICATIONS-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-ms-clarification-prioritization",
+      "target": "ACH-MS-CLARIFICATIONS-002"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-data-migration",
+      "target": "achievement-metrics"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-data-migration",
+      "target": "role-management-solutions"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-ms-data-migration",
+      "target": "ACH-MS-MIGRATION-001"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-insurance-fraud-monitoring",
+      "target": "achievement-metrics"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-ms-insurance-fraud-monitoring",
+      "target": "role-management-solutions"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-ms-insurance-fraud-monitoring",
+      "target": "ACH-MS-FRAUD-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "project-r-statistical-tooling",
+      "target": "ACH-REPORTING-TIME-001"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-atm-analytics"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-btc"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-data-quality-mlops"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-fraud-detection"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-llm-internal-tools"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-next-best-offer"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-bbva-supervisory-relations"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-cloud-ml-recommender"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-coi-fraud-toolkit"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-financial-ml-pipelines"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-github-portfolio"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-insideforest"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-metacraft"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-movilidad-social-mx"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-ms-clarification-prioritization"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-ms-data-migration"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-ms-insurance-fraud-monitoring"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-mvp-agent-factory"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-narrative-dna"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-r-statistical-tooling"
+    },
+    {
+      "relation": "links_to",
+      "source": "project-retrieval-index",
+      "target": "project-sheshe-deldel"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "achievement-metrics"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-atm-analytics"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-btc"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-data-quality-mlops"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-fraud-detection"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-llm-internal-tools"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-next-best-offer"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-bbva",
+      "target": "project-bbva-supervisory-relations"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-management-solutions",
+      "target": "project-ms-clarification-prioritization"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-management-solutions",
+      "target": "project-ms-data-migration"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-management-solutions",
+      "target": "project-ms-insurance-fraud-monitoring"
+    },
+    {
+      "relation": "references_metric",
+      "source": "role-management-solutions",
+      "target": "ACH-MS-CLARIFICATIONS-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "role-management-solutions",
+      "target": "ACH-MS-CLARIFICATIONS-002"
+    },
+    {
+      "relation": "references_metric",
+      "source": "role-management-solutions",
+      "target": "ACH-MS-FRAUD-001"
+    },
+    {
+      "relation": "references_metric",
+      "source": "role-management-solutions",
+      "target": "ACH-MS-MIGRATION-001"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "project-ms-clarification-prioritization"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "project-ms-data-migration"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "project-ms-insurance-fraud-monitoring"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "role-bbva"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "role-management-solutions"
+    },
+    {
+      "relation": "links_to",
+      "source": "role-retrieval-index",
+      "target": "role-teaching"
+    }
+  ],
+  "schema_version": 1
+}

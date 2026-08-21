@@ -1,0 +1,138 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "Management Solutions",
+    "period": "2020-2021"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "3fb4faccf9fba21f9cb9ac6fb105711272a0aa219132685f9d1a6a25b762cce6",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [
+    "../achievements/metrics.md",
+    "../roles/previous_roles.md"
+  ],
+  "metric_refs": [
+    "ACH-MS-CLARIFICATIONS-001",
+    "ACH-MS-CLARIFICATIONS-002"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-ms-clarification-prioritization",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization"
+      ],
+      "level": 1,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Management Solutions — Clarification Prioritization"
+    },
+    {
+      "content": "Machine-learning and operational-analytics engagement for prioritizing clarification cases so analysts could focus effort on higher-value reviews and use capacity more effectively.",
+      "end_line": 23,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "Evidence supports:\n\n- developing a PySpark-based analytical model for predicting/prioritizing false clarifications\n- building an interactive MicroStrategy/reporting layer for analyst use\n- collaborating with fraud-prevention specialists to incorporate domain expertise\n- translating model outputs into operational prioritization rather than treating prediction as an isolated deliverable\n- communicating performance and workflow implications to client stakeholders\n\nThe documented impact belongs to the project/team. Personal contribution is strongest for model/dashboard implementation and cross-functional analytical delivery.",
+      "end_line": 35,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 24,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "- PySpark / Spark\n- SQL / analytical data preparation\n- machine learning and prioritization\n- operational analytics\n- MicroStrategy / interactive reporting\n- expert-rule/domain integration",
+      "end_line": 44,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Methods and technologies"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+      "semantic_type": "technology",
+      "start_line": 36,
+      "title": "Methods and technologies"
+    },
+    {
+      "content": "- `ACH-MS-CLARIFICATIONS-001` — quarterly savings\n- `ACH-MS-CLARIFICATIONS-002` — analyst processing capacity\n\nNumeric wording must be hydrated from the achievement registry with its original qualifiers and denominators.",
+      "end_line": 51,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Outcome references"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::outcome-references",
+      "semantic_type": "outcome",
+      "start_line": 45,
+      "title": "Outcome references"
+    },
+    {
+      "content": "> Developed a PySpark-based clarification-prioritization model and interactive reporting workflow, combining machine learning with fraud-prevention expertise to improve analyst focus and operational capacity.",
+      "end_line": 55,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 52,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Preserve project/team attribution for quantified impact.\n- Do not present prioritization as autonomous case adjudication.\n- Do not merge the savings and capacity metrics into a new synthetic KPI.",
+      "end_line": 61,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 56,
+      "title": "Boundaries"
+    },
+    {
+      "content": "- [Management Solutions role](../roles/previous_roles.md)\n- [Achievement registry](../achievements/metrics.md)",
+      "end_line": 65,
+      "heading_path": [
+        "Management Solutions — Clarification Prioritization",
+        "Related records"
+      ],
+      "level": 2,
+      "section_id": "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::related-records",
+      "semantic_type": "section",
+      "start_line": 62,
+      "title": "Related records"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/consulting_clarification_prioritization.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

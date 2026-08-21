@@ -1,0 +1,216 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "9ee365128e03f6adaa12179f7133e2c10d46761ab31ffa566654736b1a5400de",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Summary\nA 2026 process-architecture initiative for regulatory operations, combining workflow/state design, SLAs, role clarity, Google Workspace automation and proposed LLM assistance.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "57c76287843452db93d76530600473316aa57626a47b9be84a4ffd34534a154a",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Business problem"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Business problem\nThe existing regulatory workflow relied on manual capture, ambiguous status definitions and limited visibility. The goal was to define a more traceable operating model that could support faster handling, explicit escalation and later automation.",
+      "title": "Business problem"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::contribution-and-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "2c9ab4b48b8de783274d146305d7233defd71946ec74f279ecb57f2e6495f8c0",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Contribution and ownership"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Contribution and ownership\nEvidence supports technical leadership in:\n\n- mapping the As-Is process and designing the To-Be workflow\n- defining ticket states and transitions\n- parameterizing SLAs and escalation logic\n- documenting roles and responsibilities through RACI\n- producing flow diagrams and executive infographics\n- proposing Gemini/LLM assistance for summarizing regulatory changes and pre-assessing possible impact\n- connecting Google Sheets, Forms, Apps Script, workflow tooling and reporting concepts",
+      "title": "Contribution and ownership"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::lifecycle",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "27bd41812f850a5bb41010a2812af884205d4d598bb87a165fccc1e491ea1e9b",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Lifecycle"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Lifecycle\nThe design was approved for phased implementation. Time reductions were projected targets, not fully validated production outcomes at the source cutoff.",
+      "title": "Lifecycle"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::technologies-and-artifacts",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "32ab29f536bfbfac4be308b5667f09ec8af6287815090786fa14bb2fb3c4f52f",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Technologies and artifacts"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Technologies and artifacts\n- Google Sheets and Forms\n- Apps Script\n- Google Workspace workflow tooling\n- Looker/reporting concepts\n- Gemini / LLM-assisted semantic analysis\n- RACI, state models and process diagrams",
+      "title": "Technologies and artifacts"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "6456ffdae809bcf8eb9ca10ba49bfcd4ca85d107d6588194f546541012bbb317",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Approved public narrative"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Approved public narrative\n> Led the To-Be design of a regulatory workflow with explicit states, SLAs, escalation and Google Workspace automation, incorporating proposed Gemini assistance for semantic change analysis.",
+      "title": "Approved public narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation."
+      ],
+      "content_hash": "1bbd520b13c89860a92926d8a477e71c6071193dcfae4d2c28463f9a4412ac47",
+      "cv_eligible": true,
+      "heading_path": [
+        "Supervisory Relations To-Be Architecture",
+        "Boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-supervisory-relations",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/bbva_supervisory_relations.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not report projected SLA improvements as achieved production results.\n- Do not claim that every proposed AI component was deployed.\n- Preserve the distinction between process architecture, approved implementation plan and live operation.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-bbva-supervisory-relations",
+  "schema_version": 1
+}

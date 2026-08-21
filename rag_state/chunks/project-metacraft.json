@@ -1,0 +1,422 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "8ea0c4f34632095a3b2b96dd6013298bbc32ac1fe1988e2a4de563d4d1761f26",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Summary\nMetaCraft is a Python toolkit for **enriching, validating, comparing and transforming metadata/schema definitions** around pandas DataFrames. It uses YAML as a portable schema representation and adds data-quality, drift and AI-assisted research capabilities.\n\nThe project is strong evidence for data quality, metadata engineering and reusable analytical tooling.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::update",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "34ce45765f7d25f120d869ba49bff3b2b34dc937e48a505af7fe01e2f24d5bad",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`update`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`update`\nEnriches YAML schemas with observed statistics and sketches from a DataFrame.\n\nDocumented statistical sketches include:\n\n- t-digest\n- HyperLogLog",
+      "title": "`update`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::validate",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "e1f60274c1f348c006f41a84bf67a79808f95fb9fddf9bccf5397f2714991424",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`validate`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`validate`\nChecks consistency between a DataFrame and schema definitions, including:\n\n- data types\n- ranges\n- nullability / missingness",
+      "title": "`validate`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::compare",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "ef4c49e55cc824f7e3a7cb0ae9f8c481e935792f7ccd71dd74221444548d6eaa",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`compare`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`compare`\nDetects schema drift between schema versions.",
+      "title": "`compare`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::export-schema",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "cbda1f2dea064960963af0d363f3783847825a95ffd4f94ca939c57b0fd3a653",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`export_schema`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`export_schema`\nConverts schema definitions into formats such as:\n\n- Spark\n- SQL",
+      "title": "`export_schema`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::generate-expectations",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "bd08e34425770e0eae36c5409aa5bf3565c87819a30c70c017792a5e8aff7a7a",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`generate_expectations`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`generate_expectations`\nGenerates Great Expectations suites from schema/metadata definitions.",
+      "title": "`generate_expectations`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::transform",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "dbacba9516f22fbd5a0a369aac07972c75c3452466321b42adb3bea12fa47f1c",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`transform`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`transform`\nAdjusts a DataFrame to conform to schema definitions.",
+      "title": "`transform`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::quality-report",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "ef0429a1c94921280e0c496f181ff9ccd7722166799df54526599017ccca2012",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`quality_report`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`quality_report`\nProduces a simple data-quality score combining completeness and drift signals.",
+      "title": "`quality_report`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::core-capabilities::research",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "aefb9e6309d3a7dbd6d18293562cca153259fc637621659280be4c6ffdbd4c51",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Core capabilities",
+        "`research`"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "`research`\nUses OpenAI integration to explore relationships and anomalies in data/metadata context.",
+      "title": "`research`"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::engineering-features",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "169fc437cf82cfd7a68167d4f86dc6d830714dec015556f71910ab425f536f75",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Engineering features"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Engineering features\n- YAML files can be read locally or from URLs\n- remote ZIP archives containing multiple schemas can be downloaded and processed\n- optional local cache\n- internal schema representation exposed through editable `metadata.df`\n- DataFrame-side edits can be propagated back to YAML\n- configurable logging\n- reusable OpenAI client / API configuration\n- per-call overrides of model parameters",
+      "title": "Engineering features"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::technologies-concepts-evidenced",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "d6285c5d05901a6c3d610a6dd3314bba3332250e3c168be5f9b27ab8a74b133e",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Technologies / concepts evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Technologies / concepts evidenced\n- Python\n- Pandas\n- YAML\n- data validation\n- data quality\n- schema drift\n- metadata management\n- Spark/SQL schema generation\n- Great Expectations\n- approximate statistics / sketches\n- t-digest\n- HyperLogLog / cardinality estimation\n- remote resource handling\n- OpenAI API integration\n- configurable software APIs",
+      "title": "Technologies / concepts evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "2179243ecbf40787e348c87973104a7b5b28693d007669c15f665e6a5aa9d783",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "CV positioning",
+        "Data Scientist / Data Platform"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Data Scientist / Data Platform\n> Built a Python metadata and data-quality toolkit supporting schema enrichment, validation, drift detection, Spark/SQL export and Great Expectations generation.",
+      "title": "Data Scientist / Data Platform"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::cv-positioning::genai-data-quality",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "b9b2d685dedf4f48b6ace9382578917807fb1767f516682d82a4015fa762c266",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "CV positioning",
+        "GenAI + Data Quality"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "GenAI + Data Quality\n> Integrated OpenAI-assisted analysis into a schema-driven data-quality toolkit while preserving deterministic validation and metadata contracts.",
+      "title": "GenAI + Data Quality"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-metacraft::metacraft::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere."
+      ],
+      "content_hash": "d293c5ccb57b1e64c285dee43f7f60ec7d078442752636f5f5e2157038e3f9bf",
+      "cv_eligible": true,
+      "heading_path": [
+        "MetaCraft",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-metacraft",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/metacraft.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Usage constraints\n- Do not describe MetaCraft as a full enterprise data catalog.\n- Do not infer production adoption counts without a public source.\n- Treat Great Expectations as demonstrated working integration, but do not claim platform-level administration unless supported elsewhere.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-metacraft",
+  "schema_version": 1
+}

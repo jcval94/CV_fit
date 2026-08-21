@@ -1,0 +1,390 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::identity",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "b67a465fdc37fb940ce5f86c99a8007c0a060954d10d278ded1cd6a80d6be9ab",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Identity"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Identity\n- **Full name:** José Carlos Del Valle López\n- **Professional name:** José Carlos Del Valle\n- **Location:** Mexico City, Mexico\n- **LinkedIn:** https://www.linkedin.com/in/jose-carlos-del-valle/\n- **GitHub:** https://github.com/jcval94",
+      "title": "Identity"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::professional-positioning",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "c981a1c6ad70da71d23f3922fd01f732f75999194eb13d0ced73c1d5234c575c",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Professional positioning"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Professional positioning\n- **Current company:** BBVA México\n- **Current corporate level:** Expert\n- **Market-facing role:** Senior Data Scientist\n- **Preferred general CV positioning:** Líder de Data Science, Modelado e Inteligencia Artificial\n- **Professional experience:** 8+ years\n- **Primary focus:** Data Science, Machine Learning, Generative AI, Advanced Analytics and production-grade analytical systems",
+      "title": "Professional positioning"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::professional-experience-basis",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "c514a135578a2549ff86300ccddeca192d16378b9d53dabd0f82e4ebf037f9db",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Professional-experience basis"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Professional-experience basis\nThe canonical **8+ years** figure is based on the enumerated professional chronology beginning in October 2017. Earlier university teaching/service, IMEF leadership and academic activities are valuable supporting experience, but they are tracked separately and are not used to inflate formal professional tenure.",
+      "title": "Professional-experience basis"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::canonical-summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "6b1c652d3409fce270b42a0e36f8e3ba78a66a2f0727be363c18f5a2f491b920",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Canonical summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Canonical summary\nActuary and Data Scientist with 8+ years of professional experience building analytical, statistical and AI solutions across banking, consulting and other business environments. Holds a Master's degree in Data Science and combines a strong quantitative foundation with hands-on ownership of Python, PySpark, SQL, ML pipelines, production code and business-facing analytical products.\n\nExperience spans the full lifecycle of data products: problem framing, data extraction and quality, feature engineering, statistical and machine-learning modeling, validation, deployment, monitoring, automation, visualization and communication with senior business stakeholders. Has led and independently owned end-to-end initiatives while also contributing to broader team-owned systems where the evidence supports shared rather than exclusive ownership.\n\nParticularly strong at translating complex data into measurable business outcomes and production systems rather than treating modeling as an isolated activity. Comfortable operating between business, analytics, engineering, technology, compliance and executive stakeholders.",
+      "title": "Canonical summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::core-professional-areas",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "be8bfe73af418b7b8ea763258a7ec8758c349b154a090b2ee5eab8bcfffb026b",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Core professional areas"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Core professional areas\n- Data Science and statistical modeling\n- Machine Learning and predictive analytics\n- Generative AI, LLM applications, RAG and agentic workflows\n- Fraud, anomaly and behavioral detection\n- Customer analytics and commercial optimization\n- Forecasting and time-series analysis\n- Big Data processing and analytical ETLs\n- Productionization, data quality and model monitoring\n- Business Intelligence and executive analytics\n- Analytical governance and decision support",
+      "title": "Core professional areas"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::technical-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "835ed1752c67a27c39112a83b372c9932c75b5678bd14c36a9cf7819806739b3",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Technical ownership"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Technical ownership\nJosé Carlos typically works beyond isolated model development. Depending on the project, his scope can include:\n\n1. Translating a business problem into an analytical design.\n2. Extracting, integrating and validating large datasets.\n3. Developing statistical, ML or AI approaches.\n4. Writing and maintaining production-oriented Python, PySpark and SQL code.\n5. Building reusable pipelines and automated analytical processes.\n6. Integrating outputs into operational or business workflows.\n7. Monitoring performance, data quality and model behavior.\n8. Presenting findings, trade-offs and business impact to senior stakeholders.\n\nProject files remain authoritative for the exact ownership verb: `owned`, `led`, `co-developed`, `contributed`, `operated`, `maintained` or `reviewed`.",
+      "title": "Technical ownership"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::technical-themes",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "f2c0d2529732a756f9dede4b8b793bc3bf0e4d03aa1bd58ee2c44927e7b82947",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Technical themes"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Technical themes\nThis profile intentionally lists only broad, defensible capability areas. Exact proficiency must be read from `skills.md` and must never be flattened during CV generation.\n\n- **Programming / data:** Python, SQL, PySpark / Spark, R\n- **Machine Learning / statistics:** supervised and unsupervised learning, tree-based methods, anomaly detection, interpretable ML, statistical modeling, model evaluation and forecasting\n- **Generative AI:** LLM application design, retrieval-grounded / RAG workflows, prompting, structured outputs, evaluation, guardrails and agentic patterns\n- **Data engineering / production:** ETL, data quality, analytical pipelines, testing, productionization, monitoring and CI/CD-oriented delivery\n- **Cloud / platforms:** AWS and Google Cloud / Google Workspace analytical workloads at project-dependent depth\n- **BI / visualization:** Tableau, Power BI, Looker Studio and analytical visualization\n\nSupporting MLOps or platform technologies such as Docker, MLflow, Airflow, Kubernetes, Kubeflow and Kafka must be represented only at the proficiency level recorded in `skills.md`.",
+      "title": "Technical themes"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::business-and-domain-experience",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "944d33282b7a4dcbbd64b01996a2460710977a2a4a5977b4bc5870c1e6f11e81",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Business and domain experience"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Business and domain experience\nStrongest domain experience is in financial services and banking, including:\n\n- Remote and assisted banking\n- Customer contact strategy\n- Product recommendation and cross-sell\n- Fraud and inappropriate-practice detection\n- Operational and commercial analytics\n- Profitability and productivity measurement\n- Forecasting and demand analysis\n- ATM / physical-network analytics\n- Sustainability and carbon-footprint KPIs\n\nAdditional professional exposure includes insurance, healthcare and consulting-oriented analytical environments.",
+      "title": "Business and domain experience"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::differentiators",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "4be3bd52ba8d28806d17e980f4eb0f719ca57e542552683ac4d00cb4815c1e7d",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Differentiators"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Differentiators\n- Strong actuarial, mathematical and statistical foundation.\n- Bridges modeling, software ownership and business implementation.\n- Has delivered measurable improvements in commercial, operational, fraud/compliance and knowledge-management workflows.\n- Comfortable leading projects while remaining deeply hands-on technically.\n- Experience communicating with senior management and cross-functional stakeholders.\n- Builds reusable analytical tooling and open-source projects in addition to enterprise work.\n- Practical experience with modern AI-assisted development, evaluation and agentic workflows.",
+      "title": "Differentiators"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::languages",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "7c7d8da79f6226fb2bc6fcb603fa490d6c83a85615351b6c26083675b6aeb208",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Languages"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Languages\n- **Spanish:** Native\n- **English:** C1 / advanced professional proficiency\n- **French:** A2",
+      "title": "Languages"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::target-role-families",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "2808c064194643585ae2d793ffa71a9ca50d39085fe9341c499b5078c4214e97",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Target role families"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Target role families\nThis source of truth may be tailored toward roles such as:\n\n- Senior Data Scientist\n- Lead Data Scientist\n- Applied Scientist\n- Senior AI / ML Engineer\n- Machine Learning Engineer\n- Generative AI Engineer\n- AI / Data Science Technical Lead\n- leadership-oriented Data & AI roles where technical/project leadership is the primary requirement\n\nFormal people-management scope must not be inferred from project leadership alone.",
+      "title": "Target role families"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "professional-profile::professional-profile::usage-rules",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "content_hash": "75f74e1daf7d84e9ce33a6f7837cf36873f7f63f521b194f3b6f11c9f9a2a518",
+      "cv_eligible": true,
+      "heading_path": [
+        "Professional Profile",
+        "Usage rules"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "professional-profile",
+      "record_type": "profile",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/profile.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Usage rules\n- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy.",
+      "title": "Usage rules"
+    }
+  ],
+  "record_id": "professional-profile",
+  "schema_version": 1
+}

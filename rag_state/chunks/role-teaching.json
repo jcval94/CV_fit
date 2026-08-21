@@ -1,0 +1,200 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "c438897f62b94f46b11b881933766212a400b4e19d13a19f5f40fd511147bf1e",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "DEV.F / Bécalos"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "DEV.F / Bécalos\n- **Role:** Sensei / Python instructor\n- **Period:** January 2022 – January 2023\n- **Commitment:** approximately 6 hours per week\n- **Subject:** introductory Python for Data Science\n- **Audience:** learners developing practical foundations in programming and data analysis\n- **Evidence strength:** high for role, period, subject and weekly commitment",
+      "title": "DEV.F / Bécalos"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos::reusable-description",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "697e628768ba472d592dcf1919ad6b9a221f27ff24aaaa186806c773180aa203",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "DEV.F / Bécalos",
+        "Reusable description"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "Reusable description\nTaught introductory Python for Data Science in the Bécalos/DEV.F ecosystem, combining conceptual explanation, practical exercises and support for learners building their first analytical workflows.",
+      "title": "Reusable description"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos::usage-boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "3d85d36bacf1dae1a854ed623ca115cbb070368f00dc6208dd05e6ffacee347b",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "DEV.F / Bécalos",
+        "Usage boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "Usage boundaries\n- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes.",
+      "title": "Usage boundaries"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::unam-academic-instruction-and-social-service",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "51bbe6e416f3988d49961ad9a12eeb1bb92b6b83bf6dbf2443b3fd798cdb4a99",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "UNAM academic instruction and social service"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "UNAM academic instruction and social service\nDuring the Bachelor's in Actuarial Science, public profile evidence and current user confirmation support:\n\n- approximately one semester as an assistant in Mathematical Analysis\n- university teaching/instruction in a preventive program for subjects with high failure rates\n- social-service experience carried out through teaching in the faculty\n\nThese activities are strong evidence of early quantitative communication, teaching and academic service. They are intentionally **not counted as formal professional-employment years** in the canonical `8+ years` figure.",
+      "title": "UNAM academic instruction and social service"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::imef-leadership-context",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "8819e4e535db3a4db9a2381c38c226a8c998c94856a4b9621a95a821b9a7bc64",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "IMEF leadership context"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "IMEF leadership context\nSeparate university leadership evidence includes service as **VP of Social Responsibility** in IMEF Universitario and participation in research/social-impact projects.\n\nUse this as supporting evidence for early leadership, initiative and social-impact work; do not represent it as full-time employment.",
+      "title": "IMEF leadership context"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::internal-technical-enablement",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "content_hash": "5c39e48d4e291520a64192dabb8f704912561a3fcdca6665040aeb1213195cf8",
+      "cv_eligible": true,
+      "heading_path": [
+        "Teaching and Knowledge Transfer",
+        "Internal technical enablement"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "role-teaching",
+      "record_type": "role",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/roles/teaching.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED"
+      ],
+      "text": "Internal technical enablement\nProfessional evidence also supports recurring knowledge transfer through:\n\n- technical presentations and internal analytical meetups\n- documentation and demos for analytical methodologies\n- Generative AI cases, workshops and community support\n- code review and peer guidance\n- public open-source documentation and examples\n\nThis is supporting leadership evidence. It must not be converted into formal people-management or program ownership without project-specific proof.",
+      "title": "Internal technical enablement"
+    }
+  ],
+  "record_id": "role-teaching",
+  "schema_version": 1
+}

@@ -1,0 +1,135 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2023-2024"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "eb947194089a0b2fd35f0110c8c3209197ed1fe7b4d805c6b72c9ff29fe497fb",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-BBVA-NBO-PRIVATE"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-next-best-offer",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 20,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi",
+      "semantic_type": "section",
+      "start_line": 19,
+      "title": "BBVA — Next Best Offer / CRMi"
+    },
+    {
+      "content": "CRMi/Next Best Offer is a multiproduct recommendation and population-prioritization workstream for remote banking. It combined customer segmentation, recurring recommendation labels, commercial restrictions and experimental measurement to make outreach more relevant and auditable.",
+      "end_line": 24,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::summary",
+      "semantic_type": "summary",
+      "start_line": 21,
+      "title": "Summary"
+    },
+    {
+      "content": "The channel needed to prioritize customer/product combinations without relying exclusively on banker intuition or increasing customer fatigue. A second problem was methodological: the team needed to determine whether recommendation-aligned sales were incremental rather than natural customer demand.",
+      "end_line": 28,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Business problem"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::business-problem",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "Business problem"
+    },
+    {
+      "content": "Evidence supports:\n\n- construction of SQL/PySpark population and segmentation logic\n- preparation and recurring release of analytical labels/layouts\n- integration of propensities and commercial eligibility rules\n- support for campaigns and prioritization across several financial product families\n- design/implementation of treatment-control evaluation for a weekly optimized label\n- diagnosis of sampling bias caused by non-homogeneous commercial restrictions\n- alignment of treatment/placebo filters before interpreting uplift\n- contribution to recarterization logic that removed ineligible customers and prioritized stronger prospects\n\nThe evidence does not support exclusive ownership of every underlying propensity model or the complete recommendation engine.",
+      "end_line": 43,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 29,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "- SQL and PySpark\n- Teradata\n- distributed analytical workflows\n- treatment/control and placebo logic\n- customer segmentation and eligibility rules\n- recurring operational layouts\n- business dashboards and campaign monitoring\n- interactive Streamlit/LLM prototype for explaining recommendations",
+      "end_line": 54,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Implementation evidence"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+      "semantic_type": "section",
+      "start_line": 44,
+      "title": "Implementation evidence"
+    },
+    {
+      "content": "- measurable commercial improvement is recorded in the private metric registry under `ACH-BBVA-NBO-PRIVATE`\n- the current public portfolio separately documents a high-value versus low-value customer-segment comparison; its exact interpretation belongs in the achievement registry\n- the experimental work produced a more reliable evaluation design by identifying and correcting control-group bias",
+      "end_line": 60,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Results"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::results",
+      "semantic_type": "outcome",
+      "start_line": 55,
+      "title": "Results"
+    },
+    {
+      "content": "> Built segmentation and eligibility logic for recurring Next Best Offer recommendations in remote banking, integrating model outputs with commercial restrictions and operational delivery.\n\n> Designed treatment/control evaluation for a recommendation workflow and diagnosed sampling bias caused by inconsistent eligibility filters.",
+      "end_line": 66,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Approved public narratives"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+      "semantic_type": "section",
+      "start_line": 61,
+      "title": "Approved public narratives"
+    },
+    {
+      "content": "- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts.",
+      "end_line": 72,
+      "heading_path": [
+        "BBVA — Next Best Offer / CRMi",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 67,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/bbva_next_best_offer.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-TRAJECTORY-2021-2023-CURATED",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

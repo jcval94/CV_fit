@@ -1,0 +1,188 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "1c73691f174662755933c65bd5a22175bab1bb0cb6326deee2914bc1b7163c74",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "education",
+  "record_type": "education",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 17,
+      "heading_path": [
+        "Education"
+      ],
+      "level": 1,
+      "section_id": "education::education",
+      "semantic_type": "section",
+      "start_line": 16,
+      "title": "Education"
+    },
+    {
+      "content": "- **Institution:** Universidad Panamericana\n- **Degree:** Maestría en Ciencia de Datos\n- **Period:** June 2023 – December 2024\n- **Final grade:** 9.6 / 10\n- **Location:** Mexico\n- **Status:** Completed",
+      "end_line": 26,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science"
+      ],
+      "level": 2,
+      "section_id": "education::education::master-s-degree-in-data-science",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Master's Degree in Data Science"
+    },
+    {
+      "content": "Graduate-level training focused on the mathematical, statistical and computational foundations required to design and implement Data Science solutions. The program strengthened practical and theoretical capabilities in areas such as statistical modeling, machine learning, data engineering, cloud-based analytics, model evaluation, visualization and applied AI.\n\nThe degree complements José Carlos's actuarial background by extending his quantitative training toward modern production-oriented Data Science and AI workflows.",
+      "end_line": 32,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science",
+        "Academic depth"
+      ],
+      "level": 3,
+      "section_id": "education::education::master-s-degree-in-data-science::academic-depth",
+      "semantic_type": "section",
+      "start_line": 27,
+      "title": "Academic depth"
+    },
+    {
+      "content": "Preferred concise CV form:\n\n> **M.Sc. / Master's in Data Science — Universidad Panamericana, 2023–2024**\n\nWhen academic performance is relevant, the final grade **9.6/10** may be included.\n\n---",
+      "end_line": 42,
+      "heading_path": [
+        "Education",
+        "Master's Degree in Data Science",
+        "How to represent this degree"
+      ],
+      "level": 3,
+      "section_id": "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+      "semantic_type": "section",
+      "start_line": 33,
+      "title": "How to represent this degree"
+    },
+    {
+      "content": "- **Institution:** Universidad Nacional Autónoma de México (UNAM)\n- **Degree:** Licenciatura en Actuaría\n- **Period:** 2013 – 2018\n- **Status:** Completed",
+      "end_line": 49,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science"
+      ],
+      "level": 2,
+      "section_id": "education::education::bachelor-s-degree-in-actuarial-science",
+      "semantic_type": "section",
+      "start_line": 43,
+      "title": "Bachelor's Degree in Actuarial Science"
+    },
+    {
+      "content": "Actuarial training provided a rigorous foundation in mathematics, probability, statistics, financial and risk-oriented quantitative reasoning. This background underpins later work in statistical modeling, machine learning, experimentation, forecasting and risk analytics.\n\nRelevant areas of quantitative depth include:\n\n- Probability and statistical inference\n- Mathematical analysis and calculus\n- Regression and statistical modeling\n- Risk and uncertainty modeling\n- Financial and actuarial mathematics\n- Optimization-oriented quantitative reasoning\n- Data analysis and computational problem solving\n\nThese areas describe the degree's quantitative foundation and should not be interpreted as an exhaustive list of exact course titles.",
+      "end_line": 65,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "Quantitative foundation"
+      ],
+      "level": 3,
+      "section_id": "education::education::bachelor-s-degree-in-actuarial-science::quantitative-foundation",
+      "semantic_type": "section",
+      "start_line": 50,
+      "title": "Quantitative foundation"
+    },
+    {
+      "content": "Public profile evidence plus current user confirmation support the following activities during the UNAM period:\n\n- Assistant in **Mathematical Analysis** for approximately six months.\n- University teaching/instruction in a preventive academic program for subjects with high failure rates for approximately six months.\n- Current user confirmation clarifies that university teaching also formed part of his **social-service experience** in the faculty.\n- Participation in **IMEF Universitario**, including service as **VP of Social Responsibility** and involvement in research/social-impact projects.\n- **Second place in the Gauss Test**.\n\nThese activities are valuable evidence of early quantitative communication, teaching and leadership. They are not added to formal professional-employment tenure.",
+      "end_line": 77,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "Academic activities and distinctions"
+      ],
+      "level": 3,
+      "section_id": "education::education::bachelor-s-degree-in-actuarial-science::academic-activities-and-distinctions",
+      "semantic_type": "section",
+      "start_line": 66,
+      "title": "Academic activities and distinctions"
+    },
+    {
+      "content": "Preferred concise CV form:\n\n> **B.Sc. / Bachelor's in Actuarial Science — Universidad Nacional Autónoma de México (UNAM), 2013–2018**\n\nFor roles requiring deeper quantitative evidence, emphasize the degree's grounding in probability, statistics, mathematics and risk modeling rather than listing generic Data Science keywords.\n\n---",
+      "end_line": 87,
+      "heading_path": [
+        "Education",
+        "Bachelor's Degree in Actuarial Science",
+        "How to represent this degree"
+      ],
+      "level": 3,
+      "section_id": "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+      "semantic_type": "section",
+      "start_line": 78,
+      "title": "How to represent this degree"
+    },
+    {
+      "content": "The combination of Actuarial Science and a Master's in Data Science is a core part of José Carlos's professional positioning:\n\n1. **Actuarial Science** provides the mathematical, statistical and risk-oriented base.\n2. **Data Science** extends that base into modern machine learning, data engineering and AI applications.\n3. Professional experience connects both degrees to production systems and measurable business outcomes.\n4. Earlier teaching, social-service and IMEF leadership provide supporting evidence of communication and leadership without being counted as formal employment years.",
+      "end_line": 96,
+      "heading_path": [
+        "Education",
+        "Education positioning"
+      ],
+      "level": 2,
+      "section_id": "education::education::education-positioning",
+      "semantic_type": "section",
+      "start_line": 88,
+      "title": "Education positioning"
+    },
+    {
+      "content": "",
+      "end_line": 98,
+      "heading_path": [
+        "Education",
+        "Technical Education"
+      ],
+      "level": 2,
+      "section_id": "education::education::technical-education",
+      "semantic_type": "technology",
+      "start_line": 97,
+      "title": "Technical Education"
+    },
+    {
+      "content": "- **Institution:** Centro de Computación Profesional de México (CCPM)\n- **Program:** Técnico en Sistemas Computacionales / Systems Computer Technician\n- **Period:** December 2011 – August 2013\n- **Status:** Completed\n- **Source:** current public professional portfolio\n- **CV priority:** supporting only; normally omit from senior one-page CVs unless early technical formation is relevant",
+      "end_line": 107,
+      "heading_path": [
+        "Education",
+        "Technical Education",
+        "Computer Systems Technician"
+      ],
+      "level": 3,
+      "section_id": "education::education::technical-education::computer-systems-technician",
+      "semantic_type": "section",
+      "start_line": 99,
+      "title": "Computer Systems Technician"
+    },
+    {
+      "content": "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure.",
+      "end_line": 114,
+      "heading_path": [
+        "Education",
+        "Usage rules"
+      ],
+      "level": 2,
+      "section_id": "education::education::usage-rules",
+      "semantic_type": "boundary",
+      "start_line": 108,
+      "title": "Usage rules"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/education.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-LINKEDIN-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

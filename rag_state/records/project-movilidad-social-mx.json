@@ -1,0 +1,106 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "Python",
+    "project_type": "analytical_public_app",
+    "source_repo": "https://github.com/jcval94/movilidad_social_mx"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "medium",
+  "content_hash": "e0a6de55ce0d37f2cb8adfc45fb391ca2634c936120219d1a4412ededf8d5f48",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-movilidad-social-mx",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Movilidad Social en México"
+      ],
+      "level": 1,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Movilidad Social en México"
+    },
+    {
+      "content": "A public Streamlit application for exploring social mobility in Mexico through cohort comparisons, transition views, probabilistic classification and interpretable recommendation patterns.\n\nThe strongest signal is analytical product design for mixed audiences: the repository explicitly separates value for technical users from clear explanations for the general public.",
+      "end_line": 25,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "- modular Streamlit application\n- filters and base-versus-subgroup comparisons\n- cohort/time evolution views\n- probabilistic socioeconomic-class display\n- KNN/descriptive-cluster recommendation patterns\n- methodological interpretation guidance\n- explicit warnings against causal overreach and small-sample conclusions\n- public deployment and local setup instructions\n- Gemini/OpenAI explanation layer configured through secrets\n- container/Kubernetes deployment materials present in the repository",
+      "end_line": 38,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Observable capabilities"
+      ],
+      "level": 2,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+      "semantic_type": "section",
+      "start_line": 26,
+      "title": "Observable capabilities"
+    },
+    {
+      "content": "The README identifies EMOVI 2017 data and describes model/data artifacts used by the application. Results are framed as probabilistic or descriptive rather than causal guarantees.",
+      "end_line": 42,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Data and methods"
+      ],
+      "level": 2,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::data-and-methods",
+      "semantic_type": "section",
+      "start_line": 39,
+      "title": "Data and methods"
+    },
+    {
+      "content": "> Developed a Streamlit experience for exploring social mobility in Mexico, combining cohort analysis, probabilistic classification, interpretable patterns and guidance for technical and non-technical audiences.",
+      "end_line": 46,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 43,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- A public audit marks the repository as a fork; do not attribute the entire codebase as original work without a contribution-level comparison.\n- Do not claim policy impact or user/adoption counts.\n- Do not treat Docker/Kubernetes files as proof of operating a large production platform.\n- Preserve the non-causal interpretation rules stated in the project.",
+      "end_line": 52,
+      "heading_path": [
+        "Movilidad Social en México",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-movilidad-social-mx::movilidad-social-en-m-xico::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 47,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/movilidad_social_mx.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public_supporting",
+  "visibility": "public"
+}

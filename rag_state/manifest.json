@@ -1,5 +1,636 @@
 {
   "pipeline_version": 1,
-  "source_commit": null,
-  "sources": {}
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "sources": {
+    "experience/_meta/conflicts.md": {
+      "chunk_ids": [
+        "governance-conflict-log::conflict-and-reconciliation-log",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-bbva-expert-start",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-btc-uplift",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-crmi-metrics",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-llm-attribution",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-metric-families",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-fraud-review-efficiency-wording",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-aife-date",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-insideforest-scope",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-devf-end-date",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-experience-duration",
+        "governance-conflict-log::conflict-and-reconciliation-log::conflict-platform-naming"
+      ],
+      "record_hash": "23bc7edaa7af4cd329268830f82d8494c2fe3a773bf3c0b612108914ab4da005",
+      "record_id": "governance-conflict-log",
+      "source_hash": "23bc7edaa7af4cd329268830f82d8494c2fe3a773bf3c0b612108914ab4da005"
+    },
+    "experience/_meta/data_contract.md": {
+      "chunk_ids": [
+        "governance-data-contract::experience-data-contract",
+        "governance-data-contract::experience-data-contract::required-frontmatter",
+        "governance-data-contract::experience-data-contract::source-priority",
+        "governance-data-contract::experience-data-contract::source-priority::credential-metadata-exception",
+        "governance-data-contract::experience-data-contract::confidence",
+        "governance-data-contract::experience-data-contract::ownership-vocabulary",
+        "governance-data-contract::experience-data-contract::professional-tenure-semantics",
+        "governance-data-contract::experience-data-contract::skill-proficiency",
+        "governance-data-contract::experience-data-contract::canonical-routing",
+        "governance-data-contract::experience-data-contract::metric-semantics",
+        "governance-data-contract::experience-data-contract::privacy-and-confidentiality",
+        "governance-data-contract::experience-data-contract::ingestion-workflow",
+        "governance-data-contract::experience-data-contract::output-policy"
+      ],
+      "record_hash": "d174eff3392da5e57d2a3db7e674ea842aa692c8fcad02b69be37c4814ad390a",
+      "record_id": "governance-data-contract",
+      "source_hash": "d174eff3392da5e57d2a3db7e674ea842aa692c8fcad02b69be37c4814ad390a"
+    },
+    "experience/_meta/open_questions.md": {
+      "chunk_ids": [
+        "governance-open-questions::open-evidence-questions",
+        "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-btc-metric-semantics",
+        "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-crmi-metric-semantics",
+        "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-ms-migration-scale",
+        "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-bbva-project-ownership",
+        "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-genai-production-boundaries",
+        "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-open-source-adoption",
+        "governance-open-questions::open-evidence-questions::priority-3-completeness::q-credential-metadata",
+        "governance-open-questions::open-evidence-questions::priority-3-completeness::q-original-artifacts",
+        "governance-open-questions::open-evidence-questions::resolved-items-removed-from-this-backlog",
+        "governance-open-questions::open-evidence-questions::intake-rule"
+      ],
+      "record_hash": "e8f6430d3eff18e8b30129387d6673cbc7b84540ad1325734ac2754aea15b5c2",
+      "record_id": "governance-open-questions",
+      "source_hash": "e8f6430d3eff18e8b30129387d6673cbc7b84540ad1325734ac2754aea15b5c2"
+    },
+    "experience/achievements/metrics.md": {
+      "chunk_ids": [
+        "achievement-metrics::ACH-GENAI-NORA-001",
+        "achievement-metrics::ACH-GENAI-NORA-002",
+        "achievement-metrics::ACH-GENAI-NORA-003",
+        "achievement-metrics::ACH-GENAI-NORA-004",
+        "achievement-metrics::ACH-BBVA-ATM-001",
+        "achievement-metrics::ACH-BBVA-SEGMENTATION-001",
+        "achievement-metrics::ACH-BBVA-FRAUD-REVIEW-001",
+        "achievement-metrics::ACH-BBVA-FRAUD-DETECTION-001",
+        "achievement-metrics::ACH-MS-FRAUD-001",
+        "achievement-metrics::ACH-MS-CLARIFICATIONS-001",
+        "achievement-metrics::ACH-MS-CLARIFICATIONS-002",
+        "achievement-metrics::ACH-MS-MIGRATION-001",
+        "achievement-metrics::ACH-REPORTING-TIME-001",
+        "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
+        "achievement-metrics::ACH-OSS-INSIDEFOREST-002",
+        "achievement-metrics::ACH-OSS-INSIDEFOREST-003",
+        "achievement-metrics::ACH-OSS-INSIDEFOREST-004",
+        "achievement-metrics::ACH-GITHUB-DELDEL-001",
+        "achievement-metrics::ACH-GITHUB-NARRATIVE-DNA-001",
+        "achievement-metrics::ACH-GITHUB-NARRATIVE-DNA-002",
+        "achievement-metrics::ACH-RESEARCH-RISK-001",
+        "achievement-metrics::ACH-BBVA-BTC-PRIVATE",
+        "achievement-metrics::ACH-BBVA-NBO-PRIVATE",
+        "achievement-metrics::ACH-BBVA-COMPLIANCE-INTERNAL",
+        "achievement-metrics::ACH-BBVA-REMOTE-BANKING-PRIVATE"
+      ],
+      "record_hash": "7a3c09fb2cdfb9303405e6d368d89729a64bb3d015a911e23e76c4a2ebe4d79b",
+      "record_id": "achievement-metrics",
+      "source_hash": "7a3c09fb2cdfb9303405e6d368d89729a64bb3d015a911e23e76c4a2ebe4d79b"
+    },
+    "experience/certifications.md": {
+      "chunk_ids": [
+        "certifications::certifications",
+        "certifications::cert-cs50-harvardx-2020",
+        "certifications::cert-tableau-desktop-specialist-2020",
+        "certifications::cert-psm-i-2020",
+        "certifications::cert-data-science-navarra-2022",
+        "certifications::cert-rutgers-supply-chain-2022",
+        "certifications::cert-aws-sagemaker-2021",
+        "certifications::cert-cs50-ai-python-2020",
+        "certifications::cert-salesforce-einstein-2020",
+        "certifications::cert-ibm-analyzing-data-python-2019",
+        "certifications::cert-ibm-ds-ml-capstone-2019",
+        "certifications::cert-ibm-ml-python-2019",
+        "certifications::cert-ibm-python-data-science-2019",
+        "certifications::cert-ibm-visualizing-data-python-2019",
+        "certifications::cert-ibm-python-101-2019",
+        "certifications::cert-cs50-course-record-2020",
+        "certifications::certifications::known-credentials-requiring-metadata-reconciliation",
+        "certifications::cert-pending-genai",
+        "certifications::cert-pending-uc3m-ml",
+        "certifications::certifications::selection-rules-for-generated-cvs"
+      ],
+      "record_hash": "23e49584b36a89378d4b17ede3a1ea2c96aa702c8f1c370cecd4145532668239",
+      "record_id": "certifications",
+      "source_hash": "23e49584b36a89378d4b17ede3a1ea2c96aa702c8f1c370cecd4145532668239"
+    },
+    "experience/education.md": {
+      "chunk_ids": [
+        "education::education::master-s-degree-in-data-science",
+        "education::education::master-s-degree-in-data-science::academic-depth",
+        "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+        "education::education::bachelor-s-degree-in-actuarial-science",
+        "education::education::bachelor-s-degree-in-actuarial-science::quantitative-foundation",
+        "education::education::bachelor-s-degree-in-actuarial-science::academic-activities-and-distinctions",
+        "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+        "education::education::education-positioning",
+        "education::education::technical-education::computer-systems-technician",
+        "education::education::usage-rules"
+      ],
+      "record_hash": "1c73691f174662755933c65bd5a22175bab1bb0cb6326deee2914bc1b7163c74",
+      "record_id": "education",
+      "source_hash": "1c73691f174662755933c65bd5a22175bab1bb0cb6326deee2914bc1b7163c74"
+    },
+    "experience/profile.md": {
+      "chunk_ids": [
+        "professional-profile::professional-profile::identity",
+        "professional-profile::professional-profile::professional-positioning",
+        "professional-profile::professional-profile::professional-experience-basis",
+        "professional-profile::professional-profile::canonical-summary",
+        "professional-profile::professional-profile::core-professional-areas",
+        "professional-profile::professional-profile::technical-ownership",
+        "professional-profile::professional-profile::technical-themes",
+        "professional-profile::professional-profile::business-and-domain-experience",
+        "professional-profile::professional-profile::differentiators",
+        "professional-profile::professional-profile::languages",
+        "professional-profile::professional-profile::target-role-families",
+        "professional-profile::professional-profile::usage-rules"
+      ],
+      "record_hash": "99f552fb72b1d8e7f41e2b875dd0a0d2fe9c9806a03d71d0d2f8abf30d99da6d",
+      "record_id": "professional-profile",
+      "source_hash": "99f552fb72b1d8e7f41e2b875dd0a0d2fe9c9806a03d71d0d2f8abf30d99da6d"
+    },
+    "experience/projects/bbva_atm_analytics.md": {
+      "chunk_ids": [
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::summary",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::business-problems",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::public-outcome",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::approved-public-narrative",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::boundaries"
+      ],
+      "record_hash": "4ac2b5538767381257fcf9801b291006180177e15c44941685a4b7d180d16dd1",
+      "record_id": "project-bbva-atm-analytics",
+      "source_hash": "4ac2b5538767381257fcf9801b291006180177e15c44941685a4b7d180d16dd1"
+    },
+    "experience/projects/bbva_btc.md": {
+      "chunk_ids": [
+        "project-bbva-btc::bbva-best-time-to-call-btc::summary",
+        "project-bbva-btc::bbva-best-time-to-call-btc::business-problem",
+        "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2022-pilot",
+        "project-bbva-btc::bbva-best-time-to-call-btc::contribution-and-ownership::2023-2024-recurring-operation",
+        "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+        "project-bbva-btc::bbva-best-time-to-call-btc::results",
+        "project-bbva-btc::bbva-best-time-to-call-btc::approved-public-narratives",
+        "project-bbva-btc::bbva-best-time-to-call-btc::boundaries"
+      ],
+      "record_hash": "1faa4c6ec32fa29c3675ab9a9695137a345b54d2da034ab08d0ec5abc43eaa55",
+      "record_id": "project-bbva-btc",
+      "source_hash": "1faa4c6ec32fa29c3675ab9a9695137a345b54d2da034ab08d0ec5abc43eaa55"
+    },
+    "experience/projects/bbva_data_quality_mlops.md": {
+      "chunk_ids": [
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::summary",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::quality-and-debugging",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::secure-automation",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::boundaries"
+      ],
+      "record_hash": "1177ca318de18fd54dde32f49e933be416d57f3e23d8c14878f2e15275d8ebe6",
+      "record_id": "project-bbva-data-quality-mlops",
+      "source_hash": "1177ca318de18fd54dde32f49e933be416d57f3e23d8c14878f2e15275d8ebe6"
+    },
+    "experience/projects/bbva_next_best_offer.md": {
+      "chunk_ids": [
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::summary",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::business-problem",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::results",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries"
+      ],
+      "record_hash": "eb947194089a0b2fd35f0110c8c3209197ed1fe7b4d805c6b72c9ff29fe497fb",
+      "record_id": "project-bbva-next-best-offer",
+      "source_hash": "eb947194089a0b2fd35f0110c8c3209197ed1fe7b4d805c6b72c9ff29fe497fb"
+    },
+    "experience/projects/bbva_supervisory_relations.md": {
+      "chunk_ids": [
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::contribution-and-ownership",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::lifecycle",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::technologies-and-artifacts",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::boundaries"
+      ],
+      "record_hash": "a662ffdd9137f2740220a458096217a43e957bba8152b7d17e3b66cbf65ab61b",
+      "record_id": "project-bbva-supervisory-relations",
+      "source_hash": "a662ffdd9137f2740220a458096217a43e957bba8152b7d17e3b66cbf65ab61b"
+    },
+    "experience/projects/cloud_ml_recommender.md": {
+      "chunk_ids": [
+        "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+        "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence",
+        "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+        "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+        "project-cloud-ml-recommender::cloud-ml-recommender::production-minded-patterns",
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::usage-constraints"
+      ],
+      "record_hash": "1407f7cd8901f183f236768d83d2920a3e525b8979312b2b8c0b22a96f0c9df1",
+      "record_id": "project-cloud-ml-recommender",
+      "source_hash": "1407f7cd8901f183f236768d83d2920a3e525b8979312b2b8c0b22a96f0c9df1"
+    },
+    "experience/projects/coi_fraud_toolkit.md": {
+      "chunk_ids": [
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::summary",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::observable-capabilities",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::engineering-evidence",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::approved-public-narrative",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::boundaries"
+      ],
+      "record_hash": "3f270860e3beca0bb525dd835d8fc414ce5343ff0614fc45465ac091cb586a1e",
+      "record_id": "project-coi-fraud-toolkit",
+      "source_hash": "3f270860e3beca0bb525dd835d8fc414ce5343ff0614fc45465ac091cb586a1e"
+    },
+    "experience/projects/consulting_clarification_prioritization.md": {
+      "chunk_ids": [
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::summary",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::contribution-and-ownership",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::outcome-references",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::boundaries",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::related-records"
+      ],
+      "record_hash": "3fb4faccf9fba21f9cb9ac6fb105711272a0aa219132685f9d1a6a25b762cce6",
+      "record_id": "project-ms-clarification-prioritization",
+      "source_hash": "3fb4faccf9fba21f9cb9ac6fb105711272a0aa219132685f9d1a6a25b762cce6"
+    },
+    "experience/projects/consulting_data_migration.md": {
+      "chunk_ids": [
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::summary",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::contribution-and-ownership",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::outcome-reference",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::approved-public-narrative",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::boundaries",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::related-records"
+      ],
+      "record_hash": "b9c7cac44a79a151df6ad49b2faf4f5368ec67e78b46e9fc9ec95835b9b7eb8c",
+      "record_id": "project-ms-data-migration",
+      "source_hash": "b9c7cac44a79a151df6ad49b2faf4f5368ec67e78b46e9fc9ec95835b9b7eb8c"
+    },
+    "experience/projects/consulting_insurance_fraud_monitoring.md": {
+      "chunk_ids": [
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::summary",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::contribution-and-ownership",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::methods-and-technologies",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::outcome-reference",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::approved-public-narrative",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::boundaries",
+        "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::related-records"
+      ],
+      "record_hash": "6cf66e9fee8d450c6d45a55ded6f8e4443c67552604ef868af7ba5bfb46d55e4",
+      "record_id": "project-ms-insurance-fraud-monitoring",
+      "source_hash": "6cf66e9fee8d450c6d45a55ded6f8e4443c67552604ef868af7ba5bfb46d55e4"
+    },
+    "experience/projects/financial_ml_pipelines.md": {
+      "chunk_ids": [
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::summary",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::floor",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::skills-evidenced",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::approved-public-narrative",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::boundaries"
+      ],
+      "record_hash": "3375c00639219660f2e22e90a0cde1e3b0215c693c37d91c63dda793124a7736",
+      "record_id": "project-financial-ml-pipelines",
+      "source_hash": "3375c00639219660f2e22e90a0cde1e3b0215c693c37d91c63dda793124a7736"
+    },
+    "experience/projects/fraud_detection.md": {
+      "chunk_ids": [
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::summary",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::problem",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::public-results",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::3-insurance-sales-malpractice-pyman",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::4-identity-network-and-fuzzy-matching-analysis",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::5-credential-misuse-and-channel-security-redesign",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::approved-public-narratives",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::boundaries"
+      ],
+      "record_hash": "bc996120bcc0f658a783c96d7196bc2512d8fbf077743c60d56e3786561b8e93",
+      "record_id": "project-bbva-fraud-detection",
+      "source_hash": "bc996120bcc0f658a783c96d7196bc2512d8fbf077743c60d56e3786561b8e93"
+    },
+    "experience/projects/github_portfolio.md": {
+      "chunk_ids": [],
+      "record_hash": "f60518451e807472b04f264d471303dcb20a03fe3d18610a8fc815eca9cb60a2",
+      "record_id": "project-github-portfolio",
+      "source_hash": "f60518451e807472b04f264d471303dcb20a03fe3d18610a8fc815eca9cb60a2"
+    },
+    "experience/projects/index.md": {
+      "chunk_ids": [],
+      "record_hash": "ea7565ea5dc2e6364ac87a24a4888d40efc3fa86465c3af31ce222f1c3feb6c9",
+      "record_id": "project-retrieval-index",
+      "source_hash": "ea7565ea5dc2e6364ac87a24a4888d40efc3fa86465c3af31ce222f1c3feb6c9"
+    },
+    "experience/projects/insideforest.md": {
+      "chunk_ids": [
+        "project-insideforest::insideforest::summary",
+        "project-insideforest::insideforest::public-repository-facts",
+        "project-insideforest::insideforest::canonical-estimators",
+        "project-insideforest::insideforest::public-api-engineering-evidence",
+        "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::categorical-targets",
+        "project-insideforest::insideforest::ml-statistical-concepts-demonstrated::continuous-targets",
+        "project-insideforest::insideforest::validation-engineering",
+        "project-insideforest::insideforest::skills-evidenced",
+        "project-insideforest::insideforest::quantified-public-outcomes",
+        "project-insideforest::insideforest::strong-cv-narratives::general-data-science-ml",
+        "project-insideforest::insideforest::strong-cv-narratives::ml-engineering",
+        "project-insideforest::insideforest::strong-cv-narratives::applied-scientist-xai",
+        "project-insideforest::insideforest::usage-constraints"
+      ],
+      "record_hash": "dff109baf62aae757eda2af4250476d60216de4abb55f9350f9f6d8ef9f7a3f7",
+      "record_id": "project-insideforest",
+      "source_hash": "dff109baf62aae757eda2af4250476d60216de4abb55f9350f9f6d8ef9f7a3f7"
+    },
+    "experience/projects/llm_internal_tools.md": {
+      "chunk_ids": [
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::summary",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::business-problem",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::nora-contribution",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::public-outcomes",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::boundaries"
+      ],
+      "record_hash": "0696bdb81d73a1209001e1989aa565d7da3938cf618664a15d5f147371eb8a10",
+      "record_id": "project-bbva-llm-internal-tools",
+      "source_hash": "0696bdb81d73a1209001e1989aa565d7da3938cf618664a15d5f147371eb8a10"
+    },
+    "experience/projects/metacraft.md": {
+      "chunk_ids": [
+        "project-metacraft::metacraft::summary",
+        "project-metacraft::metacraft::core-capabilities::update",
+        "project-metacraft::metacraft::core-capabilities::validate",
+        "project-metacraft::metacraft::core-capabilities::compare",
+        "project-metacraft::metacraft::core-capabilities::export-schema",
+        "project-metacraft::metacraft::core-capabilities::generate-expectations",
+        "project-metacraft::metacraft::core-capabilities::transform",
+        "project-metacraft::metacraft::core-capabilities::quality-report",
+        "project-metacraft::metacraft::core-capabilities::research",
+        "project-metacraft::metacraft::engineering-features",
+        "project-metacraft::metacraft::technologies-concepts-evidenced",
+        "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+        "project-metacraft::metacraft::cv-positioning::genai-data-quality",
+        "project-metacraft::metacraft::usage-constraints"
+      ],
+      "record_hash": "230b0569e90050441362bf32eadba827371c042f3666d23c553c315138ae9c06",
+      "record_id": "project-metacraft",
+      "source_hash": "230b0569e90050441362bf32eadba827371c042f3666d23c553c315138ae9c06"
+    },
+    "experience/projects/movilidad_social_mx.md": {
+      "chunk_ids": [
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::summary",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::data-and-methods",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::approved-public-narrative",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::boundaries"
+      ],
+      "record_hash": "e0a6de55ce0d37f2cb8adfc45fb391ca2634c936120219d1a4412ededf8d5f48",
+      "record_id": "project-movilidad-social-mx",
+      "source_hash": "e0a6de55ce0d37f2cb8adfc45fb391ca2634c936120219d1a4412ededf8d5f48"
+    },
+    "experience/projects/mvp_agent_factory.md": {
+      "chunk_ids": [
+        "project-mvp-agent-factory::mvp-agent-factory::summary",
+        "project-mvp-agent-factory::mvp-agent-factory::problem-addressed",
+        "project-mvp-agent-factory::mvp-agent-factory::canonical-workflow",
+        "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed",
+        "project-mvp-agent-factory::mvp-agent-factory::agent-skill-methodology",
+        "project-mvp-agent-factory::mvp-agent-factory::evaluation-methodology",
+        "project-mvp-agent-factory::mvp-agent-factory::developer-tooling",
+        "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+        "project-mvp-agent-factory::mvp-agent-factory::usage-constraints"
+      ],
+      "record_hash": "4e7e37313a67fb6c09463da7df3483c93b19953f7df34c7b59e6e884d386b8cb",
+      "record_id": "project-mvp-agent-factory",
+      "source_hash": "4e7e37313a67fb6c09463da7df3483c93b19953f7df34c7b59e6e884d386b8cb"
+    },
+    "experience/projects/narrative_dna.md": {
+      "chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::summary",
+        "project-narrative-dna::narrative-dna-adnarrativa::architectural-principles",
+        "project-narrative-dna::narrative-dna-adnarrativa::structured-output-contract-layer",
+        "project-narrative-dna::narrative-dna-adnarrativa::openai-implementation-evidence",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::unit-classifier",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::conservative-adjudicator",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::similarity-auditor",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::synthetic-review-workflow",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::relationship-chain-detection",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-outputs",
+        "project-narrative-dna::narrative-dna-adnarrativa::end-to-end-engineering",
+        "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+        "project-narrative-dna::narrative-dna-adnarrativa::usage-constraints"
+      ],
+      "record_hash": "159a7c10a4232e136db166747df707198c85e6b2b186afc71a33998044048b4b",
+      "record_id": "project-narrative-dna",
+      "source_hash": "159a7c10a4232e136db166747df707198c85e6b2b186afc71a33998044048b4b"
+    },
+    "experience/projects/r_statistical_tooling.md": {
+      "chunk_ids": [
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::summary",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool::evidence-value",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::skills-evidenced-across-this-project-family",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::portfolio-narrative",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::usage-constraints"
+      ],
+      "record_hash": "655182b217c41fe77734fe6d4b2dd8f8a95273d025b557ae30b0459adffafeb8",
+      "record_id": "project-r-statistical-tooling",
+      "source_hash": "655182b217c41fe77734fe6d4b2dd8f8a95273d025b557ae30b0459adffafeb8"
+    },
+    "experience/projects/sheshe_deldel.md": {
+      "chunk_ids": [
+        "project-sheshe-deldel::sheshe-deldel::summary",
+        "project-sheshe-deldel::sheshe-deldel::sheshe-capabilities",
+        "project-sheshe-deldel::sheshe-deldel::mathematical-algorithmic-ideas",
+        "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+        "project-sheshe-deldel::sheshe-deldel::public-benchmark-evidence",
+        "project-sheshe-deldel::sheshe-deldel::dependencies-ecosystem-demonstrated",
+        "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+        "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+        "project-sheshe-deldel::sheshe-deldel::cv-positioning::explainable-ml",
+        "project-sheshe-deldel::sheshe-deldel::usage-constraints"
+      ],
+      "record_hash": "7ef60183a33de89d4178090a9f912a9434e78894a71a8348210385bdb56dd366",
+      "record_id": "project-sheshe-deldel",
+      "source_hash": "7ef60183a33de89d4178090a9f912a9434e78894a71a8348210385bdb56dd366"
+    },
+    "experience/roles/bbva.md": {
+      "chunk_ids": [
+        "role-bbva::bbva-m-xico::canonical-employment-record",
+        "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+        "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+        "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+        "role-bbva::bbva-m-xico::end-to-end-scope",
+        "role-bbva::bbva-m-xico::technologies-with-role-evidence",
+        "role-bbva::bbva-m-xico::stakeholders",
+        "role-bbva::bbva-m-xico::impact-usage",
+        "role-bbva::bbva-m-xico::boundaries"
+      ],
+      "record_hash": "f6b9a790f3a99b65b3bbbfe7ae2f4906fe5f4b314f57b561962f06c2661558c7",
+      "record_id": "role-bbva",
+      "source_hash": "f6b9a790f3a99b65b3bbbfe7ae2f4906fe5f4b314f57b561962f06c2661558c7"
+    },
+    "experience/roles/index.md": {
+      "chunk_ids": [],
+      "record_hash": "f9c4142fd7896bdd870eebb99b721c1450f3ef74381b704716f5145577bb5439",
+      "record_id": "role-retrieval-index",
+      "source_hash": "f9c4142fd7896bdd870eebb99b721c1450f3ef74381b704716f5145577bb5439"
+    },
+    "experience/roles/previous_roles.md": {
+      "chunk_ids": [
+        "role-management-solutions::management-solutions::canonical-employment-record",
+        "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+        "role-management-solutions::management-solutions::role-chronology::professional-development-pause",
+        "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+        "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+        "role-management-solutions::management-solutions::skills-evidenced",
+        "role-management-solutions::management-solutions::boundaries"
+      ],
+      "record_hash": "1ed8783ae17f7bc064b2e9d4287186081980d287b26a5b6550f3768ec48d73d2",
+      "record_id": "role-management-solutions",
+      "source_hash": "1ed8783ae17f7bc064b2e9d4287186081980d287b26a5b6550f3768ec48d73d2"
+    },
+    "experience/roles/teaching.md": {
+      "chunk_ids": [
+        "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos",
+        "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos::reusable-description",
+        "role-teaching::teaching-and-knowledge-transfer::dev-f-b-calos::usage-boundaries",
+        "role-teaching::teaching-and-knowledge-transfer::unam-academic-instruction-and-social-service",
+        "role-teaching::teaching-and-knowledge-transfer::imef-leadership-context",
+        "role-teaching::teaching-and-knowledge-transfer::internal-technical-enablement"
+      ],
+      "record_hash": "490f663809b4144fdf595bddae84e5ca13afcf8bca8a158056e74eca09147885",
+      "record_id": "role-teaching",
+      "source_hash": "490f663809b4144fdf595bddae84e5ca13afcf8bca8a158056e74eca09147885"
+    },
+    "experience/skills.md": {
+      "chunk_ids": [
+        "skills::python",
+        "skills::sql",
+        "skills::pyspark-apache-spark",
+        "skills::r",
+        "skills::pandas-numpy",
+        "skills::git-github",
+        "skills::yaml-json-jsonl-data-contracts",
+        "skills::supervised-machine-learning",
+        "skills::tree-based-machine-learning-random-forests",
+        "skills::supervised-clustering-region-discovery",
+        "skills::unsupervised-anomaly-detection",
+        "skills::statistical-modeling",
+        "skills::model-evaluation-validation",
+        "skills::explainable-interpretable-machine-learning",
+        "skills::scikit-learn-ecosystem",
+        "skills::fuzzy-matching-identity-resolution",
+        "skills::time-series-forecasting",
+        "skills::geospatial-analytics",
+        "skills::optimization-decision-modeling",
+        "skills::tensorflow-keras",
+        "skills::hugging-face-transformers-bert-family-models",
+        "skills::semantic-similarity-embeddings",
+        "skills::approximate-nearest-neighbor-search",
+        "skills::lightgbm",
+        "skills::shap",
+        "skills::interpretml",
+        "skills::llm-application-design",
+        "skills::retrieval-augmented-retrieval-grounded-generation",
+        "skills::prompt-engineering",
+        "skills::structured-llm-outputs",
+        "skills::agentic-workflows",
+        "skills::llm-evaluation-evals",
+        "skills::llm-safety-hallucination-mitigation",
+        "skills::openai-api-responses-api",
+        "skills::google-gemini",
+        "skills::notebooklm",
+        "skills::google-workspace-ai-workflows",
+        "skills::etl-data-quality",
+        "skills::productionization-of-data-science-solutions",
+        "skills::python-package-engineering",
+        "skills::schema-engineering-metadata-management",
+        "skills::data-sketches-approximate-statistics",
+        "skills::great-expectations",
+        "skills::api-cli-design",
+        "skills::automated-testing-regression-testing",
+        "skills::code-review-production-qa",
+        "skills::ci-cd",
+        "skills::docker",
+        "skills::mlflow",
+        "skills::airflow",
+        "skills::rpa-web-automation",
+        "skills::kubernetes",
+        "skills::kubeflow",
+        "skills::kafka",
+        "skills::aws",
+        "skills::google-cloud",
+        "skills::google-workspace-ecosystem",
+        "skills::teradata",
+        "skills::oracle",
+        "skills::tableau",
+        "skills::power-bi",
+        "skills::looker-studio",
+        "skills::matplotlib-plotly-analytical-visualization",
+        "skills::shiny",
+        "skills::streamlit",
+        "skills::data-storytelling",
+        "skills::library-framework-design",
+        "skills::open-source-ownership",
+        "skills::backward-compatibility-api-migration",
+        "skills::r-rstudio-add-in-engineering",
+        "skills::documentation-developer-experience",
+        "skills::reproducible-experiment-design",
+        "skills::banking-analytics",
+        "skills::risk-fraud-analytics",
+        "skills::insurance-actuarial-reasoning",
+        "skills::healthcare-risk-modeling",
+        "skills::end-to-end-technical-ownership",
+        "skills::stakeholder-management",
+        "skills::technical-project-leadership",
+        "skills::process-workflow-architecture",
+        "skills::teaching-knowledge-transfer",
+        "skills::agile-delivery",
+        "skills::spanish",
+        "skills::english",
+        "skills::french"
+      ],
+      "record_hash": "aebc3759579b4c6c2b49afcf729f87db54b21f0eac737acb7989e305cdae24d6",
+      "record_id": "skills",
+      "source_hash": "aebc3759579b4c6c2b49afcf729f87db54b21f0eac737acb7989e305cdae24d6"
+    }
+  }
 }

@@ -1,0 +1,144 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "BBVA México",
+    "period": "2024-present"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "1177ca318de18fd54dde32f49e933be416d57f3e23d8c14878f2e15275d8ebe6",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-bbva-data-quality-mlops",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 18,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines"
+      ],
+      "level": 1,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "Data Quality, MLOps and Analytical Engines"
+    },
+    {
+      "content": "This record consolidates production-quality contributions that sit outside a single model: forensic debugging, schema cleanup, code review, distributed-pipeline refactoring, cloud productization and resilient automation.",
+      "end_line": 22,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::summary",
+      "semantic_type": "summary",
+      "start_line": 19,
+      "title": "Summary"
+    },
+    {
+      "content": "Evidence supports:\n\n- tracing a false positive from final report back to a typographical/source-data error\n- correcting the attribution before an incorrect sanction\n- automating column/schema normalization with regular expressions and the PySpark DataFrame API\n- improving interoperability and reducing repeat failures",
+      "end_line": 31,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Quality and debugging"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::quality-and-debugging",
+      "semantic_type": "section",
+      "start_line": 23,
+      "title": "Quality and debugging"
+    },
+    {
+      "content": "- reviewed and approved pull requests in critical analytical repositories\n- validated PySpark components before integration\n- worked with versioned deployment and internal MLOps practices\n- used internal deployment frameworks primarily as a user/reviewer rather than claiming framework authorship",
+      "end_line": 38,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Code review and MLOps"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+      "semantic_type": "section",
+      "start_line": 32,
+      "title": "Code review and MLOps"
+    },
+    {
+      "content": "Evidence supports:\n\n- replacing deprecated input dependencies\n- making temporal cutoff logic deterministic\n- partitioning a memory-intensive engine to support more frequent execution\n- resolving out-of-memory bottlenecks in distributed workloads\n- improving traceability through dictionaries and explicit data contracts",
+      "end_line": 48,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Engine and pipeline refactoring"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring",
+      "semantic_type": "section",
+      "start_line": 39,
+      "title": "Engine and pipeline refactoring"
+    },
+    {
+      "content": "- helped move a geolocation/data-integration engine from sandbox to production\n- coordinated environment approval/certification with development stakeholders\n- worked with PySpark and AWS-based analytical execution\n- produced reusable master outputs for downstream analytics\n\nNo downstream financial recovery metric is currently approved.",
+      "end_line": 57,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Cloud and production delivery"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
+      "semantic_type": "section",
+      "start_line": 49,
+      "title": "Cloud and production delivery"
+    },
+    {
+      "content": "A supporting vendor-validation workstream demonstrates:\n\n- Python/Selenium automation under InfoSec constraints\n- local execution when cloud agents were not permitted\n- retries, logs, batch processing and CSV outputs\n- recognition of later recalibration needs when false positives or operational saturation appeared",
+      "end_line": 66,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Secure automation"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::secure-automation",
+      "semantic_type": "section",
+      "start_line": 58,
+      "title": "Secure automation"
+    },
+    {
+      "content": "> Refactored distributed analytical pipelines affected by deprecated inputs and memory bottlenecks, improving temporal determinism, traceability and execution frequency.\n\n> Resolved production false positives through forensic data lineage and automated PySpark schema normalization.\n\n> Reviewed critical analytical code and supported production deployment of AWS/PySpark data engines in a regulated environment.",
+      "end_line": 74,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Approved public narratives"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+      "semantic_type": "section",
+      "start_line": 67,
+      "title": "Approved public narratives"
+    },
+    {
+      "content": "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system.",
+      "end_line": 79,
+      "heading_path": [
+        "Data Quality, MLOps and Analytical Engines",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 75,
+      "title": "Boundaries"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/bbva_data_quality_mlops.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-TRAJECTORY-2024-2026-CURATED"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

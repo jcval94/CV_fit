@@ -1,0 +1,293 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "primary_language": "R",
+    "project_type": "statistical_tooling_portfolio",
+    "source_repos": [
+      "https://github.com/jcval94/FitUltD",
+      "https://github.com/jcval94/shortcuts",
+      "https://github.com/jcval94/copypaste",
+      "https://github.com/jcval94/DataMiningTools",
+      "https://github.com/jcval94/FitUlt_V00",
+      "https://github.com/jcval94/Tesis",
+      "https://github.com/jcval94/Ensemble-Learning-for-Time-Series",
+      "https://github.com/jcval94/ShinyApps"
+    ]
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "655182b217c41fe77734fe6d4b2dd8f8a95273d025b557ae30b0459adffafeb8",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [
+    "ACH-REPORTING-TIME-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-r-statistical-tooling",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 27,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects"
+      ],
+      "level": 1,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects",
+      "semantic_type": "section",
+      "start_line": 26,
+      "title": "R Statistical Tooling & Early Quantitative Projects"
+    },
+    {
+      "content": "Public repositories and deployed apps from 2019 onward provide evidence that José Carlos's software/ML trajectory is grounded in **actuarial statistics, R package development, forecasting and analyst-productivity tooling**, rather than beginning only with recent Generative AI work.\n\nFitUltD is strong enough to lead for statistical/actuarial roles. The remaining repositories should usually support newer projects rather than take prime CV space.",
+      "end_line": 33,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::summary",
+      "semantic_type": "summary",
+      "start_line": 28,
+      "title": "Summary"
+    },
+    {
+      "content": "FitUltD is a public CRAN package for fitting univariate data that is not well represented by ordinary single-density functions, including multimodal mixtures.\n\nObservable repository/package evidence includes:\n\n- released installation from CRAN\n- mixture/cluster-based distribution fitting\n- Anderson-Darling and Kolmogorov-Smirnov goodness-of-fit results\n- reproducible examples and visual comparison of fitted components\n- multi-year public maintenance",
+      "end_line": 45,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUltD"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd",
+      "semantic_type": "section",
+      "start_line": 34,
+      "title": "FitUltD"
+    },
+    {
+      "content": "- R/CRAN package ownership\n- distribution fitting and statistical testing\n- actuarial/risk modeling foundations\n- translating research into reusable public software",
+      "end_line": 52,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUltD",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitultd::evidence-value",
+      "semantic_type": "section",
+      "start_line": 46,
+      "title": "Evidence value"
+    },
+    {
+      "content": "`DataMiningTools` is structured as a formal R package rather than a collection of loose scripts.\n\nPublic repository evidence includes:\n\n- `DESCRIPTION`\n- `NAMESPACE`\n- `R/`\n- `man/`\n- R project metadata\n- package dependencies\n\nThe public package metadata identifies José Carlos as author/maintainer and version `1.0.0`.\n\nDependencies include statistical/data-mining and visualization tools such as:\n\n- `mclust`\n- `ADGofTest`\n- `tibble`\n- `purrr`\n- `ggplot2`\n- `dplyr`\n- base statistical methods",
+      "end_line": 77,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "DataMiningTools"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools",
+      "semantic_type": "section",
+      "start_line": 53,
+      "title": "DataMiningTools"
+    },
+    {
+      "content": "- R package engineering\n- statistical/data-mining tooling\n- documentation structure\n- dependency management\n- reusable analytical software",
+      "end_line": 85,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "DataMiningTools",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::dataminingtools::evidence-value",
+      "semantic_type": "section",
+      "start_line": 78,
+      "title": "Evidence value"
+    },
+    {
+      "content": "Public R repository described as a `FitUlt package`, associated with José Carlos's distribution-fitting / actuarial modeling work.",
+      "end_line": 89,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUlt_V00"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00",
+      "semantic_type": "section",
+      "start_line": 86,
+      "title": "FitUlt_V00"
+    },
+    {
+      "content": "- statistical distribution fitting\n- actuarial modeling\n- R package development\n- statistical research translated into reusable code\n\nUse the thesis/research records for exact methodological or quantitative claims rather than inferring them solely from the repository name.",
+      "end_line": 98,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "FitUlt_V00",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00::evidence-value",
+      "semantic_type": "section",
+      "start_line": 90,
+      "title": "Evidence value"
+    },
+    {
+      "content": "Public repository containing documents, files and code used in José Carlos's actuarial thesis.",
+      "end_line": 102,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Tesis"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis",
+      "semantic_type": "section",
+      "start_line": 99,
+      "title": "Tesis"
+    },
+    {
+      "content": "- reproducible research orientation\n- statistical modeling\n- actuarial / healthcare-risk context\n- relationship between academic methodology and code\n\nCanonical thesis metrics, if used, belong in `../achievements/metrics.md` and require methodology-aware wording.",
+      "end_line": 111,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Tesis",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::tesis::evidence-value",
+      "semantic_type": "section",
+      "start_line": 103,
+      "title": "Evidence value"
+    },
+    {
+      "content": "Public extension of an ensemble-learning approach for time-series forecasting in R.\n\nThe repository also references a deployed Shiny application.",
+      "end_line": 117,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Ensemble-Learning-for-Time-Series"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series",
+      "semantic_type": "section",
+      "start_line": 112,
+      "title": "Ensemble-Learning-for-Time-Series"
+    },
+    {
+      "content": "- time-series forecasting\n- ensemble learning\n- R\n- interactive analytical delivery through Shiny",
+      "end_line": 124,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Ensemble-Learning-for-Time-Series",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series::evidence-value",
+      "semantic_type": "section",
+      "start_line": 118,
+      "title": "Evidence value"
+    },
+    {
+      "content": "The `shortcuts` CRAN package and related `copypaste` work address recurring RStudio friction through add-ins and clipboard-oriented data import.\n\nObservable capabilities include:\n\n- importing copied browser/Excel/Sheets tables into R\n- expanding function arguments into editable code\n- running/installing libraries referenced in a script\n- RStudio add-in integration\n- CRAN distribution for `shortcuts`",
+      "end_line": 136,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "shortcuts and copypaste"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste",
+      "semantic_type": "section",
+      "start_line": 125,
+      "title": "shortcuts and copypaste"
+    },
+    {
+      "content": "- developer experience and analyst-productivity design\n- RStudio API/add-in development\n- public package distribution\n- solving small operational problems with reusable tooling",
+      "end_line": 143,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "shortcuts and copypaste",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::shortcuts-and-copypaste::evidence-value",
+      "semantic_type": "section",
+      "start_line": 137,
+      "title": "Evidence value"
+    },
+    {
+      "content": "The public portfolio and ShinyApps index document a tool that combined SQL queries and R code with Excel/Word/PDF outputs and real-time analysis.\n\nCanonical impact is stored under `ACH-REPORTING-TIME-001` in the achievement registry.",
+      "end_line": 149,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "SQL Reporting tool"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool",
+      "semantic_type": "section",
+      "start_line": 144,
+      "title": "SQL Reporting tool"
+    },
+    {
+      "content": "- SQL/R workflow integration\n- automated reporting\n- Office/PDF delivery\n- measurable analyst time savings",
+      "end_line": 156,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "SQL Reporting tool",
+        "Evidence value"
+      ],
+      "level": 3,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool::evidence-value",
+      "semantic_type": "section",
+      "start_line": 150,
+      "title": "Evidence value"
+    },
+    {
+      "content": "- R\n- CRAN package publication\n- RStudio add-ins\n- statistical modeling\n- probability/distribution fitting\n- package development\n- forecasting\n- ensemble methods\n- Shiny\n- SQL/R reporting automation\n- ggplot2 / analytical visualization\n- reproducible quantitative research",
+      "end_line": 171,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Skills evidenced across this project family"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::skills-evidenced-across-this-project-family",
+      "semantic_type": "skill_group",
+      "start_line": 157,
+      "title": "Skills evidenced across this project family"
+    },
+    {
+      "content": "A useful interview narrative is:\n\n> My open-source work started from actuarial statistics and R tooling — distribution fitting, data-mining packages and forecasting — and later evolved toward Python ML libraries, cloud inference, data-quality tooling and Generative AI systems.\n\nThis is a stronger use of these repositories than presenting each older repository as an isolated current project.",
+      "end_line": 179,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Portfolio narrative"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::portfolio-narrative",
+      "semantic_type": "section",
+      "start_line": 172,
+      "title": "Portfolio narrative"
+    },
+    {
+      "content": "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects.",
+      "end_line": 184,
+      "heading_path": [
+        "R Statistical Tooling & Early Quantitative Projects",
+        "Usage constraints"
+      ],
+      "level": 2,
+      "section_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::usage-constraints",
+      "semantic_type": "boundary",
+      "start_line": 180,
+      "title": "Usage constraints"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/r_statistical_tooling.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-PORTFOLIO-PUBLIC-2026-08"
+  ],
+  "status": "validated_public_supporting",
+  "visibility": "public"
+}

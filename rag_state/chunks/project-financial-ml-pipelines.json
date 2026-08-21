@@ -1,0 +1,186 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "e2813f3b3883082da3364eaa4ced15a6f932bb0990439369ec93afe9ec536185",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Summary\nTwo public Python repositories demonstrate end-to-end thinking for financial data: ingestion, feature construction, model training, prediction, evaluation, portfolio/signaling logic, artifact persistence and static dashboard publication.\n\nTheir value is architectural and educational. They are not validated trading systems.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "2a8700c61aac2c02e32955cc17d40abeb874b0f9e33fb4fbc5a5498bb12551cb",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "yahoo"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "yahoo\nThe repository documents a modular educational flow for selecting tickers, downloading market data, preprocessing, feature engineering, training, prediction, evaluation, portfolio optimization, configuration-driven execution, temporal validation and GitHub Pages publication.",
+      "title": "yahoo"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::floor",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "a8fc50a8e4e638f4b701c6ea95c83954b72255428e64303cc505d22b6963edf2",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "floor"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "floor\nThe repository documents a more operations-oriented flow involving market-data ingestion, feature construction, champion/challenger artifacts, forecasts or signals, SQLite persistence, JSON/JSONL snapshots, GitHub Actions and static dashboard generation.\n\nIts own documentation records incomplete or degraded components. That honesty is part of the evidence: the system must be described as implemented-and-audited, not as fully stable production infrastructure.",
+      "title": "floor"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "2fcd5805d8d9d12e434ede80b45c614d0ff89ea60c8dfec115b6e63823b2ed8a",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Skills evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Skills evidenced\n- Python pipeline architecture\n- time-series and market-data handling\n- feature engineering and temporal validation\n- training/evaluation separation\n- artifact and snapshot contracts\n- SQLite and JSON/JSONL\n- GitHub Actions\n- static dashboard delivery\n- operational documentation and state transparency",
+      "title": "Skills evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::approved-public-narrative",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "561d6f9bcf2bf74157fa55f618aabb515cc4bdfd68b1f60f02009ad63ae36abd",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Approved public narrative"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Approved public narrative\n> Built and documented modular financial-ML pipelines from market-data ingestion through temporal validation, model artifacts and static dashboard publication using Python, GitHub Actions, SQLite and JSON contracts.",
+      "title": "Approved public narrative"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "content_hash": "9a778629a7f797606a82d5385b89c9f892b6b24e67798946e69c30b22b2fe38b",
+      "cv_eligible": true,
+      "heading_path": [
+        "Financial ML Pipelines — floor and yahoo",
+        "Boundaries"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-financial-ml-pipelines",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Boundaries\n- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-financial-ml-pipelines",
+  "schema_version": 1
+}

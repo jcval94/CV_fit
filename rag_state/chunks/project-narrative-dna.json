@@ -1,0 +1,507 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "8e62fac965e783c0c53f6859d74b26e0c3c6e42f9d17f1d4b6c51d583ef9bea0",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Summary"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Summary\n`narrative_dna` is a JSON-first system for converting speech transcripts into a stable, interpretable and auditable representation of narrative structure.\n\nIt is one of the strongest public repositories for demonstrating José Carlos's **production-minded Generative AI engineering** because it combines strict data contracts, deterministic validators, LLM classification, adjudication, semantic auditing, synthetic review, evaluation and an end-to-end CLI pipeline.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::architectural-principles",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "2466832b495a2f6d14e274d7fdde0f9f1790441cfc89cf09cbb7355bace522f9",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Architectural principles"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Architectural principles\n- JSON is the source of truth.\n- Derived compact notation is compiled from validated JSON rather than edited manually.\n- precision is preferred over false coverage\n- high-temperature synthetic reviewers provide diversity, not final authority\n- aggregation/adjudication remains conservative\n- only high-confidence synthetic gold is eligible for regression testing\n- CSV outputs are derived artifacts, not the canonical record",
+      "title": "Architectural principles"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::structured-output-contract-layer",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "1bd7e1406e46e874d6394574c67bdef5dee5d6a0cc1f3493a2e55dc560839fbd",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Structured output / contract layer"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Structured output / contract layer\nThe project uses:\n\n- Pydantic models\n- JSON Schemas\n- strict validation\n- versioned taxonomies\n- versioned prompts\n- deterministic validators\n- explicit rejected labels / review flags",
+      "title": "Structured output / contract layer"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::openai-implementation-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "501d232556f71238110b189233ef019dcb1e99a9f9411fbaacec6696eeef4e65",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "OpenAI implementation evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "OpenAI implementation evidence\nThe documented LLM client:\n\n- uses the OpenAI Responses API\n- uses strict Structured Outputs with JSON Schema\n- validates every response with Pydantic\n- reads credentials from environment variables\n- uses configurable LLM parameters\n- caches responses by versioned hash\n- supports retries\n- supports `dry_run`\n- returns controlled failures so deterministic heuristics can act as fallback",
+      "title": "OpenAI implementation evidence"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "d1f7cdfde96255a95014f4ebfde539f2ad203834566451a36ec71bc4e347c53a",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Evaluation / adjudication architecture\nThe system includes:",
+      "title": "Evaluation / adjudication architecture"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::unit-classifier",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "394090f8933a68c6d4ab7e9f3e1fc870dd52f125cd4c56747c456e21ab98b68d",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Unit classifier"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Unit classifier\nCombines contextual LLM classification with heuristic locks and deterministic revalidation.",
+      "title": "Unit classifier"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::conservative-adjudicator",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "e3daf3bab020c8cdc2c1b7de5c6aaed07f45742df18ecaaf703be9df8fdd9691",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Conservative adjudicator"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Conservative adjudicator\nEscalates low-confidence or conflicting cases and can remove weak labels rather than maximizing label coverage.",
+      "title": "Conservative adjudicator"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::similarity-auditor",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "4ff80183636da60b459cb31102996ceac19346e9bfe331efc074d8e4e323cf80",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Similarity auditor"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Similarity auditor\n- configurable local/OpenAI embeddings\n- cosine similarity\n- nearest-neighbor comparison\n- notation-distance analysis\n- conflict outputs for review",
+      "title": "Similarity auditor"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::synthetic-review-workflow",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "6938aeeb8f3c882bd064a97916e0b622c34a32bf44f38af17fb6dccedd58e306",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Synthetic review workflow"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Synthetic review workflow\n- prioritized review sets\n- multiple configured synthetic reviewers\n- conservative aggregation\n- final adjudication\n- reliability measurement\n- high/medium/rejected confidence buckets\n- controlled promotion to synthetic gold",
+      "title": "Synthetic review workflow"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::relationship-chain-detection",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "ba734e3fd0036ba73710db84a95dbcadbcfcdb8b525a006e08ea8d5da6018da0",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation / adjudication architecture",
+        "Relationship / chain detection"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Relationship / chain detection\nDeterministic relationship logic builds auditable narrative relations and multi-unit narrative chains while retaining evidence spans and version information.",
+      "title": "Relationship / chain detection"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::evaluation-outputs",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "1635ea757e2995066bde339f0e5d451930a7aaf63bfb7393526412809ad5154b",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Evaluation outputs"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Evaluation outputs\nThe evaluator can produce:\n\n- overall evaluation metrics\n- label-level metrics\n- confusion-group reports\n- audit reports\n- JSON and Markdown artifacts\n\nThe repository documents a maintained golden-regression fixture using only `synthetic_gold_high_confidence` with:\n\n- `regression_pass_rate = 1.0`\n\nThis is a project regression quality gate, not an external production-accuracy benchmark.",
+      "title": "Evaluation outputs"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::end-to-end-engineering",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "f6e1e145ac1badc45e95ada5208e3bc9c860c74a546b6558511df9d5d68132fb",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "End-to-end engineering"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "End-to-end engineering\nThe project includes:\n\n- installable Python package structure\n- CLI commands\n- local no-LLM mode\n- LLM-enabled mode\n- manifests / run IDs\n- JSONL outputs\n- audit reports\n- schema export\n- inspection commands\n- evaluation commands\n- regression tests\n- operating guide\n- Colab quickstart",
+      "title": "End-to-end engineering"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "d3f22ab35d30dd0857754d434fe3effdcd3d2ec64309246a6daad7543ab159e5",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Skills evidenced"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Skills evidenced\n- Generative AI application architecture\n- OpenAI Responses API\n- Structured Outputs\n- JSON Schema\n- Pydantic\n- prompt/version management\n- LLM evaluation / evals\n- adjudication\n- hallucination/error control\n- embeddings / semantic similarity\n- caching and retries\n- deterministic fallbacks\n- synthetic-data review workflows\n- regression testing\n- CLI / package engineering\n- traceability / auditability",
+      "title": "Skills evidenced"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "a89b817bf6ff8298a3c313eeede1cb92aaf678370915cc2fe96d1d2af03ea9ab",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "Generative AI / AI Engineer"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Generative AI / AI Engineer\n> Built a JSON-first LLM analysis pipeline using OpenAI Structured Outputs, Pydantic validation, deterministic fallbacks, semantic auditing, synthetic review/adjudication and regression evaluation.",
+      "title": "Generative AI / AI Engineer"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "2273fff9658fa24bd548731e6df8a4febc680829780655fe31ab1e0f312b2a06",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "LLM Evaluation"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "LLM Evaluation\n> Designed a traceable LLM evaluation architecture with review-set prioritization, multi-reviewer synthetic evaluation, conservative adjudication and controlled promotion to high-confidence regression gold.",
+      "title": "LLM Evaluation"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "844f19921b9b2270633fd2a1c7a4f3c8029497447b8cc2a92f4f1528e6b4c5e4",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Strong CV narratives",
+        "AI Safety / Reliability"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "AI Safety / Reliability\n> Combined strict output schemas, deterministic validators, confidence escalation and fallback paths to keep an LLM classification pipeline auditable and bounded.",
+      "title": "AI Safety / Reliability"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::usage-constraints",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "content_hash": "66354c61c6c2857c74200321ebd2b390342300668f7f64e69c749de127504603",
+      "cv_eligible": true,
+      "heading_path": [
+        "narrative_dna / ADNarrativa",
+        "Usage constraints"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-narrative-dna",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/narrative_dna.md",
+      "source_refs": [
+        "SRC-GITHUB-JCVAL94-PUBLIC"
+      ],
+      "text": "Usage constraints\n- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration.",
+      "title": "Usage constraints"
+    }
+  ],
+  "record_id": "project-narrative-dna",
+  "schema_version": 1
+}

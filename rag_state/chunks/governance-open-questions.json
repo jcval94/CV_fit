@@ -1,0 +1,354 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions",
+      "chunk_type": "policy_section",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "d66033aceb9e63a54b8200f5a74b41d0574602fa8a22b05915634ca96f468c3c",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Open Evidence Questions\nThis backlog turns uncertainty into explicit collection work. An open item does not invalidate related records; it limits only the unsupported detail.",
+      "title": "Open Evidence Questions"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-btc-metric-semantics",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "b61626c643dd38098ed04d80af85ac844e847bb30e881e0f1be605a1f9d08762",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-BBVA-BTC-METRIC-SEMANTICS"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-BBVA-BTC-METRIC-SEMANTICS\n- **Need:** period, population, denominator and outcome definition for each BTC/contactability uplift value found in restricted sources.\n- **Why:** derivative sources appear to describe different windows or success measures.\n- **Best evidence:** approved dashboard definition, experiment readout or public artifact.\n- **Close when:** each value has its own comparison, unit, period and attribution boundary, or is intentionally excluded.",
+      "title": "Q-BBVA-BTC-METRIC-SEMANTICS"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-bbva-crmi-metric-semantics",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "6aed0013fd9c2dac272a035fc8e1573e37f9ad36089b62e2f6a2922407788b5c",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-BBVA-CRMI-METRIC-SEMANTICS"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-BBVA-CRMI-METRIC-SEMANTICS\n- **Need:** separate definitions for uplift, treatment/control level comparison and alignment measurement.\n- **Why:** combining them would create a false continuous improvement series.\n- **Best evidence:** experiment specification, measurement note or approved public statement.\n- **Close when:** every value is mapped to a distinct metric record or intentionally excluded.",
+      "title": "Q-BBVA-CRMI-METRIC-SEMANTICS"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-1-blocks-strong-cv-claims::q-ms-migration-scale",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "fe384c50030d6a23375f5a82cdae66be8f37e5f9ddf0a3ef20116294cb5b403a",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 1 — blocks strong CV claims",
+        "Q-MS-MIGRATION-SCALE"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-MS-MIGRATION-SCALE\n- **Need:** confirm the public portfolio wording about migration scale and its unit.\n- **Why:** the current phrasing is unusually large and is not safe to normalize by inference.\n- **Best evidence:** project scope document or explicit user confirmation.\n- **Close when:** exact wording is verified; until then, use only the approved qualitative description.",
+      "title": "Q-MS-MIGRATION-SCALE"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-bbva-project-ownership",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "8c227102f58a292a29cf90ee6e224be941cd7525b225039327a62693d3c5793c",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-BBVA-PROJECT-OWNERSHIP"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-BBVA-PROJECT-OWNERSHIP\n- **Need:** personal contribution and lifecycle stage for AIFE, selected internal GenAI/model-lifecycle prototypes, credential-misuse analytics and the internal InsideForest-related methodology.\n- **Why:** the curated material mixes individual, team and reconstructed authorship.\n- **Best evidence:** dated code, design document, review record or concise user confirmation per project.\n- **Close when:** each project can use a supported ownership verb and delivery stage.",
+      "title": "Q-BBVA-PROJECT-OWNERSHIP"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-genai-production-boundaries",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "0803e6e2589b66a160e334cdc63dd3d29177cbc52c012e5e35e4239d7a9d09aa",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-GENAI-PRODUCTION-BOUNDARIES"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-GENAI-PRODUCTION-BOUNDARIES\n- **Need:** deployment state, active-user scope and measurable outcomes for internal assistants and agentic tools beyond the already public NorA adoption metrics.\n- **Why:** prototypes, pilots and production services require different CV wording.\n- **Best evidence:** release note, usage report, approved architecture artifact or public demonstration.\n- **Close when:** each tool is labeled prototype, pilot, production or discontinued with a dated scope.",
+      "title": "Q-GENAI-PRODUCTION-BOUNDARIES"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-2-improves-ownership-and-project-depth::q-open-source-adoption",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "d4f5ccbbe98c09e9d1f49eeea1bee779a01521420dfd51af0c6888a75231307c",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 2 — improves ownership and project depth",
+        "Q-OPEN-SOURCE-ADOPTION"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-OPEN-SOURCE-ADOPTION\n- **Need:** stronger external-usage or maintenance evidence for public projects that currently prove implementation but not broad adoption, especially COI and smaller R/RStudio utilities.\n- **Why:** repository existence supports implementation, but not production adoption or active external use.\n- **Best evidence:** package registry, releases, citations, dependent repositories or analytics.\n- **Close when:** adoption claims are evidence-backed or intentionally omitted.",
+      "title": "Q-OPEN-SOURCE-ADOPTION"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-3-completeness::q-credential-metadata",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "309ed55f6724a0dbed68c6d799d96e32c5affb588e777e5d19ad09912d6d0187",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 3 — completeness",
+        "Q-CREDENTIAL-METADATA"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-CREDENTIAL-METADATA\n- **Need:** issuer, completion date, status and credential URL for the remaining pending **Applied Generative AI** and **Universidad Carlos III de Madrid Machine Learning** entries.\n- **Why:** incomplete credentials are excluded from automatic CV generation.\n- **Best evidence:** official badge, certificate or issuer verification page.\n- **Close when:** every field is verified or the entry is deprecated.",
+      "title": "Q-CREDENTIAL-METADATA"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::priority-3-completeness::q-original-artifacts",
+      "chunk_type": "policy_open_question",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "66d77ac13433d0718387795a38831446d0ed6313134b7006baae1025785a1bd0",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Priority 3 — completeness",
+        "Q-ORIGINAL-ARTIFACTS"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Q-ORIGINAL-ARTIFACTS\n- **Need:** primary artifacts for high-value claims currently supported only by curated derivative documents.\n- **Why:** primary evidence increases confidence and permits more precise attribution.\n- **Best evidence:** public repository, redacted deliverable, official credential, approved performance record or dated publication.\n- **Close when:** each high-value derivative claim has a primary reference or remains explicitly supporting-only.",
+      "title": "Q-ORIGINAL-ARTIFACTS"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::resolved-items-removed-from-this-backlog",
+      "chunk_type": "policy_section",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "8de8b10e5cd4c30375c203957708aedb4fd2a179ab3ee27030c2059802b8dc60",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Resolved items removed from this backlog"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Resolved items removed from this backlog\n- Professional-experience duration is now intentionally calibrated to **8+ years** based on formal chronology; university teaching/service and IMEF leadership remain supporting experience rather than employment tenure.\n- The fraud review-efficiency ratio is normalized as **450 -> 34 cases reviewed per relevant finding** and is no longer an open wording question.",
+      "title": "Resolved items removed from this backlog"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "governance-open-questions::open-evidence-questions::intake-rule",
+      "chunk_type": "policy_section",
+      "confidence": "high",
+      "constraints": [],
+      "content_hash": "2cd15c26eb153b05d034f7a55e0fa94427a220e86bf5eda833fcbbeddfd0dc7d",
+      "cv_eligible": false,
+      "heading_path": [
+        "Open Evidence Questions",
+        "Intake rule"
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "governance-open-questions",
+      "record_type": "governance",
+      "retrieval_class": "policy",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/_meta/open_questions.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED",
+        "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+      ],
+      "text": "Intake rule\nNew material should close or refine an existing question whenever possible. If it introduces a new claim, register the source first, record conflicts before selecting a value and route the result to the canonical file defined by the data contract.",
+      "title": "Intake rule"
+    }
+  ],
+  "record_id": "governance-open-questions",
+  "schema_version": 1
+}

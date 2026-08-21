@@ -1,0 +1,260 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "source_account": "https://github.com/jcval94",
+    "usage_policy": "Use this file to rank repository evidence. Do not treat every repository as equally relevant to a CV. Prefer Tier A projects for current senior Data Science, ML, GenAI and AI Engineering applications."
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "f60518451e807472b04f264d471303dcb20a03fe3d18610a8fc815eca9cb60a2",
+  "embedding_candidate": false,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-github-portfolio",
+  "record_type": "project",
+  "retrieval_class": "router",
+  "sections": [
+    {
+      "content": "Canonical index of public GitHub repositories that provide direct evidence of José Carlos Del Valle's technical capabilities.\n\nThe GitHub account contains many repositories across multiple years. This index intentionally filters for **professional signal**, independent ownership, reusable software, technical depth, validation, deployment or current relevance.",
+      "end_line": 22,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index"
+      ],
+      "level": 1,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index",
+      "semantic_type": "section",
+      "start_line": 17,
+      "title": "GitHub Portfolio — Evidence Index"
+    },
+    {
+      "content": "",
+      "end_line": 24,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence"
+      ],
+      "level": 2,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence",
+      "semantic_type": "section",
+      "start_line": 23,
+      "title": "Tier A — primary CV / interview evidence"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/InsideForest\n- **Primary signal:** interpretable ML, supervised clustering, Python package engineering, scikit-learn-style API design, testing, benchmarking and documentation\n- **Current public release in repository:** `0.4.3`\n- **Language:** Python\n- **License:** MIT\n- **Use for:** Senior Data Scientist, Applied Scientist, ML Engineer, XAI, research-oriented roles\n- **Detail:** `insideforest.md`",
+      "end_line": 33,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "InsideForest"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::insideforest",
+      "semantic_type": "section",
+      "start_line": 25,
+      "title": "InsideForest"
+    },
+    {
+      "content": "- **Repositories:**\n  - https://github.com/jcval94/SheShe\n  - https://github.com/jcval94/PureSheShe\n- **Primary signal:** decision-surface exploration, supervised clustering, low-dimensional rule discovery, numerical search, experiment protocols and reproducible benchmarks\n- **Distribution:** SheShe is installable from PyPI\n- **Use for:** ML research, model interpretability, algorithm design, Applied Scientist roles\n- **Detail:** `sheshe_deldel.md`",
+      "end_line": 42,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "SheShe / DelDel"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::sheshe-deldel",
+      "semantic_type": "section",
+      "start_line": 34,
+      "title": "SheShe / DelDel"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/MetaCraft\n- **Primary signal:** data quality, metadata/schema engineering, schema drift, approximate statistics, Great Expectations and OpenAI integration\n- **Language:** Python\n- **Use for:** Data Science platforms, data quality, analytics engineering, AI/data tooling\n- **Detail:** `metacraft.md`",
+      "end_line": 49,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "MetaCraft"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::metacraft",
+      "semantic_type": "section",
+      "start_line": 43,
+      "title": "MetaCraft"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/ADNarrativa\n- **Primary signal:** production-minded GenAI architecture, strict Structured Outputs, Pydantic/JSON Schema, LLM evaluation, adjudication, semantic auditing, synthetic review, CLI and regression testing\n- **Language:** Python\n- **Use for:** Generative AI, LLM Engineer, AI Engineer, agent/evaluation roles\n- **Detail:** `narrative_dna.md`",
+      "end_line": 56,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "narrative_dna / ADNarrativa"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::narrative-dna-adnarrativa",
+      "semantic_type": "section",
+      "start_line": 50,
+      "title": "narrative_dna / ADNarrativa"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/mvp-agent-factory\n- **Primary signal:** agent architecture, skill contracts, eval design, documentation-first engineering, PRDs, vertical slices and multi-agent development workflows\n- **Use for:** Agentic AI, AI product engineering, technical leadership, solution architecture\n- **Detail:** `mvp_agent_factory.md`",
+      "end_line": 62,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "mvp-agent-factory"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::mvp-agent-factory",
+      "semantic_type": "section",
+      "start_line": 57,
+      "title": "mvp-agent-factory"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/cloud_function\n- **Primary signal:** cloud model serving, Google Cloud Functions Gen2, Cloud Storage, TensorFlow/Keras, Transformer embeddings, similarity search and OpenAI integration\n- **Use for:** ML deployment, cloud ML, end-to-end DS/ML engineering\n- **Detail:** `cloud_ml_recommender.md`",
+      "end_line": 68,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "Cloud ML recommender"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::cloud-ml-recommender",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Cloud ML recommender"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/coi\n- **Primary signal:** public fraud/compliance tooling, transaction-pattern analysis, NLP-style text signals, guided Q&A, visual reporting and interpretable case exports\n- **Use for:** Fraud Analytics, Compliance Analytics, Senior Data Scientist and analytical-tooling roles\n- **Detail:** `coi_fraud_toolkit.md`",
+      "end_line": 74,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "COI / Fraud Analysis Toolkit"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::coi-fraud-analysis-toolkit",
+      "semantic_type": "section",
+      "start_line": 69,
+      "title": "COI / Fraud Analysis Toolkit"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/FitUltD\n- **Distribution:** CRAN\n- **Primary signal:** statistical distribution fitting, multimodal modeling, R package engineering and long-term maintenance\n- **Use for:** actuarial, statistics, risk-modeling and quantitative-research roles\n- **Detail:** `r_statistical_tooling.md`",
+      "end_line": 81,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier A — primary CV / interview evidence",
+        "FitUltD"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-a-primary-cv-interview-evidence::fitultd",
+      "semantic_type": "section",
+      "start_line": 75,
+      "title": "FitUltD"
+    },
+    {
+      "content": "",
+      "end_line": 83,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier B — supporting evidence"
+      ],
+      "level": 2,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-b-supporting-evidence",
+      "semantic_type": "section",
+      "start_line": 82,
+      "title": "Tier B — supporting evidence"
+    },
+    {
+      "content": "- **Repositories:** https://github.com/jcval94/floor and https://github.com/jcval94/yahoo\n- **Signal:** modular ingestion/training/evaluation pipelines, temporal validation, artifacts, GitHub Actions, SQLite/JSON and static dashboards\n- **Boundary:** educational/partially degraded rather than validated trading production\n- **Detail:** `financial_ml_pipelines.md`",
+      "end_line": 89,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier B — supporting evidence",
+        "Financial ML pipelines (floor / yahoo)"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-b-supporting-evidence::financial-ml-pipelines-floor-yahoo",
+      "semantic_type": "section",
+      "start_line": 84,
+      "title": "Financial ML pipelines (floor / yahoo)"
+    },
+    {
+      "content": "- **Repository:** https://github.com/jcval94/movilidad_social_mx\n- **Signal:** Streamlit analytical product, social-data storytelling, probabilistic interpretation and mixed-audience design\n- **Boundary:** public audit marks the repo as a fork; contribution scope must not be overstated\n- **Detail:** `movilidad_social_mx.md`",
+      "end_line": 95,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier B — supporting evidence",
+        "Movilidad Social en México"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-b-supporting-evidence::movilidad-social-en-m-xico",
+      "semantic_type": "section",
+      "start_line": 90,
+      "title": "Movilidad Social en México"
+    },
+    {
+      "content": "- **Repositories:** DataMiningTools, FitUlt_V00, Tesis, Ensemble-Learning-for-Time-Series, shortcuts, copypaste and ShinyApps\n- **Signal:** R package design, forecasting, actuarial statistics, add-ins, reporting automation and Shiny delivery\n- **Detail:** `r_statistical_tooling.md`",
+      "end_line": 100,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier B — supporting evidence",
+        "R statistical and productivity tooling"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-b-supporting-evidence::r-statistical-and-productivity-tooling",
+      "semantic_type": "section",
+      "start_line": 96,
+      "title": "R statistical and productivity tooling"
+    },
+    {
+      "content": "Examples include CS50, IBM course repositories, Kaggle exercises, database coursework, the Apps Script/OpenAI expert-panel demo, dashboards and smaller experiments.",
+      "end_line": 104,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier C — educational / supplementary repositories"
+      ],
+      "level": 2,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-c-educational-supplementary-repositories",
+      "semantic_type": "section",
+      "start_line": 101,
+      "title": "Tier C — educational / supplementary repositories"
+    },
+    {
+      "content": "Tier C repositories may support education or breadth but should **not** displace stronger production, open-source or independently designed projects on a senior-level CV.",
+      "end_line": 108,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Tier C — educational / supplementary repositories",
+        "Usage rule"
+      ],
+      "level": 3,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::tier-c-educational-supplementary-repositories::usage-rule",
+      "semantic_type": "boundary",
+      "start_line": 105,
+      "title": "Usage rule"
+    },
+    {
+      "content": "The public repository history provides evidence of a progression from:\n\n1. **statistical and actuarial tooling in R**,\n2. to **machine-learning and forecasting experiments**,\n3. to **independently authored Python libraries for interpretability and data quality**,\n4. to **cloud-deployed ML systems**,\n5. to **structured Generative AI, evaluation and agent-oriented architectures**.\n\nThe attached April 2026 GitHub audit covered 62 visible repositories and consolidated them into 20 evidence families. That inventory is useful for coverage, but current repositories and this index take precedence when a newer project or implementation detail exists.\n\nThis progression is useful in interviews because it demonstrates continuity: the current GenAI/agent work sits on top of an earlier foundation in statistics, machine learning, software packaging and production-oriented data work.",
+      "end_line": 121,
+      "heading_path": [
+        "GitHub Portfolio — Evidence Index",
+        "Portfolio-level narrative"
+      ],
+      "level": 2,
+      "section_id": "project-github-portfolio::github-portfolio-evidence-index::portfolio-level-narrative",
+      "semantic_type": "section",
+      "start_line": 109,
+      "title": "Portfolio-level narrative"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/github_portfolio.md",
+  "source_refs": [
+    "SRC-GITHUB-JCVAL94-PUBLIC",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}

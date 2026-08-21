@@ -1,0 +1,302 @@
+{
+  "chunks": [
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "544777f4749b8f6dacba7555360106a6353da00eda5fac168c77c55d7f4fa430",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Summary"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Summary\nThis project family covers the design, curation, evaluation and impact measurement of LLM-assisted tools that make internal knowledge easier to use in regulated workflows. The strongest documented case is **NorA**, a normative knowledge assistant for risk/operational users.",
+      "title": "Summary"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::business-problem",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "29ddb9825fc7c0481182182ada8c55972f69490047697ccbe2cfd97042aa96de",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Business problem"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Business problem\nInternal normative questions required experts to search across many documents, producing slow and inconsistent response times. The challenge was not only answering with an LLM; it was curating the corpus, preventing semantic contamination, defining safe usage and proving operational value.",
+      "title": "Business problem"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::nora-contribution",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "3848d05b848ba57242126a5333cfe37cac6e20fe908c821ef9feb53e59c12f93",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "NorA contribution"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "NorA contribution\nEvidence supports:\n\n- curation and segregation of document corpora by domain/portfolio\n- design of use cases and prompts for grounded normative questions\n- operational follow-up and adoption analysis\n- conversion of usage telemetry into time, capacity and FTE/ROI narratives\n- definition of KPIs for reach, response speed and demand handling\n- communication of results to management\n- support for user enablement and responsible adoption",
+      "title": "NorA contribution"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "e419b88c2c5f09e03078846bd68520486e875b31cf8e58190e8e43bf48f1863e",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Technologies and patterns"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Technologies and patterns\n- NotebookLM\n- Google Gemini\n- ChatGPT / OpenAI-enabled workflows\n- retrieval-grounded / RAG-style knowledge use\n- source-constrained answering\n- prompt engineering\n- corpus curation and document segregation\n- telemetry and KPI analysis\n- Google Workspace and Apps Script\n- structured workflows and human review\n\nThe exact vector database, embedding architecture and automated ingestion stack are not confirmed and must not be invented.",
+      "title": "Technologies and patterns"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::public-outcomes",
+      "chunk_type": "outcome",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "e26ed6fa4900c902683b5a2f157215b92197d1b7445af131cbfb221782495e19",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Public outcomes"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Public outcomes\nCanonical public metrics live in [the achievement registry](../achievements/metrics.md):\n\n- `ACH-GENAI-NORA-001`: collaborator reach\n- `ACH-GENAI-NORA-002`: consultation-handling speed\n- `ACH-GENAI-NORA-003`: demand-capacity scaling",
+      "title": "Public outcomes"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "8700599fd738d637558d80741e1d28666808b8858e5be6c9cab9c69f222d094e",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Related GenAI work"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Related GenAI work\n- business-facing Streamlit prototype for recommendation/communication strategy\n- process and state architecture for regulatory workflows using Gemini and Google Workspace\n- participation in a technical GenAI community/champion program\n- training, cases and practical guidance for NotebookLM, Gemini and ChatGPT\n- exploration of AI-assisted code refactoring with deterministic formatting tools\n\nThese related items are not all equivalent to production deployment.",
+      "title": "Related GenAI work"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "775db40411133cf2e3f3c18b807aab3c937d9b8b4c2755b0bd2cc228d53f73a8",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Approved public narratives"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Approved public narratives\n> Curated and measured the impact of an AI-powered normative assistant, translating usage telemetry into reach, speed and capacity KPIs.\n\n> Designed grounded knowledge workflows, corpus-segregation rules and adoption KPIs for GenAI use in a regulated environment.",
+      "title": "Approved public narratives"
+    },
+    {
+      "attributes": {},
+      "chunk_id": "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states."
+      ],
+      "content_hash": "7c4bf68f1c39752b0c9d87fba06855fe088076b92c46b22256feb47f95537cdb",
+      "cv_eligible": true,
+      "heading_path": [
+        "Internal LLM and Normative Knowledge Tools",
+        "Boundaries"
+      ],
+      "metric_refs": [
+        "ACH-GENAI-NORA-001",
+        "ACH-GENAI-NORA-002",
+        "ACH-GENAI-NORA-003"
+      ],
+      "proficiency": null,
+      "public_safe": true,
+      "record_id": "project-bbva-llm-internal-tools",
+      "record_type": "project",
+      "retrieval_class": "evidence",
+      "schema_version": 1,
+      "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+      "source_path": "experience/projects/llm_internal_tools.md",
+      "source_refs": [
+        "SRC-USER-CONFIRMED-2026-08-20",
+        "SRC-LINKEDIN-PUBLIC",
+        "SRC-PORTFOLIO-PUBLIC-2026-08",
+        "SRC-TRAJECTORY-2021-2023-CURATED",
+        "SRC-TRAJECTORY-2024-2026-CURATED"
+      ],
+      "text": "Boundaries\n- Do not attribute fraud-detection rate improvements to NorA.\n- Do not claim foundation-model training, fine-tuning or vector-database ownership.\n- Preserve qualifiers such as `up to`.\n- Treat prototypes, approved designs and deployed assistants as separate lifecycle states.",
+      "title": "Boundaries"
+    }
+  ],
+  "record_id": "project-bbva-llm-internal-tools",
+  "schema_version": 1
+}

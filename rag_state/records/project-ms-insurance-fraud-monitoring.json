@@ -1,0 +1,137 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-20",
+    "organization": "Management Solutions",
+    "period": "2017-2019"
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "6cf66e9fee8d450c6d45a55ded6f8e4443c67552604ef868af7ba5bfb46d55e4",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [
+    "../achievements/metrics.md",
+    "../roles/previous_roles.md"
+  ],
+  "metric_refs": [
+    "ACH-MS-FRAUD-001"
+  ],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "project-ms-insurance-fraud-monitoring",
+  "record_type": "project",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "",
+      "end_line": 19,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring"
+      ],
+      "level": 1,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring",
+      "semantic_type": "section",
+      "start_line": 18,
+      "title": "Management Solutions — Insurance Fraud Monitoring"
+    },
+    {
+      "content": "Client-delivery analytics focused on insurance fraud/risk monitoring and operational controls during the early Management Solutions period.",
+      "end_line": 23,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Summary"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::summary",
+      "semantic_type": "summary",
+      "start_line": 20,
+      "title": "Summary"
+    },
+    {
+      "content": "Evidence supports:\n\n- designing fraud-monitoring KPIs for excessive sales/prescriptions and related risk patterns\n- applying principal component analysis and outlier detection\n- contributing unsupervised indicators for risk/behavioral monitoring\n- developing supporting R tooling\n- helping deliver a monitoring application for insurance-portfolio health\n- translating analytical outputs into controls and client-facing reporting\n\nThe evidence supports meaningful implementation and analytical design, but not exclusive ownership of every control, case decision or downstream investigation.",
+      "end_line": 36,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Contribution and ownership"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::contribution-and-ownership",
+      "semantic_type": "ownership",
+      "start_line": 24,
+      "title": "Contribution and ownership"
+    },
+    {
+      "content": "- R\n- statistical analysis\n- PCA\n- outlier/anomaly detection\n- unsupervised analysis\n- KPI/control design\n- analytical reporting",
+      "end_line": 46,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Methods and technologies"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::methods-and-technologies",
+      "semantic_type": "technology",
+      "start_line": 37,
+      "title": "Methods and technologies"
+    },
+    {
+      "content": "- `ACH-MS-FRAUD-001` — canonical public project outcome\n\nExact wording and numeric use must come from the achievement registry rather than being reinterpreted here.",
+      "end_line": 52,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Outcome reference"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::outcome-reference",
+      "semantic_type": "outcome",
+      "start_line": 47,
+      "title": "Outcome reference"
+    },
+    {
+      "content": "> Designed insurance fraud-monitoring KPIs and analytical controls using PCA, outlier detection and supporting R tooling, contributing to a recurring client review workflow.",
+      "end_line": 56,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Approved public narrative"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::approved-public-narrative",
+      "semantic_type": "section",
+      "start_line": 53,
+      "title": "Approved public narrative"
+    },
+    {
+      "content": "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams.",
+      "end_line": 62,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Boundaries"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::boundaries",
+      "semantic_type": "boundary",
+      "start_line": 57,
+      "title": "Boundaries"
+    },
+    {
+      "content": "- [Management Solutions role](../roles/previous_roles.md)\n- [Achievement registry](../achievements/metrics.md)",
+      "end_line": 66,
+      "heading_path": [
+        "Management Solutions — Insurance Fraud Monitoring",
+        "Related records"
+      ],
+      "level": 2,
+      "section_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::related-records",
+      "semantic_type": "section",
+      "start_line": 63,
+      "title": "Related records"
+    }
+  ],
+  "source_commit": "668f82496ac4581cd3cc05b69fc9a36cf40ca256",
+  "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20",
+    "SRC-PORTFOLIO-PUBLIC-2026-08",
+    "SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19"
+  ],
+  "status": "validated_public",
+  "visibility": "public"
+}
