@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from pathlib import Path
 from typing import Literal
 
@@ -73,6 +74,11 @@ class DesignValidation(BaseModel):
     passed: bool
     checks: list[ContrastCheck]
     reasons: list[str] = Field(default_factory=list)
+
+
+def company_slug(company: str) -> str:
+    normalized = unicodedata.normalize("NFKD", company).encode("ascii", "ignore").decode("ascii").lower()
+    return re.sub(r"[^a-z0-9]+", "-", normalized).strip("-") or "company"
 
 
 def _rgb(hex_color: str) -> tuple[int, int, int]:
@@ -158,3 +164,18 @@ def load_brand_profile(path: Path | None, *, company: str) -> BrandProfile:
     if profile.source_kind != "fallback" and (not profile.verified or not profile.source_url):
         raise ValueError("verified brand profiles require verified=true and a source_url")
     return profile
+
+
+def resolve_brand_profile(
+    *,
+    company: str,
+    explicit_path: Path | None = None,
+    profiles_dir: Path | None = None,
+) -> BrandProfile:
+    if explicit_path is not None:
+        return load_brand_profile(explicit_path, company=company)
+    if profiles_dir is not None:
+        candidate = profiles_dir / f"{company_slug(company)}.yaml"
+        if candidate.exists():
+            return load_brand_profile(candidate, company=company)
+    return fallback_brand(company)
