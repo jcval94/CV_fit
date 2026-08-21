@@ -48,6 +48,20 @@ class CVDocument(BaseModel):
     certifications: list[CVEvidenceLine] = Field(default_factory=list)
 
 
+class CoverLetterParagraph(BaseModel):
+    text: str
+    evidence_refs: list[str] = Field(min_length=1)
+
+
+class CoverLetterDocument(BaseModel):
+    language: str
+    company: str
+    role: str
+    salutation: str
+    paragraphs: list[CoverLetterParagraph] = Field(min_length=2, max_length=3)
+    closing: str
+
+
 class ReviewScores(BaseModel):
     vacancy_alignment: int = Field(ge=0, le=100)
     opening_impact: int = Field(ge=0, le=100)
