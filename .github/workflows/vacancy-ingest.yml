@@ -8,8 +8,11 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
+      - "cv_agent/cover_letter.py"
+      - "cv_agent/cover_letter_batch.py"
       - "tests/test_vacancy_*.py"
       - "tests/test_cv_auto.py"
+      - "tests/test_cover_letter.py"
       - ".github/workflows/vacancy-ingest.yml"
   push:
     branches: [main]
@@ -19,8 +22,11 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
+      - "cv_agent/cover_letter.py"
+      - "cv_agent/cover_letter_batch.py"
       - "tests/test_vacancy_*.py"
       - "tests/test_cv_auto.py"
+      - "tests/test_cover_letter.py"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
 
@@ -53,6 +59,7 @@ jobs:
           tests.test_vacancy_pipeline
           tests.test_vacancy_fidelity
           tests.test_cv_auto
+          tests.test_cover_letter
           -v
 
       - name: Validate PR inputs E2E
@@ -153,7 +160,16 @@ jobs:
           --max-vacancies-per-run 5
           --max-estimated-cost-usd 2.0
 
-      - name: Upload generated CV artifacts
+      - name: Generate concise grounded cover letters for generated CVs
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_agent.cover_letter_batch
+          --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+          --vacancy-state vacancy_state
+          --max-estimated-cost-usd 1.0
+
+      - name: Upload generated application artifacts
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         uses: actions/upload-artifact@v4
         with:
