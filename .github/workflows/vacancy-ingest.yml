@@ -1,0 +1,87 @@
+name: Incremental vacancy ingest
+
+on:
+  pull_request:
+    paths:
+      - "GPTW/**/*.json"
+      - "Vacantes/**/*.json"
+      - "vacancy_pipeline/**"
+      - "contracts/vacancies/**"
+      - ".github/workflows/vacancy-ingest.yml"
+  push:
+    branches: [main]
+    paths:
+      - "GPTW/**/*.json"
+      - "Vacantes/**/*.json"
+      - "vacancy_pipeline/**"
+      - "contracts/vacancies/**"
+      - ".github/workflows/vacancy-ingest.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: vacancy-ingest-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  validate-or-ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run vacancy pipeline tests
+        run: python -m unittest tests.test_vacancy_pipeline -v
+
+      - name: Validate PR inputs E2E
+        if: github.event_name == 'pull_request'
+        run: >-
+          python -m vacancy_pipeline
+          --repo .
+          --state-dir /tmp/cv-fit-vacancy-state
+          --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}
+          --source-commit ${{ github.sha }}
+          --full-rebuild
+          --fail-on-quarantine
+
+      - name: Sync latest main before incremental ingest
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - name: Incrementally ingest main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: >-
+          python -m vacancy_pipeline
+          --repo .
+          --state-dir vacancy_state
+          --run-id ${{ github.sha }}
+          --source-commit ${{ github.sha }}
+
+      - name: Retrieval smoke test
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          python -m vacancy_pipeline.retrieve "machine learning" --state-dir vacancy_state --top-k 3 > /tmp/vacancy-retrieval.json
+          cat /tmp/vacancy-retrieval.json
+
+      - name: Commit versioned vacancy state
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vacancy_state
+          if git diff --cached --quiet; then
+            echo "No vacancy state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update vacancy state for ${GITHUB_SHA::12}"
+          git pull --rebase origin main
+          git push origin HEAD:main
