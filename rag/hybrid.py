@@ -11,6 +11,30 @@ DEFAULT_LEXICAL_WEIGHT = 1.0
 DEFAULT_DENSE_WEIGHT = 1.0
 
 
+def normalize_relations(payload: Any) -> list[dict[str, str]]:
+    """Normalize the persisted relation contract into a list of relation edges.
+
+    `rag_state/relations.json` is versioned as an envelope with a top-level
+    `relations` array. Unit callers may also pass the edge list directly. Any
+    other shape is rejected loudly so graph expansion never silently degrades.
+    """
+    if payload is None:
+        return []
+    if isinstance(payload, dict):
+        edges = payload.get("relations", [])
+    elif isinstance(payload, list):
+        edges = payload
+    else:
+        raise TypeError(f"unsupported relations payload type: {type(payload).__name__}")
+
+    if not isinstance(edges, list):
+        raise ValueError("relations payload must contain a list under 'relations'")
+    invalid = [index for index, edge in enumerate(edges) if not isinstance(edge, dict)]
+    if invalid:
+        raise ValueError(f"relations payload contains non-object edges at indexes {invalid[:5]}")
+    return edges
+
+
 def reciprocal_rank_fusion(
     lexical_hits: list[dict[str, Any]],
     dense_hits: list[dict[str, Any]],
@@ -54,7 +78,7 @@ def expand_graph(
     hits: list[dict[str, Any]],
     *,
     lexical_index: dict[str, Any],
-    relations: list[dict[str, str]],
+    relations: Any,
     max_expansions: int = 8,
 ) -> list[dict[str, Any]]:
     """Add one-hop eligible evidence linked to retrieved records.
@@ -69,7 +93,7 @@ def expand_graph(
     active_chunks = lexical_index.get("chunks", {})
     record_chunks = lexical_index.get("record_chunks", {})
     edges_by_source: defaultdict[str, list[dict[str, str]]] = defaultdict(list)
-    for edge in relations:
+    for edge in normalize_relations(relations):
         edges_by_source[edge.get("source", "")].append(edge)
 
     existing = {hit["chunk_id"] for hit in hits}
@@ -85,7 +109,7 @@ def expand_graph(
                 break
             candidates: list[str] = []
             if edge.get("relation") == "references_metric":
-                candidates = [f"achievement-metrics::{edge.get('target')}" ]
+                candidates = [f"achievement-metrics::{edge.get('target')}"]
             elif edge.get("relation") == "links_to":
                 candidates = list(record_chunks.get(edge.get("target", ""), []))[:2]
 
@@ -120,7 +144,7 @@ def hybrid_retrieve(
     *,
     lexical_index: dict[str, Any],
     dense_hits: list[dict[str, Any]],
-    relations: list[dict[str, str]] | None = None,
+    relations: Any = None,
     top_k: int = 8,
     candidate_k: int = 20,
     graph_expansion: bool = True,
@@ -128,5 +152,10 @@ def hybrid_retrieve(
     lexical_hits = retrieve_evidence(lexical_index, query, top_k=candidate_k)
     fused = reciprocal_rank_fusion(lexical_hits, dense_hits[:candidate_k], top_k=top_k)
     if graph_expansion and relations:
-        return expand_graph(fused, lexical_index=lexical_index, relations=relations, max_expansions=max(2, top_k // 2))
+        return expand_graph(
+            fused,
+            lexical_index=lexical_index,
+            relations=relations,
+            max_expansions=max(2, top_k // 2),
+        )
     return fused
