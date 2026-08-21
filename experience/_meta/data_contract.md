@@ -48,6 +48,10 @@ Recency breaks ties only between sources with comparable authority. Never averag
 
 This ordering is global. Individual records should not redefine `source_priority` unless an explicit, documented exception is necessary for that record type.
 
+### Credential metadata exception
+
+For exact credential metadata — official title, issuer, issue date, credential status and credential identifier — an **official credential artifact/record outranks recollection or profile prose**. `certifications.md` may therefore use the explicit order `public_credential_record -> linkedin_public_profile -> user_confirmed_history` for those fields. User confirmation still governs contextual interpretation and can flag a conflict, but should not silently overwrite an official credential record.
+
 ## Confidence
 
 - `high`: direct primary evidence or multiple consistent sources
