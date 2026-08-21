@@ -1,104 +1,113 @@
-# RAG foundation — Phase 1: normalization
+# Professional evidence RAG
 
-This directory prepares the canonical `experience/` source of truth for future retrieval.
+`rag/` transforms the canonical Markdown under `experience/` into deterministic, retrieval-safe professional evidence. It never mutates the source of truth.
 
-## Scope of this phase
-
-Phase 1 performs only deterministic parsing and normalization:
+## Pipeline
 
 ```text
-experience/*.md
-      ↓
-frontmatter + Markdown parser
-      ↓
-normalized records
-      ↓
-records.jsonl + manifest.json
+experience/**/*.md
+        ↓
+schema-v3 validation
+        ↓
+rag.normalize
+        ↓
+hierarchical normalized records
+        ↓
+rag.evidence
+        ↓
+typed semantic evidence chunks
+        ↓
+relations + transparent lexical index
+        ↓
+versioned rag_state/
 ```
 
-It intentionally does **not** implement:
+Dense embeddings/vector infrastructure are deliberately deferred. The current lexical layer is deterministic, cheap and auditable, and gives the ADK workflow stable evidence IDs before adding another retrieval dependency.
 
-- retrieval chunks
-- token splitting or overlap
-- embeddings
-- vector databases
-- BM25 / lexical indexes
-- reranking
-- graph expansion
-- context packing
-- CV generation
+## Normalization layer
 
-Those stages should only be added after the normalized record representation is inspected and stable.
-
-## Why normalization comes first
-
-The repository already encodes governance rules that ordinary text splitters would lose:
+`rag.normalize` preserves:
 
 - `record_id`, `record_type`, status and confidence
 - `public_safe` and source provenance
-- exact metric references through `ACH-*`
+- exact `ACH-*` references
 - ownership and usage boundaries
 - strict skill proficiency
-- router records versus primary evidence
-- conflict/policy records that constrain downstream use
+- router/evidence/policy classification
+- Markdown heading hierarchy
+- source commit and content hash
 
-The normalizer preserves those semantics before any text is transformed for retrieval.
+Normalized sections remain structural units; they are not blindly treated as retrieval chunks.
 
-## Retrieval classes
+## Semantic evidence chunking
 
-Every normalized record receives one of three classes:
+`rag.evidence` has specialized rules instead of a fixed token splitter:
 
-- `evidence`: primary candidate for later semantic/lexical retrieval
-- `router`: retrieval-routing documents such as `projects/index.md` and `roles/index.md`; not embedding candidates
-- `policy`: governance records under `experience/_meta/`; not embedding candidates
+- **Metrics:** one atomic chunk per `ACH-*`; public/CV eligibility is evaluated from that metric entry, not from the file-level flag.
+- **Skills:** one chunk per skill/language entry; exact `core | working | familiarity` or language proficiency is metadata.
+- **Credentials:** one chunk per credential; inactive/expired entries are conservatively excluded from automatic reuse.
+- **Projects/roles:** semantic heading chunks with parent ownership/usage boundaries attached as constraints.
+- **Router records:** excluded from ordinary evidence retrieval.
+- **Policy records:** may be represented for governance but never compete in normal evidence retrieval.
 
-`projects/github_portfolio.md` is also treated as `router` because its purpose is evidence inventory/routing and it heavily overlaps the project records it references.
+Every chunk has a stable ID, source path, source refs, constraints, metric refs, proficiency where applicable and a deterministic content hash.
 
-## Normalized record contract
+## Incrementality
 
-Each JSONL record includes:
+`rag_state/manifest.json` tracks a SHA-256 per professional source file. A normal run:
 
-- `normalization_schema_version`
-- canonical identity: `record_id`, `record_type`
-- governance: `status`, `confidence`, `visibility`, `public_safe`
-- retrieval controls: `retrieval_class`, `automatic_reuse_eligible`, `embedding_candidate`
-- provenance: `source_path`, `source_commit`, `source_refs`
-- relations visible in source text: `metric_refs`, `linked_markdown_paths`
-- non-core frontmatter under `attributes`
-- hierarchical Markdown `sections`
-- deterministic `content_hash`
+- skips unchanged files completely;
+- reparses/rechunks/reindexes only new or modified records;
+- removes deleted records and their postings;
+- retains stable chunks/index entries for unaffected records.
 
-Sections are structural units only. They are **not retrieval chunks yet**.
+A semantic pipeline-version change forces one controlled rebuild, then normal incremental behavior resumes.
 
-## Build
+## State
 
-Validate parsing without writing generated files:
+```text
+rag_state/
+├── manifest.json
+├── lexical_index.json
+├── relations.json
+├── records/
+├── chunks/
+├── runs/
+└── latest_run.json
+```
+
+This state is derived and versioned for auditability. `experience/` remains authoritative.
+
+## Retrieval safety
+
+Only chunks that are both ordinary `evidence` and `cv_eligible` enter the professional lexical index. This prevents router/policy documents, blocked metrics and non-reusable records from being retrieved as candidate claims.
+
+The downstream matcher treats retrieval as evidence discovery, not permission to strengthen a claim. In particular, a `familiarity` skill remains `familiarity` regardless of vacancy wording.
+
+## Commands
+
+Validate Phase 1 normalization:
 
 ```bash
 python -m rag.normalize --repo . --check
 ```
 
-Generate the normalized artifacts locally:
+Build/update versioned evidence state:
 
 ```bash
-python -m rag.normalize --repo .
+python -m rag.evidence --repo . --state-dir rag_state --run-id local
 ```
 
-This writes:
+Recovery/full validation only:
 
-```text
-artifacts/rag/records.jsonl
-artifacts/rag/manifest.json
+```bash
+python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id rebuild --full-rebuild
 ```
 
-Generated artifacts are intentionally gitignored. They are reproducible outputs, not canonical source data.
+Retrieve:
 
-## Design invariants
+```bash
+python -m rag.retrieve "fraud anomaly detection Python" --state-dir rag_state --top-k 8
+```
 
-1. `experience/` remains the canonical source; generated RAG artifacts never overwrite it.
-2. Normalization is deterministic and provider-agnostic.
-3. Router and policy records never become ordinary embedding candidates.
-4. `needs_reconciliation`, `draft`, and `deprecated` records are not eligible for automatic reuse.
-5. Exact metrics remain referenced by `ACH-*`; normalization does not copy or reinterpret numbers.
-6. Markdown structure is preserved so later chunking can be semantic and parent-aware.
-7. Source commit and content hashes support future incremental indexing.
+`.github/workflows/evidence-rag.yml` validates full state on PRs and updates `rag_state/` incrementally on `main`.
