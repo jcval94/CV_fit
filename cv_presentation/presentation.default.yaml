@@ -1,0 +1,38 @@
+schema_version: 1
+
+document:
+  page_size: letter
+  target_pages: 2
+  # Contract only. HTML implementation comes in the next stage.
+  template_id: ats_classic_v1
+
+layout:
+  section_order:
+    - summary
+    - experience
+    - projects
+    - skills
+    - education
+    - certifications
+  section_modes:
+    summary: always
+    experience: always
+    projects: auto
+    skills: always
+    education: always
+    certifications: auto
+
+density:
+  mode: normal
+  max_summary_words: 80
+  max_role_bullets: 4
+  min_role_bullets: 1
+  max_projects: 2
+  max_project_bullets: 3
+  min_project_bullets: 1
+  max_skills: 10
+  min_skills: 5
+  max_education: 2
+  max_certifications: 4
+  estimated_chars_per_line: 92
+  estimated_lines_per_page: 50
