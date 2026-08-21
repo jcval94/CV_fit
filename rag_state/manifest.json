@@ -1,6 +1,6 @@
 {
   "pipeline_version": 1,
-  "source_commit": "ba119874d30232beb29f5d153af82d0c2d637e97",
+  "source_commit": "974472cadcaaaf7c4742308cb618aadb8ccbd4d7",
   "sources": {
     "experience/_meta/conflicts.md": {
       "chunk_ids": [
