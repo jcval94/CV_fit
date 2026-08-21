@@ -12,6 +12,7 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
+      - "tests/test_cover_letter.py"
       - "tests/test_openai_provider.py"
       - "tests/test_vacancy_fidelity.py"
       - "pyproject.toml"
@@ -29,6 +30,7 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
+      - "tests/test_cover_letter.py"
       - "tests/test_openai_provider.py"
       - "tests/test_vacancy_fidelity.py"
       - "pyproject.toml"
@@ -57,7 +59,7 @@ jobs:
           python-version: "3.12"
       - name: Install ADK project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Run deterministic agent, matching, fidelity, telemetry and presentation tests
+      - name: Run deterministic agent, matching, presentation, template and cover-letter tests
         run: >-
           python -m unittest
           tests.test_cv_matching
@@ -65,6 +67,8 @@ jobs:
           tests.test_cv_agent_workflow
           tests.test_cv_telemetry
           tests.test_cv_presentation
+          tests.test_cv_templates
+          tests.test_cover_letter
           tests.test_openai_provider
           tests.test_vacancy_fidelity
           -v
