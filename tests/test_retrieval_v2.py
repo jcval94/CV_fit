@@ -7,7 +7,7 @@ from pathlib import Path
 
 from cv_matching.match import _coverage
 from rag.dense import build_dense_index, retrieve_dense
-from rag.hybrid import expand_graph, reciprocal_rank_fusion
+from rag.hybrid import deterministic_anchors, expand_graph, reciprocal_rank_fusion
 from rag.rerank import apply_rerank
 
 
@@ -84,6 +84,75 @@ class DenseIndexTests(unittest.TestCase):
         }
         hits, _ = retrieve_dense(dense, "rollback strategy for model deployment", client=client, top_k=1)
         self.assertEqual(hits[0]["chunk_id"], "deploy")
+
+
+class StructuralAnchorTests(unittest.TestCase):
+    @staticmethod
+    def _index():
+        return {
+            "chunks": {
+                "skills::kubernetes": {
+                    "record_id": "skills",
+                    "chunk_type": "skill",
+                    "source_path": "experience/skills.md",
+                    "proficiency": "familiarity",
+                    "constraints": ["do not claim platform engineering expertise"],
+                    "metric_refs": [],
+                    "text": "Kubernetes\n- **Level:** familiarity\n- **Usage note:** supporting MLOps knowledge only",
+                },
+                "skills::aws": {
+                    "record_id": "skills",
+                    "chunk_type": "skill",
+                    "source_path": "experience/skills.md",
+                    "proficiency": "working",
+                    "constraints": [],
+                    "metric_refs": [],
+                    "text": "AWS\n- **Level:** working",
+                },
+                "role-ms::canonical-employment-record": {
+                    "record_id": "role-management-solutions",
+                    "chunk_type": "role_detail",
+                    "source_path": "experience/roles/previous_roles.md",
+                    "proficiency": None,
+                    "constraints": [],
+                    "metric_refs": [],
+                    "text": "Canonical employment record\n- **Overall period:** October 2017 – May 2021\n- **Professional context:** data consulting and machine learning",
+                },
+                "certifications::python": {
+                    "record_id": "certifications",
+                    "chunk_type": "credential",
+                    "source_path": "experience/certifications.md",
+                    "proficiency": None,
+                    "constraints": [],
+                    "metric_refs": [],
+                    "text": "Python course",
+                },
+            },
+            "record_chunks": {},
+        }
+
+    def test_named_skill_is_anchored_without_upgrading_proficiency(self):
+        anchors = deterministic_anchors(
+            "Kubernetes platform engineering production ownership",
+            lexical_index=self._index(),
+        )
+        self.assertEqual(anchors[0]["chunk_id"], "skills::kubernetes")
+        self.assertEqual(anchors[0]["proficiency"], "familiarity")
+        self.assertEqual(anchors[0]["anchor_reason"], "exact_named_skill")
+
+    def test_duration_query_anchors_canonical_role_not_certification(self):
+        anchors = deterministic_anchors(
+            "Al menos cuatro años de experiencia profesional en software, machine learning y ciencia de datos",
+            lexical_index=self._index(),
+        )
+        ids = [hit["chunk_id"] for hit in anchors]
+        self.assertIn("role-ms::canonical-employment-record", ids)
+        self.assertNotIn("certifications::python", ids)
+
+    def test_broad_aws_anchor_still_does_not_assert_bedrock(self):
+        anchors = deterministic_anchors("AWS Bedrock", lexical_index=self._index())
+        self.assertEqual([hit["chunk_id"] for hit in anchors], ["skills::aws"])
+        self.assertEqual(anchors[0]["retrieval_source"], "anchor")
 
 
 class HybridGraphTests(unittest.TestCase):
