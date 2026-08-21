@@ -3,6 +3,8 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
+from vacancy_pipeline.fidelity import assess_jd_fidelity
+
 
 @dataclass(frozen=True)
 class ProvenanceRef:
@@ -38,10 +40,6 @@ class VacancyRecord:
     application_language: str
     language_confidence: float
     language_source: str
-    jd_fidelity: str
-    jd_fidelity_score: float
-    jd_fidelity_reasons: list[str]
-    jd_generation_eligible: bool
     fit_score: float | None
     fit_summary: str | None
     fit_strengths: list[str]
@@ -49,6 +47,21 @@ class VacancyRecord:
     identity_key: str
     content_hash: str
     provenance: list[ProvenanceRef] = field(default_factory=list)
+    jd_fidelity: str = field(init=False)
+    jd_fidelity_score: float = field(init=False)
+    jd_fidelity_reasons: list[str] = field(init=False)
+    jd_generation_eligible: bool = field(init=False)
+
+    def __post_init__(self) -> None:
+        assessment = assess_jd_fidelity(
+            description=self.description,
+            requirements=self.requirements,
+            responsibilities=self.responsibilities,
+        )
+        object.__setattr__(self, "jd_fidelity", assessment.classification)
+        object.__setattr__(self, "jd_fidelity_score", assessment.score)
+        object.__setattr__(self, "jd_fidelity_reasons", list(assessment.reasons))
+        object.__setattr__(self, "jd_generation_eligible", assessment.generation_eligible)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
