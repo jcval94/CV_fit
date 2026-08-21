@@ -10,7 +10,7 @@ from cv_agent.workflow import run_agentic_cv
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate and iteratively review one evidence-grounded vacancy-specific CV with Google ADK.")
+    parser = argparse.ArgumentParser(description="Generate and iteratively review one evidence-grounded vacancy-specific CV with OpenAI-backed ADK.")
     parser.add_argument("--vacancy-id", required=True)
     parser.add_argument("--vacancy-state", default="vacancy_state")
     parser.add_argument("--evidence-state", default="rag_state")
