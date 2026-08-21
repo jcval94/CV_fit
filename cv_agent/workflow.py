@@ -51,7 +51,8 @@ def _ordered_evidence_ids(match_plan: dict[str, Any]) -> list[str]:
 def _budget_evidence(chunks: list[dict[str, Any]], match_plan: dict[str, Any]) -> list[dict[str, Any]]:
     by_id = {chunk["chunk_id"]: chunk for chunk in chunks}
     ordered_ids = _ordered_evidence_ids(match_plan)
-    ordered_ids.extend(chunk_id for chunk_id in sorted(by_id) if chunk_id not in set(ordered_ids))
+    existing = set(ordered_ids)
+    ordered_ids.extend(chunk_id for chunk_id in sorted(by_id) if chunk_id not in existing)
     result: list[dict[str, Any]] = []
     used_chars = 0
     for chunk_id in ordered_ids:
@@ -154,9 +155,8 @@ async def run_agentic_cv(
     _write_json(output_dir / "drafts" / "cv_initial.json", cv.model_dump())
 
     iteration_records: list[dict[str, Any]] = []
-    best: tuple[tuple[int, int, int], CVDocument, HeadhunterReview, dict[str, Any]] | None = None
+    best: tuple[tuple[int, int, int], int, CVDocument, HeadhunterReview, dict[str, Any]] | None = None
     quality_target_reached = False
-    final_gate_reasons: list[str] = []
 
     for iteration in range(1, MAX_REVIEW_ITERATIONS + 1):
         policy = policy_for_iteration(iteration)
@@ -201,14 +201,15 @@ async def run_agentic_cv(
 
         rank = _candidate_rank(review, validators_pass)
         if best is None or rank > best[0]:
-            best = (rank, cv, review, validation_payload)
+            best = (rank, iteration, cv, review, validation_payload)
 
         if gate.passed:
+            # A candidate that satisfies the full gate always wins even if an
+            # earlier REVISE received a numerically higher subjective score.
+            best = (rank, iteration, cv, review, validation_payload)
             quality_target_reached = True
-            final_gate_reasons = []
             break
 
-        final_gate_reasons = gate.reasons
         if iteration == MAX_REVIEW_ITERATIONS:
             break
 
@@ -234,24 +235,30 @@ async def run_agentic_cv(
     if best is None:
         raise RuntimeError("review loop produced no evaluated CV candidate")
 
-    _, final_cv, final_review, final_validation = best
+    _, best_iteration, final_cv, final_review, final_validation = best
     final_status = "PASS" if quality_target_reached else "COMPLETED_BELOW_TARGET"
     quality_note = None if quality_target_reached else (
         "Maximum of 5 Senior Headhunter review iterations reached without satisfying all quality gates. "
         "The best evaluated CV is returned; review run_report.json before submitting."
+    )
+    final_gate_reasons = [] if quality_target_reached else list(
+        final_validation.get("quality_gate", {}).get("reasons", [])
     )
 
     _write_json(output_dir / "cv_final.json", {
         "quality_status": final_status,
         "quality_target_reached": quality_target_reached,
         "quality_note": quality_note,
+        "best_review_iteration": best_iteration,
         "cv": final_cv.model_dump(),
     })
     (output_dir / "cv_final.md").write_text(render_markdown(final_cv), encoding="utf-8")
 
     final_refs: set[str] = set()
+
     def add_refs(values: list[str]) -> None:
         final_refs.update(values)
+
     add_refs(final_cv.headline.evidence_refs)
     add_refs(final_cv.summary.evidence_refs)
     for item in final_cv.experience:
@@ -287,11 +294,12 @@ async def run_agentic_cv(
         "quality_note": quality_note,
         "max_review_iterations": MAX_REVIEW_ITERATIONS,
         "iterations_executed": len(iteration_records),
+        "best_review_iteration": best_iteration,
         "model_escalation": [item["model_policy"] for item in iteration_records],
         "premium_model_used": any(item["model_policy"]["premium"] for item in iteration_records),
         "final_review": final_review.model_dump(),
         "final_validation": final_validation,
-        "final_gate_reasons": final_gate_reasons if not quality_target_reached else [],
+        "final_gate_reasons": final_gate_reasons,
         "match_coverage_score": context["match_plan"].get("coverage_score"),
         "unsupported_requirements": [
             item["requirement"] for item in context["match_plan"].get("requirements", []) if item.get("coverage") == "unsupported"
