@@ -7,6 +7,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from cv_agent.adk_runtime import AdkStructuredClient
+from cv_agent.cover_letter import generate_cover_letter
+from cv_agent.schemas import CVDocument
 from cv_agent.workflow import run_agentic_cv
 
 
@@ -15,8 +17,14 @@ def _write_json(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _read_final_cv(path: Path) -> CVDocument:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    cv_payload = payload.get("cv", payload)
+    return CVDocument.model_validate(cv_payload)
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate and iteratively review one evidence-grounded vacancy-specific CV with OpenAI-backed ADK.")
+    parser = argparse.ArgumentParser(description="Generate, review and package one evidence-grounded vacancy-specific application with OpenAI-backed ADK.")
     parser.add_argument("--vacancy-id", required=True)
     parser.add_argument("--vacancy-state", default="vacancy_state")
     parser.add_argument("--evidence-state", default="rag_state")
@@ -34,6 +42,7 @@ def main() -> int:
         parser.error("--max-estimated-cost-usd must be greater than zero")
 
     run_id = args.run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    vacancy_state = Path(args.vacancy_state)
     output_dir = Path(args.outputs) / args.vacancy_id / run_id
     output_dir.mkdir(parents=True, exist_ok=True)
     client = AdkStructuredClient(max_estimated_cost_usd=args.max_estimated_cost_usd)
@@ -43,10 +52,20 @@ def main() -> int:
             vacancy_id=args.vacancy_id,
             client=client,
             output_dir=output_dir,
-            vacancy_state=Path(args.vacancy_state),
+            vacancy_state=vacancy_state,
             evidence_state=Path(args.evidence_state),
             run_id=run_id,
         ))
+        vacancy = json.loads((vacancy_state / "records" / f"{args.vacancy_id}.json").read_text(encoding="utf-8"))
+        final_cv = _read_final_cv(output_dir / "cv_final.json")
+        asyncio.run(generate_cover_letter(
+            client=client,
+            vacancy=vacancy,
+            final_cv=final_cv,
+            output_dir=output_dir,
+        ))
+        report["cover_letter_status"] = "PASS"
+        report["cover_letter_file"] = "cover_letter_final.md"
     except Exception:
         _write_json(output_dir / "usage_report.json", client.telemetry_snapshot())
         raise
@@ -61,7 +80,10 @@ def main() -> int:
     }
     _write_json(output_dir / "run_report.json", report)
 
-    print(f"status={report['status']} quality_target_reached={report['quality_target_reached']} iterations={report['iterations_executed']}")
+    print(
+        f"status={report['status']} quality_target_reached={report['quality_target_reached']} "
+        f"iterations={report['iterations_executed']} cover_letter={report['cover_letter_status']}"
+    )
     print(
         "usage="
         f"calls:{usage['call_count']} "
