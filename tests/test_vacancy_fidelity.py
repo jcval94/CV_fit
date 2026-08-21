@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from cv_agent.context import assert_vacancy_generation_ready
+from vacancy_pipeline.contract import adapt_source_document
 from vacancy_pipeline.fidelity import assess_jd_fidelity
 
 
@@ -23,6 +24,22 @@ class VacancyFidelityTests(unittest.TestCase):
         }
         with self.assertRaisesRegex(ValueError, "not CV-generation eligible"):
             assert_vacancy_generation_ready(vacancy)
+        assert_vacancy_generation_ready(vacancy, allow_sparse_jd=True)
+
+    def test_adapter_marks_summary_and_stack_only_vacancy_sparse(self) -> None:
+        doc = {
+            "vacancies": [{
+                "company": "Example",
+                "role_title": "Senior Data Scientist",
+                "tech_stack": ["Python", "SQL", "Machine Learning"],
+                "fit_evaluation": "Strong fit based on the candidate profile.",
+            }]
+        }
+        record = adapt_source_document(doc, "GPTW/example.json", "abc")[0]
+        self.assertEqual(record.schema_version, 2)
+        self.assertEqual(record.jd_fidelity, "sparse")
+        self.assertFalse(record.jd_generation_eligible)
+        self.assertEqual(record.jd_fidelity_score, 0.0)
 
     def test_partial_jd_is_generation_eligible(self) -> None:
         assessment = assess_jd_fidelity(
