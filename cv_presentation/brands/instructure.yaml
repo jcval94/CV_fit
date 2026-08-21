@@ -1,0 +1,15 @@
+company: Instructure
+source_kind: verified_manual
+source_url: https://www.instructure.com/es/acerca-de/carreras
+verified: true
+primary: "#1F2937"
+secondary: "#374151"
+accent: "#C2410C"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: humanist_sans
+body_font: system_sans
+notes:
+  - "Profile is grounded in the official Instructure careers experience and uses a restrained orange accent with neutral dark typography for ATS/print legibility."
+  - "The exact accessible hex values are manual CV adaptations rather than claims about Instructure's canonical digital design tokens."
