@@ -21,18 +21,71 @@ class AdkStructuredClient:
     through its documented LiteLLM model connector; the repo-level credential is
     OPENAI_APY_KEY and is mirrored in-process only when a live call is made.
 
-    Every live call records ADK usage metadata so the generated artifact can show
-    which agent/model consumed tokens and an estimated cost from the pinned public
-    pricing snapshot. Telemetry never contains the API key or full prompt payload.
+    Every live call records ADK usage metadata. A cumulative estimated-cost guard
+    can stop additional calls after the configured budget has been reached. The
+    guard is intentionally conservative: a single in-flight call may put the run
+    slightly above the threshold, but no subsequent model call will be started.
     """
 
-    def __init__(self, app_name: str = "cv_fit_pipeline", user_id: str = "cv_fit") -> None:
+    def __init__(
+        self,
+        app_name: str = "cv_fit_pipeline",
+        user_id: str = "cv_fit",
+        max_estimated_cost_usd: float | None = None,
+    ) -> None:
         self.app_name = app_name
         self.user_id = user_id
+        self.max_estimated_cost_usd = max_estimated_cost_usd
         self._usage: list[LLMCallUsage] = []
 
     def telemetry_snapshot(self) -> dict:
-        return summarize_usage(list(self._usage))
+        summary = summarize_usage(list(self._usage))
+        summary["max_estimated_cost_usd"] = self.max_estimated_cost_usd
+        return summary
+
+    def _assert_budget_available(self) -> None:
+        if self.max_estimated_cost_usd is None:
+            return
+        spent = float(self.telemetry_snapshot().get("known_estimated_cost_usd") or 0.0)
+        if spent >= self.max_estimated_cost_usd:
+            raise RuntimeError(
+                f"OpenAI live-run estimated-cost guard reached: ${spent:.4f} >= "
+                f"${self.max_estimated_cost_usd:.4f}. No additional model call was started."
+            )
+
+    def _record_usage(
+        self,
+        *,
+        name: str,
+        model: str,
+        prompt_tokens: int,
+        cached_input_tokens: int,
+        candidate_tokens: int,
+        reasoning_tokens: int,
+        total_tokens: int,
+        started: float,
+        error: str | None = None,
+    ) -> None:
+        self._usage.append(LLMCallUsage(
+            name=name,
+            model=model,
+            prompt_tokens=prompt_tokens,
+            cached_input_tokens=cached_input_tokens,
+            candidate_tokens=candidate_tokens,
+            reasoning_tokens=reasoning_tokens,
+            total_tokens=total_tokens,
+            duration_ms=round((time.perf_counter() - started) * 1000),
+            estimated_cost_usd=estimate_cost_usd(
+                model,
+                prompt_tokens=prompt_tokens,
+                cached_input_tokens=cached_input_tokens,
+                candidate_tokens=candidate_tokens,
+                reasoning_tokens=reasoning_tokens,
+            ),
+            pricing_snapshot_date=PRICING_SNAPSHOT_DATE,
+            pricing_basis=PRICING_BASIS,
+            error=error,
+        ))
 
     async def call(
         self,
@@ -44,6 +97,7 @@ class AdkStructuredClient:
         output_schema: type[T],
         max_output_tokens: int = 6000,
     ) -> T:
+        self._assert_budget_available()
         prepare_openai_environment(required=True)
 
         from google.adk.agents import LlmAgent
@@ -98,7 +152,7 @@ class AdkStructuredClient:
                 raise RuntimeError(f"ADK agent {name!r} returned no final structured response")
             result = output_schema.model_validate_json(final_text)
         except Exception as exc:
-            self._usage.append(LLMCallUsage(
+            self._record_usage(
                 name=name,
                 model=model,
                 prompt_tokens=prompt_tokens,
@@ -106,21 +160,12 @@ class AdkStructuredClient:
                 candidate_tokens=candidate_tokens,
                 reasoning_tokens=reasoning_tokens,
                 total_tokens=total_tokens,
-                duration_ms=round((time.perf_counter() - started) * 1000),
-                estimated_cost_usd=estimate_cost_usd(
-                    model,
-                    prompt_tokens=prompt_tokens,
-                    cached_input_tokens=cached_input_tokens,
-                    candidate_tokens=candidate_tokens,
-                    reasoning_tokens=reasoning_tokens,
-                ),
-                pricing_snapshot_date=PRICING_SNAPSHOT_DATE,
-                pricing_basis=PRICING_BASIS,
+                started=started,
                 error=f"{type(exc).__name__}: {exc}",
-            ))
+            )
             raise
 
-        self._usage.append(LLMCallUsage(
+        self._record_usage(
             name=name,
             model=model,
             prompt_tokens=prompt_tokens,
@@ -128,15 +173,7 @@ class AdkStructuredClient:
             candidate_tokens=candidate_tokens,
             reasoning_tokens=reasoning_tokens,
             total_tokens=total_tokens,
-            duration_ms=round((time.perf_counter() - started) * 1000),
-            estimated_cost_usd=estimate_cost_usd(
-                model,
-                prompt_tokens=prompt_tokens,
-                cached_input_tokens=cached_input_tokens,
-                candidate_tokens=candidate_tokens,
-                reasoning_tokens=reasoning_tokens,
-            ),
-            pricing_snapshot_date=PRICING_SNAPSHOT_DATE,
-            pricing_basis=PRICING_BASIS,
-        ))
+            started=started,
+        )
+        self._assert_budget_available()
         return result
