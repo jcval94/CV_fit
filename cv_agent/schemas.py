@@ -17,7 +17,7 @@ class StrategyOutput(BaseModel):
     rationale: list[str] = Field(default_factory=list)
 
 
-class CVBullet(BaseModel):
+class CVEvidenceLine(BaseModel):
     text: str
     evidence_refs: list[str] = Field(min_length=1)
 
@@ -26,24 +26,26 @@ class CVExperienceItem(BaseModel):
     organization: str
     title: str
     period: str
-    bullets: list[CVBullet]
+    evidence_refs: list[str] = Field(min_length=1)
+    bullets: list[CVEvidenceLine]
 
 
 class CVProjectItem(BaseModel):
     name: str
-    bullets: list[CVBullet]
+    evidence_refs: list[str] = Field(min_length=1)
+    bullets: list[CVEvidenceLine]
 
 
 class CVDocument(BaseModel):
     language: str
     target_role: str
-    headline: str
-    summary: CVBullet
+    headline: CVEvidenceLine
+    summary: CVEvidenceLine
     experience: list[CVExperienceItem]
     projects: list[CVProjectItem] = Field(default_factory=list)
-    skills: list[str]
-    education: list[str] = Field(default_factory=list)
-    certifications: list[str] = Field(default_factory=list)
+    skills: list[CVEvidenceLine]
+    education: list[CVEvidenceLine] = Field(default_factory=list)
+    certifications: list[CVEvidenceLine] = Field(default_factory=list)
 
 
 class ReviewScores(BaseModel):
