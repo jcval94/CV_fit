@@ -1,8 +1,16 @@
 {
-  "last_run_id": "9d04514c73bb6d46614281e1a66a72390bd6ca8d-noop",
-  "pipeline_version": 3,
+  "last_run_id": "7589efe95ad9fb9e36d848abe835feefd55def92-noop",
+  "pipeline_version": 4,
   "schema_version": 1,
   "sources": {
+    "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json": {
+      "source_hash": "e23d488d1866a1ce5942cfe4c71bf5bfdf43e29d78cd29f740fc53ad33a0843a",
+      "state_file": "sources/GPTW__enriched__konfio_ai_ml_engineer_sr_2026-08-18.json--8fb6c8787cdc29d7.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-04e92192e608ea02"
+      ]
+    },
     "GPTW/vacantes_2026-08-21.json": {
       "source_hash": "cc3e1f0dd3bd6aabed8ca195d64f256beaf28248234063acd3d32ee5a02ffb79",
       "state_file": "sources/GPTW__vacantes_2026-08-21.json--0d3c1dd895328ff3.json",

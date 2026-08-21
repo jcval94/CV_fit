@@ -3,31 +3,23 @@
     {
       "chunk_id": "vac-04e92192e608ea02::core",
       "chunk_type": "core",
-      "content_hash": "80ef5143d8d12fa5839cd740ddc37dca207216e2daea63ca975c81c1a4358414",
+      "content_hash": "c62b5abae8e61bfd338735fffd5d1ecc860a0ad3e8e14e7feab8e7b671bf5a12",
       "source_paths": [
+        "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
         "GPTW/vacantes_2026-08-21.json"
       ],
-      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: es\nJD fidelity: full (62/100)\nJD generation eligible: true\nDescription: Rol senior orientado a diseñar, desplegar y operar soluciones de machine learning y sistemas agénticos con LLMs en producción. El alcance cubre pipelines reproducibles de datos y features, ciclo de vida de modelos, agentes virtuales para casos de negocio, RAG y búsqueda semántica, evaluación y observabilidad, seguridad y gobierno de datos, además de servicios Python de alta demanda con foco en confiabilidad, desempeño, latencia y costo.",
       "vacancy_id": "vac-04e92192e608ea02"
     },
     {
       "chunk_id": "vac-04e92192e608ea02::requirements",
       "chunk_type": "requirements",
-      "content_hash": "b21116120ab13080d473f4dbb85b5235ef5f817b918c0b17f7259c38e1412425",
+      "content_hash": "fabebad2fa1b7ac3ddf847f5f8a2b06b7b2b02e1957b470fd47ca1ee270865b5",
       "source_paths": [
+        "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
         "GPTW/vacantes_2026-08-21.json"
       ],
-      "text": "Technologies / capabilities: Python; Machine Learning; LLMs; Agentic AI; MLOps; Data Pipelines; Model Monitoring; Data Governance",
-      "vacancy_id": "vac-04e92192e608ea02"
-    },
-    {
-      "chunk_id": "vac-04e92192e608ea02::source-fit",
-      "chunk_type": "source-fit",
-      "content_hash": "c270a3cef880b0ee979cab79a1bfb0ddab264660067ae1a262b05eba050011fd",
-      "source_paths": [
-        "GPTW/vacantes_2026-08-21.json"
-      ],
-      "text": "Source fit score: 95/100\nSource fit summary: Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; LLMs; RAG; Agentic AI; LangGraph; AWS Bedrock; Amazon SageMaker; MLOps; CI/CD; GitLab; Docker; Kubernetes; Temporal; Model Monitoring; Data Governance; Data Pipelines\nRequirements: Formación universitaria concluida en computación, software, matemáticas, estadística o disciplina cuantitativa afín.; Especialización o experiencia sólida en inteligencia artificial, machine learning o sistemas distribuidos.; Al menos cuatro años en ingeniería de software o ML, incluyendo dos con modelos o LLMs en producción.; Dominio avanzado de Python y SQL, con capacidad para trabajar concurrencia y cargas de alto desempeño.; Experiencia práctica con AWS, MLOps, CI/CD, Docker/Kubernetes y orquestación moderna de agentes como LangGraph.\nResponsibilities: Construir pipelines reproducibles de datos, features, entrenamiento e inferencia evitando inconsistencias entre entrenamiento y servicio.; Desplegar, versionar y monitorear modelos en producción con rollback, detección de drift y control de latencia y costo.; Diseñar workflows agénticos de extremo a extremo considerando estado, herramientas, memoria y tolerancia a fallas.; Integrar LLMs mediante AWS Bedrock y APIs de proveedores administrando prompts, structured outputs, throughput, cuotas y costos.; Desarrollar soluciones RAG y búsqueda semántica que mantengan las respuestas fundamentadas en fuentes organizacionales.; Instrumentar evaluación y observabilidad con trazas, datasets de evaluación y métricas de calidad, alucinación, latencia y costo.; Colaborar en CI/CD, infraestructura como código, pruebas automatizadas, contenerización y despliegues controlados.; Desarrollar servicios Python distribuidos con concurrencia, colas, backpressure, idempotencia, caching y profiling, incluyendo orquestación con Temporal.; Aplicar estándares de seguridad, privacidad, gobierno de datos y guardrails a soluciones que incorporen LLMs.; Documentar decisiones técnicas y compartir buenas prácticas de ML Engineering e inteligencia artificial aplicada.",
       "vacancy_id": "vac-04e92192e608ea02"
     }
   ],
