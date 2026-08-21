@@ -1,0 +1,15 @@
+company: Ford Motor Company
+source_kind: verified_manual
+source_url: https://media.ford.com/content/fordmedia/fna/mx/es/news/2025/06/02/ford-convirtio-el-color-de-los-vehiculos-en-un-simbolo-de-identi.html
+verified: true
+primary: "#003478"
+secondary: "#00142E"
+accent: "#0057B8"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: system_sans
+body_font: system_sans
+notes:
+  - "Ford's official communications and visual identity consistently center the Ford blue family."
+  - "Accessible CV hex values are manually selected for print/readability and are not asserted as exact official digital brand-token values."
