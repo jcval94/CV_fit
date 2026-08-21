@@ -1,0 +1,91 @@
+name: Authenticated retrieval V2 benchmark
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  benchmark:
+    if: github.event.issue.title == '[eval] Run retrieval v2 benchmark'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+      - name: Require existing OpenAI secret
+        run: |
+          if [ -z "$OPENAI_APY_KEY" ]; then
+            echo "Missing OPENAI_APY_KEY; authenticated benchmark was not attempted."
+            exit 2
+          fi
+      - name: Build isolated professional retrieval state
+        run: |
+          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id retrieval-v2-eval --source-commit "$(git rev-parse HEAD)" --full-rebuild
+          python -m rag.dense --state-dir /tmp/rag_state
+      - name: Run V1 and V2 labeled evals
+        run: |
+          mkdir -p /tmp/retrieval-eval
+          python -m rag.evals --state-dir /tmp/rag_state --mode lexical --output /tmp/retrieval-eval/lexical.json
+          python -m rag.evals --state-dir /tmp/rag_state --mode hybrid --output /tmp/retrieval-eval/hybrid.json
+          python -m rag.evals --state-dir /tmp/rag_state --mode hybrid-rerank --output /tmp/retrieval-eval/hybrid_rerank.json
+      - name: Compare Konfio lexical vs V2 match plan
+        run: |
+          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id retrieval-v2-eval --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
+          python -m cv_matching.match vac-04e92192e608ea02 --vacancy-state /tmp/vacancy_state --evidence-state /tmp/rag_state --retrieval-mode lexical --output /tmp/retrieval-eval/konfio_lexical.json
+          python -m cv_matching.match vac-04e92192e608ea02 --vacancy-state /tmp/vacancy_state --evidence-state /tmp/rag_state --retrieval-mode hybrid-rerank --output /tmp/retrieval-eval/konfio_v2.json
+      - name: Post sanitized benchmark result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/comment.md
+          import json
+          from pathlib import Path
+
+          root = Path('/tmp/retrieval-eval')
+          lexical = json.loads((root/'lexical.json').read_text(encoding='utf-8'))
+          hybrid = json.loads((root/'hybrid.json').read_text(encoding='utf-8'))
+          rerank = json.loads((root/'hybrid_rerank.json').read_text(encoding='utf-8'))
+          old = json.loads((root/'konfio_lexical.json').read_text(encoding='utf-8'))
+          new = json.loads((root/'konfio_v2.json').read_text(encoding='utf-8'))
+
+          def metrics(data):
+              return {key: data[key] for key in ('pass_rate','positive_recall_at_k','positive_mrr','negative_safety_rate','forbidden_direct_hit_count')}
+          def req_map(plan):
+              return {item['requirement']: {'coverage': item['coverage'], 'evidence_chunk_ids': item['evidence_chunk_ids']} for item in plan['requirements']}
+
+          old_req = req_map(old)
+          new_req = req_map(new)
+          changed = []
+          for requirement in sorted(set(old_req) | set(new_req)):
+              if old_req.get(requirement) != new_req.get(requirement):
+                  changed.append({'requirement': requirement, 'lexical': old_req.get(requirement), 'v2': new_req.get(requirement)})
+
+          summary = {
+              'lexical_metrics': metrics(lexical),
+              'hybrid_metrics': metrics(hybrid),
+              'hybrid_rerank_metrics': metrics(rerank),
+              'konfio_lexical_coverage': old['coverage_score'],
+              'konfio_v2_coverage': new['coverage_score'],
+              'konfio_v2_counts': new['coverage_counts'],
+              'changed_requirements': changed,
+              'hybrid_rerank_cases': rerank['results'],
+          }
+          print('### Retrieval V2 authenticated benchmark')
+          print('')
+          print('```json')
+          print(json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True))
+          print('```')
+          PY
+          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/comment.md
