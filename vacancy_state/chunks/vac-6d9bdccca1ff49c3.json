@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-6d9bdccca1ff49c3::core",
       "chunk_type": "core",
-      "content_hash": "0148c7ce6073ac95d1995fbce69d375c816d02ebe39cd86dc11839a6bcf13ea8",
+      "content_hash": "4326f2bb1e31848cc5bfb0fbc629abd49cca5bd13f5382f4e244d794736f02b0",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en",
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     {

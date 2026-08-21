@@ -1,6 +1,6 @@
 {
-  "last_run_id": "19030d64c015af56226e6566b3cadef165dde9aa",
-  "pipeline_version": 2,
+  "last_run_id": "9d04514c73bb6d46614281e1a66a72390bd6ca8d-noop",
+  "pipeline_version": 3,
   "schema_version": 1,
   "sources": {
     "GPTW/vacantes_2026-08-21.json": {

@@ -3,7 +3,7 @@
   "city": "Mexico City, Mexico / Remote",
   "company": "Ford Motor Company",
   "company_category": "Producto Tech",
-  "content_hash": "0618801e06754bd32da4ce6d0be7a61615098cb97d99551a128c2bcf9cc427fd",
+  "content_hash": "a739841a862a6eba0bca14cb0207012501bb44c0dfa991c8ce55052fbf07e438",
   "description": null,
   "fit_gaps": [
     "No aprovecha directamente banca, fraude o riesgo.",
@@ -17,6 +17,15 @@
   ],
   "fit_summary": "Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.",
   "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
   "language_confidence": 0.86,
   "language_source": "role_title",
   "location_raw": "Mexico City, Mexico / Remote",
@@ -24,7 +33,7 @@
   "posted_date_raw": "Hace 1-2 días",
   "provenance": [
     {
-      "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+      "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
       "source_entry_index": 1,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -38,7 +47,7 @@
   "responsibilities": [],
   "role_title": "Data Scientist NLP (AI) Engineer",
   "salary": "No especificado",
-  "schema_version": 1,
+  "schema_version": 2,
   "seniority": null,
   "tech_stack": [
     "NLP",

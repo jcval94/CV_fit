@@ -5,13 +5,22 @@
       "city": "Ciudad de México",
       "company": "Konfío",
       "company_category": null,
-      "content_hash": "4a91ef2aed556ae2292da519d370005672cce77db2cde435bffeafd2fd442cad",
+      "content_hash": "9a495a927e3b8f41a334a01b99493e59484f8cfc5e0dbf768636b160c7555179",
       "description": null,
       "fit_gaps": [],
       "fit_score": 95.0,
       "fit_strengths": [],
       "fit_summary": "Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
       "identity_key": "04e92192e608ea02df4283cc76a4125f2eacae2fb31b53d4a448006cb4828bef",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "Ciudad de México",
@@ -19,7 +28,7 @@
       "posted_date_raw": "2026-08-18",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 0,
           "source_format": "gptw_v1",
           "source_hash": "cc3e1f0dd3bd6aabed8ca195d64f256beaf28248234063acd3d32ee5a02ffb79",
@@ -33,7 +42,7 @@
       "responsibilities": [],
       "role_title": "AI/ML Engineer Sr.",
       "salary": null,
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": "Senior",
       "tech_stack": [
         "Python",

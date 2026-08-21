@@ -3,7 +3,7 @@
   "city": "Mexico City, Mexico",
   "company": "Instructure",
   "company_category": "Producto Tech",
-  "content_hash": "9a6ca6bcbbbce0a5f89dc17d1b64a05af98f77f4c975f904aa2a65436701b871",
+  "content_hash": "93102b4b7085d18cb1fd2a9588ba7987e49f485aa5a71cca2120b976c02e7dbc",
   "description": null,
   "fit_gaps": [
     "Menor conexión directa con banca, fraude y riesgo.",
@@ -17,6 +17,15 @@
   ],
   "fit_summary": "Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.",
   "identity_key": "21cefd168f6539b4051fe2905f903291598dccc81a27e66dae2b6beb36c69a2e",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
   "language_confidence": 0.86,
   "language_source": "role_title",
   "location_raw": "Mexico City, Mexico",
@@ -24,7 +33,7 @@
   "posted_date_raw": "Hace 1-7 días",
   "provenance": [
     {
-      "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+      "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
       "source_entry_index": 2,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -38,7 +47,7 @@
   "responsibilities": [],
   "role_title": "Senior Decision Scientist",
   "salary": "MEX$911,000 - MEX$1,100,000 por año",
-  "schema_version": 1,
+  "schema_version": 2,
   "seniority": null,
   "tech_stack": [
     "Decision Science",

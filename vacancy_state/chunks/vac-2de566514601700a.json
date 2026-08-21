@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-2de566514601700a::core",
       "chunk_type": "core",
-      "content_hash": "c941fcf83aa83277c52bafa1549a2a7e052862d8018fd1320922cc2813d66a9f",
+      "content_hash": "1e1921c7034e07ac82ced2c1902cbba01ea11e63b2a5b7d9751ed01ddedeaabf",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en",
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
       "vacancy_id": "vac-2de566514601700a"
     },
     {

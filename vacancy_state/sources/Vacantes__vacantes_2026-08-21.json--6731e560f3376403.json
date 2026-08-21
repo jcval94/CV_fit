@@ -5,7 +5,7 @@
       "city": "Mexico City, CDMX",
       "company": "PayJoy",
       "company_category": "Fintech",
-      "content_hash": "370a62a49583b1a2ae66048cd7d821c2f6f8078002e2ad8ac575f4eafba87b39",
+      "content_hash": "b5f9c4c10194ac4972eefe232672152e0afad2005b3f1d0a2accfe5a3cfc7c0e",
       "description": null,
       "fit_gaps": [
         "El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.",
@@ -19,6 +19,15 @@
       ],
       "fit_summary": "Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.",
       "identity_key": "14b95b3407bcb148fbc6d976ce1a77b0e45f9b7150a4056714a7c9692b5fe91c",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "Mexico City, CDMX",
@@ -26,7 +35,7 @@
       "posted_date_raw": "Hace 1 semana",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 0,
           "source_format": "vacantes_v1",
           "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -40,7 +49,7 @@
       "responsibilities": [],
       "role_title": "Machine Learning Engineer - Fraud",
       "salary": "No especificado",
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": null,
       "tech_stack": [
         "Machine Learning",
@@ -59,7 +68,7 @@
       "city": "Mexico City, Mexico / Remote",
       "company": "Ford Motor Company",
       "company_category": "Producto Tech",
-      "content_hash": "0618801e06754bd32da4ce6d0be7a61615098cb97d99551a128c2bcf9cc427fd",
+      "content_hash": "7ffda365961e718866e24076152ac5212062e60380db28463b6ef7ecb2b65303",
       "description": null,
       "fit_gaps": [
         "No aprovecha directamente banca, fraude o riesgo.",
@@ -73,6 +82,15 @@
       ],
       "fit_summary": "Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.",
       "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "Mexico City, Mexico / Remote",
@@ -80,7 +98,7 @@
       "posted_date_raw": "Hace 1-2 días",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 1,
           "source_format": "vacantes_v1",
           "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -94,7 +112,7 @@
       "responsibilities": [],
       "role_title": "Data Scientist NLP (AI) Engineer",
       "salary": "No especificado",
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": null,
       "tech_stack": [
         "NLP",
@@ -113,7 +131,7 @@
       "city": "Mexico City, Mexico",
       "company": "Instructure",
       "company_category": "Producto Tech",
-      "content_hash": "9a6ca6bcbbbce0a5f89dc17d1b64a05af98f77f4c975f904aa2a65436701b871",
+      "content_hash": "2257b21493f4f8cbfc55ce43bbfc0f89becec58e46397b27c4245b8343b6b31e",
       "description": null,
       "fit_gaps": [
         "Menor conexión directa con banca, fraude y riesgo.",
@@ -127,6 +145,15 @@
       ],
       "fit_summary": "Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.",
       "identity_key": "21cefd168f6539b4051fe2905f903291598dccc81a27e66dae2b6beb36c69a2e",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "Mexico City, Mexico",
@@ -134,7 +161,7 @@
       "posted_date_raw": "Hace 1-7 días",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 2,
           "source_format": "vacantes_v1",
           "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -148,7 +175,7 @@
       "responsibilities": [],
       "role_title": "Senior Decision Scientist",
       "salary": "MEX$911,000 - MEX$1,100,000 por año",
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": null,
       "tech_stack": [
         "Decision Science",
@@ -167,7 +194,7 @@
       "city": "Ciudad de México",
       "company": "Infor",
       "company_category": "Producto Tech",
-      "content_hash": "e323491742f1fca1db731313e45e5322acd759e712a2e135610f3d4682555ec5",
+      "content_hash": "6b669644079ffd5b2739ad083e240b76db7ba61596b3922e9e01c58022faa66a",
       "description": null,
       "fit_gaps": [
         "No se observa foco explícito en banca, riesgo, fraude o GenAI.",
@@ -181,6 +208,15 @@
       ],
       "fit_summary": "Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.",
       "identity_key": "6d9bdccca1ff49c39ad7e37a9d6fcd2e844ee01135db9da0b503838850f09614",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "Ciudad de México",
@@ -188,7 +224,7 @@
       "posted_date_raw": "Hace 3-6 días",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 3,
           "source_format": "vacantes_v1",
           "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -202,7 +238,7 @@
       "responsibilities": [],
       "role_title": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
       "salary": "No especificado",
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": null,
       "tech_stack": [
         "Python",
@@ -221,7 +257,7 @@
       "city": "México",
       "company": "DataKnow",
       "company_category": "Otro",
-      "content_hash": "c375d72fdc055c17de0b164cd6a6b172ea003d247ae9c241c59d03c8aba0eefc",
+      "content_hash": "3054bb2a29c055ef000c483abe20d5141ca78df40ed8d5a3b1646161e70e687a",
       "description": null,
       "fit_gaps": [
         "No está marcado como Senior/Lead y no muestra foco financiero.",
@@ -235,6 +271,15 @@
       ],
       "fit_summary": "Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.",
       "identity_key": "2de566514601700a4ebb9303ddc602420b3bb2158426e08876139242f4e93a4c",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
       "language_confidence": 0.86,
       "language_source": "role_title",
       "location_raw": "México",
@@ -242,7 +287,7 @@
       "posted_date_raw": "Hace 6-7 días",
       "provenance": [
         {
-          "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+          "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
           "source_entry_index": 4,
           "source_format": "vacantes_v1",
           "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -256,7 +301,7 @@
       "responsibilities": [],
       "role_title": "Data Scientist (Python/SQL) - Remote",
       "salary": "No especificado",
-      "schema_version": 1,
+      "schema_version": 2,
       "seniority": null,
       "tech_stack": [
         "Python",

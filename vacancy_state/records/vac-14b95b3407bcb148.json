@@ -3,7 +3,7 @@
   "city": "Mexico City, CDMX",
   "company": "PayJoy",
   "company_category": "Fintech",
-  "content_hash": "370a62a49583b1a2ae66048cd7d821c2f6f8078002e2ad8ac575f4eafba87b39",
+  "content_hash": "2aa24785e705aba2100ff129ce4576da493295efb5b9cd50debee11839aa28a5",
   "description": null,
   "fit_gaps": [
     "El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.",
@@ -17,6 +17,15 @@
   ],
   "fit_summary": "Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.",
   "identity_key": "14b95b3407bcb148fbc6d976ce1a77b0e45f9b7150a4056714a7c9692b5fe91c",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
   "language_confidence": 0.86,
   "language_source": "role_title",
   "location_raw": "Mexico City, CDMX",
@@ -24,7 +33,7 @@
   "posted_date_raw": "Hace 1 semana",
   "provenance": [
     {
-      "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+      "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
       "source_entry_index": 0,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -38,7 +47,7 @@
   "responsibilities": [],
   "role_title": "Machine Learning Engineer - Fraud",
   "salary": "No especificado",
-  "schema_version": 1,
+  "schema_version": 2,
   "seniority": null,
   "tech_stack": [
     "Machine Learning",

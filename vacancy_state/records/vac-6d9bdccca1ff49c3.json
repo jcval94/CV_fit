@@ -3,7 +3,7 @@
   "city": "Ciudad de México",
   "company": "Infor",
   "company_category": "Producto Tech",
-  "content_hash": "e323491742f1fca1db731313e45e5322acd759e712a2e135610f3d4682555ec5",
+  "content_hash": "5fb1a25253b5ea1c290d1f27db30d82824b6692f6399acf865e551fe587860e6",
   "description": null,
   "fit_gaps": [
     "No se observa foco explícito en banca, riesgo, fraude o GenAI.",
@@ -17,6 +17,15 @@
   ],
   "fit_summary": "Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.",
   "identity_key": "6d9bdccca1ff49c39ad7e37a9d6fcd2e844ee01135db9da0b503838850f09614",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
   "language_confidence": 0.86,
   "language_source": "role_title",
   "location_raw": "Ciudad de México",
@@ -24,7 +33,7 @@
   "posted_date_raw": "Hace 3-6 días",
   "provenance": [
     {
-      "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
+      "source_commit": "9d04514c73bb6d46614281e1a66a72390bd6ca8d",
       "source_entry_index": 3,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -38,7 +47,7 @@
   "responsibilities": [],
   "role_title": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
   "salary": "No especificado",
-  "schema_version": 1,
+  "schema_version": 2,
   "seniority": null,
   "tech_stack": [
     "Python",

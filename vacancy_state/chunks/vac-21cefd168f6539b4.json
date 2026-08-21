@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-21cefd168f6539b4::core",
       "chunk_type": "core",
-      "content_hash": "0a14de71450f82002ddbf540364c869d27a42d4b65de41577769c022b74a1eaa",
+      "content_hash": "87baf47cd4ed872874eaaed10898a44ecdfe19d8fdbe597c67c5ba61779615c6",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote\nApplication language: en",
+      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
       "vacancy_id": "vac-21cefd168f6539b4"
     },
     {
