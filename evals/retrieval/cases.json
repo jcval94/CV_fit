@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "description": "Public-safe labeled retrieval cases. Positive cases test semantic recall; negative cases test conservative specialization boundaries.",
+  "cases": [
+    {
+      "id": "career-chronology-4plus",
+      "query": "Al menos cuatro años de experiencia profesional en software, machine learning y ciencia de datos",
+      "expected_any_record_ids": ["role-management-solutions", "role-bbva"],
+      "forbidden_record_ids": [],
+      "negative": false
+    },
+    {
+      "id": "rag-grounded-knowledge",
+      "query": "Construir soluciones RAG que mantengan respuestas fundamentadas en fuentes organizacionales",
+      "expected_any_record_ids": ["project-bbva-llm-internal-tools", "skills", "project-narrative-dna"],
+      "forbidden_record_ids": [],
+      "negative": false
+    },
+    {
+      "id": "llm-evals-observability",
+      "query": "evaluación de LLMs, quality gates, hallucination metrics, datasets de evaluación y regresión",
+      "expected_any_record_ids": ["project-mvp-agent-factory", "project-narrative-dna", "skills"],
+      "forbidden_record_ids": [],
+      "negative": false
+    },
+    {
+      "id": "distributed-pyspark-production",
+      "query": "refactorización de pipelines distribuidos, memoria, ejecución productiva y trazabilidad",
+      "expected_any_record_ids": ["project-bbva-data-quality-mlops"],
+      "forbidden_record_ids": [],
+      "negative": false
+    },
+    {
+      "id": "aws-bedrock-negative",
+      "query": "AWS Bedrock",
+      "expected_any_record_ids": [],
+      "forbidden_record_ids": ["skills", "certifications"],
+      "negative": true
+    },
+    {
+      "id": "langgraph-negative",
+      "query": "LangGraph production orchestration",
+      "expected_any_record_ids": [],
+      "forbidden_record_ids": [],
+      "negative": true
+    },
+    {
+      "id": "temporal-negative",
+      "query": "Temporal workflow orchestration for distributed Python services",
+      "expected_any_record_ids": [],
+      "forbidden_record_ids": [],
+      "negative": true
+    },
+    {
+      "id": "kubernetes-proficiency-boundary",
+      "query": "Kubernetes platform engineering production ownership",
+      "expected_any_record_ids": ["skills"],
+      "forbidden_record_ids": [],
+      "negative": false,
+      "required_max_proficiency": "familiarity"
+    },
+    {
+      "id": "arima-negative-specialization",
+      "query": "ARIMA SARIMA production forecasting specialization",
+      "expected_any_record_ids": [],
+      "forbidden_record_ids": [],
+      "negative": true
+    },
+    {
+      "id": "people-management-negative",
+      "query": "formal people management direct reports hiring performance reviews",
+      "expected_any_record_ids": [],
+      "forbidden_record_ids": [],
+      "negative": true
+    }
+  ]
+}

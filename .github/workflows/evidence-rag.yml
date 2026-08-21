@@ -5,14 +5,20 @@ on:
     paths:
       - "experience/**/*.md"
       - "rag/**"
+      - "cv_matching/**"
+      - "evals/retrieval/**"
       - "tests/test_rag_*.py"
+      - "tests/test_retrieval_v2.py"
       - ".github/workflows/evidence-rag.yml"
   push:
     branches: [main]
     paths:
       - "experience/**/*.md"
       - "rag/**"
+      - "cv_matching/**"
+      - "evals/retrieval/**"
       - "tests/test_rag_*.py"
+      - "tests/test_retrieval_v2.py"
       - ".github/workflows/evidence-rag.yml"
   workflow_dispatch:
 
@@ -35,13 +41,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install deterministic dependencies
-        run: python -m pip install --disable-pip-version-check pyyaml
+      - name: Install retrieval dependencies
+        run: python -m pip install --disable-pip-version-check pyyaml 'openai>=2.20.0,<3.0.0'
 
       - name: Validate canonical source and RAG tests
         run: |
           python tools/validate_experience.py
-          python -m unittest tests.test_rag_normalize tests.test_rag_evidence -v
+          python -m unittest tests.test_rag_normalize tests.test_rag_evidence tests.test_retrieval_v2 -v
 
       - name: Validate PR evidence E2E
         if: github.event_name == 'pull_request'
@@ -73,9 +79,16 @@ jobs:
           print('evidence_noop_idempotence=PASS', report['source_counts'], report['record_counts'])
           PY
 
-      - name: Retrieval smoke test on PR
+      - name: Lexical retrieval baseline on PR
         if: github.event_name == 'pull_request'
-        run: python -m rag.retrieve "fraud anomaly detection Python" --state-dir /tmp/cv-fit-rag-state --top-k 5
+        run: |
+          python -m rag.retrieve "fraud anomaly detection Python" --state-dir /tmp/cv-fit-rag-state --top-k 5
+          python -m rag.evals --state-dir /tmp/cv-fit-rag-state --mode lexical --output /tmp/lexical_eval.json
+          python - <<'PY'
+          import json
+          data = json.load(open('/tmp/lexical_eval.json', encoding='utf-8'))
+          print('lexical_eval=', {k: data[k] for k in ('pass_rate','positive_recall_at_k','positive_mrr','negative_safety_rate')})
+          PY
 
       - name: Sync latest main before incremental index
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -111,6 +124,31 @@ jobs:
           assert report['record_counts']['impacted'] == 0, report
           assert report['record_counts']['reindexed'] == 0, report
           print('main_evidence_noop_idempotence=PASS', report['source_counts'], report['record_counts'])
+          PY
+
+      - name: Incrementally embed active evidence with OpenAI
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+        run: |
+          if [ -z "$OPENAI_APY_KEY" ]; then
+            echo "Missing repository secret OPENAI_APY_KEY; dense index cannot be updated."
+            exit 2
+          fi
+          python -m rag.dense --state-dir rag_state
+
+      - name: Prove dense no-op idempotence without another paid embedding call
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+        run: |
+          python -m rag.dense --state-dir rag_state > /tmp/dense-noop.json
+          python - <<'PY'
+          import json
+          data = json.load(open('/tmp/dense-noop.json', encoding='utf-8'))
+          assert data['embedded'] == 0, data
+          assert data['removed'] == 0, data
+          print('dense_noop_idempotence=PASS', data)
           PY
 
       - name: Retrieval smoke test on main
