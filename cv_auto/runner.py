@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from cv_agent.preflight import assert_vacancy_generation_ready
-from cv_auto import AUTO_GENERATION_PIPELINE_VERSION, AUTO_GENERATION_SCHEMA_VERSION
+from cv_auto import AUTO_GENERATION_LOGIC_VERSION, AUTO_GENERATION_PIPELINE_VERSION, AUTO_GENERATION_SCHEMA_VERSION
 
 
 TERMINAL_STATUSES = {
@@ -68,6 +68,7 @@ def generation_fingerprint(
 ) -> str:
     payload = {
         "pipeline_version": AUTO_GENERATION_PIPELINE_VERSION,
+        "generation_logic_version": AUTO_GENERATION_LOGIC_VERSION,
         "vacancy_id": vacancy.get("vacancy_id"),
         "vacancy_content_hash": vacancy.get("content_hash"),
         "evidence_fingerprint": evidence_hash,
@@ -109,6 +110,23 @@ def _ordered_unique(values: list[str]) -> list[str]:
     return result
 
 
+def stale_generation_logic_ids(entries: dict[str, Any], vacancy_state: Path) -> list[str]:
+    """Return active vacancies generated with older code semantics.
+
+    A code-only correction (for example the canonical chronology backbone) must
+    trigger one controlled regeneration even when the vacancy JSON and RAG state
+    are unchanged. Once an entry is persisted with the current logic version it
+    becomes idempotent again.
+    """
+    stale: list[str] = []
+    for vacancy_id, entry in entries.items():
+        if entry.get("generation_logic_version") == AUTO_GENERATION_LOGIC_VERSION:
+            continue
+        if (vacancy_state / "records" / f"{vacancy_id}.json").exists():
+            stale.append(vacancy_id)
+    return sorted(stale)
+
+
 def _default_generate_one(
     *,
     vacancy_id: str,
@@ -143,6 +161,24 @@ def _default_generate_one(
     return report, usage
 
 
+def _base_entry(
+    *,
+    fingerprint: str,
+    vacancy: dict[str, Any],
+    evidence_hash: str,
+    retrieval_mode: str,
+    source_commit: str | None,
+) -> dict[str, Any]:
+    return {
+        "fingerprint": fingerprint,
+        "generation_logic_version": AUTO_GENERATION_LOGIC_VERSION,
+        "vacancy_content_hash": vacancy.get("content_hash"),
+        "evidence_fingerprint": evidence_hash,
+        "retrieval_mode": retrieval_mode,
+        "source_commit": source_commit,
+    }
+
+
 def run_generation_batch(
     *,
     candidate_ids: list[str],
@@ -167,7 +203,8 @@ def run_generation_batch(
     entries: dict[str, Any] = manifest["entries"]
     evidence_hash = evidence_fingerprint(evidence_state)
     deferred = sorted(vacancy_id for vacancy_id, entry in entries.items() if entry.get("status") == DEFERRED_STATUS)
-    queue = _ordered_unique(deferred + candidate_ids)
+    stale_logic = stale_generation_logic_ids(entries, vacancy_state)
+    queue = _ordered_unique(deferred + stale_logic + candidate_ids)
     generate_one = generator or _default_generate_one
 
     generated_attempts = 0
@@ -191,18 +228,21 @@ def run_generation_batch(
             results.append({"vacancy_id": vacancy_id, "status": "SKIPPED_IDEMPOTENT", "prior_status": previous_status})
             continue
 
+        base_entry = _base_entry(
+            fingerprint=fingerprint,
+            vacancy=vacancy,
+            evidence_hash=evidence_hash,
+            retrieval_mode=retrieval_mode,
+            source_commit=source_commit,
+        )
         try:
             assert_vacancy_generation_ready(vacancy)
         except ValueError as exc:
             entry = {
-                "fingerprint": fingerprint,
-                "vacancy_content_hash": vacancy.get("content_hash"),
-                "evidence_fingerprint": evidence_hash,
-                "retrieval_mode": retrieval_mode,
+                **base_entry,
                 "status": "SKIPPED_NOT_ELIGIBLE",
                 "ready_to_send": False,
                 "reason": str(exc)[:1500],
-                "source_commit": source_commit,
             }
             if previous != entry:
                 entries[vacancy_id] = entry
@@ -212,13 +252,9 @@ def run_generation_batch(
 
         if generated_attempts >= max_vacancies_per_run:
             entry = {
-                "fingerprint": fingerprint,
-                "vacancy_content_hash": vacancy.get("content_hash"),
-                "evidence_fingerprint": evidence_hash,
-                "retrieval_mode": retrieval_mode,
+                **base_entry,
                 "status": DEFERRED_STATUS,
                 "ready_to_send": False,
-                "source_commit": source_commit,
             }
             if previous != entry:
                 entries[vacancy_id] = entry
@@ -240,10 +276,7 @@ def run_generation_batch(
                 max_estimated_cost_usd=max_estimated_cost_usd,
             )
             entry = {
-                "fingerprint": fingerprint,
-                "vacancy_content_hash": vacancy.get("content_hash"),
-                "evidence_fingerprint": evidence_hash,
-                "retrieval_mode": retrieval_mode,
+                **base_entry,
                 "status": report.get("status", "UNKNOWN"),
                 "ready_to_send": bool(report.get("quality_target_reached")),
                 "review_required": not bool(report.get("quality_target_reached")),
@@ -251,7 +284,6 @@ def run_generation_batch(
                 "unsupported_requirements": report.get("unsupported_requirements", []),
                 "estimated_cost_usd": usage.get("estimated_cost_usd"),
                 "run_id": vacancy_run_id,
-                "source_commit": source_commit,
             }
             entries[vacancy_id] = entry
             manifest_changed = True
@@ -264,16 +296,12 @@ def run_generation_batch(
             })
         except Exception as exc:
             entry = {
-                "fingerprint": fingerprint,
-                "vacancy_content_hash": vacancy.get("content_hash"),
-                "evidence_fingerprint": evidence_hash,
-                "retrieval_mode": retrieval_mode,
+                **base_entry,
                 "status": "FAILED_REVIEW_REQUIRED",
                 "ready_to_send": False,
                 "review_required": True,
                 "error": f"{type(exc).__name__}: {exc}"[:2000],
                 "run_id": vacancy_run_id,
-                "source_commit": source_commit,
             }
             entries[vacancy_id] = entry
             manifest_changed = True
@@ -285,10 +313,12 @@ def run_generation_batch(
     summary = {
         "schema_version": AUTO_GENERATION_SCHEMA_VERSION,
         "pipeline_version": AUTO_GENERATION_PIPELINE_VERSION,
+        "generation_logic_version": AUTO_GENERATION_LOGIC_VERSION,
         "run_id": run_id,
         "source_commit": source_commit,
         "retrieval_mode": retrieval_mode,
         "evidence_fingerprint": evidence_hash,
+        "stale_logic_candidate_count": len(stale_logic),
         "candidate_count": len(queue),
         "generation_attempts": generated_attempts,
         "result_counts": {
@@ -339,6 +369,8 @@ def main() -> int:
     )
     print(json.dumps({
         "run_id": report["run_id"],
+        "generation_logic_version": report["generation_logic_version"],
+        "stale_logic_candidate_count": report["stale_logic_candidate_count"],
         "candidate_count": report["candidate_count"],
         "generation_attempts": report["generation_attempts"],
         "result_counts": report["result_counts"],
