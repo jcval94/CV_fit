@@ -26,7 +26,14 @@ def _safe(value: Any) -> str:
 
 
 def _source_date_matches(record: dict[str, Any], target_date: str) -> bool:
-    return any(str(item.get("source_search_date") or "") == target_date for item in record.get("provenance", []))
+    for item in record.get("provenance", []):
+        if str(item.get("source_search_date") or "") == target_date:
+            return True
+        if str(item.get("source_updated_at") or "").startswith(target_date):
+            return True
+        if target_date in str(item.get("source_path") or ""):
+            return True
+    return False
 
 
 def _copy_public_artifacts(run_dir: Path, destination: Path, bundle: dict[str, Any]) -> None:
