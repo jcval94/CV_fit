@@ -3,21 +3,23 @@
     {
       "chunk_id": "vac-6d9bdccca1ff49c3::core",
       "chunk_type": "core",
-      "content_hash": "4326f2bb1e31848cc5bfb0fbc629abd49cca5bd13f5382f4e244d794736f02b0",
+      "content_hash": "32109257fd9607dfe9f2a91b08043f50b89ff9529a08dfdb9f4f355efc85132f",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     {
       "chunk_id": "vac-6d9bdccca1ff49c3::requirements",
       "chunk_type": "requirements",
-      "content_hash": "6e2c097682301bd63c85103ed220460feb56a74e8a5fa2c5250601a70e045f25",
+      "content_hash": "2a8447a7ad9d66032af53a78a48c4b3b30895bc7967371e6edeb39b9ad0e4471",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management",
+      "text": "Technologies / capabilities: Python; SQL; Snowflake; Regression; Segmentation; A/B testing; Survival analysis; Propensity modeling; SaaS analytics; Customer analytics; GenAI-assisted analytics; Executive storytelling; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management\nRequirements: Significant experience with SaaS product or customer analytics, including adoption, retention, engagement or lifecycle analytics in B2B SaaS or enterprise software.; Demonstrated ability to independently own full analytical projects from problem framing and data preparation through analysis and insight communication with minimal technical supervision.; Strong SQL and Python skills for independent data exploration, transformation, analytical dataset construction and statistical modeling; comfort with Snowflake.; Proven stakeholder-facing communication and ability to connect methodology to business narratives and recommended actions.; Solid statistical grounding in regression, segmentation, A/B testing, survival analysis and propensity modeling, including clear articulation of methodological tradeoffs.; Full professional English proficiency and legal authorization to work permanently in Mexico.; Preferred experience includes Customer Success analytics, measurable decision influence, data visualization/storytelling and generative-AI-assisted data science workflows.\nResponsibilities: Own data science workstreams end to end from scoping through analysis, insight synthesis and stakeholder communication.; Manage day-to-day relationships with business partners and develop exploratory insights, statistical models and causal frameworks as appropriate.; Frame business objectives into clear analytical questions and influence problem definition before solution development.; Develop clear executive-facing narratives and presentations linking analytical findings to business decisions and outcomes.; Collaborate with the data science team on data foundations, analytical practices, innovations and shared business knowledge.; Develop production-ready analytical scripts and collaborate with IT to deploy insights into operational workflows.; Support adoption, retention, expansion and growth decisions with rigorous, actionable analysis.",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     {
@@ -25,6 +27,7 @@
       "chunk_type": "source-fit",
       "content_hash": "c1a5a24cbd0d9e724ef48f391e680bc0168d39398e7037a190c3921a3b93f128",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "text": "Source fit score: 89/100\nSource fit summary: Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.\nSource strengths: Senior individual contributor con ownership de workstreams analíticos end-to-end.; Trabaja con adopción, retención, expansión y crecimiento, traduciendo problemas estratégicos en análisis rigurosos.; Buen ajuste con Python, SQL, modelos de negocio, comunicación ejecutiva y liderazgo técnico sin gestión formal.\nSource gaps: No se observa foco explícito en banca, riesgo, fraude o GenAI.; La información pública recuperada no muestra rango salarial ni stack completo.",

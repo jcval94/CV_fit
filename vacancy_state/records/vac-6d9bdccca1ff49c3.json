@@ -3,7 +3,7 @@
   "city": "Ciudad de México",
   "company": "Infor",
   "company_category": "Producto Tech",
-  "content_hash": "5fb1a25253b5ea1c290d1f27db30d82824b6692f6399acf865e551fe587860e6",
+  "content_hash": "5d9aed68d860e4275c7e911ed7abf924115c1ed4ca9e01204edcdd9460678e6d",
   "description": null,
   "fit_gaps": [
     "No se observa foco explícito en banca, riesgo, fraude o GenAI.",
@@ -17,23 +17,33 @@
   ],
   "fit_summary": "Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.",
   "identity_key": "6d9bdccca1ff49c39ad7e37a9d6fcd2e844ee01135db9da0b503838850f09614",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
     "description_chars=0",
-    "substantive_requirements=0",
-    "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive_requirements=7",
+    "substantive_responsibilities=7",
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 40.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 1.0,
+  "language_source": "explicit_source",
   "location_raw": "Ciudad de México",
   "posted_date": null,
   "posted_date_raw": "Hace 3-6 días",
   "provenance": [
     {
-      "source_commit": "7589efe95ad9fb9e36d848abe835feefd55def92",
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "a71eb91f273ec674e422facae8f81e96aec786d435fad8c2ec68c820a0896610",
+      "source_native_id": "992c76d717b4-enriched",
+      "source_path": "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    },
+    {
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
       "source_entry_index": 3,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -43,8 +53,24 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
-  "responsibilities": [],
+  "requirements": [
+    "Significant experience with SaaS product or customer analytics, including adoption, retention, engagement or lifecycle analytics in B2B SaaS or enterprise software.",
+    "Demonstrated ability to independently own full analytical projects from problem framing and data preparation through analysis and insight communication with minimal technical supervision.",
+    "Strong SQL and Python skills for independent data exploration, transformation, analytical dataset construction and statistical modeling; comfort with Snowflake.",
+    "Proven stakeholder-facing communication and ability to connect methodology to business narratives and recommended actions.",
+    "Solid statistical grounding in regression, segmentation, A/B testing, survival analysis and propensity modeling, including clear articulation of methodological tradeoffs.",
+    "Full professional English proficiency and legal authorization to work permanently in Mexico.",
+    "Preferred experience includes Customer Success analytics, measurable decision influence, data visualization/storytelling and generative-AI-assisted data science workflows."
+  ],
+  "responsibilities": [
+    "Own data science workstreams end to end from scoping through analysis, insight synthesis and stakeholder communication.",
+    "Manage day-to-day relationships with business partners and develop exploratory insights, statistical models and causal frameworks as appropriate.",
+    "Frame business objectives into clear analytical questions and influence problem definition before solution development.",
+    "Develop clear executive-facing narratives and presentations linking analytical findings to business decisions and outcomes.",
+    "Collaborate with the data science team on data foundations, analytical practices, innovations and shared business knowledge.",
+    "Develop production-ready analytical scripts and collaborate with IT to deploy insights into operational workflows.",
+    "Support adoption, retention, expansion and growth decisions with rigorous, actionable analysis."
+  ],
   "role_title": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
   "salary": "No especificado",
   "schema_version": 2,
@@ -52,6 +78,16 @@
   "tech_stack": [
     "Python",
     "SQL",
+    "Snowflake",
+    "Regression",
+    "Segmentation",
+    "A/B testing",
+    "Survival analysis",
+    "Propensity modeling",
+    "SaaS analytics",
+    "Customer analytics",
+    "GenAI-assisted analytics",
+    "Executive storytelling",
     "Machine Learning",
     "Growth analytics",
     "Strategy analytics",

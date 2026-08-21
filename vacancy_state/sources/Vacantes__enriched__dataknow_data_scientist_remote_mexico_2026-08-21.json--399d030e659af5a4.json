@@ -1,0 +1,82 @@
+{
+  "records": [
+    {
+      "application_language": "es",
+      "city": "México",
+      "company": "DataKnow",
+      "company_category": "Otro",
+      "content_hash": "ed759ee3c9df4350aaf9e7bfd189706f04660ba8f5f96aa9bd2117ac4a35fd9c",
+      "description": "Vacante remota de Data Scientist para México orientada a implementar y entrenar modelos de analítica avanzada y machine learning para necesidades cambiantes de proyectos y clientes. El rol combina Python, SQL y Spark con clasificación, clustering, optimización, series de tiempo, pronóstico e inteligencia artificial generativa, con expectativa de experiencia práctica en ciencia de datos aplicada a producción.",
+      "fit_gaps": [],
+      "fit_score": null,
+      "fit_strengths": [],
+      "fit_summary": null,
+      "identity_key": "2de566514601700a4ebb9303ddc602420b3bb2158426e08876139242f4e93a4c",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=411",
+        "substantive_requirements=6",
+        "substantive_responsibilities=6",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 60.5,
+      "jd_generation_eligible": true,
+      "language_confidence": 1.0,
+      "language_source": "explicit_source",
+      "location_raw": "México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 6-7 días",
+      "provenance": [
+        {
+          "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "9b1b70df93c326f622e693e24577ed230400a76982ebdbc169e82d69ee0b0e41",
+          "source_native_id": "d4591a7e5f49-enriched",
+          "source_path": "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
+          "source_search_date": "2026-08-21",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [
+        "Formación profesional en Ingeniería de Datos, Ciencia de Datos o disciplina afín.",
+        "Entre uno y dos años o más de experiencia práctica en Ciencia de Datos aplicada a producción.",
+        "Conocimientos sólidos de Python y SQL, además de Spark o tecnología equivalente para procesamiento de datos.",
+        "Capacidad para aplicar estadística y machine learning a problemas de clasificación, clustering, optimización, series de tiempo y pronóstico.",
+        "Conocimiento práctico de inteligencia artificial generativa y capacidad para adaptar modelos a necesidades cambiantes de proyectos y clientes.",
+        "Orientación a trabajo remoto, colaboración y entrega de soluciones analíticas aplicadas."
+      ],
+      "responsibilities": [
+        "Implementar y entrenar modelos de clasificación, clustering y optimización usando técnicas estadísticas y de machine learning.",
+        "Desarrollar soluciones de series de tiempo y pronóstico ajustadas a necesidades del proyecto y del cliente.",
+        "Aplicar inteligencia artificial generativa dentro de soluciones analíticas cuando el caso de uso lo requiera.",
+        "Preparar y transformar datos con Python, SQL y Spark o herramientas similares para modelado y análisis.",
+        "Asegurar que los modelos sean adaptables a cambios de datos, negocio y requerimientos del cliente.",
+        "Contribuir a proyectos reales de analítica e inteligencia artificial con foco en valor de negocio y entrega práctica."
+      ],
+      "role_title": "Data Scientist (Python/SQL) - Remote",
+      "salary": null,
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Spark",
+        "Machine Learning",
+        "Clasificación",
+        "Clustering",
+        "Optimización",
+        "Series de tiempo",
+        "Forecasting",
+        "Generative AI"
+      ],
+      "url": "https://dataknow.io/vacantes-ingeniero-datos-cientificos-datos",
+      "vacancy_id": "vac-2de566514601700a",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "9b1b70df93c326f622e693e24577ed230400a76982ebdbc169e82d69ee0b0e41",
+  "source_path": "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
+  "status": "valid"
+}

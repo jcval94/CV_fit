@@ -3,21 +3,23 @@
     {
       "chunk_id": "vac-12dc570424d531ae::core",
       "chunk_type": "core",
-      "content_hash": "44a23f5996a4ad6a7414107a4a15a2cda606889616936d97265b548b02a95442",
+      "content_hash": "ba9792225cd9f1e4cbca3706541ff4d691cc362167963e75fa720a42cc86af9f",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     {
       "chunk_id": "vac-12dc570424d531ae::requirements",
       "chunk_type": "requirements",
-      "content_hash": "9c383b12b1f17b4541ee594cbdb814eacca8f8756b24e135dd010221c2d8b7b2",
+      "content_hash": "3c81cd6dea4b96426d8c42cf0466779564bf155e856ea8ff3d6c3bba43916a4d",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Technologies / capabilities: NLP; LLMs; GCP; Responsible AI; Model evaluation; AI applications",
+      "text": "Technologies / capabilities: Python; SQL; NLP; LLMs; Generative AI; Agentic AI; GCP; Vertex AI; BigQuery; Cloud Run; CI/CD; MLOps; LLM evaluation; Responsible AI; Model evaluation; AI applications\nRequirements: Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Engineering or a related quantitative field, or equivalent practical experience.; Professional experience in data science, machine learning, applied AI, NLP or a related technical role.; Strong Python and SQL skills with maintainable, testable, production-quality software practices.; Hands-on experience developing applications with commercial or open-source LLMs, prompt engineering, model integration and core NLP concepts.; Experience with GCP data and AI services, particularly Vertex AI and BigQuery, or comparable major-cloud experience with ability to transition to GCP.; Experience with APIs, containers, CI/CD, identity/access management and production monitoring.; Ability to translate ambiguous business needs into measurable technical objectives and deliver iteratively in cross-functional teams.; Preferred experience includes Vertex AI tooling, BigQuery ML/Dataflow, LLM evaluation datasets, red-team tests, LLMOps/MLOps, scalable inference and regulated or safety-conscious environments.\nResponsibilities: Design, prototype, evaluate and productionize LLM-powered applications for enterprise and customer-facing use cases.; Develop prompt strategies, structured-output workflows, routing, context-management approaches and model adaptation methods where appropriate.; Create LLM evaluation frameworks spanning task quality, factuality, relevance, robustness, latency, cost, safety and user experience.; Explore agentic AI patterns including planning, tool/function calling, memory, reflection, human approvals and multi-step workflows.; Develop scalable AI/ML solutions on GCP using services such as Vertex AI, BigQuery, Cloud Storage, Cloud Run, Cloud Functions and Pub/Sub.; Build reusable Python components, APIs, experimentation pipelines, data products and structured/unstructured data pipelines.; Perform exploratory analysis, feature engineering, statistical modeling and machine learning for broader data science needs.; Implement observability, monitoring, guardrails, automated testing and feedback loops for deployed AI systems.; Communicate technical findings, risks, tradeoffs and recommendations to technical and non-technical stakeholders.",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     {
@@ -25,6 +27,7 @@
       "chunk_type": "source-fit",
       "content_hash": "d56b406b80014caca2e0d0988b260e666432009cc7c68f0696d2b52d43600e3a",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "text": "Source fit score: 92/100\nSource fit summary: Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.\nSource strengths: Rol remoto para México con foco explícito en NLP, LLMs y aplicaciones de IA.; Incluye colaboración con producto, ingeniería, analytics y negocio.; Encaja con GenAI, evaluación de modelos, responsible AI y traducción de problemas complejos a soluciones aplicadas.\nSource gaps: No aprovecha directamente banca, fraude o riesgo.; Puede ser más especializado en NLP/AI engineering que en data science financiero.",

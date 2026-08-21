@@ -3,21 +3,23 @@
     {
       "chunk_id": "vac-2de566514601700a::core",
       "chunk_type": "core",
-      "content_hash": "1e1921c7034e07ac82ced2c1902cbba01ea11e63b2a5b7d9751ed01ddedeaabf",
+      "content_hash": "6e104e884b8f88400bb6b9ac4dff9feefdceef518a8b588b0638ca5af48afe0b",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: es\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-2de566514601700a"
     },
     {
       "chunk_id": "vac-2de566514601700a::requirements",
       "chunk_type": "requirements",
-      "content_hash": "b651a97479b50323ba9f6ca2b8e3f773b645f7d58e3b4732b937aed0daa0e897",
+      "content_hash": "7bec1bfe2a78f94f53cd529a3bb3d696f65a3e1bbe0aab9ca842606cc422fcb1",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Technologies / capabilities: Python; SQL; Machine Learning; MLOps; Experimentación; Producción",
+      "text": "Technologies / capabilities: Python; SQL; Spark; Machine Learning; Clasificación; Clustering; Optimización; Series de tiempo; Forecasting; Generative AI; MLOps; Experimentación; Producción\nRequirements: Formación profesional en Ingeniería de Datos, Ciencia de Datos o disciplina afín.; Entre uno y dos años o más de experiencia práctica en Ciencia de Datos aplicada a producción.; Conocimientos sólidos de Python y SQL, además de Spark o tecnología equivalente para procesamiento de datos.; Capacidad para aplicar estadística y machine learning a problemas de clasificación, clustering, optimización, series de tiempo y pronóstico.; Conocimiento práctico de inteligencia artificial generativa y capacidad para adaptar modelos a necesidades cambiantes de proyectos y clientes.; Orientación a trabajo remoto, colaboración y entrega de soluciones analíticas aplicadas.\nResponsibilities: Implementar y entrenar modelos de clasificación, clustering y optimización usando técnicas estadísticas y de machine learning.; Desarrollar soluciones de series de tiempo y pronóstico ajustadas a necesidades del proyecto y del cliente.; Aplicar inteligencia artificial generativa dentro de soluciones analíticas cuando el caso de uso lo requiera.; Preparar y transformar datos con Python, SQL y Spark o herramientas similares para modelado y análisis.; Asegurar que los modelos sean adaptables a cambios de datos, negocio y requerimientos del cliente.; Contribuir a proyectos reales de analítica e inteligencia artificial con foco en valor de negocio y entrega práctica.",
       "vacancy_id": "vac-2de566514601700a"
     },
     {
@@ -25,6 +27,7 @@
       "chunk_type": "source-fit",
       "content_hash": "baa38f364ab45f0d530f57365157a8d570944873ca2f5baa71c9fdfe40584e63",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "text": "Source fit score: 87/100\nSource fit summary: Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.\nSource strengths: Descripción en español y modalidad remota en México.; Responsabilidad clara de desarrollar e implementar modelos de ML desde experimentación hasta producción.; Pide Python, SQL, MLOps end-to-end y diseño de experimentos rigurosos.\nSource gaps: No está marcado como Senior/Lead y no muestra foco financiero.; Empresa menos prioritaria que fintech, banca o big tech.",

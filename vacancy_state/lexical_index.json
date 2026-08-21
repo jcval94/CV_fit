@@ -264,14 +264,73 @@
       "text": "Technologies / capabilities: Python; SQL; Machine Learning; LLMs; RAG; Agentic AI; LangGraph; AWS Bedrock; Amazon SageMaker; MLOps; CI/CD; GitLab; Docker; Kubernetes; Temporal; Model Monitoring; Data Governance; Data Pipelines\nRequirements: Formación universitaria concluida en computación, software, matemáticas, estadística o disciplina cuantitativa afín.; Especialización o experiencia sólida en inteligencia artificial, machine learning o sistemas distribuidos.; Al menos cuatro años en ingeniería de software o ML, incluyendo dos con modelos o LLMs en producción.; Dominio avanzado de Python y SQL, con capacidad para trabajar concurrencia y cargas de alto desempeño.; Experiencia práctica con AWS, MLOps, CI/CD, Docker/Kubernetes y orquestación moderna de agentes como LangGraph.\nResponsibilities: Construir pipelines reproducibles de datos, features, entrenamiento e inferencia evitando inconsistencias entre entrenamiento y servicio.; Desplegar, versionar y monitorear modelos en producción con rollback, detección de drift y control de latencia y costo.; Diseñar workflows agénticos de extremo a extremo considerando estado, herramientas, memoria y tolerancia a fallas.; Integrar LLMs mediante AWS Bedrock y APIs de proveedores administrando prompts, structured outputs, throughput, cuotas y costos.; Desarrollar soluciones RAG y búsqueda semántica que mantengan las respuestas fundamentadas en fuentes organizacionales.; Instrumentar evaluación y observabilidad con trazas, datasets de evaluación y métricas de calidad, alucinación, latencia y costo.; Colaborar en CI/CD, infraestructura como código, pruebas automatizadas, contenerización y despliegues controlados.; Desarrollar servicios Python distribuidos con concurrencia, colas, backpressure, idempotencia, caching y profiling, incluyendo orquestación con Temporal.; Aplicar estándares de seguridad, privacidad, gobierno de datos y guardrails a soluciones que incorporen LLMs.; Documentar decisiones técnicas y compartir buenas prácticas de ML Engineering e inteligencia artificial aplicada.",
       "vacancy_id": "vac-04e92192e608ea02"
     },
+    "vac-04e92192e608ea02::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "c270a3cef880b0ee979cab79a1bfb0ddab264660067ae1a262b05eba050011fd",
+      "source_paths": [
+        "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "95": 1,
+        "agenticos": 1,
+        "ai": 1,
+        "alto": 1,
+        "combina": 1,
+        "con": 3,
+        "construccion": 1,
+        "data": 1,
+        "de": 3,
+        "despliegue": 1,
+        "directo": 1,
+        "el": 1,
+        "en": 1,
+        "encaje": 1,
+        "end-to-end": 1,
+        "experiencia": 1,
+        "financieros": 1,
+        "fit": 2,
+        "genai.": 1,
+        "impacto": 1,
+        "learning": 1,
+        "llms": 1,
+        "machine": 1,
+        "mlops": 1,
+        "muy": 1,
+        "negocio.": 1,
+        "operacion": 1,
+        "ownership": 1,
+        "para": 1,
+        "perfil": 1,
+        "productivo": 1,
+        "productos": 1,
+        "python": 1,
+        "rol": 1,
+        "science": 1,
+        "score": 1,
+        "senior": 1,
+        "sistemas": 1,
+        "sobre": 1,
+        "source": 2,
+        "summary": 1,
+        "tecnico": 1,
+        "un": 1,
+        "workflows": 1
+      },
+      "text": "Source fit score: 95/100\nSource fit summary: Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
     "vac-12dc570424d531ae::core": {
       "chunk_type": "core",
-      "content_hash": "44a23f5996a4ad6a7414107a4a15a2cda606889616936d97265b548b02a95442",
+      "content_hash": "ba9792225cd9f1e4cbca3706541ff4d691cc362167963e75fa720a42cc86af9f",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "100": 1,
+        "40": 1,
         "ai": 1,
         "application": 1,
         "category": 1,
@@ -281,9 +340,9 @@
         "eligible": 1,
         "en": 1,
         "engineer": 1,
-        "false": 1,
         "fidelity": 1,
         "ford": 1,
+        "full": 1,
         "generation": 1,
         "jd": 2,
         "language": 1,
@@ -296,38 +355,223 @@
         "remote": 2,
         "role": 1,
         "scientist": 1,
-        "sparse": 1,
         "tech": 1,
+        "true": 1,
         "work": 1
       },
-      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     "vac-12dc570424d531ae::requirements": {
       "chunk_type": "requirements",
-      "content_hash": "9c383b12b1f17b4541ee594cbdb814eacca8f8756b24e135dd010221c2d8b7b2",
+      "content_hash": "3c81cd6dea4b96426d8c42cf0466779564bf155e856ea8ff3d6c3bba43916a4d",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
-        "ai": 2,
-        "applications": 1,
+        "ability": 2,
+        "access": 1,
+        "adaptation": 1,
+        "agentic": 2,
+        "ai": 13,
+        "ambiguous": 1,
+        "analysis": 1,
+        "and": 18,
+        "apis": 2,
+        "applications": 3,
+        "applied": 1,
+        "approaches": 1,
+        "appropriate.": 1,
+        "approvals": 1,
+        "as": 1,
+        "automated": 1,
+        "bachelor": 1,
+        "bigquery": 4,
+        "broader": 1,
+        "build": 1,
+        "business": 1,
+        "calling": 1,
         "capabilities": 1,
-        "evaluation": 1,
-        "gcp": 1,
-        "llms": 1,
-        "model": 1,
-        "nlp": 1,
+        "cases.": 1,
+        "cd": 2,
+        "ci": 2,
+        "cloud": 4,
+        "commercial": 1,
+        "communicate": 1,
+        "comparable": 1,
+        "components": 1,
+        "computer": 1,
+        "concepts.": 1,
+        "containers": 1,
+        "context-management": 1,
+        "core": 1,
+        "cost": 1,
+        "create": 1,
+        "cross-functional": 1,
+        "customer-facing": 1,
+        "data": 6,
+        "dataflow": 1,
+        "datasets": 1,
+        "degree": 1,
+        "deliver": 1,
+        "deployed": 1,
+        "design": 1,
+        "develop": 2,
+        "developing": 1,
+        "engineering": 3,
+        "enterprise": 1,
+        "environments.": 1,
+        "equivalent": 1,
+        "evaluate": 1,
+        "evaluation": 4,
+        "experience": 6,
+        "experience.": 2,
+        "experimentation": 1,
+        "exploratory": 1,
+        "explore": 1,
+        "factuality": 1,
+        "feature": 1,
+        "feedback": 1,
+        "field": 1,
+        "findings": 1,
+        "for": 3,
+        "frameworks": 1,
+        "function": 1,
+        "functions": 1,
+        "gcp": 3,
+        "gcp.": 1,
+        "generative": 1,
+        "guardrails": 1,
+        "hands-on": 1,
+        "human": 1,
+        "identity": 1,
+        "implement": 1,
+        "in": 3,
+        "includes": 1,
+        "including": 1,
+        "inference": 1,
+        "integration": 1,
+        "into": 1,
+        "iteratively": 1,
+        "latency": 1,
+        "learning": 2,
+        "llm": 3,
+        "llm-powered": 1,
+        "llmops": 1,
+        "llms": 2,
+        "loops": 1,
+        "machine": 2,
+        "maintainable": 1,
+        "major-cloud": 1,
+        "management": 1,
+        "mathematics": 1,
+        "measurable": 1,
+        "memory": 1,
+        "methods": 1,
+        "ml": 2,
+        "mlops": 2,
+        "model": 3,
+        "modeling": 1,
+        "monitoring": 1,
+        "monitoring.": 1,
+        "multi-step": 1,
+        "needs": 1,
+        "needs.": 1,
+        "nlp": 3,
+        "non-technical": 1,
+        "objectives": 1,
+        "observability": 1,
+        "on": 1,
+        "open-source": 1,
+        "or": 6,
+        "particularly": 1,
+        "patterns": 1,
+        "perform": 1,
+        "pipelines": 1,
+        "pipelines.": 1,
+        "planning": 1,
+        "practical": 1,
+        "practices.": 1,
+        "preferred": 1,
+        "production": 1,
+        "production-quality": 1,
+        "productionize": 1,
+        "products": 1,
+        "professional": 1,
+        "prompt": 2,
+        "prototype": 1,
+        "pub": 1,
+        "python": 3,
+        "quality": 1,
+        "quantitative": 1,
+        "recommendations": 1,
+        "red-team": 1,
+        "reflection": 1,
+        "regulated": 1,
+        "related": 2,
+        "relevance": 1,
+        "requirements": 1,
+        "responsibilities": 1,
         "responsible": 1,
-        "technologies": 1
+        "reusable": 1,
+        "risks": 1,
+        "robustness": 1,
+        "role.": 1,
+        "routing": 1,
+        "run": 2,
+        "safety": 1,
+        "safety-conscious": 1,
+        "scalable": 2,
+        "science": 4,
+        "services": 2,
+        "skills": 1,
+        "software": 1,
+        "solutions": 1,
+        "spanning": 1,
+        "sql": 2,
+        "stakeholders.": 1,
+        "statistical": 1,
+        "statistics": 1,
+        "storage": 1,
+        "strategies": 1,
+        "strong": 1,
+        "structured": 1,
+        "structured-output": 1,
+        "sub.": 1,
+        "such": 1,
+        "systems.": 1,
+        "task": 1,
+        "teams.": 1,
+        "technical": 4,
+        "technologies": 1,
+        "testable": 1,
+        "testing": 1,
+        "tests": 1,
+        "to": 4,
+        "tool": 1,
+        "tooling": 1,
+        "tradeoffs": 1,
+        "transition": 1,
+        "translate": 1,
+        "unstructured": 1,
+        "use": 1,
+        "user": 1,
+        "using": 1,
+        "vertex": 4,
+        "where": 1,
+        "with": 5,
+        "workflows": 1,
+        "workflows.": 1
       },
-      "text": "Technologies / capabilities: NLP; LLMs; GCP; Responsible AI; Model evaluation; AI applications",
+      "text": "Technologies / capabilities: Python; SQL; NLP; LLMs; Generative AI; Agentic AI; GCP; Vertex AI; BigQuery; Cloud Run; CI/CD; MLOps; LLM evaluation; Responsible AI; Model evaluation; AI applications\nRequirements: Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Engineering or a related quantitative field, or equivalent practical experience.; Professional experience in data science, machine learning, applied AI, NLP or a related technical role.; Strong Python and SQL skills with maintainable, testable, production-quality software practices.; Hands-on experience developing applications with commercial or open-source LLMs, prompt engineering, model integration and core NLP concepts.; Experience with GCP data and AI services, particularly Vertex AI and BigQuery, or comparable major-cloud experience with ability to transition to GCP.; Experience with APIs, containers, CI/CD, identity/access management and production monitoring.; Ability to translate ambiguous business needs into measurable technical objectives and deliver iteratively in cross-functional teams.; Preferred experience includes Vertex AI tooling, BigQuery ML/Dataflow, LLM evaluation datasets, red-team tests, LLMOps/MLOps, scalable inference and regulated or safety-conscious environments.\nResponsibilities: Design, prototype, evaluate and productionize LLM-powered applications for enterprise and customer-facing use cases.; Develop prompt strategies, structured-output workflows, routing, context-management approaches and model adaptation methods where appropriate.; Create LLM evaluation frameworks spanning task quality, factuality, relevance, robustness, latency, cost, safety and user experience.; Explore agentic AI patterns including planning, tool/function calling, memory, reflection, human approvals and multi-step workflows.; Develop scalable AI/ML solutions on GCP using services such as Vertex AI, BigQuery, Cloud Storage, Cloud Run, Cloud Functions and Pub/Sub.; Build reusable Python components, APIs, experimentation pipelines, data products and structured/unstructured data pipelines.; Perform exploratory analysis, feature engineering, statistical modeling and machine learning for broader data science needs.; Implement observability, monitoring, guardrails, automated testing and feedback loops for deployed AI systems.; Communicate technical findings, risks, tradeoffs and recommendations to technical and non-technical stakeholders.",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     "vac-12dc570424d531ae::source-fit": {
       "chunk_type": "source-fit",
       "content_hash": "d56b406b80014caca2e0d0988b260e666432009cc7c68f0696d2b52d43600e3a",
       "source_paths": [
+        "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
@@ -400,12 +644,14 @@
     },
     "vac-14b95b3407bcb148::core": {
       "chunk_type": "core",
-      "content_hash": "3e5b7a6db268186a36559d85809505cbf88323954ed72862f7556877d5a5f1e1",
+      "content_hash": "9197dbbbd6fd2f8a74be08586f3c389dc2b5d7c9d0649a79d5b11781628ebe31",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "100": 1,
+        "40": 1,
         "application": 1,
         "category": 1,
         "cdmx": 1,
@@ -414,10 +660,10 @@
         "eligible": 1,
         "en": 1,
         "engineer": 1,
-        "false": 1,
         "fidelity": 1,
         "fintech": 1,
         "fraud": 1,
+        "full": 1,
         "generation": 1,
         "hybrid": 1,
         "jd": 2,
@@ -429,40 +675,181 @@
         "model": 1,
         "payjoy": 1,
         "role": 1,
-        "sparse": 1,
+        "true": 1,
         "work": 1
       },
-      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     "vac-14b95b3407bcb148::requirements": {
       "chunk_type": "requirements",
-      "content_hash": "10a8c3a65796556b44f1e72bdbf6433f9a8d65d6a98e69d01e7cc4569c1ccd44",
+      "content_hash": "c13dd5baa403e309ff8fd1ca6ac78a0a7bb43db85d95697655ba31de333dcd83",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "ability": 1,
+        "accuracy": 1,
+        "across": 2,
+        "additional": 1,
+        "analysis": 1,
+        "and": 22,
+        "are": 1,
+        "as": 1,
+        "at": 1,
+        "aws": 2,
+        "bachelor": 1,
+        "batch": 1,
+        "build": 1,
         "capabilities": 1,
+        "cases": 1,
+        "changing": 1,
+        "clean": 1,
+        "closely": 1,
+        "cloud": 1,
+        "code": 2,
+        "collaborate": 1,
+        "communication": 1,
+        "complex": 1,
+        "computer": 1,
+        "construct": 1,
+        "containerization": 1,
+        "continuously": 1,
+        "cost-benefit": 1,
         "credit": 1,
-        "data": 1,
-        "deployment": 1,
-        "detection": 1,
-        "fraud": 1,
-        "learning": 1,
-        "machine": 1,
-        "model": 1,
-        "python": 1,
-        "risk": 1,
-        "science": 1,
-        "technologies": 1
+        "data": 6,
+        "databases": 1,
+        "databricks": 2,
+        "datasets": 1,
+        "decisioning": 1,
+        "degree": 1,
+        "deliver": 2,
+        "deploy": 1,
+        "deployment": 2,
+        "design": 1,
+        "detection": 3,
+        "docker": 1,
+        "docker.": 1,
+        "documentation": 1,
+        "engineer": 1,
+        "engineering": 5,
+        "english": 1,
+        "entity": 1,
+        "environment": 1,
+        "experience": 2,
+        "extend": 1,
+        "extraction": 2,
+        "fast-paced": 1,
+        "feature": 2,
+        "features": 1,
+        "feedback": 1,
+        "field.": 1,
+        "financial-market": 1,
+        "for": 3,
+        "frameworks.": 1,
+        "fraud": 5,
+        "from": 3,
+        "full": 1,
+        "generation": 1,
+        "global": 1,
+        "graph": 1,
+        "greater": 1,
+        "high": 1,
+        "improve": 3,
+        "in": 5,
+        "infrastructure": 1,
+        "integration": 1,
+        "is": 1,
+        "knowledge": 1,
+        "large": 1,
+        "lead": 1,
+        "learning": 4,
+        "least": 1,
+        "libraries": 1,
+        "lifecycle": 2,
+        "live": 1,
+        "llms": 2,
+        "machine": 4,
+        "maintained": 1,
+        "markets.": 1,
+        "ml": 6,
+        "model": 3,
+        "models": 3,
+        "monitoring": 3,
+        "multiple": 1,
+        "new": 3,
+        "observed": 1,
+        "of": 2,
+        "on": 1,
+        "optimized": 1,
+        "or": 3,
+        "partner": 1,
+        "payjoy": 1,
+        "peer": 1,
+        "performance.": 2,
+        "platform": 1,
+        "plus": 1,
+        "pluses.": 1,
+        "predictive": 1,
+        "preferably": 1,
+        "preprocess": 1,
+        "processes.": 1,
+        "processing.": 1,
+        "product": 2,
+        "production": 1,
+        "production-level": 2,
+        "production-ready": 1,
+        "production.": 1,
+        "products": 1,
+        "proficiency": 1,
+        "providers": 1,
+        "python": 2,
+        "related": 3,
+        "requirements": 1,
+        "requirements.": 1,
+        "responsibilities": 1,
+        "review.": 1,
+        "risk": 2,
+        "robustness.": 1,
+        "role": 1,
+        "rules": 1,
+        "scalable": 1,
+        "scale": 1,
+        "scale.": 1,
+        "science": 4,
+        "serving": 1,
+        "skills": 1,
+        "sources": 1,
+        "stakeholder": 1,
+        "strong": 2,
+        "such": 1,
+        "suite.": 1,
+        "support": 1,
+        "teams": 2,
+        "technologies": 1,
+        "testing": 2,
+        "the": 1,
+        "them": 1,
+        "three": 1,
+        "through": 1,
+        "to": 5,
+        "tooling": 1,
+        "types": 1,
+        "use": 1,
+        "with": 6,
+        "work": 1,
+        "write": 1,
+        "years": 1
       },
-      "text": "Technologies / capabilities: Machine Learning; Fraud detection; Credit risk; Model deployment; Python; Data Science",
+      "text": "Technologies / capabilities: Python; Machine Learning; Fraud detection; ML lifecycle; Model deployment; Model monitoring; AWS; Docker; Databricks; LLMs; Credit risk; Data Science\nRequirements: Bachelor's degree in Computer Science, Engineering or a related field.; At least three years in data science, machine learning engineering, data engineering or a closely related role with production-level code and maintained ML models in production.; High proficiency in Python and related data and machine learning libraries and frameworks.; Strong knowledge of the full ML lifecycle from extraction and feature engineering through serving and monitoring for live and batch processing.; Experience with cloud providers, preferably AWS, and containerization such as Docker.; Strong English communication skills and ability to work in a fast-paced environment with changing requirements.; Fraud detection or financial-market ML experience is a plus; LLMs, graph databases and Databricks are additional pluses.\nResponsibilities: Design, build and deploy machine learning models for fraud detection use cases across PayJoy's product suite.; Deliver production-ready ML models optimized for scale and improve them continuously from stakeholder feedback and observed production performance.; Extend fraud decisioning infrastructure to new entity types, construct new rules and support greater scale.; Clean, preprocess and engineer features from large and complex datasets to improve predictive accuracy and performance.; Write production-level code with documentation, testing and peer review.; Lead testing, cost-benefit analysis and integration of new data sources to improve model robustness.; Partner with ML Platform and Tooling teams on scalable feature generation, extraction, deployment and monitoring processes.; Collaborate with global Fraud, Engineering, Product and Risk teams to deliver data science products across multiple markets.",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     "vac-14b95b3407bcb148::source-fit": {
       "chunk_type": "source-fit",
       "content_hash": "763de721d1cdf2f2b27d951a7566b45f34396d5bfa7169138956cae4353ec771",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
@@ -533,67 +920,250 @@
     },
     "vac-21cefd168f6539b4::core": {
       "chunk_type": "core",
-      "content_hash": "87baf47cd4ed872874eaaed10898a44ecdfe19d8fdbe597c67c5ba61779615c6",
+      "content_hash": "0410f08c991cb5ae2cc4f418d44e4882001967035eb250edeb8e85087e659392",
       "source_paths": [
+        "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "100": 1,
+        "59.8": 1,
+        "adoption": 1,
+        "advanced": 1,
+        "ai-first": 1,
+        "analytical": 3,
+        "analytics": 1,
+        "and": 3,
         "application": 1,
+        "business": 1,
         "category": 1,
+        "causal": 1,
         "city": 1,
+        "combining": 1,
+        "communication": 1,
         "company": 2,
-        "decision": 1,
+        "complex": 1,
+        "customer": 1,
+        "decision": 2,
+        "description": 1,
+        "driving": 1,
         "eligible": 1,
         "en": 1,
-        "false": 1,
+        "end-to-end": 1,
+        "engagement": 1,
+        "experimentation": 1,
         "fidelity": 1,
+        "focuses": 1,
+        "for": 1,
+        "full": 1,
         "generation": 1,
+        "growth": 1,
+        "inference": 1,
+        "initiatives": 1,
         "instructure": 1,
         "jd": 2,
         "language": 1,
         "location": 1,
         "mexico": 2,
         "model": 1,
+        "on": 1,
+        "outcomes": 1,
+        "ownership": 1,
+        "partnership": 1,
+        "product": 1,
         "producto": 1,
         "remote": 1,
-        "role": 1,
-        "scientist": 1,
-        "senior": 1,
-        "sparse": 1,
+        "responsible": 1,
+        "revenue": 1,
+        "role": 3,
+        "scientist": 2,
+        "senior": 3,
+        "stakeholders.": 1,
+        "strategic": 1,
         "tech": 1,
-        "work": 1
+        "the": 1,
+        "through": 1,
+        "true": 1,
+        "trusted": 1,
+        "with": 1,
+        "work": 1,
+        "workflows.": 1
       },
-      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote\nApplication language: en\nJD fidelity: full (59.8/100)\nJD generation eligible: true\nDescription: Senior Decision Scientist role responsible for driving business outcomes through complex analytical initiatives and trusted partnership with senior stakeholders. The role focuses on product adoption, customer engagement and revenue growth, combining advanced analytics, experimentation, causal inference, end-to-end analytical ownership, strategic communication and AI-first analytical workflows.",
       "vacancy_id": "vac-21cefd168f6539b4"
     },
     "vac-21cefd168f6539b4::requirements": {
       "chunk_type": "requirements",
-      "content_hash": "3b31c7dff8ada12d2b4374cfdc50375bde64a5cabe482dc724d80ea7d1a611ac",
+      "content_hash": "8bdde93dacfc59f2a3a863f02e52ae6fdad0d5ca592eb413b30049d05265ece4",
       "source_paths": [
+        "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
-        "analytics": 1,
+        "ability": 2,
+        "actionable": 1,
+        "adoption": 1,
+        "advanced": 2,
+        "ai": 1,
+        "ai-assisted": 1,
+        "ai-first": 1,
+        "analysts": 1,
+        "analytical": 5,
+        "analytics": 4,
+        "and": 20,
+        "applied": 1,
+        "approaches": 1,
+        "as": 1,
+        "audiences": 1,
+        "audiences.": 1,
+        "best": 1,
+        "building": 1,
+        "business": 2,
         "capabilities": 1,
-        "decision": 1,
+        "causal": 3,
+        "clear": 1,
+        "collaborating": 1,
+        "communication": 2,
+        "complex": 2,
+        "computer": 1,
+        "contribute": 1,
+        "cross-functional": 2,
+        "customer": 1,
+        "data": 2,
+        "decision": 4,
+        "definition": 1,
+        "degree": 1,
+        "deliver": 1,
+        "delivery": 1,
+        "delivery.": 1,
+        "deployment": 1,
+        "design": 1,
+        "economics": 1,
+        "edtech": 1,
+        "education": 1,
+        "elevate": 1,
+        "end": 2,
+        "end-to-end": 1,
+        "engagement": 1,
+        "engineers": 1,
+        "environment.": 1,
+        "environments": 1,
+        "execute": 1,
+        "executive": 3,
+        "experience": 2,
+        "experimentation": 2,
+        "fast-paced": 1,
+        "features": 1,
+        "field.": 1,
+        "findings": 1,
+        "for": 4,
+        "frame": 1,
+        "from": 2,
+        "go-to-market": 1,
+        "growth.": 1,
+        "high-value": 1,
+        "identify": 1,
+        "identifying": 1,
+        "impact": 1,
+        "improve": 3,
+        "in": 3,
+        "including": 1,
+        "independently": 1,
+        "inference": 3,
+        "initiatives": 2,
+        "initiatives.": 1,
+        "insight": 1,
+        "into": 1,
+        "is": 1,
+        "leaders": 1,
+        "leadership.": 1,
+        "leading": 1,
         "learning": 1,
         "machine": 1,
+        "maintaining": 1,
         "management": 1,
-        "product": 1,
-        "science": 1,
+        "managers": 1,
+        "marketing": 1,
+        "master": 1,
+        "mathematics": 1,
+        "measurement.": 2,
+        "mentor": 1,
+        "methodological": 1,
+        "methodology": 1,
+        "methods": 1,
+        "modeling": 2,
+        "models": 1,
+        "modern": 2,
+        "non-technical": 1,
+        "operate": 1,
+        "operations": 1,
+        "opportunities": 2,
+        "or": 4,
+        "own": 1,
+        "partner": 1,
+        "phd": 1,
+        "plus.": 1,
+        "practices.": 1,
+        "pricing": 1,
+        "problem": 1,
+        "product": 5,
+        "pursue": 1,
+        "quality.": 1,
+        "quantitative": 1,
+        "questions": 1,
+        "raise": 1,
+        "recommendations": 1,
+        "recommendations.": 1,
+        "related": 1,
+        "requirements": 1,
+        "research": 1,
+        "responsibilities": 1,
+        "revenue": 1,
+        "rigorous": 1,
+        "saas": 2,
+        "science": 5,
+        "scientists": 1,
+        "senior": 1,
+        "skills": 1,
+        "skills.": 1,
         "sql": 1,
         "stakeholder": 1,
+        "stakeholder-engagement": 1,
+        "stakeholders": 1,
+        "standards": 2,
+        "statistical": 2,
+        "statistics": 1,
+        "storytelling": 1,
+        "strategic": 1,
+        "strategies": 1,
+        "strong": 3,
+        "studies": 1,
+        "such": 1,
+        "support": 1,
+        "team": 1,
+        "technical": 1,
+        "techniques": 1,
         "technologies": 1,
-        "testing": 1
+        "testing": 1,
+        "tests": 1,
+        "through": 3,
+        "throughput": 1,
+        "throughput.": 1,
+        "to": 8,
+        "tooling": 1,
+        "translate": 1,
+        "use": 2,
+        "while": 2,
+        "with": 2
       },
-      "text": "Technologies / capabilities: Decision Science; Machine Learning; A/B testing; SQL; Product analytics; Stakeholder management",
+      "text": "Technologies / capabilities: Decision Science; A/B testing; Causal inference; Statistical modeling; Machine Learning; Product analytics; SaaS analytics; AI-assisted analytics; Stakeholder management; Executive storytelling; SQL\nRequirements: Advanced quantitative education such as a Master's degree or PhD in Statistics, Computer Science, Economics, Applied Mathematics, Operations Research or a related field.; Strong experience leading end-to-end data science or decision science initiatives from problem definition through delivery and measurement.; Advanced analytical and statistical methods with strong experimentation, causal inference and business decision support skills.; Ability to operate independently while collaborating in a fast-paced, cross-functional environment.; Strong communication skills for technical and non-technical audiences, including executive leadership.; Experience in SaaS, product analytics or edtech environments is a plus.; Ability to use modern AI tooling to improve analytical throughput while maintaining methodological quality.\nResponsibilities: Identify and pursue high-value analytical opportunities to improve product adoption, customer engagement and revenue growth.; Design and execute rigorous A/B tests and causal inference studies for product features, pricing strategies and go-to-market initiatives.; Partner with product managers, engineers, marketing leaders and senior stakeholders to frame complex business questions and deliver strategic recommendations.; Own analytical initiatives end to end, from identifying opportunities and building models through deployment and impact measurement.; Use AI-first approaches and modern analytical techniques to raise standards and improve team throughput.; Contribute to decision science standards for experimentation, modeling and insight delivery.; Mentor and elevate data scientists and analysts through methodology, communication and stakeholder-engagement best practices.; Translate complex findings into clear, actionable recommendations for executive and cross-functional audiences.",
       "vacancy_id": "vac-21cefd168f6539b4"
     },
     "vac-21cefd168f6539b4::source-fit": {
       "chunk_type": "source-fit",
       "content_hash": "0ac20dbaa2fe7198e6edba79bd0a608841ad534016b4a6f239bcc93ca548b0ce",
       "source_paths": [
+        "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
@@ -672,21 +1242,23 @@
     },
     "vac-2de566514601700a::core": {
       "chunk_type": "core",
-      "content_hash": "1e1921c7034e07ac82ced2c1902cbba01ea11e63b2a5b7d9751ed01ddedeaabf",
+      "content_hash": "6e104e884b8f88400bb6b9ac4dff9feefdceef518a8b588b0638ca5af48afe0b",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "100": 1,
+        "40": 1,
         "application": 1,
         "category": 1,
         "company": 2,
         "data": 1,
         "dataknow": 1,
         "eligible": 1,
-        "en": 1,
-        "false": 1,
+        "es": 1,
         "fidelity": 1,
+        "full": 1,
         "generation": 1,
         "jd": 2,
         "language": 1,
@@ -698,37 +1270,140 @@
         "remote": 2,
         "role": 1,
         "scientist": 1,
-        "sparse": 1,
         "sql": 1,
+        "true": 1,
         "work": 1
       },
-      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: es\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-2de566514601700a"
     },
     "vac-2de566514601700a::requirements": {
       "chunk_type": "requirements",
-      "content_hash": "b651a97479b50323ba9f6ca2b8e3f773b645f7d58e3b4732b937aed0daa0e897",
+      "content_hash": "7bec1bfe2a78f94f53cd529a3bb3d696f65a3e1bbe0aab9ca842606cc422fcb1",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "adaptables": 1,
+        "adaptar": 1,
+        "ademas": 1,
+        "afin.": 1,
+        "ai": 1,
+        "ajustadas": 1,
+        "analisis.": 1,
+        "analitica": 1,
+        "analiticas": 2,
+        "anos": 1,
+        "aplicada": 1,
+        "aplicadas.": 1,
+        "aplicar": 2,
+        "artificial": 3,
+        "asegurar": 1,
+        "cambiantes": 1,
+        "cambios": 1,
         "capabilities": 1,
+        "capacidad": 2,
+        "caso": 1,
+        "ciencia": 2,
+        "clasificacion": 3,
+        "cliente.": 2,
+        "clientes.": 1,
+        "clustering": 3,
+        "colaboracion": 1,
+        "con": 2,
+        "conocimiento": 1,
+        "conocimientos": 1,
+        "contribuir": 1,
+        "cuando": 1,
+        "datos": 5,
+        "datos.": 1,
+        "de": 22,
+        "del": 3,
+        "dentro": 1,
+        "desarrollar": 1,
+        "disciplina": 1,
+        "dos": 1,
+        "el": 1,
+        "en": 3,
+        "entre": 1,
+        "entrega": 2,
+        "entrenar": 1,
+        "equivalente": 1,
+        "estadistica": 1,
+        "estadisticas": 1,
+        "experiencia": 1,
         "experimentacion": 1,
-        "learning": 1,
-        "machine": 1,
+        "foco": 1,
+        "forecasting": 1,
+        "formacion": 1,
+        "generativa": 2,
+        "generative": 1,
+        "herramientas": 1,
+        "implementar": 1,
+        "ingenieria": 1,
+        "inteligencia": 3,
+        "learning": 2,
+        "learning.": 1,
+        "lo": 1,
+        "los": 1,
+        "machine": 3,
+        "mas": 1,
         "mlops": 1,
+        "modelado": 1,
+        "modelos": 3,
+        "necesidades": 2,
+        "negocio": 2,
+        "optimizacion": 3,
+        "orientacion": 1,
+        "para": 4,
+        "practica": 1,
+        "practica.": 1,
+        "practico": 1,
+        "preparar": 1,
+        "problemas": 1,
+        "procesamiento": 1,
         "produccion": 1,
-        "python": 1,
-        "sql": 1,
-        "technologies": 1
+        "produccion.": 1,
+        "profesional": 1,
+        "pronostico": 1,
+        "pronostico.": 1,
+        "proyecto": 1,
+        "proyectos": 2,
+        "python": 3,
+        "que": 1,
+        "reales": 1,
+        "remoto": 1,
+        "requerimientos": 1,
+        "requiera.": 1,
+        "requirements": 1,
+        "responsibilities": 1,
+        "sean": 1,
+        "series": 3,
+        "similares": 1,
+        "solidos": 1,
+        "soluciones": 3,
+        "spark": 3,
+        "sql": 3,
+        "technologies": 1,
+        "tecnicas": 1,
+        "tecnologia": 1,
+        "tiempo": 3,
+        "trabajo": 1,
+        "transformar": 1,
+        "uno": 1,
+        "usando": 1,
+        "uso": 1,
+        "valor": 1
       },
-      "text": "Technologies / capabilities: Python; SQL; Machine Learning; MLOps; Experimentación; Producción",
+      "text": "Technologies / capabilities: Python; SQL; Spark; Machine Learning; Clasificación; Clustering; Optimización; Series de tiempo; Forecasting; Generative AI; MLOps; Experimentación; Producción\nRequirements: Formación profesional en Ingeniería de Datos, Ciencia de Datos o disciplina afín.; Entre uno y dos años o más de experiencia práctica en Ciencia de Datos aplicada a producción.; Conocimientos sólidos de Python y SQL, además de Spark o tecnología equivalente para procesamiento de datos.; Capacidad para aplicar estadística y machine learning a problemas de clasificación, clustering, optimización, series de tiempo y pronóstico.; Conocimiento práctico de inteligencia artificial generativa y capacidad para adaptar modelos a necesidades cambiantes de proyectos y clientes.; Orientación a trabajo remoto, colaboración y entrega de soluciones analíticas aplicadas.\nResponsibilities: Implementar y entrenar modelos de clasificación, clustering y optimización usando técnicas estadísticas y de machine learning.; Desarrollar soluciones de series de tiempo y pronóstico ajustadas a necesidades del proyecto y del cliente.; Aplicar inteligencia artificial generativa dentro de soluciones analíticas cuando el caso de uso lo requiera.; Preparar y transformar datos con Python, SQL y Spark o herramientas similares para modelado y análisis.; Asegurar que los modelos sean adaptables a cambios de datos, negocio y requerimientos del cliente.; Contribuir a proyectos reales de analítica e inteligencia artificial con foco en valor de negocio y entrega práctica.",
       "vacancy_id": "vac-2de566514601700a"
     },
     "vac-2de566514601700a::source-fit": {
       "chunk_type": "source-fit",
       "content_hash": "baa38f364ab45f0d530f57365157a8d570944873ca2f5baa71c9fdfe40584e63",
       "source_paths": [
+        "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
@@ -801,12 +1476,14 @@
     },
     "vac-6d9bdccca1ff49c3::core": {
       "chunk_type": "core",
-      "content_hash": "4326f2bb1e31848cc5bfb0fbc629abd49cca5bd13f5382f4e244d794736f02b0",
+      "content_hash": "32109257fd9607dfe9f2a91b08043f50b89ff9529a08dfdb9f4f355efc85132f",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "100": 1,
+        "40": 1,
         "application": 1,
         "category": 1,
         "ciudad": 1,
@@ -815,8 +1492,8 @@
         "de": 1,
         "eligible": 1,
         "en": 1,
-        "false": 1,
         "fidelity": 1,
+        "full": 1,
         "generation": 1,
         "hybrid": 1,
         "infor": 1,
@@ -830,40 +1507,185 @@
         "science": 1,
         "scientist": 2,
         "senior": 2,
-        "sparse": 1,
         "strategy": 1,
         "tech": 1,
+        "true": 1,
         "work": 1
       },
-      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     "vac-6d9bdccca1ff49c3::requirements": {
       "chunk_type": "requirements",
-      "content_hash": "6e2c097682301bd63c85103ed220460feb56a74e8a5fa2c5250601a70e045f25",
+      "content_hash": "2a8447a7ad9d66032af53a78a48c4b3b30895bc7967371e6edeb39b9ad0e4471",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
-        "analytics": 2,
+        "ability": 2,
+        "actionable": 1,
+        "actions.": 1,
+        "adoption": 2,
+        "analysis": 4,
+        "analysis.": 1,
+        "analytical": 6,
+        "analytics": 8,
+        "and": 18,
+        "appropriate.": 1,
+        "articulation": 1,
+        "as": 1,
+        "authorization": 1,
+        "b2b": 1,
+        "before": 1,
+        "business": 5,
         "capabilities": 1,
-        "growth": 1,
+        "causal": 1,
+        "clear": 3,
+        "collaborate": 2,
+        "comfort": 1,
+        "communication": 2,
+        "communication.": 1,
+        "connect": 1,
+        "construction": 1,
+        "customer": 3,
+        "data": 7,
+        "dataset": 1,
+        "day-to-day": 1,
+        "decision": 1,
+        "decisions": 2,
+        "definition": 1,
+        "demonstrated": 1,
+        "deploy": 1,
+        "develop": 3,
+        "development.": 1,
+        "end": 2,
+        "engagement": 1,
+        "english": 1,
+        "enterprise": 1,
+        "executive": 1,
+        "executive-facing": 1,
+        "expansion": 1,
+        "experience": 2,
+        "exploration": 1,
+        "exploratory": 1,
+        "findings": 1,
+        "for": 1,
+        "foundations": 1,
+        "frame": 1,
+        "frameworks": 1,
+        "framing": 1,
+        "from": 2,
+        "full": 2,
+        "genai-assisted": 1,
+        "generative-ai-assisted": 1,
+        "grounding": 1,
+        "growth": 2,
+        "in": 3,
+        "includes": 1,
+        "including": 2,
+        "independent": 1,
+        "independently": 1,
+        "influence": 2,
+        "innovations": 1,
+        "insight": 2,
+        "insights": 2,
+        "into": 2,
+        "it": 1,
+        "knowledge.": 1,
         "learning": 1,
+        "legal": 1,
+        "lifecycle": 1,
+        "linking": 1,
         "machine": 1,
+        "manage": 1,
         "management": 1,
-        "python": 1,
-        "sql": 1,
-        "stakeholder": 1,
+        "measurable": 1,
+        "methodological": 1,
+        "methodology": 1,
+        "mexico.": 1,
+        "minimal": 1,
+        "modeling": 3,
+        "models": 1,
+        "narratives": 2,
+        "objectives": 1,
+        "of": 1,
+        "on": 1,
+        "operational": 1,
+        "or": 3,
+        "outcomes.": 1,
+        "own": 2,
+        "partners": 1,
+        "permanently": 1,
+        "practices": 1,
+        "preferred": 1,
+        "preparation": 1,
+        "presentations": 1,
+        "problem": 2,
+        "product": 1,
+        "production-ready": 1,
+        "professional": 1,
+        "proficiency": 1,
+        "projects": 1,
+        "propensity": 2,
+        "proven": 1,
+        "python": 2,
+        "questions": 1,
+        "recommended": 1,
+        "regression": 2,
+        "relationships": 1,
+        "requirements": 1,
+        "responsibilities": 1,
+        "retention": 2,
+        "rigorous": 1,
+        "saas": 3,
+        "science": 3,
+        "scoping": 1,
+        "scripts": 1,
+        "segmentation": 2,
+        "shared": 1,
+        "significant": 1,
+        "skills": 1,
+        "snowflake": 1,
+        "snowflake.": 1,
+        "software.": 1,
+        "solid": 1,
+        "solution": 1,
+        "sql": 2,
+        "stakeholder": 2,
+        "stakeholder-facing": 1,
+        "statistical": 3,
+        "storytelling": 2,
         "strategy": 1,
-        "technologies": 1
+        "strong": 1,
+        "success": 1,
+        "supervision.": 1,
+        "support": 1,
+        "survival": 2,
+        "synthesis": 1,
+        "team": 1,
+        "technical": 1,
+        "technologies": 1,
+        "testing": 2,
+        "the": 1,
+        "through": 2,
+        "to": 7,
+        "tradeoffs.": 1,
+        "transformation": 1,
+        "visualization": 1,
+        "with": 7,
+        "work": 1,
+        "workflows.": 2,
+        "workstreams": 1
       },
-      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management",
+      "text": "Technologies / capabilities: Python; SQL; Snowflake; Regression; Segmentation; A/B testing; Survival analysis; Propensity modeling; SaaS analytics; Customer analytics; GenAI-assisted analytics; Executive storytelling; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management\nRequirements: Significant experience with SaaS product or customer analytics, including adoption, retention, engagement or lifecycle analytics in B2B SaaS or enterprise software.; Demonstrated ability to independently own full analytical projects from problem framing and data preparation through analysis and insight communication with minimal technical supervision.; Strong SQL and Python skills for independent data exploration, transformation, analytical dataset construction and statistical modeling; comfort with Snowflake.; Proven stakeholder-facing communication and ability to connect methodology to business narratives and recommended actions.; Solid statistical grounding in regression, segmentation, A/B testing, survival analysis and propensity modeling, including clear articulation of methodological tradeoffs.; Full professional English proficiency and legal authorization to work permanently in Mexico.; Preferred experience includes Customer Success analytics, measurable decision influence, data visualization/storytelling and generative-AI-assisted data science workflows.\nResponsibilities: Own data science workstreams end to end from scoping through analysis, insight synthesis and stakeholder communication.; Manage day-to-day relationships with business partners and develop exploratory insights, statistical models and causal frameworks as appropriate.; Frame business objectives into clear analytical questions and influence problem definition before solution development.; Develop clear executive-facing narratives and presentations linking analytical findings to business decisions and outcomes.; Collaborate with the data science team on data foundations, analytical practices, innovations and shared business knowledge.; Develop production-ready analytical scripts and collaborate with IT to deploy insights into operational workflows.; Support adoption, retention, expansion and growth decisions with rigorous, actionable analysis.",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     "vac-6d9bdccca1ff49c3::source-fit": {
       "chunk_type": "source-fit",
       "content_hash": "c1a5a24cbd0d9e724ef48f391e680bc0168d39398e7037a190c3921a3b93f128",
       "source_paths": [
+        "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
@@ -946,6 +1768,7 @@
   "postings": {
     "100": [
       "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::core",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::core",
@@ -956,6 +1779,15 @@
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "40": [
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "59.8": [
+      "vac-21cefd168f6539b4::core"
     ],
     "62": [
       "vac-04e92192e608ea02::core"
@@ -972,11 +1804,49 @@
     "92": [
       "vac-12dc570424d531ae::source-fit"
     ],
+    "95": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
     "96": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "ability": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "access": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "accuracy": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "across": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "actionable": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "actions.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "adaptables": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "adaptar": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "adaptation": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "additional": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "ademas": [
-      "vac-04e92192e608ea02::core"
+      "vac-04e92192e608ea02::core",
+      "vac-2de566514601700a::requirements"
     ],
     "administrando": [
       "vac-04e92192e608ea02::requirements"
@@ -984,19 +1854,31 @@
     "adopcion": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "adoption": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "advanced": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "afin.": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "agentes": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
     "agentic": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
     ],
     "agenticos": [
       "vac-04e92192e608ea02::core",
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit"
     ],
     "agregador": [
       "vac-21cefd168f6539b4::source-fit"
@@ -1004,9 +1886,22 @@
     "ai": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::core",
       "vac-12dc570424d531ae::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "ai-assisted": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "ai-first": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "ajustadas": [
+      "vac-2de566514601700a::requirements"
     ],
     "ajuste": [
       "vac-21cefd168f6539b4::source-fit",
@@ -1026,6 +1921,7 @@
     ],
     "alto": [
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
     "alucinacion": [
@@ -1034,46 +1930,83 @@
     "amazon": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "ambiguous": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "ampliar": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "analisis": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "analisis.": [
+      "vac-2de566514601700a::requirements"
+    ],
     "analitica": [
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "analiticas": [
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "analiticos": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "analysis": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "analysis.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "analysts": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "analytical": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "analytics": [
       "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "and": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::requirements",
       "vac-6d9bdccca1ff49c3::requirements"
     ],
     "anos": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "apis": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
     ],
     "aplicaciones": [
       "vac-12dc570424d531ae::source-fit"
     ],
     "aplicada": [
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "aplicada.": [
       "vac-04e92192e608ea02::requirements"
     ],
     "aplicadas.": [
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "aplicar": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "application": [
       "vac-04e92192e608ea02::core",
@@ -1086,15 +2019,61 @@
     "applications": [
       "vac-12dc570424d531ae::requirements"
     ],
+    "applied": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "approaches": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "appropriate.": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "approvals": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "aprovecha": [
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "are": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "articulation": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "artificial": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "as": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "asegurar": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "at": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "audiences": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "audiences.": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "aunque": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "authorization": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "automated": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "automatizadas": [
       "vac-04e92192e608ea02::requirements"
@@ -1103,7 +2082,15 @@
       "vac-04e92192e608ea02::requirements"
     ],
     "aws": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "b2b": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "bachelor": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
     ],
     "backpressure": [
       "vac-04e92192e608ea02::requirements"
@@ -1117,11 +2104,26 @@
     "bancaria": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "batch": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "bedrock": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "before": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "best": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "big": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "bigquery": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "broader": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "buen": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1133,8 +2135,21 @@
     "buenas": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "build": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "building": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "busca": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "business": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "busqueda": [
       "vac-04e92192e608ea02::core",
@@ -1146,6 +2161,15 @@
     "calidad": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "calling": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "cambiantes": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "cambios": [
+      "vac-2de566514601700a::requirements"
+    ],
     "capabilities": [
       "vac-04e92192e608ea02::requirements",
       "vac-12dc570424d531ae::requirements",
@@ -1155,13 +2179,23 @@
       "vac-6d9bdccca1ff49c3::requirements"
     ],
     "capacidad": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "cargar": [
       "vac-14b95b3407bcb148::source-fit"
     ],
     "cargas": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "cases": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "cases.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "caso": [
+      "vac-2de566514601700a::requirements"
     ],
     "casos": [
       "vac-04e92192e608ea02::core"
@@ -1173,8 +2207,14 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "causal": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "cd": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
     ],
     "cdmx": [
       "vac-14b95b3407bcb148::core"
@@ -1182,14 +2222,19 @@
     "cdmx.": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "changing": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "ci": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
     ],
     "ciclo": [
       "vac-04e92192e608ea02::core"
     ],
     "ciencia": [
-      "vac-14b95b3407bcb148::source-fit"
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "city": [
       "vac-12dc570424d531ae::core",
@@ -1203,17 +2248,78 @@
     "clara": [
       "vac-2de566514601700a::source-fit"
     ],
+    "clasificacion": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "clean": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "clear": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "cliente.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "clientes.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "closely": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "cloud": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "clustering": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "code": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "codigo": [
       "vac-04e92192e608ea02::requirements"
     ],
     "colaboracion": [
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "colaborar": [
       "vac-04e92192e608ea02::requirements"
     ],
     "colas": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "collaborate": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "collaborating": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "combina": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "combining": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "comfort": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "commercial": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "communicate": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "communication": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "communication.": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "como": [
       "vac-04e92192e608ea02::requirements",
@@ -1227,6 +2333,9 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "comparable": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "compartir": [
       "vac-04e92192e608ea02::requirements"
     ],
@@ -1239,8 +2348,21 @@
     "completo.": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "complex": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "components": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "computacion": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "computer": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "comunicacion": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1248,10 +2370,15 @@
     "con": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "concepts.": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "concluida": [
       "vac-04e92192e608ea02::requirements"
@@ -1265,14 +2392,50 @@
     "confiabilidad": [
       "vac-04e92192e608ea02::core"
     ],
+    "connect": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "conocimiento": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "conocimientos": [
+      "vac-2de566514601700a::requirements"
+    ],
     "considerando": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "construccion": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "construct": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "construction": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "construir": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "containerization": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "containers": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "contenerizacion": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "context-management": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "continuously": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "contribuir": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "contribute": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "contributor": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1283,8 +2446,17 @@
     "controlados.": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "core": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "corta": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "cost": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "cost-benefit": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "costo.": [
       "vac-04e92192e608ea02::core",
@@ -1292,6 +2464,9 @@
     ],
     "costos.": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "create": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "crecimiento": [
       "vac-21cefd168f6539b4::source-fit",
@@ -1306,6 +2481,13 @@
     "credito": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "cross-functional": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "cuando": [
+      "vac-2de566514601700a::requirements"
+    ],
     "cuantitativa": [
       "vac-04e92192e608ea02::requirements"
     ],
@@ -1318,31 +2500,66 @@
     "cuotas": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "customer": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "customer-facing": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "data": [
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::requirements",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
       "vac-2de566514601700a::core",
-      "vac-6d9bdccca1ff49c3::core"
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "databases": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "databricks": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "dataflow": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "dataknow": [
       "vac-2de566514601700a::core"
     ],
+    "dataset": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "datasets": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
     ],
     "datos": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
-      "vac-14b95b3407bcb148::source-fit"
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "datos.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "day-to-day": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "de": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1350,28 +2567,74 @@
     "decision": [
       "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::requirements",
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "decisiones": [
       "vac-04e92192e608ea02::requirements",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "decisioning": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "decisions": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "definition": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "degree": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "del": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "deliver": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "delivery": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "delivery.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "demanda": [
       "vac-04e92192e608ea02::core"
     ],
+    "demonstrated": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "dentro": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "deploy": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "deployed": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "deployment": [
-      "vac-14b95b3407bcb148::requirements"
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "desarrollar": [
       "vac-04e92192e608ea02::requirements",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
     ],
     "descripcion": [
       "vac-2de566514601700a::source-fit"
     ],
     "description": [
-      "vac-04e92192e608ea02::core"
+      "vac-04e92192e608ea02::core",
+      "vac-21cefd168f6539b4::core"
     ],
     "desde": [
       "vac-2de566514601700a::source-fit"
@@ -1382,10 +2645,18 @@
     "desempeno.": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "design": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "desplegar": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
       "vac-14b95b3407bcb148::source-fit"
+    ],
+    "despliegue": [
+      "vac-04e92192e608ea02::source-fit"
     ],
     "despliegues": [
       "vac-04e92192e608ea02::requirements"
@@ -1400,6 +2671,16 @@
     "detection": [
       "vac-14b95b3407bcb148::requirements"
     ],
+    "develop": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "developing": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "development.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "directa": [
       "vac-21cefd168f6539b4::source-fit"
     ],
@@ -1407,10 +2688,12 @@
       "vac-12dc570424d531ae::source-fit"
     ],
     "directo": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-14b95b3407bcb148::source-fit"
     ],
     "disciplina": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "disenar": [
       "vac-04e92192e608ea02::core",
@@ -1429,19 +2712,39 @@
       "vac-04e92192e608ea02::requirements"
     ],
     "docker": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "docker.": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "documentar": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "documentation": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "dominio": [
       "vac-04e92192e608ea02::requirements"
     ],
     "dos": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "drift": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "driving": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "economics": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "edtech": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "education": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "ejecutiva": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1451,9 +2754,14 @@
     ],
     "el": [
       "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "elevate": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "eligible": [
       "vac-04e92192e608ea02::core",
@@ -1470,12 +2778,13 @@
     "en": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::core",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::core",
-      "vac-2de566514601700a::core",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1483,7 +2792,17 @@
     "encaja": [
       "vac-12dc570424d531ae::source-fit"
     ],
+    "encaje": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "end": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "end-to-end": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit"
     ],
@@ -1494,28 +2813,76 @@
     "enfoque": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "engagement": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "engineer": [
       "vac-04e92192e608ea02::core",
       "vac-12dc570424d531ae::core",
       "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
       "vac-14b95b3407bcb148::source-fit"
     ],
     "engineering": [
       "vac-04e92192e608ea02::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "engineers": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "english": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "enlace": [
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "enterprise": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "entity": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "entre": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "entrega": [
+      "vac-2de566514601700a::requirements"
     ],
     "entrenamiento": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "entrenar": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "environment": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "environment.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "environments": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "environments.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "equivalent": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "equivalente": [
+      "vac-2de566514601700a::requirements"
+    ],
     "es": [
       "vac-04e92192e608ea02::core",
-      "vac-14b95b3407bcb148::source-fit"
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::core"
     ],
     "espanol": [
       "vac-2de566514601700a::source-fit"
@@ -1530,7 +2897,11 @@
       "vac-2de566514601700a::source-fit"
     ],
     "estadistica": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "estadisticas": [
+      "vac-2de566514601700a::requirements"
     ],
     "estado": [
       "vac-04e92192e608ea02::requirements"
@@ -1552,24 +2923,54 @@
       "vac-04e92192e608ea02::requirements",
       "vac-12dc570424d531ae::source-fit"
     ],
+    "evaluate": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "evaluation": [
       "vac-12dc570424d531ae::requirements"
     ],
     "evitando": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "execute": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "executive": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "executive-facing": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "expansion": [
+      "vac-6d9bdccca1ff49c3::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "experience": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "experience.": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "experiencia": [
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "experimentacion": [
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
+    ],
+    "experimentation": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "experimentos": [
       "vac-2de566514601700a::source-fit"
@@ -1578,22 +2979,48 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "exploration": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "exploratory": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "explore": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "extend": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "extraction": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "extremo": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "factuality": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "fallas.": [
       "vac-04e92192e608ea02::requirements"
     ],
-    "false": [
-      "vac-12dc570424d531ae::core",
-      "vac-14b95b3407bcb148::core",
-      "vac-21cefd168f6539b4::core",
-      "vac-2de566514601700a::core",
-      "vac-6d9bdccca1ff49c3::core"
+    "fast-paced": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "feature": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
     ],
     "features": [
       "vac-04e92192e608ea02::core",
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "feedback": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
     ],
     "fidelity": [
       "vac-04e92192e608ea02::core",
@@ -1603,9 +3030,27 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "field": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "field.": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "financial-market": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "financiero.": [
       "vac-12dc570424d531ae::source-fit",
       "vac-2de566514601700a::source-fit"
+    ],
+    "financieros": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "findings": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "fintech": [
       "vac-14b95b3407bcb148::core",
@@ -1613,6 +3058,7 @@
       "vac-2de566514601700a::source-fit"
     ],
     "fit": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
@@ -1623,20 +3069,52 @@
       "vac-04e92192e608ea02::core",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "focuses": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "for": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "ford": [
       "vac-12dc570424d531ae::core"
     ],
+    "forecasting": [
+      "vac-2de566514601700a::requirements"
+    ],
     "formacion": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "formal.": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "fortalecer": [
       "vac-12dc570424d531ae::source-fit"
+    ],
+    "foundations": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "frame": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "frameworks": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "frameworks.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "framing": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "fraud": [
       "vac-14b95b3407bcb148::core",
@@ -1647,6 +3125,11 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "from": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "fue": [
       "vac-21cefd168f6539b4::source-fit"
@@ -1664,7 +3147,20 @@
       "vac-21cefd168f6539b4::source-fit"
     ],
     "full": [
-      "vac-04e92192e608ea02::core"
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "function": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "functions": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "fundamentadas": [
       "vac-04e92192e608ea02::requirements"
@@ -1679,19 +3175,37 @@
     "gcp": [
       "vac-12dc570424d531ae::requirements"
     ],
+    "gcp.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "genai": [
       "vac-12dc570424d531ae::source-fit"
     ],
+    "genai-assisted": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "genai.": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "generation": [
       "vac-04e92192e608ea02::core",
       "vac-12dc570424d531ae::core",
       "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::core",
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
+    ],
+    "generativa": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "generative": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "generative-ai-assisted": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "gestion": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -1699,8 +3213,14 @@
     "gitlab": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "global": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "global.": [
       "vac-12dc570424d531ae::source-fit"
+    ],
+    "go-to-market": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "gobierno": [
       "vac-04e92192e608ea02::core",
@@ -1709,20 +3229,47 @@
     "governance": [
       "vac-04e92192e608ea02::requirements"
     ],
-    "growth": [
+    "graph": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "greater": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "grounding": [
       "vac-6d9bdccca1ff49c3::requirements"
     ],
+    "growth": [
+      "vac-21cefd168f6539b4::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "growth.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "guardrails": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
     ],
     "hacia": [
       "vac-14b95b3407bcb148::source-fit"
+    ],
+    "hands-on": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "hasta": [
       "vac-2de566514601700a::source-fit"
     ],
     "herramientas": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "high": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "high-value": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "human": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "hybrid": [
       "vac-04e92192e608ea02::core",
@@ -1738,11 +3285,47 @@
     "idempotencia": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "identify": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "identifying": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "identity": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "impact": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "impacto": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "implement": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "implementar": [
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
+    ],
+    "improve": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "in": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "includes": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "including": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "incluye": [
       "vac-12dc570424d531ae::source-fit"
@@ -1756,11 +3339,26 @@
     "incorporen": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "independent": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "independently": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "individual": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "inference": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "inferencia": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "influence": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "infor": [
       "vac-6d9bdccca1ff49c3::core"
@@ -1772,12 +3370,33 @@
       "vac-04e92192e608ea02::requirements",
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "infrastructure": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "ingenieria": [
       "vac-04e92192e608ea02::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements"
     ],
     "iniciativas": [
       "vac-21cefd168f6539b4::source-fit"
+    ],
+    "initiatives": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "initiatives.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "innovations": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "insight": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "insights": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "instructure": [
       "vac-21cefd168f6539b4::core"
@@ -1788,8 +3407,28 @@
     "integrar": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "integration": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "inteligencia": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "into": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "is": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "it": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "iteratively": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "jd": [
       "vac-04e92192e608ea02::core",
@@ -1798,6 +3437,12 @@
       "vac-21cefd168f6539b4::core",
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
+    ],
+    "knowledge": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "knowledge.": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "konfio": [
       "vac-04e92192e608ea02::core"
@@ -1824,6 +3469,9 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "large": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "las": [
       "vac-04e92192e608ea02::requirements"
     ],
@@ -1831,12 +3479,27 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
+    "latency": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "lead": [
+      "vac-14b95b3407bcb148::requirements",
       "vac-2de566514601700a::source-fit"
+    ],
+    "leaders": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "leadership.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "leading": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "learning": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements",
       "vac-14b95b3407bcb148::source-fit",
@@ -1844,18 +3507,54 @@
       "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::requirements"
     ],
+    "learning.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "least": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "legal": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "libraries": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "liderazgo": [
       "vac-21cefd168f6539b4::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "lifecycle": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "linking": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "live": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "llm": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "llm-powered": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "llmops": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "llms": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::requirements"
     ],
     "llms.": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "lo": [
+      "vac-2de566514601700a::requirements"
     ],
     "location": [
       "vac-04e92192e608ea02::core",
@@ -1865,9 +3564,17 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "loops": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "los": [
+      "vac-2de566514601700a::requirements"
+    ],
     "machine": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements",
       "vac-14b95b3407bcb148::source-fit",
@@ -1875,9 +3582,28 @@
       "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::requirements"
     ],
+    "maintainable": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "maintained": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "maintaining": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "major-cloud": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "manage": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "management": [
+      "vac-12dc570424d531ae::requirements",
       "vac-21cefd168f6539b4::requirements",
       "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "managers": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "mantengan": [
       "vac-04e92192e608ea02::requirements"
@@ -1885,12 +3611,33 @@
     "marcado": [
       "vac-2de566514601700a::source-fit"
     ],
+    "marketing": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "markets.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "mas": [
       "vac-12dc570424d531ae::source-fit",
-      "vac-14b95b3407bcb148::source-fit"
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "master": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "matematicas": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "mathematics": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "measurable": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "measurement.": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "mediante": [
       "vac-04e92192e608ea02::requirements"
@@ -1901,12 +3648,30 @@
     "memoria": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "memory": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "menor": [
       "vac-21cefd168f6539b4::source-fit"
     ],
     "menos": [
       "vac-04e92192e608ea02::requirements",
       "vac-2de566514601700a::source-fit"
+    ],
+    "mentor": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "methodological": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "methodology": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "methods": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "metricas": [
       "vac-04e92192e608ea02::requirements"
@@ -1921,16 +3686,24 @@
       "vac-6d9bdccca1ff49c3::core"
     ],
     "mexico.": [
-      "vac-2de566514601700a::source-fit"
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "minimal": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "ml": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
       "vac-14b95b3407bcb148::source-fit",
       "vac-2de566514601700a::source-fit"
     ],
     "mlops": [
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
     ],
@@ -1949,15 +3722,30 @@
       "vac-6d9bdccca1ff49c3::core"
     ],
     "modelado": [
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "modeling": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "modelos": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "models": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "modern": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "moderna": [
       "vac-04e92192e608ea02::requirements"
@@ -1966,7 +3754,12 @@
       "vac-04e92192e608ea02::requirements"
     ],
     "monitoring": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "monitoring.": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "motor": [
       "vac-12dc570424d531ae::core"
@@ -1976,18 +3769,42 @@
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "multi-step": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "multiple": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "muy": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-21cefd168f6539b4::source-fit"
+    ],
+    "narratives": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "necesidades": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "needs": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "needs.": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "negocio": [
       "vac-04e92192e608ea02::core",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "negocio.": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "new": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "ni": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2004,6 +3821,14 @@
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "non-technical": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "objectives": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "observa": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
@@ -2011,25 +3836,74 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
+    "observability": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "observed": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "of": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "oficial": [
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "on": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "opcion": [
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "open-source": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "operacion": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
     "operar": [
       "vac-04e92192e608ea02::core"
+    ],
+    "operate": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "operational": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "operations": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "oportunidad": [
       "vac-12dc570424d531ae::source-fit",
       "vac-2de566514601700a::source-fit"
     ],
+    "opportunities": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "optimizacion": [
+      "vac-2de566514601700a::requirements"
+    ],
     "optimizar": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "optimized": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "or": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "organizacionales.": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "orientacion": [
+      "vac-2de566514601700a::requirements"
     ],
     "orientado": [
       "vac-04e92192e608ea02::core",
@@ -2041,10 +3915,22 @@
     "otro": [
       "vac-2de566514601700a::core"
     ],
+    "outcomes": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "outcomes.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "outputs": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "own": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "ownership": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2052,21 +3938,77 @@
     "para": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "particularly": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "partner": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "partners": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "partnership": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "patterns": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "payjoy": [
-      "vac-14b95b3407bcb148::core"
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "peer": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "perder": [
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "perfil": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "perform": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "performance.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "permanently": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "phd": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "pide": [
       "vac-2de566514601700a::source-fit"
     ],
     "pipelines": [
       "vac-04e92192e608ea02::core",
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "pipelines.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "planning": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "platform": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "plus": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "plus.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "pluses.": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "posicionamiento": [
       "vac-12dc570424d531ae::source-fit"
@@ -2075,10 +4017,52 @@
       "vac-21cefd168f6539b4::source-fit"
     ],
     "practica": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
+    ],
+    "practica.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "practical": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "practicas": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "practices": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "practices.": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "practico": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "predictive": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "preferably": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "preferred": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "preparar": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "preparation": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "preprocess": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "presentations": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "pricing": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "prioritaria": [
       "vac-2de566514601700a::source-fit"
@@ -2086,9 +4070,23 @@
     "privacidad": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "problem": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "problemas": [
       "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "procesamiento": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "processes.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "processing.": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "produccion": [
       "vac-04e92192e608ea02::requirements",
@@ -2098,10 +4096,37 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
     ],
     "product": [
-      "vac-21cefd168f6539b4::requirements"
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "production": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "production-level": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "production-quality": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "production-ready": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "production.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "productionize": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "productivo": [
+      "vac-04e92192e608ea02::source-fit"
     ],
     "productivos": [
       "vac-14b95b3407bcb148::source-fit"
@@ -2114,20 +4139,71 @@
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "productos": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "products": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "profesional": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "professional": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "proficiency": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "profiling": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "projects": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "prompt": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "prompts": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "pronostico": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "pronostico.": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "propensity": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "prototype": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "proveedores": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "proven": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "providers": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "proviene": [
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "proyecto": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "proyectos": [
+      "vac-2de566514601700a::requirements"
+    ],
     "pruebas": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "pub": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "publica": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2143,9 +4219,14 @@
     "pura.": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "pursue": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "python": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
       "vac-14b95b3407bcb148::requirements",
       "vac-14b95b3407bcb148::source-fit",
       "vac-2de566514601700a::core",
@@ -2154,14 +4235,29 @@
       "vac-6d9bdccca1ff49c3::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "quality": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "quality.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "quantitative": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "que": [
       "vac-04e92192e608ea02::requirements",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
     ],
     "quedar": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "questions": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "quiere": [
       "vac-21cefd168f6539b4::source-fit"
@@ -2170,6 +4266,9 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
+    "raise": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
     "rango": [
       "vac-14b95b3407bcb148::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2177,8 +4276,44 @@
     "razonable": [
       "vac-2de566514601700a::source-fit"
     ],
+    "reales": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "recommendations": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "recommendations.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "recommended": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "recuperada": [
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "red-team": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "reflection": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "regression": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "regulated": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "related": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "relationships": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "relevance": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "remota": [
       "vac-2de566514601700a::source-fit"
@@ -2190,34 +4325,71 @@
     ],
     "remoto": [
       "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit"
     ],
     "reproducibles": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
+    "requerimientos": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "requiera.": [
+      "vac-2de566514601700a::requirements"
+    ],
     "requiere": [
       "vac-21cefd168f6539b4::source-fit"
     ],
     "requirements": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "requirements.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "research": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "responsabilidad": [
       "vac-14b95b3407bcb148::source-fit",
       "vac-2de566514601700a::source-fit"
     ],
     "responsibilities": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "responsible": [
       "vac-12dc570424d531ae::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::core"
     ],
     "respuestas": [
       "vac-04e92192e608ea02::requirements"
     ],
     "retencion": [
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "retention": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "reusable": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "revenue": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "review.": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "riesgo": [
       "vac-14b95b3407bcb148::source-fit",
@@ -2227,6 +4399,10 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "rigorous": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "rigurosos.": [
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2234,8 +4410,18 @@
     "risk": [
       "vac-14b95b3407bcb148::requirements"
     ],
+    "risks": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "robustness": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "robustness.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "rol": [
       "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2244,12 +4430,35 @@
       "vac-04e92192e608ea02::core",
       "vac-12dc570424d531ae::core",
       "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::core",
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "role.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "rollback": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "routing": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "rules": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "run": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "saas": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "safety": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "safety-conscious": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "sagemaker": [
       "vac-04e92192e608ea02::requirements"
@@ -2261,12 +4470,25 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "scalable": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "scale": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "scale.": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
     "science": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit",
-      "vac-6d9bdccca1ff49c3::core"
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "scientist": [
       "vac-12dc570424d531ae::core",
@@ -2274,7 +4496,14 @@
       "vac-2de566514601700a::core",
       "vac-6d9bdccca1ff49c3::core"
     ],
+    "scientists": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "scoping": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "score": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
@@ -2284,10 +4513,19 @@
     "scoring": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "scripts": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "se": [
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "sean": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "segmentation": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "seguridad": [
       "vac-04e92192e608ea02::core",
@@ -2299,7 +4537,9 @@
     ],
     "senior": [
       "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
       "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::core",
@@ -2318,6 +4558,12 @@
     "ser": [
       "vac-12dc570424d531ae::source-fit"
     ],
+    "series": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "services": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "servicio.": [
       "vac-04e92192e608ea02::requirements"
     ],
@@ -2325,44 +4571,96 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements"
     ],
+    "serving": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "shared": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "si": [
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit"
+    ],
+    "significant": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "similares": [
+      "vac-2de566514601700a::requirements"
     ],
     "sin": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "sistemas": [
       "vac-04e92192e608ea02::core",
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "skills": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "skills.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "snowflake": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "snowflake.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "sobre": [
+      "vac-04e92192e608ea02::source-fit"
     ],
     "software": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "software.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "solid": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "solida": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "solidos": [
+      "vac-2de566514601700a::requirements"
+    ],
     "soluciones": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "solution": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "solutions": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "source": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
-    "sparse": [
-      "vac-12dc570424d531ae::core",
-      "vac-14b95b3407bcb148::core",
-      "vac-21cefd168f6539b4::core",
-      "vac-2de566514601700a::core",
-      "vac-6d9bdccca1ff49c3::core"
+    "sources": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "spanning": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "spark": [
+      "vac-2de566514601700a::requirements"
     ],
     "sql": [
       "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::requirements",
       "vac-2de566514601700a::core",
@@ -2378,14 +4676,51 @@
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "stakeholder": [
+      "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::requirements",
       "vac-6d9bdccca1ff49c3::requirements"
     ],
+    "stakeholder-engagement": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "stakeholder-facing": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "stakeholders": [
+      "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "stakeholders.": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::core"
+    ],
+    "standards": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "statistical": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "statistics": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "storage": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "storytelling": [
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::requirements",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "strategic": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "strategies": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "strategy": [
       "vac-6d9bdccca1ff49c3::core",
@@ -2398,15 +4733,73 @@
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "strong": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "structured": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "structured-output": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "studies": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "sub.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "success": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "such": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "suite.": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "summary": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "supervision.": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "support": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "survival": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "synthesis": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "systems.": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "task": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "team": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "teams": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "teams.": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "tech": [
       "vac-12dc570424d531ae::core",
@@ -2415,6 +4808,14 @@
     ],
     "tech.": [
       "vac-2de566514601700a::source-fit"
+    ],
+    "technical": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "techniques": [
+      "vac-21cefd168f6539b4::requirements"
     ],
     "technologies": [
       "vac-04e92192e608ea02::requirements",
@@ -2425,14 +4826,19 @@
       "vac-6d9bdccca1ff49c3::requirements"
     ],
     "tecnicas": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-2de566514601700a::requirements"
     ],
     "tecnico": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "tecnico.": [
       "vac-21cefd168f6539b4::source-fit"
+    ],
+    "tecnologia": [
+      "vac-2de566514601700a::requirements"
     ],
     "temporal": [
       "vac-04e92192e608ea02::requirements"
@@ -2440,17 +4846,65 @@
     "temporal.": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "testable": [
+      "vac-12dc570424d531ae::requirements"
+    ],
     "testing": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "tests": [
+      "vac-12dc570424d531ae::requirements",
       "vac-21cefd168f6539b4::requirements"
     ],
+    "the": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "them": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "three": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "through": [
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "throughput": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "throughput.": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "tiempo": [
+      "vac-2de566514601700a::requirements"
     ],
     "titulo": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "to": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "tolerancia": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "tool": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "tooling": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "trabaja": [
       "vac-6d9bdccca1ff49c3::source-fit"
@@ -2459,7 +4913,14 @@
       "vac-04e92192e608ea02::requirements"
     ],
     "trabajo": [
-      "vac-21cefd168f6539b4::source-fit"
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements"
+    ],
+    "tradeoffs": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "tradeoffs.": [
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "traduccion": [
       "vac-12dc570424d531ae::source-fit"
@@ -2467,16 +4928,41 @@
     "traduciendo": [
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
+    "transformar": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "transformation": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "transicionar": [
       "vac-21cefd168f6539b4::source-fit"
+    ],
+    "transition": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "translate": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::requirements"
     ],
     "trazas": [
       "vac-04e92192e608ea02::requirements"
     ],
     "true": [
-      "vac-04e92192e608ea02::core"
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "trusted": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "types": [
+      "vac-14b95b3407bcb148::requirements"
     ],
     "un": [
+      "vac-04e92192e608ea02::source-fit",
       "vac-21cefd168f6539b4::source-fit"
     ],
     "una": [
@@ -2485,11 +4971,40 @@
     "universitaria": [
       "vac-04e92192e608ea02::requirements"
     ],
+    "uno": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "unstructured": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "usando": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "use": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "user": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "using": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "uso": [
+      "vac-2de566514601700a::requirements"
+    ],
     "vacante": [
       "vac-14b95b3407bcb148::source-fit"
     ],
+    "valor": [
+      "vac-2de566514601700a::requirements"
+    ],
     "versionar": [
       "vac-04e92192e608ea02::requirements"
+    ],
+    "vertex": [
+      "vac-12dc570424d531ae::requirements"
     ],
     "vida": [
       "vac-04e92192e608ea02::core"
@@ -2503,26 +5018,59 @@
     "visible.": [
       "vac-21cefd168f6539b4::source-fit"
     ],
+    "visualization": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "where": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "while": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "with": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
     "work": [
       "vac-04e92192e608ea02::core",
       "vac-12dc570424d531ae::core",
       "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::core",
       "vac-2de566514601700a::core",
-      "vac-6d9bdccca1ff49c3::core"
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "workflows": [
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "workflows.": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-6d9bdccca1ff49c3::requirements"
     ],
     "workstreams": [
+      "vac-6d9bdccca1ff49c3::requirements",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "write": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "years": [
+      "vac-14b95b3407bcb148::requirements"
     ]
   },
   "schema_version": 1,
   "vacancy_chunks": {
     "vac-04e92192e608ea02": [
       "vac-04e92192e608ea02::core",
-      "vac-04e92192e608ea02::requirements"
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit"
     ],
     "vac-12dc570424d531ae": [
       "vac-12dc570424d531ae::core",

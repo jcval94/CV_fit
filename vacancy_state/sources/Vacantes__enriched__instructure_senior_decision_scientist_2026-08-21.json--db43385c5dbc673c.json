@@ -1,0 +1,85 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Mexico City, Mexico",
+      "company": "Instructure",
+      "company_category": "Producto Tech",
+      "content_hash": "1b05fd9b17303c1f460ca3b854e46748f8a4b34ba99df29ff9ff927e30ff9c4a",
+      "description": "Senior Decision Scientist role responsible for driving business outcomes through complex analytical initiatives and trusted partnership with senior stakeholders. The role focuses on product adoption, customer engagement and revenue growth, combining advanced analytics, experimentation, causal inference, end-to-end analytical ownership, strategic communication and AI-first analytical workflows.",
+      "fit_gaps": [],
+      "fit_score": null,
+      "fit_strengths": [],
+      "fit_summary": null,
+      "identity_key": "21cefd168f6539b4051fe2905f903291598dccc81a27e66dae2b6beb36c69a2e",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=396",
+        "substantive_requirements=7",
+        "substantive_responsibilities=8",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 59.8,
+      "jd_generation_eligible": true,
+      "language_confidence": 1.0,
+      "language_source": "explicit_source",
+      "location_raw": "Mexico City, Mexico",
+      "posted_date": null,
+      "posted_date_raw": "Hace 1-7 días",
+      "provenance": [
+        {
+          "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "54920be92767d705dbc6fe3d7b765aac8d23b9830d87a26f87260bd55135ef5d",
+          "source_native_id": "e2b3da2d04b9-enriched",
+          "source_path": "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
+          "source_search_date": "2026-08-21",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [
+        "Advanced quantitative education such as a Master's degree or PhD in Statistics, Computer Science, Economics, Applied Mathematics, Operations Research or a related field.",
+        "Strong experience leading end-to-end data science or decision science initiatives from problem definition through delivery and measurement.",
+        "Advanced analytical and statistical methods with strong experimentation, causal inference and business decision support skills.",
+        "Ability to operate independently while collaborating in a fast-paced, cross-functional environment.",
+        "Strong communication skills for technical and non-technical audiences, including executive leadership.",
+        "Experience in SaaS, product analytics or edtech environments is a plus.",
+        "Ability to use modern AI tooling to improve analytical throughput while maintaining methodological quality."
+      ],
+      "responsibilities": [
+        "Identify and pursue high-value analytical opportunities to improve product adoption, customer engagement and revenue growth.",
+        "Design and execute rigorous A/B tests and causal inference studies for product features, pricing strategies and go-to-market initiatives.",
+        "Partner with product managers, engineers, marketing leaders and senior stakeholders to frame complex business questions and deliver strategic recommendations.",
+        "Own analytical initiatives end to end, from identifying opportunities and building models through deployment and impact measurement.",
+        "Use AI-first approaches and modern analytical techniques to raise standards and improve team throughput.",
+        "Contribute to decision science standards for experimentation, modeling and insight delivery.",
+        "Mentor and elevate data scientists and analysts through methodology, communication and stakeholder-engagement best practices.",
+        "Translate complex findings into clear, actionable recommendations for executive and cross-functional audiences."
+      ],
+      "role_title": "Senior Decision Scientist",
+      "salary": "MX$911,000 - MX$1,100,000 por año",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Decision Science",
+        "A/B testing",
+        "Causal inference",
+        "Statistical modeling",
+        "Machine Learning",
+        "Product analytics",
+        "SaaS analytics",
+        "AI-assisted analytics",
+        "Stakeholder management",
+        "Executive storytelling"
+      ],
+      "url": "https://jobs.ashbyhq.com/instructure/5264e2b8-1854-44ce-91b2-77ba2f522395",
+      "vacancy_id": "vac-21cefd168f6539b4",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "54920be92767d705dbc6fe3d7b765aac8d23b9830d87a26f87260bd55135ef5d",
+  "source_path": "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
+  "status": "valid"
+}

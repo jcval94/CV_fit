@@ -3,21 +3,23 @@
     {
       "chunk_id": "vac-14b95b3407bcb148::core",
       "chunk_type": "core",
-      "content_hash": "3e5b7a6db268186a36559d85809505cbf88323954ed72862f7556877d5a5f1e1",
+      "content_hash": "9197dbbbd6fd2f8a74be08586f3c389dc2b5d7c9d0649a79d5b11781628ebe31",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en\nJD fidelity: full (40/100)\nJD generation eligible: true",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     {
       "chunk_id": "vac-14b95b3407bcb148::requirements",
       "chunk_type": "requirements",
-      "content_hash": "10a8c3a65796556b44f1e72bdbf6433f9a8d65d6a98e69d01e7cc4569c1ccd44",
+      "content_hash": "c13dd5baa403e309ff8fd1ca6ac78a0a7bb43db85d95697655ba31de333dcd83",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Technologies / capabilities: Machine Learning; Fraud detection; Credit risk; Model deployment; Python; Data Science",
+      "text": "Technologies / capabilities: Python; Machine Learning; Fraud detection; ML lifecycle; Model deployment; Model monitoring; AWS; Docker; Databricks; LLMs; Credit risk; Data Science\nRequirements: Bachelor's degree in Computer Science, Engineering or a related field.; At least three years in data science, machine learning engineering, data engineering or a closely related role with production-level code and maintained ML models in production.; High proficiency in Python and related data and machine learning libraries and frameworks.; Strong knowledge of the full ML lifecycle from extraction and feature engineering through serving and monitoring for live and batch processing.; Experience with cloud providers, preferably AWS, and containerization such as Docker.; Strong English communication skills and ability to work in a fast-paced environment with changing requirements.; Fraud detection or financial-market ML experience is a plus; LLMs, graph databases and Databricks are additional pluses.\nResponsibilities: Design, build and deploy machine learning models for fraud detection use cases across PayJoy's product suite.; Deliver production-ready ML models optimized for scale and improve them continuously from stakeholder feedback and observed production performance.; Extend fraud decisioning infrastructure to new entity types, construct new rules and support greater scale.; Clean, preprocess and engineer features from large and complex datasets to improve predictive accuracy and performance.; Write production-level code with documentation, testing and peer review.; Lead testing, cost-benefit analysis and integration of new data sources to improve model robustness.; Partner with ML Platform and Tooling teams on scalable feature generation, extraction, deployment and monitoring processes.; Collaborate with global Fraud, Engineering, Product and Risk teams to deliver data science products across multiple markets.",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     {
@@ -25,6 +27,7 @@
       "chunk_type": "source-fit",
       "content_hash": "763de721d1cdf2f2b27d951a7566b45f34396d5bfa7169138956cae4353ec771",
       "source_paths": [
+        "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "text": "Source fit score: 96/100\nSource fit summary: Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.\nSource strengths: Fintech con foco directo en fraude y riesgo crediticio.; Responsabilidad de desarrollar, optimizar y desplegar modelos de ML en producción.; Aprovecha experiencia bancaria, detección de fraude, scoring, Python/SQL y modelos end-to-end.\nSource gaps: El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.; La publicación oficial no muestra rango salarial.",

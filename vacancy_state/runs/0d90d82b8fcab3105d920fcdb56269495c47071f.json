@@ -3,9 +3,7 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
-    "quarantined": [],
-    "unchanged": [
+    "new": [
       "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
       "GPTW/vacantes_2026-08-21.json",
       "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
@@ -14,27 +12,36 @@
       "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json",
       "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
       "Vacantes/vacantes_2026-08-21.json"
-    ]
+    ],
+    "quarantined": [],
+    "unchanged": []
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "0d90d82b8fcab3105d920fcdb56269495c47071f-noop",
+  "reindexed_vacancy_ids": [
+    "vac-04e92192e608ea02",
+    "vac-12dc570424d531ae",
+    "vac-14b95b3407bcb148",
+    "vac-21cefd168f6539b4",
+    "vac-2de566514601700a",
+    "vac-6d9bdccca1ff49c3"
+  ],
+  "run_id": "0d90d82b8fcab3105d920fcdb56269495c47071f",
   "schema_version": 1,
   "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
   "source_counts": {
     "deleted": 0,
     "discovered": 8,
     "modified": 0,
-    "new": 0,
+    "new": 8,
     "quarantined": 0,
-    "unchanged": 8
+    "unchanged": 0
   },
   "status": "success",
   "vacancy_counts": {
     "active": 6,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 6,
+    "reindexed": 6,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

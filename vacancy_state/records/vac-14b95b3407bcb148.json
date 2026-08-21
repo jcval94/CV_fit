@@ -3,7 +3,7 @@
   "city": "Mexico City, CDMX",
   "company": "PayJoy",
   "company_category": "Fintech",
-  "content_hash": "2aa24785e705aba2100ff129ce4576da493295efb5b9cd50debee11839aa28a5",
+  "content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06",
   "description": null,
   "fit_gaps": [
     "El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.",
@@ -17,23 +17,33 @@
   ],
   "fit_summary": "Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.",
   "identity_key": "14b95b3407bcb148fbc6d976ce1a77b0e45f9b7150a4056714a7c9692b5fe91c",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
     "description_chars=0",
-    "substantive_requirements=0",
-    "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive_requirements=7",
+    "substantive_responsibilities=8",
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 40.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 1.0,
+  "language_source": "explicit_source",
   "location_raw": "Mexico City, CDMX",
   "posted_date": null,
   "posted_date_raw": "Hace 1 semana",
   "provenance": [
     {
-      "source_commit": "7589efe95ad9fb9e36d848abe835feefd55def92",
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "1fd873275cbb384ade2c21acab03539d6973bbf036fb805e2ebc7e2926f0eeae",
+      "source_native_id": "09a0aee1be74-enriched",
+      "source_path": "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    },
+    {
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
       "source_entry_index": 0,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -43,18 +53,41 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
-  "responsibilities": [],
+  "requirements": [
+    "Bachelor's degree in Computer Science, Engineering or a related field.",
+    "At least three years in data science, machine learning engineering, data engineering or a closely related role with production-level code and maintained ML models in production.",
+    "High proficiency in Python and related data and machine learning libraries and frameworks.",
+    "Strong knowledge of the full ML lifecycle from extraction and feature engineering through serving and monitoring for live and batch processing.",
+    "Experience with cloud providers, preferably AWS, and containerization such as Docker.",
+    "Strong English communication skills and ability to work in a fast-paced environment with changing requirements.",
+    "Fraud detection or financial-market ML experience is a plus; LLMs, graph databases and Databricks are additional pluses."
+  ],
+  "responsibilities": [
+    "Design, build and deploy machine learning models for fraud detection use cases across PayJoy's product suite.",
+    "Deliver production-ready ML models optimized for scale and improve them continuously from stakeholder feedback and observed production performance.",
+    "Extend fraud decisioning infrastructure to new entity types, construct new rules and support greater scale.",
+    "Clean, preprocess and engineer features from large and complex datasets to improve predictive accuracy and performance.",
+    "Write production-level code with documentation, testing and peer review.",
+    "Lead testing, cost-benefit analysis and integration of new data sources to improve model robustness.",
+    "Partner with ML Platform and Tooling teams on scalable feature generation, extraction, deployment and monitoring processes.",
+    "Collaborate with global Fraud, Engineering, Product and Risk teams to deliver data science products across multiple markets."
+  ],
   "role_title": "Machine Learning Engineer - Fraud",
   "salary": "No especificado",
   "schema_version": 2,
   "seniority": null,
   "tech_stack": [
+    "Python",
     "Machine Learning",
     "Fraud detection",
-    "Credit risk",
+    "ML lifecycle",
     "Model deployment",
-    "Python",
+    "Model monitoring",
+    "AWS",
+    "Docker",
+    "Databricks",
+    "LLMs",
+    "Credit risk",
     "Data Science"
   ],
   "url": "https://jobs.lever.co/payjoy/4eabe147-7c4c-44a1-bc36-6cec2c47d5c5",

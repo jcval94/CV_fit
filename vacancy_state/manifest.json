@@ -1,6 +1,6 @@
 {
-  "last_run_id": "92b72b8da9dbfe9d7ee90e91fb5fa5159f492f9e-noop",
-  "pipeline_version": 4,
+  "last_run_id": "0d90d82b8fcab3105d920fcdb56269495c47071f-noop",
+  "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
     "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json": {
@@ -17,6 +17,46 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-04e92192e608ea02"
+      ]
+    },
+    "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json": {
+      "source_hash": "9b1b70df93c326f622e693e24577ed230400a76982ebdbc169e82d69ee0b0e41",
+      "state_file": "sources/Vacantes__enriched__dataknow_data_scientist_remote_mexico_2026-08-21.json--399d030e659af5a4.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-2de566514601700a"
+      ]
+    },
+    "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json": {
+      "source_hash": "3f0dc5663c75cf96379e395e6d0c85514ab348aba0f5333fc4fef8d883984161",
+      "state_file": "sources/Vacantes__enriched__ford_data_scientist_nlp_ai_engineer_2026-08-21.json--6aad51fa1e68e804.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-12dc570424d531ae"
+      ]
+    },
+    "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json": {
+      "source_hash": "a71eb91f273ec674e422facae8f81e96aec786d435fad8c2ec68c820a0896610",
+      "state_file": "sources/Vacantes__enriched__infor_scientist_senior_strategy_data_science_2026-08-21.json--19ad0ecf839519cf.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6d9bdccca1ff49c3"
+      ]
+    },
+    "Vacantes/enriched/instructure_senior_decision_scientist_2026-08-21.json": {
+      "source_hash": "54920be92767d705dbc6fe3d7b765aac8d23b9830d87a26f87260bd55135ef5d",
+      "state_file": "sources/Vacantes__enriched__instructure_senior_decision_scientist_2026-08-21.json--db43385c5dbc673c.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-21cefd168f6539b4"
+      ]
+    },
+    "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json": {
+      "source_hash": "1fd873275cbb384ade2c21acab03539d6973bbf036fb805e2ebc7e2926f0eeae",
+      "state_file": "sources/Vacantes__enriched__payjoy_machine_learning_engineer_fraud_2026-08-21.json--4b7162570bd4ba89.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-14b95b3407bcb148"
       ]
     },
     "Vacantes/vacantes_2026-08-21.json": {

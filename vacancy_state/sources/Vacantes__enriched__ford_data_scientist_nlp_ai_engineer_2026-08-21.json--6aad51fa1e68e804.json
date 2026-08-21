@@ -1,0 +1,91 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Mexico City, Mexico / Remote",
+      "company": "Ford Motor Company",
+      "company_category": "Producto Tech",
+      "content_hash": "f0b81433ae25f47391be46dc317723394926403f06d36b86ca8f76385112e4ec",
+      "description": "Data Scientist role focused on natural language processing, Large Language Models and generative AI. The role works across product, engineering, analytics and business teams to translate ambiguous business needs into reliable, scalable and production-ready AI solutions, combining applied data science with LLM applications, evaluation, responsible AI controls and cloud deployment on Google Cloud Platform.",
+      "fit_gaps": [],
+      "fit_score": null,
+      "fit_strengths": [],
+      "fit_summary": null,
+      "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=407",
+        "substantive_requirements=8",
+        "substantive_responsibilities=9",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 60.4,
+      "jd_generation_eligible": true,
+      "language_confidence": 1.0,
+      "language_source": "explicit_source",
+      "location_raw": "Mexico City, Mexico / Remote",
+      "posted_date": null,
+      "posted_date_raw": "Hace 1-2 días",
+      "provenance": [
+        {
+          "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "3f0dc5663c75cf96379e395e6d0c85514ab348aba0f5333fc4fef8d883984161",
+          "source_native_id": "fd925341b8ab-enriched",
+          "source_path": "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
+          "source_search_date": "2026-08-21",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [
+        "Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Engineering or a related quantitative field, or equivalent practical experience.",
+        "Professional experience in data science, machine learning, applied AI, NLP or a related technical role.",
+        "Strong Python and SQL skills with maintainable, testable, production-quality software practices.",
+        "Hands-on experience developing applications with commercial or open-source LLMs, prompt engineering, model integration and core NLP concepts.",
+        "Experience with GCP data and AI services, particularly Vertex AI and BigQuery, or comparable major-cloud experience with ability to transition to GCP.",
+        "Experience with APIs, containers, CI/CD, identity/access management and production monitoring.",
+        "Ability to translate ambiguous business needs into measurable technical objectives and deliver iteratively in cross-functional teams.",
+        "Preferred experience includes Vertex AI tooling, BigQuery ML/Dataflow, LLM evaluation datasets, red-team tests, LLMOps/MLOps, scalable inference and regulated or safety-conscious environments."
+      ],
+      "responsibilities": [
+        "Design, prototype, evaluate and productionize LLM-powered applications for enterprise and customer-facing use cases.",
+        "Develop prompt strategies, structured-output workflows, routing, context-management approaches and model adaptation methods where appropriate.",
+        "Create LLM evaluation frameworks spanning task quality, factuality, relevance, robustness, latency, cost, safety and user experience.",
+        "Explore agentic AI patterns including planning, tool/function calling, memory, reflection, human approvals and multi-step workflows.",
+        "Develop scalable AI/ML solutions on GCP using services such as Vertex AI, BigQuery, Cloud Storage, Cloud Run, Cloud Functions and Pub/Sub.",
+        "Build reusable Python components, APIs, experimentation pipelines, data products and structured/unstructured data pipelines.",
+        "Perform exploratory analysis, feature engineering, statistical modeling and machine learning for broader data science needs.",
+        "Implement observability, monitoring, guardrails, automated testing and feedback loops for deployed AI systems.",
+        "Communicate technical findings, risks, tradeoffs and recommendations to technical and non-technical stakeholders."
+      ],
+      "role_title": "Data Scientist NLP (AI) Engineer",
+      "salary": null,
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "NLP",
+        "LLMs",
+        "Generative AI",
+        "Agentic AI",
+        "GCP",
+        "Vertex AI",
+        "BigQuery",
+        "Cloud Run",
+        "CI/CD",
+        "MLOps",
+        "LLM evaluation",
+        "Responsible AI"
+      ],
+      "url": "https://www.careers.ford.com/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056",
+      "vacancy_id": "vac-12dc570424d531ae",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "3f0dc5663c75cf96379e395e6d0c85514ab348aba0f5333fc4fef8d883984161",
+  "source_path": "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
+  "status": "valid"
+}

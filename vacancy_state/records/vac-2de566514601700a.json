@@ -1,9 +1,9 @@
 {
-  "application_language": "en",
+  "application_language": "es",
   "city": "México",
   "company": "DataKnow",
   "company_category": "Otro",
-  "content_hash": "bde5d3b6ea4234a2b5d23c14e16d4a6035d5c0a661d43a4e292a6fc2de51f14c",
+  "content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81",
   "description": null,
   "fit_gaps": [
     "No está marcado como Senior/Lead y no muestra foco financiero.",
@@ -17,23 +17,33 @@
   ],
   "fit_summary": "Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.",
   "identity_key": "2de566514601700a4ebb9303ddc602420b3bb2158426e08876139242f4e93a4c",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
     "description_chars=0",
-    "substantive_requirements=0",
-    "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive_requirements=6",
+    "substantive_responsibilities=6",
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 40.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 1.0,
+  "language_source": "explicit_source",
   "location_raw": "México",
   "posted_date": null,
   "posted_date_raw": "Hace 6-7 días",
   "provenance": [
     {
-      "source_commit": "7589efe95ad9fb9e36d848abe835feefd55def92",
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "9b1b70df93c326f622e693e24577ed230400a76982ebdbc169e82d69ee0b0e41",
+      "source_native_id": "d4591a7e5f49-enriched",
+      "source_path": "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    },
+    {
+      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
       "source_entry_index": 4,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
@@ -43,8 +53,22 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
-  "responsibilities": [],
+  "requirements": [
+    "Formación profesional en Ingeniería de Datos, Ciencia de Datos o disciplina afín.",
+    "Entre uno y dos años o más de experiencia práctica en Ciencia de Datos aplicada a producción.",
+    "Conocimientos sólidos de Python y SQL, además de Spark o tecnología equivalente para procesamiento de datos.",
+    "Capacidad para aplicar estadística y machine learning a problemas de clasificación, clustering, optimización, series de tiempo y pronóstico.",
+    "Conocimiento práctico de inteligencia artificial generativa y capacidad para adaptar modelos a necesidades cambiantes de proyectos y clientes.",
+    "Orientación a trabajo remoto, colaboración y entrega de soluciones analíticas aplicadas."
+  ],
+  "responsibilities": [
+    "Implementar y entrenar modelos de clasificación, clustering y optimización usando técnicas estadísticas y de machine learning.",
+    "Desarrollar soluciones de series de tiempo y pronóstico ajustadas a necesidades del proyecto y del cliente.",
+    "Aplicar inteligencia artificial generativa dentro de soluciones analíticas cuando el caso de uso lo requiera.",
+    "Preparar y transformar datos con Python, SQL y Spark o herramientas similares para modelado y análisis.",
+    "Asegurar que los modelos sean adaptables a cambios de datos, negocio y requerimientos del cliente.",
+    "Contribuir a proyectos reales de analítica e inteligencia artificial con foco en valor de negocio y entrega práctica."
+  ],
   "role_title": "Data Scientist (Python/SQL) - Remote",
   "salary": "No especificado",
   "schema_version": 2,
@@ -52,7 +76,14 @@
   "tech_stack": [
     "Python",
     "SQL",
+    "Spark",
     "Machine Learning",
+    "Clasificación",
+    "Clustering",
+    "Optimización",
+    "Series de tiempo",
+    "Forecasting",
+    "Generative AI",
     "MLOps",
     "Experimentación",
     "Producción"
