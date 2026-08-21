@@ -35,6 +35,9 @@ class VacancyRecord:
     requirements: list[str]
     responsibilities: list[str]
     description: str | None
+    application_language: str
+    language_confidence: float
+    language_source: str
     fit_score: float | None
     fit_summary: str | None
     fit_strengths: list[str]
