@@ -11,6 +11,8 @@ canonical vacancy
       +
 rag_state evidence
       ↓
+JD/language preflight
+      ↓
 deterministic vacancy↔evidence match
       ↓
 CV Strategist (ADK + OpenAI)
@@ -25,10 +27,22 @@ CV Reviser
       ↓
 factual + language + structure gates
       ↓
-cv_final.md + trace + run_report.json
+cv_final.md + trace + run_report.json + usage_report.json
 ```
 
-The application language is a hard input constraint derived during vacancy normalization. If the language remains `und`, live CV generation is blocked until the source declares it explicitly.
+The application language is a hard input constraint derived during vacancy normalization. If the language remains `und`, live CV generation is blocked until the source declares it explicitly. A `sparse` JD is also blocked before the first model call.
+
+## Canary
+
+The first authenticated canary is the canonical Konfío `AI/ML Engineer Sr.` vacancy (`vac-04e92192e608ea02`). The original discovery feed remains intact; an additional enriched source under `GPTW/enriched/` preserves structured detail derived from the active official posting. Deduplication must still produce a single canonical vacancy with both provenance references.
+
+CI requires the canary to be:
+
+- `jd_fidelity=full`
+- `jd_generation_eligible=true`
+- `application_language=es`
+- backed by non-empty requirements and responsibilities
+- able to assemble grounded professional evidence without an API call
 
 ## Five-review limit and model escalation
 
@@ -107,6 +121,25 @@ Every substantive CV line carries `evidence_refs`. Deterministic validation reje
 
 The Headhunter can request better framing; it cannot authorize new facts.
 
+## Token and cost telemetry
+
+ADK/LiteLLM is configured to request usage metadata. Each live model call records:
+
+- agent/call name
+- OpenAI model ID
+- prompt tokens
+- cached-input tokens
+- candidate/output tokens
+- reasoning/thought tokens when exposed by ADK
+- total tokens
+- duration
+- error, if a call fails
+- estimated USD cost
+
+`usage_report.json` contains the full per-call trace. `run_report.json` contains the aggregate usage summary.
+
+The cost value is explicitly an **estimate**, not an invoice. Rates are pinned to the repository's dated pricing snapshot so a future OpenAI price change cannot silently rewrite historical estimates. An unknown custom `gpt-*` model is reported as unpriced rather than assigned a guessed rate.
+
 ## Live run
 
 Install the project, configure `OPENAI_APY_KEY`, and run:
@@ -129,9 +162,10 @@ outputs/<vacancy_id>/<run_id>/
 ├── cv_final.json
 ├── cv_final.md
 ├── evidence_trace.json
+├── usage_report.json
 └── run_report.json
 ```
 
-A GitHub Actions `workflow_dispatch` entry point is also available. It expects the repository secret `OPENAI_APY_KEY`, rebuilds isolated current state, and uploads the resulting application directory as a workflow artifact rather than committing generated CVs.
+A GitHub Actions `workflow_dispatch` entry point is also available. Its default vacancy ID is the Konfío canary. It expects the repository secret `OPENAI_APY_KEY`, rebuilds isolated current state, and uploads the resulting application directory as a workflow artifact rather than committing generated CVs.
 
-Automatic CV generation on every new vacancy is intentionally **not enabled yet**. It should be activated only after live ADK evals demonstrate adequate grounding, hallucination resistance, language quality, and task success.
+Automatic CV generation on every new vacancy is intentionally **not enabled yet**. It should be activated only after live ADK evals demonstrate adequate grounding, hallucination resistance, language quality, task success, and acceptable token/cost behavior.
