@@ -1,0 +1,15 @@
+company: PayJoy
+source_kind: verified_manual
+source_url: https://www.payjoy.com/mx
+verified: true
+primary: "#14532D"
+secondary: "#166534"
+accent: "#15803D"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: system_sans
+body_font: system_sans
+notes:
+  - "Official PayJoy site uses a green leaf identity and green-gradient brand treatment."
+  - "Hex values are manually selected accessible CV tokens from the verified green brand family, not claimed as exact official digital design tokens."
