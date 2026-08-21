@@ -39,11 +39,17 @@ def assemble_application_context(
     vacancy_state: Path = Path("vacancy_state"),
     evidence_state: Path = Path("rag_state"),
     allow_sparse_jd: bool = False,
+    retrieval_mode: str | None = None,
 ) -> dict[str, Any]:
     vacancy = load_vacancy(vacancy_id, vacancy_state)
     assert_vacancy_generation_ready(vacancy, allow_sparse_jd=allow_sparse_jd)
 
-    match_plan = build_match(vacancy_id, vacancy_state=vacancy_state, evidence_state=evidence_state)
+    match_plan = build_match(
+        vacancy_id,
+        vacancy_state=vacancy_state,
+        evidence_state=evidence_state,
+        retrieval_mode=retrieval_mode,
+    )
     catalog = load_evidence_catalog(evidence_state)
     selected_ids = match_plan.get("selected_evidence_chunk_ids", [])
     selected = [catalog[chunk_id] for chunk_id in selected_ids if chunk_id in catalog and catalog[chunk_id].get("cv_eligible")]
