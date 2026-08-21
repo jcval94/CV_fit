@@ -31,7 +31,7 @@ This log prevents silent overwrites when sources disagree. Open conflicts block 
 - **Subject:** contactability/effectiveness uplift
 - **Source discrepancy:** two restricted derivative sources report different uplift values and use different outcome labels
 - **Status:** open_semantics
-- **Decision:** treat as measurements from different periods or definitions. Never combine them into one value. Public CV automation uses only the separately approved metric record.
+- **Decision:** treat them as measurements from different periods or definitions. Do not publish or auto-insert an exact BTC uplift until each value has a separately reconciled metric definition with period, population, denominator and unit.
 
 ## CONFLICT-CRMI-METRICS
 
@@ -53,6 +53,13 @@ This log prevents silent overwrites when sources disagree. Open conflicts block 
 - **Subject:** public hybrid-detection metrics versus additional restricted alert-effectiveness, irregularity and disciplinary-action measures
 - **Status:** resolved_as_distinct
 - **Decision:** these belong to different models, alert populations, periods and denominators. Never present them as one continuous improvement series.
+
+## CONFLICT-FRAUD-REVIEW-EFFICIENCY-WORDING
+
+- **Subject:** ambiguous representation of the `1:450 -> 1:34` review-efficiency metric
+- **Previous wording risk:** phrasing the result as `1 in 450 -> 1 in 34 cases requiring evaluation` can be read mathematically as an increase in event frequency rather than a reduction in review effort.
+- **Status:** resolved_for_current_use
+- **Decision:** normalize the metric as **cases reviewed per relevant finding: 450 -> 34**. Generated wording must describe fewer cases needing review per relevant finding; it must not call the ratio an accuracy metric or a reduction from `1 in 450` to `1 in 34` cases.
 
 ## CONFLICT-AIFE-DATE
 
@@ -77,11 +84,11 @@ This log prevents silent overwrites when sources disagree. Open conflicts block 
 
 ## CONFLICT-EXPERIENCE-DURATION
 
-- **Subject:** `9+ years` versus enumerated chronology
-- **User-confirmed value:** 9+ years of professional experience
-- **Enumerated roles currently documented:** October 2017 onward, including a 2019 pause
-- **Status:** open_supporting_history
-- **Decision:** retain the user-confirmed `9+ years` positioning, but do not invent an additional employer or role to close the arithmetic gap. Recover earlier primary evidence if exact continuous tenure is required.
+- **Subject:** formal professional tenure versus broader early experience
+- **Previous positioning:** `9+ years`, partly counting university teaching/service and IMEF leadership as career experience
+- **Enumerated professional chronology:** formal professional roles begin in October 2017, with the separately documented 2019 development pause
+- **Status:** resolved_for_current_use
+- **Decision:** use **8+ years of professional experience** as the canonical external figure. Preserve university teaching/service, IMEF leadership and academic activities as valuable supporting experience, but do not add them to formal-employment tenure.
 
 ## CONFLICT-PLATFORM-NAMING
 

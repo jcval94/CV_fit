@@ -117,18 +117,20 @@ This file preserves not only the number, but also what the number actually means
 - **Approved wording:** none yet
 - **Usage constraint:** do not use automatically until the definition of "value," estimation window and comparability of both groups are documented.
 
-## ACH-BBVA-FRAUD-REVIEW-001 — Review-pool reduction
+## ACH-BBVA-FRAUD-REVIEW-001 — Review-efficiency improvement
 
 - **Project:** hybrid claim/fraud prioritization
 - **Organization:** BBVA México
-- **Metric:** cases requiring evaluation
-- **Result:** `1 in 450 -> 1 in 34`
+- **Metric:** cases reviewed per relevant finding
+- **Result:** `450 -> 34 cases reviewed per relevant finding`
+- **Direction:** lower is better
+- **Interpretation:** analysts needed to inspect materially fewer cases to surface one relevant finding after prioritization
 - **Status:** validated_public
 - **Public safe:** true
 - **CV usage:** approved
 - **Source:** current public professional portfolio; current user confirmation
-- **Approved CV wording:** "Built hybrid fraud-prioritization logic that reduced the evaluation pool from 1 in 450 cases to 1 in 34."
-- **Usage constraint:** describe this as review prioritization/efficiency, not as an accuracy metric.
+- **Approved CV wording:** "Reduced the number of cases reviewed per relevant finding from 450 to 34 through hybrid fraud-prioritization logic."
+- **Usage constraint:** describe this as review prioritization/efficiency, not accuracy. Do not rewrite it as `1 in 450 -> 1 in 34 cases requiring evaluation`, because that representation reverses the intuitive direction of the review-effort metric.
 
 ## ACH-BBVA-FRAUD-DETECTION-001 — Detection-rate improvement
 
@@ -397,12 +399,13 @@ These entries intentionally preserve the *existence and semantic role* of import
 8. Synthetic benchmark metrics must always be described as benchmarks, never as customer/business performance.
 9. Prefer adoption/outcome metrics over lines of code, stars, repository size or other vanity metrics.
 10. Prefer the strongest relevant metric rather than maximizing metric count.
+11. Ratios must state their unit and denominator explicitly; avoid ambiguous `1:x` shorthand when it can reverse the intuitive direction of improvement.
 
 # Current strongest public-safe metrics
 
 For most Data Science / AI applications, prioritize:
 
-- BBVA hybrid detection: review pool `1 in 450 -> 1 in 34`
+- BBVA hybrid detection: cases reviewed per relevant finding `450 -> 34`
 - BBVA hybrid detection: detection rate `19% -> 37%`
 - NorA: `200+ collaborators`
 - NorA: `up to 15x faster consultation handling`

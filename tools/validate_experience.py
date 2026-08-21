@@ -54,9 +54,11 @@ STATUSES = {
     "deprecated",
 }
 CONFIDENCE = {"high", "medium", "low"}
+SKILL_LEVELS = {"core", "working", "familiarity"}
 METRIC_ID = re.compile(r"^##\s+(ACH-[A-Z0-9-]+)\b", re.MULTILINE)
 METRIC_REFERENCE = re.compile(r"\bACH-[A-Z0-9-]+\b")
 MARKDOWN_LINK = re.compile(r"\[[^\]]+\]\((?!https?://|mailto:|#)([^)]+\.md)(?:#[^)]+)?\)")
+SKILL_LEVEL = re.compile(r"^- \*\*Level:\*\*\s*([^\n]+?)\s*$", re.MULTILINE)
 
 
 def split_frontmatter(path: Path) -> tuple[dict, str]:
@@ -168,6 +170,18 @@ def main() -> int:
 
         if "To be populated" in body or meta.get("status") == "draft":
             warnings.append(f"{rel}: incomplete record is not eligible for automatic reuse")
+
+        if meta.get("record_type") == "skills":
+            levels = SKILL_LEVEL.findall(body)
+            if not levels:
+                errors.append(f"{rel}: skills record contains no explicit Level fields")
+            for level in levels:
+                normalized = level.strip().lower()
+                if normalized not in SKILL_LEVELS:
+                    errors.append(
+                        f"{rel}: invalid skill Level {level!r}; allowed values are "
+                        f"{', '.join(sorted(SKILL_LEVELS))}"
+                    )
 
         for metric in METRIC_ID.findall(body):
             all_metric_ids.append((metric, path))

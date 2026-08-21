@@ -7,9 +7,6 @@ status: canonical
 confidence: high
 visibility: public
 public_safe: true
-source_priority:
-  - user_confirmed
-  - linkedin_public
 source_refs:
   - SRC-USER-CONFIRMED-2026-08-20
   - SRC-LINKEDIN-PUBLIC
@@ -68,12 +65,15 @@ These areas describe the degree's quantitative foundation and should not be inte
 
 ### Academic activities and distinctions
 
-Public LinkedIn information records the following activities during the UNAM period:
+Public profile evidence plus current user confirmation support the following activities during the UNAM period:
 
 - Assistant in **Mathematical Analysis** for approximately six months.
-- Instructor in a preventive academic program for subjects with high failure rates for approximately six months.
-- Participation in **IMEF Universitario**, including leadership responsibilities in research and social responsibility.
+- University teaching/instruction in a preventive academic program for subjects with high failure rates for approximately six months.
+- Current user confirmation clarifies that university teaching also formed part of his **social-service experience** in the faculty.
+- Participation in **IMEF Universitario**, including service as **VP of Social Responsibility** and involvement in research/social-impact projects.
 - **Second place in the Gauss Test**.
+
+These activities are valuable evidence of early quantitative communication, teaching and leadership. They are not added to formal professional-employment tenure.
 
 ### How to represent this degree
 
@@ -92,6 +92,7 @@ The combination of Actuarial Science and a Master's in Data Science is a core pa
 1. **Actuarial Science** provides the mathematical, statistical and risk-oriented base.
 2. **Data Science** extends that base into modern machine learning, data engineering and AI applications.
 3. Professional experience connects both degrees to production systems and measurable business outcomes.
+4. Earlier teaching, social-service and IMEF leadership provide supporting evidence of communication and leadership without being counted as formal employment years.
 
 ## Technical Education
 
@@ -110,3 +111,4 @@ The combination of Actuarial Science and a Master's in Data Science is a core pa
 - Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.
 - Use **9.6/10** only for the Master's degree.
 - When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.
+- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure.
