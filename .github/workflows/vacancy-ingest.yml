@@ -7,7 +7,9 @@ on:
       - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
+      - "cv_auto/**"
       - "tests/test_vacancy_*.py"
+      - "tests/test_cv_auto.py"
       - ".github/workflows/vacancy-ingest.yml"
   push:
     branches: [main]
@@ -16,7 +18,9 @@ on:
       - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
+      - "cv_auto/**"
       - "tests/test_vacancy_*.py"
+      - "tests/test_cv_auto.py"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
 
@@ -30,6 +34,10 @@ permissions:
 jobs:
   validate-or-ingest:
     runs-on: ubuntu-latest
+    env:
+      # Flip to true only after the authenticated Retrieval V2 benchmark passes.
+      AUTO_CV_ENABLED: "false"
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -39,8 +47,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run vacancy pipeline and fidelity tests
-        run: python -m unittest tests.test_vacancy_pipeline tests.test_vacancy_fidelity -v
+      - name: Run vacancy and automatic-generation tests
+        run: >-
+          python -m unittest
+          tests.test_vacancy_pipeline
+          tests.test_vacancy_fidelity
+          tests.test_cv_auto
+          -v
 
       - name: Validate PR inputs E2E
         if: github.event_name == 'pull_request'
@@ -91,6 +104,10 @@ jobs:
           --run-id ${{ env.PROCESSED_SHA }}
           --source-commit ${{ env.PROCESSED_SHA }}
 
+      - name: Capture impacted vacancies before no-op proof
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: cp vacancy_state/latest_run.json /tmp/vacancy-ingest-run.json
+
       - name: Prove main vacancy no-op idempotence
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
@@ -117,16 +134,47 @@ jobs:
           python -m vacancy_pipeline.retrieve "machine learning" --state-dir vacancy_state --top-k 3 > /tmp/vacancy-retrieval.json
           cat /tmp/vacancy-retrieval.json
 
-      - name: Commit versioned vacancy state
+      - name: Install CV generation project
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Generate CV artifacts for new or modified eligible vacancies
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_auto
+          --ingest-report /tmp/vacancy-ingest-run.json
+          --vacancy-state vacancy_state
+          --evidence-state rag_state
+          --generation-state generation_state
+          --outputs outputs/auto
+          --run-id auto-${{ env.PROCESSED_SHA }}
+          --source-commit ${{ env.PROCESSED_SHA }}
+          --retrieval-mode hybrid-rerank
+          --max-vacancies-per-run 5
+          --max-estimated-cost-usd 2.0
+
+      - name: Upload generated CV artifacts
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-cv-${{ github.run_id }}
+          path: outputs/auto/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Commit versioned vacancy and generation state
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add vacancy_state
+          if [ -d generation_state ]; then
+            git add generation_state
+          fi
           if git diff --cached --quiet; then
-            echo "No vacancy state changes to commit."
+            echo "No vacancy/generation state changes to commit."
             exit 0
           fi
-          git commit -m "chore: update vacancy state for ${PROCESSED_SHA::12}"
+          git commit -m "chore: update vacancy generation state for ${PROCESSED_SHA::12}"
           git pull --rebase origin main
           git push origin HEAD:main
