@@ -9,7 +9,7 @@ El repositorio mantiene **dos corpus canónicos separados** y varias capas deriv
 3. `rag_state/`: evidencia profesional normalizada/chunked/indexada para recuperación.
 4. `vacancy_state/`: vacantes normalizadas/chunked/indexadas.
 5. `cv_matching/`: unión determinista vacante ↔ evidencia.
-6. `cv_agent/`: workflow Google ADK para estrategia, redacción, revisión Senior Headhunter y validación final.
+6. `cv_agent/`: workflow Google ADK para estrategia, redacción, revisión Senior Headhunter y validación final, usando OpenAI como único proveedor LLM.
 
 Una vacante nunca se convierte en evidencia sobre el candidato y una opinión previa de fit nunca se trata como hecho de la vacante.
 
@@ -50,7 +50,7 @@ El modelo canónico incluye `application_language`, confianza y provenance. La i
 
 `unsupported` es una salida válida y necesaria: el sistema no fabrica experiencia para cerrar gaps. Una skill `familiarity` tampoco puede convertirse en `working`, `core`, expert o advanced solo porque la vacante lo pida.
 
-## Google ADK CV workflow
+## Google ADK + OpenAI CV workflow
 
 `cv_agent/` implementa:
 
@@ -74,15 +74,17 @@ cv_final.md + evidence_trace.json + run_report.json
 
 El CV se redacta directamente en `application_language`.
 
+ADK es el framework de orquestación, pero **OpenAI es el único proveedor de modelos permitido**. El único secreto del repositorio para inferencia es `OPENAI_APY_KEY`. Internamente se refleja temporalmente a `OPENAI_API_KEY` porque el conector OpenAI de ADK/LiteLLM espera el nombre convencional; no existe fallback a Gemini, Claude u otro proveedor.
+
 ### Cost-aware model escalation
 
 Por defecto:
 
-- revisiones 1–2: `gemini-3.5-flash-lite`
-- revisiones 3–4: `gemini-3.6-flash`
-- revisión 5: `gemini-3.1-pro-preview`
+- revisiones 1–2: `gpt-5.6-luna`
+- revisiones 3–4: `gpt-5.6-terra`
+- revisión 5: `gpt-5.6-sol`
 
-Los IDs son configurables por variables de entorno para evitar acoplar la arquitectura a un modelo preview. El modelo premium solo se llama si las primeras cuatro revisiones no alcanzan el quality gate.
+Los IDs son configurables por variables de entorno, pero el runtime rechaza cualquier ID que no sea un modelo `gpt-*` de OpenAI. El modelo premium solo se llama si las primeras cuatro revisiones no alcanzan el quality gate.
 
 El máximo es exactamente **5 revisiones**. Si la quinta tampoco alcanza la calidad objetivo, se devuelve el mejor CV efectivamente evaluado y `run_report.json` registra `COMPLETED_BELOW_TARGET`, `quality_target_reached=false` y `best_review_iteration`. Esa advertencia no se inserta en el CV destinado al empleador.
 
@@ -107,7 +109,7 @@ Un `PASS` del Headhunter no basta. Cada línea sustantiva del CV conserva `evide
 - `.github/workflows/vacancy-ingest.yml`: estado de vacantes incremental.
 - `.github/workflows/cv-agent.yml`: instala/importa ADK, ejecuta regresiones, construye estados actuales y valida que las vacantes puedan formar contextos grounded.
 
-La generación con modelos reales queda disponible mediante `workflow_dispatch` y `GEMINI_API_KEY`, produciendo un artifact temporal en vez de commitear CVs al repo.
+La generación con modelos reales queda disponible mediante `workflow_dispatch` y el secret `OPENAI_APY_KEY`, produciendo un artifact temporal en vez de commitear CVs al repo.
 
 **Todavía no se dispara automáticamente un CV en cada push de vacantes.** Ese switch debe activarse únicamente cuando los evals autenticados de grounding/hallucination/calidad estén aprobados.
 
