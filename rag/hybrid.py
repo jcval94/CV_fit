@@ -48,7 +48,7 @@ def deterministic_anchors(
     explicitly asks for a structure represented in the source of truth:
 
     * a named skill/technology -> the exact `skills` chunk;
-    * professional duration/years -> canonical employment-period role chunks.
+    * an explicit duration in years -> canonical employment-period role chunks.
 
     All candidates come from the active lexical index, so public/CV eligibility
     remains identical to normal retrieval policy.
@@ -67,7 +67,6 @@ def deterministic_anchors(
         seen.add(chunk_id)
         anchors.append(_index_hit(chunk_id, meta, reason=reason))
 
-    # Exact named-skill anchoring. The first line is the canonical skill title.
     for chunk_id, meta in sorted(chunks.items()):
         if meta.get("record_id") != "skills" or meta.get("chunk_type") != "skill":
             continue
@@ -75,12 +74,9 @@ def deterministic_anchors(
         if title and len(title) >= 2 and title in query_norm:
             add(chunk_id, meta, "exact_named_skill")
 
-    # Duration questions need chronology, not certifications that merely mention
-    # the same domain. These anchors are still judged by the semantic reranker.
-    asks_duration = (
-        any(term in query_norm.split() for term in ("anos", "years", "year"))
-        and any(term in query_norm.split() for term in ("experiencia", "experience"))
-    )
+    # Any explicit years requirement is a chronology query even when the JD says
+    # "four years in ML engineering" rather than literally "years of experience".
+    asks_duration = any(term in query_norm.split() for term in ("anos", "years", "year", "yrs"))
     if asks_duration:
         canonical_roles: list[tuple[str, dict[str, Any]]] = []
         other_roles: list[tuple[str, dict[str, Any]]] = []

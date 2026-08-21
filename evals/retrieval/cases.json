@@ -4,7 +4,7 @@
   "cases": [
     {
       "id": "career-chronology-4plus",
-      "query": "Al menos cuatro años de experiencia profesional en software, machine learning y ciencia de datos",
+      "query": "Al menos cuatro años en ingeniería de software o ML, incluyendo dos con modelos o LLMs en producción.",
       "expected_any_record_ids": ["role-management-solutions", "role-bbva"],
       "forbidden_record_ids": [],
       "negative": false
