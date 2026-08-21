@@ -9,6 +9,7 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
+      - "tests/test_openai_provider.py"
       - "pyproject.toml"
       - "agents-cli-manifest.yaml"
       - ".github/workflows/cv-agent.yml"
@@ -40,6 +41,7 @@ jobs:
           tests.test_cv_matching
           tests.test_cv_validators
           tests.test_cv_agent_workflow
+          tests.test_openai_provider
           -v
       - name: Build current vacancy and professional evidence states
         run: |
@@ -69,7 +71,7 @@ jobs:
                   "evidence_chunks=", len(context["evidence_chunks"]),
               )
           PY
-      - name: Import ADK app
+      - name: Import OpenAI-backed ADK app without live credentials
         run: python -c "from cv_agent.agent import app, root_agent; assert app is not None; assert root_agent.name == 'root_agent'"
 
   generate-manual:
@@ -77,8 +79,7 @@ jobs:
     needs: validate-agent
     runs-on: ubuntu-latest
     env:
-      GOOGLE_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -88,17 +89,17 @@ jobs:
           python-version: "3.12"
       - name: Install ADK project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Require configured Gemini API secret
+      - name: Require configured OpenAI API secret
         run: |
-          if [ -z "$GOOGLE_API_KEY" ]; then
-            echo "Missing repository secret GEMINI_API_KEY; live generation was not attempted."
+          if [ -z "$OPENAI_APY_KEY" ]; then
+            echo "Missing repository secret OPENAI_APY_KEY; live generation was not attempted."
             exit 2
           fi
       - name: Rebuild isolated current vacancy and evidence state
         run: |
           python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id manual-live --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
           python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id manual-live --source-commit "$(git rev-parse HEAD)" --full-rebuild
-      - name: Generate and review CV with ADK
+      - name: Generate and review CV with OpenAI-backed ADK
         run: >-
           python -m cv_agent.run
           --vacancy-id "${{ inputs.vacancy_id }}"
