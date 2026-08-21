@@ -47,10 +47,10 @@ class VacancyRecord:
     identity_key: str
     content_hash: str
     provenance: list[ProvenanceRef] = field(default_factory=list)
-    jd_fidelity: str = field(init=False)
-    jd_fidelity_score: float = field(init=False)
-    jd_fidelity_reasons: list[str] = field(init=False)
-    jd_generation_eligible: bool = field(init=False)
+    jd_fidelity: str = ""
+    jd_fidelity_score: float = 0.0
+    jd_fidelity_reasons: list[str] = field(default_factory=list)
+    jd_generation_eligible: bool = False
 
     def __post_init__(self) -> None:
         assessment = assess_jd_fidelity(
