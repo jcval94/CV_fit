@@ -31,13 +31,22 @@ Las métricas se chunkifican de forma atómica por `ACH-*`; los skills conservan
 
 - `GPTW/**/*.json` y `Vacantes/**/*.json`: fuentes de entrada.
 - `contracts/vacancies/`: schemas versionados de entrada y modelo canónico.
-- `vacancy_pipeline/`: validación, adapters, idioma, normalización, deduplicación, chunking, indexación y recuperación.
+- `vacancy_pipeline/`: validación, adapters, idioma, fidelidad del JD, normalización, deduplicación, chunking, indexación y recuperación.
 - `vacancy_state/`: manifiesto, snapshots, registros canónicos, chunks, índice, cuarentena y reportes.
 - `.github/workflows/vacancy-ingest.yml`: automatización incremental.
 
 Cada archivo se identifica por SHA-256. Los archivos sin cambios no se reparsan; una modificación solo afecta las vacantes correspondientes. Los archivos inválidos se procesan de forma atómica y pasan a cuarentena.
 
-El modelo canónico incluye `application_language`, confianza y provenance. La inferencia prioriza idioma explícito, después texto sustantivo de la vacante y finalmente el título. Si queda `und`, la generación automática del CV se bloquea hasta resolverlo.
+Canonical Vacancy v2 incluye `application_language` y también una evaluación determinista de fidelidad del Job Description:
+
+- `jd_fidelity`: `full | partial | sparse`
+- `jd_fidelity_score`: score transparente de detalle preservado
+- `jd_fidelity_reasons`: señales que justifican la clasificación
+- `jd_generation_eligible`: solo `true` para `partial` o `full`
+
+Solo `description`, `requirements` y `responsibilities` originales cuentan para fidelidad. El `fit_score`, el razonamiento de ajuste y el `tech_stack` inferido no sustituyen el JD del empleador. Una vacante `sparse` puede seguir usándose para discovery/matching, pero `cv_agent` bloquea generación live antes de gastar tokens.
+
+La inferencia de idioma prioriza idioma explícito, después texto sustantivo de la vacante y finalmente el título. Si queda `und`, la generación automática del CV también se bloquea.
 
 ## Vacancy ↔ Evidence matching
 
@@ -56,6 +65,8 @@ El modelo canónico incluye `application_language`, confianza y provenance. La i
 
 ```text
 canonical vacancy + grounded evidence
+        ↓
+JD/language preflight
         ↓
 CV Strategist
         ↓
@@ -102,16 +113,18 @@ Un `PASS` del Headhunter no basta. Cada línea sustantiva del CV conserva `evide
 - specializations bloqueadas por boundaries;
 - idioma incorrecto.
 
-## Automatización
+## Automatización y garantías E2E
 
 - `.github/workflows/validate-experience.yml`: integridad general del source of truth y tests.
 - `.github/workflows/evidence-rag.yml`: estado profesional RAG incremental.
 - `.github/workflows/vacancy-ingest.yml`: estado de vacantes incremental.
-- `.github/workflows/cv-agent.yml`: instala/importa ADK, ejecuta regresiones, construye estados actuales y valida que las vacantes puedan formar contextos grounded.
+- `.github/workflows/cv-agent.yml`: validación determinista del agente tanto en PR como después del merge a `main`.
 
-La generación con modelos reales queda disponible mediante `workflow_dispatch` y el secret `OPENAI_APY_KEY`, produciendo un artifact temporal en vez de commitear CVs al repo.
+Los workflows de vacantes y evidencia realizan una segunda corrida inmediata después de su procesamiento y exigen un no-op real: cero fuentes nuevas/modificadas, cero registros/vacantes impactados y cero reindexaciones. La idempotencia queda así validada E2E, no solo por unit tests.
 
-**Todavía no se dispara automáticamente un CV en cada push de vacantes.** Ese switch debe activarse únicamente cuando los evals autenticados de grounding/hallucination/calidad estén aprobados.
+La generación con modelos reales queda disponible mediante `workflow_dispatch` y el secret `OPENAI_APY_KEY`, produciendo un artifact temporal en vez de commitear CVs al repo. El preflight de JD ocurre antes de la primera llamada LLM.
+
+**Todavía no se dispara automáticamente un CV en cada push de vacantes.** Ese switch debe activarse únicamente cuando una vacante canary con JD completo pase los evals autenticados de grounding/hallucination/calidad.
 
 ## Validación local
 
@@ -123,7 +136,7 @@ python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id validation -
 python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id validation --full-rebuild --fail-on-quarantine
 ```
 
-Para una ejecución ADK real:
+Para una ejecución ADK real, la vacante debe ser `jd_generation_eligible=true`:
 
 ```bash
 python -m pip install -e .
