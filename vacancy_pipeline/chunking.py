@@ -44,6 +44,13 @@ def _quality(record: VacancyRecord) -> tuple[int, int, float, float, str]:
     return populated, list_items, record.jd_fidelity_score, record.language_confidence, source_path
 
 
+def _fit_quality(record: VacancyRecord) -> tuple[int, int, str]:
+    source_path = record.provenance[0].source_path if record.provenance else ""
+    score_present = 1 if record.fit_score is not None else 0
+    detail = int(bool(record.fit_summary)) + len(record.fit_strengths) + len(record.fit_gaps)
+    return score_present, detail, source_path
+
+
 def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
     if not records:
         raise ValueError("cannot merge an empty vacancy record set")
@@ -56,6 +63,10 @@ def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
         key=lambda r: (-_quality(r)[0], -_quality(r)[1], -_quality(r)[2], -_quality(r)[3], _quality(r)[4]),
     )[0]
     language_record = sorted(records, key=lambda r: (-r.language_confidence, r.provenance[0].source_path if r.provenance else ""))[0]
+    fit_record = sorted(
+        records,
+        key=lambda r: (-_fit_quality(r)[0], -_fit_quality(r)[1], _fit_quality(r)[2]),
+    )[0]
     provenance: list[ProvenanceRef] = []
     seen_prov: set[tuple[str, int]] = set()
     for record in sorted(records, key=lambda r: r.provenance[0].source_path if r.provenance else ""):
@@ -78,6 +89,8 @@ def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
         tech_stack=_union_lists(records, "tech_stack"),
         requirements=requirements,
         responsibilities=responsibilities,
+        fit_score=fit_record.fit_score,
+        fit_summary=fit_record.fit_summary,
         fit_strengths=_union_lists(records, "fit_strengths"),
         fit_gaps=_union_lists(records, "fit_gaps"),
         application_language=language_record.application_language,
