@@ -52,19 +52,24 @@ def main() -> int:
                 target_pages=model.document.target_pages,
             )
         )
-    elif args.live_design_review:
-        client = AdkStructuredClient(max_estimated_cost_usd=args.max_design_cost_usd)
-        design_review, deterministic = asyncio.run(
-            review_design(
-                client=client,
-                template_id=model.document.template_id,
-                tokens=tokens,
-                target_pages=model.document.target_pages,
+    else:
+        if not deterministic.passed:
+            raise ValueError("brand tokens fail deterministic contrast checks; a model review cannot override unsafe contrast")
+        if tokens.brand_verified and not args.live_design_review:
+            raise ValueError(
+                "verified institutional branding requires --live-design-review so the OpenAI design gate checks legibility, ATS and print safety"
             )
-        )
-        usage = client.telemetry_snapshot()
-    elif not deterministic.passed:
-        raise ValueError("brand tokens fail deterministic contrast checks; live design review cannot override unsafe contrast")
+        if args.live_design_review:
+            client = AdkStructuredClient(max_estimated_cost_usd=args.max_design_cost_usd)
+            design_review, deterministic = asyncio.run(
+                review_design(
+                    client=client,
+                    template_id=model.document.template_id,
+                    tokens=tokens,
+                    target_pages=model.document.target_pages,
+                )
+            )
+            usage = client.telemetry_snapshot()
 
     write_html(model, Path(args.output), tokens=tokens, design_review=design_review)
     report = {
