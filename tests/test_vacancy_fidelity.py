@@ -112,7 +112,11 @@ class VacancyFidelityTests(unittest.TestCase):
         }
         a = adapt_source_document(first, "GPTW/a.json", "a")[0]
         b = adapt_source_document(second, "GPTW/b.json", "b")[0]
-        self.assertEqual(a.jd_fidelity, "partial")
+        # The first fragment is intentionally sparse by itself: fewer than
+        # three substantive list items and a description below the partial
+        # threshold. The second is partial. Together they preserve ten pieces
+        # of substantive employer detail and must become full.
+        self.assertEqual(a.jd_fidelity, "sparse")
         self.assertEqual(b.jd_fidelity, "partial")
         merged = merge_records([a, b])
         self.assertEqual(merged.jd_fidelity, "full")
