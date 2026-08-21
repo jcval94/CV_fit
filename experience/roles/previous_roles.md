@@ -56,7 +56,7 @@ See [consulting fraud controls](../projects/consulting_fraud_controls.md).
 ### Large-scale migration and reconciliation
 See [large-scale data migration and QA](../projects/consulting_data_migration.md).
 
-- migration, reconciliation and data-quality assurance across nearly 20 billion records
+- migration, reconciliation and data-quality assurance across very large record volumes
 - focus on consistency, traceability and control integrity across platforms
 
 ## Known client assignments
