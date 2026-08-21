@@ -34,14 +34,21 @@ Taught introductory Python for Data Science in the Bécalos/DEV.F ecosystem, com
 - Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.
 - Do not invent cohort sizes, satisfaction scores or completion outcomes.
 
-## UNAM academic instruction
+## UNAM academic instruction and social service
 
-During the Bachelor's in Actuarial Science, public profile evidence records:
+During the Bachelor's in Actuarial Science, public profile evidence and current user confirmation support:
 
-- one semester as an assistant in Mathematical Analysis
-- participation as an instructor in a preventive program for subjects with high failure rates
+- approximately one semester as an assistant in Mathematical Analysis
+- university teaching/instruction in a preventive program for subjects with high failure rates
+- social-service experience carried out through teaching in the faculty
 
-These activities are best used as evidence of quantitative communication and early teaching, not as full-time professional roles.
+These activities are strong evidence of early quantitative communication, teaching and academic service. They are intentionally **not counted as formal professional-employment years** in the canonical `8+ years` figure.
+
+## IMEF leadership context
+
+Separate university leadership evidence includes service as **VP of Social Responsibility** in IMEF Universitario and participation in research/social-impact projects.
+
+Use this as supporting evidence for early leadership, initiative and social-impact work; do not represent it as full-time employment.
 
 ## Internal technical enablement
 
