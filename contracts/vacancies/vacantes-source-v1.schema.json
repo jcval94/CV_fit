@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vacantes source v1",
+  "type": "object",
+  "required": ["vacantes"],
+  "properties": {
+    "metadata": {"type": "object"},
+    "vacantes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["empresa", "puesto"],
+        "properties": {
+          "id_vacante": {"type": "string"},
+          "puesto": {"type": "string", "minLength": 1},
+          "empresa": {"type": "string", "minLength": 1},
+          "categoria_empresa": {"type": "string"},
+          "ubicacion": {"type": "string"},
+          "modalidad": {"type": "string"},
+          "fecha_publicacion": {"type": "string"},
+          "porcentaje_ajuste": {"type": "number", "minimum": 0, "maximum": 100},
+          "razon_ajuste": {"type": "object"},
+          "stack_clave_detectado": {"type": "array", "items": {"type": "string"}},
+          "rango_salarial": {"type": "string"},
+          "url_postulacion": {"type": "string"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
