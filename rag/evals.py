@@ -5,10 +5,14 @@ import json
 from pathlib import Path
 from typing import Any, Callable
 
+from rag.dense import OpenAIEmbeddingClient, retrieve_dense
 from rag.evidence import retrieve_evidence
+from rag.hybrid import hybrid_retrieve
+from rag.rerank import OpenAIRerankClient, apply_rerank, configured_rerank_model
 
 
 PROFICIENCY_RANK = {None: 0, "familiarity": 1, "working": 2, "core": 3}
+EVAL_MODES = {"lexical", "hybrid", "hybrid-rerank"}
 
 
 def _read_json(path: Path) -> Any:
@@ -32,9 +36,6 @@ def evaluate_case(case: dict[str, Any], hits: list[dict[str, Any]], *, top_k: in
 
     direct_hits = [hit for hit in hits if hit.get("rerank_support") == "direct"]
     if negative:
-        # Before semantic reranking any retrieved evidence is conservatively treated
-        # as a potential false positive. After reranking only direct support violates
-        # a declared negative case.
         safe_negative = not direct_hits if any("rerank_support" in hit for hit in hits) else not hits
     else:
         safe_negative = True
@@ -93,17 +94,46 @@ def evaluate_suite(
     }
 
 
+def build_retriever(mode: str, state_dir: Path) -> Callable[[str, int], list[dict[str, Any]]]:
+    lexical = _read_json(state_dir / "lexical_index.json")
+    if mode == "lexical":
+        return lambda query, k: retrieve_evidence(lexical, query, top_k=k)
+
+    dense = _read_json(state_dir / "dense_index.json")
+    relations = _read_json(state_dir / "relations.json")
+    embedder = OpenAIEmbeddingClient(model=dense["model"], dimensions=int(dense["dimensions"]))
+    reranker = OpenAIRerankClient(model=configured_rerank_model()) if mode == "hybrid-rerank" else None
+
+    def retrieve(query: str, k: int) -> list[dict[str, Any]]:
+        dense_hits, _ = retrieve_dense(dense, query, client=embedder, top_k=max(20, k * 3))
+        hits = hybrid_retrieve(
+            query,
+            lexical_index=lexical,
+            dense_hits=dense_hits,
+            relations=relations,
+            top_k=max(k, 10 if reranker else k),
+            candidate_k=max(20, k * 3),
+            graph_expansion=True,
+        )
+        if reranker:
+            hits = apply_rerank(query, hits, client=reranker, top_k=k)
+        return hits[:k]
+
+    return retrieve
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Evaluate the deterministic lexical professional retrieval baseline.")
+    parser = argparse.ArgumentParser(description="Evaluate professional retrieval against labeled positive and safety cases.")
     parser.add_argument("--state-dir", default="rag_state")
     parser.add_argument("--cases", default="evals/retrieval/cases.json")
+    parser.add_argument("--mode", choices=sorted(EVAL_MODES), default="lexical")
     parser.add_argument("--top-k", type=int, default=6)
     parser.add_argument("--output", default=None)
     args = parser.parse_args()
 
-    index = _read_json(Path(args.state_dir) / "lexical_index.json")
     cases = _read_json(Path(args.cases))["cases"]
-    report = evaluate_suite(cases, lambda query, k: retrieve_evidence(index, query, top_k=k), top_k=args.top_k)
+    report = evaluate_suite(cases, build_retriever(args.mode, Path(args.state_dir)), top_k=args.top_k)
+    report["mode"] = args.mode
     text = json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     if args.output:
         path = Path(args.output)
