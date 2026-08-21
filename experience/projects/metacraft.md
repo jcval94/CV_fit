@@ -1,11 +1,17 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: project-metacraft
+record_type: project
 last_updated: 2026-08-20
 status: validated_public
+confidence: high
+visibility: public
 public_safe: true
 project_type: data_quality_toolkit
 source_repo: https://github.com/jcval94/MetaCraft
 primary_language: Python
+source_refs:
+  - SRC-GITHUB-JCVAL94-PUBLIC
 ---
 
 # MetaCraft

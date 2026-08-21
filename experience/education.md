@@ -1,10 +1,19 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: education
+record_type: education
 last_updated: 2026-08-20
 status: canonical
+confidence: high
+visibility: public
+public_safe: true
 source_priority:
   - user_confirmed
   - linkedin_public
+source_refs:
+  - SRC-USER-CONFIRMED-2026-08-20
+  - SRC-LINKEDIN-PUBLIC
+  - SRC-PORTFOLIO-PUBLIC-2026-08
 ---
 
 # Education
@@ -83,6 +92,17 @@ The combination of Actuarial Science and a Master's in Data Science is a core pa
 1. **Actuarial Science** provides the mathematical, statistical and risk-oriented base.
 2. **Data Science** extends that base into modern machine learning, data engineering and AI applications.
 3. Professional experience connects both degrees to production systems and measurable business outcomes.
+
+## Technical Education
+
+### Computer Systems Technician
+
+- **Institution:** Centro de Computación Profesional de México (CCPM)
+- **Program:** Técnico en Sistemas Computacionales / Systems Computer Technician
+- **Period:** December 2011 – August 2013
+- **Status:** Completed
+- **Source:** current public professional portfolio
+- **CV priority:** supporting only; normally omit from senior one-page CVs unless early technical formation is relevant
 
 ## Usage rules
 

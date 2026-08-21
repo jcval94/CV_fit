@@ -1,0 +1,82 @@
+schema_version: 3
+last_updated: 2026-08-20
+sources:
+  - id: SRC-USER-CONFIRMED-2026-08-20
+    title: User-confirmed professional history
+    type: user_confirmation
+    authority: primary
+    coverage: 2011-2026
+    sensitivity: internal
+    repository_storage: metadata_only
+    permitted_use: public_safe_facts_only
+    notes: Current user confirmation has priority for preferred titles, role dates and known attribution boundaries.
+
+  - id: SRC-LINKEDIN-PUBLIC
+    title: José Carlos Del Valle public LinkedIn profile and activity
+    type: public_professional_profile
+    authority: primary_public_self_description
+    coverage: career_history_and_public_achievements
+    sensitivity: public
+    repository_storage: links_and_curated_facts
+    permitted_use: public
+
+  - id: SRC-PORTFOLIO-PUBLIC-2026-08
+    title: jcval94 public professional portfolio
+    type: public_portfolio
+    authority: primary_public_self_description
+    coverage: 2011-2026
+    sensitivity: public
+    repository_storage: links_and_curated_facts
+    permitted_use: public
+    url: https://github.com/jcval94/Portfolio
+    notes: Used to corroborate role chronology, public project descriptions, credentials and publicly disclosed metrics.
+
+  - id: SRC-GITHUB-JCVAL94-PUBLIC
+    title: jcval94 public GitHub repositories
+    type: public_code
+    authority: primary_observable
+    coverage: 2019-2026
+    sensitivity: public
+    repository_storage: links_and_curated_facts
+    permitted_use: public
+    url: https://github.com/jcval94
+
+  - id: SRC-MASTER-EVIDENCE-TEMPLATE-2026-08-21
+    title: 01 Master Evidence Base
+    type: evidence_template
+    authority: template_only
+    coverage: none
+    sensitivity: internal
+    repository_storage: metadata_only
+    permitted_use: structure_only
+    notes: The supplied file is an empty capture template and contributes no factual claims.
+
+  - id: SRC-TRAJECTORY-2021-2023-CURATED
+    title: Base de conocimiento profesional curada - trayectoria 2021-2023
+    type: curated_derivative
+    authority: secondary
+    coverage: 2021-2023
+    sensitivity: restricted
+    repository_storage: metadata_only
+    permitted_use: public_safe_extraction_only
+    notes: Rich reconstruction with explicit confidence levels; not a substitute for original artifacts.
+
+  - id: SRC-TRAJECTORY-2024-2026-CURATED
+    title: Base curada de trayectoria profesional 2024-2026
+    type: curated_derivative
+    authority: secondary
+    coverage: 2024-2026
+    sensitivity: restricted
+    repository_storage: metadata_only
+    permitted_use: public_safe_extraction_only
+    notes: Contains internal project detail and mixed confirmed/reconstructed authorship; raw PDF is not committed.
+
+  - id: SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19
+    title: Base de conocimiento profesional curada - GitHub jcval94
+    type: curated_derivative
+    authority: secondary
+    coverage: 2019-2026
+    sensitivity: public_and_internal_mix
+    repository_storage: metadata_only
+    permitted_use: corroboration
+    notes: Audits 62 visible repositories and 20 consolidated evidence entries; current repositories remain the primary source.

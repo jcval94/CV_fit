@@ -1,10 +1,17 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: project-github-portfolio
+record_type: project
 last_updated: 2026-08-20
-status: populated
+status: validated_public
+confidence: high
+visibility: public
 public_safe: true
 source_account: https://github.com/jcval94
 usage_policy: "Use this file to rank repository evidence. Do not treat every repository as equally relevant to a CV. Prefer Tier A projects for current senior Data Science, ML, GenAI and AI Engineering applications."
+source_refs:
+  - SRC-GITHUB-JCVAL94-PUBLIC
+  - SRC-GITHUB-PROFESSIONAL-CURATED-2026-04-19
 ---
 
 # GitHub Portfolio — Evidence Index
@@ -59,29 +66,41 @@ The GitHub account contains many repositories across multiple years. This index 
 - **Use for:** ML deployment, cloud ML, end-to-end DS/ML engineering
 - **Detail:** `cloud_ml_recommender.md`
 
+### COI / Fraud Analysis Toolkit
+- **Repository:** https://github.com/jcval94/coi
+- **Primary signal:** public fraud/compliance tooling, transaction-pattern analysis, NLP-style text signals, guided Q&A, visual reporting and interpretable case exports
+- **Use for:** Fraud Analytics, Compliance Analytics, Senior Data Scientist and analytical-tooling roles
+- **Detail:** `coi_fraud_toolkit.md`
+
+### FitUltD
+- **Repository:** https://github.com/jcval94/FitUltD
+- **Distribution:** CRAN
+- **Primary signal:** statistical distribution fitting, multimodal modeling, R package engineering and long-term maintenance
+- **Use for:** actuarial, statistics, risk-modeling and quantitative-research roles
+- **Detail:** `r_statistical_tooling.md`
+
 ## Tier B — supporting evidence
 
-### DataMiningTools
-- **Repository:** https://github.com/jcval94/DataMiningTools
-- **Signal:** formal R package structure, statistical/data-mining dependencies and package ownership dating to 2019
+### Financial ML pipelines (floor / yahoo)
+- **Repositories:** https://github.com/jcval94/floor and https://github.com/jcval94/yahoo
+- **Signal:** modular ingestion/training/evaluation pipelines, temporal validation, artifacts, GitHub Actions, SQLite/JSON and static dashboards
+- **Boundary:** educational/partially degraded rather than validated trading production
+- **Detail:** `financial_ml_pipelines.md`
 
-### FitUlt_V00
-- **Repository:** https://github.com/jcval94/FitUlt_V00
-- **Signal:** R statistical package development related to distribution fitting / actuarial work
+### Movilidad Social en México
+- **Repository:** https://github.com/jcval94/movilidad_social_mx
+- **Signal:** Streamlit analytical product, social-data storytelling, probabilistic interpretation and mixed-audience design
+- **Boundary:** public audit marks the repo as a fork; contribution scope must not be overstated
+- **Detail:** `movilidad_social_mx.md`
 
-### Tesis
-- **Repository:** https://github.com/jcval94/Tesis
-- **Signal:** public code/materials supporting actuarial thesis work and statistical modeling background
-
-### Ensemble-Learning-for-Time-Series
-- **Repository:** https://github.com/jcval94/Ensemble-Learning-for-Time-Series
-- **Signal:** R ensemble forecasting extension plus a deployed Shiny application
-
-These projects are consolidated in `r_statistical_tooling.md`.
+### R statistical and productivity tooling
+- **Repositories:** DataMiningTools, FitUlt_V00, Tesis, Ensemble-Learning-for-Time-Series, shortcuts, copypaste and ShinyApps
+- **Signal:** R package design, forecasting, actuarial statistics, add-ins, reporting automation and Shiny delivery
+- **Detail:** `r_statistical_tooling.md`
 
 ## Tier C — educational / supplementary repositories
 
-Examples include CS50, IBM course repositories, Kaggle exercises, database coursework, dashboards and smaller experiments.
+Examples include CS50, IBM course repositories, Kaggle exercises, database coursework, the Apps Script/OpenAI expert-panel demo, dashboards and smaller experiments.
 
 ### Usage rule
 
@@ -96,5 +115,7 @@ The public repository history provides evidence of a progression from:
 3. to **independently authored Python libraries for interpretability and data quality**,
 4. to **cloud-deployed ML systems**,
 5. to **structured Generative AI, evaluation and agent-oriented architectures**.
+
+The attached April 2026 GitHub audit covered 62 visible repositories and consolidated them into 20 evidence families. That inventory is useful for coverage, but current repositories and this index take precedence when a newer project or implementation detail exists.
 
 This progression is useful in interviews because it demonstrates continuity: the current GenAI/agent work sits on top of an earlier foundation in statistics, machine learning, software packaging and production-oriented data work.

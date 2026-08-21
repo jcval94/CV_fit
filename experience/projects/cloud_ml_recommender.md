@@ -1,12 +1,19 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: project-cloud-ml-recommender
+record_type: project
 last_updated: 2026-08-20
 status: validated_public
+confidence: high
+visibility: public
 public_safe: true
 project_type: cloud_ml_deployment
 source_repo: https://github.com/jcval94/cloud_function
 primary_language: Python
 cloud: Google Cloud
+source_refs:
+  - SRC-GITHUB-JCVAL94-PUBLIC
+  - SRC-PORTFOLIO-PUBLIC-2026-08
 ---
 
 # Cloud ML Recommender

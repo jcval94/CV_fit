@@ -1,13 +1,19 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: project-sheshe-deldel
+record_type: project
 last_updated: 2026-08-20
 status: validated_public
+confidence: high
+visibility: public
 public_safe: true
 project_type: open_source_ml_research
 source_repos:
   - https://github.com/jcval94/SheShe
   - https://github.com/jcval94/PureSheShe
 primary_language: Python
+source_refs:
+  - SRC-GITHUB-JCVAL94-PUBLIC
 ---
 
 # SheShe / DelDel
