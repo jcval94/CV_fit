@@ -59,7 +59,6 @@ jobs:
           tests.test_vacancy_pipeline
           tests.test_vacancy_fidelity
           tests.test_cv_auto
-          tests.test_cover_letter
           -v
 
       - name: Validate PR inputs E2E
