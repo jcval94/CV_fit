@@ -13,6 +13,8 @@ adapters: gptw_v1 / vacantes_v1
         ↓
 Canonical Vacancy v1
         ↓
+application-language inference
+        ↓
 stable vacancy_id + deduplication
         ↓
 per-source normalized snapshots
@@ -28,6 +30,18 @@ versioned run report / quarantine
 
 The pipeline is intentionally provider-agnostic. It does not build embeddings or generate CVs.
 
+## Application language
+
+The canonical vacancy contains:
+
+- `application_language`: `en | es | fr | und`
+- `language_confidence`: `0..1`
+- `language_source`: `explicit_source | vacancy_text | role_title | undetermined`
+
+Priority is explicit source language, then substantive vacancy description/requirements/responsibilities, then role-title signal. Source-provided candidate fit commentary is deliberately excluded from language inference.
+
+Downstream CV generation treats this as a hard constraint. `und` blocks automatic CV generation until the source language is made explicit.
+
 ## Canonical identity
 
 `vacancy_id` is derived from normalized company + role + location. This is deliberately independent from source-native IDs so the same opening can collapse across GPTW and Vacantes feeds. If location is missing, the normalized URL participates in the identity key.
@@ -37,6 +51,8 @@ This rule is deterministic and auditable. It may still merge two truly separate 
 ## Incrementality and idempotence
 
 `vacancy_state/manifest.json` stores a SHA-256 for every source file. Unchanged files are not reparsed. New, modified or deleted files identify the affected vacancy IDs. Only those IDs are re-merged, re-chunked and reindexed; unchanged vacancies keep their existing index entries.
+
+The manifest also stores `pipeline_version`. A change to normalization/chunk semantics increments this version and triggers one controlled rebuild, preventing unchanged raw JSON from retaining stale derived records after a code upgrade. Normal runs remain incremental.
 
 A full rebuild exists for validation and recovery, but is not the normal execution path.
 
@@ -66,11 +82,13 @@ This is derived, versioned state. Input feeds remain canonical for vacancy prove
 
 Each vacancy produces up to three stable chunks:
 
-- `vac-...::core`: role/company/location/seniority/context
+- `vac-...::core`: role/company/location/seniority/application language/context
 - `vac-...::requirements`: technologies, requirements and responsibilities
 - `vac-...::source-fit`: source-provided fit score/reasoning, kept separate so it is never confused with vacancy facts
 
-The lexical index is a transparent first retrieval layer and a stable substrate for later dense embeddings. Vector infrastructure is intentionally deferred.
+`source-fit` is excluded from default matching retrieval; it is inspectable only through explicit opt-in.
+
+The lexical index is a transparent first retrieval layer and a stable substrate for later dense embeddings. Vector infrastructure remains deferred.
 
 ## CLI
 
