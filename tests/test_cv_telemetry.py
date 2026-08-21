@@ -14,7 +14,7 @@ class TelemetryTests(unittest.TestCase):
             candidate_tokens=1_000,
             reasoning_tokens=500,
         )
-        expected = ((8_000 * 0.20) + (2_000 * 0.02) + (1_500 * 1.20)) / 1_000_000
+        expected = ((8_000 * 1.00) + (2_000 * 0.10) + (1_500 * 6.00)) / 1_000_000
         self.assertAlmostEqual(cost or 0.0, expected, places=8)
 
     def test_unknown_openai_model_is_unpriced_not_guessed(self) -> None:
