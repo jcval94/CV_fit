@@ -1,0 +1,92 @@
+name: Incremental professional evidence RAG state
+
+on:
+  pull_request:
+    paths:
+      - "experience/**/*.md"
+      - "rag/**"
+      - "tests/test_rag_*.py"
+      - ".github/workflows/evidence-rag.yml"
+  push:
+    branches: [main]
+    paths:
+      - "experience/**/*.md"
+      - "rag/**"
+      - "tests/test_rag_*.py"
+      - ".github/workflows/evidence-rag.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: evidence-rag-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  validate-or-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deterministic dependencies
+        run: python -m pip install --disable-pip-version-check pyyaml
+
+      - name: Validate canonical source and RAG tests
+        run: |
+          python tools/validate_experience.py
+          python -m unittest tests.test_rag_normalize tests.test_rag_evidence -v
+
+      - name: Validate PR evidence E2E
+        if: github.event_name == 'pull_request'
+        run: >-
+          python -m rag.evidence
+          --repo .
+          --state-dir /tmp/cv-fit-rag-state
+          --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}
+          --source-commit ${{ github.sha }}
+          --full-rebuild
+
+      - name: Retrieval smoke test on PR
+        if: github.event_name == 'pull_request'
+        run: python -m rag.retrieve "fraud anomaly detection Python" --state-dir /tmp/cv-fit-rag-state --top-k 5
+
+      - name: Sync latest main before incremental index
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+          echo "PROCESSED_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Incrementally index main evidence
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: >-
+          python -m rag.evidence
+          --repo .
+          --state-dir rag_state
+          --run-id ${{ env.PROCESSED_SHA }}
+          --source-commit ${{ env.PROCESSED_SHA }}
+
+      - name: Retrieval smoke test on main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: python -m rag.retrieve "machine learning production GenAI" --state-dir rag_state --top-k 5
+
+      - name: Commit versioned evidence state
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rag_state
+          if git diff --cached --quiet; then
+            echo "No evidence state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update evidence RAG state for ${PROCESSED_SHA::12}"
+          git pull --rebase origin main
+          git push origin HEAD:main

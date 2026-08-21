@@ -1,0 +1,10 @@
+metrics_to_run:
+  - instruction_following
+  - grounding
+  - hallucination
+  - safety
+  - text_quality
+
+# Live LLM evals are intentionally not part of ordinary PR CI because they
+# require credentials and incur model cost. Run with agents-cli after the
+# deterministic regression suite is green.

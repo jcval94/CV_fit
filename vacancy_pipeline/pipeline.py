@@ -10,7 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from vacancy_pipeline import STATE_SCHEMA_VERSION
+from vacancy_pipeline import STATE_SCHEMA_VERSION, VACANCY_PIPELINE_VERSION
 from vacancy_pipeline.chunking import build_chunks, merge_records
 from vacancy_pipeline.contract import VacancyValidationError, load_and_adapt, sha256_bytes
 from vacancy_pipeline.index import add_chunks, empty_index, remove_vacancy
@@ -89,13 +89,21 @@ def run_pipeline(
 ) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     state_dir = state_dir.resolve()
+    manifest_path = state_dir / "manifest.json"
+    existing_manifest = _read_json(manifest_path, {"schema_version": STATE_SCHEMA_VERSION, "sources": {}})
+    if existing_manifest.get("pipeline_version") != VACANCY_PIPELINE_VERSION:
+        full_rebuild = True
+        LOG.info(
+            "pipeline version changed previous=%s current=%s; forcing controlled rebuild",
+            existing_manifest.get("pipeline_version"),
+            VACANCY_PIPELINE_VERSION,
+        )
     if full_rebuild:
         _clear_for_full_rebuild(state_dir)
 
     run_id = run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     source_commit = source_commit or os.getenv("GITHUB_SHA")
-    manifest_path = state_dir / "manifest.json"
-    manifest = _read_json(manifest_path, {"schema_version": STATE_SCHEMA_VERSION, "sources": {}})
+    manifest = _read_json(manifest_path, {"schema_version": STATE_SCHEMA_VERSION, "pipeline_version": VACANCY_PIPELINE_VERSION, "sources": {}})
     previous_sources: dict[str, dict[str, Any]] = dict(manifest.get("sources", {}))
     next_sources: dict[str, dict[str, Any]] = dict(previous_sources)
     index = _load_index(state_dir)
@@ -191,7 +199,6 @@ def run_pipeline(
         next_sources.pop(source_path, None)
         LOG.info("deleted source=%s", source_path)
 
-    # Only source snapshots are read here; unchanged raw JSON files are never reparsed.
     contributions: dict[str, list[VacancyRecord]] = {vacancy_id: [] for vacancy_id in impacted_vacancy_ids}
     for entry in next_sources.values():
         for record in _load_source_records(state_dir, entry):
@@ -247,6 +254,7 @@ def run_pipeline(
 
     _write_json(manifest_path, {
         "schema_version": STATE_SCHEMA_VERSION,
+        "pipeline_version": VACANCY_PIPELINE_VERSION,
         "last_run_id": run_id,
         "sources": dict(sorted(next_sources.items())),
     })
@@ -254,6 +262,7 @@ def run_pipeline(
     active_vacancies = len(list((state_dir / "records").glob("*.json"))) if (state_dir / "records").exists() else 0
     report = {
         "schema_version": STATE_SCHEMA_VERSION,
+        "pipeline_version": VACANCY_PIPELINE_VERSION,
         "run_id": run_id,
         "source_commit": source_commit,
         "status": "completed_with_quarantine" if quarantined_paths else "success",
