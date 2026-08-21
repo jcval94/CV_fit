@@ -34,10 +34,11 @@ The public portfolio shows a deliberate pause during 2019 for an exchange in Ire
 - **Contributions:**
   - designed fraud-monitoring KPIs for excessive sales/prescriptions
   - applied principal component analysis and outlier detection
-  - developed a supporting R package
+  - developed supporting R tooling
   - defined unsupervised indicators related to willingness and ability to pay
   - helped deliver a monitoring application for insurance-portfolio health
-- **Public outcomes:** see `ACH-MS-FRAUD-001` in the achievement registry
+- **Canonical project:** [Insurance Fraud Monitoring](../projects/consulting_insurance_fraud_monitoring.md)
+- **Public outcome:** `ACH-MS-FRAUD-001` in the achievement registry
 
 ### Professional-development pause
 
@@ -54,7 +55,8 @@ The public portfolio shows a deliberate pause during 2019 for an exchange in Ire
   - performed A/B testing on deployed solutions
   - supported data-lake-to-data-warehouse migration
   - defined layouts, formats and relationships to preserve information consistency
-- **Public outcome:** `ACH-MS-MIGRATION-001` preserves the portfolio's large row-count claim as conditional until its unit representation is reconciled
+- **Canonical project:** [Data Migration, Reconciliation & QA](../projects/consulting_data_migration.md)
+- **Public outcome:** `ACH-MS-MIGRATION-001` remains conditional until its unit representation is reconciled
 
 ### Business Consultant — Senior Data Scientist
 
@@ -63,7 +65,8 @@ The public portfolio shows a deliberate pause during 2019 for an exchange in Ire
   - led a multidisciplinary effort to forecast monthly mainframe operating costs using Bayesian linear regression
   - developed a PySpark/MicroStrategy model and dashboard to predict/prioritize false clarifications
   - collaborated with fraud-prevention specialists to incorporate expert insight into prioritization
-- **Public outcomes:** see `ACH-MS-CLARIFICATIONS-001` and `ACH-MS-CLARIFICATIONS-002`
+- **Canonical project:** [Clarification Prioritization](../projects/consulting_clarification_prioritization.md)
+- **Public outcomes:** `ACH-MS-CLARIFICATIONS-001` and `ACH-MS-CLARIFICATIONS-002`
 
 ## Skills evidenced
 
@@ -82,3 +85,4 @@ The public portfolio shows a deliberate pause during 2019 for an exchange in Ire
 - Use the exact subrole periods above from the current public portfolio.
 - Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.
 - Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.
+- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording.
