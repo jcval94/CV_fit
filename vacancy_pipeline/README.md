@@ -11,9 +11,11 @@ source-format validation (atomic per file)
         ↓
 adapters: gptw_v1 / vacantes_v1
         ↓
-Canonical Vacancy v1
+Canonical Vacancy v2
         ↓
 application-language inference
+        ↓
+JD fidelity assessment
         ↓
 stable vacancy_id + deduplication
         ↓
@@ -42,6 +44,19 @@ Priority is explicit source language, then substantive vacancy description/requi
 
 Downstream CV generation treats this as a hard constraint. `und` blocks automatic CV generation until the source language is made explicit.
 
+## JD fidelity
+
+Canonical Vacancy v2 derives four additional fields from employer-authored vacancy content:
+
+- `jd_fidelity`: `full | partial | sparse`
+- `jd_fidelity_score`: transparent `0..100` detail score
+- `jd_fidelity_reasons`: the description/detail counts behind the classification
+- `jd_generation_eligible`: `true` only for `partial` or `full`
+
+Only the original `description`, `requirements` and `responsibilities` count toward this assessment. Source fit commentary, fit scores and inferred `tech_stack` terms are deliberately excluded because they are not substitutes for the employer's Job Description.
+
+A `sparse` vacancy remains valid for discovery, ranking and evidence matching, but `cv_agent` blocks live CV generation before any model call. The intended recovery is to enrich the source JSON with the original JD, not to ask an LLM to infer missing requirements.
+
 ## Canonical identity
 
 `vacancy_id` is derived from normalized company + role + location. This is deliberately independent from source-native IDs so the same opening can collapse across GPTW and Vacantes feeds. If location is missing, the normalized URL participates in the identity key.
@@ -53,6 +68,8 @@ This rule is deterministic and auditable. It may still merge two truly separate 
 `vacancy_state/manifest.json` stores a SHA-256 for every source file. Unchanged files are not reparsed. New, modified or deleted files identify the affected vacancy IDs. Only those IDs are re-merged, re-chunked and reindexed; unchanged vacancies keep their existing index entries.
 
 The manifest also stores `pipeline_version`. A change to normalization/chunk semantics increments this version and triggers one controlled rebuild, preventing unchanged raw JSON from retaining stale derived records after a code upgrade. Normal runs remain incremental.
+
+CI now executes an immediate second run after each validation/main update and requires a true no-op: zero new/modified sources, zero impacted vacancies and zero reindexed vacancies. This turns idempotence from a unit-test assumption into an E2E invariant.
 
 A full rebuild exists for validation and recovery, but is not the normal execution path.
 
@@ -82,7 +99,7 @@ This is derived, versioned state. Input feeds remain canonical for vacancy prove
 
 Each vacancy produces up to three stable chunks:
 
-- `vac-...::core`: role/company/location/seniority/application language/context
+- `vac-...::core`: role/company/location/seniority/application language/JD fidelity/context
 - `vac-...::requirements`: technologies, requirements and responsibilities
 - `vac-...::source-fit`: source-provided fit score/reasoning, kept separate so it is never confused with vacancy facts
 
