@@ -3,6 +3,8 @@ from __future__ import annotations
 import os
 from dataclasses import asdict, dataclass
 
+from cv_agent.openai_provider import validate_openai_model_id
+
 
 MAX_REVIEW_ITERATIONS = 5
 
@@ -21,12 +23,14 @@ class IterationModelPolicy:
 
 
 def model_ids() -> dict[str, str]:
-    """Resolve model IDs at runtime so preview/GA replacements need no code change."""
-    return {
-        "economy": os.getenv("CV_FIT_MODEL_ECONOMY", "gemini-3.5-flash-lite"),
-        "balanced": os.getenv("CV_FIT_MODEL_BALANCED", "gemini-3.6-flash"),
-        "premium": os.getenv("CV_FIT_MODEL_PREMIUM", "gemini-3.1-pro-preview"),
+    """Resolve OpenAI model IDs at runtime while preserving one-provider policy."""
+
+    models = {
+        "economy": os.getenv("CV_FIT_MODEL_ECONOMY", "gpt-5.6-luna"),
+        "balanced": os.getenv("CV_FIT_MODEL_BALANCED", "gpt-5.6-terra"),
+        "premium": os.getenv("CV_FIT_MODEL_PREMIUM", "gpt-5.6-sol"),
     }
+    return {tier: validate_openai_model_id(model) for tier, model in models.items()}
 
 
 def policy_for_iteration(iteration: int) -> IterationModelPolicy:
