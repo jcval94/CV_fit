@@ -32,24 +32,44 @@ def load_evidence_catalog(evidence_state: Path) -> dict[str, dict[str, Any]]:
     return catalog
 
 
+def assert_vacancy_generation_ready(vacancy: dict[str, Any], *, allow_sparse_jd: bool = False) -> None:
+    if vacancy.get("application_language") == "und":
+        raise ValueError(
+            f"vacancy {vacancy.get('vacancy_id')} has undetermined application_language; "
+            "set an explicit source language before CV generation"
+        )
+
+    if vacancy.get("jd_generation_eligible"):
+        return
+    if allow_sparse_jd:
+        return
+
+    reasons = vacancy.get("jd_fidelity_reasons") or []
+    detail = "; ".join(str(item) for item in reasons)
+    raise ValueError(
+        f"vacancy {vacancy.get('vacancy_id')} is not CV-generation eligible: "
+        f"jd_fidelity={vacancy.get('jd_fidelity', 'unknown')} "
+        f"score={vacancy.get('jd_fidelity_score', 'unknown')}. "
+        "Preserve the employer's original description/requirements/responsibilities before spending model tokens. "
+        f"Details: {detail}"
+    )
+
+
 def assemble_application_context(
     vacancy_id: str,
     *,
     vacancy_state: Path = Path("vacancy_state"),
     evidence_state: Path = Path("rag_state"),
+    allow_sparse_jd: bool = False,
 ) -> dict[str, Any]:
     vacancy = load_vacancy(vacancy_id, vacancy_state)
+    assert_vacancy_generation_ready(vacancy, allow_sparse_jd=allow_sparse_jd)
+
     match_plan = build_match(vacancy_id, vacancy_state=vacancy_state, evidence_state=evidence_state)
     catalog = load_evidence_catalog(evidence_state)
     selected_ids = match_plan.get("selected_evidence_chunk_ids", [])
     selected = [catalog[chunk_id] for chunk_id in selected_ids if chunk_id in catalog and catalog[chunk_id].get("cv_eligible")]
     selected.sort(key=lambda item: item["chunk_id"])
-
-    if vacancy.get("application_language") == "und":
-        raise ValueError(
-            f"vacancy {vacancy_id} has undetermined application_language; "
-            "set an explicit source language before CV generation"
-        )
 
     return {
         "vacancy": vacancy,
