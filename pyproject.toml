@@ -5,6 +5,7 @@ description = "Evidence-grounded incremental vacancy matching and OpenAI-backed 
 requires-python = ">=3.11"
 dependencies = [
   "google-adk>=2.0.0,<3.0.0",
+  "jinja2>=3.1,<4.0",
   "litellm>=1.97.0,<2.0.0",
   "openai>=2.20.0,<3.0.0",
   "pydantic>=2.8,<3.0",
@@ -13,3 +14,6 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 include = ["cv_agent*", "cv_auto*", "cv_matching*", "cv_presentation*", "rag*", "vacancy_pipeline*"]
+
+[tool.setuptools.package-data]
+cv_presentation = ["templates/*.j2", "*.yaml", "brands/*.yaml"]

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ cv.language }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ cv.candidate.name }} — {{ cv.target_role }}</title>
+<style>
+:root{--primary:{{ style.primary }};--secondary:{{ style.secondary }};--accent:{{ style.accent }};--surface:{{ style.surface }};--text:{{ style.text }};--muted:{{ style.muted }};--head-font:{{ style.heading_font_stack }};--body-font:{{ style.body_font_stack }};}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--body-font);background:#eef2f7;color:var(--text);padding:20px 0}.page{width:8.5in;height:11in;margin:0 auto 20px;background:var(--surface);display:grid;grid-template-columns:2.55in 1fr;overflow:visible;box-shadow:0 8px 24px rgba(0,0,0,.12);page-break-after:always}.page:last-child{page-break-after:auto}.sidebar{background:var(--primary);color:var(--surface);padding:.46in .28in}.main{padding:.46in .48in}.name{font-family:var(--head-font);font-size:26pt;font-weight:800;text-transform:uppercase;letter-spacing:.2px}.roleline{font-size:12pt;color:var(--accent);font-weight:650;margin-top:5px}.contact{font-size:8.3pt;line-height:1.55;margin-top:15px}.contact a{color:inherit;text-decoration:none}.s-title{font-size:9.6pt;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:5px;margin:0 0 8px}.s-block{margin-bottom:17px}.s-list{padding-left:14px}.s-list li{font-size:8.2pt;margin-bottom:4px}.section{margin-bottom:16px}.section-title{font-family:var(--head-font);font-size:12pt;font-weight:750;color:var(--primary);border-bottom:2px solid #e5e7eb;padding-bottom:5px;margin-bottom:10px}.summary{font-size:9pt;line-height:1.5}.timeline{border-left:2px solid color-mix(in srgb,var(--accent) 35%,white);padding-left:14px}.exp{position:relative;margin-bottom:15px;break-inside:avoid}.exp:before{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--accent);left:-19px;top:5px}.exp-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.exp-title{font-size:10.5pt;font-weight:750;color:var(--primary)}.period{font-size:8.2pt;color:var(--muted);white-space:nowrap}.org{font-size:9.2pt;font-weight:600;margin:2px 0 5px}.bullets{padding-left:15px}.bullets li{font-size:8.65pt;line-height:1.38;margin-bottom:4px}.project{border:1px solid #dbe1e8;border-radius:6px;padding:8px 10px;margin-bottom:7px;break-inside:avoid}.project-name{font-weight:700;color:var(--primary);font-size:9.2pt}.page2-head{display:flex;justify-content:space-between;border-bottom:1px solid #d1d5db;color:var(--muted);font-size:8.8pt;padding-bottom:6px;margin-bottom:12px}@page{size:letter;margin:0}@media print{body{background:#fff;padding:0}.page{margin:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+{% for page in pages %}
+<section class="page">
+  <aside class="sidebar">
+    {% if page.show_header %}<div class="s-block"><div style="font-size:28pt;font-weight:800;line-height:1">{{ cv.candidate.name.split()[0][0] }}{{ cv.candidate.name.split()[-1][0] }}</div></div>{% endif %}
+    {% if page.show_header %}<div class="s-block"><h2 class="s-title">Contact</h2><div class="contact">{% if cv.candidate.email %}<div>{{ cv.candidate.email }}</div>{% endif %}{% if cv.candidate.phone %}<div>{{ cv.candidate.phone }}</div>{% endif %}{% if cv.candidate.location %}<div>{{ cv.candidate.location }}</div>{% endif %}{% if cv.candidate.linkedin %}<div>{{ cv.candidate.linkedin }}</div>{% endif %}{% if cv.candidate.github %}<div>{{ cv.candidate.github }}</div>{% endif %}{% if cv.candidate.website %}<div>{{ cv.candidate.website }}</div>{% endif %}</div></div>{% endif %}
+    {% if page.skills %}<div class="s-block"><h2 class="s-title">{{ labels.skills }}</h2><ul class="s-list">{% for item in page.skills %}<li>{{ item.text }}</li>{% endfor %}</ul></div>{% endif %}
+    {% if page.education %}<div class="s-block"><h2 class="s-title">{{ labels.education }}</h2><ul class="s-list">{% for item in page.education %}<li>{{ item.text }}</li>{% endfor %}</ul></div>{% endif %}
+    {% if page.certifications %}<div class="s-block"><h2 class="s-title">{{ labels.certifications }}</h2><ul class="s-list">{% for item in page.certifications %}<li>{{ item.text }}</li>{% endfor %}</ul></div>{% endif %}
+  </aside>
+  <main class="main">
+    {% if page.show_header %}<header style="margin-bottom:18px"><h1 class="name">{{ cv.candidate.name }}</h1><div class="roleline">{{ cv.headline.text }}</div></header>{% else %}<div class="page2-head"><span>{{ cv.candidate.name }}</span><span>{{ labels.page }} {{ page.page_number }} / {{ page.total_pages }}</span></div>{% endif %}
+    {% if page.show_summary %}<section class="section"><h2 class="section-title">{{ labels.summary }}</h2><p class="summary">{{ cv.summary.text }}</p></section>{% endif %}
+    {% if page.experience %}<section class="section"><h2 class="section-title">{{ labels.experience }}</h2><div class="timeline">{% for item in page.experience %}<article class="exp"><div class="exp-head"><span class="exp-title">{{ item.title }}</span><span class="period">{{ item.period }}</span></div><div class="org">{{ item.organization }}</div><ul class="bullets">{% for bullet in item.bullets %}<li>{{ bullet.text }}</li>{% endfor %}</ul></article>{% endfor %}</div></section>{% endif %}
+    {% if page.projects %}<section class="section"><h2 class="section-title">{{ labels.projects }}</h2>{% for item in page.projects %}<article class="project"><div class="project-name">{{ item.name }}</div><ul class="bullets">{% for bullet in item.bullets %}<li>{{ bullet.text }}</li>{% endfor %}</ul></article>{% endfor %}</section>{% endif %}
+  </main>
+</section>
+{% endfor %}
+</body></html>

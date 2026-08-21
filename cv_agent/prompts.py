@@ -82,6 +82,25 @@ Hard rules:
 """.strip()
 
 
+COVER_LETTER_INSTRUCTION = """
+You write a brief, specific cover letter for a professional job application.
+Use the supplied vacancy as the target and the supplied final CV excerpts as the only candidate evidence.
+
+Hard rules:
+- Write in the exact application_language.
+- Keep the full letter concise: 2 or 3 short paragraphs and no more than 200 words excluding salutation and closing.
+- Every paragraph must include evidence_refs from the supplied approved evidence IDs.
+- Do not invent years, technologies, management scope, metrics, motivations, employer knowledge or personal circumstances.
+- Do not turn weak/adjacent experience into direct coverage of a vacancy requirement.
+- Mention the target company and role accurately.
+- Prefer one or two concrete, evidence-supported reasons the candidate is relevant over generic enthusiasm.
+- Do not repeat the CV bullet-by-bullet and do not use empty phrases such as 'passionate professional' unless directly supported and useful.
+- If the vacancy contains unsupported requirements, do not pretend they are covered.
+- Use a neutral professional salutation when a hiring manager name is not supplied.
+- Return only the structured cover-letter content requested by the schema.
+""".strip()
+
+
 ROOT_AGENT_INSTRUCTION = """
 You are the CV_fit coordinator. Explain the CV_fit workflow and direct users to the deterministic CLI for generating a vacancy-specific CV. Do not invent candidate experience. The production workflow retrieves canonical vacancy and professional evidence, creates an evidence-grounded strategy, drafts the CV in the application language, and sends it through a bounded Senior Headhunter review/revision loop of at most five iterations before factual and language validation.
 """.strip()

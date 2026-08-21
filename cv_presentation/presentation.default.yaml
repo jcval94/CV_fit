@@ -3,8 +3,7 @@ schema_version: 1
 document:
   page_size: letter
   target_pages: 2
-  # Contract only. HTML implementation comes in the next stage.
-  template_id: ats_classic_v1
+  template_id: executive_letter_v1
 
 layout:
   section_order:
