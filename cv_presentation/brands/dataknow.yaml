@@ -1,0 +1,15 @@
+company: DataKnow
+source_kind: verified_manual
+source_url: https://dataknow.io/
+verified: true
+primary: "#1E3A8A"
+secondary: "#334155"
+accent: "#6D28D9"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: humanist_sans
+body_font: system_sans
+notes:
+  - "Profile is grounded in DataKnow's official site and keeps the cool blue/purple visual family while prioritizing print contrast."
+  - "Hex values are manual accessible CV adaptations, not claims about exact official digital tokens."
