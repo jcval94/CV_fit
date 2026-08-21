@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-21",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Preservación de JD completa para generación CV"
+  },
+  "jd_source_url": "https://www.careers.ford.com/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056",
+  "jd_retrieved_at": "2026-08-21T22:12:00Z",
+  "jd_capture_mode": "employer_posting_secondary_mirror_structured_paraphrase",
+  "jd_capture_note": "The employer careers URL is preserved as the application URL; detailed employer-authored text was captured from a current mirrored listing because the Ford careers page was not directly retrievable in the research environment.",
+  "vacantes": [
+    {
+      "id_vacante": "fd925341b8ab-enriched",
+      "puesto": "Data Scientist NLP (AI) Engineer",
+      "empresa": "Ford Motor Company",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Mexico City, Mexico / Remote",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 1-2 días",
+      "url_postulacion": "https://www.careers.ford.com/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056",
+      "application_language": "en",
+      "description": "Data Scientist role focused on natural language processing, Large Language Models and generative AI. The role works across product, engineering, analytics and business teams to translate ambiguous business needs into reliable, scalable and production-ready AI solutions, combining applied data science with LLM applications, evaluation, responsible AI controls and cloud deployment on Google Cloud Platform.",
+      "requirements": [
+        "Bachelor's degree in Data Science, Computer Science, Statistics, Mathematics, Engineering or a related quantitative field, or equivalent practical experience.",
+        "Professional experience in data science, machine learning, applied AI, NLP or a related technical role.",
+        "Strong Python and SQL skills with maintainable, testable, production-quality software practices.",
+        "Hands-on experience developing applications with commercial or open-source LLMs, prompt engineering, model integration and core NLP concepts.",
+        "Experience with GCP data and AI services, particularly Vertex AI and BigQuery, or comparable major-cloud experience with ability to transition to GCP.",
+        "Experience with APIs, containers, CI/CD, identity/access management and production monitoring.",
+        "Ability to translate ambiguous business needs into measurable technical objectives and deliver iteratively in cross-functional teams.",
+        "Preferred experience includes Vertex AI tooling, BigQuery ML/Dataflow, LLM evaluation datasets, red-team tests, LLMOps/MLOps, scalable inference and regulated or safety-conscious environments."
+      ],
+      "responsibilities": [
+        "Design, prototype, evaluate and productionize LLM-powered applications for enterprise and customer-facing use cases.",
+        "Develop prompt strategies, structured-output workflows, routing, context-management approaches and model adaptation methods where appropriate.",
+        "Create LLM evaluation frameworks spanning task quality, factuality, relevance, robustness, latency, cost, safety and user experience.",
+        "Explore agentic AI patterns including planning, tool/function calling, memory, reflection, human approvals and multi-step workflows.",
+        "Develop scalable AI/ML solutions on GCP using services such as Vertex AI, BigQuery, Cloud Storage, Cloud Run, Cloud Functions and Pub/Sub.",
+        "Build reusable Python components, APIs, experimentation pipelines, data products and structured/unstructured data pipelines.",
+        "Perform exploratory analysis, feature engineering, statistical modeling and machine learning for broader data science needs.",
+        "Implement observability, monitoring, guardrails, automated testing and feedback loops for deployed AI systems.",
+        "Communicate technical findings, risks, tradeoffs and recommendations to technical and non-technical stakeholders."
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "NLP",
+        "LLMs",
+        "Generative AI",
+        "Agentic AI",
+        "GCP",
+        "Vertex AI",
+        "BigQuery",
+        "Cloud Run",
+        "CI/CD",
+        "MLOps",
+        "LLM evaluation",
+        "Responsible AI"
+      ]
+    }
+  ]
+}
