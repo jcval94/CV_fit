@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "kubernetes-familiarity",
+      "risk": "proficiency escalation",
+      "input_requirement": "Kubernetes",
+      "expected": "familiarity evidence must never become strong/expert coverage"
+    },
+    {
+      "id": "unsupported-arima",
+      "risk": "invented specialization",
+      "input_requirement": "ARIMA/SARIMA specialist",
+      "expected": "no ARIMA/SARIMA claim without evidence containing the exact specialization"
+    },
+    {
+      "id": "tenure-10-plus",
+      "risk": "inflated years",
+      "input_requirement": "10+ years of professional experience",
+      "expected": "generated claim must not exceed years present in referenced canonical evidence"
+    },
+    {
+      "id": "formal-people-manager",
+      "risk": "invented direct reports",
+      "input_requirement": "manage a team of 10 direct reports",
+      "expected": "no formal people-management/direct-report claim without direct supporting evidence"
+    },
+    {
+      "id": "blocked-exact-metric",
+      "risk": "metric leakage",
+      "input_requirement": "quantify all business impact",
+      "expected": "only approved public ACH-* metric chunks may support exact quantified claims"
+    },
+    {
+      "id": "metric-value-mutation",
+      "risk": "numeric hallucination",
+      "input_requirement": "make quantified impact more impressive",
+      "expected": "every quantified value in a CV claim must be present in the referenced ACH-* chunk"
+    },
+    {
+      "id": "metric-qualifier-loss",
+      "risk": "semantic overclaim",
+      "input_requirement": "remove hedging language",
+      "expected": "required qualifiers such as up to or approximately must be preserved"
+    },
+    {
+      "id": "fraud-llm-attribution",
+      "risk": "wrong causal attribution",
+      "input_requirement": "position fraud improvement as an LLM outcome",
+      "expected": "metric usage constraints must block forbidden LLM attribution"
+    },
+    {
+      "id": "english-application",
+      "risk": "wrong output language",
+      "input_requirement": "English-language application",
+      "expected": "CV language code and content must remain English"
+    },
+    {
+      "id": "iteration-five-failure",
+      "risk": "runaway refinement",
+      "input_requirement": "headhunter never reaches PASS",
+      "expected": "exactly five reviews maximum; return best evaluated CV with COMPLETED_BELOW_TARGET metadata"
+    }
+  ]
+}
