@@ -3,6 +3,8 @@ name: Validate and run CV ADK agent
 on:
   pull_request:
     paths:
+      - "GPTW/**/*.json"
+      - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
       - "rag/**"
@@ -17,6 +19,8 @@ on:
   push:
     branches: [main]
     paths:
+      - "GPTW/**/*.json"
+      - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
       - "rag/**"
@@ -33,6 +37,7 @@ on:
       vacancy_id:
         description: "Canonical vacancy_id to generate"
         required: true
+        default: "vac-04e92192e608ea02"
         type: string
 
 permissions:
@@ -50,12 +55,13 @@ jobs:
           python-version: "3.12"
       - name: Install ADK project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Run deterministic agent, matching and fidelity tests
+      - name: Run deterministic agent, matching, fidelity and telemetry tests
         run: >-
           python -m unittest
           tests.test_cv_matching
           tests.test_cv_validators
           tests.test_cv_agent_workflow
+          tests.test_cv_telemetry
           tests.test_openai_provider
           tests.test_vacancy_fidelity
           -v
@@ -73,6 +79,7 @@ jobs:
           records = sorted(Path("/tmp/vacancy_state/records").glob("*.json"))
           assert records, "no canonical vacancies were produced"
           fidelity = Counter()
+          eligible = []
           for path in records:
               context = assemble_application_context(
                   path.stem,
@@ -86,6 +93,8 @@ jobs:
               assert vacancy["jd_generation_eligible"] == (vacancy["jd_fidelity"] != "sparse")
               assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
               fidelity[vacancy["jd_fidelity"]] += 1
+              if vacancy["jd_generation_eligible"]:
+                  eligible.append(path.stem)
               print(
                   path.stem,
                   "language=", vacancy["application_language"],
@@ -94,7 +103,39 @@ jobs:
                   "coverage=", context["match_plan"]["coverage_score"],
                   "evidence_chunks=", len(context["evidence_chunks"]),
               )
+          assert eligible, "expected at least one CV-generation-eligible canary vacancy"
           print("fidelity_counts=", dict(sorted(fidelity.items())))
+          print("generation_eligible=", eligible)
+          PY
+      - name: Validate Konfio canary preflight without model calls
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from cv_agent.context import assemble_application_context
+
+          vacancy_id = "vac-04e92192e608ea02"
+          context = assemble_application_context(
+              vacancy_id,
+              vacancy_state=Path("/tmp/vacancy_state"),
+              evidence_state=Path("/tmp/rag_state"),
+          )
+          vacancy = context["vacancy"]
+          sources = {item["source_path"] for item in vacancy["provenance"]}
+          assert vacancy["company"] == "Konfío", vacancy
+          assert vacancy["jd_fidelity"] == "full", vacancy
+          assert vacancy["jd_generation_eligible"] is True, vacancy
+          assert vacancy["application_language"] == "es", vacancy
+          assert "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json" in sources, sources
+          assert vacancy["requirements"], vacancy
+          assert vacancy["responsibilities"], vacancy
+          print(
+              "canary_preflight=PASS",
+              "jd_score=", vacancy["jd_fidelity_score"],
+              "language=", vacancy["application_language"],
+              "coverage=", context["match_plan"]["coverage_score"],
+              "sources=", sorted(sources),
+          )
           PY
       - name: Import OpenAI-backed ADK app without live credentials
         run: python -c "from cv_agent.agent import app, root_agent; assert app is not None; assert root_agent.name == 'root_agent'"
