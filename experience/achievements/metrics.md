@@ -1,9 +1,19 @@
 ---
-schema_version: 2
+schema_version: 3
+record_id: achievement-metrics
+record_type: achievement_registry
 last_updated: 2026-08-20
-status: populated_public_safe
+status: canonical
+confidence: high
+visibility: public
+public_safe: true
 repository_visibility: public
 usage_policy: "Only achievements marked public_safe=true and cv_usage=approved may be automatically inserted into externally generated CVs from this repository. Internal metrics must remain redacted unless the repository becomes private or the user explicitly confirms public disclosure. Synthetic benchmark metrics must be labeled as technical benchmarks and never presented as business outcomes."
+source_refs:
+  - SRC-USER-CONFIRMED-2026-08-20
+  - SRC-LINKEDIN-PUBLIC
+  - SRC-PORTFOLIO-PUBLIC-2026-08
+  - SRC-GITHUB-JCVAL94-PUBLIC
 ---
 
 # Validated Achievement Metrics
@@ -80,6 +90,122 @@ This file preserves not only the number, but also what the number actually means
 - **Source:** José Carlos's public LinkedIn activity describing the manual alternative as requiring an additional "Q" per year
 - **Approved wording:** none yet
 - **Usage constraint:** do not automatically put this claim into a CV until the meaning of "Q adicional al año" is explicitly normalized and defendable.
+
+## ACH-BBVA-ATM-001 — Annual savings per redistributed ATM
+
+- **Project:** ATM and physical-network analytics
+- **Organization:** BBVA México
+- **Metric:** annual savings per redistributed ATM
+- **Result:** `approximately MXN 1 million per ATM per year`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio
+- **Approved CV wording:** "Contributed to an ATM/branch decision-support model publicly reported to save approximately MXN 1 million annually per redistributed ATM."
+- **Usage constraint:** preserve `approximately` and the per-ATM denominator; present as project impact, not as individual cash savings personally realized.
+
+## ACH-BBVA-SEGMENTATION-001 — Customer-value separation
+
+- **Project:** customer segmentation / remote banking prioritization
+- **Organization:** BBVA México
+- **Metric:** estimated value per customer in selected versus filtered segment
+- **Result:** `MXN 80,000 versus MXN 102 per customer`
+- **Status:** needs_reconciliation
+- **Public safe:** true
+- **CV usage:** conditional
+- **Source:** current public professional portfolio
+- **Approved wording:** none yet
+- **Usage constraint:** do not use automatically until the definition of "value," estimation window and comparability of both groups are documented.
+
+## ACH-BBVA-FRAUD-REVIEW-001 — Review-pool reduction
+
+- **Project:** hybrid claim/fraud prioritization
+- **Organization:** BBVA México
+- **Metric:** cases requiring evaluation
+- **Result:** `1 in 450 -> 1 in 34`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio; current user confirmation
+- **Approved CV wording:** "Built hybrid fraud-prioritization logic that reduced the evaluation pool from 1 in 450 cases to 1 in 34."
+- **Usage constraint:** describe this as review prioritization/efficiency, not as an accuracy metric.
+
+## ACH-BBVA-FRAUD-DETECTION-001 — Detection-rate improvement
+
+- **Project:** hybrid rules + anomaly-detection workstream
+- **Organization:** BBVA México
+- **Metric:** fraud/malpractice detection rate
+- **Result:** `19% -> 37%`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio; current user confirmation
+- **Approved CV wording:** "Improved the detection rate from 19% to 37% through a hybrid rules, anomaly-detection and statistical-validation approach while reducing false positives."
+- **Usage constraint:** do not attribute this improvement to the normative LLM assistant; the public portfolio places the statements together, but current user confirmation identifies them as separate workstreams.
+
+## ACH-MS-FRAUD-001 — Insurance fraud cases identified
+
+- **Project:** insurance fraud monitoring
+- **Organization:** Management Solutions
+- **Metric:** fraud cases identified per month
+- **Result:** `8 cases per month`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio
+- **Approved CV wording:** "Designed fraud-monitoring KPIs using PCA and outlier detection in a program that identified eight insurance fraud cases per month."
+- **Usage constraint:** retain project/team attribution; do not imply every case was identified solely by one algorithm.
+
+## ACH-MS-CLARIFICATIONS-001 — Quarterly savings
+
+- **Project:** clarification prioritization
+- **Organization:** Management Solutions
+- **Metric:** quarterly savings
+- **Result:** `up to MXN 1.8 million per quarter`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio
+- **Approved CV wording:** "Contributed to a clarification-prioritization model and dashboard associated with savings of up to MXN 1.8 million per quarter."
+- **Usage constraint:** preserve `up to` and project-level attribution.
+
+## ACH-MS-CLARIFICATIONS-002 — Daily analyst capacity
+
+- **Project:** clarification prioritization
+- **Organization:** Management Solutions
+- **Metric:** cases processed per analyst per day
+- **Result:** `25 -> 120`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio
+- **Approved CV wording:** "Helped increase clarification-processing capacity from 25 to 120 cases per analyst per day through ML-based prioritization and interactive reporting."
+- **Usage constraint:** preserve the per-analyst/day denominator and team/project attribution.
+
+## ACH-MS-MIGRATION-001 — Data migration scale
+
+- **Project:** data-lake-to-data-warehouse migration
+- **Organization:** Management Solutions
+- **Metric:** migrated rows
+- **Publicly stated result:** `20,000 million rows`
+- **Status:** needs_reconciliation
+- **Public safe:** true
+- **CV usage:** conditional
+- **Source:** current public professional portfolio
+- **Approved wording:** "Supported a large-scale data-lake-to-data-warehouse migration by defining layouts, formats and relationships."
+- **Usage constraint:** do not normalize the stated value to `20 billion` or use the exact figure until the source unit and counting method are confirmed.
+
+## ACH-REPORTING-TIME-001 — SQL/R reporting time saved
+
+- **Project:** SQL Reporting tool
+- **Metric:** weekly analyst time saved
+- **Result:** `approximately 10 hours per week`
+- **Status:** validated_public
+- **Public safe:** true
+- **CV usage:** approved
+- **Source:** current public professional portfolio
+- **Approved CV wording:** "Built an SQL/R reporting tool that integrated Office/PDF outputs and saved approximately 10 hours per week."
+- **Usage constraint:** preserve `approximately`; do not attribute the value to the separate shortcuts package.
 
 ---
 
@@ -235,17 +361,16 @@ These entries intentionally preserve the *existence and semantic role* of import
 - **Known scope:** multiproduct commercial modeling across banking/financial products
 - **Private source should preserve:** product scope, baseline conversion, uplift semantics and evaluation period
 
-## ACH-BBVA-FRAUD-PRIVATE — Hybrid fraud / malpractice detection
+## ACH-BBVA-COMPLIANCE-INTERNAL — Additional compliance alert metrics
 
-- **Project:** Hybrid rules + anomaly-detection system
-- **Domain:** Fraud Analytics / Anomaly Detection / Banking
-- **Metric families:** review efficiency; detection rate
+- **Project family:** conduct-risk and insurance-malpractice alerting
+- **Domain:** Compliance Analytics / Fraud / Banking
+- **Metric families:** alert effectiveness; severe-irregularity share; disciplinary-action share; preventive-intervention reduction
 - **Exact values:** `[REDACTED — PRIVATE SOURCE REQUIRED]`
 - **Status:** redacted
 - **Public safe:** false
 - **CV usage:** blocked_from_public_source
-- **Known technical approach:** business rules + Isolation Forest + statistical validation
-- **Private source should preserve:** review-ratio definition, detection-rate baseline/result, sample period, alert definition and investigation workflow
+- **Usage constraint:** these populations are distinct from `ACH-BBVA-FRAUD-REVIEW-001` and `ACH-BBVA-FRAUD-DETECTION-001`; never merge them into one trend.
 
 ## ACH-BBVA-REMOTE-BANKING-PRIVATE — Remote banking business impact
 
@@ -277,9 +402,14 @@ These entries intentionally preserve the *existence and semantic role* of import
 
 For most Data Science / AI applications, prioritize:
 
+- BBVA hybrid detection: review pool `1 in 450 -> 1 in 34`
+- BBVA hybrid detection: detection rate `19% -> 37%`
 - NorA: `200+ collaborators`
 - NorA: `up to 15x faster consultation handling`
 - NorA: `up to 13x higher demand capacity`
+- BBVA ATM analytics: `approximately MXN 1 million per redistributed ATM per year`
+- Management Solutions: `up to MXN 1.8 million quarterly savings`
+- Management Solutions: capacity `25 -> 120 cases per analyst per day`
 - InsideForest: `30,000+ pip installs`
 - InsideForest: `50+ countries`
 

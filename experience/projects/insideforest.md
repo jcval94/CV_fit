@@ -1,12 +1,19 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: project-insideforest
+record_type: project
 last_updated: 2026-08-20
 status: validated_public
+confidence: high
+visibility: public
 public_safe: true
 project_type: open_source_library
 source_repo: https://github.com/jcval94/InsideForest
 primary_language: Python
 license: MIT
+source_refs:
+  - SRC-GITHUB-JCVAL94-PUBLIC
+  - SRC-LINKEDIN-PUBLIC
 ---
 
 # InsideForest

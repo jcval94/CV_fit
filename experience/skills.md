@@ -1,8 +1,18 @@
 ---
-schema_version: 2
+schema_version: 3
+record_id: skills
+record_type: skills
 last_updated: 2026-08-20
-status: populated
+status: canonical
+confidence: high
+visibility: public
+public_safe: true
 usage_policy: "Generated CVs must prefer demonstrated skills over inferred keywords and must not upgrade familiarity into expert proficiency. Public GitHub repositories may be used as direct technical evidence when the capability is observable in code, packaging, tests, documentation, or reproducible benchmarks."
+source_refs:
+  - SRC-USER-CONFIRMED-2026-08-20
+  - SRC-TRAJECTORY-2021-2023-CURATED
+  - SRC-TRAJECTORY-2024-2026-CURATED
+  - SRC-GITHUB-JCVAL94-PUBLIC
 ---
 
 # Skills
@@ -97,6 +107,11 @@ A vacancy keyword is never evidence by itself.
 - **Coverage:** anomaly detection, outlier analysis and hybrid rule + ML approaches
 - **Evidence:** banking fraud / malpractice detection using rules and Isolation Forest
 
+### Fuzzy Matching / Identity Resolution
+- **Level:** working-to-core
+- **Coverage:** name normalization, edit-distance similarity, probabilistic candidate review and distributed matching against regulatory/watch lists
+- **Evidence:** professional compliance analytics plus public COI/fraud tooling
+
 ### Statistical Modeling
 - **Level:** core
 - **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation and risk modeling
@@ -117,6 +132,11 @@ A vacancy keyword is never evidence by itself.
 - **Coverage:** forecasting, trend analysis, statistical models and ensemble learning for time series
 - **Evidence:** professional demand-forecasting initiatives plus public `Ensemble-Learning-for-Time-Series` implementation and Shiny app
 - **Usage note:** avoid claiming specialization in a specific forecasting family unless the target CV has matching project evidence
+
+### Geospatial Analytics
+- **Level:** working
+- **Coverage:** coordinate aggregation, footprint analysis, ATM/branch location strategy, customer/debtor geolocation and spatial-temporal alert features
+- **Evidence:** BBVA ATM analytics, geolocation engines and public social-mobility/analytical apps
 
 ### Optimization / Decision Modeling
 - **Level:** working
@@ -264,6 +284,11 @@ Do not convert LLM application experience into claims of foundation-model pretra
 - **Coverage:** pytest suites, golden regression, deterministic validation and experiment protocols
 - **Repository evidence:** InsideForest, SheShe/DelDel and narrative_dna
 
+### Code Review / Production QA
+- **Level:** working-to-core
+- **Coverage:** pull-request review, forensic debugging, source-to-report lineage, schema normalization and false-positive remediation
+- **Evidence:** professional review of critical analytical repositories and production data-quality incidents
+
 ### CI/CD
 - **Level:** working
 - **Coverage:** automated testing/deployment concepts and repository-driven delivery
@@ -279,6 +304,11 @@ Do not convert LLM application experience into claims of foundation-model pretra
 ### Airflow
 - **Level:** working
 - **Coverage:** workflow orchestration and scheduled analytical pipelines
+
+### RPA / Web Automation
+- **Level:** working
+- **Coverage:** browser automation, retries, logs, batch execution and secure local processing under InfoSec constraints
+- **Evidence:** Python/Selenium provider-validation workflow
 
 ## Familiarity / bounded experience
 
@@ -307,11 +337,11 @@ Do not convert LLM application experience into claims of foundation-model pretra
 
 ### Google Workspace ecosystem
 - **Level:** working
-- **Relevant exposure:** Gemini, Apps Script/Workspace automation, APIs and AI-enabled workflows
+- **Relevant exposure:** Gemini, Apps Script/Workspace automation, Sheets/Forms workflow design, APIs and AI-enabled processes
 
 ### AWS
-- **Level:** working familiarity
-- **Relevant exposure:** cloud-based analytical workloads and SageMaker-related training/experience
+- **Level:** working
+- **Relevant exposure:** cloud-based analytical workloads, AWS EMR/PySpark delivery and SageMaker-related formal training
 - **Usage note:** do not claim AWS architecture certification unless verified in `certifications.md`
 
 ---
@@ -338,6 +368,10 @@ Do not convert LLM application experience into claims of foundation-model pretra
 - **Level:** working / historical
 - **Evidence:** public ensemble time-series forecasting application
 
+### Streamlit
+- **Level:** working
+- **Evidence:** public analytical apps and professional prototypes translating model/recommendation outputs into interactive experiences
+
 ### Data Storytelling
 - **Level:** core
 - **Coverage:** translating analytical outputs into business decisions, executive communication and visual narratives
@@ -356,6 +390,10 @@ Do not convert LLM application experience into claims of foundation-model pretra
 ### Backward Compatibility & API Migration
 - **Level:** working
 - **Evidence:** InsideForest maintains deprecated compatibility aliases while moving users toward canonical estimator contracts
+
+### R / RStudio Add-in Engineering
+- **Level:** working
+- **Evidence:** CRAN-published FitUltD and shortcuts packages, clipboard/add-in utilities and SQL/R reporting tools
 
 ### Documentation & Developer Experience
 - **Level:** working-to-core
@@ -425,6 +463,11 @@ Do not convert LLM application experience into claims of foundation-model pretra
 - mentoring / knowledge sharing
 - technical presentations and workshops
 
+### Process / Workflow Architecture
+- **Level:** working-to-core
+- **Coverage:** As-Is/To-Be mapping, state models, SLAs, escalation, RACI and phased automation design
+- **Evidence:** regulatory-process architecture with Google Workspace and proposed LLM assistance
+
 ### Teaching & Knowledge Transfer
 - Python instruction
 - AI / GenAI workshops
@@ -462,6 +505,10 @@ Do not convert LLM application experience into claims of foundation-model pretra
 | `ADNarrativa` / `narrative_dna` | OpenAI Responses API, strict Structured Outputs, Pydantic, JSON Schema, embeddings, LLM evals, adjudication, synthetic review, CLI, golden regression |
 | `mvp-agent-factory` | agent architecture, skill contracts, eval rubrics, PRDs, vertical slices, Codex/Claude/Cursor workflows |
 | `cloud_function` | GCP Cloud Functions Gen2, Cloud Storage, TensorFlow/Keras, Transformers, embeddings, HTTP model serving, OpenAI integration |
+| `coi` | transaction-pattern analysis, public fraud/compliance tooling, guided Q&A, text signals, visual reporting, interpretable case exports |
+| `floor` / `yahoo` | financial-data pipelines, temporal validation, GitHub Actions, SQLite/JSON artifacts, static dashboards |
+| `FitUltD` / `shortcuts` | CRAN package engineering, distribution fitting, statistical tests, RStudio add-ins and analyst productivity |
+| `movilidad_social_mx` | Streamlit analytical product, mixed-audience storytelling and probabilistic interpretation; fork boundary applies |
 | `DataMiningTools` / `FitUlt_V00` | R package development, statistical tooling, distribution/modeling ecosystem |
 | `Ensemble-Learning-for-Time-Series` | R time-series ensemble forecasting and Shiny delivery |
 

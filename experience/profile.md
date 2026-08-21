@@ -1,11 +1,21 @@
 ---
-schema_version: 1
+schema_version: 3
+record_id: professional-profile
+record_type: profile
 last_updated: 2026-08-20
 status: canonical
+confidence: high
+visibility: public
+public_safe: true
 source_priority:
   - user_confirmed
   - linkedin_public
   - repository_evidence
+source_refs:
+  - SRC-USER-CONFIRMED-2026-08-20
+  - SRC-LINKEDIN-PUBLIC
+  - SRC-PORTFOLIO-PUBLIC-2026-08
+  - SRC-GITHUB-JCVAL94-PUBLIC
 ---
 
 # Professional Profile
