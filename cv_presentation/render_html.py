@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
+from jinja2 import Environment, FileSystemLoader, StrictUndefined
 
 from cv_presentation.branding import DesignTokens
 from cv_presentation.design_agent import DesignReview
@@ -47,7 +47,9 @@ def _environment() -> Environment:
     template_dir = Path(__file__).resolve().parent / "templates"
     return Environment(
         loader=FileSystemLoader(str(template_dir)),
-        autoescape=select_autoescape(["html", "xml"]),
+        # Every template in this environment is HTML, even though files end in
+        # .html.j2. Extension-based select_autoescape would therefore miss them.
+        autoescape=True,
         undefined=StrictUndefined,
         trim_blocks=True,
         lstrip_blocks=True,
