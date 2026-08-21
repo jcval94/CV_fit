@@ -113,16 +113,22 @@ class WorkflowTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(report["status"], "PASS")
             self.assertTrue(report["quality_target_reached"])
             self.assertEqual(report["iterations_executed"], 1)
+            self.assertEqual(report["best_review_iteration"], 1)
             self.assertFalse(report["premium_model_used"])
 
     async def test_fifth_failure_returns_best_cv_with_explicit_note(self) -> None:
-        client = FakeClient([make_review(70), make_review(80), make_review(86), make_review(89), make_review(90)])
+        # Review quality peaks at iteration 2, then degrades. The workflow must
+        # still perform all five bounded reviews but return the best evaluated
+        # candidate rather than blindly returning the fifth one.
+        client = FakeClient([make_review(70), make_review(91), make_review(86), make_review(89), make_review(88)])
         with tempfile.TemporaryDirectory() as temp, patch("cv_agent.workflow.assemble_application_context", return_value=context_fixture()), patch("cv_agent.workflow.load_evidence_catalog", return_value=catalog_fixture()):
             output = Path(temp)
             report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=output, run_id="five-fail")
             self.assertEqual(report["status"], "COMPLETED_BELOW_TARGET")
             self.assertFalse(report["quality_target_reached"])
             self.assertEqual(report["iterations_executed"], 5)
+            self.assertEqual(report["best_review_iteration"], 2)
+            self.assertEqual(report["final_review"]["overall_score"], 91)
             self.assertTrue(report["premium_model_used"])
             self.assertIn("Maximum of 5", report["quality_note"])
             self.assertTrue((output / "cv_final.md").exists())
