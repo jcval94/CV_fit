@@ -123,17 +123,25 @@ def _default_generate_one(
     from cv_agent.workflow import run_agentic_cv
 
     client = AdkStructuredClient(max_estimated_cost_usd=max_estimated_cost_usd)
-    report = asyncio.run(
-        run_agentic_cv(
-            vacancy_id=vacancy_id,
-            client=client,
-            output_dir=output_dir,
-            vacancy_state=vacancy_state,
-            evidence_state=evidence_state,
-            run_id=run_id,
-            retrieval_mode=retrieval_mode,
+    previous_mode = os.environ.get("CV_FIT_RETRIEVAL_MODE")
+    os.environ["CV_FIT_RETRIEVAL_MODE"] = retrieval_mode
+    try:
+        report = asyncio.run(
+            run_agentic_cv(
+                vacancy_id=vacancy_id,
+                client=client,
+                output_dir=output_dir,
+                vacancy_state=vacancy_state,
+                evidence_state=evidence_state,
+                run_id=run_id,
+            )
         )
-    )
+    finally:
+        if previous_mode is None:
+            os.environ.pop("CV_FIT_RETRIEVAL_MODE", None)
+        else:
+            os.environ["CV_FIT_RETRIEVAL_MODE"] = previous_mode
+
     usage = client.telemetry_snapshot()
     _write_json(output_dir / "usage_report.json", usage)
     report["usage_report_file"] = "usage_report.json"
