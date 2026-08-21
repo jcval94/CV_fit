@@ -22,12 +22,21 @@ def main() -> int:
     parser.add_argument("--evidence-state", default="rag_state")
     parser.add_argument("--outputs", default="outputs")
     parser.add_argument("--run-id", default=None)
+    parser.add_argument(
+        "--max-estimated-cost-usd",
+        type=float,
+        default=None,
+        help="Stop before starting another OpenAI call once the cumulative estimated cost reaches this budget.",
+    )
     args = parser.parse_args()
+
+    if args.max_estimated_cost_usd is not None and args.max_estimated_cost_usd <= 0:
+        parser.error("--max-estimated-cost-usd must be greater than zero")
 
     run_id = args.run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     output_dir = Path(args.outputs) / args.vacancy_id / run_id
     output_dir.mkdir(parents=True, exist_ok=True)
-    client = AdkStructuredClient()
+    client = AdkStructuredClient(max_estimated_cost_usd=args.max_estimated_cost_usd)
 
     try:
         report = asyncio.run(run_agentic_cv(
@@ -57,7 +66,8 @@ def main() -> int:
         "usage="
         f"calls:{usage['call_count']} "
         f"tokens:{usage['total_tokens']} "
-        f"estimated_cost_usd:{usage['estimated_cost_usd']}"
+        f"estimated_cost_usd:{usage['estimated_cost_usd']} "
+        f"budget_usd:{usage['max_estimated_cost_usd']}"
     )
     print(f"output={output_dir}")
     return 0
