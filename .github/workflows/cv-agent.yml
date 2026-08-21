@@ -41,6 +41,34 @@ jobs:
           tests.test_cv_validators
           tests.test_cv_agent_workflow
           -v
+      - name: Build current vacancy and professional evidence states
+        run: |
+          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id pr-context --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
+          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id pr-context --source-commit "$(git rev-parse HEAD)" --full-rebuild
+      - name: Validate every current vacancy can assemble a grounded application context
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from cv_agent.context import assemble_application_context
+
+          records = sorted(Path("/tmp/vacancy_state/records").glob("*.json"))
+          assert records, "no canonical vacancies were produced"
+          for path in records:
+              context = assemble_application_context(
+                  path.stem,
+                  vacancy_state=Path("/tmp/vacancy_state"),
+                  evidence_state=Path("/tmp/rag_state"),
+              )
+              vacancy = context["vacancy"]
+              assert vacancy["application_language"] != "und", f"undetermined language for {path.stem}"
+              assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+              print(
+                  path.stem,
+                  "language=", vacancy["application_language"],
+                  "coverage=", context["match_plan"]["coverage_score"],
+                  "evidence_chunks=", len(context["evidence_chunks"]),
+              )
+          PY
       - name: Import ADK app
         run: python -c "from cv_agent.agent import app, root_agent; assert app is not None; assert root_agent.name == 'root_agent'"
 
