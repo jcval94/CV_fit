@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-21",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Preservación de JD completa para generación CV"
+  },
+  "jd_source_url": "https://mx.linkedin.com/jobs/view/scientist-senior-at-infor-4441024382",
+  "jd_retrieved_at": "2026-08-21T22:16:00Z",
+  "jd_capture_mode": "employer_linkedin_posting_structured_paraphrase",
+  "vacantes": [
+    {
+      "id_vacante": "992c76d717b4-enriched",
+      "puesto": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
+      "empresa": "Infor",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Ciudad de México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "Hace 3-6 días",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/scientist-senior-at-infor-4441024382",
+      "application_language": "en",
+      "description": "Senior individual-contributor Data Scientist in Infor's Post-Sales Data Science team, owning analytical workstreams end to end with business stakeholders across customer adoption, retention, expansion and growth. The role translates strategic business problems into rigorous analysis, statistical models, causal frameworks and executive-facing recommendations while contributing production-ready analytical scripts and operational deployment of insights.",
+      "requirements": [
+        "Significant experience with SaaS product or customer analytics, including adoption, retention, engagement or lifecycle analytics in B2B SaaS or enterprise software.",
+        "Demonstrated ability to independently own full analytical projects from problem framing and data preparation through analysis and insight communication with minimal technical supervision.",
+        "Strong SQL and Python skills for independent data exploration, transformation, analytical dataset construction and statistical modeling; comfort with Snowflake.",
+        "Proven stakeholder-facing communication and ability to connect methodology to business narratives and recommended actions.",
+        "Solid statistical grounding in regression, segmentation, A/B testing, survival analysis and propensity modeling, including clear articulation of methodological tradeoffs.",
+        "Full professional English proficiency and legal authorization to work permanently in Mexico.",
+        "Preferred experience includes Customer Success analytics, measurable decision influence, data visualization/storytelling and generative-AI-assisted data science workflows."
+      ],
+      "responsibilities": [
+        "Own data science workstreams end to end from scoping through analysis, insight synthesis and stakeholder communication.",
+        "Manage day-to-day relationships with business partners and develop exploratory insights, statistical models and causal frameworks as appropriate.",
+        "Frame business objectives into clear analytical questions and influence problem definition before solution development.",
+        "Develop clear executive-facing narratives and presentations linking analytical findings to business decisions and outcomes.",
+        "Collaborate with the data science team on data foundations, analytical practices, innovations and shared business knowledge.",
+        "Develop production-ready analytical scripts and collaborate with IT to deploy insights into operational workflows.",
+        "Support adoption, retention, expansion and growth decisions with rigorous, actionable analysis."
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Snowflake",
+        "Regression",
+        "Segmentation",
+        "A/B testing",
+        "Survival analysis",
+        "Propensity modeling",
+        "SaaS analytics",
+        "Customer analytics",
+        "GenAI-assisted analytics",
+        "Executive storytelling"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-21",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Preservación de JD completa para generación CV"
+  },
+  "jd_source_url": "https://jobs.lever.co/payjoy/4eabe147-7c4c-44a1-bc36-6cec2c47d5c5",
+  "jd_retrieved_at": "2026-08-21T22:10:00Z",
+  "jd_capture_mode": "official_ats_structured_paraphrase",
+  "vacantes": [
+    {
+      "id_vacante": "09a0aee1be74-enriched",
+      "puesto": "Machine Learning Engineer - Fraud",
+      "empresa": "PayJoy",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "Mexico City, CDMX",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "Hace 1 semana",
+      "url_postulacion": "https://jobs.lever.co/payjoy/4eabe147-7c4c-44a1-bc36-6cec2c47d5c5",
+      "application_language": "en",
+      "description": "Machine Learning Engineer role in PayJoy's Data Science organization focused on the end-to-end lifecycle of fraud detection models and decisioning infrastructure across products and markets. The role owns feature generation, model development, deployment, rollout, monitoring and continuous improvement, working with Fraud, Engineering, Product, Risk and business stakeholders across international markets.",
+      "requirements": [
+        "Bachelor's degree in Computer Science, Engineering or a related field.",
+        "At least three years in data science, machine learning engineering, data engineering or a closely related role with production-level code and maintained ML models in production.",
+        "High proficiency in Python and related data and machine learning libraries and frameworks.",
+        "Strong knowledge of the full ML lifecycle from extraction and feature engineering through serving and monitoring for live and batch processing.",
+        "Experience with cloud providers, preferably AWS, and containerization such as Docker.",
+        "Strong English communication skills and ability to work in a fast-paced environment with changing requirements.",
+        "Fraud detection or financial-market ML experience is a plus; LLMs, graph databases and Databricks are additional pluses."
+      ],
+      "responsibilities": [
+        "Design, build and deploy machine learning models for fraud detection use cases across PayJoy's product suite.",
+        "Deliver production-ready ML models optimized for scale and improve them continuously from stakeholder feedback and observed production performance.",
+        "Extend fraud decisioning infrastructure to new entity types, construct new rules and support greater scale.",
+        "Clean, preprocess and engineer features from large and complex datasets to improve predictive accuracy and performance.",
+        "Write production-level code with documentation, testing and peer review.",
+        "Lead testing, cost-benefit analysis and integration of new data sources to improve model robustness.",
+        "Partner with ML Platform and Tooling teams on scalable feature generation, extraction, deployment and monitoring processes.",
+        "Collaborate with global Fraud, Engineering, Product and Risk teams to deliver data science products across multiple markets."
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "Machine Learning",
+        "Fraud detection",
+        "ML lifecycle",
+        "Model deployment",
+        "Model monitoring",
+        "AWS",
+        "Docker",
+        "Databricks",
+        "LLMs"
+      ]
+    }
+  ]
+}

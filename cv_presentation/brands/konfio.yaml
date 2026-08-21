@@ -1,0 +1,15 @@
+company: Konfío
+source_kind: verified_manual
+source_url: https://konfio.mx/blog/en-konfio/noticias/nuevo-konfio-evolucionamos/
+verified: true
+primary: "#4C1D95"
+secondary: "#5B21B6"
+accent: "#C2410C"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: system_sans
+body_font: system_sans
+notes:
+  - "Official Konfío identity article confirms purple as the protagonist with orange and blue in the expanded palette."
+  - "Hex values are conservative accessible CV tokens selected manually from the verified color families; they are not asserted as exact official brand-token hex values."
