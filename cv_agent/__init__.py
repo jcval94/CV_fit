@@ -1,4 +1,4 @@
-"""Google ADK application for evidence-grounded CV adaptation."""
+"""OpenAI-backed Google ADK application for evidence-grounded CV adaptation."""
 
 try:
     from cv_agent.agent import app
