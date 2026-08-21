@@ -5,6 +5,7 @@ from dataclasses import replace
 from typing import Iterable
 
 from vacancy_pipeline.contract import semantic_hash
+from vacancy_pipeline.fidelity import assess_jd_fidelity
 from vacancy_pipeline.models import ProvenanceRef, VacancyChunk, VacancyRecord
 
 
@@ -64,16 +65,28 @@ def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
                 seen_prov.add(key)
                 provenance.append(ref)
 
+    requirements = _union_lists(records, "requirements")
+    responsibilities = _union_lists(records, "responsibilities")
+    fidelity = assess_jd_fidelity(
+        description=preferred.description,
+        requirements=requirements,
+        responsibilities=responsibilities,
+    )
+
     merged = replace(
         preferred,
         tech_stack=_union_lists(records, "tech_stack"),
-        requirements=_union_lists(records, "requirements"),
-        responsibilities=_union_lists(records, "responsibilities"),
+        requirements=requirements,
+        responsibilities=responsibilities,
         fit_strengths=_union_lists(records, "fit_strengths"),
         fit_gaps=_union_lists(records, "fit_gaps"),
         application_language=language_record.application_language,
         language_confidence=language_record.language_confidence,
         language_source=language_record.language_source,
+        jd_fidelity=fidelity.classification,
+        jd_fidelity_score=fidelity.score,
+        jd_fidelity_reasons=fidelity.reasons,
+        jd_generation_eligible=fidelity.generation_eligible,
         provenance=provenance,
         content_hash="",
     )
