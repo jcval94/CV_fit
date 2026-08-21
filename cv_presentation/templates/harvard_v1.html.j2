@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ cv.language }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ cv.candidate.name }} — {{ cv.target_role }}</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:"Times New Roman",Times,Garamond,serif;font-size:11pt;line-height:1.4;color:#000;background:#525659;display:flex;flex-direction:column;align-items:center;padding:20px 0}.page{background:#fff;width:8.5in;height:11in;padding:.6in .8in;box-shadow:0 4px 10px rgba(0,0,0,.3);position:relative;margin:0 auto 20px;overflow:hidden;page-break-after:always}.page:last-child{page-break-after:auto}header{text-align:center;margin-bottom:15px}h1{font-size:20pt;font-weight:normal;text-transform:uppercase;margin-bottom:5px;letter-spacing:1px}.contact{font-size:10.5pt}.contact a{color:#000;text-decoration:none}h2{font-size:11pt;font-weight:bold;text-transform:uppercase;border-bottom:1px solid #000;margin-top:15px;margin-bottom:8px;padding-bottom:2px}.entry{margin-bottom:12px;break-inside:avoid}.flex-between{display:flex;justify-content:space-between;align-items:baseline;gap:15px}.entry-title{font-weight:bold}.entry-subtitle{font-style:italic}.entry-date,.entry-location{font-style:normal;white-space:nowrap}ul{list-style-type:disc;margin-top:4px;margin-left:20px}li{margin-bottom:4px;text-align:justify}.skills-category{margin-bottom:4px}.continuation{font-size:10pt;border-bottom:1px solid #000;padding-bottom:5px;margin-bottom:10px;display:flex;justify-content:space-between}.project-name{font-weight:bold}@page{size:letter;margin:0}@media print{body{background:#fff;padding:0}.page{width:8.5in;height:11in;padding:.6in .8in;box-shadow:none;margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+{% for page in pages %}
+<section class="page">
+  {% if page.show_header %}<header><h1><b>{{ cv.candidate.name }}</b></h1><div class="contact">{% if cv.candidate.location %}{{ cv.candidate.location }}{% endif %}{% if cv.candidate.phone %} • {{ cv.candidate.phone }}{% endif %}{% if cv.candidate.email %} • <a href="mailto:{{ cv.candidate.email }}">{{ cv.candidate.email }}</a>{% endif %}{% if cv.candidate.linkedin %}<br>{{ cv.candidate.linkedin }}{% endif %}{% if cv.candidate.github %} • {{ cv.candidate.github }}{% endif %}{% if cv.candidate.website %} • {{ cv.candidate.website }}{% endif %}</div></header>{% else %}<div class="continuation"><span>{{ cv.candidate.name }}</span><span>{{ labels.page }} {{ page.page_number }} / {{ page.total_pages }}</span></div>{% endif %}
+  {% if page.show_summary %}<h2>{{ labels.summary }}</h2><div class="entry">{{ cv.summary.text }}</div>{% endif %}
+  {% if page.experience %}<h2>{{ labels.experience }}</h2>{% for item in page.experience %}<div class="entry"><div class="flex-between"><div class="entry-title">{{ item.organization }}</div><div class="entry-date">{{ item.period }}</div></div><div class="entry-subtitle">{{ item.title }}</div><ul>{% for bullet in item.bullets %}<li>{{ bullet.text }}</li>{% endfor %}</ul></div>{% endfor %}{% endif %}
+  {% if page.education %}<h2>{{ labels.education }}</h2>{% for item in page.education %}<div class="entry">{{ item.text }}</div>{% endfor %}{% endif %}
+  {% if page.projects %}<h2>{{ labels.projects }}</h2>{% for item in page.projects %}<div class="entry"><div class="project-name">{{ item.name }}</div><ul>{% for bullet in item.bullets %}<li>{{ bullet.text }}</li>{% endfor %}</ul></div>{% endfor %}{% endif %}
+  {% if page.skills %}<h2>{{ labels.skills }}</h2>{% for item in page.skills %}<div class="skills-category">{{ item.text }}</div>{% endfor %}{% endif %}
+  {% if page.certifications %}<h2>{{ labels.certifications }}</h2><ul>{% for item in page.certifications %}<li>{{ item.text }}</li>{% endfor %}</ul>{% endif %}
+</section>
+{% endfor %}
+</body></html>
