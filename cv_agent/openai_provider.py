@@ -39,9 +39,16 @@ def validate_openai_model_id(model_id: str) -> str:
 
 
 def adk_openai_model(model_id: str):
-    """Return ADK's documented Python OpenAI connector, locked to OpenAI."""
+    """Return ADK's documented Python OpenAI connector, locked to OpenAI.
+
+    `include_usage` is requested explicitly so ADK events can expose prompt,
+    cached-input, response and total token counts for the run artifact.
+    """
 
     from google.adk.models.lite_llm import LiteLlm
 
     model_id = validate_openai_model_id(model_id)
-    return LiteLlm(model=f"openai/{model_id}")
+    return LiteLlm(
+        model=f"openai/{model_id}",
+        stream_options={"include_usage": True},
+    )

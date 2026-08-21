@@ -1,0 +1,61 @@
+{
+  "last_updated": "2026-08-21T17:28:00Z",
+  "total_results": 1,
+  "jd_source_url": "https://jobs.quona.com/companies/konfio-2/jobs/90331126-ai-ml-engineer-sr",
+  "jd_retrieved_at": "2026-08-21T17:28:00Z",
+  "jd_capture_mode": "official_source_structured_paraphrase",
+  "vacancies": [
+    {
+      "id": "konfio-ai-ml-engineer-sr-2026-08-18-enriched",
+      "company": "Konfío",
+      "role_title": "AI/ML Engineer Sr.",
+      "seniority": "Senior",
+      "application_language": "es",
+      "location": {
+        "city": "Ciudad de México",
+        "work_model": "Hybrid"
+      },
+      "posted_date": "2026-08-18",
+      "url": "https://jobs.quona.com/companies/konfio-2/jobs/90331126-ai-ml-engineer-sr",
+      "description": "Rol senior orientado a diseñar, desplegar y operar soluciones de machine learning y sistemas agénticos con LLMs en producción. El alcance cubre pipelines reproducibles de datos y features, ciclo de vida de modelos, agentes virtuales para casos de negocio, RAG y búsqueda semántica, evaluación y observabilidad, seguridad y gobierno de datos, además de servicios Python de alta demanda con foco en confiabilidad, desempeño, latencia y costo.",
+      "requirements": [
+        "Formación universitaria concluida en computación, software, matemáticas, estadística o disciplina cuantitativa afín.",
+        "Especialización o experiencia sólida en inteligencia artificial, machine learning o sistemas distribuidos.",
+        "Al menos cuatro años en ingeniería de software o ML, incluyendo dos con modelos o LLMs en producción.",
+        "Dominio avanzado de Python y SQL, con capacidad para trabajar concurrencia y cargas de alto desempeño.",
+        "Experiencia práctica con AWS, MLOps, CI/CD, Docker/Kubernetes y orquestación moderna de agentes como LangGraph."
+      ],
+      "responsibilities": [
+        "Construir pipelines reproducibles de datos, features, entrenamiento e inferencia evitando inconsistencias entre entrenamiento y servicio.",
+        "Desplegar, versionar y monitorear modelos en producción con rollback, detección de drift y control de latencia y costo.",
+        "Diseñar workflows agénticos de extremo a extremo considerando estado, herramientas, memoria y tolerancia a fallas.",
+        "Integrar LLMs mediante AWS Bedrock y APIs de proveedores administrando prompts, structured outputs, throughput, cuotas y costos.",
+        "Desarrollar soluciones RAG y búsqueda semántica que mantengan las respuestas fundamentadas en fuentes organizacionales.",
+        "Instrumentar evaluación y observabilidad con trazas, datasets de evaluación y métricas de calidad, alucinación, latencia y costo.",
+        "Colaborar en CI/CD, infraestructura como código, pruebas automatizadas, contenerización y despliegues controlados.",
+        "Desarrollar servicios Python distribuidos con concurrencia, colas, backpressure, idempotencia, caching y profiling, incluyendo orquestación con Temporal.",
+        "Aplicar estándares de seguridad, privacidad, gobierno de datos y guardrails a soluciones que incorporen LLMs.",
+        "Documentar decisiones técnicas y compartir buenas prácticas de ML Engineering e inteligencia artificial aplicada."
+      ],
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "LLMs",
+        "RAG",
+        "Agentic AI",
+        "LangGraph",
+        "AWS Bedrock",
+        "Amazon SageMaker",
+        "MLOps",
+        "CI/CD",
+        "GitLab",
+        "Docker",
+        "Kubernetes",
+        "Temporal",
+        "Model Monitoring",
+        "Data Governance"
+      ]
+    }
+  ]
+}
