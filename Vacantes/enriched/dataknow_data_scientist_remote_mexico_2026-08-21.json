@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-21",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Preservación de JD completa para generación CV"
+  },
+  "jd_source_url": "https://dataknow.io/vacantes-ingeniero-datos-cientificos-datos/",
+  "jd_retrieved_at": "2026-08-21T22:18:00Z",
+  "jd_capture_mode": "official_company_careers_structured_paraphrase",
+  "vacantes": [
+    {
+      "id_vacante": "d4591a7e5f49-enriched",
+      "puesto": "Data Scientist (Python/SQL) - Remote",
+      "empresa": "DataKnow",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 6-7 días",
+      "url_postulacion": "https://dataknow.io/vacantes-ingeniero-datos-cientificos-datos/",
+      "application_language": "es",
+      "description": "Vacante remota de Data Scientist para México orientada a implementar y entrenar modelos de analítica avanzada y machine learning para necesidades cambiantes de proyectos y clientes. El rol combina Python, SQL y Spark con clasificación, clustering, optimización, series de tiempo, pronóstico e inteligencia artificial generativa, con expectativa de experiencia práctica en ciencia de datos aplicada a producción.",
+      "requirements": [
+        "Formación profesional en Ingeniería de Datos, Ciencia de Datos o disciplina afín.",
+        "Entre uno y dos años o más de experiencia práctica en Ciencia de Datos aplicada a producción.",
+        "Conocimientos sólidos de Python y SQL, además de Spark o tecnología equivalente para procesamiento de datos.",
+        "Capacidad para aplicar estadística y machine learning a problemas de clasificación, clustering, optimización, series de tiempo y pronóstico.",
+        "Conocimiento práctico de inteligencia artificial generativa y capacidad para adaptar modelos a necesidades cambiantes de proyectos y clientes.",
+        "Orientación a trabajo remoto, colaboración y entrega de soluciones analíticas aplicadas."
+      ],
+      "responsibilities": [
+        "Implementar y entrenar modelos de clasificación, clustering y optimización usando técnicas estadísticas y de machine learning.",
+        "Desarrollar soluciones de series de tiempo y pronóstico ajustadas a necesidades del proyecto y del cliente.",
+        "Aplicar inteligencia artificial generativa dentro de soluciones analíticas cuando el caso de uso lo requiera.",
+        "Preparar y transformar datos con Python, SQL y Spark o herramientas similares para modelado y análisis.",
+        "Asegurar que los modelos sean adaptables a cambios de datos, negocio y requerimientos del cliente.",
+        "Contribuir a proyectos reales de analítica e inteligencia artificial con foco en valor de negocio y entrega práctica."
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Spark",
+        "Machine Learning",
+        "Clasificación",
+        "Clustering",
+        "Optimización",
+        "Series de tiempo",
+        "Forecasting",
+        "Generative AI"
+      ]
+    }
+  ]
+}
