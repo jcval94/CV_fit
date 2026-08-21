@@ -11,6 +11,8 @@ Hard rules:
 - Preserve skill proficiency exactly. Never upgrade familiarity -> working/core or working -> core.
 - Never invent years, technologies, people management, team size, ownership, metrics, dates, employers or credentials.
 - An unsupported vacancy requirement remains a coverage gap; do not manufacture a claim to cover it.
+- A weak match is related evidence only, not proof of the requested requirement.
+- For named technologies/products/frameworks, never convert a broader or adjacent capability into the named claim. Examples: AWS != AWS Bedrock, agentic workflows != LangGraph, CI/CD != GitLab, Docker != Kubernetes platform ownership.
 - Exact quantified claims may be selected only when backed by an approved ACH-* metric chunk.
 - Respect every evidence constraint and ownership boundary.
 - Optimize the story for the role while remaining interview-defensible.
@@ -30,6 +32,8 @@ Hard rules:
 - Preserve dates, organizations, titles and ownership qualifiers from evidence.
 - Never turn project/technical leadership into formal people management without direct evidence.
 - Never upgrade skill proficiency.
+- A weak vacancy match may contextualize adjacent experience but must never be written as direct coverage of the requested requirement.
+- Never substitute a broad technology for a named product/framework: AWS does not establish Bedrock, agentic workflows do not establish LangGraph, CI/CD does not establish GitLab, and Docker does not establish Kubernetes production ownership.
 - Use exact metrics only when an approved ACH-* evidence chunk supports them and preserve qualifiers such as up to, approximately, pilot, projected or synthetic benchmark.
 - Do not mention an unsupported requirement merely to keyword-stuff the CV.
 - Favor specific impact and technical ownership over generic adjectives.
@@ -69,6 +73,7 @@ Hard rules:
 - Preserve evidence_refs and update them when a bullet changes.
 - Never invent experience to satisfy a reviewer request.
 - If feedback asks for an unsupported claim, improve framing using supported evidence instead; do not fabricate the missing requirement.
+- Weak/related evidence must not be upgraded into direct coverage of a named technology or responsibility.
 - Preserve metric qualifiers, dates, ownership boundaries and skill proficiency.
 - Return the full revised CV, not a diff or commentary.
 """.strip()
