@@ -1,0 +1,33 @@
+{
+  "normalization_schema_version": 1,
+  "record_id": "project-example",
+  "record_type": "project",
+  "status": "validated_public",
+  "confidence": "high",
+  "visibility": "public",
+  "public_safe": true,
+  "retrieval_class": "evidence",
+  "automatic_reuse_eligible": true,
+  "embedding_candidate": true,
+  "source_path": "experience/projects/example.md",
+  "source_commit": "<git-sha>",
+  "source_refs": ["SRC-EXAMPLE"],
+  "metric_refs": ["ACH-EXAMPLE-001"],
+  "linked_markdown_paths": ["../roles/example.md"],
+  "attributes": {
+    "organization": "Example"
+  },
+  "sections": [
+    {
+      "section_id": "project-example::example-project::contribution-and-ownership",
+      "level": 2,
+      "title": "Contribution and ownership",
+      "heading_path": ["Example Project", "Contribution and ownership"],
+      "semantic_type": "ownership",
+      "start_line": 15,
+      "end_line": 18,
+      "content": "Built a deterministic workflow."
+    }
+  ],
+  "content_hash": "<sha256>"
+}
