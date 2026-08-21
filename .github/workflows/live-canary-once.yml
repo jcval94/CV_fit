@@ -1,0 +1,204 @@
+name: One-time authenticated Konfio canary
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  live-canary:
+    if: github.event.issue.title == '[eval] Run authenticated Konfio canary'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      CANARY_VACANCY_ID: vac-04e92192e608ea02
+      CANARY_RUN_ID: canary-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Require existing OpenAI secret
+        run: |
+          if [ -z "$OPENAI_APY_KEY" ]; then
+            echo "Repository secret OPENAI_APY_KEY is missing; no paid call was attempted."
+            exit 2
+          fi
+
+      - name: Validate live-run safety controls
+        run: >-
+          python -m unittest
+          tests.test_openai_provider
+          tests.test_cv_telemetry
+          tests.test_cv_agent_workflow
+          tests.test_cv_validators
+          tests.test_vacancy_fidelity
+          -v
+
+      - name: Build isolated current states
+        run: |
+          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id "$CANARY_RUN_ID" --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
+          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id "$CANARY_RUN_ID" --source-commit "$(git rev-parse HEAD)" --full-rebuild
+
+      - name: Assert canary generation preflight
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from cv_agent.context import assemble_application_context
+
+          context = assemble_application_context(
+              "vac-04e92192e608ea02",
+              vacancy_state=Path("/tmp/vacancy_state"),
+              evidence_state=Path("/tmp/rag_state"),
+          )
+          vacancy = context["vacancy"]
+          assert vacancy["company"] == "Konfío", vacancy
+          assert vacancy["application_language"] == "es", vacancy
+          assert vacancy["jd_fidelity"] == "full", vacancy
+          assert vacancy["jd_generation_eligible"] is True, vacancy
+          assert context["evidence_chunks"], context
+          print(
+              "live_canary_preflight=PASS",
+              "coverage=", context["match_plan"]["coverage_score"],
+              "evidence_chunks=", len(context["evidence_chunks"]),
+          )
+          PY
+
+      - name: Run authenticated OpenAI ADK canary
+        id: generate
+        continue-on-error: true
+        run: >-
+          python -m cv_agent.run
+          --vacancy-id "$CANARY_VACANCY_ID"
+          --vacancy-state /tmp/vacancy_state
+          --evidence-state /tmp/rag_state
+          --outputs outputs
+          --run-id "$CANARY_RUN_ID"
+          --max-estimated-cost-usd 5.0
+
+      - name: Build sanitized diagnostic summary
+        if: always()
+        env:
+          GENERATION_OUTCOME: ${{ steps.generate.outcome }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path("outputs") / "vac-04e92192e608ea02" / os.environ["CANARY_RUN_ID"]
+
+          def load(name):
+              path = root / name
+              if not path.exists():
+                  return {}
+              return json.loads(path.read_text(encoding="utf-8"))
+
+          match_plan = load("match_plan.json")
+          run_report = load("run_report.json")
+          usage = load("usage_report.json")
+          trace = load("evidence_trace.json")
+
+          requirements = [
+              {
+                  "requirement": item.get("requirement"),
+                  "coverage": item.get("coverage"),
+                  "score": item.get("score"),
+                  "evidence_chunk_ids": item.get("evidence_chunk_ids", []),
+              }
+              for item in match_plan.get("requirements", [])
+          ]
+
+          summary = {
+              "schema_version": 1,
+              "vacancy_id": "vac-04e92192e608ea02",
+              "company": "Konfío",
+              "role_title": "AI/ML Engineer Sr.",
+              "generation_outcome": os.environ.get("GENERATION_OUTCOME"),
+              "status": run_report.get("status", "GENERATION_FAILED"),
+              "application_language": run_report.get("application_language", "es"),
+              "quality_target_reached": run_report.get("quality_target_reached"),
+              "iterations_executed": run_report.get("iterations_executed"),
+              "best_review_iteration": run_report.get("best_review_iteration"),
+              "match_coverage_score": run_report.get("match_coverage_score", match_plan.get("coverage_score")),
+              "unsupported_requirements": run_report.get("unsupported_requirements", [
+                  item.get("requirement") for item in requirements if item.get("coverage") == "unsupported"
+              ]),
+              "requirements": requirements,
+              "final_review": run_report.get("final_review", {}),
+              "final_validation": run_report.get("final_validation", {}),
+              "final_gate_reasons": run_report.get("final_gate_reasons", []),
+              "usage_summary": {key: value for key, value in usage.items() if key != "calls"},
+              "usage_calls": [
+                  {
+                      "name": call.get("name"),
+                      "model": call.get("model"),
+                      "prompt_tokens": call.get("prompt_tokens"),
+                      "cached_input_tokens": call.get("cached_input_tokens"),
+                      "candidate_tokens": call.get("candidate_tokens"),
+                      "reasoning_tokens": call.get("reasoning_tokens"),
+                      "total_tokens": call.get("total_tokens"),
+                      "duration_ms": call.get("duration_ms"),
+                      "estimated_cost_usd": call.get("estimated_cost_usd"),
+                      "error": call.get("error"),
+                  }
+                  for call in usage.get("calls", [])
+              ],
+              "evidence_trace": trace,
+              "note": "Sanitized canary diagnostic; generated CV text and API credentials are intentionally excluded.",
+          }
+
+          Path("/tmp/canary_summary.json").write_text(
+              json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+          print(json.dumps(summary, ensure_ascii=False, sort_keys=True)[:16000])
+          PY
+
+      - name: Comment sanitized diagnostic on trigger issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY' > /tmp/canary_comment.md
+          import json
+          from pathlib import Path
+
+          path = Path('/tmp/canary_summary.json')
+          if not path.exists():
+              print('### Authenticated canary diagnostic\n\nDiagnostic summary was not produced. Inspect the workflow logs.')
+          else:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              print('### Authenticated canary diagnostic')
+              print('')
+              print('```json')
+              print(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True))
+              print('```')
+          PY
+          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/canary_comment.md
+
+      - name: Upload canary outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-canary-${{ github.run_id }}
+          path: outputs/vac-04e92192e608ea02/${{ env.CANARY_RUN_ID }}/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Propagate generation failure after diagnostic capture
+        if: steps.generate.outcome != 'success'
+        run: |
+          echo "Authenticated canary generation failed; sanitized diagnostics and artifact/logs were preserved."
+          exit 1

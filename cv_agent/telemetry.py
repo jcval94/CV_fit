@@ -6,9 +6,10 @@ from typing import Any
 
 PRICING_SNAPSHOT_DATE = "2026-08-21"
 PRICING_BASIS = "OpenAI standard short-context text pricing, USD per 1M tokens"
+PRICING_SOURCE = "https://platform.openai.com/pricing"
 MODEL_PRICING_USD_PER_MILLION: dict[str, dict[str, float]] = {
-    "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
-    "gpt-5.6-terra": {"input": 2.00, "cached_input": 0.20, "output": 12.00},
+    "gpt-5.6-luna": {"input": 1.00, "cached_input": 0.10, "output": 6.00},
+    "gpt-5.6-terra": {"input": 2.50, "cached_input": 0.25, "output": 15.00},
     "gpt-5.6-sol": {"input": 5.00, "cached_input": 0.50, "output": 30.00},
 }
 
@@ -70,6 +71,7 @@ def summarize_usage(calls: list[LLMCallUsage]) -> dict[str, Any]:
         "schema_version": 1,
         "pricing_snapshot_date": PRICING_SNAPSHOT_DATE,
         "pricing_basis": PRICING_BASIS,
+        "pricing_source": PRICING_SOURCE,
         "call_count": len(calls),
         "prompt_tokens": sum(call.prompt_tokens for call in calls),
         "cached_input_tokens": sum(call.cached_input_tokens for call in calls),
