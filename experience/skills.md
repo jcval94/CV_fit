@@ -7,7 +7,7 @@ status: canonical
 confidence: high
 visibility: public
 public_safe: true
-usage_policy: "Generated CVs must prefer demonstrated skills over inferred keywords and must not upgrade familiarity into expert proficiency. Public GitHub repositories may be used as direct technical evidence when the capability is observable in code, packaging, tests, documentation, or reproducible benchmarks."
+usage_policy: "Generated CVs must prefer demonstrated skills over inferred keywords and must preserve the exact core/working/familiarity level recorded here. Public GitHub repositories may be used as direct technical evidence when the capability is observable in code, packaging, tests, documentation or reproducible benchmarks."
 source_refs:
   - SRC-USER-CONFIRMED-2026-08-20
   - SRC-TRAJECTORY-2021-2023-CURATED
@@ -19,13 +19,15 @@ source_refs:
 
 Canonical inventory of technical, analytical, business and leadership skills for José Carlos Del Valle.
 
-This file intentionally separates **demonstrated/core capability**, **practical working experience**, and **familiarity/exposure**. It is designed for RAG and CV generation, not for keyword stuffing.
+This file is designed for RAG and CV generation, not keyword stuffing. It uses a strict three-level proficiency model so downstream systems do not have to interpret ambiguous labels.
 
 ## Proficiency model
 
 - **core:** repeated professional use and/or substantial independently owned implementation with strong interview-level defensibility
 - **working:** meaningful hands-on implementation, but not necessarily the primary specialization
-- **familiarity:** exposure, training or limited implementation experience; never present as expert-level without additional evidence
+- **familiarity:** exposure, training or limited implementation; never present as expert-level without additional evidence
+
+Only these three values are allowed in `Level`. Recency, context and caveats belong in separate fields.
 
 ## Evidence hierarchy
 
@@ -41,56 +43,45 @@ A vacancy keyword is never evidence by itself.
 
 # 1. Programming & Data
 
-## Core
-
 ### Python
 - **Level:** core
-- **Evidence:** professional Data Science/ML work plus independently authored Python packages and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and agent-oriented tooling
+- **Evidence:** repeated professional Data Science/ML work plus independently authored Python libraries and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and fraud/compliance tooling
 - **Typical use:** modeling, statistical analysis, package development, pipelines, APIs, experimentation, automation, GenAI workflows, CLI tooling and validation
 
 ### SQL
 - **Level:** core
-- **Evidence:** professional analytical and data-processing workflows
+- **Evidence:** repeated professional analytical, migration, segmentation, reporting and data-processing workflows
 - **Typical use:** extraction, transformation, aggregation, analytical datasets, validation and feature preparation
 
 ### PySpark / Apache Spark
 - **Level:** core
-- **Evidence:** large-scale banking analytics and production-oriented data processing
-- **Typical use:** distributed ETL, feature engineering, large datasets and analytical pipelines
+- **Evidence:** large-scale banking analytics and production-oriented distributed processing
+- **Typical use:** distributed ETL, feature engineering, matching, large joins, analytical pipelines and production refactoring
 
 ### R
 - **Level:** core
-- **Evidence:** actuarial/statistical modeling and public R package development dating back to 2019
+- **Evidence:** actuarial/statistical modeling, CRAN/public package development, thesis work, forecasting and reporting automation
 - **Typical use:** statistical modeling, distributions, risk modeling, research, visualization and package development
-- **Repository evidence:** `FitUlt_V00`, `DataMiningTools`, time-series projects and thesis code
-
-## Working
 
 ### Pandas / NumPy
-- **Level:** working-to-core
-- **Evidence:** core dependencies across public Python packages and analytical systems
-- **Typical use:** tabular transformations, numerical operations, validation, experimentation and reporting
+- **Level:** working
+- **Evidence:** repeated use across public Python packages and analytical systems
 
 ### Git / GitHub
-- **Level:** working-to-core
-- **Evidence:** multi-year ownership of public repositories, versioned packages, documentation sites, test suites and agent-assisted software workflows
-- **Typical use:** version control, package maintenance, issue-driven development, experimentation, reproducible documentation and automation
+- **Level:** working
+- **Evidence:** multi-year ownership of public repositories, versioned packages, documentation, tests and repository-driven workflows
 
 ### YAML / JSON / JSONL data contracts
-- **Level:** working-to-core
-- **Evidence:** MetaCraft schema tooling and narrative_dna JSON-first architecture
-- **Typical use:** schemas, configuration, versioned contracts, structured outputs and auditable pipelines
+- **Level:** working
+- **Evidence:** MetaCraft schema tooling, narrative_dna JSON-first architecture and artifact-driven pipelines
 
 ---
 
 # 2. Machine Learning & Statistics
 
-## Core
-
 ### Supervised Machine Learning
 - **Level:** core
-- **Coverage:** classification, regression, tree-based methods, model evaluation and feature engineering
-- **Repository evidence:** InsideForest, SheShe/DelDel and cloud ML recommender
+- **Coverage:** classification, regression, feature engineering, model evaluation and business-oriented predictive modeling
 
 ### Tree-based Machine Learning / Random Forests
 - **Level:** core
@@ -99,199 +90,180 @@ A vacancy keyword is never evidence by itself.
 
 ### Supervised Clustering & Region Discovery
 - **Level:** core
-- **Coverage:** discovering human-readable regions guided by target information, regional quality measurement and stable cluster assignment
-- **Repository evidence:** InsideForest canonical clusterers for categorical and continuous targets; SheShe/DelDel subspace exploration
+- **Coverage:** target-guided region discovery, regional quality measurement, stable cluster assignment and human-readable decision regions
+- **Repository evidence:** InsideForest and SheShe/DelDel
 
 ### Unsupervised / Anomaly Detection
 - **Level:** core
-- **Coverage:** anomaly detection, outlier analysis and hybrid rule + ML approaches
-- **Evidence:** banking fraud / malpractice detection using rules and Isolation Forest
-
-### Fuzzy Matching / Identity Resolution
-- **Level:** working-to-core
-- **Coverage:** name normalization, edit-distance similarity, probabilistic candidate review and distributed matching against regulatory/watch lists
-- **Evidence:** professional compliance analytics plus public COI/fraud tooling
+- **Coverage:** anomaly detection, outlier analysis and hybrid rule + ML systems
+- **Evidence:** banking fraud/malpractice analytics and public analytical tooling
 
 ### Statistical Modeling
 - **Level:** core
-- **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation and risk modeling
-- **Evidence:** actuarial education, thesis/research work, R packages and professional analytics
+- **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation, regression and risk modeling
+- **Evidence:** actuarial education, thesis/research, R packages and professional analytics
 
 ### Model Evaluation & Validation
 - **Level:** core
-- **Coverage:** train/test evaluation, baselines, F1, precision, recall, lift, clustering agreement, stability, business validation and statistical fit
-- **Repository evidence:** InsideForest validation suites; DelDel experiment protocol; narrative_dna evaluation/regression framework
+- **Coverage:** baselines, train/test or temporal validation, precision, recall, F1, lift, stability, clustering agreement, business validation and statistical fit
 
 ### Explainable / Interpretable Machine Learning
 - **Level:** core
 - **Coverage:** region-based explainability, low-dimensional rule extraction, subspace exploration, class diagnostics and model behavior translated into human-readable structures
 - **Repository evidence:** InsideForest and SheShe/DelDel
 
+### scikit-learn ecosystem
+- **Level:** core
+- **Evidence:** professional ML usage plus independently authored estimator-style APIs with `fit`, `predict`, `transform`, scoring, persistence and parameter interfaces
+
+### Fuzzy Matching / Identity Resolution
+- **Level:** working
+- **Coverage:** name normalization, edit-distance similarity, candidate review and distributed matching against regulatory/watch lists
+
 ### Time Series & Forecasting
-- **Level:** working-to-core
-- **Coverage:** forecasting, trend analysis, statistical models and ensemble learning for time series
-- **Evidence:** professional demand-forecasting initiatives plus public `Ensemble-Learning-for-Time-Series` implementation and Shiny app
-- **Usage note:** avoid claiming specialization in a specific forecasting family unless the target CV has matching project evidence
+- **Level:** working
+- **Coverage:** forecasting, trend analysis, seasonality, temporal validation and ensemble-learning concepts
+- **Evidence:** professional demand/operations forecasting plus public time-series work
+- **Usage note:** do not claim specialization in ARIMA, SARIMA, Prophet or another named family without project-specific evidence
 
 ### Geospatial Analytics
 - **Level:** working
-- **Coverage:** coordinate aggregation, footprint analysis, ATM/branch location strategy, customer/debtor geolocation and spatial-temporal alert features
-- **Evidence:** BBVA ATM analytics, geolocation engines and public social-mobility/analytical apps
+- **Coverage:** coordinate aggregation, footprint analysis, ATM/branch location strategy, geolocation and spatial-temporal analytical features
 
 ### Optimization / Decision Modeling
 - **Level:** working
-- **Coverage:** prioritization, rule search, beam/greedy search patterns, decision support and analytical allocation problems
-- **Repository evidence:** DelDel low-dimensional rule search and pruning strategies
-- **Usage note:** do not automatically claim deep mixed-integer programming specialization without project-specific evidence
-
-## Working
-
-### scikit-learn estimator ecosystem
-- **Level:** working-to-core
-- **Evidence:** InsideForest exposes estimator-style `fit`, `fit_predict`, `predict`, `transform`, `score`, `get_params`, `set_params`, persistence and fitted attributes
+- **Coverage:** prioritization, low-dimensional rule search, greedy/beam search patterns, decision support and analytical allocation problems
+- **Usage note:** do not claim deep mixed-integer programming specialization without project-specific evidence
 
 ### TensorFlow / Keras
 - **Level:** working
-- **Evidence:** public Google Cloud Function loads and serves Keras models as part of an ML recommendation pipeline
+- **Evidence:** public Google Cloud model-serving implementation using Keras artifacts
 
 ### Hugging Face Transformers / BERT-family models
 - **Level:** working
-- **Evidence:** public cloud recommender uses Transformer tokenizers/models and TinyBERT/BERT-style embeddings for text representation
+- **Evidence:** public cloud recommender using Transformer tokenizers/models and BERT-style embeddings
 
-### Semantic similarity / embeddings
-- **Level:** working-to-core
-- **Evidence:** cosine-similarity recommender and narrative_dna semantic-similarity auditor with configurable local/OpenAI embeddings
-
-### Approximate nearest-neighbor search
+### Semantic Similarity / Embeddings
 - **Level:** working
-- **Evidence:** `hnswlib` used as a main dependency in SheShe for fast nearest-neighbor search
+- **Evidence:** cosine-similarity recommendation and semantic-auditing implementations
 
-## Ecosystem exposure — do not auto-promote
+### Approximate Nearest-Neighbor Search
+- **Level:** working
+- **Evidence:** hnswlib used in public ML tooling
 
-- LightGBM
-- SHAP
-- InterpretML
+### LightGBM
+- **Level:** familiarity
+- **Evidence:** optional/public project ecosystem exposure
 
-These appear in public project ecosystems but should not be presented as core expertise solely from optional dependency presence.
+### SHAP
+- **Level:** familiarity
+- **Evidence:** optional/public project ecosystem exposure
+
+### InterpretML
+- **Level:** familiarity
+- **Evidence:** optional/public project ecosystem exposure
 
 ---
 
 # 3. Generative AI & LLM Systems
 
-## Core
-
 ### LLM Application Design
 - **Level:** core
-- **Coverage:** business use-case design, structured LLM workflows, grounding, output validation, deterministic fallbacks and integration into analytical processes
-- **Evidence:** internal normative assistant plus public narrative_dna, MetaCraft and agent-factory repositories
+- **Coverage:** business use-case design, grounded workflows, structured generation, validation, deterministic fallbacks and integration into analytical processes
+- **Evidence:** internal knowledge tooling plus public narrative_dna, MetaCraft and agent-oriented projects
 
-### Retrieval-Augmented Generation (RAG)
+### Retrieval-Augmented / Retrieval-Grounded Generation
 - **Level:** core
-- **Coverage:** retrieval-grounded assistants, source-based answering, knowledge-base design and hallucination mitigation
-- **Evidence:** internal knowledge / normative tooling
+- **Coverage:** source-based answering, knowledge-base design, corpus curation, context control and hallucination mitigation
+- **Boundary:** application-level RAG/retrieval grounding is supported; do not infer ownership of a specific vector database or ingestion platform unless a project confirms it
 
 ### Prompt Engineering
 - **Level:** core
 - **Coverage:** task decomposition, structured outputs, extraction, summarization, evaluation, adjudication and reusable workflow prompts
 
 ### Structured LLM Outputs
-- **Level:** working-to-core
-- **Coverage:** JSON Schema constrained outputs, strict validation, typed models and post-generation deterministic checks
-- **Repository evidence:** narrative_dna uses OpenAI Responses API structured outputs with strict JSON Schema and Pydantic validation
+- **Level:** working
+- **Coverage:** JSON Schema constrained outputs, typed validation and deterministic post-generation checks
+- **Repository evidence:** narrative_dna
 
 ### Agentic Workflows
-- **Level:** working-to-core
-- **Coverage:** multi-step agent workflows, agent-assisted development, role/skill contracts, task delegation, evaluation and iterative quality gates
-- **Repository evidence:** `mvp-agent-factory`; agent-assisted open-source development; narrative_dna synthetic review/adjudication workflow
+- **Level:** working
+- **Coverage:** multi-step agent workflows, skill/role contracts, task delegation, evaluation and iterative quality gates
+- **Repository evidence:** mvp-agent-factory, narrative_dna and AI-assisted open-source development
 
 ### LLM Evaluation / Evals
-- **Level:** working-to-core
-- **Coverage:** rubrics, regression cases, reviewer aggregation, high-confidence synthetic gold, deterministic validation and quality gates
-- **Repository evidence:** narrative_dna and mvp-agent-factory
+- **Level:** working
+- **Coverage:** rubrics, regression cases, reviewer aggregation, synthetic-gold workflows, deterministic validation and quality gates
 
 ### LLM Safety / Hallucination Mitigation
-- **Level:** working-to-core
-- **Coverage:** grounding, conservative adjudication, schema constraints, validation, source constraints, rejected labels, confidence gates and fallback behavior
-- **Repository evidence:** narrative_dna JSON-first architecture and internal grounded assistants
+- **Level:** working
+- **Coverage:** grounding, conservative adjudication, schema constraints, validation, source constraints, confidence gates and fallback behavior
 
-## Tools / Platforms with demonstrated use
+### OpenAI API / Responses API
+- **Level:** working
+- **Evidence:** public structured-output, embedding and LLM workflow implementations
 
-- OpenAI API
-- OpenAI Responses API
-- OpenAI Structured Outputs / JSON Schema patterns
-- ChatGPT / Codex-assisted development
-- Google Gemini
-- NotebookLM
-- Google Workspace AI workflows
+### Google Gemini
+- **Level:** working
+- **Evidence:** professional/internal workflow use and Google Workspace AI initiatives
 
-## Working implementation patterns
+### NotebookLM
+- **Level:** working
+- **Evidence:** internal normative/knowledge workflows and adoption analysis
 
-- Pydantic validation
-- retries and controlled failure modes
-- versioned prompts/configuration
-- cache-by-hash patterns
-- embeddings and semantic auditing
-- synthetic reviewer committees / adjudication
-- JSON/JSONL traceability
+### Google Workspace AI workflows
+- **Level:** working
+- **Evidence:** Apps Script/Workspace automation, Gemini/NotebookLM use cases and workflow design
 
-## Usage note
+## GenAI boundary
 
-Do not convert LLM application experience into claims of foundation-model pretraining, large-scale GPU training or fine-tuning infrastructure ownership unless a specific project provides evidence.
+Do not convert application-level GenAI experience into claims of foundation-model pretraining, large-scale GPU training, custom model fine-tuning infrastructure or autonomous decision making unless a project provides direct evidence.
 
 ---
 
 # 4. Data Engineering, Data Quality, MLOps & Production
 
-## Core / Working
-
 ### ETL & Data Quality
 - **Level:** core
-- **Coverage:** extraction, transformation, integration, validation, data-quality controls and analytical dataset construction
-- **Repository evidence:** MetaCraft validates types, ranges and nulls; detects schema drift; transforms datasets to schema; produces quality reports
+- **Coverage:** extraction, transformation, integration, validation, reconciliation, data-quality controls and analytical dataset construction
+
+### Productionization of Data Science Solutions
+- **Level:** core
+- **Coverage:** moving analytical logic from exploration to repeatable business processes, recurring releases, APIs, packages, operational integration and monitoring
+
+### Python Package Engineering
+- **Level:** core
+- **Coverage:** package layouts, dependency management, public APIs, backward compatibility, documentation, release/version management and distribution
+- **Repository evidence:** InsideForest, SheShe/DelDel and MetaCraft
 
 ### Schema Engineering / Metadata Management
-- **Level:** working-to-core
-- **Coverage:** YAML schemas, schema enrichment, drift detection, schema conversion and contract-driven validation
+- **Level:** working
+- **Coverage:** YAML schemas, schema enrichment, drift detection, conversion and contract-driven validation
 - **Repository evidence:** MetaCraft
 
 ### Data Sketches / Approximate Statistics
 - **Level:** working
 - **Coverage:** t-digest and HyperLogLog-based metadata/statistical sketches
-- **Repository evidence:** MetaCraft
 
 ### Great Expectations
 - **Level:** working
-- **Coverage:** generation of expectation suites from metadata/schema definitions
-- **Repository evidence:** MetaCraft
-
-### Productionization of Data Science Solutions
-- **Level:** core
-- **Coverage:** moving analytical logic from exploration to repeatable business processes, APIs, packages, operational integration and monitoring
-- **Repository evidence:** PyPI-style packages, Cloud Functions deployment, CLIs and end-to-end pipelines
-
-### Python Package Engineering
-- **Level:** working-to-core
-- **Coverage:** `pyproject`/package layouts, editable installs, dependency management, public APIs, backward compatibility, documentation, release/version management and PyPI distribution
-- **Repository evidence:** InsideForest, SheShe/DelDel and MetaCraft
+- **Coverage:** expectation-suite generation from metadata/schema definitions
 
 ### API / CLI Design
 - **Level:** working
-- **Coverage:** HTTP function endpoints, command-line workflows and stable callable APIs
-- **Repository evidence:** cloud ML recommender, narrative_dna CLI and package APIs
+- **Coverage:** HTTP endpoints, command-line workflows and stable callable APIs
 
 ### Automated Testing / Regression Testing
-- **Level:** working-to-core
+- **Level:** working
 - **Coverage:** pytest suites, golden regression, deterministic validation and experiment protocols
-- **Repository evidence:** InsideForest, SheShe/DelDel and narrative_dna
 
 ### Code Review / Production QA
-- **Level:** working-to-core
+- **Level:** working
 - **Coverage:** pull-request review, forensic debugging, source-to-report lineage, schema normalization and false-positive remediation
-- **Evidence:** professional review of critical analytical repositories and production data-quality incidents
 
 ### CI/CD
 - **Level:** working
-- **Coverage:** automated testing/deployment concepts and repository-driven delivery
+- **Coverage:** repository-driven testing/deployment practices and automated delivery concepts
 
 ### Docker
 - **Level:** working
@@ -299,7 +271,7 @@ Do not convert LLM application experience into claims of foundation-model pretra
 
 ### MLflow
 - **Level:** working
-- **Coverage:** experiment tracking / model lifecycle concepts and practical MLOps workflows
+- **Coverage:** experiment tracking and model-lifecycle workflows
 
 ### Airflow
 - **Level:** working
@@ -307,52 +279,53 @@ Do not convert LLM application experience into claims of foundation-model pretra
 
 ### RPA / Web Automation
 - **Level:** working
-- **Coverage:** browser automation, retries, logs, batch execution and secure local processing under InfoSec constraints
+- **Coverage:** browser automation, retries, logs, batch execution and secure local processing
 - **Evidence:** Python/Selenium provider-validation workflow
 
-## Familiarity / bounded experience
-
 ### Kubernetes
-- **Level:** familiarity-to-working
-- **Usage rule:** suitable as supporting MLOps knowledge; do not position as a Kubernetes platform engineer
+- **Level:** familiarity
+- **Usage note:** suitable as supporting MLOps knowledge; do not position as Kubernetes platform engineering expertise
 
 ### Kubeflow
 - **Level:** familiarity
-- **Usage rule:** mention only where orchestration/MLOps tooling is relevant and avoid implying deep production ownership without project evidence
+- **Usage note:** mention only where orchestration/MLOps context is relevant and avoid implying deep production ownership
 
 ### Kafka
 - **Level:** familiarity
-- **Usage rule:** do not present as a core streaming specialization without stronger project evidence
+- **Usage note:** do not present as a core streaming specialization without stronger project evidence
 
 ---
 
-# 5. Cloud & Platforms
-
-## Working
-
-### Google Cloud
-- **Level:** working
-- **Demonstrated capabilities:** Cloud Functions Gen2, Cloud Storage, HTTP-triggered model serving, runtime/resource configuration and cloud-hosted model artifact loading
-- **Repository evidence:** public `cloud_function` ML recommender
-
-### Google Workspace ecosystem
-- **Level:** working
-- **Relevant exposure:** Gemini, Apps Script/Workspace automation, Sheets/Forms workflow design, APIs and AI-enabled processes
+# 5. Cloud & Data Platforms
 
 ### AWS
 - **Level:** working
-- **Relevant exposure:** cloud-based analytical workloads, AWS EMR/PySpark delivery and SageMaker-related formal training
-- **Usage note:** do not claim AWS architecture certification unless verified in `certifications.md`
+- **Evidence:** professional AWS/EMR/PySpark analytical workloads plus SageMaker-related formal training
+- **Usage note:** do not claim AWS architecture certification
+
+### Google Cloud
+- **Level:** working
+- **Evidence:** Cloud Functions Gen2, Cloud Storage, HTTP model serving and cloud-hosted model artifacts in public code
+
+### Google Workspace ecosystem
+- **Level:** working
+- **Coverage:** Apps Script, Sheets, Forms, Looker Studio, Gemini, NotebookLM and AI-enabled workflows
+
+### Teradata
+- **Level:** working
+- **Evidence:** professional analytical and operational workflows
+
+### Oracle
+- **Level:** working
+- **Evidence:** professional analytical/operational data workflows
 
 ---
 
 # 6. Visualization & Business Intelligence
 
-## Core / Working
-
 ### Tableau
-- **Level:** core-to-working
-- **Evidence:** Tableau Desktop Specialist credential and professional analytical reporting
+- **Level:** working
+- **Evidence:** Tableau Desktop Specialist credential and professional reporting
 
 ### Power BI
 - **Level:** working
@@ -360,17 +333,18 @@ Do not convert LLM application experience into claims of foundation-model pretra
 ### Looker Studio
 - **Level:** working
 
-### Matplotlib / Plotly / analytical visualization
+### Matplotlib / Plotly / Analytical Visualization
 - **Level:** working
-- **Repository evidence:** model/rule visualization utilities and cloud recommendation tooling
+- **Evidence:** analytical and model/rule visualization work
 
 ### Shiny
-- **Level:** working / historical
-- **Evidence:** public ensemble time-series forecasting application
+- **Level:** working
+- **Recency:** historical
+- **Evidence:** public time-series/analytical applications
 
 ### Streamlit
 - **Level:** working
-- **Evidence:** public analytical apps and professional prototypes translating model/recommendation outputs into interactive experiences
+- **Evidence:** public analytical apps and professional prototypes
 
 ### Data Storytelling
 - **Level:** core
@@ -380,136 +354,110 @@ Do not convert LLM application experience into claims of foundation-model pretra
 
 # 7. Software Engineering & Open Source
 
-## Independently demonstrated
-
 ### Library / Framework Design
-- **Level:** working-to-core
-- **Evidence:** authored reusable Python and R libraries rather than only standalone notebooks
-- **Examples:** InsideForest, SheShe/DelDel, MetaCraft, DataMiningTools, FitUlt
+- **Level:** core
+- **Evidence:** independently authored reusable Python and R libraries rather than only notebooks or one-off scripts
+
+### Open-Source Ownership
+- **Level:** core
+- **Evidence:** public repositories and packages spanning statistical tooling, interpretable ML, data quality, GenAI evaluation and agent architecture across multiple years
 
 ### Backward Compatibility & API Migration
 - **Level:** working
-- **Evidence:** InsideForest maintains deprecated compatibility aliases while moving users toward canonical estimator contracts
+- **Evidence:** public API migration/deprecation patterns in InsideForest
 
 ### R / RStudio Add-in Engineering
 - **Level:** working
-- **Evidence:** CRAN-published FitUltD and shortcuts packages, clipboard/add-in utilities and SQL/R reporting tools
+- **Evidence:** CRAN-published FitUltD/shortcuts ecosystem and analyst-productivity utilities
 
 ### Documentation & Developer Experience
-- **Level:** working-to-core
-- **Evidence:** documentation sites, README quickstarts, Colab examples, operating guides, API guides and migration documentation across public projects
+- **Level:** working
+- **Evidence:** README quickstarts, API/migration docs, operating guides, Colab examples and technical documentation across public projects
 
 ### Reproducible Experiment Design
-- **Level:** working-to-core
-- **Evidence:** DelDel mandatory experiment protocol; InsideForest benchmark scripts; narrative_dna golden-regression fixtures
-
-### Open-source ownership
-- **Level:** core differentiator
-- **Evidence:** public repositories spanning statistical tooling, ML interpretability, data quality, GenAI evaluation and agent architecture, with projects maintained across multiple years
+- **Level:** working
+- **Evidence:** multi-seed benchmarks, experiment protocols and golden-regression fixtures
 
 ---
 
 # 8. Business & Domain Skills
 
-## Core
-
 ### Banking Analytics
-- remote banking
-- commercial analytics
-- product propensity / offer optimization
-- operational analytics
-- fraud / malpractice detection
-- customer behavior
-- profitability and productivity measurement
+- **Level:** core
+- **Coverage:** remote banking, commercial analytics, contactability, product recommendation, operational analytics, profitability/productivity measurement and physical-network analytics
 
 ### Risk & Fraud Analytics
-- statistical anomaly detection
-- hybrid business-rule + ML approaches
-- monitoring and prioritization
-- interpretability and investigation support
+- **Level:** core
+- **Coverage:** statistical anomaly detection, hybrid rule + ML approaches, monitoring, prioritization, interpretability and investigation support
 
 ### Insurance / Actuarial Reasoning
-- probability
-- risk modeling
-- statistical distributions
-- quantitative decision making
+- **Level:** core
+- **Coverage:** probability, risk modeling, statistical distributions and quantitative decision making
 
 ### Healthcare / Risk Modeling
-- statistical modeling and distribution fitting applied to medical/risk contexts
+- **Level:** working
+- **Coverage:** statistical modeling and distribution fitting applied to medical/risk contexts
 
 ---
 
 # 9. Leadership & Delivery
 
-## Core
-
 ### End-to-End Technical Ownership
-- translate business problems into analytical solutions
-- define data and output contracts
-- build and validate models
-- design reusable software interfaces
-- productionize analytical logic
-- monitor/evaluate outputs
-- communicate business impact
+- **Level:** core
+- **Coverage:** problem framing, data contracts, modeling, validation, implementation, productionization, monitoring and business communication
 
 ### Stakeholder Management
-- interaction with business, technology, compliance, data/legal and senior leadership stakeholders
-- executive-level communication of analytical findings
+- **Level:** core
+- **Coverage:** collaboration with business, technology, compliance, data/legal, risk and senior leadership stakeholders
 
-### Technical Leadership
-- project direction
-- solution architecture
-- quality/evaluation criteria
-- mentoring / knowledge sharing
-- technical presentations and workshops
+### Technical / Project Leadership
+- **Level:** core
+- **Coverage:** project direction, solution architecture, quality/evaluation criteria, mentoring, technical presentations and cross-functional coordination
+- **Boundary:** project/technical leadership must not be converted into formal people-management claims without direct evidence
 
 ### Process / Workflow Architecture
-- **Level:** working-to-core
+- **Level:** working
 - **Coverage:** As-Is/To-Be mapping, state models, SLAs, escalation, RACI and phased automation design
-- **Evidence:** regulatory-process architecture with Google Workspace and proposed LLM assistance
 
 ### Teaching & Knowledge Transfer
-- Python instruction
-- AI / GenAI workshops
-- internal technical talks and labs
-- public documentation and examples
+- **Level:** working
+- **Coverage:** Python instruction, technical mentoring, AI/GenAI workshops, internal talks, documentation and examples
 
 ### Agile Delivery
-- Scrum principles
-- iterative development
-- cross-functional coordination
+- **Level:** working
+- **Coverage:** Scrum principles, iterative development and cross-functional coordination
 
 ---
 
 # 10. Languages
 
 ### Spanish
-- **Level:** native
+- **Proficiency:** native
 
 ### English
-- **Level:** C1 / advanced professional proficiency
-- **Evidence:** professional and academic use; international experience in Dublin
+- **Proficiency:** C1 / advanced professional
+- **Evidence:** professional and academic use plus international experience in Dublin
 
 ### French
-- **Level:** A2
+- **Proficiency:** A2
 
 ---
 
-# 11. GitHub-backed skill evidence map
+# 11. GitHub-backed evidence map
 
 | Repository | Strongest evidence |
 |---|---|
-| `InsideForest` | Python package engineering, scikit-learn-style APIs, supervised clustering, interpretable ML, validation, pytest, persistence, documentation |
-| `SheShe` / `PureSheShe` | decision-surface exploration, low-dimensional rule discovery, classification/regression, numerical search, experiment design, PyPI packaging |
-| `MetaCraft` | data quality, schema drift, YAML metadata, Great Expectations, t-digest, HyperLogLog, OpenAI integration |
-| `ADNarrativa` / `narrative_dna` | OpenAI Responses API, strict Structured Outputs, Pydantic, JSON Schema, embeddings, LLM evals, adjudication, synthetic review, CLI, golden regression |
-| `mvp-agent-factory` | agent architecture, skill contracts, eval rubrics, PRDs, vertical slices, Codex/Claude/Cursor workflows |
-| `cloud_function` | GCP Cloud Functions Gen2, Cloud Storage, TensorFlow/Keras, Transformers, embeddings, HTTP model serving, OpenAI integration |
-| `coi` | transaction-pattern analysis, public fraud/compliance tooling, guided Q&A, text signals, visual reporting, interpretable case exports |
-| `floor` / `yahoo` | financial-data pipelines, temporal validation, GitHub Actions, SQLite/JSON artifacts, static dashboards |
+| `InsideForest` | Python package engineering, estimator APIs, supervised clustering, interpretable ML, validation, pytest, persistence, documentation |
+| `SheShe` / `PureSheShe` | decision-surface exploration, low-dimensional rule discovery, numerical search, experiment design and packaging |
+| `MetaCraft` | data quality, schema drift, YAML metadata, Great Expectations, sketches and OpenAI integration |
+| `ADNarrativa` / `narrative_dna` | OpenAI Responses API, Structured Outputs, Pydantic, JSON Schema, embeddings, LLM evals, adjudication and golden regression |
+| `mvp-agent-factory` | agent architecture, skill contracts, eval rubrics, PRDs and AI-assisted SDLC structure |
+| `cloud_function` | GCP Cloud Functions Gen2, Cloud Storage, Keras, Transformers, embeddings and HTTP model serving |
+| `coi` | transaction-pattern analysis, fraud/compliance tooling, text signals, visual reporting and interpretable case exports |
+| `floor` / `yahoo` | financial-data pipelines, temporal validation, GitHub Actions, SQLite/JSON artifacts and static dashboards |
 | `FitUltD` / `shortcuts` | CRAN package engineering, distribution fitting, statistical tests, RStudio add-ins and analyst productivity |
-| `movilidad_social_mx` | Streamlit analytical product, mixed-audience storytelling and probabilistic interpretation; fork boundary applies |
-| `DataMiningTools` / `FitUlt_V00` | R package development, statistical tooling, distribution/modeling ecosystem |
+| `movilidad_social_mx` | Streamlit analytical product and probabilistic storytelling; fork boundary applies |
+| `DataMiningTools` / `FitUlt_V00` | R package development and statistical tooling |
 | `Ensemble-Learning-for-Time-Series` | R time-series ensemble forecasting and Shiny delivery |
 
 ---
@@ -518,11 +466,12 @@ Do not convert LLM application experience into claims of foundation-model pretra
 
 1. A vacancy keyword alone is never enough to promote a skill into the CV.
 2. Prefer skills with direct evidence in `projects/`, `roles/`, `achievements/` or observable public repositories.
-3. Never change `familiarity` into `core` simply to improve ATS matching.
-4. A dependency listed as optional is weaker evidence than code/API ownership; do not overclaim it.
-5. For senior Data Science roles, lead with Python, SQL, PySpark/Spark, ML, statistics, interpretable ML, GenAI/LLMs and end-to-end ownership when relevant.
-6. For ML Engineering/MLOps roles, add package engineering, tests, APIs, cloud model serving, Docker, CI/CD and lifecycle tools while preserving bounded labels for Kubernetes/Kubeflow/Kafka.
-7. For GenAI roles, emphasize Structured Outputs, validation, evals, RAG, prompting, adjudication, agentic workflows and auditable system design rather than unsupported foundation-model training claims.
-8. For data-quality/platform roles, MetaCraft provides direct evidence for schema contracts, drift detection, metadata and expectation generation.
-9. For explainable-ML roles, InsideForest and SheShe/DelDel are primary evidence and should be preferred over generic XAI claims.
-10. For leadership roles, combine technical architecture/ownership with measurable business outcomes rather than replacing technical depth with generic management language.
+3. Preserve the exact `core`, `working` or `familiarity` value; never upgrade it for ATS matching.
+4. Never infer a hybrid level. If evidence grows, update the canonical level explicitly.
+5. Optional dependency presence is weaker evidence than code/API ownership.
+6. For senior Data Science roles, lead with Python, SQL, PySpark/Spark, ML, statistics, interpretable ML, GenAI/LLMs and end-to-end ownership when relevant.
+7. For ML Engineering/MLOps roles, add package engineering, tests, APIs, cloud model serving, Docker, CI/CD and lifecycle tools while keeping Kubernetes/Kubeflow/Kafka at familiarity unless new evidence is added.
+8. For GenAI roles, emphasize Structured Outputs, validation, evals, RAG, prompting, adjudication, agentic workflows and auditable system design rather than unsupported foundation-model training claims.
+9. For data-quality/platform roles, MetaCraft and professional production-quality work provide evidence for schema contracts, drift detection, metadata, QA and reconciliation.
+10. For explainable-ML roles, InsideForest and SheShe/DelDel are primary evidence.
+11. For leadership roles, combine technical/project leadership with measurable outcomes; do not invent formal people-management scope.
