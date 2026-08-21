@@ -56,6 +56,7 @@ jobs:
         run: |
           git fetch origin main
           git checkout -B main origin/main
+          echo "PROCESSED_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Incrementally ingest main
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -63,8 +64,8 @@ jobs:
           python -m vacancy_pipeline
           --repo .
           --state-dir vacancy_state
-          --run-id ${{ github.sha }}
-          --source-commit ${{ github.sha }}
+          --run-id ${{ env.PROCESSED_SHA }}
+          --source-commit ${{ env.PROCESSED_SHA }}
 
       - name: Retrieval smoke test
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -82,6 +83,6 @@ jobs:
             echo "No vacancy state changes to commit."
             exit 0
           fi
-          git commit -m "chore: update vacancy state for ${GITHUB_SHA::12}"
+          git commit -m "chore: update vacancy state for ${PROCESSED_SHA::12}"
           git pull --rebase origin main
           git push origin HEAD:main
