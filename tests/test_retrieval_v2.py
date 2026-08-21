@@ -94,7 +94,8 @@ class HybridGraphTests(unittest.TestCase):
         self.assertEqual(hits[0]["chunk_id"], "b")
         self.assertEqual(hits[0]["retrieval_source"], "hybrid")
 
-    def test_graph_expansion_adds_only_active_metric_chunk(self):
+    @staticmethod
+    def _graph_fixture():
         lexical = {
             "chunks": {
                 "project::summary": {"record_id": "project", "chunk_type": "project_detail", "source_path": "experience/project.md", "text": "project"},
@@ -103,10 +104,26 @@ class HybridGraphTests(unittest.TestCase):
             "record_chunks": {"project": ["project::summary"], "achievement-metrics": ["achievement-metrics::ACH-X"]},
         }
         hits = [{"chunk_id": "project::summary", "record_id": "project", "score": 1.0, "source_path": "experience/project.md"}]
-        relations = [{"source": "project", "relation": "references_metric", "target": "ACH-X"}]
-        expanded = expand_graph(hits, lexical_index=lexical, relations=relations)
+        edge = {"source": "project", "relation": "references_metric", "target": "ACH-X"}
+        return lexical, hits, edge
+
+    def test_graph_expansion_adds_only_active_metric_chunk(self):
+        lexical, hits, edge = self._graph_fixture()
+        expanded = expand_graph(hits, lexical_index=lexical, relations=[edge])
         graph_hits = [hit for hit in expanded if hit.get("retrieval_source") == "graph"]
         self.assertEqual([hit["chunk_id"] for hit in graph_hits], ["achievement-metrics::ACH-X"])
+
+    def test_graph_expansion_accepts_versioned_relations_envelope(self):
+        lexical, hits, edge = self._graph_fixture()
+        persisted = {"schema_version": 1, "relations": [edge]}
+        expanded = expand_graph(hits, lexical_index=lexical, relations=persisted)
+        graph_hits = [hit for hit in expanded if hit.get("retrieval_source") == "graph"]
+        self.assertEqual([hit["chunk_id"] for hit in graph_hits], ["achievement-metrics::ACH-X"])
+
+    def test_graph_expansion_rejects_malformed_relation_entries(self):
+        lexical, hits, _ = self._graph_fixture()
+        with self.assertRaisesRegex(ValueError, "non-object edges"):
+            expand_graph(hits, lexical_index=lexical, relations={"relations": ["bad-edge"]})
 
 
 class RerankerSafetyTests(unittest.TestCase):
