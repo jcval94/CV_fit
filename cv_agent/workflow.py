@@ -101,8 +101,14 @@ async def run_agentic_cv(
     vacancy_state: Path = Path("vacancy_state"),
     evidence_state: Path = Path("rag_state"),
     run_id: str = "manual",
+    retrieval_mode: str | None = None,
 ) -> dict[str, Any]:
-    context = assemble_application_context(vacancy_id, vacancy_state=vacancy_state, evidence_state=evidence_state)
+    context = assemble_application_context(
+        vacancy_id,
+        vacancy_state=vacancy_state,
+        evidence_state=evidence_state,
+        retrieval_mode=retrieval_mode,
+    )
     vacancy = context["vacancy"]
     expected_language = vacancy["application_language"]
     model_evidence = _budget_evidence(context["evidence_chunks"], context["match_plan"])
@@ -204,8 +210,6 @@ async def run_agentic_cv(
             best = (rank, iteration, cv, review, validation_payload)
 
         if gate.passed:
-            # A candidate that satisfies the full gate always wins even if an
-            # earlier REVISE received a numerically higher subjective score.
             best = (rank, iteration, cv, review, validation_payload)
             quality_target_reached = True
             break
