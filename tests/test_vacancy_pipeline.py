@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from vacancy_pipeline import VACANCY_PIPELINE_VERSION
 from vacancy_pipeline.contract import VacancyValidationError, adapt_source_document
 from vacancy_pipeline.index import retrieve
 from vacancy_pipeline.pipeline import run_pipeline
@@ -60,13 +61,41 @@ def vacantes_doc() -> dict:
 
 
 class ContractTests(unittest.TestCase):
-    def test_adapters_create_common_model_and_clean_urls(self) -> None:
+    def test_adapters_create_common_model_clean_urls_and_detect_language(self) -> None:
         record = adapt_source_document(gptw_doc(), "GPTW/a.json", "abc")[0]
         self.assertEqual(record.company, "Konfío")
         self.assertEqual(record.work_model, "Hybrid")
         self.assertEqual(record.url, "https://jobs.example.com/konfio/123")
         self.assertTrue(record.vacancy_id.startswith("vac-"))
+        self.assertEqual(record.application_language, "en")
+        self.assertEqual(record.language_source, "role_title")
         self.assertEqual(record.provenance[0].source_native_id, "konfio-ai-ml-engineer-sr-2026-08-18")
+
+    def test_explicit_application_language_has_priority(self) -> None:
+        doc = gptw_doc()
+        doc["vacancies"][0]["application_language"] = "es"
+        record = adapt_source_document(doc, "GPTW/a.json", "abc")[0]
+        self.assertEqual(record.application_language, "es")
+        self.assertEqual(record.language_confidence, 1.0)
+        self.assertEqual(record.language_source, "explicit_source")
+
+    def test_source_fit_commentary_does_not_determine_language(self) -> None:
+        doc = gptw_doc()
+        doc["vacancies"][0]["fit_evaluation"] = "Encaje excelente. Experiencia muy alineada con la vacante y el negocio."
+        record = adapt_source_document(doc, "GPTW/a.json", "abc")[0]
+        self.assertEqual(record.application_language, "en")
+        self.assertEqual(record.language_source, "role_title")
+
+    def test_spanish_vacancy_body_is_detected(self) -> None:
+        doc = vacantes_doc()
+        doc["vacantes"][0]["puesto"] = "Científico de Datos Senior"
+        doc["vacantes"][0]["description"] = (
+            "Buscamos una persona con experiencia en datos y modelos para diseñar soluciones, "
+            "colaborar con el equipo y llevar modelos a producción para el negocio."
+        )
+        record = adapt_source_document(doc, "Vacantes/b.json", "abc")[0]
+        self.assertEqual(record.application_language, "es")
+        self.assertEqual(record.language_source, "vacancy_text")
 
     def test_same_opening_from_two_formats_deduplicates_by_identity(self) -> None:
         gptw = gptw_doc()
@@ -95,6 +124,7 @@ class IncrementalPipelineTests(unittest.TestCase):
 
     def test_incremental_idempotent_processing_and_reindex(self) -> None:
         first = run_pipeline(self.repo, self.state, run_id="run-1")
+        self.assertEqual(first["pipeline_version"], VACANCY_PIPELINE_VERSION)
         self.assertEqual(first["source_counts"]["new"], 2)
         self.assertEqual(first["vacancy_counts"]["active"], 2)
         self.assertEqual(first["vacancy_counts"]["reindexed"], 2)
@@ -112,6 +142,16 @@ class IncrementalPipelineTests(unittest.TestCase):
         self.assertEqual(third["source_counts"]["unchanged"], 1)
         self.assertEqual(third["vacancy_counts"]["impacted"], 1)
         self.assertEqual(third["vacancy_counts"]["reindexed"], 1)
+
+    def test_pipeline_version_change_forces_controlled_rebuild(self) -> None:
+        run_pipeline(self.repo, self.state, run_id="initial")
+        manifest_path = self.state / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["pipeline_version"] = 0
+        write_json(manifest_path, manifest)
+        report = run_pipeline(self.repo, self.state, run_id="after-upgrade")
+        self.assertEqual(report["source_counts"]["new"], 2)
+        self.assertEqual(report["vacancy_counts"]["reindexed"], 2)
 
     def test_invalid_modified_file_is_quarantined_and_removed_from_active_state(self) -> None:
         run_pipeline(self.repo, self.state, run_id="good")
