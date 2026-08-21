@@ -1,17 +1,16 @@
 name: One-time authenticated Konfio canary
 
 on:
-  push:
-    branches:
-      - eval/live-canary
-    paths:
-      - .github/workflows/live-canary-once.yml
+  issues:
+    types: [opened]
 
 permissions:
-  contents: write
+  contents: read
+  issues: write
 
 jobs:
   live-canary:
+    if: github.event.issue.title == '[eval] Run authenticated Konfio canary'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -111,14 +110,15 @@ jobs:
           usage = load("usage_report.json")
           trace = load("evidence_trace.json")
 
-          requirements = []
-          for item in match_plan.get("requirements", []):
-              requirements.append({
+          requirements = [
+              {
                   "requirement": item.get("requirement"),
                   "coverage": item.get("coverage"),
                   "score": item.get("score"),
                   "evidence_chunk_ids": item.get("evidence_chunk_ids", []),
-              })
+              }
+              for item in match_plan.get("requirements", [])
+          ]
 
           summary = {
               "schema_version": 1,
@@ -139,9 +139,7 @@ jobs:
               "final_review": run_report.get("final_review", {}),
               "final_validation": run_report.get("final_validation", {}),
               "final_gate_reasons": run_report.get("final_gate_reasons", []),
-              "usage_summary": {
-                  key: value for key, value in usage.items() if key != "calls"
-              },
+              "usage_summary": {key: value for key, value in usage.items() if key != "calls"},
               "usage_calls": [
                   {
                       "name": call.get("name"),
@@ -161,26 +159,34 @@ jobs:
               "note": "Sanitized canary diagnostic; generated CV text and API credentials are intentionally excluded.",
           }
 
-          Path("canary_eval").mkdir(exist_ok=True)
-          Path("canary_eval/summary.json").write_text(
+          Path("/tmp/canary_summary.json").write_text(
               json.dumps(summary, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
               encoding="utf-8",
           )
           print(json.dumps(summary, ensure_ascii=False, sort_keys=True)[:16000])
           PY
 
-      - name: Persist sanitized diagnostic to evaluation branch
+      - name: Comment sanitized diagnostic on trigger issue
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add canary_eval/summary.json
-          if git diff --cached --quiet; then
-            echo "No diagnostic change to commit."
-          else
-            git commit -m "eval: persist authenticated Konfio canary diagnostic"
-            git push origin HEAD:eval/live-canary
-          fi
+          python - <<'PY' > /tmp/canary_comment.md
+          import json
+          from pathlib import Path
+
+          path = Path('/tmp/canary_summary.json')
+          if not path.exists():
+              print('### Authenticated canary diagnostic\n\nDiagnostic summary was not produced. Inspect the workflow logs.')
+          else:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              print('### Authenticated canary diagnostic')
+              print('')
+              print('```json')
+              print(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True))
+              print('```')
+          PY
+          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/canary_comment.md
 
       - name: Upload canary outputs
         if: always()
