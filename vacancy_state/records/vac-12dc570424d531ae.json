@@ -1,0 +1,51 @@
+{
+  "city": "Mexico City, Mexico / Remote",
+  "company": "Ford Motor Company",
+  "company_category": "Producto Tech",
+  "content_hash": "1203d21eded8bb97d27c51b1e759368fa9e79c409c47ee1bd02e227882981a70",
+  "description": null,
+  "fit_gaps": [
+    "No aprovecha directamente banca, fraude o riesgo.",
+    "Puede ser más especializado en NLP/AI engineering que en data science financiero."
+  ],
+  "fit_score": 92.0,
+  "fit_strengths": [
+    "Rol remoto para México con foco explícito en NLP, LLMs y aplicaciones de IA.",
+    "Incluye colaboración con producto, ingeniería, analytics y negocio.",
+    "Encaja con GenAI, evaluación de modelos, responsible AI y traducción de problemas complejos a soluciones aplicadas."
+  ],
+  "fit_summary": "Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.",
+  "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
+  "location_raw": "Mexico City, Mexico / Remote",
+  "posted_date": null,
+  "posted_date_raw": "Hace 1-2 días",
+  "provenance": [
+    {
+      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
+      "source_native_id": "fd925341b8ab",
+      "source_path": "Vacantes/vacantes_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Data Scientist NLP (AI) Engineer",
+  "salary": "No especificado",
+  "schema_version": 1,
+  "seniority": null,
+  "tech_stack": [
+    "NLP",
+    "LLMs",
+    "GCP",
+    "Responsible AI",
+    "Model evaluation",
+    "AI applications"
+  ],
+  "url": "https://www.careers.ford.com/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056",
+  "vacancy_id": "vac-12dc570424d531ae",
+  "work_model": "Remote"
+}

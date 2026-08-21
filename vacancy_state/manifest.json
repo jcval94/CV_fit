@@ -1,5 +1,26 @@
 {
+  "last_run_id": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
   "schema_version": 1,
-  "last_run_id": null,
-  "sources": {}
+  "sources": {
+    "GPTW/vacantes_2026-08-21.json": {
+      "source_hash": "cc3e1f0dd3bd6aabed8ca195d64f256beaf28248234063acd3d32ee5a02ffb79",
+      "state_file": "sources/GPTW__vacantes_2026-08-21.json--0d3c1dd895328ff3.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-04e92192e608ea02"
+      ]
+    },
+    "Vacantes/vacantes_2026-08-21.json": {
+      "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
+      "state_file": "sources/Vacantes__vacantes_2026-08-21.json--6731e560f3376403.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-12dc570424d531ae",
+        "vac-14b95b3407bcb148",
+        "vac-21cefd168f6539b4",
+        "vac-2de566514601700a",
+        "vac-6d9bdccca1ff49c3"
+      ]
+    }
+  }
 }

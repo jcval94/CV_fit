@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-21cefd168f6539b4::core",
+      "chunk_type": "core",
+      "content_hash": "962acb552d2630c45ce8144329287773aa5ca3cdc0b431786b7285769f406afd",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    },
+    {
+      "chunk_id": "vac-21cefd168f6539b4::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "3b31c7dff8ada12d2b4374cfdc50375bde64a5cabe482dc724d80ea7d1a611ac",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Technologies / capabilities: Decision Science; Machine Learning; A/B testing; SQL; Product analytics; Stakeholder management",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    },
+    {
+      "chunk_id": "vac-21cefd168f6539b4::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "0ac20dbaa2fe7198e6edba79bd0a608841ad534016b4a6f239bcc93ca548b0ce",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Source fit score: 91/100\nSource fit summary: Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.\nSource strengths: Rol senior orientado a decisiones estratégicas, producto, crecimiento e impacto de negocio.; Requiere ownership end-to-end de iniciativas analíticas y trabajo con stakeholders senior.; Fuerte ajuste con experimentación, modelado, storytelling ejecutivo y liderazgo técnico.\nSource gaps: Menor conexión directa con banca, fraude y riesgo.; La fuente oficial de postulación no fue visible; el enlace disponible proviene de un agregador con detalle salarial.",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-21cefd168f6539b4"
+}

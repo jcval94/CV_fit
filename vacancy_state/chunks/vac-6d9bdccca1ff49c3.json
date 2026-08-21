@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-6d9bdccca1ff49c3::core",
+      "chunk_type": "core",
+      "content_hash": "8d8852e24816163b6455304a422d71e5a198a155407175cf18d0e13a523c90cb",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    },
+    {
+      "chunk_id": "vac-6d9bdccca1ff49c3::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "6e2c097682301bd63c85103ed220460feb56a74e8a5fa2c5250601a70e045f25",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    },
+    {
+      "chunk_id": "vac-6d9bdccca1ff49c3::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "c1a5a24cbd0d9e724ef48f391e680bc0168d39398e7037a190c3921a3b93f128",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Source fit score: 89/100\nSource fit summary: Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.\nSource strengths: Senior individual contributor con ownership de workstreams analíticos end-to-end.; Trabaja con adopción, retención, expansión y crecimiento, traduciendo problemas estratégicos en análisis rigurosos.; Buen ajuste con Python, SQL, modelos de negocio, comunicación ejecutiva y liderazgo técnico sin gestión formal.\nSource gaps: No se observa foco explícito en banca, riesgo, fraude o GenAI.; La información pública recuperada no muestra rango salarial ni stack completo.",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-6d9bdccca1ff49c3"
+}

@@ -1,0 +1,41 @@
+{
+  "deleted_vacancy_ids": [],
+  "paths": {
+    "deleted": [],
+    "modified": [],
+    "new": [
+      "GPTW/vacantes_2026-08-21.json",
+      "Vacantes/vacantes_2026-08-21.json"
+    ],
+    "quarantined": [],
+    "unchanged": []
+  },
+  "reindexed_vacancy_ids": [
+    "vac-04e92192e608ea02",
+    "vac-12dc570424d531ae",
+    "vac-14b95b3407bcb148",
+    "vac-21cefd168f6539b4",
+    "vac-2de566514601700a",
+    "vac-6d9bdccca1ff49c3"
+  ],
+  "run_id": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+  "schema_version": 1,
+  "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+  "source_counts": {
+    "deleted": 0,
+    "discovered": 2,
+    "modified": 0,
+    "new": 2,
+    "quarantined": 0,
+    "unchanged": 0
+  },
+  "status": "success",
+  "vacancy_counts": {
+    "active": 6,
+    "deleted": 0,
+    "impacted": 6,
+    "reindexed": 6,
+    "semantic_unchanged": 0
+  },
+  "validation_errors": {}
+}

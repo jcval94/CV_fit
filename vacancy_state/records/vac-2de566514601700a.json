@@ -1,0 +1,51 @@
+{
+  "city": "México",
+  "company": "DataKnow",
+  "company_category": "Otro",
+  "content_hash": "f49f6fee4c64479c742e49d7160fd8a9b4bb18055a00c2689389139699f56913",
+  "description": null,
+  "fit_gaps": [
+    "No está marcado como Senior/Lead y no muestra foco financiero.",
+    "Empresa menos prioritaria que fintech, banca o big tech."
+  ],
+  "fit_score": 87.0,
+  "fit_strengths": [
+    "Descripción en español y modalidad remota en México.",
+    "Responsabilidad clara de desarrollar e implementar modelos de ML desde experimentación hasta producción.",
+    "Pide Python, SQL, MLOps end-to-end y diseño de experimentos rigurosos."
+  ],
+  "fit_summary": "Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.",
+  "identity_key": "2de566514601700a4ebb9303ddc602420b3bb2158426e08876139242f4e93a4c",
+  "location_raw": "México",
+  "posted_date": null,
+  "posted_date_raw": "Hace 6-7 días",
+  "provenance": [
+    {
+      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_entry_index": 4,
+      "source_format": "vacantes_v1",
+      "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
+      "source_native_id": "d4591a7e5f49",
+      "source_path": "Vacantes/vacantes_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Data Scientist (Python/SQL) - Remote",
+  "salary": "No especificado",
+  "schema_version": 1,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Machine Learning",
+    "MLOps",
+    "Experimentación",
+    "Producción"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/data-scientist-at-dataknow-4453274739",
+  "vacancy_id": "vac-2de566514601700a",
+  "work_model": "Remote"
+}

@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-04e92192e608ea02::core",
+      "chunk_type": "core",
+      "content_hash": "64eaea11c68fd71d775db31210d4e57eb452e22ca683eca6a96df07450c0037f",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
+    {
+      "chunk_id": "vac-04e92192e608ea02::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "b21116120ab13080d473f4dbb85b5235ef5f817b918c0b17f7259c38e1412425",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "text": "Technologies / capabilities: Python; Machine Learning; LLMs; Agentic AI; MLOps; Data Pipelines; Model Monitoring; Data Governance",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
+    {
+      "chunk_id": "vac-04e92192e608ea02::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "c270a3cef880b0ee979cab79a1bfb0ddab264660067ae1a262b05eba050011fd",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "text": "Source fit score: 95/100\nSource fit summary: Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
+      "vacancy_id": "vac-04e92192e608ea02"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-04e92192e608ea02"
+}

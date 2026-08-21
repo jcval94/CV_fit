@@ -1,6 +1,1857 @@
 {
+  "chunks": {
+    "vac-04e92192e608ea02::core": {
+      "chunk_type": "core",
+      "content_hash": "64eaea11c68fd71d775db31210d4e57eb452e22ca683eca6a96df07450c0037f",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "ai": 1,
+        "ciudad": 1,
+        "company": 1,
+        "de": 1,
+        "engineer": 1,
+        "hybrid": 1,
+        "konfio": 1,
+        "location": 1,
+        "mexico": 1,
+        "ml": 1,
+        "model": 1,
+        "role": 1,
+        "senior": 1,
+        "seniority": 1,
+        "sr.": 1,
+        "work": 1
+      },
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
+    "vac-04e92192e608ea02::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "b21116120ab13080d473f4dbb85b5235ef5f817b918c0b17f7259c38e1412425",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "agentic": 1,
+        "ai": 1,
+        "capabilities": 1,
+        "data": 2,
+        "governance": 1,
+        "learning": 1,
+        "llms": 1,
+        "machine": 1,
+        "mlops": 1,
+        "model": 1,
+        "monitoring": 1,
+        "pipelines": 1,
+        "python": 1,
+        "technologies": 1
+      },
+      "text": "Technologies / capabilities: Python; Machine Learning; LLMs; Agentic AI; MLOps; Data Pipelines; Model Monitoring; Data Governance",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
+    "vac-04e92192e608ea02::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "c270a3cef880b0ee979cab79a1bfb0ddab264660067ae1a262b05eba050011fd",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "95": 1,
+        "agenticos": 1,
+        "ai": 1,
+        "alto": 1,
+        "combina": 1,
+        "con": 3,
+        "construccion": 1,
+        "data": 1,
+        "de": 3,
+        "despliegue": 1,
+        "directo": 1,
+        "el": 1,
+        "en": 1,
+        "encaje": 1,
+        "end-to-end": 1,
+        "experiencia": 1,
+        "financieros": 1,
+        "fit": 2,
+        "genai.": 1,
+        "impacto": 1,
+        "learning": 1,
+        "llms": 1,
+        "machine": 1,
+        "mlops": 1,
+        "muy": 1,
+        "negocio.": 1,
+        "operacion": 1,
+        "ownership": 1,
+        "para": 1,
+        "perfil": 1,
+        "productivo": 1,
+        "productos": 1,
+        "python": 1,
+        "rol": 1,
+        "science": 1,
+        "score": 1,
+        "senior": 1,
+        "sistemas": 1,
+        "sobre": 1,
+        "source": 2,
+        "summary": 1,
+        "tecnico": 1,
+        "un": 1,
+        "workflows": 1
+      },
+      "text": "Source fit score: 95/100\nSource fit summary: Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
+      "vacancy_id": "vac-04e92192e608ea02"
+    },
+    "vac-12dc570424d531ae::core": {
+      "chunk_type": "core",
+      "content_hash": "d6776ed42cb2a0f73fe0a74abd082a74f4cfa06e139aeae5786d5352443b5809",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "ai": 1,
+        "category": 1,
+        "city": 1,
+        "company": 3,
+        "data": 1,
+        "engineer": 1,
+        "ford": 1,
+        "location": 1,
+        "mexico": 2,
+        "model": 1,
+        "motor": 1,
+        "nlp": 1,
+        "producto": 1,
+        "remote": 2,
+        "role": 1,
+        "scientist": 1,
+        "tech": 1,
+        "work": 1
+      },
+      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote",
+      "vacancy_id": "vac-12dc570424d531ae"
+    },
+    "vac-12dc570424d531ae::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "9c383b12b1f17b4541ee594cbdb814eacca8f8756b24e135dd010221c2d8b7b2",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "ai": 2,
+        "applications": 1,
+        "capabilities": 1,
+        "evaluation": 1,
+        "gcp": 1,
+        "llms": 1,
+        "model": 1,
+        "nlp": 1,
+        "responsible": 1,
+        "technologies": 1
+      },
+      "text": "Technologies / capabilities: NLP; LLMs; GCP; Responsible AI; Model evaluation; AI applications",
+      "vacancy_id": "vac-12dc570424d531ae"
+    },
+    "vac-12dc570424d531ae::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "d56b406b80014caca2e0d0988b260e666432009cc7c68f0696d2b52d43600e3a",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "92": 1,
+        "ai": 2,
+        "analytics": 1,
+        "aplicaciones": 1,
+        "aplicada": 1,
+        "aplicadas.": 1,
+        "aprovecha": 1,
+        "banca": 1,
+        "buena": 1,
+        "colaboracion": 1,
+        "complejos": 1,
+        "con": 3,
+        "data": 1,
+        "de": 4,
+        "directamente": 1,
+        "el": 1,
+        "empresa": 1,
+        "en": 4,
+        "encaja": 1,
+        "engineering": 1,
+        "especializado": 1,
+        "evaluacion": 1,
+        "explicito": 1,
+        "financiero.": 1,
+        "fit": 2,
+        "foco": 1,
+        "fortalecer": 1,
+        "fraude": 1,
+        "gaps": 1,
+        "genai": 2,
+        "global.": 1,
+        "ia": 1,
+        "ia.": 1,
+        "incluye": 1,
+        "ingenieria": 1,
+        "llms": 1,
+        "mas": 1,
+        "mexico": 1,
+        "modelos": 1,
+        "negocio.": 1,
+        "nlp": 2,
+        "no": 1,
+        "oportunidad": 1,
+        "para": 2,
+        "posicionamiento": 1,
+        "problemas": 1,
+        "producto": 1,
+        "puede": 1,
+        "que": 1,
+        "remoto": 1,
+        "responsible": 1,
+        "riesgo.": 1,
+        "rol": 1,
+        "science": 1,
+        "score": 1,
+        "ser": 1,
+        "soluciones": 1,
+        "source": 4,
+        "strengths": 1,
+        "summary": 1,
+        "traduccion": 1,
+        "una": 1
+      },
+      "text": "Source fit score: 92/100\nSource fit summary: Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.\nSource strengths: Rol remoto para México con foco explícito en NLP, LLMs y aplicaciones de IA.; Incluye colaboración con producto, ingeniería, analytics y negocio.; Encaja con GenAI, evaluación de modelos, responsible AI y traducción de problemas complejos a soluciones aplicadas.\nSource gaps: No aprovecha directamente banca, fraude o riesgo.; Puede ser más especializado en NLP/AI engineering que en data science financiero.",
+      "vacancy_id": "vac-12dc570424d531ae"
+    },
+    "vac-14b95b3407bcb148::core": {
+      "chunk_type": "core",
+      "content_hash": "793697a341fc0226b507f134735300439b0b6ef8445661533141042935144692",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "category": 1,
+        "cdmx": 1,
+        "city": 1,
+        "company": 2,
+        "engineer": 1,
+        "fintech": 1,
+        "fraud": 1,
+        "hybrid": 1,
+        "learning": 1,
+        "location": 1,
+        "machine": 1,
+        "mexico": 1,
+        "model": 1,
+        "payjoy": 1,
+        "role": 1,
+        "work": 1
+      },
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    },
+    "vac-14b95b3407bcb148::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "10a8c3a65796556b44f1e72bdbf6433f9a8d65d6a98e69d01e7cc4569c1ccd44",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "capabilities": 1,
+        "credit": 1,
+        "data": 1,
+        "deployment": 1,
+        "detection": 1,
+        "fraud": 1,
+        "learning": 1,
+        "machine": 1,
+        "model": 1,
+        "python": 1,
+        "risk": 1,
+        "science": 1,
+        "technologies": 1
+      },
+      "text": "Technologies / capabilities: Machine Learning; Fraud detection; Credit risk; Model deployment; Python; Data Science",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    },
+    "vac-14b95b3407bcb148::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "763de721d1cdf2f2b27d951a7566b45f34396d5bfa7169138956cae4353ec771",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "96": 1,
+        "alineacion": 1,
+        "aprovecha": 1,
+        "bancaria": 1,
+        "cargar": 1,
+        "cdmx.": 1,
+        "ciencia": 1,
+        "con": 2,
+        "crediticio.": 1,
+        "credito": 1,
+        "datos": 1,
+        "de": 5,
+        "desarrollar": 1,
+        "desplegar": 1,
+        "deteccion": 1,
+        "directo": 1,
+        "el": 1,
+        "en": 3,
+        "end-to-end.": 1,
+        "engineer": 1,
+        "es": 2,
+        "experiencia": 1,
+        "fintech": 2,
+        "fit": 2,
+        "foco": 1,
+        "fraude": 3,
+        "gaps": 1,
+        "hacia": 2,
+        "infraestructura": 1,
+        "la": 2,
+        "learning": 1,
+        "machine": 1,
+        "mas": 1,
+        "mejor": 1,
+        "ml": 1,
+        "modelos": 3,
+        "muestra": 1,
+        "negocio": 1,
+        "no": 1,
+        "oficial": 1,
+        "optimizar": 1,
+        "produccion.": 1,
+        "productivos": 1,
+        "publicacion": 1,
+        "puede": 1,
+        "pura.": 1,
+        "python": 1,
+        "que": 1,
+        "rango": 1,
+        "responsabilidad": 1,
+        "riesgo": 1,
+        "salarial.": 1,
+        "score": 1,
+        "scoring": 1,
+        "source": 4,
+        "sql": 1,
+        "strengths": 1,
+        "summary": 1,
+        "titulo": 1,
+        "vacante": 1
+      },
+      "text": "Source fit score: 96/100\nSource fit summary: Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.\nSource strengths: Fintech con foco directo en fraude y riesgo crediticio.; Responsabilidad de desarrollar, optimizar y desplegar modelos de ML en producción.; Aprovecha experiencia bancaria, detección de fraude, scoring, Python/SQL y modelos end-to-end.\nSource gaps: El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.; La publicación oficial no muestra rango salarial.",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    },
+    "vac-21cefd168f6539b4::core": {
+      "chunk_type": "core",
+      "content_hash": "962acb552d2630c45ce8144329287773aa5ca3cdc0b431786b7285769f406afd",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "category": 1,
+        "city": 1,
+        "company": 2,
+        "decision": 1,
+        "instructure": 1,
+        "location": 1,
+        "mexico": 2,
+        "model": 1,
+        "producto": 1,
+        "remote": 1,
+        "role": 1,
+        "scientist": 1,
+        "senior": 1,
+        "tech": 1,
+        "work": 1
+      },
+      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    },
+    "vac-21cefd168f6539b4::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "3b31c7dff8ada12d2b4374cfdc50375bde64a5cabe482dc724d80ea7d1a611ac",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "analytics": 1,
+        "capabilities": 1,
+        "decision": 1,
+        "learning": 1,
+        "machine": 1,
+        "management": 1,
+        "product": 1,
+        "science": 1,
+        "sql": 1,
+        "stakeholder": 1,
+        "technologies": 1,
+        "testing": 1
+      },
+      "text": "Technologies / capabilities: Decision Science; Machine Learning; A/B testing; SQL; Product analytics; Stakeholder management",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    },
+    "vac-21cefd168f6539b4::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "0ac20dbaa2fe7198e6edba79bd0a608841ad534016b4a6f239bcc93ca548b0ce",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "91": 1,
+        "agregador": 1,
+        "ajuste": 1,
+        "alto": 1,
+        "analiticas": 1,
+        "banca": 1,
+        "buena": 1,
+        "compensacion": 1,
+        "con": 5,
+        "conexion": 1,
+        "crecimiento": 1,
+        "de": 4,
+        "decision": 1,
+        "decisiones": 1,
+        "detalle": 1,
+        "directa": 1,
+        "disponible": 1,
+        "ejecutivo": 1,
+        "el": 1,
+        "end-to-end": 1,
+        "enlace": 1,
+        "estrategicas": 1,
+        "experimentacion": 1,
+        "fit": 2,
+        "fraude": 1,
+        "fue": 1,
+        "fuente": 1,
+        "fuerte": 1,
+        "gaps": 1,
+        "impacto": 1,
+        "iniciativas": 1,
+        "la": 1,
+        "liderazgo": 1,
+        "menor": 1,
+        "modelado": 1,
+        "muy": 1,
+        "negocio.": 1,
+        "no": 1,
+        "oficial": 1,
+        "opcion": 1,
+        "orientado": 1,
+        "ownership": 1,
+        "postulacion": 1,
+        "producto": 2,
+        "proviene": 1,
+        "quiere": 1,
+        "requiere": 1,
+        "riesgo.": 1,
+        "rol": 1,
+        "salarial.": 1,
+        "science": 1,
+        "score": 1,
+        "se": 1,
+        "senior": 1,
+        "senior.": 1,
+        "seniority": 1,
+        "si": 1,
+        "source": 4,
+        "stakeholders": 1,
+        "storytelling": 1,
+        "strengths": 1,
+        "summary": 1,
+        "tecnico.": 1,
+        "trabajo": 1,
+        "transicionar": 1,
+        "un": 1,
+        "visible": 1,
+        "visible.": 1
+      },
+      "text": "Source fit score: 91/100\nSource fit summary: Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.\nSource strengths: Rol senior orientado a decisiones estratégicas, producto, crecimiento e impacto de negocio.; Requiere ownership end-to-end de iniciativas analíticas y trabajo con stakeholders senior.; Fuerte ajuste con experimentación, modelado, storytelling ejecutivo y liderazgo técnico.\nSource gaps: Menor conexión directa con banca, fraude y riesgo.; La fuente oficial de postulación no fue visible; el enlace disponible proviene de un agregador con detalle salarial.",
+      "vacancy_id": "vac-21cefd168f6539b4"
+    },
+    "vac-2de566514601700a::core": {
+      "chunk_type": "core",
+      "content_hash": "490155d21339b7be7138e98f2401d19f5f62434fa75e70b517726ae5b7742186",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "category": 1,
+        "company": 2,
+        "data": 1,
+        "dataknow": 1,
+        "location": 1,
+        "mexico": 1,
+        "model": 1,
+        "otro": 1,
+        "python": 1,
+        "remote": 2,
+        "role": 1,
+        "scientist": 1,
+        "sql": 1,
+        "work": 1
+      },
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote",
+      "vacancy_id": "vac-2de566514601700a"
+    },
+    "vac-2de566514601700a::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "b651a97479b50323ba9f6ca2b8e3f773b645f7d58e3b4732b937aed0daa0e897",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "capabilities": 1,
+        "experimentacion": 1,
+        "learning": 1,
+        "machine": 1,
+        "mlops": 1,
+        "produccion": 1,
+        "python": 1,
+        "sql": 1,
+        "technologies": 1
+      },
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; MLOps; Experimentación; Producción",
+      "vacancy_id": "vac-2de566514601700a"
+    },
+    "vac-2de566514601700a::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "baa38f364ab45f0d530f57365157a8d570944873ca2f5baa71c9fdfe40584e63",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "87": 1,
+        "aunque": 1,
+        "banca": 1,
+        "big": 1,
+        "busca": 1,
+        "clara": 1,
+        "como": 1,
+        "corta": 1,
+        "de": 3,
+        "desarrollar": 1,
+        "descripcion": 1,
+        "desde": 1,
+        "diseno": 1,
+        "empresa": 1,
+        "en": 3,
+        "end-to-end": 1,
+        "espanol": 1,
+        "esta": 1,
+        "experimentacion": 1,
+        "experimentos": 1,
+        "financiero.": 1,
+        "fintech": 1,
+        "fit": 2,
+        "foco": 1,
+        "gaps": 1,
+        "hasta": 1,
+        "implementar": 1,
+        "lead": 1,
+        "marcado": 1,
+        "menos": 1,
+        "mexico.": 1,
+        "ml": 1,
+        "mlops": 1,
+        "modalidad": 1,
+        "modelos": 1,
+        "muestra": 1,
+        "no": 2,
+        "oportunidad": 1,
+        "ownership": 1,
+        "pide": 1,
+        "prioritaria": 1,
+        "produccion.": 1,
+        "puede": 1,
+        "python": 1,
+        "que": 1,
+        "quedar": 1,
+        "razonable": 1,
+        "remota": 1,
+        "remoto": 1,
+        "responsabilidad": 1,
+        "rigurosos.": 1,
+        "score": 1,
+        "se": 1,
+        "senior": 1,
+        "seniority.": 1,
+        "si": 1,
+        "source": 4,
+        "sql": 1,
+        "strengths": 1,
+        "summary": 1,
+        "tech.": 1,
+        "tecnico": 1
+      },
+      "text": "Source fit score: 87/100\nSource fit summary: Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.\nSource strengths: Descripción en español y modalidad remota en México.; Responsabilidad clara de desarrollar e implementar modelos de ML desde experimentación hasta producción.; Pide Python, SQL, MLOps end-to-end y diseño de experimentos rigurosos.\nSource gaps: No está marcado como Senior/Lead y no muestra foco financiero.; Empresa menos prioritaria que fintech, banca o big tech.",
+      "vacancy_id": "vac-2de566514601700a"
+    },
+    "vac-6d9bdccca1ff49c3::core": {
+      "chunk_type": "core",
+      "content_hash": "8d8852e24816163b6455304a422d71e5a198a155407175cf18d0e13a523c90cb",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "category": 1,
+        "ciudad": 1,
+        "company": 2,
+        "data": 2,
+        "de": 1,
+        "hybrid": 1,
+        "infor": 1,
+        "location": 1,
+        "mexico": 1,
+        "model": 1,
+        "producto": 1,
+        "role": 1,
+        "science": 1,
+        "scientist": 2,
+        "senior": 2,
+        "strategy": 1,
+        "tech": 1,
+        "work": 1
+      },
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    },
+    "vac-6d9bdccca1ff49c3::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "6e2c097682301bd63c85103ed220460feb56a74e8a5fa2c5250601a70e045f25",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "analytics": 2,
+        "capabilities": 1,
+        "growth": 1,
+        "learning": 1,
+        "machine": 1,
+        "management": 1,
+        "python": 1,
+        "sql": 1,
+        "stakeholder": 1,
+        "strategy": 1,
+        "technologies": 1
+      },
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Growth analytics; Strategy analytics; Stakeholder management",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    },
+    "vac-6d9bdccca1ff49c3::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "c1a5a24cbd0d9e724ef48f391e680bc0168d39398e7037a190c3921a3b93f128",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "terms": {
+        "100": 1,
+        "89": 1,
+        "adopcion": 1,
+        "ajuste": 1,
+        "ampliar": 1,
+        "analisis": 1,
+        "analitica": 1,
+        "analiticos": 1,
+        "banca": 2,
+        "buen": 2,
+        "completo.": 1,
+        "comunicacion": 1,
+        "con": 3,
+        "contributor": 1,
+        "crecimiento": 1,
+        "de": 5,
+        "ejecutiva": 1,
+        "en": 2,
+        "end-to-end.": 1,
+        "enfoque": 1,
+        "estrategia": 1,
+        "estrategicos": 1,
+        "expansion": 1,
+        "experiencia": 1,
+        "explicito": 1,
+        "fit": 2,
+        "foco": 1,
+        "formal.": 1,
+        "fraude": 1,
+        "fuera": 1,
+        "gaps": 1,
+        "genai.": 1,
+        "gestion": 1,
+        "individual": 1,
+        "informacion": 1,
+        "la": 1,
+        "liderazgo": 1,
+        "modelos": 1,
+        "muestra": 1,
+        "negocio": 1,
+        "negocio.": 1,
+        "ni": 1,
+        "no": 2,
+        "observa": 1,
+        "ownership": 1,
+        "para": 1,
+        "perder": 1,
+        "problemas": 1,
+        "producto": 1,
+        "publica": 1,
+        "python": 1,
+        "rango": 1,
+        "recuperada": 1,
+        "retencion": 1,
+        "riesgo": 1,
+        "rigurosos.": 1,
+        "rol": 1,
+        "salarial": 1,
+        "score": 1,
+        "se": 1,
+        "senior": 2,
+        "sin": 2,
+        "source": 4,
+        "sql": 1,
+        "stack": 1,
+        "strengths": 1,
+        "summary": 1,
+        "tecnico": 1,
+        "trabaja": 1,
+        "traduciendo": 1,
+        "workstreams": 1
+      },
+      "text": "Source fit score: 89/100\nSource fit summary: Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.\nSource strengths: Senior individual contributor con ownership de workstreams analíticos end-to-end.; Trabaja con adopción, retención, expansión y crecimiento, traduciendo problemas estratégicos en análisis rigurosos.; Buen ajuste con Python, SQL, modelos de negocio, comunicación ejecutiva y liderazgo técnico sin gestión formal.\nSource gaps: No se observa foco explícito en banca, riesgo, fraude o GenAI.; La información pública recuperada no muestra rango salarial ni stack completo.",
+      "vacancy_id": "vac-6d9bdccca1ff49c3"
+    }
+  },
+  "postings": {
+    "100": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "87": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "89": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "91": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "92": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "95": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "96": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "adopcion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "agentic": [
+      "vac-04e92192e608ea02::requirements"
+    ],
+    "agenticos": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "agregador": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "ai": [
+      "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "ajuste": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "alineacion": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "alto": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "ampliar": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "analisis": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "analitica": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "analiticas": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "analiticos": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "analytics": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "aplicaciones": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "aplicada": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "aplicadas.": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "applications": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "aprovecha": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "aunque": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "banca": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "bancaria": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "big": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "buen": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "buena": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "busca": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "capabilities": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "cargar": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "category": [
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "cdmx": [
+      "vac-14b95b3407bcb148::core"
+    ],
+    "cdmx.": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "ciencia": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "city": [
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core"
+    ],
+    "ciudad": [
+      "vac-04e92192e608ea02::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "clara": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "colaboracion": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "combina": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "como": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "company": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "compensacion": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "complejos": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "completo.": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "comunicacion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "con": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "conexion": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "construccion": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "contributor": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "corta": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "crecimiento": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "credit": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "crediticio.": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "credito": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "data": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "dataknow": [
+      "vac-2de566514601700a::core"
+    ],
+    "datos": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "de": [
+      "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "decision": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "decisiones": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "deployment": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "desarrollar": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "descripcion": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "desde": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "desplegar": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "despliegue": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "detalle": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "deteccion": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "detection": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "directa": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "directamente": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "directo": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "diseno": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "disponible": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "ejecutiva": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "ejecutivo": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "el": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "empresa": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "en": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "encaja": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "encaje": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "end-to-end": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "end-to-end.": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "enfoque": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "engineer": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "engineering": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "enlace": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "es": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "espanol": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "especializado": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "esta": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "estrategia": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "estrategicas": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "estrategicos": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "evaluacion": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "evaluation": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "expansion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "experiencia": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "experimentacion": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::requirements",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "experimentos": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "explicito": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "financiero.": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "financieros": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "fintech": [
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "fit": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "foco": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "ford": [
+      "vac-12dc570424d531ae::core"
+    ],
+    "formal.": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "fortalecer": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "fraud": [
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "fraude": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "fue": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "fuente": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "fuera": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "fuerte": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "gaps": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "gcp": [
+      "vac-12dc570424d531ae::requirements"
+    ],
+    "genai": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "genai.": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "gestion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "global.": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "governance": [
+      "vac-04e92192e608ea02::requirements"
+    ],
+    "growth": [
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "hacia": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "hasta": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "hybrid": [
+      "vac-04e92192e608ea02::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "ia": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "ia.": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "impacto": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "implementar": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "incluye": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "individual": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "infor": [
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "informacion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "infraestructura": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "ingenieria": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "iniciativas": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "instructure": [
+      "vac-21cefd168f6539b4::core"
+    ],
+    "konfio": [
+      "vac-04e92192e608ea02::core"
+    ],
+    "la": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "lead": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "learning": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "liderazgo": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "llms": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "location": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "machine": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "management": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "marcado": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "mas": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "mejor": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "menor": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "menos": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "mexico": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "mexico.": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "ml": [
+      "vac-04e92192e608ea02::core",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "mlops": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-2de566514601700a::requirements",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "modalidad": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "model": [
+      "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "modelado": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "modelos": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "monitoring": [
+      "vac-04e92192e608ea02::requirements"
+    ],
+    "motor": [
+      "vac-12dc570424d531ae::core"
+    ],
+    "muestra": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "muy": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "negocio": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "negocio.": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "ni": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "nlp": [
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "no": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "observa": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "oficial": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "opcion": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "operacion": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "oportunidad": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "optimizar": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "orientado": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "otro": [
+      "vac-2de566514601700a::core"
+    ],
+    "ownership": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "para": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "payjoy": [
+      "vac-14b95b3407bcb148::core"
+    ],
+    "perder": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "perfil": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "pide": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "pipelines": [
+      "vac-04e92192e608ea02::requirements"
+    ],
+    "posicionamiento": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "postulacion": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "prioritaria": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "problemas": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "produccion": [
+      "vac-2de566514601700a::requirements"
+    ],
+    "produccion.": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "product": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "productivo": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "productivos": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "producto": [
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "productos": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "proviene": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "publica": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "publicacion": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "puede": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "pura.": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "python": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::core",
+      "vac-2de566514601700a::requirements",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::requirements",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "que": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "quedar": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "quiere": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "rango": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "razonable": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "recuperada": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "remota": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "remote": [
+      "vac-12dc570424d531ae::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core"
+    ],
+    "remoto": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "requiere": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "responsabilidad": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "responsible": [
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "retencion": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "riesgo": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "riesgo.": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "rigurosos.": [
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "risk": [
+      "vac-14b95b3407bcb148::requirements"
+    ],
+    "rol": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "role": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "salarial": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "salarial.": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "science": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "scientist": [
+      "vac-12dc570424d531ae::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "score": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "scoring": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "se": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "senior": [
+      "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "senior.": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "seniority": [
+      "vac-04e92192e608ea02::core",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "seniority.": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "ser": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "si": [
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "sin": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "sistemas": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "sobre": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "soluciones": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "source": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "sql": [
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::core",
+      "vac-2de566514601700a::requirements",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::requirements",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "sr.": [
+      "vac-04e92192e608ea02::core"
+    ],
+    "stack": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "stakeholder": [
+      "vac-21cefd168f6539b4::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "stakeholders": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "storytelling": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "strategy": [
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "strengths": [
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "summary": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "tech": [
+      "vac-12dc570424d531ae::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "tech.": [
+      "vac-2de566514601700a::source-fit"
+    ],
+    "technologies": [
+      "vac-04e92192e608ea02::requirements",
+      "vac-12dc570424d531ae::requirements",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-2de566514601700a::requirements",
+      "vac-6d9bdccca1ff49c3::requirements"
+    ],
+    "tecnico": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "tecnico.": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "testing": [
+      "vac-21cefd168f6539b4::requirements"
+    ],
+    "titulo": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "trabaja": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "trabajo": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "traduccion": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "traduciendo": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "transicionar": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "un": [
+      "vac-04e92192e608ea02::source-fit",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "una": [
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "vacante": [
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "visible": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "visible.": [
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "work": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
+    ],
+    "workflows": [
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "workstreams": [
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ]
+  },
   "schema_version": 1,
-  "chunks": {},
-  "postings": {},
-  "vacancy_chunks": {}
+  "vacancy_chunks": {
+    "vac-04e92192e608ea02": [
+      "vac-04e92192e608ea02::core",
+      "vac-04e92192e608ea02::requirements",
+      "vac-04e92192e608ea02::source-fit"
+    ],
+    "vac-12dc570424d531ae": [
+      "vac-12dc570424d531ae::core",
+      "vac-12dc570424d531ae::requirements",
+      "vac-12dc570424d531ae::source-fit"
+    ],
+    "vac-14b95b3407bcb148": [
+      "vac-14b95b3407bcb148::core",
+      "vac-14b95b3407bcb148::requirements",
+      "vac-14b95b3407bcb148::source-fit"
+    ],
+    "vac-21cefd168f6539b4": [
+      "vac-21cefd168f6539b4::core",
+      "vac-21cefd168f6539b4::requirements",
+      "vac-21cefd168f6539b4::source-fit"
+    ],
+    "vac-2de566514601700a": [
+      "vac-2de566514601700a::core",
+      "vac-2de566514601700a::requirements",
+      "vac-2de566514601700a::source-fit"
+    ],
+    "vac-6d9bdccca1ff49c3": [
+      "vac-6d9bdccca1ff49c3::core",
+      "vac-6d9bdccca1ff49c3::requirements",
+      "vac-6d9bdccca1ff49c3::source-fit"
+    ]
+  }
 }

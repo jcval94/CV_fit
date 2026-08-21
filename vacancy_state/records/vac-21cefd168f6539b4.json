@@ -1,0 +1,51 @@
+{
+  "city": "Mexico City, Mexico",
+  "company": "Instructure",
+  "company_category": "Producto Tech",
+  "content_hash": "0fbfbd82e01ae7e23c443e250dc6f4002261fd8590eaf35256c9882b034422ed",
+  "description": null,
+  "fit_gaps": [
+    "Menor conexión directa con banca, fraude y riesgo.",
+    "La fuente oficial de postulación no fue visible; el enlace disponible proviene de un agregador con detalle salarial."
+  ],
+  "fit_score": 91.0,
+  "fit_strengths": [
+    "Rol senior orientado a decisiones estratégicas, producto, crecimiento e impacto de negocio.",
+    "Requiere ownership end-to-end de iniciativas analíticas y trabajo con stakeholders senior.",
+    "Fuerte ajuste con experimentación, modelado, storytelling ejecutivo y liderazgo técnico."
+  ],
+  "fit_summary": "Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.",
+  "identity_key": "21cefd168f6539b4051fe2905f903291598dccc81a27e66dae2b6beb36c69a2e",
+  "location_raw": "Mexico City, Mexico",
+  "posted_date": null,
+  "posted_date_raw": "Hace 1-7 días",
+  "provenance": [
+    {
+      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_entry_index": 2,
+      "source_format": "vacantes_v1",
+      "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
+      "source_native_id": "e2b3da2d04b9",
+      "source_path": "Vacantes/vacantes_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Decision Scientist",
+  "salary": "MEX$911,000 - MEX$1,100,000 por año",
+  "schema_version": 1,
+  "seniority": null,
+  "tech_stack": [
+    "Decision Science",
+    "Machine Learning",
+    "A/B testing",
+    "SQL",
+    "Product analytics",
+    "Stakeholder management"
+  ],
+  "url": "https://startup.jobs/senior-decision-scientist-instructure-inc-8029739",
+  "vacancy_id": "vac-21cefd168f6539b4",
+  "work_model": "Remote"
+}

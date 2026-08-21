@@ -1,0 +1,51 @@
+{
+  "city": "Ciudad de México",
+  "company": "Infor",
+  "company_category": "Producto Tech",
+  "content_hash": "4b268af707f590c826404570056ccd575d9a75a02a9eb98f524ffd92f2c46826",
+  "description": null,
+  "fit_gaps": [
+    "No se observa foco explícito en banca, riesgo, fraude o GenAI.",
+    "La información pública recuperada no muestra rango salarial ni stack completo."
+  ],
+  "fit_score": 89.0,
+  "fit_strengths": [
+    "Senior individual contributor con ownership de workstreams analíticos end-to-end.",
+    "Trabaja con adopción, retención, expansión y crecimiento, traduciendo problemas estratégicos en análisis rigurosos.",
+    "Buen ajuste con Python, SQL, modelos de negocio, comunicación ejecutiva y liderazgo técnico sin gestión formal."
+  ],
+  "fit_summary": "Buen rol senior de producto/estrategia analítica para ampliar experiencia fuera de banca sin perder enfoque de negocio.",
+  "identity_key": "6d9bdccca1ff49c39ad7e37a9d6fcd2e844ee01135db9da0b503838850f09614",
+  "location_raw": "Ciudad de México",
+  "posted_date": null,
+  "posted_date_raw": "Hace 3-6 días",
+  "provenance": [
+    {
+      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_entry_index": 3,
+      "source_format": "vacantes_v1",
+      "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
+      "source_native_id": "992c76d717b4",
+      "source_path": "Vacantes/vacantes_2026-08-21.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Scientist, Senior / Senior Data Scientist (Strategy Data Science)",
+  "salary": "No especificado",
+  "schema_version": 1,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Machine Learning",
+    "Growth analytics",
+    "Strategy analytics",
+    "Stakeholder management"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/scientist-senior-at-infor-4441024382",
+  "vacancy_id": "vac-6d9bdccca1ff49c3",
+  "work_model": "Hybrid"
+}

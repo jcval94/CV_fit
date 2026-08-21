@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-2de566514601700a::core",
+      "chunk_type": "core",
+      "content_hash": "490155d21339b7be7138e98f2401d19f5f62434fa75e70b517726ae5b7742186",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote",
+      "vacancy_id": "vac-2de566514601700a"
+    },
+    {
+      "chunk_id": "vac-2de566514601700a::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "b651a97479b50323ba9f6ca2b8e3f773b645f7d58e3b4732b937aed0daa0e897",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; MLOps; Experimentación; Producción",
+      "vacancy_id": "vac-2de566514601700a"
+    },
+    {
+      "chunk_id": "vac-2de566514601700a::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "baa38f364ab45f0d530f57365157a8d570944873ca2f5baa71c9fdfe40584e63",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Source fit score: 87/100\nSource fit summary: Oportunidad razonable si se busca remoto y ownership técnico, aunque puede quedar corta en seniority.\nSource strengths: Descripción en español y modalidad remota en México.; Responsabilidad clara de desarrollar e implementar modelos de ML desde experimentación hasta producción.; Pide Python, SQL, MLOps end-to-end y diseño de experimentos rigurosos.\nSource gaps: No está marcado como Senior/Lead y no muestra foco financiero.; Empresa menos prioritaria que fintech, banca o big tech.",
+      "vacancy_id": "vac-2de566514601700a"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-2de566514601700a"
+}

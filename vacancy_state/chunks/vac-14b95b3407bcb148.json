@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-14b95b3407bcb148::core",
+      "chunk_type": "core",
+      "content_hash": "793697a341fc0226b507f134735300439b0b6ef8445661533141042935144692",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    },
+    {
+      "chunk_id": "vac-14b95b3407bcb148::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "10a8c3a65796556b44f1e72bdbf6433f9a8d65d6a98e69d01e7cc4569c1ccd44",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Technologies / capabilities: Machine Learning; Fraud detection; Credit risk; Model deployment; Python; Data Science",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    },
+    {
+      "chunk_id": "vac-14b95b3407bcb148::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "763de721d1cdf2f2b27d951a7566b45f34396d5bfa7169138956cae4353ec771",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-21.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Es la vacante con mejor alineación de negocio: fraude, crédito, modelos productivos y fintech en CDMX.\nSource strengths: Fintech con foco directo en fraude y riesgo crediticio.; Responsabilidad de desarrollar, optimizar y desplegar modelos de ML en producción.; Aprovecha experiencia bancaria, detección de fraude, scoring, Python/SQL y modelos end-to-end.\nSource gaps: El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.; La publicación oficial no muestra rango salarial.",
+      "vacancy_id": "vac-14b95b3407bcb148"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-14b95b3407bcb148"
+}

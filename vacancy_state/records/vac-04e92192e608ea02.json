@@ -1,0 +1,46 @@
+{
+  "city": "Ciudad de México",
+  "company": "Konfío",
+  "company_category": null,
+  "content_hash": "f1729cdf86f8aecc8d68273c05331acb52790e5c2544f3fb87e0c41c2ff55f5f",
+  "description": null,
+  "fit_gaps": [],
+  "fit_score": 95.0,
+  "fit_strengths": [],
+  "fit_summary": "Encaje muy alto para un perfil Senior de Data Science/AI con experiencia en Python, Machine Learning, despliegue productivo y sistemas GenAI. El rol combina ownership técnico end-to-end, MLOps y construcción de workflows agénticos con LLMs, con impacto directo sobre productos financieros y operación de negocio.",
+  "identity_key": "04e92192e608ea02df4283cc76a4125f2eacae2fb31b53d4a448006cb4828bef",
+  "location_raw": "Ciudad de México",
+  "posted_date": "2026-08-18",
+  "posted_date_raw": "2026-08-18",
+  "provenance": [
+    {
+      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_entry_index": 0,
+      "source_format": "gptw_v1",
+      "source_hash": "cc3e1f0dd3bd6aabed8ca195d64f256beaf28248234063acd3d32ee5a02ffb79",
+      "source_native_id": "konfio-ai-ml-engineer-sr-2026-08-18",
+      "source_path": "GPTW/vacantes_2026-08-21.json",
+      "source_search_date": null,
+      "source_updated_at": "2026-08-21T13:58:05Z"
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "AI/ML Engineer Sr.",
+  "salary": null,
+  "schema_version": 1,
+  "seniority": "Senior",
+  "tech_stack": [
+    "Python",
+    "Machine Learning",
+    "LLMs",
+    "Agentic AI",
+    "MLOps",
+    "Data Pipelines",
+    "Model Monitoring",
+    "Data Governance"
+  ],
+  "url": "https://jobs.quona.com/companies/konfio-2/jobs/90331126-ai-ml-engineer-sr",
+  "vacancy_id": "vac-04e92192e608ea02",
+  "work_model": "Hybrid"
+}
