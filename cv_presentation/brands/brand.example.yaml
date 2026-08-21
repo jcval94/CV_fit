@@ -1,0 +1,14 @@
+company: Example Company
+source_kind: verified_official
+source_url: https://example.com/brand-guidelines
+verified: true
+primary: "#1F2937"
+secondary: "#374151"
+accent: "#2563EB"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: system_sans
+body_font: system_sans
+notes:
+  - Replace this example only with colors/fonts traceable to an official or manually verified source.
