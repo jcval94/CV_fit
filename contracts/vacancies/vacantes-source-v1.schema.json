@@ -21,6 +21,11 @@
           "porcentaje_ajuste": {"type": "number", "minimum": 0, "maximum": 100},
           "razon_ajuste": {"type": "object"},
           "stack_clave_detectado": {"type": "array", "items": {"type": "string"}},
+          "requirements": {"type": "array", "items": {"type": "string"}},
+          "responsibilities": {"type": "array", "items": {"type": "string"}},
+          "description": {"type": "string"},
+          "idioma_postulacion": {"type": "string"},
+          "application_language": {"type": "string"},
           "rango_salarial": {"type": "string"},
           "url_postulacion": {"type": "string"}
         },
