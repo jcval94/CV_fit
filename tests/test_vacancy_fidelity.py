@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from cv_agent.context import assert_vacancy_generation_ready
+from cv_agent.preflight import assert_vacancy_generation_ready
 from vacancy_pipeline.contract import adapt_source_document
 from vacancy_pipeline.fidelity import assess_jd_fidelity
 
