@@ -6,15 +6,18 @@ from typing import TypeVar
 
 from pydantic import BaseModel
 
+from cv_agent.openai_provider import adk_openai_model, prepare_openai_environment
+
 
 T = TypeVar("T", bound=BaseModel)
 
 
 class AdkStructuredClient:
-    """Small ADK adapter for stateless, schema-constrained generation steps.
+    """ADK adapter for stateless schema-constrained OpenAI generation steps.
 
-    Imports ADK lazily so deterministic ingestion/retrieval tests do not require
-    model credentials or even the ADK package. Live agent execution does.
+    CV_fit uses OpenAI as its only model provider. ADK Python connects to OpenAI
+    through its documented LiteLLM model connector; the repo-level credential is
+    OPENAI_APY_KEY and is mirrored in-process only when a live call is made.
     """
 
     def __init__(self, app_name: str = "cv_fit_pipeline", user_id: str = "cv_fit") -> None:
@@ -31,6 +34,8 @@ class AdkStructuredClient:
         output_schema: type[T],
         max_output_tokens: int = 6000,
     ) -> T:
+        prepare_openai_environment(required=True)
+
         from google.adk.agents import LlmAgent
         from google.adk.runners import Runner
         from google.adk.sessions import InMemorySessionService
@@ -38,7 +43,7 @@ class AdkStructuredClient:
 
         agent = LlmAgent(
             name=name,
-            model=model,
+            model=adk_openai_model(model),
             include_contents="none",
             instruction=instruction,
             output_schema=output_schema,
