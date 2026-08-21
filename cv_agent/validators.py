@@ -18,6 +18,7 @@ SPECIALIZATION_TERMS = ("arima", "sarima", "prophet")
 EN_MARKERS = {"the", "and", "with", "for", "led", "built", "developed", "designed", "improved", "model", "data", "business", "production"}
 ES_MARKERS = {"el", "la", "los", "las", "con", "para", "lideró", "desarrolló", "diseñó", "mejoró", "modelo", "datos", "negocio", "producción"}
 EXPERT_TERMS = {"expert", "expertise", "advanced", "mastery", "experto", "experta", "dominio avanzado"}
+NEGATIVE_BOUNDARY_MARKERS = ("do not claim", "do not present", "must not claim", "no claim", "no inferred", "do not infer")
 
 
 def _all_evidence_lines(cv: CVDocument) -> list[tuple[str, Any]]:
@@ -54,6 +55,35 @@ def _evidence_text(refs: list[str], evidence_catalog: dict[str, dict[str, Any]])
 
 def _normalize_number(value: str) -> str:
     return value.replace(",", ".")
+
+
+def _negative_boundary_issues(
+    text: str,
+    refs: list[str],
+    evidence_catalog: dict[str, dict[str, Any]],
+    location: str,
+) -> list[ValidationIssue]:
+    lowered = text.casefold()
+    issues: list[ValidationIssue] = []
+    for ref in refs:
+        for raw_constraint in evidence_catalog.get(ref, {}).get("constraints", []):
+            constraint = str(raw_constraint).casefold()
+            if not any(marker in constraint for marker in NEGATIVE_BOUNDARY_MARKERS):
+                continue
+            blocked_terms = [term for term in SPECIALIZATION_TERMS if term in constraint and term in lowered]
+            if blocked_terms:
+                issues.append(ValidationIssue(
+                    code="evidence_boundary_violation",
+                    message=f"Referenced evidence explicitly blocks this specialization claim: {blocked_terms}",
+                    location=location,
+                ))
+            if "people management" in constraint and PEOPLE_MANAGEMENT_RE.search(text):
+                issues.append(ValidationIssue(
+                    code="evidence_boundary_violation",
+                    message="Referenced evidence explicitly blocks formal people-management inference.",
+                    location=location,
+                ))
+    return issues
 
 
 def _validate_metric_value_and_qualifiers(
@@ -121,6 +151,7 @@ def validate_claims(
         evidence_text = _evidence_text(refs, evidence_catalog)
         lowered = text.casefold()
         evidence_lowered = evidence_text.casefold()
+        issues.extend(_negative_boundary_issues(text, refs, evidence_catalog, location))
 
         years = [int(match) for match in YEARS_RE.findall(text)]
         supported_years = [int(match) for match in YEARS_RE.findall(evidence_text)]
@@ -155,8 +186,13 @@ def validate_claims(
 
         for ref in refs:
             chunk = evidence_catalog.get(ref, {})
-            if (chunk.get("proficiency") or "").casefold() == "familiarity" and any(term in lowered for term in EXPERT_TERMS):
-                issues.append(ValidationIssue(code="proficiency_escalation", message=f"Familiarity evidence {ref} cannot support expert/advanced wording.", location=location))
+            proficiency = (chunk.get("proficiency") or "").casefold()
+            if proficiency in {"familiarity", "working"} and any(term in lowered for term in EXPERT_TERMS):
+                issues.append(ValidationIssue(
+                    code="proficiency_escalation",
+                    message=f"{proficiency.title()} evidence {ref} cannot support expert/advanced wording.",
+                    location=location,
+                ))
 
     return ValidationResult(status="PASS" if not issues else "FAIL", issues=issues)
 
