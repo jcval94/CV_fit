@@ -1,0 +1,15 @@
+company: Infor
+source_kind: verified_manual
+source_url: https://www.infor.com/
+verified: true
+primary: "#3B3B3B"
+secondary: "#4B5563"
+accent: "#A61B2B"
+surface: "#FFFFFF"
+text: "#111827"
+muted: "#4B5563"
+heading_font: system_sans
+body_font: system_sans
+notes:
+  - "Profile is grounded in Infor's official web identity and uses a restrained red accent with neutral dark typography for accessible CV use."
+  - "Hex values are manual accessible presentation adaptations and are not asserted as exact official design-system tokens."
