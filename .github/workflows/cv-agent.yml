@@ -10,6 +10,21 @@ on:
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
       - "tests/test_openai_provider.py"
+      - "tests/test_vacancy_fidelity.py"
+      - "pyproject.toml"
+      - "agents-cli-manifest.yaml"
+      - ".github/workflows/cv-agent.yml"
+  push:
+    branches: [main]
+    paths:
+      - "cv_agent/**"
+      - "cv_matching/**"
+      - "rag/**"
+      - "vacancy_pipeline/**"
+      - "contracts/vacancies/**"
+      - "tests/test_cv_*.py"
+      - "tests/test_openai_provider.py"
+      - "tests/test_vacancy_fidelity.py"
       - "pyproject.toml"
       - "agents-cli-manifest.yaml"
       - ".github/workflows/cv-agent.yml"
@@ -35,41 +50,51 @@ jobs:
           python-version: "3.12"
       - name: Install ADK project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Run deterministic agent and matching tests
+      - name: Run deterministic agent, matching and fidelity tests
         run: >-
           python -m unittest
           tests.test_cv_matching
           tests.test_cv_validators
           tests.test_cv_agent_workflow
           tests.test_openai_provider
+          tests.test_vacancy_fidelity
           -v
       - name: Build current vacancy and professional evidence states
         run: |
-          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id pr-context --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
-          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id pr-context --source-commit "$(git rev-parse HEAD)" --full-rebuild
-      - name: Validate every current vacancy can assemble a grounded application context
+          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
+          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild
+      - name: Validate every current vacancy can assemble a grounded analysis context
         run: |
           python - <<'PY'
+          from collections import Counter
           from pathlib import Path
           from cv_agent.context import assemble_application_context
 
           records = sorted(Path("/tmp/vacancy_state/records").glob("*.json"))
           assert records, "no canonical vacancies were produced"
+          fidelity = Counter()
           for path in records:
               context = assemble_application_context(
                   path.stem,
                   vacancy_state=Path("/tmp/vacancy_state"),
                   evidence_state=Path("/tmp/rag_state"),
+                  allow_sparse_jd=True,
               )
               vacancy = context["vacancy"]
               assert vacancy["application_language"] != "und", f"undetermined language for {path.stem}"
+              assert vacancy["jd_fidelity"] in {"full", "partial", "sparse"}
+              assert vacancy["jd_generation_eligible"] == (vacancy["jd_fidelity"] != "sparse")
               assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+              fidelity[vacancy["jd_fidelity"]] += 1
               print(
                   path.stem,
                   "language=", vacancy["application_language"],
+                  "jd_fidelity=", vacancy["jd_fidelity"],
+                  "jd_score=", vacancy["jd_fidelity_score"],
                   "coverage=", context["match_plan"]["coverage_score"],
                   "evidence_chunks=", len(context["evidence_chunks"]),
               )
+          print("fidelity_counts=", dict(sorted(fidelity.items())))
           PY
       - name: Import OpenAI-backed ADK app without live credentials
         run: python -c "from cv_agent.agent import app, root_agent; assert app is not None; assert root_agent.name == 'root_agent'"

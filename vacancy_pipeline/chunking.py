@@ -20,7 +20,7 @@ def _union_lists(records: Iterable[VacancyRecord], field: str) -> list[str]:
     return out
 
 
-def _quality(record: VacancyRecord) -> tuple[int, int, float, str]:
+def _quality(record: VacancyRecord) -> tuple[int, int, float, float, str]:
     scalar_fields = [
         record.seniority,
         record.company_category,
@@ -40,7 +40,7 @@ def _quality(record: VacancyRecord) -> tuple[int, int, float, str]:
         for field in ("tech_stack", "requirements", "responsibilities", "fit_strengths", "fit_gaps")
     )
     source_path = record.provenance[0].source_path if record.provenance else ""
-    return populated, list_items, record.language_confidence, source_path
+    return populated, list_items, record.jd_fidelity_score, record.language_confidence, source_path
 
 
 def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
@@ -50,7 +50,10 @@ def merge_records(records: list[VacancyRecord]) -> VacancyRecord:
     if len(vacancy_ids) != 1:
         raise ValueError("all merged records must share vacancy_id")
 
-    preferred = sorted(records, key=lambda r: (-_quality(r)[0], -_quality(r)[1], -_quality(r)[2], _quality(r)[3]))[0]
+    preferred = sorted(
+        records,
+        key=lambda r: (-_quality(r)[0], -_quality(r)[1], -_quality(r)[2], -_quality(r)[3], _quality(r)[4]),
+    )[0]
     language_record = sorted(records, key=lambda r: (-r.language_confidence, r.provenance[0].source_path if r.provenance else ""))[0]
     provenance: list[ProvenanceRef] = []
     seen_prov: set[tuple[str, int]] = set()
@@ -99,6 +102,8 @@ def build_chunks(vacancy: VacancyRecord) -> list[VacancyChunk]:
         f"Location: {vacancy.location_raw}" if vacancy.location_raw else "",
         f"Work model: {vacancy.work_model}" if vacancy.work_model else "",
         f"Application language: {vacancy.application_language}",
+        f"JD fidelity: {vacancy.jd_fidelity} ({vacancy.jd_fidelity_score:g}/100)",
+        f"JD generation eligible: {str(vacancy.jd_generation_eligible).lower()}",
         f"Description: {vacancy.description}" if vacancy.description else "",
     ]
     requirement_lines: list[str] = []

@@ -53,6 +53,26 @@ jobs:
           --source-commit ${{ github.sha }}
           --full-rebuild
 
+      - name: Prove PR evidence no-op idempotence
+        if: github.event_name == 'pull_request'
+        run: |
+          python -m rag.evidence \
+            --repo . \
+            --state-dir /tmp/cv-fit-rag-state \
+            --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}-noop \
+            --source-commit ${{ github.sha }}
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('/tmp/cv-fit-rag-state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['record_counts']['impacted'] == 0, report
+          assert report['record_counts']['reindexed'] == 0, report
+          print('evidence_noop_idempotence=PASS', report['source_counts'], report['record_counts'])
+          PY
+
       - name: Retrieval smoke test on PR
         if: github.event_name == 'pull_request'
         run: python -m rag.retrieve "fraud anomaly detection Python" --state-dir /tmp/cv-fit-rag-state --top-k 5
@@ -72,6 +92,26 @@ jobs:
           --state-dir rag_state
           --run-id ${{ env.PROCESSED_SHA }}
           --source-commit ${{ env.PROCESSED_SHA }}
+
+      - name: Prove main evidence no-op idempotence
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          python -m rag.evidence \
+            --repo . \
+            --state-dir rag_state \
+            --run-id "${PROCESSED_SHA}-noop" \
+            --source-commit "$PROCESSED_SHA"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('rag_state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['record_counts']['impacted'] == 0, report
+          assert report['record_counts']['reindexed'] == 0, report
+          print('main_evidence_noop_idempotence=PASS', report['source_counts'], report['record_counts'])
+          PY
 
       - name: Retrieval smoke test on main
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

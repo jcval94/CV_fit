@@ -7,6 +7,7 @@ on:
       - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
+      - "tests/test_vacancy_*.py"
       - ".github/workflows/vacancy-ingest.yml"
   push:
     branches: [main]
@@ -15,6 +16,7 @@ on:
       - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
+      - "tests/test_vacancy_*.py"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
 
@@ -37,8 +39,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run vacancy pipeline tests
-        run: python -m unittest tests.test_vacancy_pipeline -v
+      - name: Run vacancy pipeline and fidelity tests
+        run: python -m unittest tests.test_vacancy_pipeline tests.test_vacancy_fidelity -v
 
       - name: Validate PR inputs E2E
         if: github.event_name == 'pull_request'
@@ -50,6 +52,28 @@ jobs:
           --source-commit ${{ github.sha }}
           --full-rebuild
           --fail-on-quarantine
+
+      - name: Prove PR vacancy no-op idempotence
+        if: github.event_name == 'pull_request'
+        run: |
+          python -m vacancy_pipeline \
+            --repo . \
+            --state-dir /tmp/cv-fit-vacancy-state \
+            --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}-noop \
+            --source-commit ${{ github.sha }} \
+            --fail-on-quarantine
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('/tmp/cv-fit-vacancy-state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['source_counts']['quarantined'] == 0, report
+          assert report['vacancy_counts']['impacted'] == 0, report
+          assert report['vacancy_counts']['reindexed'] == 0, report
+          print('vacancy_noop_idempotence=PASS', report['source_counts'], report['vacancy_counts'])
+          PY
 
       - name: Sync latest main before incremental ingest
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -66,6 +90,26 @@ jobs:
           --state-dir vacancy_state
           --run-id ${{ env.PROCESSED_SHA }}
           --source-commit ${{ env.PROCESSED_SHA }}
+
+      - name: Prove main vacancy no-op idempotence
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          python -m vacancy_pipeline \
+            --repo . \
+            --state-dir vacancy_state \
+            --run-id "${PROCESSED_SHA}-noop" \
+            --source-commit "$PROCESSED_SHA"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('vacancy_state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['vacancy_counts']['impacted'] == 0, report
+          assert report['vacancy_counts']['reindexed'] == 0, report
+          print('main_vacancy_noop_idempotence=PASS', report['source_counts'], report['vacancy_counts'])
+          PY
 
       - name: Retrieval smoke test
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
