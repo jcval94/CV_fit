@@ -38,6 +38,10 @@ class VacancyRecord:
     application_language: str
     language_confidence: float
     language_source: str
+    jd_fidelity: str
+    jd_fidelity_score: float
+    jd_fidelity_reasons: list[str]
+    jd_generation_eligible: bool
     fit_score: float | None
     fit_summary: str | None
     fit_strengths: list[str]
