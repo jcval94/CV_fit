@@ -56,6 +56,32 @@ def _environment() -> Environment:
     )
 
 
+def _adaptive_style_tokens(tokens: DesignTokens, review: DesignReview | None) -> dict[str, Any]:
+    style = tokens.model_dump()
+    if review is None:
+        return style
+    if review.decision != "PASS" or not review.ats_safe or not review.print_safe:
+        raise ValueError("adaptive template cannot render until the design review passes ATS and print safety")
+    if review.preserve_template:
+        raise ValueError("preserve_template is reserved for Harvard")
+
+    # The reviewer can restrict a supplied brand color to accent-only use without
+    # inventing any replacement color. Existing contrast-safe tokens are reused.
+    if review.primary_usage == "accents_only":
+        style["accent"] = tokens.primary
+        style["primary"] = tokens.text
+    elif review.primary_usage == "sidebar_background":
+        style["primary"] = tokens.primary
+
+    if review.secondary_usage == "accents_only":
+        style["secondary"] = tokens.muted
+    elif review.secondary_usage == "sidebar_background":
+        style["primary"] = tokens.secondary
+    else:
+        style["secondary"] = tokens.secondary
+    return style
+
+
 def render_html(
     model: CVPresentationModel,
     *,
@@ -80,7 +106,7 @@ def render_html(
             "body_font_stack": '"Times New Roman", Times, serif',
         }
     else:
-        style_tokens = tokens.model_dump()
+        style_tokens = _adaptive_style_tokens(tokens, design_review)
 
     template = _environment().get_template(policy.filename)
     return template.render(
