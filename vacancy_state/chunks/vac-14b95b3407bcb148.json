@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-14b95b3407bcb148::core",
       "chunk_type": "core",
-      "content_hash": "793697a341fc0226b507f134735300439b0b6ef8445661533141042935144692",
+      "content_hash": "7b3c7073cc81b412425cddce7e98873e5f9444d1ba435deb68c4eef1a05fb3cb",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid",
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     {

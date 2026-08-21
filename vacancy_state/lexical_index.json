@@ -2,18 +2,21 @@
   "chunks": {
     "vac-04e92192e608ea02::core": {
       "chunk_type": "core",
-      "content_hash": "64eaea11c68fd71d775db31210d4e57eb452e22ca683eca6a96df07450c0037f",
+      "content_hash": "c0420528927bc181cd530b9b3e3933a6df49b844d035dd6788366aabcb1095ed",
       "source_paths": [
         "GPTW/vacantes_2026-08-21.json"
       ],
       "terms": {
         "ai": 1,
+        "application": 1,
         "ciudad": 1,
         "company": 1,
         "de": 1,
+        "en": 1,
         "engineer": 1,
         "hybrid": 1,
         "konfio": 1,
+        "language": 1,
         "location": 1,
         "mexico": 1,
         "ml": 1,
@@ -24,7 +27,7 @@
         "sr.": 1,
         "work": 1
       },
-      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid",
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en",
       "vacancy_id": "vac-04e92192e608ea02"
     },
     "vac-04e92192e608ea02::requirements": {
@@ -110,18 +113,21 @@
     },
     "vac-12dc570424d531ae::core": {
       "chunk_type": "core",
-      "content_hash": "d6776ed42cb2a0f73fe0a74abd082a74f4cfa06e139aeae5786d5352443b5809",
+      "content_hash": "2f8f685cf956d78e448612dafbce6c3c29f1736bd72da1ebf6cbb12e3a5f128d",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
         "ai": 1,
+        "application": 1,
         "category": 1,
         "city": 1,
         "company": 3,
         "data": 1,
+        "en": 1,
         "engineer": 1,
         "ford": 1,
+        "language": 1,
         "location": 1,
         "mexico": 2,
         "model": 1,
@@ -134,7 +140,7 @@
         "tech": 1,
         "work": 1
       },
-      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote",
+      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     "vac-12dc570424d531ae::requirements": {
@@ -234,19 +240,22 @@
     },
     "vac-14b95b3407bcb148::core": {
       "chunk_type": "core",
-      "content_hash": "793697a341fc0226b507f134735300439b0b6ef8445661533141042935144692",
+      "content_hash": "7b3c7073cc81b412425cddce7e98873e5f9444d1ba435deb68c4eef1a05fb3cb",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "application": 1,
         "category": 1,
         "cdmx": 1,
         "city": 1,
         "company": 2,
+        "en": 1,
         "engineer": 1,
         "fintech": 1,
         "fraud": 1,
         "hybrid": 1,
+        "language": 1,
         "learning": 1,
         "location": 1,
         "machine": 1,
@@ -256,7 +265,7 @@
         "role": 1,
         "work": 1
       },
-      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid",
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Mexico City, CDMX\nWork model: Hybrid\nApplication language: en",
       "vacancy_id": "vac-14b95b3407bcb148"
     },
     "vac-14b95b3407bcb148::requirements": {
@@ -357,16 +366,19 @@
     },
     "vac-21cefd168f6539b4::core": {
       "chunk_type": "core",
-      "content_hash": "962acb552d2630c45ce8144329287773aa5ca3cdc0b431786b7285769f406afd",
+      "content_hash": "0a14de71450f82002ddbf540364c869d27a42d4b65de41577769c022b74a1eaa",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "application": 1,
         "category": 1,
         "city": 1,
         "company": 2,
         "decision": 1,
+        "en": 1,
         "instructure": 1,
+        "language": 1,
         "location": 1,
         "mexico": 2,
         "model": 1,
@@ -378,7 +390,7 @@
         "tech": 1,
         "work": 1
       },
-      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote",
+      "text": "Role: Senior Decision Scientist\nCompany: Instructure\nCompany category: Producto Tech\nLocation: Mexico City, Mexico\nWork model: Remote\nApplication language: en",
       "vacancy_id": "vac-21cefd168f6539b4"
     },
     "vac-21cefd168f6539b4::requirements": {
@@ -486,15 +498,18 @@
     },
     "vac-2de566514601700a::core": {
       "chunk_type": "core",
-      "content_hash": "490155d21339b7be7138e98f2401d19f5f62434fa75e70b517726ae5b7742186",
+      "content_hash": "c941fcf83aa83277c52bafa1549a2a7e052862d8018fd1320922cc2813d66a9f",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "application": 1,
         "category": 1,
         "company": 2,
         "data": 1,
         "dataknow": 1,
+        "en": 1,
+        "language": 1,
         "location": 1,
         "mexico": 1,
         "model": 1,
@@ -506,7 +521,7 @@
         "sql": 1,
         "work": 1
       },
-      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote",
+      "text": "Role: Data Scientist (Python/SQL) - Remote\nCompany: DataKnow\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en",
       "vacancy_id": "vac-2de566514601700a"
     },
     "vac-2de566514601700a::requirements": {
@@ -605,18 +620,21 @@
     },
     "vac-6d9bdccca1ff49c3::core": {
       "chunk_type": "core",
-      "content_hash": "8d8852e24816163b6455304a422d71e5a198a155407175cf18d0e13a523c90cb",
+      "content_hash": "0148c7ce6073ac95d1995fbce69d375c816d02ebe39cd86dc11839a6bcf13ea8",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
       "terms": {
+        "application": 1,
         "category": 1,
         "ciudad": 1,
         "company": 2,
         "data": 2,
         "de": 1,
+        "en": 1,
         "hybrid": 1,
         "infor": 1,
+        "language": 1,
         "location": 1,
         "mexico": 1,
         "model": 1,
@@ -629,7 +647,7 @@
         "tech": 1,
         "work": 1
       },
-      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid",
+      "text": "Role: Scientist, Senior / Senior Data Scientist (Strategy Data Science)\nCompany: Infor\nCompany category: Producto Tech\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en",
       "vacancy_id": "vac-6d9bdccca1ff49c3"
     },
     "vac-6d9bdccca1ff49c3::requirements": {
@@ -823,6 +841,14 @@
     ],
     "aplicadas.": [
       "vac-12dc570424d531ae::source-fit"
+    ],
+    "application": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
     ],
     "applications": [
       "vac-12dc570424d531ae::requirements"
@@ -1050,10 +1076,16 @@
       "vac-2de566514601700a::source-fit"
     ],
     "en": [
+      "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::source-fit",
+      "vac-12dc570424d531ae::core",
       "vac-12dc570424d531ae::source-fit",
+      "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
       "vac-2de566514601700a::source-fit",
+      "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::source-fit"
     ],
     "encaja": [
@@ -1274,6 +1306,14 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit"
+    ],
+    "language": [
+      "vac-04e92192e608ea02::core",
+      "vac-12dc570424d531ae::core",
+      "vac-14b95b3407bcb148::core",
+      "vac-21cefd168f6539b4::core",
+      "vac-2de566514601700a::core",
+      "vac-6d9bdccca1ff49c3::core"
     ],
     "lead": [
       "vac-2de566514601700a::source-fit"

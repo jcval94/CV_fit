@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-12dc570424d531ae::core",
       "chunk_type": "core",
-      "content_hash": "d6776ed42cb2a0f73fe0a74abd082a74f4cfa06e139aeae5786d5352443b5809",
+      "content_hash": "2f8f685cf956d78e448612dafbce6c3c29f1736bd72da1ebf6cbb12e3a5f128d",
       "source_paths": [
         "Vacantes/vacantes_2026-08-21.json"
       ],
-      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote",
+      "text": "Role: Data Scientist NLP (AI) Engineer\nCompany: Ford Motor Company\nCompany category: Producto Tech\nLocation: Mexico City, Mexico / Remote\nWork model: Remote\nApplication language: en",
       "vacancy_id": "vac-12dc570424d531ae"
     },
     {

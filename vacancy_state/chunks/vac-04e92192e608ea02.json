@@ -3,11 +3,11 @@
     {
       "chunk_id": "vac-04e92192e608ea02::core",
       "chunk_type": "core",
-      "content_hash": "64eaea11c68fd71d775db31210d4e57eb452e22ca683eca6a96df07450c0037f",
+      "content_hash": "c0420528927bc181cd530b9b3e3933a6df49b844d035dd6788366aabcb1095ed",
       "source_paths": [
         "GPTW/vacantes_2026-08-21.json"
       ],
-      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid",
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en",
       "vacancy_id": "vac-04e92192e608ea02"
     },
     {

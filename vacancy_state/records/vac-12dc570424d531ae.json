@@ -1,8 +1,9 @@
 {
+  "application_language": "en",
   "city": "Mexico City, Mexico / Remote",
   "company": "Ford Motor Company",
   "company_category": "Producto Tech",
-  "content_hash": "1203d21eded8bb97d27c51b1e759368fa9e79c409c47ee1bd02e227882981a70",
+  "content_hash": "0618801e06754bd32da4ce6d0be7a61615098cb97d99551a128c2bcf9cc427fd",
   "description": null,
   "fit_gaps": [
     "No aprovecha directamente banca, fraude o riesgo.",
@@ -16,12 +17,14 @@
   ],
   "fit_summary": "Buena oportunidad para fortalecer el posicionamiento de IA aplicada y GenAI en una empresa global.",
   "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
+  "language_confidence": 0.86,
+  "language_source": "role_title",
   "location_raw": "Mexico City, Mexico / Remote",
   "posted_date": null,
   "posted_date_raw": "Hace 1-2 días",
   "provenance": [
     {
-      "source_commit": "ce029dd5641bfbf28ab03e752d105f2ec843bc8a",
+      "source_commit": "19030d64c015af56226e6566b3cadef165dde9aa",
       "source_entry_index": 1,
       "source_format": "vacantes_v1",
       "source_hash": "7157cd5af0dff49415219930a853f4a5e620e0b00c9dc748d69190576c7a2d0c",
