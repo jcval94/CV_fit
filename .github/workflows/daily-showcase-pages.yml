@@ -4,11 +4,17 @@ on:
   workflow_run:
     workflows: ["Incremental vacancy ingest"]
     types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "cv_presentation/showcase.py"
+      - "cv_presentation/showcase_refresh.py"
+      - ".github/workflows/daily-showcase-pages.yml"
   workflow_dispatch:
     inputs:
       source_run_id:
         description: "Successful Incremental vacancy ingest run id containing the daily-showcase artifact"
-        required: true
+        required: false
         type: string
 
 permissions:
@@ -24,6 +30,7 @@ concurrency:
 jobs:
   deploy:
     if: >-
+      (github.event_name == 'push') ||
       (github.event_name == 'workflow_dispatch') ||
       (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
@@ -34,15 +41,32 @@ jobs:
       - name: Resolve source workflow run
         id: source
         env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EVENT_NAME: ${{ github.event_name }}
           WORKFLOW_RUN_ID: ${{ github.event.workflow_run.id }}
           MANUAL_RUN_ID: ${{ inputs.source_run_id }}
         run: |
-          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            echo "run_id=$MANUAL_RUN_ID" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_run" ]; then
+            RUN_ID="$WORKFLOW_RUN_ID"
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_RUN_ID:-}" ]; then
+            RUN_ID="$MANUAL_RUN_ID"
           else
-            echo "run_id=$WORKFLOW_RUN_ID" >> "$GITHUB_OUTPUT"
+            # UI-only Pages changes should not spend OpenAI tokens. Reuse the
+            # most recent successful ingest artifact and rebuild only index.html.
+            RUN_ID="$(gh api --method GET \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs" \
+              -f branch=main -f status=success -f per_page=1 \
+              --jq '.workflow_runs[0].id')"
           fi
+          if [ -z "${RUN_ID:-}" ] || [ "$RUN_ID" = "null" ]; then
+            echo "Could not resolve a successful Incremental vacancy ingest run."
+            exit 2
+          fi
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+          echo "Using daily-showcase artifact from run $RUN_ID"
+
+      - uses: actions/checkout@v4
 
       - name: Download static daily showcase
         uses: actions/download-artifact@v4
@@ -51,6 +75,9 @@ jobs:
           path: _site
           run-id: ${{ steps.source.outputs.run_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Refresh vacancy + two-CV feed without model calls
+        run: python -m cv_presentation.showcase_refresh --site-dir _site
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
