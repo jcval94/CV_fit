@@ -2,6 +2,14 @@
 
 Fuente de verdad profesional estructurada y sistema incremental para convertir vacantes en CVs personalizados, trazables y verificables sin inventar experiencia.
 
+## Live vacancy showcase
+
+**[Abrir CV_fit Daily Showcase](https://jcval94.github.io/CV_fit/)**
+
+La página pública muestra las vacantes de la corrida diaria, su enlace original, el estado de generación y, cuando pasan los gates correspondientes, previews HTML/PDF del CV institucional y del formato Harvard. Solo usa identidad profesional `public_safe`; datos privados de contacto no se publican en GitHub Pages.
+
+`source fit` y la cobertura determinista del RAG son métricas distintas: la primera proviene de la fuente de discovery y la segunda mide evidencia profesional realmente respaldada.
+
 El repositorio mantiene **dos corpus canónicos separados** y varias capas derivadas:
 
 1. `experience/`: evidencia profesional gobernada y pública.
@@ -10,6 +18,8 @@ El repositorio mantiene **dos corpus canónicos separados** y varias capas deriv
 4. `vacancy_state/`: vacantes normalizadas/chunked/indexadas.
 5. `cv_matching/`: unión determinista vacante ↔ evidencia.
 6. `cv_agent/`: workflow Google ADK para estrategia, redacción, revisión Senior Headhunter y validación final, usando OpenAI como único proveedor LLM.
+7. `cv_presentation/`: presentación parametrizada, branding verificado, fitting, HTML, Chromium/PDF y gates físicos.
+8. `generation_state/`: estado idempotente de generación automática.
 
 Una vacante nunca se convierte en evidencia sobre el candidato y una opinión previa de fit nunca se trata como hecho de la vacante.
 
@@ -26,6 +36,8 @@ Una vacante nunca se convierte en evidencia sobre el candidato y una opinión pr
 - `rag_state/`: estado derivado/versionado de retrieval profesional.
 
 Las métricas se chunkifican de forma atómica por `ACH-*`; los skills conservan su proficiency como metadata y los límites de ownership/uso se propagan a los chunks que puedan alimentar un CV.
+
+La cronología profesional, el fundamento de tenure y la educación forman además un **canonical CV backbone**: siguen estando gobernados por el mismo source of truth, pero no compiten contra proyectos/skills por un top-k semántico. Esto evita que una vacante altamente técnica haga desaparecer fechas, empleadores o instituciones que ya están documentados.
 
 ## Vacantes incrementales
 
@@ -64,7 +76,7 @@ La inferencia de idioma prioriza idioma explícito, después texto sustantivo de
 `cv_agent/` implementa:
 
 ```text
-canonical vacancy + grounded evidence
+canonical vacancy + canonical CV backbone + grounded vacancy-specific evidence
         ↓
 JD/language preflight
         ↓
@@ -113,18 +125,23 @@ Un `PASS` del Headhunter no basta. Cada línea sustantiva del CV conserva `evide
 - specializations bloqueadas por boundaries;
 - idioma incorrecto.
 
+## Presentación y artifacts
+
+El CV aprobado pasa a una capa separada de presentación. El formato branded de envío usa por defecto `executive_letter_v1`, de lectura lineal y branding institucional verificado; `harvard_v1` se conserva como alternativa visualmente inmutable. Los formatos con sidebar permanecen disponibles como variantes visuales, pero no son el artifact ATS primario.
+
+Chromium valida el layout físico y exporta PDF US Letter. El gate detecta overflow, clipping, headings huérfanos, páginas extra y MediaBox incorrecto. `ready_to_send=true` requiere además cover letter, calidad de contenido y los gates de presentación.
+
 ## Automatización y garantías E2E
 
 - `.github/workflows/validate-experience.yml`: integridad general del source of truth y tests.
 - `.github/workflows/evidence-rag.yml`: estado profesional RAG incremental.
-- `.github/workflows/vacancy-ingest.yml`: estado de vacantes incremental.
+- `.github/workflows/vacancy-ingest.yml`: estado de vacantes, generación automática y application bundles.
 - `.github/workflows/cv-agent.yml`: validación determinista del agente tanto en PR como después del merge a `main`.
+- `.github/workflows/daily-showcase-pages.yml`: despliegue del artifact público a GitHub Pages.
 
 Los workflows de vacantes y evidencia realizan una segunda corrida inmediata después de su procesamiento y exigen un no-op real: cero fuentes nuevas/modificadas, cero registros/vacantes impactados y cero reindexaciones. La idempotencia queda así validada E2E, no solo por unit tests.
 
-La generación con modelos reales queda disponible mediante `workflow_dispatch` y el secret `OPENAI_APY_KEY`, produciendo un artifact temporal en vez de commitear CVs al repo. El preflight de JD ocurre antes de la primera llamada LLM.
-
-**Todavía no se dispara automáticamente un CV en cada push de vacantes.** Ese switch debe activarse únicamente cuando una vacante canary con JD completo pase los evals autenticados de grounding/hallucination/calidad.
+La generación automática usa `OPENAI_APY_KEY`, mantiene un fingerprint de vacante + RAG + versión lógica del generador y solo vuelve a gastar cuando cambia un insumo relevante o cuando una nueva versión lógica requiere una regeneración controlada. Los CVs/HTML/PDF se publican como artifacts temporales; el repositorio solo persiste metadata sanitizada.
 
 ## Validación local
 
