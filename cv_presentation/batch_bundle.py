@@ -62,20 +62,31 @@ def finalize_batch(
                 design_client=client,
             )
             status = "PASS" if report.ready_to_send else "REVIEW_REQUIRED"
+            primary = next(x for x in report.templates if x.role == "primary")
+            alternate = next(x for x in report.templates if x.role == "alternate")
             results.append({
                 "vacancy_id": vacancy_id,
                 "run_id": run_id,
                 "status": status,
                 "ready_to_send": report.ready_to_send,
+                "primary_visual_status": primary.visual_status,
+                "primary_presentation_review_status": primary.presentation_review_status,
                 "application_bundle_file": str(run_dir / "application_bundle_report.json"),
             })
             entry["content_quality_target_reached"] = report.content_quality_target_reached
             entry["presentation_gate"] = {
                 "status": "PASS" if report.ready_to_send else "REVIEW_REQUIRED",
                 "primary_template": report.primary_template,
-                "primary_physical_status": next(x.physical_status for x in report.templates if x.role == "primary"),
+                "primary_physical_status": primary.physical_status,
+                "primary_visual_status": primary.visual_status,
+                "primary_presentation_review_status": primary.presentation_review_status,
+                "primary_page_utilization": primary.page_utilization,
+                "primary_section_area_ratios": primary.section_area_ratios,
+                "primary_section_item_counts": primary.section_item_counts,
                 "alternate_template": report.alternate_template,
-                "alternate_physical_status": next(x.physical_status for x in report.templates if x.role == "alternate"),
+                "alternate_physical_status": alternate.physical_status,
+                "alternate_visual_status": alternate.visual_status,
+                "alternate_presentation_review_status": alternate.presentation_review_status,
                 "cover_letter_ready": report.cover_letter_ready,
                 "reasons": report.reasons,
             }
@@ -113,13 +124,14 @@ def finalize_batch(
 
     _write_json(manifest_path, manifest)
     summary = {
-        "schema_version": 1,
+        "schema_version": 2,
         "source_batch_run_id": batch.get("run_id"),
         "result_counts": {
             status: sum(x["status"] == status for x in results)
             for status in sorted({x["status"] for x in results})
         },
-        "design_usage": client.telemetry_snapshot(),
+        # This client now accounts for both design-review and presentation-review calls.
+        "presentation_usage": client.telemetry_snapshot(),
         "results": results,
     }
     output_path = batch_report.parent / "application_bundle_batch_report.json"
@@ -128,7 +140,7 @@ def finalize_batch(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build branded+Harvard HTML/PDF bundles and finalize ready_to_send.")
+    parser = argparse.ArgumentParser(description="Build Technical Modern + Harvard bundles and finalize ready_to_send with physical and visual gates.")
     parser.add_argument("--batch-report", required=True)
     parser.add_argument("--outputs", default="outputs/auto")
     parser.add_argument("--vacancy-state", default="vacancy_state")
