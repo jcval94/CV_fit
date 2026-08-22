@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
     inputs:
       source_run_id:
-        description: "Successful Incremental vacancy ingest run id containing the daily-showcase artifact"
+        description: "Successful Incremental vacancy ingest run id containing a non-empty daily-showcase artifact"
         required: false
         type: string
 
@@ -38,7 +38,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Resolve source workflow run
+      - uses: actions/checkout@v4
+
+      - name: Resolve and download latest non-empty CV showcase
         id: source
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,37 +49,68 @@ jobs:
           MANUAL_RUN_ID: ${{ inputs.source_run_id }}
         run: |
           set -euo pipefail
-          if [ "$EVENT_NAME" = "workflow_run" ]; then
-            RUN_ID="$WORKFLOW_RUN_ID"
-          elif [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_RUN_ID:-}" ]; then
-            RUN_ID="$MANUAL_RUN_ID"
+          rm -rf _site /tmp/cvfit-showcase-candidate
+
+          candidates=()
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_RUN_ID:-}" ]; then
+            # Explicit manual source means exactly that run; fail rather than silently
+            # substituting another artifact if it contains no CV outputs.
+            candidates+=("$MANUAL_RUN_ID")
           else
-            # UI-only Pages changes should not spend OpenAI tokens. Reuse the
-            # most recent successful ingest artifact and rebuild only index.html.
-            RUN_ID="$(gh api --method GET \
-              "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs" \
-              -f branch=main -f status=success -f per_page=1 \
-              --jq '.workflow_runs[0].id')"
+            if [ "$EVENT_NAME" = "workflow_run" ] && [ -n "${WORKFLOW_RUN_ID:-}" ]; then
+              candidates+=("$WORKFLOW_RUN_ID")
+            fi
+            while IFS= read -r run_id; do
+              [ -n "$run_id" ] || continue
+              candidates+=("$run_id")
+            done < <(
+              gh api \
+                "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=20" \
+                --jq '.workflow_runs[].id'
+            )
           fi
-          if [ -z "${RUN_ID:-}" ] || [ "$RUN_ID" = "null" ]; then
-            echo "Could not resolve a successful Incremental vacancy ingest run."
+
+          selected=""
+          seen=" "
+          for run_id in "${candidates[@]}"; do
+            case "$seen" in
+              *" $run_id "*) continue ;;
+            esac
+            seen="$seen$run_id "
+            rm -rf /tmp/cvfit-showcase-candidate
+            mkdir -p /tmp/cvfit-showcase-candidate
+            echo "Inspecting daily-showcase from run $run_id"
+            if ! gh run download "$run_id" -n daily-showcase -D /tmp/cvfit-showcase-candidate; then
+              echo "Run $run_id has no downloadable daily-showcase artifact; trying previous successful run."
+              continue
+            fi
+            cv_count="$(find /tmp/cvfit-showcase-candidate/vacancies -type f \( -name 'cv_primary.html' -o -name 'cv_alternate.html' \) 2>/dev/null | wc -l | tr -d ' ')"
+            echo "Run $run_id contains $cv_count public CV HTML artifact(s)."
+            if [ "${cv_count:-0}" -gt 0 ]; then
+              mv /tmp/cvfit-showcase-candidate _site
+              selected="$run_id"
+              echo "cv_count=$cv_count" >> "$GITHUB_OUTPUT"
+              break
+            fi
+          done
+
+          if [ -z "$selected" ]; then
+            echo "No successful vacancy-ingest run with a non-empty CV showcase was found."
+            echo "Refusing to replace the currently deployed Pages site with an empty feed."
             exit 2
           fi
-          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
-          echo "Using daily-showcase artifact from run $RUN_ID"
-
-      - uses: actions/checkout@v4
-
-      - name: Download static daily showcase
-        uses: actions/download-artifact@v4
-        with:
-          name: daily-showcase
-          path: _site
-          run-id: ${{ steps.source.outputs.run_id }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          echo "run_id=$selected" >> "$GITHUB_OUTPUT"
+          echo "Using non-empty daily-showcase artifact from run $selected"
 
       - name: Refresh vacancy + two-CV feed without model calls
         run: python -m cv_presentation.showcase_refresh --site-dir _site
+
+      - name: Verify Pages source still contains CV artifacts
+        run: |
+          set -euo pipefail
+          count="$(find _site/vacancies -type f \( -name 'cv_primary.html' -o -name 'cv_alternate.html' \) | wc -l | tr -d ' ')"
+          test "$count" -gt 0
+          echo "Publishing $count CV HTML artifact(s) from ingest run ${{ steps.source.outputs.run_id }}"
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
