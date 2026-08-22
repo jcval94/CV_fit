@@ -1,19 +1,29 @@
 {
   "entries": {
     "vac-04e92192e608ea02": {
-      "coverage_score": 73.5,
-      "estimated_cost_usd": 0.771885,
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 77.7,
+      "estimated_cost_usd": 0.9425165,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "665f9ef3df4b9f3bec884df0de92dbf8b05c24674d2459be4a5604fb71858e78",
+      "fingerprint": "9396a8f5b946ad5d2a3751fefd7e5ec7bf8ce9ca77d0ced7f97b2d0ad5e546e9",
+      "generation_logic_version": 2,
       "presentation_gate": {
-        "error": "ValueError: design review did not pass for professional_sidebar_v1: {'decision': 'PASS', 'preserve_template': False, 'primary_usage': 'headings_and_accents', 'secondary_usage': 'sidebar_background', 'density_adjustment': 'normal', 'ats_safe': False, 'print_safe': True, 'notes': ['Supplied contrast checks pass for body text, headings, muted text, and light text on the supplied purple areas.', 'Use #C2410C only for large accents or graphic details; do not use it for small text because the supplied check only validates the 3.0 large/accent threshold.', '#4C1D95 and #5B21B6 are suitable for headings, accents, and restrained sidebar backgrounds with light text.', 'Arial, Helvetica, sans-serif is professional, readable, widely available, and ATS-compatible.', 'A two-page CV density is plausible at normal density; avoid compressing body text or relying on dense iconography, charts, or skill bars.', 'The sidebar layout requires a verified linear reading order and real text—not text embedded in graphics—to be ATS-safe. As supplied, the sidebar template should be treated as ATS-risky.', 'Print clarity is acceptable with the white surface, dark body text, and passing contrast results.']}",
-        "status": "FAIL"
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-04e92192e608ea02",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-04e92192e608ea02",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "e64642e11cb19b5f1f1bada95e6934cc98052af76b83410a8f727212564afcea"
@@ -21,25 +31,27 @@
     "vac-12dc570424d531ae": {
       "application_bundle_file": "application_bundle_report.json",
       "content_quality_target_reached": false,
-      "coverage_score": 80.9,
-      "estimated_cost_usd": 0.689745,
+      "coverage_score": 78.8,
+      "estimated_cost_usd": 0.8675685,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "17d4839b1d1a3db4b332371691d208f7df9128931e01f20994fa91c3d306917e",
+      "fingerprint": "3de4e75486b0c3ed5e28402740da62868c23adf2d5251eba2dce3f0915bc85b0",
+      "generation_logic_version": 2,
       "presentation_gate": {
         "alternate_physical_status": "PASS",
         "alternate_template": "harvard_v1",
         "cover_letter_ready": true,
         "primary_physical_status": "PASS",
-        "primary_template": "professional_sidebar_v1",
+        "primary_template": "executive_letter_v1",
         "reasons": [
           "content_quality_target_not_reached"
-        ]
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-12dc570424d531ae",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-12dc570424d531ae",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "e2870bbf36408675104d9ef6be4b2ba62c00c013d8e29cec4586b580ed8b485f"
@@ -47,43 +59,57 @@
     "vac-14b95b3407bcb148": {
       "application_bundle_file": "application_bundle_report.json",
       "content_quality_target_reached": false,
-      "coverage_score": 63.7,
-      "estimated_cost_usd": 0.665684,
+      "coverage_score": 63.9,
+      "estimated_cost_usd": 0.780817,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "59c03974aff709a0fc28c7766554f8c0f98b690e983690c0ebdfb73ab433e33e",
+      "fingerprint": "f5bbda0b7ac1e8d9dbb76891602cebadf8c27c6390fe3b059baffe2229025f18",
+      "generation_logic_version": 2,
       "presentation_gate": {
         "alternate_physical_status": "PASS",
         "alternate_template": "harvard_v1",
         "cover_letter_ready": true,
         "primary_physical_status": "PASS",
-        "primary_template": "professional_sidebar_v1",
+        "primary_template": "executive_letter_v1",
         "reasons": [
           "content_quality_target_not_reached"
-        ]
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-14b95b3407bcb148",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-14b95b3407bcb148",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [],
+      "unsupported_requirements": [
+        "Databricks"
+      ],
       "vacancy_content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06"
     },
     "vac-21cefd168f6539b4": {
-      "coverage_score": 73.1,
-      "estimated_cost_usd": 0.6304645,
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 74.4,
+      "estimated_cost_usd": 0.821349,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "2647027a223e8075497e493ed6152435c79c3e8db567eb573735a5d0a1eb65f1",
+      "fingerprint": "2d7a9d3e8a9d0a98a0efda052c7207ba24dadc7c48b7cd339dd8f888835eb342",
+      "generation_logic_version": 2,
       "presentation_gate": {
-        "error": "ValueError: design review did not pass for professional_sidebar_v1: {'decision': 'REVISE', 'preserve_template': False, 'primary_usage': 'headings_and_accents', 'secondary_usage': 'sidebar_background', 'density_adjustment': 'normal', 'ats_safe': False, 'print_safe': True, 'notes': ['The supplied contrast checks pass for body text, headings, muted text, sidebar text, and large accent graphics.', 'Use #1F2937 or #111827 for primary text and headings, with #374151 or #4B5563 for secondary text.', 'Reserve #C2410C for large accents, rules, or graphic elements; do not use it for small body text or small labels because its supplied check passes only at the large/accent graphics threshold.', 'Arial/Helvetica is a professional, readable body stack. Trebuchet MS with Arial fallback is suitable for headings if used sparingly and consistently.', 'Two pages with normal CV density is plausible; avoid decorative charts, skill bars, photos, and dense iconography.', 'The sidebar layout introduces ATS parsing risk. Keep all content as selectable text in a clear reading order, and provide a single-column ATS-safe version if broad automated screening is required.']}",
-        "status": "FAIL"
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-21cefd168f6539b4",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-21cefd168f6539b4",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "8149d1e08a379b92e8b4d9822929c8be6b5e0898164b278968816075b1aade23"
@@ -91,25 +117,27 @@
     "vac-2de566514601700a": {
       "application_bundle_file": "application_bundle_report.json",
       "content_quality_target_reached": false,
-      "coverage_score": 84.6,
-      "estimated_cost_usd": 0.639068,
+      "coverage_score": 83.2,
+      "estimated_cost_usd": 0.7868105,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "c3fb891ba0961fbeb4b509d0350ae430850c6795ba94b1a822b32b9c3a66094f",
+      "fingerprint": "c5c6717059e9bb09b3b5992dda29bf6810a801b79e8c139514aff4d2ea94cbb3",
+      "generation_logic_version": 2,
       "presentation_gate": {
         "alternate_physical_status": "PASS",
         "alternate_template": "harvard_v1",
         "cover_letter_ready": true,
         "primary_physical_status": "PASS",
-        "primary_template": "professional_sidebar_v1",
+        "primary_template": "executive_letter_v1",
         "reasons": [
           "content_quality_target_not_reached"
-        ]
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-2de566514601700a",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-2de566514601700a",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
@@ -117,25 +145,28 @@
     "vac-6d9bdccca1ff49c3": {
       "application_bundle_file": "application_bundle_report.json",
       "content_quality_target_reached": false,
-      "coverage_score": 75.5,
-      "estimated_cost_usd": 0.710508,
+      "coverage_score": 74.3,
+      "estimated_cost_usd": 0.8059805,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "6cd1e18a91be55098b7497a87eb4041c82923dacb6f2cb673bf0e5f7680f0ee2",
+      "fingerprint": "68132c59bda9f84010824bf5066ad304fcc98e54a1aec987d130bcacddaf0018",
+      "generation_logic_version": 2,
       "presentation_gate": {
         "alternate_physical_status": "PASS",
         "alternate_template": "harvard_v1",
         "cover_letter_ready": true,
         "primary_physical_status": "PASS",
-        "primary_template": "professional_sidebar_v1",
+        "primary_template": "executive_letter_v1",
         "reasons": [
-          "content_quality_target_not_reached"
-        ]
+          "content_quality_target_not_reached",
+          "primary_template_fit_failed"
+        ],
+        "status": "REVIEW_REQUIRED"
       },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-6d9bdccca1ff49c3",
-      "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
+      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-6d9bdccca1ff49c3",
+      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "5d9aed68d860e4275c7e911ed7abf924115c1ed4ca9e01204edcdd9460678e6d"
