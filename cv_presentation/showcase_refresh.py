@@ -4,14 +4,19 @@ import argparse
 import json
 from pathlib import Path
 
+from cv_presentation.feed_enhancements import enhance_feed_index
 from cv_presentation.showcase import refresh_existing_showcase
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Refresh the GitHub Pages feed from an existing daily-showcase artifact without regenerating CVs.")
+    parser = argparse.ArgumentParser(
+        description="Refresh and enhance the GitHub Pages vacancy feed from an existing daily-showcase artifact without regenerating CVs."
+    )
     parser.add_argument("--site-dir", default="_site")
     args = parser.parse_args()
-    report = refresh_existing_showcase(Path(args.site_dir))
+    site_dir = Path(args.site_dir)
+    report = refresh_existing_showcase(site_dir)
+    report["feed_enhancements"] = enhance_feed_index(site_dir)
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     return 0
 
