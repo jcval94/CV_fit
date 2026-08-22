@@ -14,18 +14,18 @@ FitStatus = Literal["FIT", "NEEDS_REVISION"]
 DEFAULT_SECTION_ORDER: list[str] = [
     "summary",
     "experience",
+    "education",
     "projects",
     "skills",
-    "education",
     "certifications",
 ]
 DEFAULT_SECTION_MODES: dict[str, str] = {
     "summary": "always",
     "experience": "always",
+    "education": "always",
     "projects": "auto",
     "skills": "always",
-    "education": "always",
-    "certifications": "auto",
+    "certifications": "always",
 }
 
 
@@ -93,16 +93,16 @@ class LayoutSpec(BaseModel):
 
 class DensitySpec(BaseModel):
     mode: DensityMode = "normal"
-    max_summary_words: int = Field(default=80, ge=30, le=140)
+    max_summary_words: int = Field(default=70, ge=30, le=140)
     max_role_bullets: int = Field(default=4, ge=1, le=8)
     min_role_bullets: int = Field(default=1, ge=1, le=4)
-    max_projects: int = Field(default=2, ge=0, le=6)
-    max_project_bullets: int = Field(default=3, ge=1, le=6)
-    min_project_bullets: int = Field(default=1, ge=1, le=3)
-    max_skills: int = Field(default=10, ge=3, le=30)
-    min_skills: int = Field(default=5, ge=1, le=15)
-    max_education: int = Field(default=2, ge=1, le=6)
-    max_certifications: int = Field(default=4, ge=0, le=12)
+    max_projects: int = Field(default=2, ge=0, le=2)
+    max_project_bullets: int = Field(default=2, ge=1, le=4)
+    min_project_bullets: int = Field(default=1, ge=1, le=2)
+    max_skills: int = Field(default=15, ge=10, le=15)
+    min_skills: int = Field(default=8, ge=1, le=15)
+    max_education: int = Field(default=2, ge=1, le=2)
+    max_certifications: int = Field(default=5, ge=3, le=5)
     estimated_chars_per_line: int = Field(default=92, ge=60, le=130)
     estimated_lines_per_page: int = Field(default=50, ge=35, le=70)
 
