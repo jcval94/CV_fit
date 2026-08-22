@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 from cv_agent.backbone import select_canonical_backbone
+from cv_agent.editorial_policy import select_editorial_anchor_evidence
 from cv_agent.preflight import assert_vacancy_generation_ready
 from cv_matching.match import build_match
 
@@ -54,14 +55,22 @@ def assemble_application_context(
     catalog = load_evidence_catalog(evidence_state)
 
     # Vacancy-specific retrieval decides which projects/skills/metrics are useful,
-    # but stable chronology and education must never compete for semantic top-k.
-    # Those facts form a separate canonical backbone and are always available to
-    # the strategist/writer/reviewer.
+    # but stable chronology/education and sticky editorial evidence must never
+    # compete for semantic top-k.
     backbone = select_canonical_backbone(catalog)
+    editorial_anchors = select_editorial_anchor_evidence(catalog)
     backbone_ids = [item["chunk_id"] for item in backbone]
-    seen = set(backbone_ids)
+    anchor_ids = [item["chunk_id"] for item in editorial_anchors if item["chunk_id"] not in set(backbone_ids)]
 
-    selected: list[dict[str, Any]] = list(backbone)
+    selected: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for chunk in backbone + editorial_anchors:
+        chunk_id = chunk["chunk_id"]
+        if chunk_id in seen:
+            continue
+        selected.append(chunk)
+        seen.add(chunk_id)
+
     for chunk_id in match_plan.get("selected_evidence_chunk_ids", []):
         chunk = catalog.get(chunk_id)
         if not chunk or not chunk.get("cv_eligible") or chunk_id in seen:
@@ -73,6 +82,7 @@ def assemble_application_context(
         "vacancy": vacancy,
         "match_plan": match_plan,
         "canonical_backbone_chunk_ids": backbone_ids,
+        "editorial_anchor_chunk_ids": anchor_ids,
         "evidence_chunks": selected,
         "evidence_chunk_ids": [item["chunk_id"] for item in selected],
         "evidence_source_paths": sorted({item["source_path"] for item in selected}),
