@@ -1,0 +1,223 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Konfío",
+      "company_category": "Fintech",
+      "content_hash": "b540262c44bd2d2f64d72f4d33bb283cc396d3457a35e7c22f47f00701038311",
+      "description": null,
+      "fit_gaps": [
+        "El rol exige profundidad de ingeniería de software distribuido, concurrencia, backpressure, idempotencia y Temporal, más allá de un Data Scientist tradicional.",
+        "Pide experiencia explícita con AWS Bedrock/AgentCore y LangGraph en producción."
+      ],
+      "fit_score": 98.0,
+      "fit_strengths": [
+        "Fintech mexicana con productos de financiamiento, tarjeta de crédito y pagos, muy cercana al dominio bancario y de riesgo.",
+        "Responsabilidad end-to-end sobre pipelines de datos y features, entrenamiento, inferencia, despliegue, versionado y monitoreo de modelos en producción.",
+        "Stack altamente alineado con IA aplicada y GenAI: Python avanzado, SQL, SageMaker, Bedrock, LangGraph, RAG, MLOps, Docker, Kubernetes, CI/CD y observabilidad de LLMs.",
+        "Incluye formación de otros colaboradores, diseño técnico, gobierno de datos y operación de agentes virtuales con altos estándares de confiabilidad, costo y seguridad."
+      ],
+      "fit_summary": "Es el mejor ajuste de la búsqueda: combina fintech, ML productivo, arquitectura end-to-end, GenAI, agentes, liderazgo técnico y un stack directamente compatible con el perfil objetivo.",
+      "identity_key": "adb898e887a1d895bb414fac05bddddf79a2a8e32916955b2b2bea3106a8ed45",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 1 día",
+      "provenance": [
+        {
+          "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+          "source_native_id": "dba476793276",
+          "source_path": "Vacantes/vacantes_2026-08-22.json",
+          "source_search_date": "2026-08-22",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "AI/ML Engineer Sr.",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "MLOps",
+        "AWS SageMaker",
+        "AWS Bedrock",
+        "LangGraph",
+        "RAG",
+        "Docker",
+        "Kubernetes",
+        "GitLab CI/CD",
+        "Temporal",
+        "LLM evaluation",
+        "Data governance"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/ai-ml-engineer-sr-at-konf%C3%ADo-4454408658",
+      "vacancy_id": "vac-adb898e887a1d895",
+      "work_model": "Hybrid"
+    },
+    {
+      "application_language": "en",
+      "city": "América Latina",
+      "company": "CRNCY Group",
+      "company_category": "Fintech",
+      "content_hash": "fb4d07723b404d30aca646a143ba6a95a20a60b8df5e2ce926cf72dcc87c6a97",
+      "description": null,
+      "fit_gaps": [
+        "El vínculo disponible para postulación es un agregador de empleo remoto y no una página corporativa de ATS.",
+        "La modalidad se describe como contrato remoto en USD, por lo que conviene validar esquema contractual y prestaciones para México."
+      ],
+      "fit_score": 97.0,
+      "fit_strengths": [
+        "Rol senior remoto enfocado directamente en credit decisioning, underwriting y rentabilidad ajustada por riesgo.",
+        "Modela probabilidad de pago, default y fraude utilizando datos incompletos, alternativos y no estructurados.",
+        "Convierte análisis en reglas de aprobación, requisitos de underwriting, sizing de primer crédito y segmentación de clientes.",
+        "Aprovecha de forma directa experiencia previa en banca, gestión de riesgo, fraude, scoring, estadística, Python y SQL."
+      ],
+      "fit_summary": "Es el ajuste de negocio más directo de la búsqueda: credit risk, fraude, underwriting y decision science aplicados a decisiones crediticias reales en LATAM.",
+      "identity_key": "6fe0c8aa95790e4ea7caabc6d072cf0736a9e10a88d44c74a1b87b9376509b43",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "América Latina",
+      "posted_date": null,
+      "posted_date_raw": "Hace 4 días",
+      "provenance": [
+        {
+          "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+          "source_native_id": "c11d1e65592f",
+          "source_path": "Vacantes/vacantes_2026-08-22.json",
+          "source_search_date": "2026-08-22",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Credit Decision Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Decision Science",
+        "Credit Risk",
+        "Fraud Modeling",
+        "Underwriting",
+        "Python",
+        "SQL",
+        "Statistical Inference",
+        "Customer Segmentation",
+        "Alternative Data",
+        "Portfolio Analytics"
+      ],
+      "url": "https://remotive.com/remote/jobs/finance/credit-decisioning-specialist-5402535",
+      "vacancy_id": "vac-6fe0c8aa95790e4e",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "México, horario central de Ciudad de México",
+      "company": "Spot2.mx",
+      "company_category": "Producto Tech",
+      "content_hash": "3f1eb153abe0d0676935b81285658deec41e08f1388d8a943019ee75a992e87b",
+      "description": null,
+      "fit_gaps": [
+        "El dominio principal es PropTech y marketplace B2B, por lo que aprovecha menos la especialización en banca y riesgo.",
+        "Pide experiencia práctica en sistemas de recomendación e inferencia causal con herramientas específicas como DoWhy/EconML."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Rol 100% remoto y claramente senior, con ownership desde experimentación hasta producción.",
+        "Combina Python y SQL avanzado con modelos predictivos, recomendación, forecasting, pricing dinámico y scoring.",
+        "Fuerte componente moderno de IA: LLMs, RAG, evaluación de agentes, RAGAS y LLM-as-judge.",
+        "Experimentación rigurosa con A/B testing, quasi-experiments, inferencia causal, uplift modeling y medición de impacto real en negocio.",
+        "Incluye MLOps, MLflow, Docker, pipelines escalables, monitoreo de drift y colaboración directa con Engineering."
+      ],
+      "fit_summary": "Excelente ajuste técnico para un perfil senior que combine ciencia de datos clásica, experimentación, GenAI, MLOps y sistemas productivos, aunque con menor ventaja de dominio financiero.",
+      "identity_key": "84cc6dffc5671fa724768fe7720cc18f1c08a66e9ef73e446a8d4aaff2f54a07",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "México, horario central de Ciudad de México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 1 día",
+      "provenance": [
+        {
+          "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
+          "source_entry_index": 2,
+          "source_format": "vacantes_v1",
+          "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+          "source_native_id": "fa13c25622e4",
+          "source_path": "Vacantes/vacantes_2026-08-22.json",
+          "source_search_date": "2026-08-22",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Data Scientist Senior - IA y Experimentación",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "ClickHouse",
+        "Machine Learning",
+        "LLMs",
+        "RAG",
+        "RAGAS",
+        "A/B testing",
+        "Causal Inference",
+        "DoWhy",
+        "EconML",
+        "MLflow",
+        "Docker",
+        "Forecasting",
+        "Recommendation Systems",
+        "MLOps"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/data-scientist-senior-ia-y-experimentaci%C3%B3n-at-spot2-mx-4454914262",
+      "vacancy_id": "vac-84cc6dffc5671fa7",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+  "source_path": "Vacantes/vacantes_2026-08-22.json",
+  "status": "valid"
+}

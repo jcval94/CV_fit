@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-6fe0c8aa95790e4e::core",
+      "chunk_type": "core",
+      "content_hash": "44e1af61d7a8eef0df2f30d2e4b957e461f6a6f7215d0d8209acda8ba04cc527",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Role: Credit Decision Scientist\nCompany: CRNCY Group\nCompany category: Fintech\nLocation: América Latina\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-6fe0c8aa95790e4e"
+    },
+    {
+      "chunk_id": "vac-6fe0c8aa95790e4e::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "8e224c0909a8d0e622019885bb28fd78befce5a3f97b08ab402d7dab6f568d84",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Technologies / capabilities: Decision Science; Credit Risk; Fraud Modeling; Underwriting; Python; SQL; Statistical Inference; Customer Segmentation; Alternative Data; Portfolio Analytics",
+      "vacancy_id": "vac-6fe0c8aa95790e4e"
+    },
+    {
+      "chunk_id": "vac-6fe0c8aa95790e4e::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "5942ba948328b700925a65f20f67f4a26ecbf5af3757eed1a2e204a3e225acaf",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Source fit score: 97/100\nSource fit summary: Es el ajuste de negocio más directo de la búsqueda: credit risk, fraude, underwriting y decision science aplicados a decisiones crediticias reales en LATAM.\nSource strengths: Rol senior remoto enfocado directamente en credit decisioning, underwriting y rentabilidad ajustada por riesgo.; Modela probabilidad de pago, default y fraude utilizando datos incompletos, alternativos y no estructurados.; Convierte análisis en reglas de aprobación, requisitos de underwriting, sizing de primer crédito y segmentación de clientes.; Aprovecha de forma directa experiencia previa en banca, gestión de riesgo, fraude, scoring, estadística, Python y SQL.\nSource gaps: El vínculo disponible para postulación es un agregador de empleo remoto y no una página corporativa de ATS.; La modalidad se describe como contrato remoto en USD, por lo que conviene validar esquema contractual y prestaciones para México.",
+      "vacancy_id": "vac-6fe0c8aa95790e4e"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-6fe0c8aa95790e4e"
+}

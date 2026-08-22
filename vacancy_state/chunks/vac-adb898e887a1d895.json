@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-adb898e887a1d895::core",
+      "chunk_type": "core",
+      "content_hash": "17d28ec004de78fd09541257d4073729f3e91501747368f8d2f48df93698744f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Role: AI/ML Engineer Sr.\nCompany: Konfío\nCompany category: Fintech\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-adb898e887a1d895"
+    },
+    {
+      "chunk_id": "vac-adb898e887a1d895::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "2287db8abff63db64fc3c17de5389e89dede670ad88991bc06039a831a237b16",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; MLOps; AWS SageMaker; AWS Bedrock; LangGraph; RAG; Docker; Kubernetes; GitLab CI/CD; Temporal; LLM evaluation; Data governance",
+      "vacancy_id": "vac-adb898e887a1d895"
+    },
+    {
+      "chunk_id": "vac-adb898e887a1d895::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "a168b70fc2f1f1da1709e41ce6d11e61c237bf54b90d501bf9ddcf6794b381fc",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-22.json"
+      ],
+      "text": "Source fit score: 98/100\nSource fit summary: Es el mejor ajuste de la búsqueda: combina fintech, ML productivo, arquitectura end-to-end, GenAI, agentes, liderazgo técnico y un stack directamente compatible con el perfil objetivo.\nSource strengths: Fintech mexicana con productos de financiamiento, tarjeta de crédito y pagos, muy cercana al dominio bancario y de riesgo.; Responsabilidad end-to-end sobre pipelines de datos y features, entrenamiento, inferencia, despliegue, versionado y monitoreo de modelos en producción.; Stack altamente alineado con IA aplicada y GenAI: Python avanzado, SQL, SageMaker, Bedrock, LangGraph, RAG, MLOps, Docker, Kubernetes, CI/CD y observabilidad de LLMs.; Incluye formación de otros colaboradores, diseño técnico, gobierno de datos y operación de agentes virtuales con altos estándares de confiabilidad, costo y seguridad.\nSource gaps: El rol exige profundidad de ingeniería de software distribuido, concurrencia, backpressure, idempotencia y Temporal, más allá de un Data Scientist tradicional.; Pide experiencia explícita con AWS Bedrock/AgentCore y LangGraph en producción.",
+      "vacancy_id": "vac-adb898e887a1d895"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-adb898e887a1d895"
+}

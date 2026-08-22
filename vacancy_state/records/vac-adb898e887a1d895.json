@@ -1,0 +1,72 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "Konfío",
+  "company_category": "Fintech",
+  "content_hash": "a2fe32b2e7d015d7e1997ca4baebf451864ed3b6acb40024bdb240871b8015ae",
+  "description": null,
+  "fit_gaps": [
+    "El rol exige profundidad de ingeniería de software distribuido, concurrencia, backpressure, idempotencia y Temporal, más allá de un Data Scientist tradicional.",
+    "Pide experiencia explícita con AWS Bedrock/AgentCore y LangGraph en producción."
+  ],
+  "fit_score": 98.0,
+  "fit_strengths": [
+    "Fintech mexicana con productos de financiamiento, tarjeta de crédito y pagos, muy cercana al dominio bancario y de riesgo.",
+    "Responsabilidad end-to-end sobre pipelines de datos y features, entrenamiento, inferencia, despliegue, versionado y monitoreo de modelos en producción.",
+    "Stack altamente alineado con IA aplicada y GenAI: Python avanzado, SQL, SageMaker, Bedrock, LangGraph, RAG, MLOps, Docker, Kubernetes, CI/CD y observabilidad de LLMs.",
+    "Incluye formación de otros colaboradores, diseño técnico, gobierno de datos y operación de agentes virtuales con altos estándares de confiabilidad, costo y seguridad."
+  ],
+  "fit_summary": "Es el mejor ajuste de la búsqueda: combina fintech, ML productivo, arquitectura end-to-end, GenAI, agentes, liderazgo técnico y un stack directamente compatible con el perfil objetivo.",
+  "identity_key": "adb898e887a1d895bb414fac05bddddf79a2a8e32916955b2b2bea3106a8ed45",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": null,
+  "posted_date_raw": "Hace 1 día",
+  "provenance": [
+    {
+      "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+      "source_native_id": "dba476793276",
+      "source_path": "Vacantes/vacantes_2026-08-22.json",
+      "source_search_date": "2026-08-22",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "AI/ML Engineer Sr.",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Machine Learning",
+    "MLOps",
+    "AWS SageMaker",
+    "AWS Bedrock",
+    "LangGraph",
+    "RAG",
+    "Docker",
+    "Kubernetes",
+    "GitLab CI/CD",
+    "Temporal",
+    "LLM evaluation",
+    "Data governance"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/ai-ml-engineer-sr-at-konf%C3%ADo-4454408658",
+  "vacancy_id": "vac-adb898e887a1d895",
+  "work_model": "Hybrid"
+}

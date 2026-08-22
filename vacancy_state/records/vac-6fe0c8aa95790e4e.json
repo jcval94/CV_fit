@@ -1,0 +1,68 @@
+{
+  "application_language": "en",
+  "city": "América Latina",
+  "company": "CRNCY Group",
+  "company_category": "Fintech",
+  "content_hash": "4d13aea72e5db11ec5bf2024f3bf5d1f53b875c129a5cf3f8d4f2d37b0cf388f",
+  "description": null,
+  "fit_gaps": [
+    "El vínculo disponible para postulación es un agregador de empleo remoto y no una página corporativa de ATS.",
+    "La modalidad se describe como contrato remoto en USD, por lo que conviene validar esquema contractual y prestaciones para México."
+  ],
+  "fit_score": 97.0,
+  "fit_strengths": [
+    "Rol senior remoto enfocado directamente en credit decisioning, underwriting y rentabilidad ajustada por riesgo.",
+    "Modela probabilidad de pago, default y fraude utilizando datos incompletos, alternativos y no estructurados.",
+    "Convierte análisis en reglas de aprobación, requisitos de underwriting, sizing de primer crédito y segmentación de clientes.",
+    "Aprovecha de forma directa experiencia previa en banca, gestión de riesgo, fraude, scoring, estadística, Python y SQL."
+  ],
+  "fit_summary": "Es el ajuste de negocio más directo de la búsqueda: credit risk, fraude, underwriting y decision science aplicados a decisiones crediticias reales en LATAM.",
+  "identity_key": "6fe0c8aa95790e4ea7caabc6d072cf0736a9e10a88d44c74a1b87b9376509b43",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "América Latina",
+  "posted_date": null,
+  "posted_date_raw": "Hace 4 días",
+  "provenance": [
+    {
+      "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "9c799127a067c45c4d37c2d7727849d83ce6a458b41fe827b8073ff0fbc528d7",
+      "source_native_id": "c11d1e65592f",
+      "source_path": "Vacantes/vacantes_2026-08-22.json",
+      "source_search_date": "2026-08-22",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Credit Decision Scientist",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Decision Science",
+    "Credit Risk",
+    "Fraud Modeling",
+    "Underwriting",
+    "Python",
+    "SQL",
+    "Statistical Inference",
+    "Customer Segmentation",
+    "Alternative Data",
+    "Portfolio Analytics"
+  ],
+  "url": "https://remotive.com/remote/jobs/finance/credit-decisioning-specialist-5402535",
+  "vacancy_id": "vac-6fe0c8aa95790e4e",
+  "work_model": "Remote"
+}
