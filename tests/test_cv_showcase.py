@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from cv_presentation.showcase import build_showcase, refresh_existing_showcase
+from cv_presentation.showcase_snapshot import inherit_previous_public_bundles
 
 
 class ShowcaseTests(unittest.TestCase):
@@ -146,6 +147,69 @@ class ShowcaseTests(unittest.TestCase):
             self.assertEqual(payload["view"], "vacancy_cv_feed")
             self.assertEqual((vacancy_dir / "cv_primary.html").read_bytes(), b"artifact")
             self.assertEqual((vacancy_dir / "index.html").read_text(encoding="utf-8"), "old details")
+
+    def test_noop_showcase_inherits_previous_public_cv_bundle(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            current = root / "current"
+            previous = root / "previous"
+            vacancy_id = "vac-persist"
+            current_dir = current / "vacancies" / vacancy_id
+            previous_dir = previous / "vacancies" / vacancy_id
+            current_dir.mkdir(parents=True)
+            previous_dir.mkdir(parents=True)
+
+            self._write_json(current / "showcase.json", {
+                "date": "2026-08-22",
+                "vacancies": [{
+                    "vacancy_id": vacancy_id,
+                    "company": "Current Co",
+                    "role_title": "Senior AI/ML Engineer",
+                    "url": "https://example.com/current",
+                    "fit_score": 97,
+                    "jd_fidelity": "full",
+                    "generation_status": "SKIPPED_IDEMPOTENT",
+                    "ready_to_send": False,
+                }],
+            })
+            previous_row = {
+                "vacancy_id": vacancy_id,
+                "company": "Old Name",
+                "role_title": "Old Role",
+                "url": "https://example.com/old",
+                "fit_score": 90,
+                "jd_fidelity": "full",
+                "generation_status": "REVIEW_REQUIRED",
+                "ready_to_send": False,
+                "primary_label": "Technical Modern",
+                "alternate_label": "Harvard Executive",
+                "primary_html_file": "cv_primary.html",
+                "primary_pdf_file": "cv_primary.pdf",
+                "primary_screenshot_file": "cv_primary.png",
+                "alternate_html_file": "cv_alternate.html",
+                "alternate_pdf_file": "cv_alternate.pdf",
+                "alternate_screenshot_file": "cv_alternate.png",
+                "primary_physical_status": "PASS",
+                "alternate_physical_status": "PASS",
+            }
+            self._write_json(previous / "showcase.json", {"date": "2026-08-21", "vacancies": [previous_row]})
+            for name in ("cv_primary.html", "cv_alternate.html", "cv_primary.pdf", "cv_alternate.pdf", "cv_primary.png", "cv_alternate.png", "index.html"):
+                (previous_dir / name).write_bytes(b"previous-public-bundle")
+
+            report = inherit_previous_public_bundles(current_site=current, previous_site=previous)
+            payload = json.loads((current / "showcase.json").read_text(encoding="utf-8"))
+            row = payload["vacancies"][0]
+
+            self.assertEqual(report["inherited_count"], 1)
+            self.assertEqual(row["company"], "Current Co")
+            self.assertEqual(row["role_title"], "Senior AI/ML Engineer")
+            self.assertEqual(row["url"], "https://example.com/current")
+            self.assertEqual(row["fit_score"], 97)
+            self.assertEqual(row["primary_label"], "Technical Modern")
+            self.assertEqual(row["artifact_source"], "inherited_previous_showcase")
+            self.assertTrue((current_dir / "cv_primary.html").exists())
+            self.assertTrue((current_dir / "cv_alternate.html").exists())
+            self.assertEqual((current_dir / "index.html").read_bytes(), b"previous-public-bundle")
 
 
 if __name__ == "__main__":
