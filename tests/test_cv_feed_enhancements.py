@@ -36,7 +36,8 @@ class FeedEnhancementTests(unittest.TestCase):
             self.assertIn("post.dataset.searchText", html)
             self.assertIn("aria-pressed", html)
             self.assertIn('button[data-review="SEND"].selected', html)
-            self.assertIn("localStorage", html)
+            self.assertIn('button[data-review="REVISE"].selected', html)
+            self.assertIn('button[data-review="REJECT"].selected', html)
             self.assertNotIn("secret@example.com", html)
 
     def test_enhancement_is_idempotent(self) -> None:
