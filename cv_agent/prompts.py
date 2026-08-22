@@ -8,6 +8,7 @@ Return a strategy only. Do not write the CV.
 Hard rules:
 - Treat the supplied vacancy record as the target, not as evidence about the candidate.
 - Use only supplied eligible professional evidence chunks.
+- canonical_backbone_chunk_ids identify governed structural facts that must remain available: professional tenure basis, employer/role chronology and formal education. Do not omit them merely because they are not keyword matches for the vacancy.
 - Preserve skill proficiency exactly. Never upgrade familiarity -> working/core or working -> core.
 - Never invent years, technologies, people management, team size, ownership, metrics, dates, employers or credentials.
 - An unsupported vacancy requirement remains a coverage gap; do not manufacture a claim to cover it.
@@ -29,7 +30,9 @@ Hard rules:
 - Every summary statement and every experience/project bullet must include one or more evidence_refs.
 - evidence_refs must be chunk IDs from the supplied evidence set only.
 - Do not invent or infer unsupported facts.
+- canonical_backbone_chunk_ids are mandatory structural evidence: use them to preserve the candidate's documented employer chronology, exact supported employment periods, defensible role progression, formal degree institutions/periods and governed professional-tenure basis. Never write 'dates unavailable', 'institution unavailable' or an unknown role title when the supplied canonical backbone contains that fact.
 - Preserve dates, organizations, titles and ownership qualifiers from evidence.
+- Earlier/internal subroles may be compressed for concision, but compression must not change dates, seniority or imply that a later title applied to the whole employment period.
 - Never turn project/technical leadership into formal people management without direct evidence.
 - Never upgrade skill proficiency.
 - A weak vacancy match may contextualize adjacent experience but must never be written as direct coverage of the requested requirement.
@@ -58,6 +61,7 @@ Evaluate:
 8. conciseness
 
 Hard rules:
+- The supplied canonical backbone is authoritative for chronology, education and governed tenure. If the CV omits a backbone fact that materially weakens credibility, ask the reviser to restore it; do not call the fact unsupported.
 - Do not reward invented coverage of vacancy gaps.
 - Do not ask the reviser to claim unsupported technologies, years, management scope or metrics.
 - A real gap should remain a gap.
@@ -74,6 +78,7 @@ Hard rules:
 - Keep the exact application language.
 - Preserve evidence_refs and update them when a bullet changes.
 - Never invent experience to satisfy a reviewer request.
+- canonical_backbone_chunk_ids are authoritative structural evidence. Restore missing documented dates, employers, role progression and education when the review identifies those omissions.
 - If feedback asks for an unsupported claim, improve framing using supported evidence instead; do not fabricate the missing requirement.
 - Weak/related evidence must not be upgraded into direct coverage of a named technology or responsibility.
 - Preserve metric qualifiers, dates, ownership boundaries and skill proficiency.
@@ -102,5 +107,5 @@ Hard rules:
 
 
 ROOT_AGENT_INSTRUCTION = """
-You are the CV_fit coordinator. Explain the CV_fit workflow and direct users to the deterministic CLI for generating a vacancy-specific CV. Do not invent candidate experience. The production workflow retrieves canonical vacancy and professional evidence, creates an evidence-grounded strategy, drafts the CV in the application language, and sends it through a bounded Senior Headhunter review/revision loop of at most five iterations before factual and language validation.
+You are the CV_fit coordinator. Explain the CV_fit workflow and direct users to the deterministic CLI for generating a vacancy-specific CV. Do not invent candidate experience. The production workflow retrieves canonical vacancy and professional evidence, preserves a mandatory canonical chronology/education backbone, creates an evidence-grounded strategy, drafts the CV in the application language, and sends it through a bounded Senior Headhunter review/revision loop of at most five iterations before factual and language validation.
 """.strip()

@@ -10,23 +10,56 @@ from cv_presentation.branding import DesignTokens, DesignValidation, validate_de
 
 DESIGN_REVIEW_INSTRUCTION = """
 You are a conservative document design reviewer for professional CVs.
-You do NOT invent brand colors, logos, fonts, or corporate identity from memory.
-You receive already-resolved brand tokens plus deterministic contrast checks.
+You do NOT invent brand colors, logos, fonts, corporate identity or template structure from memory.
+You receive already-resolved brand tokens, deterministic contrast checks and a factual template_layout description produced by the renderer.
 
 Review only:
 - legibility and hierarchy on US Letter pages;
 - whether supplied brand colors are safe for headings, accents, sidebars and small text;
 - whether the supplied font stacks are professional and readable;
 - whether the requested density is plausible for a CV;
-- ATS safety and print clarity.
+- ATS safety and print clarity using the supplied template_layout facts.
 
 Hard rules:
 - Never claim unverified tokens are official or institutional.
 - Never output a color that was not supplied in the input.
+- Do not speculate that a single-column template contains a sidebar, columns, charts or icons when template_layout says it does not.
 - If contrast checks fail, require revision and recommend limiting failing colors to non-text accents rather than changing the brand palette.
 - Never alter the Harvard template. For Harvard, return PASS with preserve_template=true and no style changes.
 - Avoid decorative charts, skill bars, photos and dense iconography.
 """.strip()
+
+
+TEMPLATE_LAYOUT_FACTS = {
+    "professional_sidebar_v1": {
+        "reading_order": "two-column visual layout with a sidebar and main content",
+        "single_column": False,
+        "sidebar": True,
+        "charts_or_skill_bars": False,
+        "content_is_selectable_text": True,
+    },
+    "ai_engineer_sidebar_v1": {
+        "reading_order": "two-column visual layout with a sidebar and main content",
+        "single_column": False,
+        "sidebar": True,
+        "charts_or_skill_bars": False,
+        "content_is_selectable_text": True,
+    },
+    "executive_letter_v1": {
+        "reading_order": "single-column top-to-bottom document flow",
+        "single_column": True,
+        "sidebar": False,
+        "charts_or_skill_bars": False,
+        "content_is_selectable_text": True,
+    },
+    "ats_classic_v1": {
+        "reading_order": "single-column top-to-bottom document flow",
+        "single_column": True,
+        "sidebar": False,
+        "charts_or_skill_bars": False,
+        "content_is_selectable_text": True,
+    },
+}
 
 
 class DesignReview(BaseModel):
@@ -71,6 +104,13 @@ async def review_design(
         instruction=DESIGN_REVIEW_INSTRUCTION,
         payload={
             "template_id": template_id,
+            "template_layout": TEMPLATE_LAYOUT_FACTS.get(template_id, {
+                "reading_order": "renderer policy not described",
+                "single_column": None,
+                "sidebar": None,
+                "charts_or_skill_bars": False,
+                "content_is_selectable_text": True,
+            }),
             "target_pages": target_pages,
             "brand_tokens": tokens.model_dump(),
             "deterministic_contrast": validation.model_dump(),

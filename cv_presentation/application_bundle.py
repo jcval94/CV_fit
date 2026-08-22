@@ -20,6 +20,10 @@ from cv_presentation.schemas import PresentationConfig
 from cv_presentation.templates import get_template_policy
 
 
+class PresentationGateBlocked(ValueError):
+    """Expected product gate rejection, distinct from an internal execution error."""
+
+
 class FitAttempt(BaseModel):
     attempt: int
     chars_per_line: int
@@ -80,14 +84,16 @@ def _design_for_template(
     tokens = tokens_from_brand(profile)
     deterministic = validate_design_tokens(tokens)
     if not policy.locked_visual_system and not tokens.brand_verified:
-        raise ValueError(f"adaptive primary template requires a verified brand profile for {company!r}")
+        raise PresentationGateBlocked(f"adaptive primary template requires a verified brand profile for {company!r}")
     if not policy.locked_visual_system and not deterministic.passed:
-        raise ValueError(f"brand profile for {company!r} fails deterministic contrast checks: {deterministic.reasons}")
+        raise PresentationGateBlocked(
+            f"brand profile for {company!r} fails deterministic contrast checks: {deterministic.reasons}"
+        )
     review, deterministic = asyncio.run(
         review_design(client=client, template_id=template_id, tokens=tokens, target_pages=2)
     )
     if review.decision != "PASS" or not review.ats_safe or not review.print_safe:
-        raise ValueError(f"design review did not pass for {template_id}: {review.model_dump()}")
+        raise PresentationGateBlocked(f"design review did not pass for {template_id}: {review.model_dump()}")
     return tokens, review, deterministic
 
 
@@ -194,7 +200,7 @@ def build_application_bundle(
     identity_public_path: Path,
     brand_profiles_dir: Path,
     design_client: AdkStructuredClient,
-    primary_template: str = "professional_sidebar_v1",
+    primary_template: str = "executive_letter_v1",
     alternate_template: str = "harvard_v1",
 ) -> ApplicationBundleReport:
     cv_path = run_dir / "cv_final.json"

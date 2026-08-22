@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from cv_agent.adk_runtime import AdkStructuredClient
-from cv_presentation.application_bundle import build_application_bundle
+from cv_presentation.application_bundle import PresentationGateBlocked, build_application_bundle
 
 
 def _read_json(path: Path, default: Any | None = None) -> Any:
@@ -52,6 +52,7 @@ def finalize_batch(
             continue
 
         vacancy = _read_json(vacancy_path)
+        entry = entries.setdefault(vacancy_id, {})
         try:
             report = build_application_bundle(
                 vacancy=vacancy,
@@ -68,9 +69,9 @@ def finalize_batch(
                 "ready_to_send": report.ready_to_send,
                 "application_bundle_file": str(run_dir / "application_bundle_report.json"),
             })
-            entry = entries.setdefault(vacancy_id, {})
             entry["content_quality_target_reached"] = report.content_quality_target_reached
             entry["presentation_gate"] = {
+                "status": "PASS" if report.ready_to_send else "REVIEW_REQUIRED",
                 "primary_template": report.primary_template,
                 "primary_physical_status": next(x.physical_status for x in report.templates if x.role == "primary"),
                 "alternate_template": report.alternate_template,
@@ -81,7 +82,23 @@ def finalize_batch(
             entry["ready_to_send"] = report.ready_to_send
             entry["review_required"] = not report.ready_to_send
             entry["application_bundle_file"] = "application_bundle_report.json"
+        except PresentationGateBlocked as exc:
+            # A conservative design/branding gate saying "do not submit" is an
+            # expected review outcome, not an infrastructure crash.
+            reason = str(exc)[:2000]
+            results.append({
+                "vacancy_id": vacancy_id,
+                "run_id": run_id,
+                "status": "REVIEW_REQUIRED",
+                "ready_to_send": False,
+                "presentation_blocked": True,
+                "reason": reason,
+            })
+            entry["ready_to_send"] = False
+            entry["review_required"] = True
+            entry["presentation_gate"] = {"status": "BLOCKED", "reason": reason}
         except Exception as exc:
+            # Unexpected execution errors remain distinct and make the CLI fail.
             error = f"{type(exc).__name__}: {exc}"[:2000]
             results.append({
                 "vacancy_id": vacancy_id,
@@ -90,10 +107,9 @@ def finalize_batch(
                 "ready_to_send": False,
                 "error": error,
             })
-            entry = entries.setdefault(vacancy_id, {})
             entry["ready_to_send"] = False
             entry["review_required"] = True
-            entry["presentation_gate"] = {"status": "FAIL", "error": error}
+            entry["presentation_gate"] = {"status": "ERROR", "error": error}
 
     _write_json(manifest_path, manifest)
     summary = {

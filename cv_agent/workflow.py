@@ -48,13 +48,34 @@ def _ordered_evidence_ids(match_plan: dict[str, Any]) -> list[str]:
     return ordered
 
 
-def _budget_evidence(chunks: list[dict[str, Any]], match_plan: dict[str, Any]) -> list[dict[str, Any]]:
+def _budget_evidence(
+    chunks: list[dict[str, Any]],
+    match_plan: dict[str, Any],
+    canonical_backbone_ids: list[str],
+) -> list[dict[str, Any]]:
     by_id = {chunk["chunk_id"]: chunk for chunk in chunks}
-    ordered_ids = _ordered_evidence_ids(match_plan)
-    existing = set(ordered_ids)
-    ordered_ids.extend(chunk_id for chunk_id in sorted(by_id) if chunk_id not in existing)
+    ordered_ids: list[str] = []
+    seen: set[str] = set()
+
+    # Structural facts are budgeted first. Vacancy-specific retrieval can decide
+    # relevance, but it must never crowd employment dates/education out of the
+    # model context.
+    for chunk_id in canonical_backbone_ids:
+        if chunk_id in by_id and chunk_id not in seen:
+            seen.add(chunk_id)
+            ordered_ids.append(chunk_id)
+    for chunk_id in _ordered_evidence_ids(match_plan):
+        if chunk_id in by_id and chunk_id not in seen:
+            seen.add(chunk_id)
+            ordered_ids.append(chunk_id)
+    for chunk_id in sorted(by_id):
+        if chunk_id not in seen:
+            seen.add(chunk_id)
+            ordered_ids.append(chunk_id)
+
     result: list[dict[str, Any]] = []
     used_chars = 0
+    backbone_set = set(canonical_backbone_ids)
     for chunk_id in ordered_ids:
         chunk = by_id.get(chunk_id)
         if not chunk or not chunk.get("cv_eligible"):
@@ -72,10 +93,20 @@ def _budget_evidence(chunks: list[dict[str, Any]], match_plan: dict[str, Any]) -
             "attributes": chunk.get("attributes", {}),
         }
         size = len(json.dumps(compact, ensure_ascii=False))
-        if result and (len(result) >= MAX_MODEL_EVIDENCE_CHUNKS or used_chars + size > MAX_MODEL_EVIDENCE_CHARS):
+        limit_hit = len(result) >= MAX_MODEL_EVIDENCE_CHUNKS or used_chars + size > MAX_MODEL_EVIDENCE_CHARS
+        if limit_hit:
+            if chunk_id in backbone_set:
+                raise ValueError(
+                    "canonical CV backbone exceeds the model evidence budget; "
+                    "increase the explicit budget rather than silently dropping chronology/education"
+                )
             break
         result.append(compact)
         used_chars += size
+
+    missing_backbone = sorted(backbone_set - {item["chunk_id"] for item in result})
+    if missing_backbone:
+        raise ValueError(f"canonical CV backbone was not fully budgeted: {missing_backbone}")
     return result
 
 
@@ -87,6 +118,16 @@ def _validate_strategy(strategy: StrategyOutput, available_ids: set[str], expect
         raise ValueError(f"strategy selected unknown/ineligible evidence chunks: {unknown}")
     if not strategy.selected_evidence_chunk_ids:
         raise ValueError("strategy selected no evidence chunks")
+
+
+def _attach_canonical_backbone(strategy: StrategyOutput, backbone_ids: list[str]) -> None:
+    ordered: list[str] = []
+    seen: set[str] = set()
+    for chunk_id in backbone_ids + list(strategy.selected_evidence_chunk_ids):
+        if chunk_id not in seen:
+            seen.add(chunk_id)
+            ordered.append(chunk_id)
+    strategy.selected_evidence_chunk_ids = ordered
 
 
 def _candidate_rank(review: HeadhunterReview, validators_pass: bool) -> tuple[int, int, int]:
@@ -111,13 +152,27 @@ async def run_agentic_cv(
     )
     vacancy = context["vacancy"]
     expected_language = vacancy["application_language"]
-    model_evidence = _budget_evidence(context["evidence_chunks"], context["match_plan"])
+    canonical_backbone_ids = list(context.get("canonical_backbone_chunk_ids", []))
+    model_evidence = _budget_evidence(
+        context["evidence_chunks"],
+        context["match_plan"],
+        canonical_backbone_ids,
+    )
     available_ids = {chunk["chunk_id"] for chunk in model_evidence}
     if not model_evidence:
         raise ValueError(f"no eligible evidence available for vacancy {vacancy_id}")
+    if canonical_backbone_ids and not set(canonical_backbone_ids).issubset(available_ids):
+        raise ValueError("canonical backbone is incomplete after evidence budgeting")
 
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_json(output_dir / "match_plan.json", context["match_plan"])
+    _write_json(output_dir / "canonical_backbone.json", {
+        "chunk_ids": canonical_backbone_ids,
+        "source_paths": sorted({
+            chunk["source_path"] for chunk in model_evidence
+            if chunk["chunk_id"] in set(canonical_backbone_ids)
+        }),
+    })
 
     models = model_ids()
     strategist_model = os.getenv("CV_FIT_MODEL_STRATEGIST", models["balanced"])
@@ -131,6 +186,7 @@ async def run_agentic_cv(
             "vacancy": vacancy,
             "application_language": expected_language,
             "match_plan": context["match_plan"],
+            "canonical_backbone_chunk_ids": canonical_backbone_ids,
             "eligible_evidence": model_evidence,
         },
         output_schema=StrategyOutput,
@@ -138,6 +194,7 @@ async def run_agentic_cv(
     )
     assert isinstance(strategy, StrategyOutput)
     _validate_strategy(strategy, available_ids, expected_language)
+    _attach_canonical_backbone(strategy, canonical_backbone_ids)
     _write_json(output_dir / "strategy.json", strategy.model_dump())
 
     strategy_ids = set(strategy.selected_evidence_chunk_ids)
@@ -152,6 +209,7 @@ async def run_agentic_cv(
             "vacancy": vacancy,
             "application_language": expected_language,
             "strategy": strategy.model_dump(),
+            "canonical_backbone_chunk_ids": canonical_backbone_ids,
             "approved_evidence": selected_evidence,
         },
         output_schema=CVDocument,
@@ -176,6 +234,7 @@ async def run_agentic_cv(
                 "vacancy": vacancy,
                 "application_language": expected_language,
                 "match_plan": context["match_plan"],
+                "canonical_backbone_chunk_ids": canonical_backbone_ids,
                 "approved_evidence": selected_evidence,
                 "cv": cv.model_dump(),
             },
@@ -226,6 +285,7 @@ async def run_agentic_cv(
                 "vacancy": vacancy,
                 "application_language": expected_language,
                 "strategy": strategy.model_dump(),
+                "canonical_backbone_chunk_ids": canonical_backbone_ids,
                 "approved_evidence": selected_evidence,
                 "current_cv": cv.model_dump(),
                 "headhunter_review": review.model_dump(),
@@ -280,6 +340,7 @@ async def run_agentic_cv(
         "vacancy_id": vacancy_id,
         "vacancy_source_paths": sorted({ref["source_path"] for ref in vacancy.get("provenance", [])}),
         "vacancy_content_hash": vacancy.get("content_hash"),
+        "canonical_backbone_chunk_ids": canonical_backbone_ids,
         "evidence_chunk_ids": sorted(final_refs),
         "evidence_record_ids": sorted({evidence_catalog[ref]["record_id"] for ref in final_refs if ref in evidence_catalog}),
         "evidence_source_paths": sorted({evidence_catalog[ref]["source_path"] for ref in final_refs if ref in evidence_catalog}),
@@ -301,6 +362,7 @@ async def run_agentic_cv(
         "best_review_iteration": best_iteration,
         "model_escalation": [item["model_policy"] for item in iteration_records],
         "premium_model_used": any(item["model_policy"]["premium"] for item in iteration_records),
+        "canonical_backbone_chunk_ids": canonical_backbone_ids,
         "final_review": final_review.model_dump(),
         "final_validation": final_validation,
         "final_gate_reasons": final_gate_reasons,

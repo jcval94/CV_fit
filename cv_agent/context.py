@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from cv_agent.backbone import select_canonical_backbone
 from cv_agent.preflight import assert_vacancy_generation_ready
 from cv_matching.match import build_match
 
@@ -51,13 +52,27 @@ def assemble_application_context(
         retrieval_mode=retrieval_mode,
     )
     catalog = load_evidence_catalog(evidence_state)
-    selected_ids = match_plan.get("selected_evidence_chunk_ids", [])
-    selected = [catalog[chunk_id] for chunk_id in selected_ids if chunk_id in catalog and catalog[chunk_id].get("cv_eligible")]
-    selected.sort(key=lambda item: item["chunk_id"])
+
+    # Vacancy-specific retrieval decides which projects/skills/metrics are useful,
+    # but stable chronology and education must never compete for semantic top-k.
+    # Those facts form a separate canonical backbone and are always available to
+    # the strategist/writer/reviewer.
+    backbone = select_canonical_backbone(catalog)
+    backbone_ids = [item["chunk_id"] for item in backbone]
+    seen = set(backbone_ids)
+
+    selected: list[dict[str, Any]] = list(backbone)
+    for chunk_id in match_plan.get("selected_evidence_chunk_ids", []):
+        chunk = catalog.get(chunk_id)
+        if not chunk or not chunk.get("cv_eligible") or chunk_id in seen:
+            continue
+        selected.append(chunk)
+        seen.add(chunk_id)
 
     return {
         "vacancy": vacancy,
         "match_plan": match_plan,
+        "canonical_backbone_chunk_ids": backbone_ids,
         "evidence_chunks": selected,
         "evidence_chunk_ids": [item["chunk_id"] for item in selected],
         "evidence_source_paths": sorted({item["source_path"] for item in selected}),
