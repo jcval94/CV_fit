@@ -5,8 +5,22 @@ import math
 from cv_presentation.schemas import CVPresentationModel, FitReport, FittingOmission
 
 
+STICKY_CERT_MARKERS = ("bourbaki", "professional scrum master", "cs50")
+STICKY_GENAI_MARKERS = ("genai", "generative ai", "ia generativa")
+
+
 def _text_lines(text: str, chars_per_line: int) -> int:
     return max(1, math.ceil(max(len(text.strip()), 1) / chars_per_line))
+
+
+def _is_sticky_cert(text: str) -> bool:
+    lowered = text.casefold()
+    return any(marker in lowered for marker in STICKY_CERT_MARKERS)
+
+
+def _is_genai_skill(text: str) -> bool:
+    lowered = text.casefold()
+    return any(marker in lowered for marker in STICKY_GENAI_MARKERS)
 
 
 def estimate_line_units(model: CVPresentationModel) -> int:
@@ -34,6 +48,8 @@ def estimate_line_units(model: CVPresentationModel) -> int:
         for item in model.experience:
             lines += 2
             lines += sum(1 + _text_lines(bullet.text, chars) for bullet in item.bullets)
+    if section_modes["education"] != "never" and model.education:
+        lines += 1 + sum(_text_lines(item.text, chars) for item in model.education)
     if section_modes["projects"] != "never" and model.projects:
         lines += 1
         for item in model.projects:
@@ -41,8 +57,6 @@ def estimate_line_units(model: CVPresentationModel) -> int:
             lines += sum(1 + _text_lines(bullet.text, chars) for bullet in item.bullets)
     if section_modes["skills"] != "never" and model.skills:
         lines += 1 + sum(_text_lines(item.text, chars) for item in model.skills)
-    if section_modes["education"] != "never" and model.education:
-        lines += 1 + sum(_text_lines(item.text, chars) for item in model.education)
     if section_modes["certifications"] != "never" and model.certifications:
         lines += 1 + sum(_text_lines(item.text, chars) for item in model.certifications)
     return lines
@@ -53,15 +67,79 @@ def _drop_tail(items: list, keep: int, *, section: str, reason: str, omissions: 
         return items
     kept = list(items[:keep])
     for index, item in enumerate(items[keep:], start=keep):
-        omissions.append(
-            FittingOmission(
-                section=section,
-                item_index=index,
-                reason=reason,
-                evidence_refs=list(getattr(item, "evidence_refs", [])),
-            )
-        )
+        omissions.append(FittingOmission(
+            section=section,
+            item_index=index,
+            reason=reason,
+            evidence_refs=list(getattr(item, "evidence_refs", [])),
+        ))
     return kept
+
+
+def _limit_skills(items: list, keep: int, omissions: list[FittingOmission]) -> list:
+    if len(items) <= keep:
+        return items
+    sticky = [item for item in items if _is_genai_skill(item.text)]
+    remaining = [item for item in items if not _is_genai_skill(item.text)]
+    selected = (sticky[:1] + remaining)[:keep]
+    selected_ids = {id(item) for item in selected}
+    for index, item in enumerate(items):
+        if id(item) not in selected_ids:
+            omissions.append(FittingOmission(
+                section="skills",
+                item_index=index,
+                reason="exceeds max_skills; lower-priority non-GenAI skill omitted",
+                evidence_refs=list(item.evidence_refs),
+            ))
+    return selected
+
+
+def _limit_certifications(items: list, keep: int, omissions: list[FittingOmission]) -> list:
+    sticky = [item for item in items if _is_sticky_cert(item.text)]
+    optional = [item for item in items if not _is_sticky_cert(item.text)]
+    selected = sticky + optional[: max(0, keep - len(sticky))]
+    selected_ids = {id(item) for item in selected}
+    for index, item in enumerate(items):
+        if id(item) not in selected_ids:
+            omissions.append(FittingOmission(
+                section="certifications",
+                item_index=index,
+                reason="exceeds certification budget; optional tail credential omitted",
+                evidence_refs=list(item.evidence_refs),
+            ))
+    return selected
+
+
+def _remove_last_nonsticky_skill(model: CVPresentationModel, omissions: list[FittingOmission]) -> bool:
+    for index in range(len(model.skills) - 1, -1, -1):
+        item = model.skills[index]
+        if _is_genai_skill(item.text):
+            continue
+        removed = model.skills.pop(index)
+        omissions.append(FittingOmission(
+            section="skills",
+            item_index=index,
+            reason="lower-priority skill removed before projects/experience to satisfy page budget",
+            evidence_refs=list(removed.evidence_refs),
+        ))
+        return True
+    return False
+
+
+def _remove_last_optional_cert(model: CVPresentationModel, omissions: list[FittingOmission]) -> bool:
+    for index in range(len(model.certifications) - 1, -1, -1):
+        item = model.certifications[index]
+        if _is_sticky_cert(item.text):
+            continue
+        removed = model.certifications.pop(index)
+        omissions.append(FittingOmission(
+            section="certifications",
+            item_index=index,
+            reason="optional certification removed first to satisfy page budget",
+            evidence_refs=list(removed.evidence_refs),
+        ))
+        return True
+    return False
 
 
 def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationModel, FitReport]:
@@ -69,8 +147,9 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
     omissions: list[FittingOmission] = []
     reasons: list[str] = []
     notes = [
-        "Estimated line units are a pre-render heuristic; the future HTML/PDF layout validator remains authoritative for physical page count.",
+        "Estimated line units are a pre-render heuristic; Chromium physical-layout validation remains authoritative for final page count.",
         "The fitter never rewrites or truncates claim text; it only selects already-approved ordered content.",
+        "Editorial pruning order is certifications -> non-GenAI skills -> projects -> lower-priority experience bullets; education and mandatory career continuity are preserved.",
     ]
     before = estimate_line_units(fitted)
     density = fitted.density
@@ -121,13 +200,7 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
                 project.bullets = project.bullets[:density.max_project_bullets]
 
     if modes["skills"] != "never":
-        fitted.skills = _drop_tail(
-            fitted.skills,
-            density.max_skills,
-            section="skills",
-            reason="exceeds max_skills; tail skills are lower presentation priority",
-            omissions=omissions,
-        )
+        fitted.skills = _limit_skills(fitted.skills, density.max_skills, omissions)
     if modes["education"] != "never":
         fitted.education = _drop_tail(
             fitted.education,
@@ -137,28 +210,20 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
             omissions=omissions,
         )
     if modes["certifications"] != "never":
-        fitted.certifications = _drop_tail(
-            fitted.certifications,
-            density.max_certifications,
-            section="certifications",
-            reason="exceeds max_certifications; tail certifications are lower presentation priority",
-            omissions=omissions,
-        )
+        fitted.certifications = _limit_certifications(fitted.certifications, density.max_certifications, omissions)
 
     budget = fitted.document.target_pages * density.estimated_lines_per_page
 
     def over_budget() -> bool:
         return estimate_line_units(fitted) > budget
 
-    while over_budget() and modes["certifications"] == "auto" and fitted.certifications:
-        index = len(fitted.certifications) - 1
-        item = fitted.certifications.pop()
-        omissions.append(FittingOmission(
-            section="certifications",
-            item_index=index,
-            reason="removed to satisfy estimated page budget",
-            evidence_refs=list(item.evidence_refs),
-        ))
+    # Respect the user's hierarchy: Experience > Education > Projects > Skills > Certifications.
+    while over_budget() and _remove_last_optional_cert(fitted, omissions):
+        pass
+
+    while over_budget() and len(fitted.skills) > density.min_skills:
+        if not _remove_last_nonsticky_skill(fitted, omissions):
+            break
 
     if modes["projects"] == "auto":
         changed = True
@@ -173,14 +238,12 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
                         section="projects",
                         item_index=project_index,
                         bullet_index=bullet_index,
-                        reason="removed to satisfy estimated page budget",
+                        reason="lower-priority project bullet removed after optional skills/certifications to satisfy page budget",
                         evidence_refs=list(bullet.evidence_refs),
                     ))
                     changed = True
                     if not over_budget():
                         break
-            if not changed:
-                break
         while over_budget() and fitted.projects:
             index = len(fitted.projects) - 1
             project = fitted.projects.pop()
@@ -190,16 +253,6 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
                 reason="optional project removed to satisfy estimated page budget",
                 evidence_refs=list(project.evidence_refs),
             ))
-
-    while over_budget() and modes["skills"] == "auto" and len(fitted.skills) > density.min_skills:
-        index = len(fitted.skills) - 1
-        item = fitted.skills.pop()
-        omissions.append(FittingOmission(
-            section="skills",
-            item_index=index,
-            reason="removed to satisfy estimated page budget",
-            evidence_refs=list(item.evidence_refs),
-        ))
 
     changed = True
     while over_budget() and changed:
@@ -213,7 +266,7 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
                     section="experience",
                     item_index=role_index,
                     bullet_index=bullet_index,
-                    reason="lower-priority experience bullet removed to satisfy estimated page budget",
+                    reason="lowest-priority experience bullet removed only after lower editorial-priority sections",
                     evidence_refs=list(bullet.evidence_refs),
                 ))
                 changed = True
@@ -228,6 +281,11 @@ def fit_presentation_model(model: CVPresentationModel) -> tuple[CVPresentationMo
         )
     if after > budget:
         reasons.append(f"estimated_line_budget_exceeded:{after}>{budget}")
+    if not any(_is_genai_skill(item.text) for item in fitted.skills):
+        reasons.append("mandatory_genai_skill_missing_after_fit")
+    for marker in STICKY_CERT_MARKERS:
+        if not any(marker in item.text.casefold() for item in fitted.certifications):
+            reasons.append(f"mandatory_certification_missing_after_fit:{marker}")
 
     report = FitReport(
         status="FIT" if not reasons else "NEEDS_REVISION",
