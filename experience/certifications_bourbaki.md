@@ -9,7 +9,7 @@ visibility: public
 public_safe: true
 usage_policy: "This verified credential is a sticky CV certification: include it in every generated CV without changing its title, issuer, year or credential ID."
 source_refs:
-  - SRC-USER-CONFIRMED-2026-04-23
+  - SRC-USER-CONFIRMED-2026-08-20
 ---
 
 # GenAI Aplicado: ChatGPT & Gemini
