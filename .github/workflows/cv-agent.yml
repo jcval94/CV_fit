@@ -61,7 +61,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check -e .
       - name: Install Chromium for physical layout validation
         run: python -m playwright install --with-deps chromium
-      - name: Run deterministic agent, matching, presentation, layout and cover-letter tests
+      - name: Run deterministic agent, editorial, presentation, visual and cover-letter tests
         run: >-
           python -m unittest
           tests.test_cv_matching
@@ -69,8 +69,13 @@ jobs:
           tests.test_cv_agent_workflow
           tests.test_cv_telemetry
           tests.test_cv_presentation
+          tests.test_cv_editorial_policy
+          tests.test_cv_editorial_fit
           tests.test_cv_templates
+          tests.test_cv_template_gates
           tests.test_cv_physical_layout
+          tests.test_cv_visual_evals
+          tests.test_cv_showcase
           tests.test_cover_letter
           tests.test_openai_provider
           tests.test_vacancy_fidelity
@@ -185,7 +190,7 @@ jobs:
           --evidence-state /tmp/rag_state
           --outputs outputs
           --run-id "${{ github.run_id }}"
-      - name: Build branded and Harvard HTML/PDF variants and physical layout gate
+      - name: Build Technical Modern + Harvard bundle and run presentation gates
         run: >-
           python -m cv_presentation.bundle_cli
           --vacancy-id "${{ inputs.vacancy_id }}"
