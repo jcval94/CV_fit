@@ -33,6 +33,8 @@ def context_fixture() -> dict:
             "requirements": [{"requirement": "Python", "coverage": "strong", "evidence_chunk_ids": [EVIDENCE_ID]}],
             "selected_evidence_chunk_ids": [EVIDENCE_ID],
         },
+        "canonical_backbone_chunk_ids": [],
+        "editorial_anchor_chunk_ids": [],
         "evidence_chunks": [chunk],
     }
 
@@ -44,20 +46,34 @@ def catalog_fixture() -> dict:
 
 def cv_fixture() -> CVDocument:
     ref = [EVIDENCE_ID]
+    line = lambda text: CVEvidenceLine(text=text, evidence_refs=ref)
     return CVDocument(
         language="en",
         target_role="Senior Data Scientist",
-        headline=CVEvidenceLine(text="Senior Data Scientist | Python & Machine Learning", evidence_refs=ref),
-        summary=CVEvidenceLine(text="Data scientist building analytical solutions for business decisions.", evidence_refs=ref),
-        experience=[CVExperienceItem(
-            organization="Example", title="Data Scientist", period="2024-present", evidence_refs=ref,
-            bullets=[
-                CVEvidenceLine(text="Built Python analytical workflows for business decisions.", evidence_refs=ref),
-                CVEvidenceLine(text="Developed maintainable machine-learning pipelines.", evidence_refs=ref),
-                CVEvidenceLine(text="Partnered with stakeholders on analytical delivery.", evidence_refs=ref),
-            ],
-        )],
-        skills=[CVEvidenceLine(text="Python — core", evidence_refs=ref)],
+        headline=line("Senior Data Scientist | Applied AI & Machine Learning"),
+        summary=line("Senior data scientist building evidence-grounded analytical solutions for business decisions."),
+        experience=[
+            CVExperienceItem(
+                organization="BBVA México", title="Senior Data Scientist", period="Current", evidence_refs=ref,
+                bullets=[line("Built Python analytical workflows for business decisions."), line("Led evidence-grounded analytical delivery." )],
+            ),
+            CVExperienceItem(
+                organization="BBVA México", title="Data Scientist — Associate", period="Previous stage", evidence_refs=ref,
+                bullets=[line("Developed maintainable machine-learning pipelines.")],
+            ),
+            CVExperienceItem(
+                organization="Management Solutions", title="Senior Data Scientist", period="Earlier role", evidence_refs=ref,
+                bullets=[line("Partnered with stakeholders on analytical delivery.")],
+            ),
+        ],
+        projects=[],
+        skills=[line("Python — core"), line("GenAI / Generative AI — core")],
+        education=[line("Master's Degree in Data Science")],
+        certifications=[
+            line("GenAI Aplicado: ChatGPT & Gemini — Colegio de Matemáticas Bourbaki"),
+            line("Professional Scrum Master I — Scrum.org"),
+            line("CS50's Introduction to Computer Science — HarvardX"),
+        ],
     )
 
 
@@ -88,8 +104,8 @@ class FakeClient:
         name = kwargs["name"]
         if name == "cv_strategist":
             return StrategyOutput(
-                target_role="Senior Data Scientist", language="en", positioning="Evidence-grounded data scientist",
-                selected_evidence_chunk_ids=[EVIDENCE_ID], selected_skills=["Python"],
+                target_role="Senior Data Scientist", language="en", positioning="Evidence-grounded senior data scientist",
+                selected_evidence_chunk_ids=[EVIDENCE_ID], selected_skills=["Python", "GenAI"],
             )
         if name == "cv_writer" or name.startswith("cv_reviser_"):
             return self.cv
@@ -115,11 +131,9 @@ class WorkflowTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(report["iterations_executed"], 1)
             self.assertEqual(report["best_review_iteration"], 1)
             self.assertFalse(report["premium_model_used"])
+            self.assertEqual(report["final_validation"]["editorial"]["status"], "PASS")
 
     async def test_fifth_failure_returns_best_cv_with_explicit_note(self) -> None:
-        # Review quality peaks at iteration 2, then degrades. The workflow must
-        # still perform all five bounded reviews but return the best evaluated
-        # candidate rather than blindly returning the fifth one.
         client = FakeClient([make_review(70), make_review(91), make_review(86), make_review(89), make_review(88)])
         with tempfile.TemporaryDirectory() as temp, patch("cv_agent.workflow.assemble_application_context", return_value=context_fixture()), patch("cv_agent.workflow.load_evidence_catalog", return_value=catalog_fixture()):
             output = Path(temp)

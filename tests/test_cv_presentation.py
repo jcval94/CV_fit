@@ -90,7 +90,7 @@ class PresentationTests(unittest.TestCase):
             [bullet.text for bullet in model.experience[0].bullets[:4]],
         )
         self.assertEqual([project.name for project in fitted.projects], ["Project 0", "Project 1"])
-        self.assertEqual(len(fitted.certifications), 4)
+        self.assertEqual(len(fitted.certifications), 5)
         self.assertGreater(len(report.omissions), 0)
 
     def test_budget_prunes_optional_content_before_core_experience(self):
