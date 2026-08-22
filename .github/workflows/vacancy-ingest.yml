@@ -8,12 +8,11 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
-      - "cv_agent/cover_letter.py"
-      - "cv_agent/cover_letter_batch.py"
+      - "cv_agent/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
-      - "tests/test_cv_auto.py"
-      - "tests/test_cv_showcase.py"
+      - "tests/test_cv_*.py"
+      - "tests/test_cover_letter.py"
       - "pyproject.toml"
       - ".github/workflows/vacancy-ingest.yml"
   push:
@@ -24,12 +23,11 @@ on:
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
-      - "cv_agent/cover_letter.py"
-      - "cv_agent/cover_letter_batch.py"
+      - "cv_agent/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
-      - "tests/test_cv_auto.py"
-      - "tests/test_cv_showcase.py"
+      - "tests/test_cv_*.py"
+      - "tests/test_cover_letter.py"
       - "pyproject.toml"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
@@ -171,7 +169,7 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         run: python -m playwright install --with-deps chromium
 
-      - name: Generate CV artifacts for all changed eligible vacancies
+      - name: Generate CV artifacts for all changed or stale-logic eligible vacancies
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         run: >-
           python -m cv_auto
@@ -198,7 +196,6 @@ jobs:
 
       - name: Build branded and Harvard HTML/PDF bundles with presentation gate
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
-        continue-on-error: true
         run: >-
           python -m cv_presentation.batch_bundle
           --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
@@ -208,6 +205,29 @@ jobs:
           --identity-public cv_presentation/identity.public.yaml
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 3.0
+
+      - name: Summarize application quality and presentation gates
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          path = Path('outputs/auto/_batch') / f"auto-{os.environ['PROCESSED_SHA']}" / 'application_bundle_batch_report.json'
+          if not path.exists():
+              print('No application bundle report was produced.')
+              raise SystemExit(0)
+          report = json.loads(path.read_text(encoding='utf-8'))
+          counts = report.get('result_counts', {})
+          lines = ['## CV application gate summary', '', f"Result counts: `{json.dumps(counts, sort_keys=True)}`", '', '| Vacancy | Status | Detail |', '|---|---|---|']
+          for item in report.get('results', []):
+              detail = item.get('error') or item.get('reason') or ('ready_to_send=' + str(item.get('ready_to_send')))
+              detail = str(detail).replace('|', '\\|').replace('\n', ' ')[:500]
+              lines.append(f"| {item.get('vacancy_id','')} | {item.get('status','')} | {detail} |")
+          summary_path = Path(os.environ['GITHUB_STEP_SUMMARY'])
+          summary_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print('\n'.join(lines))
+          PY
 
       - name: Resolve daily showcase date
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
