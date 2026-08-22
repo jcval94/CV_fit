@@ -24,6 +24,7 @@ class PhysicalLayoutTests(unittest.TestCase):
             *{{box-sizing:border-box}} html,body{{margin:0;padding:0}}
             .page{{width:8.5in;height:11in;page-break-after:always;background:white;padding:.5in;position:relative}}
             .page:last-child{{page-break-after:auto}}
+            [data-section]{{margin-bottom:12px}}
             @page{{size:letter;margin:0}}
             @media print{{body{{margin:0}}}}
             </style></head><body>{body}</body></html>""",
@@ -56,6 +57,31 @@ class PhysicalLayoutTests(unittest.TestCase):
         try:
             self.assertEqual(report.status, "PASS", report.reasons)
             self.assertEqual(report.pdf_pages, 2)
+        finally:
+            tmp.cleanup()
+
+    def test_section_metrics_are_measured_from_rendered_dom(self):
+        body = (
+            '<section class="page" data-page="1">'
+            '<header data-section="header"><h1>Candidate</h1></header>'
+            '<section data-section="experience"><h2>Experience</h2>'
+            '<article data-item="experience"><p>Role one</p><p>Impact detail.</p></article>'
+            '<article data-item="experience"><p>Role two</p><p>Impact detail.</p></article></section>'
+            '<section data-section="education"><h2>Education</h2><div data-item="education">Degree</div></section>'
+            '<section data-section="skills"><h2>Skills</h2><span data-item="skill">Python</span><span data-item="skill">GenAI</span></section>'
+            '<section data-section="certifications"><h2>Certifications</h2>'
+            '<div data-item="certification">A</div><div data-item="certification">B</div><div data-item="certification">C</div></section>'
+            '</section>'
+        )
+        tmp, report, _, _ = self._render(body, expected_pages=1)
+        try:
+            self.assertEqual(report.status, "PASS", report.reasons)
+            self.assertEqual(report.schema_version, 2)
+            self.assertEqual(report.section_item_counts["experience"], 2)
+            self.assertEqual(report.section_item_counts["skills"], 2)
+            self.assertEqual(report.section_item_counts["certifications"], 3)
+            self.assertGreater(report.page_utilization[0], 0)
+            self.assertGreater(report.section_area_ratios["experience"], 0)
         finally:
             tmp.cleanup()
 
