@@ -33,7 +33,7 @@ class FeedEnhancementTests(unittest.TestCase):
             self.assertIn('id="vacancy-search"', html)
             self.assertIn('role="search"', html)
             self.assertIn('aria-live="polite"', html)
-            self.assertIn("data.searchText", html)
+            self.assertIn("post.dataset.searchText", html)
             self.assertIn("aria-pressed", html)
             self.assertIn('button[data-review="SEND"].selected', html)
             self.assertIn("localStorage", html)
