@@ -200,7 +200,7 @@ def build_application_bundle(
     identity_public_path: Path,
     brand_profiles_dir: Path,
     design_client: AdkStructuredClient,
-    primary_template: str = "executive_letter_v1",
+    primary_template: str = "technical_modern_v1",
     alternate_template: str = "harvard_v1",
 ) -> ApplicationBundleReport:
     cv_path = run_dir / "cv_final.json"
