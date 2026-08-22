@@ -15,7 +15,7 @@ You receive already-resolved brand tokens, deterministic contrast checks and a f
 
 Review only:
 - legibility and hierarchy on US Letter pages;
-- whether supplied brand colors are safe for headings, accents, sidebars and small text;
+- whether supplied brand colors are safe for headings, accents and small text;
 - whether the supplied font stacks are professional and readable;
 - whether the requested density is plausible for a CV;
 - ATS safety and print clarity using the supplied template_layout facts.
@@ -27,6 +27,7 @@ Hard rules:
 - If contrast checks fail, require revision and recommend limiting failing colors to non-text accents rather than changing the brand palette.
 - Never alter the Harvard template. For Harvard, return PASS with preserve_template=true and no style changes.
 - Avoid decorative charts, skill bars, photos and dense iconography.
+- Technical Modern is intentionally ATS-first: institutional branding is limited to headings, rules and small accents; do not request large color panels or sidebars.
 """.strip()
 
 
@@ -51,6 +52,14 @@ TEMPLATE_LAYOUT_FACTS = {
         "sidebar": False,
         "charts_or_skill_bars": False,
         "content_is_selectable_text": True,
+    },
+    "technical_modern_v1": {
+        "reading_order": "single-column top-to-bottom ATS-first document flow; skills remain inline in DOM source order",
+        "single_column": True,
+        "sidebar": False,
+        "charts_or_skill_bars": False,
+        "content_is_selectable_text": True,
+        "branding_scope": "thin header rule, section headings and small accents only",
     },
     "ats_classic_v1": {
         "reading_order": "single-column top-to-bottom document flow",
@@ -92,7 +101,7 @@ async def review_design(
                 preserve_template=True,
                 ats_safe=True,
                 print_safe=True,
-                notes=["Harvard visual system is locked; only content may change."],
+                notes=["Harvard visual system is locked; only content flow may change."],
             ),
             validation,
         )

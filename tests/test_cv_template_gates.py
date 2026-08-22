@@ -12,7 +12,7 @@ from tests.test_cv_templates import presentation
 
 class TemplateGateTests(unittest.TestCase):
     def test_adaptive_render_refuses_design_revise(self):
-        model = presentation("executive_letter_v1")
+        model = presentation("technical_modern_v1")
         tokens = tokens_from_brand(fallback_brand("Example Company"))
         review = DesignReview(
             decision="REVISE",
@@ -23,7 +23,7 @@ class TemplateGateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             render_html(model, tokens=tokens, design_review=review)
 
-    def test_harvard_preserves_academic_flow_and_omits_summary_section(self):
+    def test_harvard_preserves_locked_visual_system_but_uses_senior_flow(self):
         model = presentation("harvard_v1")
         tokens = tokens_from_brand(fallback_brand("Example Company"))
         review = DesignReview(
@@ -35,7 +35,7 @@ class TemplateGateTests(unittest.TestCase):
         html = render_html(model, tokens=tokens, design_review=review)
         self.assertNotIn("Professional Summary", html)
         self.assertNotIn(model.summary.text, html)
-        self.assertLess(html.index("Education"), html.index("Experience"))
+        self.assertLess(html.index("Experience"), html.index("Education"))
         self.assertIn('font-family:"Times New Roman"', html)
 
     def test_templates_do_not_silently_hide_page_overflow(self):
@@ -44,6 +44,7 @@ class TemplateGateTests(unittest.TestCase):
             "professional_sidebar_v1",
             "ai_engineer_sidebar_v1",
             "executive_letter_v1",
+            "technical_modern_v1",
             "harvard_v1",
         ):
             text = (template_dir / get_template_policy(template_id).filename).read_text(encoding="utf-8")
