@@ -6,7 +6,7 @@ from pathlib import Path
 from cv_agent.backbone import select_canonical_backbone
 from cv_agent.context import load_evidence_catalog
 from cv_agent.schemas import StrategyOutput
-from cv_agent.workflow import _attach_canonical_backbone, _budget_evidence
+from cv_agent.workflow import _attach_required_evidence, _budget_evidence
 
 
 class CanonicalBackboneTests(unittest.TestCase):
@@ -81,7 +81,7 @@ class CanonicalBackboneTests(unittest.TestCase):
             positioning="test",
             selected_evidence_chunk_ids=[requirement_id],
         )
-        _attach_canonical_backbone(strategy, [backbone_id])
+        _attach_required_evidence(strategy, [backbone_id])
         self.assertEqual(strategy.selected_evidence_chunk_ids, [backbone_id, requirement_id])
 
     def test_default_submission_template_is_single_column_executive_letter(self) -> None:
