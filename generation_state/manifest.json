@@ -3,153 +3,11 @@
     "vac-04e92192e608ea02": {
       "application_bundle_file": "application_bundle_report.json",
       "content_quality_target_reached": false,
-      "coverage_score": 77.7,
-      "estimated_cost_usd": 0.9425165,
+      "coverage_score": 73.5,
+      "estimated_cost_usd": 0.8608005,
       "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "9396a8f5b946ad5d2a3751fefd7e5ec7bf8ce9ca77d0ced7f97b2d0ad5e546e9",
-      "generation_logic_version": 2,
-      "presentation_gate": {
-        "alternate_physical_status": "PASS",
-        "alternate_template": "harvard_v1",
-        "cover_letter_ready": true,
-        "primary_physical_status": "PASS",
-        "primary_template": "executive_letter_v1",
-        "reasons": [
-          "content_quality_target_not_reached"
-        ],
-        "status": "REVIEW_REQUIRED"
-      },
-      "ready_to_send": false,
-      "retrieval_mode": "hybrid-rerank",
-      "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-04e92192e608ea02",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
-      "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [],
-      "vacancy_content_hash": "e64642e11cb19b5f1f1bada95e6934cc98052af76b83410a8f727212564afcea"
-    },
-    "vac-12dc570424d531ae": {
-      "application_bundle_file": "application_bundle_report.json",
-      "content_quality_target_reached": false,
-      "coverage_score": 78.8,
-      "estimated_cost_usd": 0.8675685,
-      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "3de4e75486b0c3ed5e28402740da62868c23adf2d5251eba2dce3f0915bc85b0",
-      "generation_logic_version": 2,
-      "presentation_gate": {
-        "alternate_physical_status": "PASS",
-        "alternate_template": "harvard_v1",
-        "cover_letter_ready": true,
-        "primary_physical_status": "PASS",
-        "primary_template": "executive_letter_v1",
-        "reasons": [
-          "content_quality_target_not_reached"
-        ],
-        "status": "REVIEW_REQUIRED"
-      },
-      "ready_to_send": false,
-      "retrieval_mode": "hybrid-rerank",
-      "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-12dc570424d531ae",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
-      "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [],
-      "vacancy_content_hash": "e2870bbf36408675104d9ef6be4b2ba62c00c013d8e29cec4586b580ed8b485f"
-    },
-    "vac-14b95b3407bcb148": {
-      "application_bundle_file": "application_bundle_report.json",
-      "content_quality_target_reached": false,
-      "coverage_score": 63.9,
-      "estimated_cost_usd": 0.780817,
-      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "f5bbda0b7ac1e8d9dbb76891602cebadf8c27c6390fe3b059baffe2229025f18",
-      "generation_logic_version": 2,
-      "presentation_gate": {
-        "alternate_physical_status": "PASS",
-        "alternate_template": "harvard_v1",
-        "cover_letter_ready": true,
-        "primary_physical_status": "PASS",
-        "primary_template": "executive_letter_v1",
-        "reasons": [
-          "content_quality_target_not_reached"
-        ],
-        "status": "REVIEW_REQUIRED"
-      },
-      "ready_to_send": false,
-      "retrieval_mode": "hybrid-rerank",
-      "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-14b95b3407bcb148",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
-      "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [
-        "Databricks"
-      ],
-      "vacancy_content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06"
-    },
-    "vac-21cefd168f6539b4": {
-      "application_bundle_file": "application_bundle_report.json",
-      "content_quality_target_reached": false,
-      "coverage_score": 74.4,
-      "estimated_cost_usd": 0.821349,
-      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "2d7a9d3e8a9d0a98a0efda052c7207ba24dadc7c48b7cd339dd8f888835eb342",
-      "generation_logic_version": 2,
-      "presentation_gate": {
-        "alternate_physical_status": "PASS",
-        "alternate_template": "harvard_v1",
-        "cover_letter_ready": true,
-        "primary_physical_status": "PASS",
-        "primary_template": "executive_letter_v1",
-        "reasons": [
-          "content_quality_target_not_reached"
-        ],
-        "status": "REVIEW_REQUIRED"
-      },
-      "ready_to_send": false,
-      "retrieval_mode": "hybrid-rerank",
-      "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-21cefd168f6539b4",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
-      "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [],
-      "vacancy_content_hash": "8149d1e08a379b92e8b4d9822929c8be6b5e0898164b278968816075b1aade23"
-    },
-    "vac-2de566514601700a": {
-      "application_bundle_file": "application_bundle_report.json",
-      "content_quality_target_reached": false,
-      "coverage_score": 83.2,
-      "estimated_cost_usd": 0.7868105,
-      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "c5c6717059e9bb09b3b5992dda29bf6810a801b79e8c139514aff4d2ea94cbb3",
-      "generation_logic_version": 2,
-      "presentation_gate": {
-        "alternate_physical_status": "PASS",
-        "alternate_template": "harvard_v1",
-        "cover_letter_ready": true,
-        "primary_physical_status": "PASS",
-        "primary_template": "executive_letter_v1",
-        "reasons": [
-          "content_quality_target_not_reached"
-        ],
-        "status": "REVIEW_REQUIRED"
-      },
-      "ready_to_send": false,
-      "retrieval_mode": "hybrid-rerank",
-      "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-2de566514601700a",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
-      "status": "COMPLETED_BELOW_TARGET",
-      "unsupported_requirements": [],
-      "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
-    },
-    "vac-6d9bdccca1ff49c3": {
-      "application_bundle_file": "application_bundle_report.json",
-      "content_quality_target_reached": false,
-      "coverage_score": 74.3,
-      "estimated_cost_usd": 0.8059805,
-      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
-      "fingerprint": "68132c59bda9f84010824bf5066ad304fcc98e54a1aec987d130bcacddaf0018",
-      "generation_logic_version": 2,
+      "fingerprint": "d44b16644d0bd3a28b2c53689052eb23d99da79198b3d18e3fe91f10aaebee07",
+      "generation_logic_version": 3,
       "presentation_gate": {
         "alternate_physical_status": "PASS",
         "alternate_template": "harvard_v1",
@@ -165,8 +23,154 @@
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-6d9bdccca1ff49c3",
-      "source_commit": "2524933315ff32e654baf83518349f1d3d9b5d50",
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-04e92192e608ea02",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+      "status": "COMPLETED_BELOW_TARGET",
+      "unsupported_requirements": [],
+      "vacancy_content_hash": "e64642e11cb19b5f1f1bada95e6934cc98052af76b83410a8f727212564afcea"
+    },
+    "vac-12dc570424d531ae": {
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 77.7,
+      "estimated_cost_usd": 0.898196,
+      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
+      "fingerprint": "6e4fb414804b0a42b23d895f09f5827da9eda5e59c4fefc74f192fc0d53cd5a1",
+      "generation_logic_version": 3,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached",
+          "primary_template_fit_failed"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-12dc570424d531ae",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+      "status": "COMPLETED_BELOW_TARGET",
+      "unsupported_requirements": [],
+      "vacancy_content_hash": "e2870bbf36408675104d9ef6be4b2ba62c00c013d8e29cec4586b580ed8b485f"
+    },
+    "vac-14b95b3407bcb148": {
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 70.4,
+      "estimated_cost_usd": 0.884602,
+      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
+      "fingerprint": "a5780057d0c1aa33a32b90a7f8b671a70b2a6fbb44df3ecc9d6742761f72a722",
+      "generation_logic_version": 3,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-14b95b3407bcb148",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+      "status": "COMPLETED_BELOW_TARGET",
+      "unsupported_requirements": [
+        "Databricks"
+      ],
+      "vacancy_content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06"
+    },
+    "vac-21cefd168f6539b4": {
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 74.4,
+      "estimated_cost_usd": 0.854516,
+      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
+      "fingerprint": "c4ea369cd0bb4b934cda39c0ee8d799d9f8ff4f7989f60fe8bc6ba0da025ad70",
+      "generation_logic_version": 3,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached",
+          "primary_template_fit_failed"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-21cefd168f6539b4",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+      "status": "COMPLETED_BELOW_TARGET",
+      "unsupported_requirements": [],
+      "vacancy_content_hash": "8149d1e08a379b92e8b4d9822929c8be6b5e0898164b278968816075b1aade23"
+    },
+    "vac-2de566514601700a": {
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 81.8,
+      "estimated_cost_usd": 0.8682295,
+      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
+      "fingerprint": "04b5e6a1d2c32862ab9004bf8e9ebae28b5ff384df1bb4331d2e91bdabc5ac1e",
+      "generation_logic_version": 3,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached",
+          "primary_template_fit_failed"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-2de566514601700a",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+      "status": "COMPLETED_BELOW_TARGET",
+      "unsupported_requirements": [],
+      "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
+    },
+    "vac-6d9bdccca1ff49c3": {
+      "application_bundle_file": "application_bundle_report.json",
+      "content_quality_target_reached": false,
+      "coverage_score": 75.5,
+      "estimated_cost_usd": 0.840485,
+      "evidence_fingerprint": "ea8d0d04633389cc2c6ddff8c4a2cd7351773c23f61d307d00acdefa8b941e5b",
+      "fingerprint": "362b6bccfc65438d0401e8b7b614dbb2bd286c72ad55f1c43808eef997148c84",
+      "generation_logic_version": 3,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "cover_letter_ready": true,
+        "primary_physical_status": "PASS",
+        "primary_template": "executive_letter_v1",
+        "reasons": [
+          "content_quality_target_not_reached",
+          "primary_template_fit_failed"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80-vac-6d9bdccca1ff49c3",
+      "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
       "status": "COMPLETED_BELOW_TARGET",
       "unsupported_requirements": [],
       "vacancy_content_hash": "5d9aed68d860e4275c7e911ed7abf924115c1ed4ca9e01204edcdd9460678e6d"
