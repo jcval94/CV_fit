@@ -5,6 +5,8 @@ from pathlib import Path
 
 from cv_agent.backbone import select_canonical_backbone
 from cv_agent.context import load_evidence_catalog
+from cv_agent.schemas import StrategyOutput
+from cv_agent.workflow import _attach_canonical_backbone, _budget_evidence
 
 
 class CanonicalBackboneTests(unittest.TestCase):
@@ -47,6 +49,45 @@ class CanonicalBackboneTests(unittest.TestCase):
         }
         ids = {item["chunk_id"] for item in select_canonical_backbone(catalog)}
         self.assertEqual(ids, {"profile", "education"})
+
+    def test_backbone_is_budgeted_before_requirement_evidence_and_forced_into_strategy(self) -> None:
+        def evidence(chunk_id: str, record_id: str):
+            return {
+                "chunk_id": chunk_id,
+                "record_id": record_id,
+                "chunk_type": "section",
+                "title": chunk_id,
+                "text": f"Evidence for {chunk_id}",
+                "proficiency": None,
+                "metric_refs": [],
+                "constraints": [],
+                "source_path": f"experience/{record_id}.md",
+                "attributes": {},
+                "cv_eligible": True,
+            }
+
+        backbone_id = "role-bbva::canonical"
+        requirement_id = "project-role-specific"
+        chunks = [evidence(requirement_id, "project-example"), evidence(backbone_id, "role-bbva")]
+        match_plan = {
+            "requirements": [{"requirement": "Role-specific need", "evidence_chunk_ids": [requirement_id]}]
+        }
+        budgeted = _budget_evidence(chunks, match_plan, [backbone_id])
+        self.assertEqual([item["chunk_id"] for item in budgeted][:2], [backbone_id, requirement_id])
+
+        strategy = StrategyOutput(
+            target_role="Senior Data Scientist",
+            language="en",
+            positioning="test",
+            selected_evidence_chunk_ids=[requirement_id],
+        )
+        _attach_canonical_backbone(strategy, [backbone_id])
+        self.assertEqual(strategy.selected_evidence_chunk_ids, [backbone_id, requirement_id])
+
+    def test_default_submission_template_is_single_column_executive_letter(self) -> None:
+        source = Path("cv_presentation/application_bundle.py").read_text(encoding="utf-8")
+        self.assertIn('primary_template: str = "executive_letter_v1"', source)
+        self.assertIn('alternate_template: str = "harvard_v1"', source)
 
 
 if __name__ == "__main__":
