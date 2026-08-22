@@ -13,7 +13,7 @@ class ShowcaseTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(payload), encoding="utf-8")
 
-    def test_showcase_v2_links_templates_metrics_and_local_review_without_private_contact(self):
+    def test_showcase_v2_builds_social_style_vacancy_feed_with_both_cvs(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             vacancy_id = "vac-demo"
@@ -110,26 +110,53 @@ class ShowcaseTests(unittest.TestCase):
                 site_dir=site,
             )
             self.assertEqual(report["vacancy_count"], 1)
+            self.assertEqual(report["generated_count"], 1)
             self.assertEqual(report["ready_count"], 1)
             index = (site / "index.html").read_text(encoding="utf-8")
             detail = (site / "vacancies" / vacancy_id / "index.html").read_text(encoding="utf-8")
             showcase = json.loads((site / "showcase.json").read_text(encoding="utf-8"))
 
-            self.assertIn("CV_fit Showcase V2", index)
+            # Feed home: vacancy + two CV previews in one post.
+            self.assertIn("CV_fit Review Feed", index)
+            self.assertIn("Today's vacancies and generated CVs", index)
+            self.assertIn("Example Co", index)
+            self.assertIn("Senior Data Scientist", index)
+            self.assertIn("https://example.com/jobs/1", index)
+            self.assertIn("View vacancy", index)
             self.assertIn("Technical Modern", index)
             self.assertIn("Harvard Executive", index)
-            self.assertIn("visual PASS", index)
+            self.assertIn("cv_primary.png", index)
+            self.assertIn("cv_alternate.png", index)
+            self.assertIn("cv_primary.html", index)
+            self.assertIn("cv_alternate.html", index)
+            self.assertIn("cv_primary.pdf", index)
+            self.assertIn("cv_alternate.pdf", index)
+            self.assertIn("Source fit", index)
+            self.assertIn("RAG coverage", index)
+            self.assertIn("Headhunter", index)
+            self.assertIn("data-filter=\"ready\"", index)
+            self.assertIn("data-filter=\"review\"", index)
+
+            # Human decisions can be made without opening the detail page and stay local.
+            self.assertIn("Human decision", index)
+            self.assertIn("data-review=\"SEND\"", index)
+            self.assertIn("data-review=\"REVISE\"", index)
+            self.assertIn("data-review=\"REJECT\"", index)
+            self.assertIn("localStorage", index)
+            self.assertIn("cvfit-human-review:", index)
+
+            # Detailed metrics and reports remain available.
             self.assertIn("Experience area", detail)
             self.assertIn("58%", detail)
             self.assertIn("Page 1 use", detail)
             self.assertIn("84%", detail)
             self.assertIn("Human review — local browser only", detail)
-            self.assertIn("localStorage", detail)
             self.assertIn("cvfit-human-review:vac-demo", detail)
             self.assertIn("visual_eval_primary.json", detail)
             self.assertIn("presentation_review_primary.json", detail)
-            self.assertIn("https://example.com/jobs/1", detail)
+
             self.assertEqual(showcase["schema_version"], 2)
+            self.assertEqual(showcase["view"], "vacancy_cv_feed")
             self.assertEqual(showcase["vacancies"][0]["primary_visual_status"], "PASS")
             self.assertEqual(showcase["vacancies"][0]["section_item_counts"]["skills"], 12)
             self.assertNotIn("secret@example.com", index)
