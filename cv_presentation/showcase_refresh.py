@@ -13,10 +13,14 @@ def main() -> int:
         description="Refresh and enhance the GitHub Pages vacancy feed from an existing daily-showcase artifact without regenerating CVs."
     )
     parser.add_argument("--site-dir", default="_site")
+    parser.add_argument("--generation-manifest", default="generation_state/manifest.json")
     args = parser.parse_args()
     site_dir = Path(args.site_dir)
     report = refresh_existing_showcase(site_dir)
-    report["feed_enhancements"] = enhance_feed_index(site_dir)
+    report["feed_enhancements"] = enhance_feed_index(
+        site_dir,
+        generation_manifest_path=Path(args.generation_manifest),
+    )
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     return 0
 
