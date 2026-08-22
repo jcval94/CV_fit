@@ -28,7 +28,8 @@ Hard rules:
 - Do not recommend adding unsupported content merely to fill space.
 - Do not recommend more than 15 skills or more than 2 projects.
 - Experience should remain more important than Skills or Projects.
-- PASS only when the supplied metrics support a compact, senior, submission-ready composition.
+- PASS only when senior_hierarchy, page_balance and section_balance are all PASS.
+- If any component is CONCERN, decision must be REVIEW_REQUIRED.
 """.strip()
 
 
@@ -70,6 +71,15 @@ def blocked_presentation_review(*, visual: VisualEvalReport, physical: PhysicalL
     )
 
 
+def _fail_closed_on_inconsistent_pass(review: PresentationReview) -> PresentationReview:
+    components = (review.senior_hierarchy, review.page_balance, review.section_balance)
+    if review.decision != "PASS" or all(value == "PASS" for value in components):
+        return review
+    reasons = list(review.reasons)
+    reasons.append("Reviewer returned PASS while at least one presentation component was CONCERN; fail-closed policy requires review.")
+    return review.model_copy(update={"decision": "REVIEW_REQUIRED", "reasons": reasons})
+
+
 async def review_presentation(
     *,
     client: StructuredPresentationClient,
@@ -78,7 +88,7 @@ async def review_presentation(
     visual: VisualEvalReport,
     physical: PhysicalLayoutReport,
 ) -> PresentationReview:
-    """Review metric-grounded presentation without permitting LLM gate override."""
+    """Review metric-grounded presentation without permitting deterministic or inconsistent LLM gate override."""
     if physical.status != "PASS" or visual.status != "PASS":
         return blocked_presentation_review(visual=visual, physical=physical)
 
@@ -103,4 +113,4 @@ async def review_presentation(
         max_output_tokens=1400,
     )
     assert isinstance(result, PresentationReview)
-    return result
+    return _fail_closed_on_inconsistent_pass(result)
