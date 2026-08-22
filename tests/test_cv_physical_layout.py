@@ -63,7 +63,7 @@ class PhysicalLayoutTests(unittest.TestCase):
     def test_section_metrics_are_measured_from_rendered_dom(self):
         body = (
             '<section class="page" data-page="1">'
-            '<header data-section="header"><h1>Candidate</h1></header>'
+            '<header data-section="header"><h1>Candidate</h1><p>Senior Data Scientist</p></header>'
             '<section data-section="experience"><h2>Experience</h2>'
             '<article data-item="experience"><p>Role one</p><p>Impact detail.</p></article>'
             '<article data-item="experience"><p>Role two</p><p>Impact detail.</p></article></section>'
