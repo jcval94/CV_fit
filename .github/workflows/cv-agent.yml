@@ -200,6 +200,7 @@ jobs:
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 0.75
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: cv-${{ inputs.vacancy_id }}-${{ github.run_id }}
           path: outputs/${{ inputs.vacancy_id }}/${{ github.run_id }}/
