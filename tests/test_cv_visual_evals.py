@@ -162,6 +162,27 @@ class PresentationReviewerTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(client.last_payload["deterministic_visual_status"], "PASS")
         self.assertEqual(client.last_payload["section_item_counts"]["projects"], 1)
 
+    async def test_model_pass_with_component_concern_fails_closed(self):
+        good_physical = physical()
+        good_visual = evaluate_visual_balance(good_physical, template_id="technical_modern_v1")
+        client = FakeClient(PresentationReview(
+            decision="PASS",
+            senior_hierarchy="PASS",
+            page_balance="CONCERN",
+            section_balance="PASS",
+            reasons=["Second page feels borderline."],
+        ))
+        result = await review_presentation(
+            client=client,
+            template_id="technical_modern_v1",
+            role="primary",
+            visual=good_visual,
+            physical=good_physical,
+        )
+        self.assertEqual(client.calls, 1)
+        self.assertEqual(result.decision, "REVIEW_REQUIRED")
+        self.assertTrue(any("fail-closed" in reason for reason in result.reasons))
+
 
 if __name__ == "__main__":
     unittest.main()
