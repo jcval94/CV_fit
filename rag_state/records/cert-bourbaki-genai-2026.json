@@ -1,0 +1,38 @@
+{
+  "attributes": {
+    "last_updated": "2026-08-21",
+    "usage_policy": "This verified credential is a sticky CV certification: include it in every generated CV without changing its title, issuer, year or credential ID."
+  },
+  "automatic_reuse_eligible": true,
+  "confidence": "high",
+  "content_hash": "d462d3f907005f2db761350d518188ea42c08f40312315135ce9fb52480fc5ac",
+  "embedding_candidate": true,
+  "linked_markdown_paths": [],
+  "metric_refs": [],
+  "normalization_schema_version": 1,
+  "public_safe": true,
+  "record_id": "cert-bourbaki-genai-2026",
+  "record_type": "certifications",
+  "retrieval_class": "evidence",
+  "sections": [
+    {
+      "content": "- **Credential:** GenAI Aplicado: ChatGPT & Gemini\n- **Issuer:** Colegio de Matemáticas Bourbaki\n- **Issued:** March 2026\n- **Credential ID:** `68177741-cert-242290851`\n- **Status:** verified\n- **Category:** Generative AI / LLMs\n- **CV priority:** mandatory / sticky for generated CVs\n- **Usage note:** preserve the exact credential title and issuer; do not infer a different certification level or provider.",
+      "end_line": 24,
+      "heading_path": [
+        "GenAI Aplicado: ChatGPT & Gemini"
+      ],
+      "level": 1,
+      "section_id": "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+      "semantic_type": "section",
+      "start_line": 15,
+      "title": "GenAI Aplicado: ChatGPT & Gemini"
+    }
+  ],
+  "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
+  "source_path": "experience/certifications_bourbaki.md",
+  "source_refs": [
+    "SRC-USER-CONFIRMED-2026-08-20"
+  ],
+  "status": "canonical",
+  "visibility": "public"
+}

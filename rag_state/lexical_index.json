@@ -858,6 +858,61 @@
       },
       "text": "ACH-REPORTING-TIME-001 — SQL/R reporting time saved\n- **Project:** SQL Reporting tool\n- **Metric:** weekly analyst time saved\n- **Result:** `approximately 10 hours per week`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Built an SQL/R reporting tool that integrated Office/PDF outputs and saved approximately 10 hours per week.\"\n- **Usage constraint:** preserve `approximately`; do not attribute the value to the separate shortcuts package.\n\n---"
     },
+    "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini": {
+      "chunk_type": "section",
+      "constraints": [],
+      "content_hash": "b5f30bd0eba11cd7bd67819416545ab097bab101d7f91ee1b045afdefa1656e8",
+      "metric_refs": [],
+      "proficiency": null,
+      "record_id": "cert-bourbaki-genai-2026",
+      "source_path": "experience/certifications_bourbaki.md",
+      "terms": {
+        "2026": 1,
+        "68177741-cert-242290851": 1,
+        "ai": 1,
+        "and": 1,
+        "aplicado": 2,
+        "bourbaki": 1,
+        "category": 1,
+        "certification": 1,
+        "chatgpt": 2,
+        "colegio": 1,
+        "credential": 3,
+        "cv": 1,
+        "cvs": 1,
+        "de": 1,
+        "different": 1,
+        "do": 1,
+        "exact": 1,
+        "for": 1,
+        "gemini": 2,
+        "genai": 2,
+        "generated": 1,
+        "generative": 1,
+        "id": 1,
+        "infer": 1,
+        "issued": 1,
+        "issuer": 2,
+        "level": 1,
+        "llms": 1,
+        "mandatory": 1,
+        "march": 1,
+        "matematicas": 1,
+        "not": 1,
+        "note": 1,
+        "or": 1,
+        "preserve": 1,
+        "priority": 1,
+        "provider.": 1,
+        "status": 1,
+        "sticky": 1,
+        "the": 1,
+        "title": 1,
+        "usage": 1,
+        "verified": 1
+      },
+      "text": "GenAI Aplicado: ChatGPT & Gemini\n- **Credential:** GenAI Aplicado: ChatGPT & Gemini\n- **Issuer:** Colegio de Matemáticas Bourbaki\n- **Issued:** March 2026\n- **Credential ID:** `68177741-cert-242290851`\n- **Status:** verified\n- **Category:** Generative AI / LLMs\n- **CV priority:** mandatory / sticky for generated CVs\n- **Usage note:** preserve the exact credential title and issuer; do not infer a different certification level or provider."
+    },
     "certifications::cert-aws-sagemaker-2021": {
       "chunk_type": "credential",
       "constraints": [],
@@ -16129,6 +16184,7 @@
     ],
     "2026": [
       "achievement-metrics::ACH-GENAI-NORA-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
       "project-insideforest::insideforest::public-repository-facts"
     ],
@@ -16229,6 +16285,9 @@
     ],
     "65985b23a4964c5f85f8682a62e8471f": [
       "certifications::cert-ibm-ml-python-2019"
+    ],
+    "68177741-cert-242290851": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "7.": [
       "certifications::certifications::selection-rules-for-generated-cvs",
@@ -16659,6 +16718,7 @@
       "achievement-metrics::ACH-GENAI-NORA-001",
       "achievement-metrics::ACH-GENAI-NORA-002",
       "achievement-metrics::ACH-GENAI-NORA-003",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
       "certifications::cert-pending-genai",
@@ -17010,6 +17070,7 @@
       "achievement-metrics::ACH-MS-FRAUD-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
@@ -17324,6 +17385,9 @@
       "skills::python",
       "skills::python-package-engineering",
       "skills::scikit-learn-ecosystem"
+    ],
+    "aplicado": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "app": [
       "project-mvp-agent-factory::mvp-agent-factory::summary"
@@ -18197,6 +18261,9 @@
     "bounded.": [
       "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability"
     ],
+    "bourbaki": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+    ],
     "branch": [
       "achievement-metrics::ACH-BBVA-ATM-001",
       "project-bbva-atm-analytics::atm-and-physical-network-analytics::approved-public-narrative",
@@ -18554,6 +18621,7 @@
       "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies"
     ],
     "category": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
@@ -18664,6 +18732,7 @@
       "certifications::certifications::selection-rules-for-generated-cvs"
     ],
     "certification": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::certifications::selection-rules-for-generated-cvs",
       "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
       "skills::aws"
@@ -18709,6 +18778,7 @@
       "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::5-credential-misuse-and-channel-security-redesign"
     ],
     "chatgpt": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
       "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
@@ -18987,6 +19057,9 @@
       "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
       "project-narrative-dna::narrative-dna-adnarrativa::end-to-end-engineering",
       "skills::documentation-developer-experience"
+    ],
+    "colegio": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "collaborated": [
       "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
@@ -19823,6 +19896,7 @@
       "project-insideforest::insideforest::public-repository-facts"
     ],
     "credential": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -19996,6 +20070,7 @@
       "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-002",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -20024,6 +20099,7 @@
       "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence"
     ],
     "cvs": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::certifications::known-credentials-requiring-metadata-reconciliation",
       "certifications::certifications::selection-rules-for-generated-cvs",
       "education::education::technical-education::computer-systems-technician",
@@ -20228,6 +20304,7 @@
       "project-bbva-btc::bbva-best-time-to-call-btc::summary"
     ],
     "de": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-data-science-navarra-2022",
       "certifications::cert-pending-uc3m-ml",
       "education::education::bachelor-s-degree-in-actuarial-science",
@@ -20793,6 +20870,7 @@
       "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring"
     ],
     "different": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-bbva-btc::bbva-best-time-to-call-btc::boundaries",
       "project-bbva-btc::bbva-best-time-to-call-btc::results",
       "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
@@ -20931,6 +21009,7 @@
       "achievement-metrics::ACH-GENAI-NORA-002",
       "achievement-metrics::ACH-MS-FRAUD-001",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-data-science-navarra-2022",
       "certifications::cert-psm-i-2020",
       "certifications::certifications::selection-rules-for-generated-cvs",
@@ -21681,6 +21760,7 @@
       "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::portfolio-narrative"
     ],
     "exact": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-pending-genai",
       "certifications::cert-pending-uc3m-ml",
       "certifications::certifications",
@@ -22292,6 +22372,7 @@
       "skills::geospatial-analytics"
     ],
     "for": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
@@ -22678,6 +22759,7 @@
       "education::education::bachelor-s-degree-in-actuarial-science::academic-activities-and-distinctions"
     ],
     "gemini": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
       "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
@@ -22696,6 +22778,7 @@
       "skills::google-cloud"
     ],
     "genai": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::certifications::selection-rules-for-generated-cvs",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
@@ -22721,6 +22804,7 @@
       "project-mvp-agent-factory::mvp-agent-factory::canonical-workflow"
     ],
     "generated": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-cs50-course-record-2020",
       "certifications::certifications::known-credentials-requiring-metadata-reconciliation",
       "certifications::certifications::selection-rules-for-generated-cvs",
@@ -22750,6 +22834,7 @@
     ],
     "generative": [
       "achievement-metrics::ACH-GENAI-NORA-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-pending-genai",
       "professional-profile::professional-profile::core-professional-areas",
       "professional-profile::professional-profile::professional-positioning",
@@ -23184,6 +23269,7 @@
       "certifications::certifications::selection-rules-for-generated-cvs"
     ],
     "id": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
@@ -23571,6 +23657,7 @@
       "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership"
     ],
     "infer": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::boundaries",
       "project-insideforest::insideforest::quantified-public-outcomes",
       "project-metacraft::metacraft::usage-constraints",
@@ -24091,6 +24178,7 @@
       "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution"
     ],
     "issued": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -24107,6 +24195,7 @@
       "certifications::cert-tableau-desktop-specialist-2020"
     ],
     "issuer": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -24488,6 +24577,7 @@
       "skills::stakeholder-management"
     ],
     "level": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "professional-profile::professional-profile::professional-positioning",
       "professional-profile::professional-profile::technical-themes",
       "professional-profile::professional-profile::usage-rules",
@@ -24740,6 +24830,7 @@
       "project-narrative-dna::narrative-dna-adnarrativa::end-to-end-engineering"
     ],
     "llms": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-pending-genai"
     ],
     "load": [
@@ -24956,6 +25047,7 @@
       "skills::stakeholder-management"
     ],
     "mandatory": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline"
     ],
     "manifests": [
@@ -24993,6 +25085,7 @@
       "skills::process-workflow-architecture"
     ],
     "march": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-rutgers-supply-chain-2022",
       "role-bbva::bbva-m-xico::boundaries",
       "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
@@ -25045,6 +25138,9 @@
       "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
       "skills::fuzzy-matching-identity-resolution",
       "skills::pyspark-apache-spark"
+    ],
+    "matematicas": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "materially": [
       "achievement-metrics::ACH-BBVA-FRAUD-REVIEW-001",
@@ -25906,6 +26002,7 @@
       "achievement-metrics::ACH-GENAI-NORA-002",
       "achievement-metrics::ACH-MS-FRAUD-001",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-data-science-navarra-2022",
       "certifications::cert-psm-i-2020",
@@ -25994,6 +26091,7 @@
     ],
     "note": [
       "achievement-metrics::ACH-GENAI-NORA-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-data-science-navarra-2022",
       "certifications::cert-psm-i-2020",
@@ -26377,6 +26475,7 @@
       "skills::shap"
     ],
     "or": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-data-science-navarra-2022",
       "certifications::cert-psm-i-2020",
       "certifications::cert-rutgers-supply-chain-2022",
@@ -27239,6 +27338,7 @@
       "achievement-metrics::ACH-MS-CLARIFICATIONS-001",
       "achievement-metrics::ACH-MS-CLARIFICATIONS-002",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::certifications",
       "professional-profile::professional-profile::usage-rules",
       "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::boundaries",
@@ -27337,6 +27437,7 @@
       "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::summary"
     ],
     "priority": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-harvardx-2020",
@@ -27794,6 +27895,9 @@
     ],
     "provider-validation": [
       "skills::rpa-web-automation"
+    ],
+    "provider.": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "provides": [
       "education::education::education-positioning",
@@ -30329,6 +30433,7 @@
       "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-002",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -30351,6 +30456,9 @@
       "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution",
       "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::5-credential-misuse-and-channel-security-redesign",
       "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem"
+    ],
+    "sticky": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "still": [
       "certifications::certifications::known-credentials-requiring-metadata-reconciliation"
@@ -31001,6 +31109,7 @@
       "achievement-metrics::ACH-MS-CLARIFICATIONS-002",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-002",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-cs50-course-record-2020",
       "certifications::cert-cs50-harvardx-2020",
       "certifications::cert-psm-i-2020",
@@ -31279,6 +31388,7 @@
       "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced"
     ],
     "title": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::certifications::known-credentials-requiring-metadata-reconciliation",
       "professional-profile::professional-profile::usage-rules",
       "role-bbva::bbva-m-xico::canonical-employment-record"
@@ -31833,6 +31943,7 @@
       "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-002",
       "achievement-metrics::ACH-REPORTING-TIME-001",
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-course-record-2020",
       "certifications::cert-data-science-navarra-2022",
@@ -32120,6 +32231,7 @@
       "certifications::cert-pending-uc3m-ml"
     ],
     "verified": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
       "certifications::cert-aws-sagemaker-2021",
       "certifications::cert-cs50-ai-python-2020",
       "certifications::cert-cs50-course-record-2020",
@@ -32676,6 +32788,9 @@
       "achievement-metrics::ACH-REPORTING-TIME-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-001",
       "achievement-metrics::ACH-OSS-INSIDEFOREST-002"
+    ],
+    "cert-bourbaki-genai-2026": [
+      "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
     ],
     "certifications": [
       "certifications::certifications",

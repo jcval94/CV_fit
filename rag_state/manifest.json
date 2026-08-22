@@ -1,6 +1,6 @@
 {
   "pipeline_version": 1,
-  "source_commit": "974472cadcaaaf7c4742308cb618aadb8ccbd4d7",
+  "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
   "sources": {
     "experience/_meta/conflicts.md": {
       "chunk_ids": [
@@ -117,6 +117,14 @@
       "record_hash": "23e49584b36a89378d4b17ede3a1ea2c96aa702c8f1c370cecd4145532668239",
       "record_id": "certifications",
       "source_hash": "23e49584b36a89378d4b17ede3a1ea2c96aa702c8f1c370cecd4145532668239"
+    },
+    "experience/certifications_bourbaki.md": {
+      "chunk_ids": [
+        "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+      ],
+      "record_hash": "d462d3f907005f2db761350d518188ea42c08f40312315135ce9fb52480fc5ac",
+      "record_id": "cert-bourbaki-genai-2026",
+      "source_hash": "d462d3f907005f2db761350d518188ea42c08f40312315135ce9fb52480fc5ac"
     },
     "experience/education.md": {
       "chunk_ids": [

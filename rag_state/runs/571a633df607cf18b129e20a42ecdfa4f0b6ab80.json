@@ -2,14 +2,15 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "experience/certifications_bourbaki.md"
+    ],
     "unchanged": [
       "experience/_meta/conflicts.md",
       "experience/_meta/data_contract.md",
       "experience/_meta/open_questions.md",
       "experience/achievements/metrics.md",
       "experience/certifications.md",
-      "experience/certifications_bourbaki.md",
       "experience/education.md",
       "experience/profile.md",
       "experience/projects/bbva_atm_analytics.md",
@@ -43,19 +44,21 @@
   },
   "record_counts": {
     "active": 35,
-    "impacted": 0,
-    "reindexed": 0
+    "impacted": 1,
+    "reindexed": 1
   },
-  "reindexed_record_ids": [],
-  "run_id": "571a633df607cf18b129e20a42ecdfa4f0b6ab80-noop",
+  "reindexed_record_ids": [
+    "cert-bourbaki-genai-2026"
+  ],
+  "run_id": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
   "schema_version": 1,
   "source_commit": "571a633df607cf18b129e20a42ecdfa4f0b6ab80",
   "source_counts": {
     "deleted": 0,
     "discovered": 35,
     "modified": 0,
-    "new": 0,
-    "unchanged": 35
+    "new": 1,
+    "unchanged": 34
   },
   "status": "success"
 }
