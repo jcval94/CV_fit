@@ -162,10 +162,12 @@ _EXTRA_JS = r'''
     ].join('');
     const body=post.querySelector('.post-body');
     body?.appendChild(block);
-    if(process?.metrics_origin==='carried_forward'){
+    if(process?.metrics_origin==='carried_forward'||process?.metrics_origin==='recovered_versioned_history'){
       const note=document.createElement('span');
       note.className='metrics-origin';
-      note.textContent='Some non-status metrics were carried forward from the last published valid run instead of being replaced by missing retry data.';
+      note.textContent=process.metrics_origin==='recovered_versioned_history'
+        ?'Some metrics were recovered from verified versioned history after a retry had overwritten them.'
+        :'Some non-status metrics were carried forward from the last published valid run instead of being replaced by missing retry data.';
       body?.appendChild(note);
     }
     refreshSearchText(post);
@@ -269,11 +271,7 @@ def build_process_metrics(manifest_path: Path) -> dict[str, Any]:
         total_known = entry.get("total_pipeline_known_cost_usd")
         total_complete = entry.get("total_pipeline_cost_complete")
         if not _present(total_known):
-            stage_values = [
-                generation_cost,
-                entry.get("cover_letter_cost_usd"),
-                entry.get("presentation_cost_usd"),
-            ]
+            stage_values = [generation_cost, entry.get("cover_letter_cost_usd"), entry.get("presentation_cost_usd")]
             parsed: list[float] = []
             for value in stage_values:
                 if _present(value):
@@ -314,7 +312,7 @@ def build_process_metrics(manifest_path: Path) -> dict[str, Any]:
 
 
 def _merge_published_metrics(previous: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
-    """Never replace a previously published valid metric with null from a retry."""
+    """Never replace a previously valid observable with null from a later retry."""
     carry_fields = {
         "coverage_score",
         "estimated_cost_usd",
@@ -358,6 +356,22 @@ def enhance_feed_index(
 
     previous_payload = _read_json(site_dir / PROCESS_METRICS_FILE, {"entries": {}})
     process_metrics = build_process_metrics(generation_manifest_path)
+
+    # One-time, auditable recovery for metrics that are provably present in
+    # versioned repository history but were erased by a later failed retry.
+    recovered_payload = _read_json(generation_manifest_path.parent / "recovered_metrics.json", {"entries": {}})
+    recovered_rows = recovered_payload.get("entries", {}) if isinstance(recovered_payload, dict) else {}
+    for vacancy_id, current in list(process_metrics["entries"].items()):
+        recovered = recovered_rows.get(vacancy_id)
+        if isinstance(recovered, dict):
+            merged = _merge_published_metrics(recovered, current)
+            if merged.get("metrics_origin") == "carried_forward":
+                merged["metrics_origin"] = "recovered_versioned_history"
+            if not _present(merged.get("total_pipeline_known_cost_usd")) and _present(merged.get("generation_cost_usd")):
+                merged["total_pipeline_known_cost_usd"] = merged["generation_cost_usd"]
+                merged["total_pipeline_cost_complete"] = False
+            process_metrics["entries"][vacancy_id] = merged
+
     previous_rows = previous_payload.get("entries", {}) if isinstance(previous_payload, dict) else {}
     for vacancy_id, current in list(process_metrics["entries"].items()):
         previous = previous_rows.get(vacancy_id)
@@ -399,5 +413,6 @@ def enhance_feed_index(
             "process_metrics",
             "stage_cost_breakdown",
             "valid_metric_carry_forward",
+            "verified_history_recovery",
         ],
     }
