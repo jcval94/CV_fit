@@ -9,6 +9,7 @@ on:
     paths:
       - "cv_presentation/showcase.py"
       - "cv_presentation/showcase_refresh.py"
+      - "cv_presentation/showcase_snapshot.py"
       - ".github/workflows/daily-showcase-pages.yml"
   workflow_dispatch:
     inputs:
@@ -101,6 +102,44 @@ jobs:
           fi
           echo "run_id=$selected" >> "$GITHUB_OUTPUT"
           echo "Using non-empty daily-showcase artifact from run $selected"
+
+      - name: Resolve previous non-empty CV showcase for carry-forward
+        id: previous
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CURRENT_RUN_ID: ${{ steps.source.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          rm -rf _previous_site /tmp/cvfit-previous-candidate
+          echo "found=false" >> "$GITHUB_OUTPUT"
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            [ "$run_id" != "$CURRENT_RUN_ID" ] || continue
+            rm -rf /tmp/cvfit-previous-candidate
+            mkdir -p /tmp/cvfit-previous-candidate
+            if ! gh run download "$run_id" -n daily-showcase -D /tmp/cvfit-previous-candidate; then
+              continue
+            fi
+            cv_count="$(find /tmp/cvfit-previous-candidate/vacancies -type f \( -name 'cv_primary.html' -o -name 'cv_alternate.html' \) 2>/dev/null | wc -l | tr -d ' ')"
+            if [ "${cv_count:-0}" -gt 0 ] && [ -f /tmp/cvfit-previous-candidate/showcase.json ]; then
+              mv /tmp/cvfit-previous-candidate _previous_site
+              echo "found=true" >> "$GITHUB_OUTPUT"
+              echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+              echo "Previous non-empty showcase found in run $run_id"
+              break
+            fi
+          done < <(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=20" \
+              --jq '.workflow_runs[].id'
+          )
+
+      - name: Carry forward missing public CV bundles
+        if: steps.previous.outputs.found == 'true'
+        run: >-
+          python -m cv_presentation.showcase_snapshot
+          --site-dir _site
+          --previous-site-dir _previous_site
 
       - name: Refresh vacancy + two-CV feed without model calls
         run: python -m cv_presentation.showcase_refresh --site-dir _site
