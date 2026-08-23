@@ -9,10 +9,12 @@ on:
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
       - "tests/test_cv_*.py"
       - "tests/test_cover_letter.py"
+      - "tests/test_observability.py"
       - "pyproject.toml"
       - ".github/workflows/vacancy-ingest.yml"
   push:
@@ -24,10 +26,12 @@ on:
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
       - "tests/test_cv_*.py"
       - "tests/test_cover_letter.py"
+      - "tests/test_observability.py"
       - "pyproject.toml"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
@@ -46,6 +50,8 @@ jobs:
       # Enabled after issue #15 passed the authenticated Retrieval V2 safety gate.
       AUTO_CV_ENABLED: "true"
       OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      CVFIT_EVENT_LOG: /tmp/cvfit-observability/events.jsonl
+      CVFIT_RUN_ID: gha-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -62,6 +68,7 @@ jobs:
           tests.test_vacancy_fidelity
           tests.test_cv_auto
           tests.test_cv_showcase
+          tests.test_observability
           -v
 
       - name: Validate PR inputs E2E
@@ -193,6 +200,13 @@ jobs:
           --max-vacancies-per-run 6
           --max-estimated-cost-usd 2.0
 
+      - name: Log generation and Headhunter details
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.stage_reports generation
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+
       - name: Generate concise grounded cover letters
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         continue-on-error: true
@@ -202,6 +216,12 @@ jobs:
           --outputs outputs/auto
           --vacancy-state vacancy_state
           --max-estimated-cost-usd 3.0
+
+      - name: Log cover-letter details
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.stage_reports cover
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/cover_letter_batch_report.json
 
       - name: Build Technical Modern + Harvard HTML/PDF bundles with presentation gates
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
@@ -215,28 +235,22 @@ jobs:
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 3.0
 
-      - name: Summarize application quality and presentation gates
+      - name: Log presentation and pipeline-cost details
         if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
-        run: |
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
+        run: >-
+          python -m cv_observability.stage_reports presentation
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
 
-          path = Path('outputs/auto/_batch') / f"auto-{os.environ['PROCESSED_SHA']}" / 'application_bundle_batch_report.json'
-          if not path.exists():
-              print('No application bundle report was produced.')
-              raise SystemExit(0)
-          report = json.loads(path.read_text(encoding='utf-8'))
-          counts = report.get('result_counts', {})
-          lines = ['## CV application gate summary', '', f"Result counts: `{json.dumps(counts, sort_keys=True)}`", '', '| Vacancy | Status | Detail |', '|---|---|---|']
-          for item in report.get('results', []):
-              detail = item.get('error') or item.get('reason') or ('ready_to_send=' + str(item.get('ready_to_send')))
-              detail = str(detail).replace('|', '\\|').replace('\n', ' ')[:500]
-              lines.append(f"| {item.get('vacancy_id','')} | {item.get('status','')} | {detail} |")
-          summary_path = Path(os.environ['GITHUB_STEP_SUMMARY'])
-          summary_path.write_text('\n'.join(lines) + '\n', encoding='utf-8')
-          print('\n'.join(lines))
-          PY
+      - name: Write E2E observability summary
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.pipeline_summary
+          --ingest-report /tmp/vacancy-ingest-run.json
+          --generation-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --cover-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/cover_letter_batch_report.json
+          --bundle-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
+          --generation-manifest generation_state/manifest.json
+          --whatsapp-state generation_state/whatsapp_notifications.json
 
       - name: Resolve daily showcase date
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
@@ -291,6 +305,15 @@ jobs:
           name: daily-showcase
           path: _site/
           if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload redacted observability events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvfit-observability-${{ github.run_id }}
+          path: /tmp/cvfit-observability/
+          if-no-files-found: ignore
           retention-days: 14
 
       - name: Commit versioned vacancy and generation state
