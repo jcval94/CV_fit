@@ -13,6 +13,7 @@ on:
       - "cv_presentation/feed_enhancements.py"
       - "cv_presentation/p0_decision_ux.py"
       - "cv_notifications/**"
+      - "cv_observability/**"
       - ".github/workflows/daily-showcase-pages.yml"
   workflow_dispatch:
     inputs:
@@ -41,6 +42,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      CVFIT_EVENT_LOG: /tmp/cvfit-observability/pages-events.jsonl
+      CVFIT_RUN_ID: pages-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
 
@@ -147,6 +151,10 @@ jobs:
       - name: Refresh vacancy + two-CV feed without model calls
         run: python -m cv_presentation.showcase_refresh --site-dir _site
 
+      - name: Log published Pages snapshot
+        if: always()
+        run: python -m cv_observability.stage_reports pages --site-dir _site
+
       - name: Verify Pages source still contains CV artifacts
         run: |
           set -euo pipefail
@@ -165,6 +173,24 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Log Pages deployment
+        if: always() && steps.deployment.outputs.page_url != ''
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          SOURCE_RUN_ID: ${{ steps.source.outputs.run_id }}
+          CV_COUNT: ${{ steps.source.outputs.cv_count }}
+        run: |
+          python - <<'PY'
+          import os
+          from cv_observability import EventLogger
+          EventLogger('pages_deploy').info(
+              'pages_deployed',
+              page_url=os.environ.get('PAGE_URL'),
+              source_ingest_run_id=os.environ.get('SOURCE_RUN_ID'),
+              cv_html_count=os.environ.get('CV_COUNT'),
+          )
+          PY
 
       - name: Check WhatsApp notification configuration
         id: whatsapp-config
@@ -254,6 +280,22 @@ jobs:
           git commit -m "chore: record WhatsApp CV notification result"
           git pull --rebase origin main
           git push origin HEAD:main
+
+      - name: Log WhatsApp notification state
+        if: always()
+        run: >-
+          python -m cv_observability.stage_reports whatsapp
+          --state generation_state/whatsapp_notifications.json
+          --plan /tmp/cvfit_whatsapp_plan.json
+
+      - name: Upload redacted Pages observability events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvfit-pages-observability-${{ github.run_id }}
+          path: /tmp/cvfit-observability/
+          if-no-files-found: ignore
+          retention-days: 14
 
       - name: Fail on ambiguous or failed WhatsApp delivery
         if: always() && steps.whatsapp-send.outcome == 'failure'
