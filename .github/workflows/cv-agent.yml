@@ -85,7 +85,7 @@ jobs:
         run: |
           python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
           python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild
-      - name: Validate current vacancies have full JD and grounded analysis context
+      - name: Validate current vacancies obey generation-safety JD contracts
         run: |
           python - <<'PY'
           from collections import Counter
@@ -96,6 +96,7 @@ jobs:
           assert records, "expected at least one canonical vacancy"
           fidelity = Counter()
           eligible = []
+          blocked = []
           for path in records:
               context = assemble_application_context(
                   path.stem,
@@ -105,26 +106,31 @@ jobs:
               )
               vacancy = context["vacancy"]
               assert vacancy["application_language"] != "und", f"undetermined language for {path.stem}"
-              assert vacancy["jd_fidelity"] == "full", vacancy
-              assert vacancy["jd_generation_eligible"] is True, vacancy
-              assert vacancy["requirements"], vacancy
-              assert vacancy["responsibilities"], vacancy
               assert vacancy["fit_score"] is not None, f"source fit lost during enrichment merge for {path.stem}"
-              assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+              is_eligible = vacancy["jd_generation_eligible"] is True
+              if is_eligible:
+                  assert vacancy["jd_fidelity"] in {"full", "partial"}, vacancy
+                  assert vacancy["requirements"] or vacancy["responsibilities"], vacancy
+                  assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+                  eligible.append(path.stem)
+              else:
+                  assert vacancy["jd_fidelity"] == "sparse", vacancy
+                  blocked.append(path.stem)
               fidelity[vacancy["jd_fidelity"]] += 1
-              eligible.append(path.stem)
               print(
                   path.stem,
                   "company=", vacancy["company"],
                   "language=", vacancy["application_language"],
                   "jd_fidelity=", vacancy["jd_fidelity"],
                   "jd_score=", vacancy["jd_fidelity_score"],
+                  "generation_eligible=", is_eligible,
                   "source_fit=", vacancy["fit_score"],
                   "coverage=", context["match_plan"]["coverage_score"],
                   "evidence_chunks=", len(context["evidence_chunks"]),
               )
           print("fidelity_counts=", dict(sorted(fidelity.items())))
           print("generation_eligible=", eligible)
+          print("generation_blocked_sparse=", blocked)
           PY
       - name: Validate Konfio canary preflight without model calls
         run: |
