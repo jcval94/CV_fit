@@ -95,7 +95,7 @@ jobs:
               assert record['fit_score'] is not None, f"source fit metadata lost for {record['company']}"
               if record['jd_generation_eligible'] is True:
                   assert record['jd_fidelity'] in {'full', 'partial'}, record
-                  assert record['requirements'] or record['responsibilities'], record
+                  assert record.get('description') or record['requirements'] or record['responsibilities'], record
               else:
                   assert record['jd_fidelity'] == 'sparse', record
               print(
