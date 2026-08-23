@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-71351017a6b16474::core",
+      "chunk_type": "core",
+      "content_hash": "280fd3f74c9dc092600e4c1d19c6b7582be7b0aea53345bd7cd6a3948957605f",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-23.json"
+      ],
+      "text": "Role: Senior Analytics Engineer - Mexico\nCompany: Nu México / Nubank\nSeniority: Senior\nLocation: Ciudad de México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-71351017a6b16474"
+    },
+    {
+      "chunk_id": "vac-71351017a6b16474::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "595a1c63652736bc9c7a7584f43d66beaf389fa838a8a193f5f7ce47ba88c78e",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-23.json"
+      ],
+      "text": "Technologies / capabilities: SQL; Python; Scala; R; Data Pipelines; ETL/ELT; Data Architecture; Data Modeling; Distributed Data Systems",
+      "vacancy_id": "vac-71351017a6b16474"
+    },
+    {
+      "chunk_id": "vac-71351017a6b16474::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "088b64e9b2cea27a67987c59f3b3abf6c0fea2d1e29fa7832c7e08e17c20a610",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-23.json"
+      ],
+      "text": "Source fit score: 92/100\nSource fit summary: Encaje muy alto para un perfil senior con experiencia end-to-end en datos, Python/SQL y construcción de pipelines escalables. El rol combina arquitectura de datos, gobierno, liderazgo técnico e influencia sobre estrategia de datos, con alto nivel de autonomía y colaboración directa con stakeholders de negocio y tecnología.",
+      "vacancy_id": "vac-71351017a6b16474"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-71351017a6b16474"
+}

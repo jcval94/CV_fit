@@ -1,0 +1,59 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México",
+  "company": "Nu México / Nubank",
+  "company_category": null,
+  "content_hash": "0d3b20aee2b5c03548575bfcadc9e6b82d8b323b763050a4764be8648af67fc8",
+  "description": null,
+  "fit_gaps": [],
+  "fit_score": 92.0,
+  "fit_strengths": [],
+  "fit_summary": "Encaje muy alto para un perfil senior con experiencia end-to-end en datos, Python/SQL y construcción de pipelines escalables. El rol combina arquitectura de datos, gobierno, liderazgo técnico e influencia sobre estrategia de datos, con alto nivel de autonomía y colaboración directa con stakeholders de negocio y tecnología.",
+  "identity_key": "71351017a6b16474ae2ae1c8145e62991a1e466cdbb9fd8a0622b29433868332",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México",
+  "posted_date": "2026-08-20",
+  "posted_date_raw": "2026-08-20",
+  "provenance": [
+    {
+      "source_commit": "243e2c668889e7f567308f02377b0110b0dd49b8",
+      "source_entry_index": 0,
+      "source_format": "gptw_v1",
+      "source_hash": "6e10fd1b7ad2af29720159a5422b351c8a214e38c60d285c721e931c1a2543a9",
+      "source_native_id": "nubank-senior-analytics-engineer-mexico-2026-08-20",
+      "source_path": "GPTW/vacantes_2026-08-23.json",
+      "source_search_date": null,
+      "source_updated_at": "2026-08-23T13:52:29Z"
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Analytics Engineer - Mexico",
+  "salary": null,
+  "schema_version": 2,
+  "seniority": "Senior",
+  "tech_stack": [
+    "SQL",
+    "Python",
+    "Scala",
+    "R",
+    "Data Pipelines",
+    "ETL/ELT",
+    "Data Architecture",
+    "Data Modeling",
+    "Distributed Data Systems"
+  ],
+  "url": "https://job-boards.greenhouse.io/nubank",
+  "vacancy_id": "vac-71351017a6b16474",
+  "work_model": "Hybrid"
+}

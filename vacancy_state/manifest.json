@@ -1,5 +1,5 @@
 {
-  "last_run_id": "e7f6b51a6e51d7d9930a8ce5b5f52a8111b38aed-noop",
+  "last_run_id": "243e2c668889e7f567308f02377b0110b0dd49b8-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -17,6 +17,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-04e92192e608ea02"
+      ]
+    },
+    "GPTW/vacantes_2026-08-23.json": {
+      "source_hash": "6e10fd1b7ad2af29720159a5422b351c8a214e38c60d285c721e931c1a2543a9",
+      "state_file": "sources/GPTW__vacantes_2026-08-23.json--8e460422ba6a536f.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-71351017a6b16474"
       ]
     },
     "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json": {
