@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from cv_presentation.feed_enhancements import enhance_feed_index
+from cv_presentation.p0_decision_ux import apply_p0_decision_ux
 from cv_presentation.showcase import refresh_existing_showcase
 
 
@@ -21,6 +22,7 @@ def main() -> int:
         site_dir,
         generation_manifest_path=Path(args.generation_manifest),
     )
+    report["p0_decision_ux"] = apply_p0_decision_ux(site_dir)
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     return 0
 
