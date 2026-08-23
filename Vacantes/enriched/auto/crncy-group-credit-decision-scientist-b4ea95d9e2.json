@@ -1,0 +1,50 @@
+{
+  "jd_capture_mode": "official_source_jsonld_jobposting_auto",
+  "jd_retrieved_at": "2026-08-23T19:50:02.739726Z",
+  "jd_source_url": "https://remotive.com/remote/jobs/finance/credit-decisioning-specialist-5402535",
+  "metadata": {
+    "criterio_temporal": "Preservación automática de JD oficial para generación CV",
+    "fecha_busqueda": "2026-08-22",
+    "total_vacantes_encontradas": 1
+  },
+  "vacantes": [
+    {
+      "categoria_empresa": "Fintech",
+      "description": "Role Description The Credit Decision Scientist role is crucial in analyzing portfolio performance and improving profitability through credit strategy. You will: Analyze portfolio performance and identify opportunities to improve profitability through credit strategy. Model the probability of repayment, default, and fraud from incomplete and alternative data, and build the statistical inference behind it. Turn that analysis into the credit rules themselves: approval strategy, underwriting requirements, first-loan sizing, and customer segmentation. Optimize underwriting requirements and reduce unnecessary customer friction. Design and assess experiments to improve lending outcomes. Quantify trade-offs between growth, risk, customer experience, and profitability. Translate analysis into practical underwriting and portfolio recommendations. You do this work yourself. There is no analytics team to delegate to. You frame the question, build the analysis, and own the decision that comes out of it. Qualifications Experience in at least one of: portfolio strategy or analytics, underwriting strategy, lending strategy, risk management, or another analytical role involving high-consequence decision-making under uncertainty. Experience in consumer lending or credit is not required; exceptional decision-makers are prioritized over industry-specific experience. Used data and probabilistic reasoning to make or influence important business decisions. Evaluated trade-offs between competing objectives under uncertainty. Applied analytical judgment rather than relying solely on predefined rules or models. Translated analysis into practical business decisions and recommendations. Been accountable for the business outcomes of those decisions, not simply the quality of the analysis. Requirements Working capability, hands-on: statistical inference and probability; causal reasoning and selection bias; practical modeling — logistic regression, scorecards, gradient boosting — with clean validation discipline and no data leakage; experiment design and power; expected-value analysis; segmentation. Python and SQL at analysis-and-modeling level. You write your own code. Required Academic Background A degree from a strong university in a quantitative discipline: Decision Science, Operations Research, Applied Mathematics, Statistics, Economics, Engineering, or Computer Science with significant quantitative coursework. Your training should have covered probability and statistics, decision-making under uncertainty, optimization, mathematical modeling, econometrics, operations research, or risk analysis. Above all, we are looking for someone who naturally thinks probabilistically — comfortable making decisions with incomplete information, weighing uncertainty, and updating their judgment as new evidence becomes available. Language: fluent English and Spanish. Both required. What This Role Is Not A Machine Learning Engineer role A Data Engineering role An AI Infrastructure role A Machine Learning Research role A traditional Data Scientist role focused primarily on model development Candidates whose experience is primarily centered on building models, pipelines, platforms, or technical infrastructure will not be considered. What we are screening out is the candidate whose output is a model. Here, the output is a decision — you simply have to build the analysis yourself to get there. How We Work Honest and direct. Feedback here is unvarnished and immediate. You'll get it, and we expect it back. Unafraid to fail. Most of what you test won't work. We would rather run the experiment and find out than defend a rule nobody has questioned. Committed to excellence. High standards, applied to ourselves before anyone else. Dedicated to the customer. The person on the other side of the decision is the reason the work matters. The Setup USD contractor. Fully remote, location-flexible, with meaningful daily overlap with the Americas. You'll work directly with our credit and finance leadership and with the founder. Short path from analysis to decision. Real ownership from day one, across multiple markets.",
+      "empresa": "CRNCY Group",
+      "fecha_publicacion": "Hace 4 días",
+      "id_vacante": "c11d1e65592f",
+      "modalidad": "Remoto",
+      "porcentaje_ajuste": 97,
+      "puesto": "Credit Decision Scientist",
+      "rango_salarial": "No especificado",
+      "razon_ajuste": {
+        "posibles_gaps": [
+          "El vínculo disponible para postulación es un agregador de empleo remoto y no una página corporativa de ATS.",
+          "La modalidad se describe como contrato remoto en USD, por lo que conviene validar esquema contractual y prestaciones para México."
+        ],
+        "puntos_fuertes": [
+          "Rol senior remoto enfocado directamente en credit decisioning, underwriting y rentabilidad ajustada por riesgo.",
+          "Modela probabilidad de pago, default y fraude utilizando datos incompletos, alternativos y no estructurados.",
+          "Convierte análisis en reglas de aprobación, requisitos de underwriting, sizing de primer crédito y segmentación de clientes.",
+          "Aprovecha de forma directa experiencia previa en banca, gestión de riesgo, fraude, scoring, estadística, Python y SQL."
+        ],
+        "resumen": "Es el ajuste de negocio más directo de la búsqueda: credit risk, fraude, underwriting y decision science aplicados a decisiones crediticias reales en LATAM."
+      },
+      "stack_clave_detectado": [
+        "Decision Science",
+        "Credit Risk",
+        "Fraud Modeling",
+        "Underwriting",
+        "Python",
+        "SQL",
+        "Statistical Inference",
+        "Customer Segmentation",
+        "Alternative Data",
+        "Portfolio Analytics"
+      ],
+      "ubicacion": "América Latina",
+      "url_postulacion": "https://remotive.com/remote/jobs/finance/credit-decisioning-specialist-5402535"
+    }
+  ]
+}
