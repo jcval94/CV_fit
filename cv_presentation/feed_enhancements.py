@@ -45,7 +45,13 @@ kbd{font:10px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;border:1px soli
 .cv-tile:first-child:before{content:"RECOMMENDED";position:absolute;z-index:4;top:10px;left:10px;background:#1877f2;color:#fff;font-size:9px;font-weight:800;letter-spacing:.35px;border-radius:999px;padding:4px 7px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
 .page-count-badge{display:inline-flex;align-items:center;border-radius:999px;background:#eef2f7;color:#475569;font-size:10px;font-weight:800;padding:3px 7px;margin-left:6px}
 .metrics-origin{display:block;margin-top:7px;color:var(--muted);font-size:10px}
-@media(max-width:800px){.feed-search{border-radius:10px}.feed-search-row{grid-template-columns:1fr}.feed-search button{padding:9px 12px}.process-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* The deployed preview is the final HTML itself. One wide column gives the
+   fixed 8.5in Letter canvas enough viewport width to retain visible sheet edges. */
+.cv-gallery{grid-template-columns:1fr!important;gap:14px!important;padding:14px!important;background:#e8eaed!important}
+.cv-tile{border:1px solid #d5d9de;border-radius:10px;overflow:hidden;background:white!important}
+.cv-canvas{height:900px!important;padding:0!important;background:#e9edf2!important;display:block!important}
+.cv-html-preview{display:block;width:100%;height:100%;border:0;background:#e9edf2}
+@media(max-width:800px){.feed-search{border-radius:10px}.feed-search-row{grid-template-columns:1fr}.feed-search button{padding:9px 12px}.process-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.cv-canvas{height:720px!important}}
 '''.strip()
 
 _EXTRA_JS = r'''
@@ -92,12 +98,25 @@ _EXTRA_JS = r'''
     if(event.key==='Escape'&&document.activeElement===input){event.preventDefault();resetSearch();}
   });
 
+  function upgradeHtmlPreviews(post){
+    post.querySelectorAll('.cv-image-link[href*=".html"]').forEach(link=>{
+      const canvas=link.closest('.cv-canvas');
+      if(!canvas||canvas.querySelector('.cv-html-preview'))return;
+      const frame=document.createElement('iframe');
+      frame.className='cv-html-preview';
+      frame.loading='lazy';
+      frame.src=link.href;
+      frame.title=(link.querySelector('img')?.alt||'CV')+' — live HTML preview';
+      canvas.replaceChildren(frame);
+    });
+  }
+
   function addRecommendedCta(post){
     if(post.querySelector('.cv-send-cta'))return;
     const primary=post.querySelector('.cv-gallery .cv-tile');
     if(!primary)return;
-    const pdf=primary.querySelector('.cv-actions a[href$=".pdf"],.cv-actions a[href$=".PDF"]');
     const html=primary.querySelector('.cv-actions a[href*=".html"]');
+    const pdf=primary.querySelector('.cv-actions a[href$=".pdf"],.cv-actions a[href$=".PDF"]');
     const target=html||pdf;
     if(!target)return;
     const ready=post.dataset.status==='ready';
@@ -180,6 +199,7 @@ _EXTRA_JS = r'''
     const metrics=processPayload.entries||{};
     posts.forEach(post=>{
       const id=String(post.dataset.vacancy||'');
+      upgradeHtmlPreviews(post);
       addRecommendedCta(post);
       addProcessMetrics(post,rows.get(id)||{},metrics[id]||{});
       void addPageCount(post);
@@ -294,11 +314,7 @@ def build_process_metrics(manifest_path: Path) -> dict[str, Any]:
 
 
 def _merge_published_metrics(previous: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
-    """Never replace a previously published valid metric with null from a retry.
-
-    Latest status/readiness remain authoritative. Only observability fields can be
-    carried forward, and the row is marked so the UI makes that provenance clear.
-    """
+    """Never replace a previously published valid metric with null from a retry."""
     carry_fields = {
         "coverage_score",
         "estimated_cost_usd",
@@ -379,6 +395,7 @@ def enhance_feed_index(
             "decision_specific_selected_styles",
             "recommended_cv_cta",
             "explicit_page_count",
+            "live_html_sheet_previews",
             "process_metrics",
             "stage_cost_breakdown",
             "valid_metric_carry_forward",
