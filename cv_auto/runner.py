@@ -23,6 +23,15 @@ DEFERRED_STATUS = "DEFERRED_CAP"
 GenerationCallable = Callable[..., tuple[dict[str, Any], dict[str, Any]]]
 
 
+class GenerationAttemptError(RuntimeError):
+    """Generation failed after a live client existed; keep its partial usage."""
+
+    def __init__(self, cause: Exception, usage: dict[str, Any]) -> None:
+        self.cause = cause
+        self.usage = usage
+        super().__init__(f"{type(cause).__name__}: {cause}")
+
+
 def _read_json(path: Path, default: Any | None = None) -> Any:
     if not path.exists():
         if default is not None:
@@ -45,6 +54,64 @@ def _sha256_bytes(value: bytes) -> str:
 
 def _sha256_file(path: Path) -> str:
     return _sha256_bytes(path.read_bytes())
+
+
+def _numeric_cost(value: Any) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        return max(float(value), 0.0)
+    except (TypeError, ValueError):
+        return None
+
+
+def _known_usage_cost(usage: dict[str, Any]) -> float | None:
+    exact = _numeric_cost(usage.get("estimated_cost_usd"))
+    if exact is not None:
+        return exact
+    return _numeric_cost(usage.get("known_estimated_cost_usd"))
+
+
+def _prior_cumulative_cost(previous: dict[str, Any] | None) -> float:
+    if not previous:
+        return 0.0
+    for key in ("cumulative_known_cost_usd", "known_estimated_cost_usd", "estimated_cost_usd"):
+        value = _numeric_cost(previous.get(key))
+        if value is not None:
+            return value
+    last_known = previous.get("last_known_metrics")
+    if isinstance(last_known, dict):
+        for key in ("cumulative_known_cost_usd", "known_estimated_cost_usd", "estimated_cost_usd"):
+            value = _numeric_cost(last_known.get(key))
+            if value is not None:
+                return value
+    return 0.0
+
+
+def _last_known_metrics(previous: dict[str, Any] | None) -> dict[str, Any]:
+    """Keep observability from the last evaluated artifact without marking it current."""
+    if not previous:
+        return {}
+    source = previous.get("last_known_metrics") if previous.get("status") == "FAILED_REVIEW_REQUIRED" else previous
+    if not isinstance(source, dict):
+        return {}
+    keys = (
+        "run_id",
+        "coverage_score",
+        "unsupported_requirements",
+        "estimated_cost_usd",
+        "known_estimated_cost_usd",
+        "cumulative_known_cost_usd",
+        "content_quality_target_reached",
+        "headhunter_iterations",
+        "best_review_iteration",
+        "headhunter_score",
+        "headhunter_decision",
+        "premium_model_used",
+        "presentation_gate",
+        "application_bundle_file",
+    )
+    return {key: source[key] for key in keys if key in source and source[key] is not None}
 
 
 def evidence_fingerprint(evidence_state: Path) -> str:
@@ -141,17 +208,34 @@ def _default_generate_one(
     from cv_agent.workflow import run_agentic_cv
 
     client = AdkStructuredClient(max_estimated_cost_usd=max_estimated_cost_usd)
-    report = asyncio.run(
-        run_agentic_cv(
-            vacancy_id=vacancy_id,
-            client=client,
-            output_dir=output_dir,
-            vacancy_state=vacancy_state,
-            evidence_state=evidence_state,
-            run_id=run_id,
-            retrieval_mode=retrieval_mode,
+    try:
+        report = asyncio.run(
+            run_agentic_cv(
+                vacancy_id=vacancy_id,
+                client=client,
+                output_dir=output_dir,
+                vacancy_state=vacancy_state,
+                evidence_state=evidence_state,
+                run_id=run_id,
+                retrieval_mode=retrieval_mode,
+            )
         )
-    )
+    except Exception as exc:
+        # ADK records every attempted call, including calls that raise. Persist
+        # that snapshot before bubbling the failure up so paid/partial work is
+        # never silently lost from observability.
+        usage = client.telemetry_snapshot()
+        _write_json(output_dir / "usage_report.json", usage)
+        _write_json(output_dir / "run_report.json", {
+            "schema_version": 1,
+            "run_id": run_id,
+            "vacancy_id": vacancy_id,
+            "status": "FAILED_REVIEW_REQUIRED",
+            "error": f"{type(exc).__name__}: {exc}"[:2000],
+            "usage_report_file": "usage_report.json",
+            "usage_summary": {key: value for key, value in usage.items() if key != "calls"},
+        })
+        raise GenerationAttemptError(exc, usage) from exc
 
     usage = client.telemetry_snapshot()
     _write_json(output_dir / "usage_report.json", usage)
@@ -265,6 +349,7 @@ def run_generation_batch(
         generated_attempts += 1
         vacancy_run_id = f"{run_id}-{vacancy_id}"
         output_dir = outputs / vacancy_id / vacancy_run_id
+        prior_cumulative = _prior_cumulative_cost(previous)
         try:
             report, usage = generate_one(
                 vacancy_id=vacancy_id,
@@ -275,6 +360,9 @@ def run_generation_batch(
                 retrieval_mode=retrieval_mode,
                 max_estimated_cost_usd=max_estimated_cost_usd,
             )
+            attempt_known_cost = _known_usage_cost(usage)
+            cumulative_known_cost = round(prior_cumulative + (attempt_known_cost or 0.0), 8)
+            final_review = dict(report.get("final_review") or {})
             entry = {
                 **base_entry,
                 "status": report.get("status", "UNKNOWN"),
@@ -282,7 +370,17 @@ def run_generation_batch(
                 "review_required": not bool(report.get("quality_target_reached")),
                 "coverage_score": report.get("match_coverage_score"),
                 "unsupported_requirements": report.get("unsupported_requirements", []),
+                "content_quality_target_reached": report.get("quality_target_reached"),
+                "headhunter_iterations": report.get("iterations_executed"),
+                "best_review_iteration": report.get("best_review_iteration"),
+                "headhunter_score": final_review.get("overall_score"),
+                "headhunter_decision": final_review.get("decision"),
+                "premium_model_used": report.get("premium_model_used"),
                 "estimated_cost_usd": usage.get("estimated_cost_usd"),
+                "known_estimated_cost_usd": usage.get("known_estimated_cost_usd"),
+                "attempt_known_cost_usd": attempt_known_cost,
+                "cumulative_known_cost_usd": cumulative_known_cost,
+                "usage_report_file": "usage_report.json",
                 "run_id": vacancy_run_id,
             }
             entries[vacancy_id] = entry
@@ -292,20 +390,44 @@ def run_generation_batch(
                 "status": entry["status"],
                 "ready_to_send": entry["ready_to_send"],
                 "estimated_cost_usd": entry["estimated_cost_usd"],
+                "known_estimated_cost_usd": entry["known_estimated_cost_usd"],
+                "cumulative_known_cost_usd": entry["cumulative_known_cost_usd"],
                 "run_id": vacancy_run_id,
             })
         except Exception as exc:
+            usage: dict[str, Any] = {}
+            cause = exc
+            if isinstance(exc, GenerationAttemptError):
+                usage = exc.usage
+                cause = exc.cause
+            attempt_known_cost = _known_usage_cost(usage)
+            cumulative_known_cost = round(prior_cumulative + (attempt_known_cost or 0.0), 8)
+            last_known = _last_known_metrics(previous)
             entry = {
                 **base_entry,
                 "status": "FAILED_REVIEW_REQUIRED",
                 "ready_to_send": False,
                 "review_required": True,
-                "error": f"{type(exc).__name__}: {exc}"[:2000],
+                "error": f"{type(cause).__name__}: {cause}"[:2000],
+                "attempt_estimated_cost_usd": usage.get("estimated_cost_usd") if usage else None,
+                "attempt_known_cost_usd": attempt_known_cost,
+                "cumulative_known_cost_usd": cumulative_known_cost,
                 "run_id": vacancy_run_id,
             }
+            if usage:
+                entry["usage_report_file"] = "usage_report.json"
+            if last_known:
+                entry["last_known_metrics"] = last_known
             entries[vacancy_id] = entry
             manifest_changed = True
-            results.append({"vacancy_id": vacancy_id, "status": entry["status"], "error": entry["error"]})
+            results.append({
+                "vacancy_id": vacancy_id,
+                "status": entry["status"],
+                "error": entry["error"],
+                "attempt_known_cost_usd": attempt_known_cost,
+                "cumulative_known_cost_usd": cumulative_known_cost,
+                "run_id": vacancy_run_id,
+            })
 
     if manifest_changed:
         _write_json(generation_state / "manifest.json", manifest)
