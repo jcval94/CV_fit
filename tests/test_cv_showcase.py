@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from cv_presentation.showcase import build_showcase, refresh_existing_showcase
+from tests.test_cv_showcase_snapshot import ShowcaseSnapshotTests
 
 
 class ShowcaseTests(unittest.TestCase):
