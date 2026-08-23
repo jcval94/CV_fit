@@ -1,6 +1,9 @@
 {
   "entries": {
     "vac-04e92192e608ea02": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
       "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "ca18efd98f382fe02b09082050eef508802a214110cbd5139cb2d502c8b1a82d",
@@ -8,12 +11,16 @@
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-6b3249fd08010ef786149d37a636771a40a36be2-vac-04e92192e608ea02",
-      "source_commit": "6b3249fd08010ef786149d37a636771a40a36be2",
+      "run_id": "auto-f12da0198775b9e6d2b53d99760e7aec04bb13dd-vac-04e92192e608ea02",
+      "source_commit": "f12da0198775b9e6d2b53d99760e7aec04bb13dd",
       "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "e64642e11cb19b5f1f1bada95e6934cc98052af76b83410a8f727212564afcea"
     },
     "vac-12dc570424d531ae": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
       "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "8f649c7212eb79da377c9e7af180464bfb202287dc6e40b3baa52a3c4ede780f",
@@ -21,12 +28,16 @@
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-6b3249fd08010ef786149d37a636771a40a36be2-vac-12dc570424d531ae",
-      "source_commit": "6b3249fd08010ef786149d37a636771a40a36be2",
+      "run_id": "auto-f12da0198775b9e6d2b53d99760e7aec04bb13dd-vac-12dc570424d531ae",
+      "source_commit": "f12da0198775b9e6d2b53d99760e7aec04bb13dd",
       "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "e2870bbf36408675104d9ef6be4b2ba62c00c013d8e29cec4586b580ed8b485f"
     },
     "vac-14b95b3407bcb148": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
       "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "10ceeb74400040609af2dc7e8e214e9cb922099409635d0e3f77e81b534e2365",
@@ -34,9 +45,10 @@
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-6b3249fd08010ef786149d37a636771a40a36be2-vac-14b95b3407bcb148",
-      "source_commit": "6b3249fd08010ef786149d37a636771a40a36be2",
+      "run_id": "auto-f12da0198775b9e6d2b53d99760e7aec04bb13dd-vac-14b95b3407bcb148",
+      "source_commit": "f12da0198775b9e6d2b53d99760e7aec04bb13dd",
       "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06"
     },
     "vac-21cefd168f6539b4": {
