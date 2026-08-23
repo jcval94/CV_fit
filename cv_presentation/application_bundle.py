@@ -94,11 +94,13 @@ def _design_for_template(
     profile = resolve_brand_profile(company=company, profiles_dir=brand_profiles_dir)
     tokens = tokens_from_brand(profile)
     deterministic = validate_design_tokens(tokens)
-    if not policy.locked_visual_system and not tokens.brand_verified:
-        raise PresentationGateBlocked(f"adaptive primary template requires a verified brand profile for {company!r}")
+    # A missing company-specific brand profile is not a product failure. The
+    # branding resolver deliberately returns neutral ATS-safe tokens, with
+    # brand_verified=False, so new daily employers can still get a usable CV.
+    # We still hard-block unsafe contrast or an adverse design review.
     if not policy.locked_visual_system and not deterministic.passed:
         raise PresentationGateBlocked(
-            f"brand profile for {company!r} fails deterministic contrast checks: {deterministic.reasons}"
+            f"brand/fallback profile for {company!r} fails deterministic contrast checks: {deterministic.reasons}"
         )
     review, deterministic = asyncio.run(
         review_design(client=client, template_id=template_id, tokens=tokens, target_pages=2)

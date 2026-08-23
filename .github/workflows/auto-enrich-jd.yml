@@ -1,0 +1,105 @@
+name: Auto-enrich daily vacancy JDs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "GPTW/**/*.json"
+      - "Vacantes/**/*.json"
+      - "vacancy_pipeline/enrich.py"
+      - "tests/test_vacancy_enrichment.py"
+      - ".github/workflows/auto-enrich-jd.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-enrich-jd-main
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      !contains(github.event.head_commit.message, 'chore: auto-enrich vacancy JDs')
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install lightweight enrichment dependency
+        run: python -m pip install --disable-pip-version-check 'pydantic>=2.8,<3.0'
+
+      - name: Validate deterministic enrichment parser
+        run: python -m unittest tests.test_vacancy_enrichment -v
+
+      - name: Fetch employer-authored JDs for sparse vacancies
+        run: >-
+          python -m vacancy_pipeline.enrich
+          --repo .
+          --report /tmp/vacancy-enrichment-report.json
+          --max-fetches 12
+
+      - name: Summarize enrichment outcome
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path = Path('/tmp/vacancy-enrichment-report.json')
+          if not path.exists():
+              raise SystemExit(0)
+          data = json.loads(path.read_text(encoding='utf-8'))
+          lines = [
+              '## Daily JD enrichment',
+              '',
+              f"- HTTP fetches: {data.get('fetches', 0)}",
+              f"- Enriched: {data.get('written', 0)}",
+              f"- Still needs full JD: {data.get('needs_full_jd', 0)}",
+              '',
+              '| Company | Role | Status | Reason |',
+              '|---|---|---|---|',
+          ]
+          for item in data.get('results', [])[:30]:
+              lines.append('| {company} | {role} | {status} | {reason} |'.format(
+                  company=str(item.get('company') or '').replace('|', '/'),
+                  role=str(item.get('role') or '').replace('|', '/'),
+                  status=item.get('status') or '',
+                  reason=str(item.get('reason') or '').replace('|', '/')[:160],
+              ))
+          summary = os.environ.get('GITHUB_STEP_SUMMARY')
+          if summary:
+              with open(summary, 'a', encoding='utf-8') as fh:
+                  fh.write('\n'.join(lines) + '\n')
+          PY
+
+      - name: Persist only derived automatic JD enrichments
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -d GPTW/enriched/auto ]; then git add GPTW/enriched/auto; fi
+          if [ -d Vacantes/enriched/auto ]; then git add Vacantes/enriched/auto; fi
+          if git diff --cached --quiet; then
+            echo "No new or changed derived JD enrichments."
+            exit 0
+          fi
+          git commit -m "chore: auto-enrich vacancy JDs"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Upload enrichment diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vacancy-jd-enrichment-${{ github.run_id }}
+          path: /tmp/vacancy-enrichment-report.json
+          if-no-files-found: ignore
+          retention-days: 14
