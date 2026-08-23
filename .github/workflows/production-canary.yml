@@ -45,6 +45,8 @@ jobs:
           fi
 
       - name: Build isolated vacancy and full Retrieval V2 state
+        id: retrieval
+        continue-on-error: true
         run: |
           set -euo pipefail
           python -m vacancy_pipeline \
@@ -88,6 +90,7 @@ jobs:
 
       - name: Generate and review CV with live OpenAI
         id: generation
+        if: steps.retrieval.outcome == 'success'
         continue-on-error: true
         run: >-
           python -m cv_auto
@@ -131,6 +134,7 @@ jobs:
       - name: Build structured E2E diagnostic
         if: always()
         env:
+          RETRIEVAL_OUTCOME: ${{ steps.retrieval.outcome }}
           GENERATION_OUTCOME: ${{ steps.generation.outcome }}
           COVER_OUTCOME: ${{ steps.cover.outcome }}
           PRESENTATION_OUTCOME: ${{ steps.presentation.outcome }}
@@ -167,14 +171,16 @@ jobs:
           generation_status = generated.get('status') or entry.get('status') or 'NOT_REACHED'
           presentation_status = result.get('status') or 'NOT_REACHED'
           stage_outcomes = {
+              'retrieval': os.environ.get('RETRIEVAL_OUTCOME') or 'skipped',
               'generation': os.environ.get('GENERATION_OUTCOME') or 'skipped',
               'cover': os.environ.get('COVER_OUTCOME') or 'skipped',
               'presentation': os.environ.get('PRESENTATION_OUTCOME') or 'skipped',
           }
+          healthy_retrieval = stage_outcomes['retrieval'] == 'success'
           healthy_generation = stage_outcomes['generation'] == 'success' and generation_status in {'PASS', 'COMPLETED_BELOW_TARGET'}
           healthy_cover = stage_outcomes['cover'] == 'success' and (run_dir / 'cover_letter_final.md').exists()
           healthy_presentation = stage_outcomes['presentation'] == 'success' and presentation_status in {'PASS', 'REVIEW_REQUIRED'}
-          canary_healthy = healthy_generation and healthy_cover and healthy_presentation and not missing
+          canary_healthy = healthy_retrieval and healthy_generation and healthy_cover and healthy_presentation and not missing
 
           summary = {
               'vacancy_id': vacancy_id,
