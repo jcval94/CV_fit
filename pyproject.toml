@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["cv_agent*", "cv_auto*", "cv_matching*", "cv_notifications*", "cv_presentation*", "rag*", "vacancy_pipeline*"]
+include = ["cv_agent*", "cv_auto*", "cv_matching*", "cv_notifications*", "cv_observability*", "cv_presentation*", "rag*", "vacancy_pipeline*"]
 
 [tool.setuptools.package-data]
 cv_presentation = ["templates/*.j2", "*.yaml", "brands/*.yaml"]

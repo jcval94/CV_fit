@@ -7,12 +7,14 @@ on:
       - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
+      - "cv_observability/**"
       - "cv_presentation/**"
       - "rag/**"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
       - "tests/test_cover_letter.py"
+      - "tests/test_observability.py"
       - "tests/test_openai_provider.py"
       - "tests/test_vacancy_fidelity.py"
       - "pyproject.toml"
@@ -25,12 +27,14 @@ on:
       - "Vacantes/**/*.json"
       - "cv_agent/**"
       - "cv_matching/**"
+      - "cv_observability/**"
       - "cv_presentation/**"
       - "rag/**"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "tests/test_cv_*.py"
       - "tests/test_cover_letter.py"
+      - "tests/test_observability.py"
       - "tests/test_openai_provider.py"
       - "tests/test_vacancy_fidelity.py"
       - "pyproject.toml"
@@ -78,6 +82,7 @@ jobs:
           tests.test_cv_showcase
           tests.test_cv_feed_enhancements
           tests.test_cover_letter
+          tests.test_observability
           tests.test_openai_provider
           tests.test_vacancy_fidelity
           -v

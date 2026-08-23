@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 from cv_agent.openai_provider import adk_openai_model, prepare_openai_environment
 from cv_agent.telemetry import LLMCallUsage, PRICING_BASIS, PRICING_SNAPSHOT_DATE, estimate_cost_usd, summarize_usage
+from cv_observability import EventLogger
 
 
 T = TypeVar("T", bound=BaseModel)
@@ -25,6 +26,9 @@ class AdkStructuredClient:
     can stop additional calls after the configured budget has been reached. The
     guard is intentionally conservative: a single in-flight call may put the run
     slightly above the threshold, but no subsequent model call will be started.
+
+    Observability is deliberately metadata-only: prompts, instructions, model
+    payloads, credentials and structured outputs are never emitted to logs.
     """
 
     def __init__(
@@ -37,17 +41,26 @@ class AdkStructuredClient:
         self.user_id = user_id
         self.max_estimated_cost_usd = max_estimated_cost_usd
         self._usage: list[LLMCallUsage] = []
+        self._logger = EventLogger("llm")
 
     def telemetry_snapshot(self) -> dict:
         summary = summarize_usage(list(self._usage))
         summary["max_estimated_cost_usd"] = self.max_estimated_cost_usd
         return summary
 
+    def _known_spend(self) -> float:
+        return float(self.telemetry_snapshot().get("known_estimated_cost_usd") or 0.0)
+
     def _assert_budget_available(self) -> None:
         if self.max_estimated_cost_usd is None:
             return
-        spent = float(self.telemetry_snapshot().get("known_estimated_cost_usd") or 0.0)
+        spent = self._known_spend()
         if spent >= self.max_estimated_cost_usd:
+            self._logger.error(
+                "budget_guard_blocked",
+                spent_usd=round(spent, 8),
+                max_estimated_cost_usd=self.max_estimated_cost_usd,
+            )
             raise RuntimeError(
                 f"OpenAI live-run estimated-cost guard reached: ${spent:.4f} >= "
                 f"${self.max_estimated_cost_usd:.4f}. No additional model call was started."
@@ -65,8 +78,8 @@ class AdkStructuredClient:
         total_tokens: int,
         started: float,
         error: str | None = None,
-    ) -> None:
-        self._usage.append(LLMCallUsage(
+    ) -> LLMCallUsage:
+        usage = LLMCallUsage(
             name=name,
             model=model,
             prompt_tokens=prompt_tokens,
@@ -85,7 +98,30 @@ class AdkStructuredClient:
             pricing_snapshot_date=PRICING_SNAPSHOT_DATE,
             pricing_basis=PRICING_BASIS,
             error=error,
-        ))
+        )
+        self._usage.append(usage)
+        return usage
+
+    def _log_usage(self, usage: LLMCallUsage, *, status: str, error_type: str | None = None) -> None:
+        snapshot = self.telemetry_snapshot()
+        level = "ERROR" if status == "FAILED" else "INFO"
+        self._logger.emit(
+            level,
+            "llm_call_finished",
+            call_name=usage.name,
+            model=usage.model,
+            status=status,
+            duration_ms=usage.duration_ms,
+            prompt_tokens=usage.prompt_tokens,
+            cached_input_tokens=usage.cached_input_tokens,
+            candidate_tokens=usage.candidate_tokens,
+            reasoning_tokens=usage.reasoning_tokens,
+            total_tokens=usage.total_tokens,
+            estimated_cost_usd=usage.estimated_cost_usd,
+            cumulative_known_cost_usd=snapshot.get("known_estimated_cost_usd"),
+            max_estimated_cost_usd=self.max_estimated_cost_usd,
+            error_type=error_type,
+        )
 
     async def call(
         self,
@@ -111,6 +147,14 @@ class AdkStructuredClient:
         candidate_tokens = 0
         reasoning_tokens = 0
         total_tokens = 0
+        self._logger.info(
+            "llm_call_started",
+            call_name=name,
+            model=model,
+            max_output_tokens=max_output_tokens,
+            cumulative_known_cost_usd=round(self._known_spend(), 8),
+            max_estimated_cost_usd=self.max_estimated_cost_usd,
+        )
 
         try:
             agent = LlmAgent(
@@ -139,20 +183,20 @@ class AdkStructuredClient:
                 session_id=session_id,
                 new_message=message,
             ):
-                usage = getattr(event, "usage_metadata", None)
-                if usage:
-                    prompt_tokens += int(getattr(usage, "prompt_token_count", 0) or 0)
-                    cached_input_tokens += int(getattr(usage, "cached_content_token_count", 0) or 0)
-                    candidate_tokens += int(getattr(usage, "candidates_token_count", 0) or 0)
-                    reasoning_tokens += int(getattr(usage, "thoughts_token_count", 0) or 0)
-                    total_tokens += int(getattr(usage, "total_token_count", 0) or 0)
+                usage_metadata = getattr(event, "usage_metadata", None)
+                if usage_metadata:
+                    prompt_tokens += int(getattr(usage_metadata, "prompt_token_count", 0) or 0)
+                    cached_input_tokens += int(getattr(usage_metadata, "cached_content_token_count", 0) or 0)
+                    candidate_tokens += int(getattr(usage_metadata, "candidates_token_count", 0) or 0)
+                    reasoning_tokens += int(getattr(usage_metadata, "thoughts_token_count", 0) or 0)
+                    total_tokens += int(getattr(usage_metadata, "total_token_count", 0) or 0)
                 if event.is_final_response() and event.content and event.content.parts:
                     final_text = event.content.parts[0].text
             if not final_text:
                 raise RuntimeError(f"ADK agent {name!r} returned no final structured response")
             result = output_schema.model_validate_json(final_text)
         except Exception as exc:
-            self._record_usage(
+            usage = self._record_usage(
                 name=name,
                 model=model,
                 prompt_tokens=prompt_tokens,
@@ -163,9 +207,10 @@ class AdkStructuredClient:
                 started=started,
                 error=f"{type(exc).__name__}: {exc}",
             )
+            self._log_usage(usage, status="FAILED", error_type=type(exc).__name__)
             raise
 
-        self._record_usage(
+        usage = self._record_usage(
             name=name,
             model=model,
             prompt_tokens=prompt_tokens,
@@ -175,5 +220,6 @@ class AdkStructuredClient:
             total_tokens=total_tokens,
             started=started,
         )
+        self._log_usage(usage, status="PASS")
         self._assert_budget_available()
         return result
