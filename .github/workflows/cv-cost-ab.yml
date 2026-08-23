@@ -1,0 +1,240 @@
+name: CV cost A/B audit
+
+on:
+  pull_request:
+    paths:
+      - "cv_agent/cost_optimized.py"
+      - "cv_agent/ab_experiment.py"
+      - "cv_agent/model_policy.py"
+      - "cv_presentation/ab_showcase.py"
+      - "tests/test_cv_cost_optimized.py"
+      - "tests/test_cv_ab_showcase.py"
+      - ".github/workflows/cv-cost-ab.yml"
+  push:
+    branches: [main]
+    paths:
+      - "cv_agent/cost_optimized.py"
+      - "cv_agent/ab_experiment.py"
+      - "cv_agent/model_policy.py"
+      - "cv_presentation/ab_showcase.py"
+      - "tests/test_cv_cost_optimized.py"
+      - "tests/test_cv_ab_showcase.py"
+      - ".github/workflows/cv-cost-ab.yml"
+  workflow_dispatch:
+    inputs:
+      max_cases:
+        description: "Representative baseline CVs to compare"
+        required: true
+        default: "3"
+        type: string
+      max_optimized_cost_usd:
+        description: "Per-case safety ceiling for optimized generation"
+        required: true
+        default: "1.10"
+        type: string
+      max_audit_cost_usd:
+        description: "Per-case safety ceiling for the two blind audit passes"
+        required: true
+        default: "0.50"
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+      - name: Prove baseline unchanged and optimized A/B contracts
+        run: >-
+          python -m unittest
+          tests.test_cv_agent_workflow
+          tests.test_cv_cost_optimized
+          tests.test_cv_ab_showcase
+          -v
+
+  live-ab:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: deterministic
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    env:
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      MAX_CASES: ${{ inputs.max_cases || '3' }}
+      MAX_OPTIMIZED_COST_USD: ${{ inputs.max_optimized_cost_usd || '1.10' }}
+      MAX_AUDIT_COST_USD: ${{ inputs.max_audit_cost_usd || '0.50' }}
+      EXPERIMENT_ID: ab-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+      - name: Require live OpenAI credential
+        run: |
+          if [ -z "${OPENAI_APY_KEY:-}" ]; then
+            echo "OPENAI_APY_KEY is missing; live A/B cannot run."
+            exit 2
+          fi
+
+      - name: Download latest reusable production baseline
+        id: baseline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/cvfit-ab-baseline
+          mkdir -p /tmp/cvfit-ab-baseline
+          selected=""
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-ab-candidate
+            mkdir -p /tmp/cvfit-ab-candidate
+            if ! gh run download "$run_id" -n "auto-cv-$run_id" -D /tmp/cvfit-ab-candidate; then
+              continue
+            fi
+            count="$(find /tmp/cvfit-ab-candidate -type f -name cv_final.json | wc -l | tr -d ' ')"
+            if [ "${count:-0}" -gt 0 ]; then
+              cp -a /tmp/cvfit-ab-candidate/. /tmp/cvfit-ab-baseline/
+              selected="$run_id"
+              echo "count=$count" >> "$GITHUB_OUTPUT"
+              break
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=20" --jq '.workflow_runs[].id'
+          )
+          if [ -z "$selected" ]; then
+            echo "No recent production auto-cv artifact with reusable baseline CVs was found."
+            exit 2
+          fi
+          echo "run_id=$selected" >> "$GITHUB_OUTPUT"
+          echo "Reusing baseline from vacancy-ingest run $selected; no baseline LLM calls will be repeated."
+
+      - name: Run optimized generation plus order-reversed blind agent audits
+        id: experiment
+        continue-on-error: true
+        run: >-
+          python -m cv_agent.ab_experiment
+          --baseline-outputs /tmp/cvfit-ab-baseline
+          --vacancy-state vacancy_state
+          --evidence-state rag_state
+          --output "outputs/ab/${EXPERIMENT_ID}"
+          --experiment-id "${EXPERIMENT_ID}"
+          --max-cases "${MAX_CASES}"
+          --max-optimized-cost-usd "${MAX_OPTIMIZED_COST_USD}"
+          --max-audit-cost-usd "${MAX_AUDIT_COST_USD}"
+
+      - name: Build blind human-review Pages tab
+        if: steps.experiment.outcome == 'success'
+        run: >-
+          python -m cv_presentation.ab_showcase build
+          --experiment-root "outputs/ab/${EXPERIMENT_ID}"
+          --site-dir /tmp/cvfit-ab-site
+
+      - name: Download latest non-empty vacancy showcase for combined deploy
+        if: steps.experiment.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          selected=""
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-main-site
+            mkdir -p /tmp/cvfit-main-site
+            if ! gh run download "$run_id" -n daily-showcase -D /tmp/cvfit-main-site; then
+              continue
+            fi
+            count="$(find /tmp/cvfit-main-site/vacancies -type f -name 'cv_primary.html' 2>/dev/null | wc -l | tr -d ' ')"
+            if [ "${count:-0}" -gt 0 ]; then
+              mv /tmp/cvfit-main-site _site
+              selected="$run_id"
+              break
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=20" --jq '.workflow_runs[].id'
+          )
+          if [ -z "$selected" ]; then
+            echo "No non-empty daily showcase available for combined A/B deploy."
+            exit 2
+          fi
+          mkdir -p _site/ab-testing
+          cp -a /tmp/cvfit-ab-site/. _site/ab-testing/
+          python -m cv_presentation.ab_showcase attach --site-dir _site
+          echo "Combined daily showcase $selected with blind A/B tab."
+
+      - name: Upload raw A/B evidence bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-ab-audit-${{ github.run_id }}
+          path: outputs/ab/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload reusable A/B Pages fragment
+        if: steps.experiment.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-ab-audit-site
+          path: /tmp/cvfit-ab-site/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Configure GitHub Pages
+        if: steps.experiment.outcome == 'success'
+        uses: actions/configure-pages@v5
+      - name: Upload combined Pages artifact
+        if: steps.experiment.outcome == 'success'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy combined vacancy feed plus A/B audit
+        if: steps.experiment.outcome == 'success'
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Publish experiment summary
+        if: always()
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          import os
+          from pathlib import Path
+          root = Path('outputs/ab') / os.environ['EXPERIMENT_ID']
+          report = root / 'ab_report.json'
+          print('## CV cost A/B audit')
+          print('')
+          print(f"Baseline artifact run: `{os.environ.get('BASELINE_RUN_ID', '${{ steps.baseline.outputs.run_id }}')}`")
+          if not report.exists():
+              print('Live experiment did not produce a report. Check the experiment step for quota or runtime errors.')
+          else:
+              data = json.loads(report.read_text(encoding='utf-8'))
+              print(f"Completed cases: **{data['completed_case_count']}** / {data['selected_case_count']}")
+              print(f"Mean generation savings: **{data['mean_cost_savings_pct']}%**")
+              print(f"Mean Headhunter delta: **{data['mean_headhunter_score_delta']}**")
+              print(f"Machine-gate passes: **{data['machine_gate_pass_count']}**")
+              print('Human verdict remains blinded in GitHub Pages until all cases are voted.')
+          PY
+
+      - name: Propagate live experiment failure
+        if: steps.experiment.outcome != 'success'
+        run: |
+          echo "The deterministic A/B harness passed, but the live experiment failed or was blocked (commonly quota/credits)."
+          exit 1

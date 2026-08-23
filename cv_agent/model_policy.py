@@ -59,5 +59,45 @@ def policy_for_iteration(iteration: int) -> IterationModelPolicy:
     )
 
 
+def cost_optimized_policy_for_iteration(
+    iteration: int,
+    *,
+    previous_score: int | None = None,
+    previous_blocking_issues: int | None = None,
+    previous_validators_pass: bool = False,
+) -> IterationModelPolicy:
+    """Conservative cost policy used only by the A/B cost experiment.
+
+    Iterations 1-4 are identical to the production baseline. Iteration 5 keeps
+    the premium model only when the previous candidate is genuinely close to
+    passing and all deterministic validators already pass. Otherwise the fifth
+    review stays on the balanced tier; a premium model cannot repair missing
+    evidence or deterministic safety failures.
+    """
+
+    baseline = policy_for_iteration(iteration)
+    if iteration < MAX_REVIEW_ITERATIONS:
+        return baseline
+
+    close_to_pass = (
+        previous_score is not None
+        and previous_score >= 90
+        and (previous_blocking_issues or 0) <= 1
+        and previous_validators_pass
+    )
+    if close_to_pass:
+        return baseline
+
+    balanced = model_ids()["balanced"]
+    return IterationModelPolicy(
+        iteration=iteration,
+        tier="balanced_guarded",
+        reviewer_model=balanced,
+        reviser_model=balanced,
+        max_output_tokens=5500,
+        premium=False,
+    )
+
+
 def escalation_plan() -> list[IterationModelPolicy]:
     return [policy_for_iteration(iteration) for iteration in range(1, MAX_REVIEW_ITERATIONS + 1)]
