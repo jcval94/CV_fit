@@ -194,6 +194,11 @@ def validate_html_and_export_pdf(
     metrics used by a separate senior-CV presentation gate: vertical page use,
     section area ratios and rendered item counts. Those metrics do not change the
     physical PASS/FAIL result by themselves.
+
+    Preview screenshots intentionally use screen media so the exact final HTML
+    retains its page background, margins, gaps and shadows and therefore reads as
+    physical sheets. Deterministic measurement and PDF export continue to use
+    print media so validation semantics do not change.
     """
     if expected_pages not in {1, 2}:
         raise ValueError("expected_pages must be 1 or 2")
@@ -212,12 +217,15 @@ def validate_html_and_export_pdf(
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         page = browser.new_page(viewport={"width": 1440, "height": 1800}, device_scale_factor=1)
-        page.emulate_media(media="print")
         page.goto(html_path.resolve().as_uri(), wait_until="networkidle")
         page.evaluate("document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()")
-        raw_pages = _measure_dom(page)
+
         if screenshot_path is not None:
+            page.emulate_media(media="screen")
             page.screenshot(path=str(screenshot_path), full_page=True)
+
+        page.emulate_media(media="print")
+        raw_pages = _measure_dom(page)
         page.pdf(
             path=str(pdf_path),
             format="Letter",
