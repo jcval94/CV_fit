@@ -2,23 +2,27 @@ name: Production readiness canary
 
 on:
   workflow_dispatch:
-  issues:
-    types: [opened]
+    inputs:
+      vacancy_id:
+        description: "Canonical vacancy to validate"
+        required: true
+        default: "vac-04e92192e608ea02"
+        type: string
 
 permissions:
   contents: read
-  issues: write
+
+concurrency:
+  group: production-canary
+  cancel-in-progress: false
 
 jobs:
   canary:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      github.event.issue.title == '[eval] Run production readiness canary'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
-      CANARY_VACANCY_ID: vac-04e92192e608ea02
+      CANARY_VACANCY_ID: ${{ inputs.vacancy_id }}
       CANARY_RUN_ID: prod-canary-${{ github.run_id }}
       CVFIT_EVENT_LOG: /tmp/cvfit-observability/events.jsonl
       CVFIT_RUN_ID: prod-canary-${{ github.run_id }}
@@ -57,9 +61,6 @@ jobs:
             --full-rebuild \
             --fail-on-quarantine
 
-          # Production generation consumes the versioned Retrieval V2 state.
-          # Start from that exact state, refresh evidence incrementally, then
-          # let rag.dense embed only if the canonical evidence actually changed.
           rm -rf /tmp/rag_state
           cp -a rag_state /tmp/rag_state
           python -m rag.evidence \
@@ -88,48 +89,108 @@ jobs:
           print('retrieval_v2_canary_preflight=PASS', required_state)
           PY
 
-      - name: Generate and review CV with live OpenAI
+      - name: Generate and semantically validate CV with live OpenAI
         id: generation
         if: steps.retrieval.outcome == 'success'
         continue-on-error: true
-        run: >-
-          python -m cv_auto
-          --ingest-report /tmp/canary-ingest.json
-          --vacancy-state /tmp/vacancy_state
-          --evidence-state /tmp/rag_state
-          --generation-state /tmp/generation_state
-          --outputs outputs/auto
-          --run-id "$CANARY_RUN_ID"
-          --source-commit "$(git rev-parse HEAD)"
-          --retrieval-mode hybrid-rerank
-          --max-vacancies-per-run 1
-          --max-estimated-cost-usd 5.0
+        run: |
+          set -euo pipefail
+          python -m cv_auto \
+            --ingest-report /tmp/canary-ingest.json \
+            --vacancy-state /tmp/vacancy_state \
+            --evidence-state /tmp/rag_state \
+            --generation-state /tmp/generation_state \
+            --outputs outputs/auto \
+            --run-id "$CANARY_RUN_ID" \
+            --source-commit "$(git rev-parse HEAD)" \
+            --retrieval-mode hybrid-rerank \
+            --max-vacancies-per-run 1 \
+            --max-estimated-cost-usd 5.0
 
-      - name: Generate grounded cover letter
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          vacancy_id = os.environ['CANARY_VACANCY_ID']
+          run_id = os.environ['CANARY_RUN_ID']
+          batch_path = Path('outputs/auto/_batch') / run_id / 'generation_run_report.json'
+          batch = json.loads(batch_path.read_text(encoding='utf-8'))
+          result = next((item for item in batch.get('results', []) if item.get('vacancy_id') == vacancy_id), None)
+          if not result:
+              raise SystemExit(f'generation result missing for {vacancy_id}')
+          status = result.get('status')
+          if status not in {'PASS', 'COMPLETED_BELOW_TARGET'}:
+              raise SystemExit(f'generation semantic status is {status}: {result.get("error")}')
+          print('generation_semantic_gate=PASS', status)
+          PY
+
+      - name: Generate and semantically validate grounded cover letter
         id: cover
         if: steps.generation.outcome == 'success'
         continue-on-error: true
-        run: >-
-          python -m cv_agent.cover_letter_batch
-          --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json"
-          --outputs outputs/auto
-          --vacancy-state /tmp/vacancy_state
-          --generation-state /tmp/generation_state
-          --max-estimated-cost-usd 1.5
+        run: |
+          set -euo pipefail
+          python -m cv_agent.cover_letter_batch \
+            --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json" \
+            --outputs outputs/auto \
+            --vacancy-state /tmp/vacancy_state \
+            --generation-state /tmp/generation_state \
+            --max-estimated-cost-usd 1.5
 
-      - name: Build and validate HTML/PDF presentation bundle
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          vacancy_id = os.environ['CANARY_VACANCY_ID']
+          run_id = os.environ['CANARY_RUN_ID']
+          batch = json.loads((Path('outputs/auto/_batch') / run_id / 'generation_run_report.json').read_text(encoding='utf-8'))
+          result = next(item for item in batch.get('results', []) if item.get('vacancy_id') == vacancy_id)
+          generated_run_id = result.get('run_id')
+          cover = Path('outputs/auto') / vacancy_id / str(generated_run_id) / 'cover_letter_final.md'
+          if not cover.is_file() or cover.stat().st_size == 0:
+              raise SystemExit(f'cover letter artifact missing: {cover}')
+          print('cover_semantic_gate=PASS', cover)
+          PY
+
+      - name: Build and semantically validate HTML/PDF presentation bundle
         id: presentation
-        if: steps.generation.outcome == 'success' && steps.cover.outcome == 'success'
+        if: steps.cover.outcome == 'success'
         continue-on-error: true
-        run: >-
-          python -m cv_presentation.batch_bundle
-          --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json"
-          --outputs outputs/auto
-          --vacancy-state /tmp/vacancy_state
-          --generation-state /tmp/generation_state
-          --identity-public cv_presentation/identity.public.yaml
-          --brand-profiles-dir cv_presentation/brands
-          --max-design-cost-usd 1.5
+        run: |
+          set -euo pipefail
+          python -m cv_presentation.batch_bundle \
+            --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json" \
+            --outputs outputs/auto \
+            --vacancy-state /tmp/vacancy_state \
+            --generation-state /tmp/generation_state \
+            --identity-public cv_presentation/identity.public.yaml \
+            --brand-profiles-dir cv_presentation/brands \
+            --max-design-cost-usd 1.5
+
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          vacancy_id = os.environ['CANARY_VACANCY_ID']
+          run_id = os.environ['CANARY_RUN_ID']
+          generation = json.loads((Path('outputs/auto/_batch') / run_id / 'generation_run_report.json').read_text(encoding='utf-8'))
+          generated = next(item for item in generation.get('results', []) if item.get('vacancy_id') == vacancy_id)
+          generated_run_id = generated.get('run_id')
+          bundle_batch = json.loads((Path('outputs/auto/_batch') / run_id / 'application_bundle_batch_report.json').read_text(encoding='utf-8'))
+          result = next((item for item in bundle_batch.get('results', []) if item.get('vacancy_id') == vacancy_id), None)
+          if not result:
+              raise SystemExit(f'presentation result missing for {vacancy_id}')
+          status = result.get('status')
+          if status not in {'PASS', 'REVIEW_REQUIRED'}:
+              raise SystemExit(f'presentation semantic status is {status}: {result.get("error") or result.get("reason")}')
+
+          run_dir = Path('outputs/auto') / vacancy_id / str(generated_run_id)
+          required = ['cv_primary.html', 'cv_primary.pdf', 'application_bundle_report.json']
+          missing = [name for name in required if not (run_dir / name).is_file()]
+          if missing:
+              raise SystemExit(f'presentation artifacts missing: {missing}')
+          print('presentation_semantic_gate=PASS', status)
+          PY
 
       - name: Build structured E2E diagnostic
         if: always()
@@ -139,74 +200,17 @@ jobs:
           COVER_OUTCOME: ${{ steps.cover.outcome }}
           PRESENTATION_OUTCOME: ${{ steps.presentation.outcome }}
         run: |
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
-
-          run_id = os.environ['CANARY_RUN_ID']
-          vacancy_id = os.environ['CANARY_VACANCY_ID']
-          run_url = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
-
-          def load(path, default):
-              try:
-                  return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
-              except Exception as exc:
-                  return {**default, '_read_error': f'{type(exc).__name__}: {exc}'} if isinstance(default, dict) else default
-
-          batch_path = Path('outputs/auto/_batch') / run_id / 'generation_run_report.json'
-          bundle_path = Path('outputs/auto/_batch') / run_id / 'application_bundle_batch_report.json'
-          manifest_path = Path('/tmp/generation_state/manifest.json')
-          batch = load(batch_path, {'results': []})
-          bundle_batch = load(bundle_path, {'results': []})
-          manifest = load(manifest_path, {'entries': {}})
-
-          generated = next((item for item in batch.get('results', []) if item.get('vacancy_id') == vacancy_id), {})
-          result = next((item for item in bundle_batch.get('results', []) if item.get('vacancy_id') == vacancy_id), {})
-          entry = (manifest.get('entries') or {}).get(vacancy_id, {})
-          generated_run_id = generated.get('run_id') or entry.get('run_id')
-          run_dir = Path('outputs/auto') / vacancy_id / str(generated_run_id or '')
-          required_artifacts = ['cv_final.json', 'cover_letter_final.md', 'cv_primary.html', 'cv_primary.pdf', 'application_bundle_report.json']
-          missing = [name for name in required_artifacts if not (run_dir / name).exists()]
-
-          generation_status = generated.get('status') or entry.get('status') or 'NOT_REACHED'
-          presentation_status = result.get('status') or 'NOT_REACHED'
-          stage_outcomes = {
-              'retrieval': os.environ.get('RETRIEVAL_OUTCOME') or 'skipped',
-              'generation': os.environ.get('GENERATION_OUTCOME') or 'skipped',
-              'cover': os.environ.get('COVER_OUTCOME') or 'skipped',
-              'presentation': os.environ.get('PRESENTATION_OUTCOME') or 'skipped',
-          }
-          healthy_retrieval = stage_outcomes['retrieval'] == 'success'
-          healthy_generation = stage_outcomes['generation'] == 'success' and generation_status in {'PASS', 'COMPLETED_BELOW_TARGET'}
-          healthy_cover = stage_outcomes['cover'] == 'success' and (run_dir / 'cover_letter_final.md').exists()
-          healthy_presentation = stage_outcomes['presentation'] == 'success' and presentation_status in {'PASS', 'REVIEW_REQUIRED'}
-          canary_healthy = healthy_retrieval and healthy_generation and healthy_cover and healthy_presentation and not missing
-
-          summary = {
-              'vacancy_id': vacancy_id,
-              'run_url': run_url,
-              'canary_healthy': canary_healthy,
-              'stage_outcomes': stage_outcomes,
-              'generation_status': generation_status,
-              'generation_error': generated.get('error') or entry.get('error'),
-              'presentation_status': presentation_status,
-              'presentation_error': result.get('error') or result.get('reason'),
-              'ready_to_send': bool(result.get('ready_to_send')),
-              'missing_artifacts': missing,
-              'headhunter_score': entry.get('headhunter_score'),
-              'coverage_score': entry.get('coverage_score'),
-              'generation_cost_usd': result.get('generation_cost_usd', entry.get('known_estimated_cost_usd')),
-              'cover_letter_cost_usd': result.get('cover_letter_cost_usd', entry.get('cover_letter_cost_usd')),
-              'presentation_cost_usd': result.get('presentation_cost_usd', entry.get('presentation_cost_usd')),
-              'total_pipeline_known_cost_usd': result.get('total_pipeline_known_cost_usd', entry.get('total_pipeline_known_cost_usd')),
-              'total_pipeline_cost_complete': result.get('total_pipeline_cost_complete', entry.get('total_pipeline_cost_complete')),
-          }
-          Path('/tmp/production-canary-summary.json').write_text(
-              json.dumps(summary, indent=2, sort_keys=True) + '\n',
-              encoding='utf-8',
-          )
-          print(json.dumps(summary, sort_keys=True))
-          PY
+          python -m cv_observability.production_canary \
+            --outputs-root outputs/auto \
+            --generation-state /tmp/generation_state \
+            --vacancy-id "$CANARY_VACANCY_ID" \
+            --run-id "$CANARY_RUN_ID" \
+            --run-url "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            --retrieval-process "$RETRIEVAL_OUTCOME" \
+            --generation-process "$GENERATION_OUTCOME" \
+            --cover-process "$COVER_OUTCOME" \
+            --presentation-process "$PRESENTATION_OUTCOME" \
+            --output /tmp/production-canary-summary.json
 
       - name: Add canary summary to workflow
         if: always()
@@ -218,18 +222,6 @@ jobs:
             cat /tmp/production-canary-summary.json >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
           fi
-
-      - name: Comment sanitized result on trigger issue
-        if: always() && github.event_name == 'issues'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if [ -f /tmp/production-canary-summary.json ]; then
-            { echo '### Production readiness canary'; echo; echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"; echo; echo '```json'; cat /tmp/production-canary-summary.json; echo '```'; } > /tmp/canary-comment.md
-          else
-            printf '### Production readiness canary\n\nRun: %s/%s/actions/runs/%s\n\nThe canary failed before a structured diagnostic could be built. No WhatsApp notification was attempted.\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > /tmp/canary-comment.md
-          fi
-          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/canary-comment.md
 
       - name: Upload canary artifacts
         if: always()
