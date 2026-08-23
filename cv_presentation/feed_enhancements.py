@@ -44,10 +44,7 @@ kbd{font:10px/1.2 ui-monospace,SFMono-Regular,Consolas,monospace;border:1px soli
 .cv-tile:first-child{position:relative}
 .cv-tile:first-child:before{content:"RECOMMENDED";position:absolute;z-index:4;top:10px;left:10px;background:#1877f2;color:#fff;font-size:9px;font-weight:800;letter-spacing:.35px;border-radius:999px;padding:4px 7px;box-shadow:0 1px 3px rgba(0,0,0,.18)}
 .page-count-badge{display:inline-flex;align-items:center;border-radius:999px;background:#eef2f7;color:#475569;font-size:10px;font-weight:800;padding:3px 7px;margin-left:6px}
-.cv-canvas.two-page-preview{position:relative}
-.cv-canvas.two-page-preview .page-divider{position:absolute;z-index:3;left:8px;right:8px;top:50%;border-top:2px solid rgba(24,119,242,.8);pointer-events:none;box-shadow:0 0 0 2px rgba(255,255,255,.8)}
-.cv-canvas.two-page-preview .page-marker{position:absolute;z-index:4;left:12px;background:rgba(17,24,39,.88);color:white;border-radius:999px;padding:3px 7px;font-size:9px;font-weight:800;pointer-events:none}
-.cv-canvas.two-page-preview .page-marker.one{top:10px}.cv-canvas.two-page-preview .page-marker.two{top:calc(50% + 10px)}
+.metrics-origin{display:block;margin-top:7px;color:var(--muted);font-size:10px}
 @media(max-width:800px){.feed-search{border-radius:10px}.feed-search-row{grid-template-columns:1fr}.feed-search button{padding:9px 12px}.process-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
 '''.strip()
 
@@ -62,7 +59,11 @@ _EXTRA_JS = r'''
   if(!input||!clear||!count)return;
 
   const safe=value=>value===null||value===undefined||value===''?'n/a':String(value);
-  const money=value=>Number.isFinite(Number(value))?`$${Number(value).toFixed(2)}`:'n/a';
+  const money=value=>{
+    if(value===null||value===undefined||value==='')return 'n/a';
+    const parsed=Number(value);
+    return Number.isFinite(parsed)?`$${parsed.toFixed(4)}`:'n/a';
+  };
   const metric=(label,value)=>`<div class="process-metric"><span>${label}</span><strong>${safe(value)}</strong></div>`;
   const visiblePosts=()=>posts.filter(post=>!post.classList.contains('is-hidden')&&!post.classList.contains('search-hidden'));
   function updateCount(){count.textContent=`${visiblePosts().length} of ${posts.length} vacancies shown.`;}
@@ -97,7 +98,7 @@ _EXTRA_JS = r'''
     if(!primary)return;
     const pdf=primary.querySelector('.cv-actions a[href$=".pdf"],.cv-actions a[href$=".PDF"]');
     const html=primary.querySelector('.cv-actions a[href*=".html"]');
-    const target=pdf||html;
+    const target=html||pdf;
     if(!target)return;
     const ready=post.dataset.status==='ready';
     const cta=document.createElement('a');
@@ -118,6 +119,8 @@ _EXTRA_JS = r'''
     const quality=process?.content_quality_target_reached===true?'PASS':process?.content_quality_target_reached===false?'NOT REACHED':'n/a';
     const premium=process?.premium_model_used===true?'yes':process?.premium_model_used===false?'no':'n/a';
     const presentation=process?.presentation_gate_status;
+    const totalCost=process?.total_pipeline_known_cost_usd;
+    const costComplete=process?.total_pipeline_cost_complete===true?'complete':process?.total_pipeline_cost_complete===false?'partial':'n/a';
     const block=document.createElement('div');
     block.className='process-metrics';
     block.innerHTML=[
@@ -127,7 +130,11 @@ _EXTRA_JS = r'''
       metric('RAG coverage',coverage),
       metric('Unsupported gaps',gaps),
       metric('Quality target',quality),
-      metric('Est. OpenAI cost',money(process?.estimated_cost_usd)),
+      metric('Pipeline OpenAI cost',money(totalCost)),
+      metric('Cost coverage',costComplete),
+      metric('Generation cost',money(process?.generation_cost_usd)),
+      metric('Cover-letter cost',money(process?.cover_letter_cost_usd)),
+      metric('Presentation cost',money(process?.presentation_cost_usd)),
       metric('Premium model',premium),
       metric('Retrieval',process?.retrieval_mode),
       metric('Presentation gate',presentation),
@@ -136,10 +143,16 @@ _EXTRA_JS = r'''
     ].join('');
     const body=post.querySelector('.post-body');
     body?.appendChild(block);
+    if(process?.metrics_origin==='carried_forward'){
+      const note=document.createElement('span');
+      note.className='metrics-origin';
+      note.textContent='Some non-status metrics were carried forward from the last published valid run instead of being replaced by missing retry data.';
+      body?.appendChild(note);
+    }
     refreshSearchText(post);
   }
 
-  async function addPageCues(post){
+  async function addPageCount(post){
     const vacancy=post.dataset.vacancy;if(!vacancy)return;
     try{
       const response=await fetch(`vacancies/${encodeURIComponent(vacancy)}/application_bundle_report.json`,{cache:'no-store'});
@@ -155,11 +168,6 @@ _EXTRA_JS = r'''
         if(head&&!head.querySelector('.page-count-badge')){
           const badge=document.createElement('span');badge.className='page-count-badge';badge.textContent=`${pages} page${pages===1?'':'s'}`;head.appendChild(badge);
         }
-        const canvas=tile.querySelector('.cv-canvas');
-        if(pages===2&&canvas&&!canvas.classList.contains('two-page-preview')){
-          canvas.classList.add('two-page-preview');
-          canvas.insertAdjacentHTML('beforeend','<span class="page-marker one">Page 1</span><span class="page-divider"></span><span class="page-marker two">Page 2</span>');
-        }
       });
     }catch(_error){}
   }
@@ -174,7 +182,7 @@ _EXTRA_JS = r'''
       const id=String(post.dataset.vacancy||'');
       addRecommendedCta(post);
       addProcessMetrics(post,rows.get(id)||{},metrics[id]||{});
-      void addPageCues(post);
+      void addPageCount(post);
     });
     applySearch();
   });
@@ -198,10 +206,33 @@ def _review_rounds(entry: dict[str, Any]) -> int | None:
     value = entry.get("headhunter_iterations")
     if isinstance(value, int) and value > 0:
         return value
-    # COMPLETED_BELOW_TARGET is emitted only after exhausting the bounded
-    # five-round Senior Headhunter loop.
     if entry.get("status") == "COMPLETED_BELOW_TARGET":
         return MAX_HEADHUNTER_REVIEWS
+    return None
+
+
+def _present(value: Any) -> bool:
+    return value is not None and value != ""
+
+
+def _metric_value(entry: dict[str, Any], key: str) -> Any:
+    value = entry.get(key)
+    if _present(value):
+        return value
+    last = entry.get("last_known_metrics")
+    if isinstance(last, dict):
+        return last.get(key)
+    return None
+
+
+def _generation_cost(entry: dict[str, Any]) -> float | None:
+    for key in ("known_estimated_cost_usd", "estimated_cost_usd", "attempt_known_cost_usd"):
+        value = _metric_value(entry, key)
+        if _present(value):
+            try:
+                return float(value)
+            except (TypeError, ValueError):
+                pass
     return None
 
 
@@ -210,28 +241,93 @@ def build_process_metrics(manifest_path: Path) -> dict[str, Any]:
     rows: dict[str, Any] = {}
     for vacancy_id, raw in manifest.get("entries", {}).items():
         entry = dict(raw or {})
-        gate = dict(entry.get("presentation_gate") or {})
-        unsupported = list(entry.get("unsupported_requirements") or [])
+        gate_raw = _metric_value(entry, "presentation_gate")
+        gate = dict(gate_raw or {}) if isinstance(gate_raw, dict) else {}
+        unsupported_raw = _metric_value(entry, "unsupported_requirements")
+        unsupported = list(unsupported_raw or []) if isinstance(unsupported_raw, list) else []
+        generation_cost = _generation_cost(entry)
+        total_known = entry.get("total_pipeline_known_cost_usd")
+        total_complete = entry.get("total_pipeline_cost_complete")
+        if not _present(total_known):
+            stage_values = [
+                generation_cost,
+                entry.get("cover_letter_cost_usd"),
+                entry.get("presentation_cost_usd"),
+            ]
+            parsed: list[float] = []
+            for value in stage_values:
+                if _present(value):
+                    try:
+                        parsed.append(float(value))
+                    except (TypeError, ValueError):
+                        pass
+            total_known = round(sum(parsed), 8) if parsed else None
+            if total_complete is None:
+                total_complete = len(parsed) == 3
         rows[str(vacancy_id)] = {
             "status": entry.get("status"),
             "ready_to_send": bool(entry.get("ready_to_send")),
             "review_required": bool(entry.get("review_required")),
-            "coverage_score": entry.get("coverage_score"),
-            "estimated_cost_usd": entry.get("estimated_cost_usd"),
+            "coverage_score": _metric_value(entry, "coverage_score"),
+            "estimated_cost_usd": _metric_value(entry, "estimated_cost_usd"),
+            "generation_cost_usd": generation_cost,
+            "cover_letter_cost_usd": entry.get("cover_letter_cost_usd"),
+            "presentation_cost_usd": entry.get("presentation_cost_usd"),
+            "total_pipeline_known_cost_usd": total_known,
+            "total_pipeline_cost_complete": total_complete,
+            "cumulative_known_cost_usd": entry.get("cumulative_known_cost_usd"),
             "unsupported_requirements_count": len(unsupported),
-            "content_quality_target_reached": entry.get("content_quality_target_reached"),
+            "content_quality_target_reached": _metric_value(entry, "content_quality_target_reached"),
             "retrieval_mode": entry.get("retrieval_mode"),
             "generation_logic_version": entry.get("generation_logic_version"),
             "presentation_gate_status": gate.get("status"),
             "primary_template": gate.get("primary_template"),
             "cover_letter_ready": gate.get("cover_letter_ready"),
-            "headhunter_iterations": _review_rounds(entry),
-            "best_review_iteration": entry.get("best_review_iteration"),
-            "headhunter_score": entry.get("headhunter_score"),
-            "headhunter_decision": entry.get("headhunter_decision"),
-            "premium_model_used": entry.get("premium_model_used"),
+            "headhunter_iterations": _review_rounds(entry) or _metric_value(entry, "headhunter_iterations"),
+            "best_review_iteration": _metric_value(entry, "best_review_iteration"),
+            "headhunter_score": _metric_value(entry, "headhunter_score"),
+            "headhunter_decision": _metric_value(entry, "headhunter_decision"),
+            "premium_model_used": _metric_value(entry, "premium_model_used"),
+            "metrics_origin": "last_known" if isinstance(entry.get("last_known_metrics"), dict) else "current",
         }
-    return {"schema_version": 1, "entries": rows}
+    return {"schema_version": 2, "entries": rows}
+
+
+def _merge_published_metrics(previous: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
+    """Never replace a previously published valid metric with null from a retry.
+
+    Latest status/readiness remain authoritative. Only observability fields can be
+    carried forward, and the row is marked so the UI makes that provenance clear.
+    """
+    carry_fields = {
+        "coverage_score",
+        "estimated_cost_usd",
+        "generation_cost_usd",
+        "cover_letter_cost_usd",
+        "presentation_cost_usd",
+        "total_pipeline_known_cost_usd",
+        "total_pipeline_cost_complete",
+        "cumulative_known_cost_usd",
+        "unsupported_requirements_count",
+        "content_quality_target_reached",
+        "presentation_gate_status",
+        "primary_template",
+        "cover_letter_ready",
+        "headhunter_iterations",
+        "best_review_iteration",
+        "headhunter_score",
+        "headhunter_decision",
+        "premium_model_used",
+    }
+    merged = dict(current)
+    carried = False
+    for key in carry_fields:
+        if not _present(merged.get(key)) and _present(previous.get(key)):
+            merged[key] = previous[key]
+            carried = True
+    if carried:
+        merged["metrics_origin"] = "carried_forward"
+    return merged
 
 
 def enhance_feed_index(
@@ -239,17 +335,19 @@ def enhance_feed_index(
     *,
     generation_manifest_path: Path = Path("generation_state/manifest.json"),
 ) -> dict[str, object]:
-    """Enhance an already-rendered vacancy feed without regenerating CVs.
-
-    The function publishes only a sanitized process-metrics subset from the
-    versioned generation manifest. It never publishes evidence, prompts,
-    private contact data, full run reports, or browser-local human decisions.
-    """
+    """Enhance an already-rendered vacancy feed without regenerating CVs."""
     index_path = site_dir / "index.html"
     if not index_path.exists():
         raise FileNotFoundError(index_path)
 
+    previous_payload = _read_json(site_dir / PROCESS_METRICS_FILE, {"entries": {}})
     process_metrics = build_process_metrics(generation_manifest_path)
+    previous_rows = previous_payload.get("entries", {}) if isinstance(previous_payload, dict) else {}
+    for vacancy_id, current in list(process_metrics["entries"].items()):
+        previous = previous_rows.get(vacancy_id)
+        if isinstance(previous, dict):
+            process_metrics["entries"][vacancy_id] = _merge_published_metrics(previous, current)
+
     (site_dir / PROCESS_METRICS_FILE).write_text(
         json.dumps(process_metrics, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
@@ -281,7 +379,8 @@ def enhance_feed_index(
             "decision_specific_selected_styles",
             "recommended_cv_cta",
             "explicit_page_count",
-            "two_page_preview_cues",
             "process_metrics",
+            "stage_cost_breakdown",
+            "valid_metric_carry_forward",
         ],
     }
