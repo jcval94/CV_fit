@@ -15,9 +15,11 @@ from cv_presentation.fit import fit_presentation_model
 from cv_presentation.identity import resolve_candidate_identity
 from cv_presentation.pagination import build_page_plan
 from cv_presentation.physical_layout import PhysicalLayoutReport, validate_html_and_export_pdf
+from cv_presentation.presentation_reviewer import PresentationReview, review_presentation
 from cv_presentation.render_html import write_html
 from cv_presentation.schemas import PresentationConfig
 from cv_presentation.templates import get_template_policy
+from cv_presentation.visual_evals import VisualEvalReport, evaluate_visual_balance
 
 
 class PresentationGateBlocked(ValueError):
@@ -32,6 +34,8 @@ class FitAttempt(BaseModel):
     expected_pages: int | None = None
     physical_status: str | None = None
     physical_reasons: list[str] = Field(default_factory=list)
+    visual_status: str | None = None
+    visual_reasons: list[str] = Field(default_factory=list)
 
 
 class TemplateBundle(BaseModel):
@@ -43,15 +47,22 @@ class TemplateBundle(BaseModel):
     fit_report_file: str
     design_report_file: str
     physical_report_file: str
+    visual_eval_file: str
+    presentation_review_file: str
     fit_status: str
     design_status: str
     physical_status: str
+    visual_status: str
+    presentation_review_status: str
     expected_pages: int
+    page_utilization: list[float] = Field(default_factory=list)
+    section_area_ratios: dict[str, float] = Field(default_factory=dict)
+    section_item_counts: dict[str, int] = Field(default_factory=dict)
     attempts: list[FitAttempt]
 
 
 class ApplicationBundleReport(BaseModel):
-    schema_version: int = 1
+    schema_version: int = 2
     vacancy_id: str
     company: str
     role_title: str
@@ -98,8 +109,8 @@ def _design_for_template(
 
 
 def _template_attempt_profiles(template_id: str) -> list[tuple[int, int]]:
-    # Later attempts deliberately make the deterministic fitter more conservative.
-    # No claim text is rewritten or font size silently reduced.
+    # Later attempts make the deterministic fitter progressively more selective.
+    # No claim text is rewritten and font sizes are not silently reduced.
     if template_id == "harvard_v1":
         return [(84, 46), (78, 43), (72, 40), (66, 37), (60, 35)]
     if "sidebar" in template_id:
@@ -107,7 +118,7 @@ def _template_attempt_profiles(template_id: str) -> list[tuple[int, int]]:
     return [(92, 50), (86, 47), (80, 44), (72, 40), (64, 36)]
 
 
-def _render_until_physical_fit(
+def _render_until_presentation_fit(
     *,
     cv,
     candidate,
@@ -117,10 +128,12 @@ def _render_until_physical_fit(
     tokens,
     design_review: DesignReview,
     deterministic_design,
+    presentation_client: AdkStructuredClient,
 ) -> TemplateBundle:
     attempts: list[FitAttempt] = []
     final_fit_report = None
     final_physical: PhysicalLayoutReport | None = None
+    final_visual: VisualEvalReport | None = None
     final_expected_pages = 0
 
     html_path = output_dir / f"cv_{role}.html"
@@ -129,6 +142,8 @@ def _render_until_physical_fit(
     fit_report_path = output_dir / f"fit_report_{role}.json"
     design_report_path = output_dir / f"design_report_{role}.json"
     physical_report_path = output_dir / f"physical_layout_{role}.json"
+    visual_eval_path = output_dir / f"visual_eval_{role}.json"
+    presentation_review_path = output_dir / f"presentation_review_{role}.json"
 
     _write_json(design_report_path, {
         "template_id": template_id,
@@ -159,7 +174,9 @@ def _render_until_physical_fit(
             expected_pages=expected_pages,
             screenshot_path=screenshot_path,
         )
+        visual = evaluate_visual_balance(physical, template_id=template_id)
         final_physical = physical
+        final_visual = visual
         attempts.append(FitAttempt(
             attempt=attempt_number,
             chars_per_line=chars_per_line,
@@ -168,13 +185,27 @@ def _render_until_physical_fit(
             expected_pages=expected_pages,
             physical_status=physical.status,
             physical_reasons=list(physical.reasons),
+            visual_status=visual.status,
+            visual_reasons=list(visual.reasons),
         ))
-        if fit_report.status == "FIT" and physical.status == "PASS":
+        if fit_report.status == "FIT" and physical.status == "PASS" and visual.status == "PASS":
             break
 
-    assert final_fit_report is not None and final_physical is not None
+    assert final_fit_report is not None and final_physical is not None and final_visual is not None
     _write_json(fit_report_path, final_fit_report)
     _write_json(physical_report_path, final_physical)
+    _write_json(visual_eval_path, final_visual)
+
+    presentation_review: PresentationReview = asyncio.run(
+        review_presentation(
+            client=presentation_client,
+            template_id=template_id,
+            role=role,
+            visual=final_visual,
+            physical=final_physical,
+        )
+    )
+    _write_json(presentation_review_path, presentation_review)
 
     return TemplateBundle(
         template_id=template_id,
@@ -185,10 +216,17 @@ def _render_until_physical_fit(
         fit_report_file=fit_report_path.name,
         design_report_file=design_report_path.name,
         physical_report_file=physical_report_path.name,
+        visual_eval_file=visual_eval_path.name,
+        presentation_review_file=presentation_review_path.name,
         fit_status=final_fit_report.status,
         design_status=design_review.decision,
         physical_status=final_physical.status,
+        visual_status=final_visual.status,
+        presentation_review_status=presentation_review.decision,
         expected_pages=final_expected_pages,
+        page_utilization=list(final_visual.page_utilization),
+        section_area_ratios=dict(final_visual.section_area_ratios),
+        section_item_counts=dict(final_visual.section_item_counts),
         attempts=attempts,
     )
 
@@ -200,7 +238,7 @@ def build_application_bundle(
     identity_public_path: Path,
     brand_profiles_dir: Path,
     design_client: AdkStructuredClient,
-    primary_template: str = "executive_letter_v1",
+    primary_template: str = "technical_modern_v1",
     alternate_template: str = "harvard_v1",
 ) -> ApplicationBundleReport:
     cv_path = run_dir / "cv_final.json"
@@ -226,7 +264,7 @@ def build_application_bundle(
             company=str(vacancy["company"]),
             brand_profiles_dir=brand_profiles_dir,
         )
-        bundles.append(_render_until_physical_fit(
+        bundles.append(_render_until_presentation_fit(
             cv=cv,
             candidate=identity,
             template_id=template_id,
@@ -235,6 +273,7 @@ def build_application_bundle(
             tokens=tokens,
             design_review=design_review,
             deterministic_design=deterministic,
+            presentation_client=design_client,
         ))
 
     primary = next(item for item in bundles if item.role == "primary")
@@ -249,6 +288,10 @@ def build_application_bundle(
         reasons.append("primary_template_design_failed")
     if primary.physical_status != "PASS":
         reasons.append("primary_template_physical_layout_failed")
+    if primary.visual_status != "PASS":
+        reasons.append("primary_template_visual_balance_failed")
+    if primary.presentation_review_status != "PASS":
+        reasons.append("primary_template_presentation_review_required")
 
     report = ApplicationBundleReport(
         vacancy_id=str(vacancy["vacancy_id"]),

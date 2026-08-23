@@ -61,7 +61,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check -e .
       - name: Install Chromium for physical layout validation
         run: python -m playwright install --with-deps chromium
-      - name: Run deterministic agent, matching, presentation, layout, feed and cover-letter tests
+      - name: Run deterministic agent, editorial, presentation, visual, feed and cover-letter tests
         run: >-
           python -m unittest
           tests.test_cv_matching
@@ -69,8 +69,13 @@ jobs:
           tests.test_cv_agent_workflow
           tests.test_cv_telemetry
           tests.test_cv_presentation
+          tests.test_cv_editorial_policy
+          tests.test_cv_editorial_fit
           tests.test_cv_templates
+          tests.test_cv_template_gates
           tests.test_cv_physical_layout
+          tests.test_cv_visual_evals
+          tests.test_cv_showcase
           tests.test_cv_feed_enhancements
           tests.test_cover_letter
           tests.test_openai_provider
@@ -80,7 +85,7 @@ jobs:
         run: |
           python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
           python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id agent-context --source-commit "$(git rev-parse HEAD)" --full-rebuild
-      - name: Validate all current vacancies have full JD and grounded analysis context
+      - name: Validate current vacancies obey generation-safety JD contracts
         run: |
           python - <<'PY'
           from collections import Counter
@@ -88,9 +93,10 @@ jobs:
           from cv_agent.context import assemble_application_context
 
           records = sorted(Path("/tmp/vacancy_state/records").glob("*.json"))
-          assert len(records) == 6, f"expected the six 2026-08-21 canonical vacancies, got {len(records)}"
+          assert records, "expected at least one canonical vacancy"
           fidelity = Counter()
           eligible = []
+          blocked = []
           for path in records:
               context = assemble_application_context(
                   path.stem,
@@ -100,26 +106,31 @@ jobs:
               )
               vacancy = context["vacancy"]
               assert vacancy["application_language"] != "und", f"undetermined language for {path.stem}"
-              assert vacancy["jd_fidelity"] == "full", vacancy
-              assert vacancy["jd_generation_eligible"] is True, vacancy
-              assert vacancy["requirements"], vacancy
-              assert vacancy["responsibilities"], vacancy
               assert vacancy["fit_score"] is not None, f"source fit lost during enrichment merge for {path.stem}"
-              assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+              is_eligible = vacancy["jd_generation_eligible"] is True
+              if is_eligible:
+                  assert vacancy["jd_fidelity"] in {"full", "partial"}, vacancy
+                  assert vacancy["requirements"] or vacancy["responsibilities"], vacancy
+                  assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
+                  eligible.append(path.stem)
+              else:
+                  assert vacancy["jd_fidelity"] == "sparse", vacancy
+                  blocked.append(path.stem)
               fidelity[vacancy["jd_fidelity"]] += 1
-              eligible.append(path.stem)
               print(
                   path.stem,
                   "company=", vacancy["company"],
                   "language=", vacancy["application_language"],
                   "jd_fidelity=", vacancy["jd_fidelity"],
                   "jd_score=", vacancy["jd_fidelity_score"],
+                  "generation_eligible=", is_eligible,
                   "source_fit=", vacancy["fit_score"],
                   "coverage=", context["match_plan"]["coverage_score"],
                   "evidence_chunks=", len(context["evidence_chunks"]),
               )
           print("fidelity_counts=", dict(sorted(fidelity.items())))
           print("generation_eligible=", eligible)
+          print("generation_blocked_sparse=", blocked)
           PY
       - name: Validate Konfio canary preflight without model calls
         run: |
@@ -186,7 +197,7 @@ jobs:
           --evidence-state /tmp/rag_state
           --outputs outputs
           --run-id "${{ github.run_id }}"
-      - name: Build branded and Harvard HTML/PDF variants and physical layout gate
+      - name: Build Technical Modern + Harvard bundle and run presentation gates
         run: >-
           python -m cv_presentation.bundle_cli
           --vacancy-id "${{ inputs.vacancy_id }}"
@@ -196,6 +207,7 @@ jobs:
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 0.75
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: cv-${{ inputs.vacancy_id }}-${{ github.run_id }}
           path: outputs/${{ inputs.vacancy_id }}/${{ github.run_id }}/

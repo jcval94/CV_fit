@@ -10,6 +10,7 @@ LETTER_WIDTH_PT = 612.0
 LETTER_HEIGHT_PT = 792.0
 PIXEL_TOLERANCE = 1.5
 POINT_TOLERANCE = 2.0
+EDITORIAL_SECTIONS = ("experience", "education", "projects", "skills", "certifications")
 
 
 class OverflowElement(BaseModel):
@@ -19,6 +20,15 @@ class OverflowElement(BaseModel):
     left: float
     right: float
     bottom: float
+
+
+class SectionMeasurement(BaseModel):
+    page_number: int
+    section: str
+    height: float
+    area: float
+    item_count: int = 0
+    text_chars: int = 0
 
 
 class PhysicalPageMeasurement(BaseModel):
@@ -33,10 +43,14 @@ class PhysicalPageMeasurement(BaseModel):
     overflow_y: bool
     out_of_bounds: list[OverflowElement] = Field(default_factory=list)
     orphan_headings: list[str] = Field(default_factory=list)
+    usable_height: float = 0.0
+    used_height: float = 0.0
+    utilization_ratio: float = 0.0
+    sections: list[SectionMeasurement] = Field(default_factory=list)
 
 
 class PhysicalLayoutReport(BaseModel):
-    schema_version: int = 1
+    schema_version: int = 2
     status: Literal["PASS", "FAIL"]
     html_file: str
     pdf_file: str
@@ -47,6 +61,10 @@ class PhysicalLayoutReport(BaseModel):
     pages: list[PhysicalPageMeasurement]
     reasons: list[str] = Field(default_factory=list)
     screenshot_file: str | None = None
+    page_utilization: list[float] = Field(default_factory=list)
+    section_area_ratios: dict[str, float] = Field(default_factory=dict)
+    section_item_counts: dict[str, int] = Field(default_factory=dict)
+    empty_rendered_sections: list[str] = Field(default_factory=list)
 
 
 def _measure_dom(page) -> list[dict]:
@@ -56,6 +74,11 @@ def _measure_dom(page) -> list[dict]:
         (pages) => pages.map((root, pageIndex) => {
           const rr = root.getBoundingClientRect();
           const rs = getComputedStyle(root);
+          const paddingTop = parseFloat(rs.paddingTop || '0') || 0;
+          const paddingBottom = parseFloat(rs.paddingBottom || '0') || 0;
+          const contentTop = rr.top + paddingTop;
+          const contentBottom = rr.bottom - paddingBottom;
+          const usableHeight = Math.max(1, contentBottom - contentTop);
           const visible = (el) => {
             const s = getComputedStyle(el);
             const r = el.getBoundingClientRect();
@@ -95,6 +118,25 @@ def _measure_dom(page) -> list[dict]:
             const nr = next.getBoundingClientRect();
             if (nr.top >= rr.bottom - 2 || nr.bottom > rr.bottom + 1.5) orphanHeadings.push(label(h));
           }
+
+          const topSections = Array.from(root.querySelectorAll(':scope > [data-section]')).filter(visible);
+          let maxBottom = contentTop;
+          const sections = topSections.map((section) => {
+            const r = section.getBoundingClientRect();
+            maxBottom = Math.max(maxBottom, r.bottom);
+            const text = (section.textContent || '').replace(/\\s+/g, ' ').trim();
+            return {
+              page_number: pageIndex + 1,
+              section: section.dataset.section || 'unknown',
+              height: Math.max(0, r.height),
+              area: Math.max(0, r.width * r.height),
+              item_count: section.querySelectorAll('[data-item]').length,
+              text_chars: text.length,
+            };
+          });
+          const usedHeight = Math.max(0, Math.min(contentBottom, maxBottom) - contentTop);
+          const utilizationRatio = Math.max(0, Math.min(1, usedHeight / usableHeight));
+
           return {
             page_number: pageIndex + 1,
             client_width: root.clientWidth,
@@ -107,10 +149,36 @@ def _measure_dom(page) -> list[dict]:
             overflow_y: root.scrollHeight > root.clientHeight + 1.5,
             out_of_bounds: offenders.slice(0, 40),
             orphan_headings: orphanHeadings,
+            usable_height: usableHeight,
+            used_height: usedHeight,
+            utilization_ratio: utilizationRatio,
+            sections,
           };
         })
         """,
     )
+
+
+def _aggregate_section_metrics(measurements: list[PhysicalPageMeasurement]) -> tuple[dict[str, float], dict[str, int], list[str]]:
+    areas = {section: 0.0 for section in EDITORIAL_SECTIONS}
+    counts = {section: 0 for section in EDITORIAL_SECTIONS}
+    empty: list[str] = []
+    seen_occurrences: dict[str, int] = {}
+    for page in measurements:
+        for section in page.sections:
+            if section.section not in areas:
+                continue
+            areas[section.section] += section.area
+            counts[section.section] += section.item_count
+            seen_occurrences[section.section] = seen_occurrences.get(section.section, 0) + 1
+            if section.text_chars == 0 or section.height <= 0:
+                empty.append(f"page_{page.page_number}:{section.section}")
+    total_area = sum(areas.values())
+    ratios = {
+        section: round(area / total_area, 4) if total_area > 0 else 0.0
+        for section, area in areas.items()
+    }
+    return ratios, counts, empty
 
 
 def validate_html_and_export_pdf(
@@ -122,9 +190,10 @@ def validate_html_and_export_pdf(
 ) -> PhysicalLayoutReport:
     """Measure rendered Letter pages in Chromium, export PDF, and fail closed on clipping/overflow.
 
-    The HTML templates already create explicit `.page` containers. This validator treats the
-    browser's physical DOM geometry and the resulting PDF page boxes as authoritative. It does
-    not rewrite claims or silently shrink text.
+    In addition to mechanical layout safety, the report records objective visual
+    metrics used by a separate senior-CV presentation gate: vertical page use,
+    section area ratios and rendered item counts. Those metrics do not change the
+    physical PASS/FAIL result by themselves.
     """
     if expected_pages not in {1, 2}:
         raise ValueError("expected_pages must be 1 or 2")
@@ -194,6 +263,7 @@ def validate_html_and_export_pdf(
         if abs(width - LETTER_WIDTH_PT) > POINT_TOLERANCE or abs(height - LETTER_HEIGHT_PT) > POINT_TOLERANCE:
             reasons.append(f"pdf_page_{index}_not_letter:{width}x{height}")
 
+    section_area_ratios, section_item_counts, empty_sections = _aggregate_section_metrics(measurements)
     return PhysicalLayoutReport(
         status="PASS" if not reasons else "FAIL",
         html_file=str(html_path),
@@ -205,4 +275,8 @@ def validate_html_and_export_pdf(
         pages=measurements,
         reasons=reasons,
         screenshot_file=str(screenshot_path) if screenshot_path is not None else None,
+        page_utilization=[round(page.utilization_ratio, 4) for page in measurements],
+        section_area_ratios=section_area_ratios,
+        section_item_counts=section_item_counts,
+        empty_rendered_sections=empty_sections,
     )

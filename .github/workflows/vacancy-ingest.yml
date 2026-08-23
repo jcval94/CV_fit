@@ -75,7 +75,7 @@ jobs:
           --full-rebuild
           --fail-on-quarantine
 
-      - name: Validate six current vacancies are full-JD generation eligible
+      - name: Validate current vacancy JD generation-safety contracts
         if: github.event_name == 'pull_request'
         run: |
           python - <<'PY'
@@ -83,14 +83,23 @@ jobs:
           from pathlib import Path
 
           records = [json.loads(path.read_text(encoding='utf-8')) for path in sorted(Path('/tmp/cv-fit-vacancy-state/records').glob('*.json'))]
-          assert len(records) == 6, f'expected six canonical vacancies, got {len(records)}'
+          assert records, 'expected at least one canonical vacancy'
           for record in records:
-              assert record['jd_fidelity'] == 'full', record
-              assert record['jd_generation_eligible'] is True, record
               assert record['fit_score'] is not None, f"source fit metadata lost for {record['company']}"
-              assert record['requirements'], record
-              assert record['responsibilities'], record
-              print(record['vacancy_id'], record['company'], record['role_title'], 'fit=', record['fit_score'], 'jd=', record['jd_fidelity_score'])
+              if record['jd_generation_eligible'] is True:
+                  assert record['jd_fidelity'] in {'full', 'partial'}, record
+                  assert record['requirements'] or record['responsibilities'], record
+              else:
+                  assert record['jd_fidelity'] == 'sparse', record
+              print(
+                  record['vacancy_id'],
+                  record['company'],
+                  record['role_title'],
+                  'fit=', record['fit_score'],
+                  'jd=', record['jd_fidelity_score'],
+                  'fidelity=', record['jd_fidelity'],
+                  'generation_eligible=', record['jd_generation_eligible'],
+              )
           PY
 
       - name: Prove PR vacancy no-op idempotence
@@ -194,7 +203,7 @@ jobs:
           --vacancy-state vacancy_state
           --max-estimated-cost-usd 3.0
 
-      - name: Build branded and Harvard HTML/PDF bundles with presentation gate
+      - name: Build Technical Modern + Harvard HTML/PDF bundles with presentation gates
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         run: >-
           python -m cv_presentation.batch_bundle

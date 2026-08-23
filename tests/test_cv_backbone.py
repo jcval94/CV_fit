@@ -84,9 +84,9 @@ class CanonicalBackboneTests(unittest.TestCase):
         _attach_required_evidence(strategy, [backbone_id])
         self.assertEqual(strategy.selected_evidence_chunk_ids, [backbone_id, requirement_id])
 
-    def test_default_submission_template_is_single_column_executive_letter(self) -> None:
+    def test_default_submission_template_is_technical_modern_with_harvard_alternate(self) -> None:
         source = Path("cv_presentation/application_bundle.py").read_text(encoding="utf-8")
-        self.assertIn('primary_template: str = "executive_letter_v1"', source)
+        self.assertIn('primary_template: str = "technical_modern_v1"', source)
         self.assertIn('alternate_template: str = "harvard_v1"', source)
 
 

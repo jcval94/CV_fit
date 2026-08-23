@@ -1,88 +1,128 @@
-# CV presentation contract and content fitting
+# CV presentation, visual QA and Showcase V2
 
-This package is the boundary between the evidence-grounded `CVDocument` and future HTML/PDF rendering.
+This package is the boundary between the evidence-grounded `CVDocument` and employer-facing HTML/PDF artifacts. It may select or omit already-approved content according to deterministic policy, but it never invents or rewrites candidate claims.
 
-It intentionally does **not** render HTML, CSS or PDF. The next rendering layer should consume the fitted `CVPresentationModel` instead of reading agent output directly.
-
-## Architecture
+## Current architecture
 
 ```text
 CVDocument (approved content)
         ↓
-Candidate Identity resolution
+Candidate identity resolution
         ↓
 CVPresentationModel
         ↓
-Deterministic Content Fitter
+Deterministic content fitter
         ↓
-fitted_presentation.json + fit_report.json
+Page planner
         ↓
-[future] HTML template / PDF / layout validator
+Technical Modern / Harvard Executive renderer
+        ↓
+Chromium physical-layout validator
+        ↓
+Objective visual-balance evaluator
+        ↓
+Metric-grounded Presentation Reviewer
+        ↓
+Application bundle + Showcase V2
 ```
 
-The presentation layer never changes factual claims. Evidence references remain attached internally for auditability, even though a future employer-facing template should not display them.
+Evidence references remain attached internally for auditability but are never printed in employer-facing templates.
+
+## Senior editorial hierarchy
+
+Presentation follows the stable content priority introduced by the agent policy:
+
+1. Experience
+2. Education
+3. Selected Projects
+4. Skills
+5. Certifications
+
+The fitter keeps Experience and Education authoritative, allows at most two selected projects and at most fifteen skills, keeps explicit GenAI capability, and protects the three mandatory certifications. Lower-priority content is removed before experience bullets when a tighter layout is required.
+
+## Templates
+
+### `technical_modern_v1`
+
+Default primary template. Single-column, ATS-first and US Letter oriented. Verified employer branding is limited to headings, thin rules and small accents. It deliberately avoids dominant sidebars, charts, skill bars, photos and decorative iconography.
+
+### `harvard_v1`
+
+Alternate template. The visual system is locked to black/white Times-family academic styling and ignores employer branding. Its editorial flow still follows Experience -> Education -> Projects -> Skills -> Certifications. It omits the separate Professional Summary section by design.
+
+## Dynamic pagination
+
+The page planner no longer reserves page two for all lower-priority sections. It places the complete professional chronology first, then uses any remaining page-one capacity for Education, Projects, Skills and Certifications before opening page two. Experience items and projects are never split across pages.
+
+## Physical layout validation
+
+Chromium is authoritative for mechanical layout safety. `PhysicalLayoutReport` schema v2 records:
+
+- DOM and PDF page counts;
+- Letter page size;
+- horizontal/vertical overflow;
+- out-of-bounds elements;
+- orphan headings;
+- vertical utilization per page;
+- rendered section areas;
+- rendered item counts;
+- empty rendered sections.
+
+The PDF is exported only from the same measured HTML artifact.
+
+## Objective visual balance
+
+`visual_evals.py` applies explicit, versionable thresholds after Chromium rendering. It is designed to catch the problems visible in early production screenshots rather than relying on a subjective model opinion.
+
+Current checks include:
+
+- one- and two-page utilization floors;
+- minimum Experience area;
+- maximum Skills, Projects and Certifications area;
+- Experience must visually dominate Skills;
+- at most fifteen rendered skills;
+- at most two rendered projects;
+- minimum professional chronology, education and mandatory-certification counts;
+- no empty rendered section.
+
+A visual failure never becomes PASS through an LLM override.
+
+## Presentation Reviewer
+
+The Presentation Reviewer receives only deterministic measurements and factual template topology. It does **not** receive an image and therefore may not speculate about unsupported visual details. A physical or deterministic visual failure bypasses the model and returns `REVIEW_REQUIRED` directly.
+
+For a primary Technical Modern CV, `ready_to_send=true` requires all of the following:
+
+```text
+content quality target
+cover letter
+verified design gate
+physical layout PASS
+visual balance PASS
+presentation reviewer PASS
+```
+
+The Harvard alternate is reported independently and does not override a passing primary artifact.
+
+## Showcase V2
+
+The static showcase exposes, per vacancy:
+
+- source fit and deterministic RAG coverage separately;
+- Senior Headhunter score;
+- factual/editorial/language validation;
+- physical, visual and presentation-review status;
+- page utilization;
+- section-area ratios;
+- rendered section counts;
+- Technical Modern and Harvard HTML/PDF outputs;
+- physical, visual and presentation-review reports;
+- concise cover letter.
+
+Human `SEND / REVISE / REJECT` annotations on detail pages are stored only in that browser's `localStorage`. They are not transmitted, committed or published.
 
 ## Identity boundary
 
-Public-safe identity fields are:
+Public-safe identity fields are `name`, `location`, `linkedin`, `github` and `website`. A public identity YAML may contain only those fields. Email and phone are private opt-in values and are refused for artifacts declared public.
 
-- `name`
-- `location`
-- `linkedin`
-- `github`
-- `website`
-
-A public identity YAML may contain only those fields. `email` and `phone` are rejected if they are placed in that file.
-
-Environment variables:
-
-- `CV_IDENTITY_NAME`
-- `CV_IDENTITY_LOCATION`
-- `CV_IDENTITY_LINKEDIN`
-- `CV_IDENTITY_GITHUB`
-- `CV_IDENTITY_WEBSITE`
-- `CV_IDENTITY_EMAIL`
-- `CV_IDENTITY_PHONE`
-
-Private contact is opt-in. By default the resolver refuses to put private contact into an artifact declared `public`. This is important because this repository itself is public; private contact should eventually be rendered through a private/local delivery path rather than committed or exposed through public automation artifacts.
-
-## Presentation contract
-
-`presentation.default.yaml` reserves the initial delivery target:
-
-- Letter page size
-- target maximum of 2 pages
-- one-column ATS-oriented future template id `ats_classic_v1`
-- summary and experience always present
-- projects and certifications optional/auto
-- deterministic content-density limits
-
-The template id is only a contract in this stage. There is no HTML template yet.
-
-## Content fitting
-
-The fitter assumes the agent returns bullets/projects/skills/certifications in descending vacancy relevance. It then:
-
-1. applies configured hard caps;
-2. removes disabled sections;
-3. estimates pre-render line usage;
-4. if needed, removes optional content in this order: certifications, project detail/projects, optional skills, then lower-priority experience bullets;
-5. never removes an experience role and never reduces a role below `min_role_bullets`;
-6. never truncates or rewrites claim text.
-
-If the content still exceeds the estimated budget, or the summary is longer than the configured limit, the result is `NEEDS_REVISION`. Rewriting must happen upstream because presentation fitting is not allowed to invent or mutate claims.
-
-The line estimator is deliberately a heuristic. The future HTML/PDF layout validator will be authoritative for actual physical page count, overflow and clipping.
-
-## CLI
-
-```bash
-python -m cv_presentation \
-  --cv outputs/<vacancy>/<run>/cv_final.json \
-  --config cv_presentation/presentation.default.yaml \
-  --identity-public /path/to/public_identity.yaml \
-  --output outputs/<vacancy>/<run>/presentation.json \
-  --fit-report outputs/<vacancy>/<run>/fit_report.json
-```
-
-For a private render path, contact can be injected from environment variables with `--include-private-contact --artifact-visibility private`.
+This repository is public, so public automation and the Showcase must never publish private contact details.
