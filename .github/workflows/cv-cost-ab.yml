@@ -5,9 +5,11 @@ on:
     paths:
       - "cv_agent/cost_optimized.py"
       - "cv_agent/ab_experiment.py"
+      - "cv_agent/sequential_ab.py"
       - "cv_agent/model_policy.py"
       - "cv_presentation/ab_showcase.py"
       - "tests/test_cv_cost_optimized.py"
+      - "tests/test_cv_sequential_ab.py"
       - "tests/test_cv_ab_showcase.py"
       - ".github/workflows/cv-cost-ab.yml"
   push:
@@ -15,27 +17,29 @@ on:
     paths:
       - "cv_agent/cost_optimized.py"
       - "cv_agent/ab_experiment.py"
+      - "cv_agent/sequential_ab.py"
       - "cv_agent/model_policy.py"
       - "cv_presentation/ab_showcase.py"
       - "tests/test_cv_cost_optimized.py"
+      - "tests/test_cv_sequential_ab.py"
       - "tests/test_cv_ab_showcase.py"
       - ".github/workflows/cv-cost-ab.yml"
   workflow_dispatch:
     inputs:
       max_cases:
-        description: "Representative baseline CVs to compare"
+        description: "Maximum cases; adaptive test stops at 1 or 2 when evidence is decisive"
         required: true
         default: "3"
         type: string
       max_optimized_cost_usd:
-        description: "Per-case safety ceiling for optimized generation"
+        description: "Absolute per-case ceiling; each case is also capped at 90% of its baseline cost"
         required: true
-        default: "1.10"
+        default: "0.85"
         type: string
       max_audit_cost_usd:
-        description: "Per-case safety ceiling for the two blind audit passes"
+        description: "Per-case blind-audit ceiling; second swapped audit runs only when needed"
         required: true
-        default: "0.50"
+        default: "0.25"
         type: string
 
 permissions:
@@ -54,11 +58,12 @@ jobs:
           python-version: "3.12"
       - name: Install project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Prove baseline unchanged and optimized A/B contracts
+      - name: Prove baseline unchanged and adaptive A/B contracts
         run: >-
           python -m unittest
           tests.test_cv_agent_workflow
           tests.test_cv_cost_optimized
+          tests.test_cv_sequential_ab
           tests.test_cv_ab_showcase
           -v
 
@@ -73,8 +78,8 @@ jobs:
     env:
       OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
       MAX_CASES: ${{ inputs.max_cases || '3' }}
-      MAX_OPTIMIZED_COST_USD: ${{ inputs.max_optimized_cost_usd || '1.10' }}
-      MAX_AUDIT_COST_USD: ${{ inputs.max_audit_cost_usd || '0.50' }}
+      MAX_OPTIMIZED_COST_USD: ${{ inputs.max_optimized_cost_usd || '0.85' }}
+      MAX_AUDIT_COST_USD: ${{ inputs.max_audit_cost_usd || '0.25' }}
       EXPERIMENT_ID: ab-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
@@ -125,11 +130,11 @@ jobs:
           echo "run_id=$selected" >> "$GITHUB_OUTPUT"
           echo "Reusing baseline from vacancy-ingest run $selected; no baseline LLM calls will be repeated."
 
-      - name: Run optimized generation plus order-reversed blind agent audits
+      - name: Run adaptive optimized generation and blind audits
         id: experiment
         continue-on-error: true
         run: >-
-          python -m cv_agent.ab_experiment
+          python -m cv_agent.sequential_ab
           --baseline-outputs /tmp/cvfit-ab-baseline
           --vacancy-state vacancy_state
           --evidence-state rag_state
@@ -226,15 +231,18 @@ jobs:
               print('Live experiment did not produce a report. Check the experiment step for quota or runtime errors.')
           else:
               data = json.loads(report.read_text(encoding='utf-8'))
-              print(f"Completed cases: **{data['completed_case_count']}** / {data['selected_case_count']}")
+              print(f"Completed cases: **{data['completed_case_count']}** / maximum {data['selected_case_count']}")
+              print(f"Avoided paid cases: **{data.get('avoided_case_count', 0)}**")
+              print(f"Sequential stop: **{data.get('early_stop_reason')}**")
               print(f"Mean generation savings: **{data['mean_cost_savings_pct']}%**")
               print(f"Mean Headhunter delta: **{data['mean_headhunter_score_delta']}**")
               print(f"Machine-gate passes: **{data['machine_gate_pass_count']}**")
-              print('Human verdict remains blinded in GitHub Pages until all cases are voted.')
+              print(f"Incremental experiment spend: **${data.get('experiment_incremental_cost_usd', 0):.4f}**")
+              print('Human verdict remains blinded in GitHub Pages until all completed cases are voted.')
           PY
 
       - name: Propagate live experiment failure
         if: steps.experiment.outcome != 'success'
         run: |
-          echo "The deterministic A/B harness passed, but the live experiment failed or was blocked (commonly quota/credits)."
+          echo "The deterministic A/B harness passed, but the live experiment failed or was blocked."
           exit 1
