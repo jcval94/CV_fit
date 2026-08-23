@@ -35,7 +35,7 @@ def line(text: str, ref: str = "evidence-1") -> PresentationLine:
     return PresentationLine(text=text, evidence_refs=[ref])
 
 
-def presentation(template_id: str = "executive_letter_v1", *, large: bool = False) -> CVPresentationModel:
+def presentation(template_id: str = "technical_modern_v1", *, large: bool = False) -> CVPresentationModel:
     bullet_text = (
         "Built and operated a production analytics workflow with measurable business impact, reproducible controls, "
         "technical review, and documented deployment practices across distributed data workloads."
@@ -71,10 +71,10 @@ def presentation(template_id: str = "executive_letter_v1", *, large: bool = Fals
         headline=line("Senior Data Scientist | AI/ML"),
         summary=line("Evidence-grounded data scientist focused on production machine learning and responsible AI."),
         experience=roles,
-        projects=[PresentationProjectItem(name="Project A", evidence_refs=["project-a"], bullets=[line("Grounded AI evaluation project.", "project-a-b1")])],
-        skills=[line("Python, SQL, Machine Learning", "skills-1")],
         education=[line("Graduate degree in Data Science", "education-1")],
-        certifications=[line("Technical certification", "cert-1")],
+        projects=[PresentationProjectItem(name="Project A", evidence_refs=["project-a"], bullets=[line("Grounded AI evaluation project.", "project-a-b1")])],
+        skills=[line("Python", "skills-1"), line("GenAI / Generative AI", "skills-2")],
+        certifications=[line("Professional Scrum Master I", "cert-1")],
         document=DocumentSpec(page_size="letter", target_pages=2, template_id=template_id),
         layout=LayoutSpec(),
         density=density,
@@ -82,16 +82,19 @@ def presentation(template_id: str = "executive_letter_v1", *, large: bool = Fals
 
 
 class TemplateIntakeTests(unittest.TestCase):
-    def test_four_source_templates_are_registered(self):
+    def test_source_templates_and_technical_modern_are_registered(self):
         expected = {
             "professional_sidebar_v1",
             "ai_engineer_sidebar_v1",
             "executive_letter_v1",
+            "technical_modern_v1",
             "harvard_v1",
         }
         self.assertTrue(expected.issubset(TEMPLATES))
         self.assertTrue(get_template_policy("harvard_v1").locked_visual_system)
         self.assertFalse(get_template_policy("harvard_v1").adaptive_branding)
+        self.assertTrue(get_template_policy("technical_modern_v1").adaptive_branding)
+        self.assertFalse(get_template_policy("technical_modern_v1").locked_visual_system)
 
     def test_templates_are_self_contained_and_have_no_demo_placeholders(self):
         template_dir = Path("cv_presentation/templates")
@@ -107,7 +110,7 @@ class TemplateIntakeTests(unittest.TestCase):
             "[Nombre",
             "[Python]",
         ]
-        for template_id in ("professional_sidebar_v1", "ai_engineer_sidebar_v1", "executive_letter_v1", "harvard_v1"):
+        for template_id in ("professional_sidebar_v1", "ai_engineer_sidebar_v1", "executive_letter_v1", "technical_modern_v1", "harvard_v1"):
             text = (template_dir / get_template_policy(template_id).filename).read_text(encoding="utf-8")
             for value in forbidden:
                 self.assertNotIn(value, text, f"{template_id} still contains {value!r}")
@@ -116,7 +119,7 @@ class TemplateIntakeTests(unittest.TestCase):
             self.assertIn("11in", text)
 
     def test_large_content_builds_two_letter_pages_without_splitting_roles(self):
-        model = presentation("executive_letter_v1", large=True)
+        model = presentation("technical_modern_v1", large=True)
         pages = build_page_plan(model)
         self.assertEqual(len(pages), 2)
         self.assertEqual([page.page_number for page in pages], [1, 2])
@@ -124,8 +127,15 @@ class TemplateIntakeTests(unittest.TestCase):
         planned_roles = [item.title for page in pages for item in page.experience]
         self.assertEqual(planned_roles, original_roles)
 
+    def test_small_content_uses_one_page_instead_of_forcing_page_two(self):
+        pages = build_page_plan(presentation("technical_modern_v1", large=False))
+        self.assertEqual(len(pages), 1)
+        self.assertTrue(pages[0].education)
+        self.assertTrue(pages[0].projects)
+        self.assertTrue(pages[0].skills)
+
     def test_non_harvard_template_receives_brand_tokens(self):
-        model = presentation("executive_letter_v1")
+        model = presentation("technical_modern_v1")
         tokens = DesignTokens(
             company="Example",
             brand_verified=True,
@@ -144,8 +154,9 @@ class TemplateIntakeTests(unittest.TestCase):
         self.assertIn("#123456", html)
         self.assertIn("Georgia, serif", html)
         self.assertIn("Candidate Name", html)
+        self.assertNotIn("sidebar", html.casefold())
 
-    def test_harvard_ignores_brand_tokens(self):
+    def test_harvard_ignores_brand_tokens_and_experience_precedes_education(self):
         model = presentation("harvard_v1")
         tokens = DesignTokens(
             company="Example",
@@ -165,9 +176,16 @@ class TemplateIntakeTests(unittest.TestCase):
         self.assertNotIn("#FF00FF", html)
         self.assertIn('Times New Roman', html)
         self.assertIn("Candidate Name", html)
+        self.assertLess(html.index("Experience"), html.index("Education"))
+
+    def test_technical_modern_experience_precedes_education_and_projects(self):
+        model = presentation("technical_modern_v1")
+        html = render_html(model, tokens=tokens_from_brand(fallback_brand("Example")))
+        self.assertLess(html.index("Experience"), html.index("Education"))
+        self.assertLess(html.index("Education"), html.index("Selected Projects"))
 
     def test_jinja_autoescapes_candidate_text(self):
-        model = presentation("executive_letter_v1")
+        model = presentation("technical_modern_v1")
         model.summary = line("Safe text <script>alert('x')</script>")
         html = render_html(model, tokens=tokens_from_brand(fallback_brand("Example")))
         self.assertNotIn("<script>alert", html)
@@ -228,7 +246,7 @@ class BrandingAndDesignReviewTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             asyncio.run(review_design(
                 client=client,
-                template_id="executive_letter_v1",
+                template_id="technical_modern_v1",
                 tokens=unsafe,
                 target_pages=2,
             ))

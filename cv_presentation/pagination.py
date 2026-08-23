@@ -13,9 +13,9 @@ class PageContent:
     show_header: bool = False
     show_summary: bool = False
     experience: list[PresentationExperienceItem] = field(default_factory=list)
+    education: list[PresentationLine] = field(default_factory=list)
     projects: list[PresentationProjectItem] = field(default_factory=list)
     skills: list[PresentationLine] = field(default_factory=list)
-    education: list[PresentationLine] = field(default_factory=list)
     certifications: list[PresentationLine] = field(default_factory=list)
 
 
@@ -31,151 +31,169 @@ def _project_lines(item: PresentationProjectItem, chars: int) -> int:
     return 1 + sum(1 + _text_lines(bullet.text, chars) for bullet in item.bullets)
 
 
-def _line_section_lines(items: list[PresentationLine], chars: int) -> int:
-    return 0 if not items else 1 + sum(_text_lines(item.text, chars) for item in items)
+def _new_page(pages: list[PageContent], used: list[int], *, continuation_lines: int) -> None:
+    if len(pages) >= 2:
+        return
+    pages.append(PageContent(page_number=2, total_pages=2, show_header=False, show_summary=False))
+    used.append(continuation_lines)
 
 
-def _tail_sections_lines(model: CVPresentationModel) -> int:
-    chars = model.density.estimated_chars_per_line
-    lines = 0
-    if model.projects:
-        lines += 1 + sum(_project_lines(item, chars) for item in model.projects)
-    lines += _line_section_lines(model.skills, chars)
-    lines += _line_section_lines(model.education, chars)
-    lines += _line_section_lines(model.certifications, chars)
-    return lines
+def _should_break(current_used: int, cost: int, per_page: int, pages: list[PageContent]) -> bool:
+    return current_used + cost > per_page and len(pages) < 2
 
 
-def _harvard_page_plan(model: CVPresentationModel) -> list[PageContent]:
-    """Preserve the source Harvard flow: header -> education -> experience -> projects -> skills.
+def _pack_experience(
+    items: list[PresentationExperienceItem],
+    *,
+    pages: list[PageContent],
+    used: list[int],
+    per_page: int,
+    chars: int,
+    continuation_lines: int,
+) -> None:
+    for item in items:
+        current = pages[-1]
+        heading_cost = 1 if not current.experience else 0
+        cost = heading_cost + _experience_lines(item, chars)
+        if _should_break(used[-1], cost, per_page, pages) and current.experience:
+            _new_page(pages, used, continuation_lines=continuation_lines)
+            current = pages[-1]
+            heading_cost = 1
+            cost = heading_cost + _experience_lines(item, chars)
+        current.experience.append(item)
+        used[-1] += cost
 
-    Certifications, when present, are carried as technical-skill tail content by the
-    Harvard renderer rather than creating a new branded/visual section.
-    """
-    chars = model.density.estimated_chars_per_line
-    per_page = model.density.estimated_lines_per_page
-    header_lines = 4
-    education_lines = _line_section_lines(model.education, chars)
-    experience_heading = 1 if model.experience else 0
-    exp_lines = [_experience_lines(item, chars) for item in model.experience]
-    projects_lines = 0 if not model.projects else 1 + sum(_project_lines(item, chars) for item in model.projects)
-    skills_lines = _line_section_lines(model.skills + model.certifications, chars)
-    total_estimated = header_lines + education_lines + experience_heading + sum(exp_lines) + projects_lines + skills_lines
 
-    if model.document.target_pages == 1 or total_estimated <= per_page:
-        return [PageContent(
-            page_number=1,
-            total_pages=1,
-            show_header=True,
-            show_summary=False,
-            education=list(model.education),
-            experience=list(model.experience),
-            projects=list(model.projects),
-            skills=list(model.skills),
-            certifications=list(model.certifications),
-        )]
+def _pack_lines(
+    items: list[PresentationLine],
+    *,
+    attribute: str,
+    pages: list[PageContent],
+    used: list[int],
+    per_page: int,
+    chars: int,
+    continuation_lines: int,
+) -> None:
+    for item in items:
+        current = pages[-1]
+        values = getattr(current, attribute)
+        heading_cost = 1 if not values else 0
+        cost = heading_cost + _text_lines(item.text, chars)
+        if _should_break(used[-1], cost, per_page, pages):
+            _new_page(pages, used, continuation_lines=continuation_lines)
+            current = pages[-1]
+            values = getattr(current, attribute)
+            heading_cost = 1
+            cost = heading_cost + _text_lines(item.text, chars)
+        values.append(item)
+        used[-1] += cost
 
-    used = header_lines + education_lines + experience_heading
-    page1_exp: list[PresentationExperienceItem] = []
-    page2_exp: list[PresentationExperienceItem] = []
-    for item, item_lines in zip(model.experience, exp_lines):
-        if not page1_exp or used + item_lines <= per_page:
-            page1_exp.append(item)
-            used += item_lines
-        else:
-            page2_exp.append(item)
 
-    return [
-        PageContent(
-            page_number=1,
-            total_pages=2,
-            show_header=True,
-            show_summary=False,
-            education=list(model.education),
-            experience=page1_exp,
-        ),
-        PageContent(
-            page_number=2,
-            total_pages=2,
-            show_header=False,
-            show_summary=False,
-            experience=page2_exp,
-            projects=list(model.projects),
-            skills=list(model.skills),
-            certifications=list(model.certifications),
-        ),
-    ]
+def _pack_projects(
+    items: list[PresentationProjectItem],
+    *,
+    pages: list[PageContent],
+    used: list[int],
+    per_page: int,
+    chars: int,
+    continuation_lines: int,
+) -> None:
+    for item in items:
+        current = pages[-1]
+        heading_cost = 1 if not current.projects else 0
+        cost = heading_cost + _project_lines(item, chars)
+        if _should_break(used[-1], cost, per_page, pages):
+            _new_page(pages, used, continuation_lines=continuation_lines)
+            current = pages[-1]
+            heading_cost = 1
+            cost = heading_cost + _project_lines(item, chars)
+        current.projects.append(item)
+        used[-1] += cost
 
 
 def build_page_plan(model: CVPresentationModel) -> list[PageContent]:
-    """Create a deterministic 1-2 page US-Letter-oriented content plan.
+    """Pack approved content into one or two Letter pages in editorial order.
 
-    The upstream fitter is expected to have already reduced content to the configured
-    target. This planner never rewrites or truncates text and never splits a single
-    experience item across pages. Physical browser measurement remains a later
-    layout-validation concern.
+    The planner does not pre-assign all tail sections to page two. It fills
+    available space on page one after the complete professional chronology,
+    then continues on page two only when needed. This prevents the large blank
+    areas observed in the first production renders while preserving the global
+    order Experience -> Education -> Projects -> Skills -> Certifications.
+
+    Experience entries and projects are never split. Education, skills and
+    certifications can continue item-by-item. Chromium remains authoritative
+    for physical fit; this planner only provides deterministic placement.
     """
     if model.document.page_size != "letter":
-        raise ValueError("HTML template v1 currently supports US Letter only")
+        raise ValueError("HTML templates currently support US Letter only")
     if model.document.target_pages not in {1, 2}:
-        raise ValueError("HTML template v1 supports target_pages of 1 or 2 only")
-    if model.document.template_id == "harvard_v1":
-        return _harvard_page_plan(model)
+        raise ValueError("HTML templates support target_pages of 1 or 2 only")
 
     chars = model.density.estimated_chars_per_line
     per_page = model.density.estimated_lines_per_page
+    is_harvard = model.document.template_id == "harvard_v1"
+
     header_lines = 4
-    summary_lines = 1 + _text_lines(model.summary.text, chars)
-    experience_heading = 1 if model.experience else 0
-    exp_lines = [_experience_lines(item, chars) for item in model.experience]
-    tail_lines = _tail_sections_lines(model)
-    total_estimated = header_lines + summary_lines + experience_heading + sum(exp_lines) + tail_lines
+    summary_lines = 0 if is_harvard else 1 + _text_lines(model.summary.text, chars)
+    continuation_lines = 0 if is_harvard else 2
 
-    if model.document.target_pages == 1 or total_estimated <= per_page:
-        return [PageContent(
-            page_number=1,
-            total_pages=1,
-            show_header=True,
-            show_summary=True,
-            experience=list(model.experience),
-            projects=list(model.projects),
-            skills=list(model.skills),
-            education=list(model.education),
-            certifications=list(model.certifications),
-        )]
+    pages = [PageContent(
+        page_number=1,
+        total_pages=1,
+        show_header=True,
+        show_summary=not is_harvard,
+    )]
+    used = [header_lines + summary_lines]
 
-    page1_base = header_lines + summary_lines + experience_heading
-    page1_exp: list[PresentationExperienceItem] = []
-    page2_exp: list[PresentationExperienceItem] = []
-    used = page1_base
+    _pack_experience(
+        list(model.experience),
+        pages=pages,
+        used=used,
+        per_page=per_page,
+        chars=chars,
+        continuation_lines=continuation_lines,
+    )
 
-    for item, item_lines in zip(model.experience, exp_lines):
-        if not page1_exp or used + item_lines <= per_page:
-            page1_exp.append(item)
-            used += item_lines
-        else:
-            page2_exp.append(item)
+    # Only after every experience entry has been placed may lower-priority
+    # sections consume the remaining page capacity.
+    _pack_lines(
+        list(model.education),
+        attribute="education",
+        pages=pages,
+        used=used,
+        per_page=per_page,
+        chars=chars,
+        continuation_lines=continuation_lines,
+    )
+    _pack_projects(
+        list(model.projects),
+        pages=pages,
+        used=used,
+        per_page=per_page,
+        chars=chars,
+        continuation_lines=continuation_lines,
+    )
+    _pack_lines(
+        list(model.skills),
+        attribute="skills",
+        pages=pages,
+        used=used,
+        per_page=per_page,
+        chars=chars,
+        continuation_lines=continuation_lines,
+    )
+    _pack_lines(
+        list(model.certifications),
+        attribute="certifications",
+        pages=pages,
+        used=used,
+        per_page=per_page,
+        chars=chars,
+        continuation_lines=continuation_lines,
+    )
 
-    if not page2_exp and tail_lines > max(8, per_page // 3) and len(page1_exp) > 1:
-        page2_exp.insert(0, page1_exp.pop())
-
-    return [
-        PageContent(
-            page_number=1,
-            total_pages=2,
-            show_header=True,
-            show_summary=True,
-            experience=page1_exp,
-        ),
-        PageContent(
-            page_number=2,
-            total_pages=2,
-            show_header=False,
-            show_summary=False,
-            experience=page2_exp,
-            projects=list(model.projects),
-            skills=list(model.skills),
-            education=list(model.education),
-            certifications=list(model.certifications),
-        ),
-    ]
+    total = len(pages)
+    for index, page in enumerate(pages, start=1):
+        page.page_number = index
+        page.total_pages = total
+    return pages

@@ -35,6 +35,13 @@ TEMPLATES: dict[str, TemplatePolicy] = {
         locked_visual_system=False,
         source_name="cv_data_scientist.html",
     ),
+    "technical_modern_v1": TemplatePolicy(
+        template_id="technical_modern_v1",
+        filename="technical_modern_v1.html.j2",
+        adaptive_branding=True,
+        locked_visual_system=False,
+        source_name="CV_fit Technical Modern ATS-first redesign",
+    ),
     "ats_classic_v1": TemplatePolicy(
         template_id="ats_classic_v1",
         filename="executive_letter_v1.html.j2",
