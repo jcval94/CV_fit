@@ -57,6 +57,14 @@ Only the original `description`, `requirements` and `responsibilities` count tow
 
 A `sparse` vacancy remains valid for discovery, ranking and evidence matching, but `cv_agent` blocks live CV generation before any model call. The intended recovery is to enrich the source JSON with the original JD, not to ask an LLM to infer missing requirements.
 
+## Daily automatic enrichment handoff
+
+Daily source files may be intentionally sparse. `Auto-enrich daily vacancy JDs` attempts to recover employer-authored `JobPosting` JSON-LD and writes only derived files under `GPTW/enriched/auto/` or `Vacantes/enriched/auto/`; it never rewrites the incoming feed.
+
+GitHub deliberately prevents ordinary push workflows from recursively triggering from commits made with `GITHUB_TOKEN`. Therefore, when the enrichment workflow actually commits a derived JD, it explicitly dispatches `vacancy-ingest.yml` against `main`. This handoff is required: the bot-authored enrichment must pass through the same canonical merge, fidelity, deduplication and generation path as every other source.
+
+If enrichment produces no new derived source, no additional ingest dispatch is created. The normal ingest triggered by the original daily source remains sufficient.
+
 ## Canonical identity
 
 `vacancy_id` is derived from normalized company + role + location. This is deliberately independent from source-native IDs so the same opening can collapse across GPTW and Vacantes feeds. If location is missing, the normalized URL participates in the identity key.

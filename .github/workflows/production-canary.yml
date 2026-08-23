@@ -91,47 +91,66 @@ jobs:
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 1.5
 
-      - name: Assert E2E canary completed without execution failure
+      - name: Build diagnostic then assert E2E health
         run: |
           python - <<'PY'
           import json, os
           from pathlib import Path
+
           run_id = os.environ['CANARY_RUN_ID']
           vacancy_id = os.environ['CANARY_VACANCY_ID']
-          batch = json.loads((Path('outputs/auto/_batch') / run_id / 'generation_run_report.json').read_text(encoding='utf-8'))
-          generated = next(item for item in batch['results'] if item.get('vacancy_id') == vacancy_id)
-          assert generated['status'] in {'PASS', 'COMPLETED_BELOW_TARGET'}, generated
-          bundle_batch = json.loads((Path('outputs/auto/_batch') / run_id / 'application_bundle_batch_report.json').read_text(encoding='utf-8'))
-          result = next(item for item in bundle_batch['results'] if item.get('vacancy_id') == vacancy_id)
-          assert result['status'] in {'PASS', 'REVIEW_REQUIRED'}, result
-          run_dir = Path('outputs/auto') / vacancy_id / generated['run_id']
+          run_url = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
+
+          def load(path, default):
+              return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
+
+          batch_path = Path('outputs/auto/_batch') / run_id / 'generation_run_report.json'
+          bundle_path = Path('outputs/auto/_batch') / run_id / 'application_bundle_batch_report.json'
+          manifest_path = Path('/tmp/generation_state/manifest.json')
+          batch = load(batch_path, {'results': []})
+          bundle_batch = load(bundle_path, {'results': []})
+          manifest = load(manifest_path, {'entries': {}})
+
+          generated = next((item for item in batch.get('results', []) if item.get('vacancy_id') == vacancy_id), {})
+          result = next((item for item in bundle_batch.get('results', []) if item.get('vacancy_id') == vacancy_id), {})
+          entry = (manifest.get('entries') or {}).get(vacancy_id, {})
+          generated_run_id = generated.get('run_id') or entry.get('run_id')
+          run_dir = Path('outputs/auto') / vacancy_id / str(generated_run_id or '')
           required = ['cv_final.json', 'cover_letter_final.md', 'cv_primary.html', 'cv_primary.pdf', 'application_bundle_report.json']
           missing = [name for name in required if not (run_dir / name).exists()]
-          assert not missing, missing
-          manifest = json.loads(Path('/tmp/generation_state/manifest.json').read_text(encoding='utf-8'))
-          entry = manifest['entries'][vacancy_id]
+
           summary = {
               'vacancy_id': vacancy_id,
-              'generation_status': generated['status'],
-              'presentation_status': result['status'],
+              'run_url': run_url,
+              'generation_status': generated.get('status') or entry.get('status') or 'MISSING',
+              'generation_error': generated.get('error') or entry.get('error'),
+              'presentation_status': result.get('status') or 'NOT_REACHED',
+              'presentation_error': result.get('error') or result.get('reason'),
               'ready_to_send': bool(result.get('ready_to_send')),
+              'missing_artifacts': missing,
               'headhunter_score': entry.get('headhunter_score'),
               'coverage_score': entry.get('coverage_score'),
-              'generation_cost_usd': result.get('generation_cost_usd'),
-              'cover_letter_cost_usd': result.get('cover_letter_cost_usd'),
-              'presentation_cost_usd': result.get('presentation_cost_usd'),
-              'total_pipeline_known_cost_usd': result.get('total_pipeline_known_cost_usd'),
-              'total_pipeline_cost_complete': result.get('total_pipeline_cost_complete'),
+              'generation_cost_usd': result.get('generation_cost_usd', entry.get('known_estimated_cost_usd')),
+              'cover_letter_cost_usd': result.get('cover_letter_cost_usd', entry.get('cover_letter_cost_usd')),
+              'presentation_cost_usd': result.get('presentation_cost_usd', entry.get('presentation_cost_usd')),
+              'total_pipeline_known_cost_usd': result.get('total_pipeline_known_cost_usd', entry.get('total_pipeline_known_cost_usd')),
+              'total_pipeline_cost_complete': result.get('total_pipeline_cost_complete', entry.get('total_pipeline_cost_complete')),
           }
           Path('/tmp/production-canary-summary.json').write_text(json.dumps(summary, indent=2, sort_keys=True) + '\n', encoding='utf-8')
           print(json.dumps(summary, sort_keys=True))
+
+          healthy_generation = summary['generation_status'] in {'PASS', 'COMPLETED_BELOW_TARGET'}
+          healthy_presentation = summary['presentation_status'] in {'PASS', 'REVIEW_REQUIRED'}
+          if not healthy_generation or not healthy_presentation or missing:
+              raise SystemExit(2)
           PY
 
       - name: Add canary summary to workflow
         if: always()
         run: |
+          echo '## Production readiness canary' >> "$GITHUB_STEP_SUMMARY"
+          echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" >> "$GITHUB_STEP_SUMMARY"
           if [ -f /tmp/production-canary-summary.json ]; then
-            echo '## Production readiness canary' >> "$GITHUB_STEP_SUMMARY"
             echo '```json' >> "$GITHUB_STEP_SUMMARY"
             cat /tmp/production-canary-summary.json >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
@@ -143,9 +162,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if [ -f /tmp/production-canary-summary.json ]; then
-            { echo '### Production readiness canary'; echo; echo '```json'; cat /tmp/production-canary-summary.json; echo '```'; } > /tmp/canary-comment.md
+            { echo '### Production readiness canary'; echo; echo "Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"; echo; echo '```json'; cat /tmp/production-canary-summary.json; echo '```'; } > /tmp/canary-comment.md
           else
-            printf '### Production readiness canary\n\nThe canary did not reach the final summary. Inspect the workflow logs; no WhatsApp notification was attempted.\n' > /tmp/canary-comment.md
+            printf '### Production readiness canary\n\nRun: %s/%s/actions/runs/%s\n\nThe canary failed before a structured diagnostic could be built. No WhatsApp notification was attempted.\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > /tmp/canary-comment.md
           fi
           gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/canary-comment.md
 

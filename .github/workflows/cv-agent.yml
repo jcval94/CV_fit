@@ -115,7 +115,8 @@ jobs:
               is_eligible = vacancy["jd_generation_eligible"] is True
               if is_eligible:
                   assert vacancy["jd_fidelity"] in {"full", "partial"}, vacancy
-                  assert vacancy["requirements"] or vacancy["responsibilities"], vacancy
+                  description_chars = len(str(vacancy.get("description") or "").strip())
+                  assert description_chars >= 300 or vacancy["requirements"] or vacancy["responsibilities"], vacancy
                   assert context["evidence_chunks"], f"no eligible evidence for {path.stem}"
                   eligible.append(path.stem)
               else:

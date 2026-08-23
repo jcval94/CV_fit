@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: auto-enrich-jd-main
@@ -81,6 +82,7 @@ jobs:
           PY
 
       - name: Persist only derived automatic JD enrichments
+        id: persist
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -88,12 +90,26 @@ jobs:
           if [ -d GPTW/enriched/auto ]; then git add GPTW/enriched/auto; fi
           if [ -d Vacantes/enriched/auto ]; then git add Vacantes/enriched/auto; fi
           if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No new or changed derived JD enrichments."
             exit 0
           fi
           git commit -m "chore: auto-enrich vacancy JDs"
           git pull --rebase origin main
           git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Dispatch canonical ingest for bot-authored enrichments
+        if: steps.persist.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          # Commits pushed with GITHUB_TOKEN do not recursively trigger normal
+          # push workflows. workflow_dispatch is the supported exception, so
+          # explicitly enqueue the canonical ingest against the new main HEAD.
+          gh workflow run vacancy-ingest.yml --ref main
+          echo "Dispatched vacancy-ingest.yml for enriched main state."
 
       - name: Upload enrichment diagnostic
         if: always()
