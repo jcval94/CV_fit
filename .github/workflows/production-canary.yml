@@ -44,20 +44,54 @@ jobs:
             exit 2
           fi
 
-      - name: Build isolated vacancy and evidence state
+      - name: Build isolated vacancy and full Retrieval V2 state
+        id: retrieval
+        continue-on-error: true
         run: |
-          python -m vacancy_pipeline --repo . --state-dir /tmp/vacancy_state --run-id "$CANARY_RUN_ID" --source-commit "$(git rev-parse HEAD)" --full-rebuild --fail-on-quarantine
-          python -m rag.evidence --repo . --state-dir /tmp/rag_state --run-id "$CANARY_RUN_ID" --source-commit "$(git rev-parse HEAD)" --full-rebuild
+          set -euo pipefail
+          python -m vacancy_pipeline \
+            --repo . \
+            --state-dir /tmp/vacancy_state \
+            --run-id "$CANARY_RUN_ID" \
+            --source-commit "$(git rev-parse HEAD)" \
+            --full-rebuild \
+            --fail-on-quarantine
+
+          # Production generation consumes the versioned Retrieval V2 state.
+          # Start from that exact state, refresh evidence incrementally, then
+          # let rag.dense embed only if the canonical evidence actually changed.
+          rm -rf /tmp/rag_state
+          cp -a rag_state /tmp/rag_state
+          python -m rag.evidence \
+            --repo . \
+            --state-dir /tmp/rag_state \
+            --run-id "$CANARY_RUN_ID" \
+            --source-commit "$(git rev-parse HEAD)"
+          python -m rag.dense --state-dir /tmp/rag_state
+
           python - <<'PY'
           import json, os
           from pathlib import Path
+
+          state = Path('/tmp/rag_state')
+          required_state = ['manifest.json', 'lexical_index.json', 'dense_index.json', 'relations.json']
+          missing_state = [name for name in required_state if not (state / name).exists() or (state / name).stat().st_size == 0]
+          assert not missing_state, f'incomplete Retrieval V2 state: {missing_state}'
+
           vacancy_id = os.environ['CANARY_VACANCY_ID']
           record = json.loads((Path('/tmp/vacancy_state/records') / f'{vacancy_id}.json').read_text(encoding='utf-8'))
           assert record['jd_generation_eligible'] is True, record
-          Path('/tmp/canary-ingest.json').write_text(json.dumps({'reindexed_vacancy_ids': [vacancy_id]}), encoding='utf-8')
+          Path('/tmp/canary-ingest.json').write_text(
+              json.dumps({'reindexed_vacancy_ids': [vacancy_id]}),
+              encoding='utf-8',
+          )
+          print('retrieval_v2_canary_preflight=PASS', required_state)
           PY
 
       - name: Generate and review CV with live OpenAI
+        id: generation
+        if: steps.retrieval.outcome == 'success'
+        continue-on-error: true
         run: >-
           python -m cv_auto
           --ingest-report /tmp/canary-ingest.json
@@ -72,6 +106,9 @@ jobs:
           --max-estimated-cost-usd 5.0
 
       - name: Generate grounded cover letter
+        id: cover
+        if: steps.generation.outcome == 'success'
+        continue-on-error: true
         run: >-
           python -m cv_agent.cover_letter_batch
           --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json"
@@ -81,6 +118,9 @@ jobs:
           --max-estimated-cost-usd 1.5
 
       - name: Build and validate HTML/PDF presentation bundle
+        id: presentation
+        if: steps.generation.outcome == 'success' && steps.cover.outcome == 'success'
+        continue-on-error: true
         run: >-
           python -m cv_presentation.batch_bundle
           --batch-report "outputs/auto/_batch/$CANARY_RUN_ID/generation_run_report.json"
@@ -91,7 +131,13 @@ jobs:
           --brand-profiles-dir cv_presentation/brands
           --max-design-cost-usd 1.5
 
-      - name: Build diagnostic then assert E2E health
+      - name: Build structured E2E diagnostic
+        if: always()
+        env:
+          RETRIEVAL_OUTCOME: ${{ steps.retrieval.outcome }}
+          GENERATION_OUTCOME: ${{ steps.generation.outcome }}
+          COVER_OUTCOME: ${{ steps.cover.outcome }}
+          PRESENTATION_OUTCOME: ${{ steps.presentation.outcome }}
         run: |
           python - <<'PY'
           import json, os
@@ -102,7 +148,10 @@ jobs:
           run_url = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ.get('GITHUB_REPOSITORY', '')}/actions/runs/{os.environ.get('GITHUB_RUN_ID', '')}"
 
           def load(path, default):
-              return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
+              try:
+                  return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
+              except Exception as exc:
+                  return {**default, '_read_error': f'{type(exc).__name__}: {exc}'} if isinstance(default, dict) else default
 
           batch_path = Path('outputs/auto/_batch') / run_id / 'generation_run_report.json'
           bundle_path = Path('outputs/auto/_batch') / run_id / 'application_bundle_batch_report.json'
@@ -116,15 +165,31 @@ jobs:
           entry = (manifest.get('entries') or {}).get(vacancy_id, {})
           generated_run_id = generated.get('run_id') or entry.get('run_id')
           run_dir = Path('outputs/auto') / vacancy_id / str(generated_run_id or '')
-          required = ['cv_final.json', 'cover_letter_final.md', 'cv_primary.html', 'cv_primary.pdf', 'application_bundle_report.json']
-          missing = [name for name in required if not (run_dir / name).exists()]
+          required_artifacts = ['cv_final.json', 'cover_letter_final.md', 'cv_primary.html', 'cv_primary.pdf', 'application_bundle_report.json']
+          missing = [name for name in required_artifacts if not (run_dir / name).exists()]
+
+          generation_status = generated.get('status') or entry.get('status') or 'NOT_REACHED'
+          presentation_status = result.get('status') or 'NOT_REACHED'
+          stage_outcomes = {
+              'retrieval': os.environ.get('RETRIEVAL_OUTCOME') or 'skipped',
+              'generation': os.environ.get('GENERATION_OUTCOME') or 'skipped',
+              'cover': os.environ.get('COVER_OUTCOME') or 'skipped',
+              'presentation': os.environ.get('PRESENTATION_OUTCOME') or 'skipped',
+          }
+          healthy_retrieval = stage_outcomes['retrieval'] == 'success'
+          healthy_generation = stage_outcomes['generation'] == 'success' and generation_status in {'PASS', 'COMPLETED_BELOW_TARGET'}
+          healthy_cover = stage_outcomes['cover'] == 'success' and (run_dir / 'cover_letter_final.md').exists()
+          healthy_presentation = stage_outcomes['presentation'] == 'success' and presentation_status in {'PASS', 'REVIEW_REQUIRED'}
+          canary_healthy = healthy_retrieval and healthy_generation and healthy_cover and healthy_presentation and not missing
 
           summary = {
               'vacancy_id': vacancy_id,
               'run_url': run_url,
-              'generation_status': generated.get('status') or entry.get('status') or 'MISSING',
+              'canary_healthy': canary_healthy,
+              'stage_outcomes': stage_outcomes,
+              'generation_status': generation_status,
               'generation_error': generated.get('error') or entry.get('error'),
-              'presentation_status': result.get('status') or 'NOT_REACHED',
+              'presentation_status': presentation_status,
               'presentation_error': result.get('error') or result.get('reason'),
               'ready_to_send': bool(result.get('ready_to_send')),
               'missing_artifacts': missing,
@@ -136,13 +201,11 @@ jobs:
               'total_pipeline_known_cost_usd': result.get('total_pipeline_known_cost_usd', entry.get('total_pipeline_known_cost_usd')),
               'total_pipeline_cost_complete': result.get('total_pipeline_cost_complete', entry.get('total_pipeline_cost_complete')),
           }
-          Path('/tmp/production-canary-summary.json').write_text(json.dumps(summary, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          Path('/tmp/production-canary-summary.json').write_text(
+              json.dumps(summary, indent=2, sort_keys=True) + '\n',
+              encoding='utf-8',
+          )
           print(json.dumps(summary, sort_keys=True))
-
-          healthy_generation = summary['generation_status'] in {'PASS', 'COMPLETED_BELOW_TARGET'}
-          healthy_presentation = summary['presentation_status'] in {'PASS', 'REVIEW_REQUIRED'}
-          if not healthy_generation or not healthy_presentation or missing:
-              raise SystemExit(2)
           PY
 
       - name: Add canary summary to workflow
@@ -179,3 +242,18 @@ jobs:
             /tmp/cvfit-observability/
           if-no-files-found: warn
           retention-days: 7
+
+      - name: Propagate canary health
+        if: always()
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('/tmp/production-canary-summary.json')
+          if not path.exists():
+              raise SystemExit('production canary diagnostic missing')
+          summary = json.loads(path.read_text(encoding='utf-8'))
+          if summary.get('canary_healthy') is not True:
+              raise SystemExit('production canary is not healthy; inspect the structured summary above')
+          print('production_canary=PASS')
+          PY
