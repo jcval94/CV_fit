@@ -17,7 +17,7 @@ PLAN_SCHEMA_VERSION = 1
 DEFAULT_GRAPH_VERSION = "v23.0"
 DEFAULT_TEMPLATE_NAME = "cv_fit_opportunity_ready"
 DEFAULT_TEMPLATE_LANGUAGE = "es_MX"
-FINAL_STATUSES = {"SENT", "RESERVED", "UNKNOWN_DELIVERY", "FAILED"}
+FINAL_STATUSES = {"ACCEPTED", "RESERVED", "UNKNOWN_DELIVERY", "FAILED"}
 
 
 def _utc_now() -> str:
@@ -297,13 +297,13 @@ def send_reserved_notifications(
             message_id = messages[0].get("id") if messages and isinstance(messages[0], dict) else None
             state_entry.update(
                 {
-                    "status": "SENT",
-                    "sent_at": _utc_now(),
+                    "status": "ACCEPTED",
+                    "accepted_at": _utc_now(),
                     "provider_message_id": message_id,
                     "graph_version": graph_version,
                 }
             )
-            results.append({"fingerprint": fingerprint, "status": "SENT", "message_id": message_id})
+            results.append({"fingerprint": fingerprint, "status": "ACCEPTED", "message_id": message_id})
         except HTTPError as exc:
             try:
                 error_body = exc.read().decode("utf-8")
@@ -319,8 +319,6 @@ def send_reserved_notifications(
             )
             results.append({"fingerprint": fingerprint, "status": "FAILED", "http_status": exc.code})
         except (URLError, TimeoutError, socket.timeout) as exc:
-            # A network timeout can happen after Meta accepted the message. Mark
-            # delivery as unknown and do not auto-retry the same fingerprint.
             state_entry.update(
                 {
                     "status": "UNKNOWN_DELIVERY",
