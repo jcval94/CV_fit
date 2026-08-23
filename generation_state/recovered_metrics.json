@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "source_commit": "79da106e48f25ddfe897213b5fc1b39ff8d1717d",
+    "reason": "Verified generation metrics were present in versioned state before later insufficient_quota retries replaced the manifest entries. Only fields directly recoverable from repository history are restored here; cover-letter and presentation costs are intentionally not inferred."
+  },
+  "entries": {
+    "vac-12dc570424d531ae": {
+      "recovered_run_id": "auto-8b2e232c84c3b09499fce57807e4f7602ebf6ac9-vac-12dc570424d531ae",
+      "coverage_score": 79.8,
+      "estimated_cost_usd": 0.9426075,
+      "generation_cost_usd": 0.9426075,
+      "content_quality_target_reached": false,
+      "unsupported_requirements_count": 0,
+      "headhunter_iterations": 5
+    },
+    "vac-14b95b3407bcb148": {
+      "recovered_run_id": "auto-8b2e232c84c3b09499fce57807e4f7602ebf6ac9-vac-14b95b3407bcb148",
+      "coverage_score": 70.2,
+      "estimated_cost_usd": 0.8860585,
+      "generation_cost_usd": 0.8860585,
+      "content_quality_target_reached": false,
+      "unsupported_requirements_count": 0,
+      "headhunter_iterations": 5
+    },
+    "vac-2de566514601700a": {
+      "recovered_run_id": "auto-8b2e232c84c3b09499fce57807e4f7602ebf6ac9-vac-2de566514601700a",
+      "coverage_score": 84.6,
+      "estimated_cost_usd": 0.83062,
+      "generation_cost_usd": 0.83062,
+      "content_quality_target_reached": false,
+      "unsupported_requirements_count": 0,
+      "headhunter_iterations": 5
+    }
+  }
+}

@@ -22,6 +22,75 @@ def _write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _number(value: Any) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _usage_delta(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any]:
+    before_calls = int(before.get("call_count") or 0)
+    after_calls = int(after.get("call_count") or 0)
+    before_known = _number(before.get("known_estimated_cost_usd")) or 0.0
+    after_known = _number(after.get("known_estimated_cost_usd")) or 0.0
+    before_exact = _number(before.get("estimated_cost_usd"))
+    after_exact = _number(after.get("estimated_cost_usd"))
+    exact = None
+    if before_exact is not None and after_exact is not None:
+        exact = round(max(after_exact - before_exact, 0.0), 8)
+    return {
+        "call_count": max(after_calls - before_calls, 0),
+        "estimated_cost_usd": exact,
+        "known_estimated_cost_usd": round(max(after_known - before_known, 0.0), 8),
+        "prompt_tokens": max(int(after.get("prompt_tokens") or 0) - int(before.get("prompt_tokens") or 0), 0),
+        "cached_input_tokens": max(int(after.get("cached_input_tokens") or 0) - int(before.get("cached_input_tokens") or 0), 0),
+        "candidate_tokens": max(int(after.get("candidate_tokens") or 0) - int(before.get("candidate_tokens") or 0), 0),
+        "reasoning_tokens": max(int(after.get("reasoning_tokens") or 0) - int(before.get("reasoning_tokens") or 0), 0),
+        "total_tokens": max(int(after.get("total_tokens") or 0) - int(before.get("total_tokens") or 0), 0),
+    }
+
+
+def _stage_cost(usage: dict[str, Any]) -> float | None:
+    exact = _number(usage.get("estimated_cost_usd"))
+    if exact is not None:
+        return exact
+    return _number(usage.get("known_estimated_cost_usd"))
+
+
+def _generation_cost(entry: dict[str, Any]) -> float | None:
+    for key in ("known_estimated_cost_usd", "estimated_cost_usd", "attempt_known_cost_usd"):
+        value = _number(entry.get(key))
+        if value is not None:
+            return value
+    return None
+
+
+def _pipeline_cost(entry: dict[str, Any]) -> tuple[float | None, bool]:
+    stages = (
+        _generation_cost(entry),
+        _number(entry.get("cover_letter_cost_usd")),
+        _number(entry.get("presentation_cost_usd")),
+    )
+    known = [value for value in stages if value is not None]
+    return (round(sum(known), 8) if known else None, len(known) == len(stages))
+
+
+def _persist_run_costs(run_dir: Path, entry: dict[str, Any], presentation_usage: dict[str, Any]) -> None:
+    run_report_path = run_dir / "run_report.json"
+    run_report = _read_json(run_report_path, {})
+    stage_usage = run_report.setdefault("stage_usage", {})
+    stage_usage["presentation"] = presentation_usage
+    run_report["generation_cost_usd"] = _generation_cost(entry)
+    run_report["cover_letter_cost_usd"] = _number(entry.get("cover_letter_cost_usd"))
+    run_report["presentation_cost_usd"] = _number(entry.get("presentation_cost_usd"))
+    run_report["total_pipeline_known_cost_usd"] = entry.get("total_pipeline_known_cost_usd")
+    run_report["total_pipeline_cost_complete"] = entry.get("total_pipeline_cost_complete")
+    _write_json(run_report_path, run_report)
+
+
 def finalize_batch(
     *,
     batch_report: Path,
@@ -53,6 +122,7 @@ def finalize_batch(
 
         vacancy = _read_json(vacancy_path)
         entry = entries.setdefault(vacancy_id, {})
+        before = client.telemetry_snapshot()
         try:
             report = build_application_bundle(
                 vacancy=vacancy,
@@ -94,8 +164,6 @@ def finalize_batch(
             entry["review_required"] = not report.ready_to_send
             entry["application_bundle_file"] = "application_bundle_report.json"
         except PresentationGateBlocked as exc:
-            # A conservative design/branding gate saying "do not submit" is an
-            # expected review outcome, not an infrastructure crash.
             reason = str(exc)[:2000]
             results.append({
                 "vacancy_id": vacancy_id,
@@ -109,7 +177,6 @@ def finalize_batch(
             entry["review_required"] = True
             entry["presentation_gate"] = {"status": "BLOCKED", "reason": reason}
         except Exception as exc:
-            # Unexpected execution errors remain distinct and make the CLI fail.
             error = f"{type(exc).__name__}: {exc}"[:2000]
             results.append({
                 "vacancy_id": vacancy_id,
@@ -122,15 +189,31 @@ def finalize_batch(
             entry["review_required"] = True
             entry["presentation_gate"] = {"status": "ERROR", "error": error}
 
+        after = client.telemetry_snapshot()
+        presentation_usage = _usage_delta(before, after)
+        entry["presentation_usage"] = presentation_usage
+        entry["presentation_cost_usd"] = _stage_cost(presentation_usage)
+        total_known, complete = _pipeline_cost(entry)
+        entry["total_pipeline_known_cost_usd"] = total_known
+        entry["total_pipeline_cost_complete"] = complete
+        _persist_run_costs(run_dir, entry, presentation_usage)
+
+        result = results[-1]
+        if result.get("vacancy_id") == vacancy_id:
+            result["generation_cost_usd"] = _generation_cost(entry)
+            result["cover_letter_cost_usd"] = _number(entry.get("cover_letter_cost_usd"))
+            result["presentation_cost_usd"] = entry.get("presentation_cost_usd")
+            result["total_pipeline_known_cost_usd"] = total_known
+            result["total_pipeline_cost_complete"] = complete
+
     _write_json(manifest_path, manifest)
     summary = {
-        "schema_version": 2,
+        "schema_version": 3,
         "source_batch_run_id": batch.get("run_id"),
         "result_counts": {
             status: sum(x["status"] == status for x in results)
             for status in sorted({x["status"] for x in results})
         },
-        # This client now accounts for both design-review and presentation-review calls.
         "presentation_usage": client.telemetry_snapshot(),
         "results": results,
     }
