@@ -10,6 +10,8 @@ on:
       - "cv_presentation/showcase.py"
       - "cv_presentation/showcase_refresh.py"
       - "cv_presentation/showcase_snapshot.py"
+      - "cv_presentation/feed_enhancements.py"
+      - "cv_presentation/p0_decision_ux.py"
       - ".github/workflows/daily-showcase-pages.yml"
   workflow_dispatch:
     inputs:
