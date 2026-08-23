@@ -12,6 +12,7 @@ on:
       - "cv_presentation/showcase_snapshot.py"
       - "cv_presentation/feed_enhancements.py"
       - "cv_presentation/p0_decision_ux.py"
+      - "cv_notifications/**"
       - ".github/workflows/daily-showcase-pages.yml"
   workflow_dispatch:
     inputs:
@@ -21,7 +22,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
   actions: read
   pages: write
   id-token: write
@@ -164,3 +165,98 @@ jobs:
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Check WhatsApp notification configuration
+        id: whatsapp-config
+        env:
+          WHATSAPP_NOTIFICATIONS_ENABLED: ${{ vars.WHATSAPP_NOTIFICATIONS_ENABLED }}
+          WHATSAPP_ACCESS_TOKEN: ${{ secrets.WHATSAPP_ACCESS_TOKEN }}
+          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          WHATSAPP_RECIPIENT: ${{ secrets.WHATSAPP_RECIPIENT }}
+        run: |
+          set -euo pipefail
+          if [ "${WHATSAPP_NOTIFICATIONS_ENABLED,,}" != "true" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "WhatsApp notifications are disabled by repository variable."
+            exit 0
+          fi
+          missing=()
+          [ -n "${WHATSAPP_ACCESS_TOKEN:-}" ] || missing+=(WHATSAPP_ACCESS_TOKEN)
+          [ -n "${WHATSAPP_PHONE_NUMBER_ID:-}" ] || missing+=(WHATSAPP_PHONE_NUMBER_ID)
+          [ -n "${WHATSAPP_RECIPIENT:-}" ] || missing+=(WHATSAPP_RECIPIENT)
+          if [ "${#missing[@]}" -gt 0 ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "WhatsApp notifications requested but required secrets are missing: ${missing[*]}"
+            exit 0
+          fi
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+
+      - name: Reserve new READY WhatsApp notifications
+        id: whatsapp-reserve
+        if: steps.whatsapp-config.outputs.enabled == 'true'
+        env:
+          WHATSAPP_RECIPIENT: ${{ secrets.WHATSAPP_RECIPIENT }}
+          WHATSAPP_TEMPLATE_NAME: ${{ vars.WHATSAPP_TEMPLATE_NAME }}
+          WHATSAPP_TEMPLATE_LANGUAGE: ${{ vars.WHATSAPP_TEMPLATE_LANGUAGE }}
+        run: |
+          set -euo pipefail
+          python -m cv_notifications.whatsapp reserve \
+            --site-dir _site \
+            --state generation_state/whatsapp_notifications.json \
+            --plan /tmp/cvfit_whatsapp_plan.json \
+            --page-url "${{ steps.deployment.outputs.page_url }}"
+          count="$(python - <<'PY'
+          import json
+          from pathlib import Path
+          print(json.loads(Path('/tmp/cvfit_whatsapp_plan.json').read_text(encoding='utf-8'))['count'])
+          PY
+          )"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+          echo "Reserved $count new READY WhatsApp notification(s)."
+
+      - name: Persist WhatsApp reservations before delivery
+        id: whatsapp-reservation-commit
+        if: steps.whatsapp-config.outputs.enabled == 'true' && steps.whatsapp-reserve.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/whatsapp_notifications.json
+          git commit -m "chore: reserve WhatsApp CV notifications"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Send reserved WhatsApp notifications
+        id: whatsapp-send
+        if: steps.whatsapp-config.outputs.enabled == 'true' && steps.whatsapp-reserve.outputs.count != '0' && steps.whatsapp-reservation-commit.outcome == 'success'
+        continue-on-error: true
+        env:
+          WHATSAPP_ACCESS_TOKEN: ${{ secrets.WHATSAPP_ACCESS_TOKEN }}
+          WHATSAPP_PHONE_NUMBER_ID: ${{ secrets.WHATSAPP_PHONE_NUMBER_ID }}
+          WHATSAPP_RECIPIENT: ${{ secrets.WHATSAPP_RECIPIENT }}
+          WHATSAPP_GRAPH_VERSION: ${{ vars.WHATSAPP_GRAPH_VERSION }}
+        run: >-
+          python -m cv_notifications.whatsapp send
+          --state generation_state/whatsapp_notifications.json
+          --plan /tmp/cvfit_whatsapp_plan.json
+
+      - name: Persist WhatsApp delivery result
+        if: always() && steps.whatsapp-config.outputs.enabled == 'true' && steps.whatsapp-reserve.outputs.count != '0' && steps.whatsapp-reservation-commit.outcome == 'success'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/whatsapp_notifications.json
+          if git diff --cached --quiet; then
+            echo "No WhatsApp delivery-state change to persist."
+            exit 0
+          fi
+          git commit -m "chore: record WhatsApp CV notification result"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Fail on ambiguous or failed WhatsApp delivery
+        if: always() && steps.whatsapp-send.outcome == 'failure'
+        run: |
+          echo "At least one WhatsApp notification failed or has unknown delivery. State was preserved; automatic resend is intentionally disabled."
+          exit 1
