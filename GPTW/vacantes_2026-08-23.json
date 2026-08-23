@@ -1,0 +1,31 @@
+{
+  "last_updated": "2026-08-23T13:52:29Z",
+  "total_results": 1,
+  "vacancies": [
+    {
+      "id": "nubank-senior-analytics-engineer-mexico-2026-08-20",
+      "company": "Nu México / Nubank",
+      "role_title": "Senior Analytics Engineer - Mexico",
+      "seniority": "Senior",
+      "tech_stack": [
+        "SQL",
+        "Python",
+        "Scala",
+        "R",
+        "Data Pipelines",
+        "ETL/ELT",
+        "Data Architecture",
+        "Data Modeling",
+        "Distributed Data Systems"
+      ],
+      "location": {
+        "city": "Ciudad de México",
+        "work_model": "Hybrid"
+      },
+      "posted_date": "2026-08-20",
+      "url": "[https://job-boards.greenhouse.io/nubank](https://job-boards.greenhouse.io/nubank)",
+      "fit_score": 92,
+      "fit_evaluation": "Encaje muy alto para un perfil senior con experiencia end-to-end en datos, Python/SQL y construcción de pipelines escalables. El rol combina arquitectura de datos, gobierno, liderazgo técnico e influencia sobre estrategia de datos, con alto nivel de autonomía y colaboración directa con stakeholders de negocio y tecnología."
+    }
+  ]
+}
