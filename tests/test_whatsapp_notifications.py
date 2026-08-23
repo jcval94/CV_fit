@@ -141,7 +141,7 @@ class WhatsAppNotificationTests(unittest.TestCase):
         self.assertEqual(params[5]["text"], "https://example/cv")
         self.assertEqual(params[6]["text"], "https://example/job")
 
-    def test_successful_send_marks_state_sent(self) -> None:
+    def test_successful_send_marks_state_accepted(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             site = self._site(root)
@@ -163,11 +163,11 @@ class WhatsAppNotificationTests(unittest.TestCase):
                     recipient="5215555555555",
                     graph_version="v23.0",
                 )
-            self.assertEqual(report["result_counts"].get("SENT"), 1)
+            self.assertEqual(report["result_counts"].get("ACCEPTED"), 1)
             self.assertIn("/v23.0/12345/messages", post.call_args.kwargs["url"])
             state_payload = json.loads(state.read_text(encoding="utf-8"))
             entry = next(iter(state_payload["entries"].values()))
-            self.assertEqual(entry["status"], "SENT")
+            self.assertEqual(entry["status"], "ACCEPTED")
             self.assertEqual(entry["provider_message_id"], "wamid.test")
             self.assertNotIn("secret-token", state.read_text(encoding="utf-8"))
 
