@@ -1,0 +1,30 @@
+name: Validate production canary contract
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/production-canary.yml"
+      - ".github/workflows/production-canary-contract.yml"
+      - "cv_observability/production_canary.py"
+      - "tests/test_cv_production_canary.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/production-canary.yml"
+      - ".github/workflows/production-canary-contract.yml"
+      - "cv_observability/production_canary.py"
+      - "tests/test_cv_production_canary.py"
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run canary security and semantic-status tests
+        run: python -m unittest tests.test_cv_production_canary -v
