@@ -1,0 +1,99 @@
+name: Restore blind A/B tab after daily Pages deploy
+
+on:
+  workflow_run:
+    workflows: ["Deploy daily CV showcase to GitHub Pages"]
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+jobs:
+  restore:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Resolve latest A/B Pages fragment
+        id: ab
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/cvfit-ab-site
+          found="false"
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-ab-candidate
+            mkdir -p /tmp/cvfit-ab-candidate
+            if gh run download "$run_id" -n cv-ab-audit-site -D /tmp/cvfit-ab-candidate; then
+              if [ -f /tmp/cvfit-ab-candidate/index.html ]; then
+                mv /tmp/cvfit-ab-candidate /tmp/cvfit-ab-site
+                found="true"
+                echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+                break
+              fi
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/cv-cost-ab.yml/runs?branch=main&status=success&per_page=20" --jq '.workflow_runs[].id'
+          )
+          echo "found=$found" >> "$GITHUB_OUTPUT"
+          if [ "$found" != "true" ]; then
+            echo "No reusable A/B site artifact exists; leaving the daily Pages deployment unchanged."
+          fi
+
+      - name: Download latest non-empty daily showcase
+        if: steps.ab.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          selected=""
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-main-site
+            mkdir -p /tmp/cvfit-main-site
+            if ! gh run download "$run_id" -n daily-showcase -D /tmp/cvfit-main-site; then
+              continue
+            fi
+            count="$(find /tmp/cvfit-main-site/vacancies -type f -name 'cv_primary.html' 2>/dev/null | wc -l | tr -d ' ')"
+            if [ "${count:-0}" -gt 0 ]; then
+              mv /tmp/cvfit-main-site _site
+              selected="$run_id"
+              echo "Using daily showcase from $run_id"
+              break
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=20" --jq '.workflow_runs[].id'
+          )
+          test -n "$selected"
+
+      - name: Overlay A/B tab and navigation
+        if: steps.ab.outputs.found == 'true'
+        run: |
+          mkdir -p _site/ab-testing
+          cp -a /tmp/cvfit-ab-site/. _site/ab-testing/
+          python -m cv_presentation.ab_showcase attach --site-dir _site
+
+      - name: Configure GitHub Pages
+        if: steps.ab.outputs.found == 'true'
+        uses: actions/configure-pages@v5
+      - name: Upload combined Pages artifact
+        if: steps.ab.outputs.found == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Restore combined Pages deployment
+        if: steps.ab.outputs.found == 'true'
+        uses: actions/deploy-pages@v4
