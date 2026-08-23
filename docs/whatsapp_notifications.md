@@ -56,19 +56,21 @@ Do not store access tokens, sender IDs intended to be private, or recipient numb
 1. GitHub Pages deploys successfully.
 2. CV_fit reads the deployed `showcase.json` and reserves only `ready_to_send=true` vacancies that have a published primary HTML CV.
 3. The reservation is committed to `generation_state/whatsapp_notifications.json` **before** calling Meta.
-4. The approved template is sent through `POST /{PHONE_NUMBER_ID}/messages`.
-5. The provider message ID and final state are committed afterward.
+4. The approved template is submitted through `POST /{PHONE_NUMBER_ID}/messages`.
+5. The provider message ID and final API-submission state are committed afterward.
 
-The fingerprint includes vacancy ID, primary CV SHA-256, original vacancy URL, recipient hash, template name and template language. The same artifact cannot be sent twice by normal reruns. A materially changed CV gets a new fingerprint and can generate a new alert.
+The fingerprint includes vacancy ID, primary CV SHA-256, original vacancy URL, recipient hash, template name and template language. The same artifact cannot be submitted twice by normal reruns. A materially changed CV gets a new fingerprint and can generate a new alert.
 
 States:
 
 - `RESERVED`: delivery was reserved before the API call.
-- `SENT`: Meta accepted the request and returned a message ID.
-- `FAILED`: a definite send error was recorded.
+- `ACCEPTED`: Meta accepted the API request and returned a provider message ID. This is **not** proof of handset delivery.
+- `FAILED`: a definite API/send error was recorded.
 - `UNKNOWN_DELIVERY`: a network/timeout error occurred and Meta may have accepted the request.
 
 `FAILED` and `UNKNOWN_DELIVERY` are **not automatically retried**. This is an at-most-once bias chosen to prevent duplicate WhatsApp spam. Reconciliation/retry should be explicit.
+
+Actual `DELIVERED` / `READ` status requires WhatsApp webhook events and is intentionally outside this PR.
 
 ## Message links
 
