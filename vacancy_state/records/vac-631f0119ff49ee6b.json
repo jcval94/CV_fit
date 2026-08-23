@@ -3,8 +3,8 @@
   "city": "Área metropolitana de Ciudad de México, México",
   "company": "LexisNexis",
   "company_category": "Producto Tech",
-  "content_hash": "4edbfc6c196584d437e7584662081ed3c87ce9784dbd5286590ab4be04552548",
-  "description": null,
+  "content_hash": "c9e574a0dd106bc182a630927719c4fba8c45d4228f058738e6ffc6d249ae032",
+  "description": "Are you excited to help shape the future of AI-powered legal technology using generative AI, RAG architectures, and agentic workflows?<br><br>Do you thrive in building scalable AI solutions that deliver measurable customer value while contributing directly to production-quality software?<br><br><strong>About Our Team<br><br></strong>LexisNexis Legal &amp; Professional, which serves customers in more than 150 countries with 11,800 employees worldwide, is part of RELX (http://www.relx.com), a global provider of information-based analytics and decision tools for professional and business customers. Our company has been a long-time leader in deploying AI and advanced technologies to the legal market to improve productivity and transform the overall business and practice of law, deploying ethical and powerful generative AI solutions with a flexible, multi-model approach that prioritizes using the best model from today’s top model creators for each individual legal use case. The company employs over 2,000 technologists, data scientists, and experts to develop, test, and validate solutions in line with RELX Responsible AI Principles.<br><br><strong>About The Role<br><br></strong>As a Senior II Data Scientist, you will lead the development of innovative AI solutions leveraging Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and agentic AI systems. You will work closely with product managers, domain experts, and stakeholders to translate business needs into scalable, production-ready solutions while contributing directly to software development and continuous innovation.<br><br><strong>Responsibilities<br><br></strong><ul><li>Lead the end-to-end lifecycle of AI projects (leveraging LLMs, RAG architectures, and agentic workflows), from problem definition and experimentation through deployment, evaluation, and continuous improvement. </li><li>Monitor, evaluate and optimize AI system performance using metrics, user feedback, and experimentation frameworks. </li><li>Partner with product managers, domain experts, and stakeholders to prioritize opportunities while communicating results and tradeoffs. </li><li>Contribute directly to software development as an individual contributor. </li><li>Design and implement scalable AI solution architectures, including data ingestion, retrieval, generation, and evaluation components. </li><li>Build and enhance RAG-based applications and AI-powered products. </li><li>Collaborate across teams to identify and solve complex information retrieval and NLP challenges. </li><li>Support the continuous improvement of AI systems through experimentation, testing, and performance analysis. <br><br></li></ul><strong>Requirements<br><br></strong><ul><li>2 to 5 years of experience in Data Scientist or similar roles. </li><li>At least 1 year of hands-on experience building RAG-based applications and agentic AI systems. </li><li>Ability to design and explain end-to-end AI solution architectures, including data ingestion, retrieval, generation, and evaluation components. </li><li>Strong proficiency in Python, modern AI frameworks (e.g., LangChain, Google ADK), cloud-based development, and software engineering best practices for production of AI systems. </li><li>Experience working with NLP, document processing, search, recommendation systems, or related information retrieval problems. </li><li>Familiarity with embeddings, vector search, and retrieval mechanisms. </li><li>Ability to evaluate AI system performance and diagnose issues related to answer quality, retrieval, hallucinations, or model behavior. </li><li>Experience implementing agentic workflows and multi-agent architectures. </li><li>Proven ability to work closely with Product and stakeholders to understand business needs, gather requirements, and translate them into scalable AI solutions. </li><li>Strong communication skills in English, including the ability to explain technical concepts to different audiences. <br><br></li></ul><strong>Work in a Way That Works for You<br><br></strong>We promote a healthy work/life balance across the organisation. We offer an appealing working prospect for our people. With numerous wellbeing initiatives, shared parental leave, study assistance and sabbaticals, we will help you meet your immediate responsibilities and your long-term goals.<br><br><strong>Working Pattern<br><br></strong>Working flexible hours - flexing the times when you work in the day to help you fit everything in and work when you are the most productive.<br><br><strong>About The Business<br><br></strong>LexisNexis Legal &amp; Professional® provides legal, regulatory, and business information and analytics that help customers increase their productivity, improve decision-making, achieve better outcomes, and advance the rule of law around the world. As a digital pioneer, the company was the first to bring legal and business information online with its Lexis® and Nexis® services.<br><br><strong>We know your well-being and happiness are key to a long and successful career. We are delighted to offer country specific benefits. Click here to access benefits specific to your location.</strong>",
   "fit_gaps": [
     "La vacante declara 2 a 5 años de experiencia, por lo que el perfil puede resultar sobrecalificado en seniority.",
     "No aprovecha directamente experiencia en banca, riesgo, fraude o credit scoring."
@@ -18,21 +18,31 @@
   ],
   "fit_summary": "Es la mejor nueva oportunidad de la búsqueda por combinar seniority, modalidad favorable, CDMX, GenAI aplicada, arquitectura end-to-end, experimentación y ownership de soluciones productivas.",
   "identity_key": "631f0119ff49ee6bd283019923d7a2c5a35ffac718ca2a31807c5723295740b9",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
-    "substantive_requirements=0",
+    "description_chars=5167",
+    "substantive_requirements=2",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 70.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Área metropolitana de Ciudad de México, México",
   "posted_date": "2026-08-21",
   "posted_date_raw": "2026-08-21",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "8862d0a4bbe28d9665d5e61c7b65196fd998efeb6caa88466fba30fede467a76",
+      "source_native_id": "4456047445",
+      "source_path": "Vacantes/enriched/auto/lexisnexis-senior-data-scientist-ii-1f0c752faa.json",
+      "source_search_date": "2026-08-23",
+      "source_updated_at": null
+    },
     {
       "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
       "source_entry_index": 0,
@@ -44,7 +54,10 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
+  "requirements": [
+    "{'@type': 'OccupationalExperienceRequirements', 'monthsOfExperience': 24}",
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
   "responsibilities": [],
   "role_title": "Senior Data Scientist II",
   "salary": "No especificado",

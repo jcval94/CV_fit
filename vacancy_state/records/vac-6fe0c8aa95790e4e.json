@@ -3,8 +3,8 @@
   "city": "América Latina",
   "company": "CRNCY Group",
   "company_category": "Fintech",
-  "content_hash": "4d13aea72e5db11ec5bf2024f3bf5d1f53b875c129a5cf3f8d4f2d37b0cf388f",
-  "description": null,
+  "content_hash": "17ddd624b2f0dbd439147e5f6f842df14f42b29b7a9f86afdbc4a6bbecd5765d",
+  "description": "Role Description The Credit Decision Scientist role is crucial in analyzing portfolio performance and improving profitability through credit strategy. You will: Analyze portfolio performance and identify opportunities to improve profitability through credit strategy. Model the probability of repayment, default, and fraud from incomplete and alternative data, and build the statistical inference behind it. Turn that analysis into the credit rules themselves: approval strategy, underwriting requirements, first-loan sizing, and customer segmentation. Optimize underwriting requirements and reduce unnecessary customer friction. Design and assess experiments to improve lending outcomes. Quantify trade-offs between growth, risk, customer experience, and profitability. Translate analysis into practical underwriting and portfolio recommendations. You do this work yourself. There is no analytics team to delegate to. You frame the question, build the analysis, and own the decision that comes out of it. Qualifications Experience in at least one of: portfolio strategy or analytics, underwriting strategy, lending strategy, risk management, or another analytical role involving high-consequence decision-making under uncertainty. Experience in consumer lending or credit is not required; exceptional decision-makers are prioritized over industry-specific experience. Used data and probabilistic reasoning to make or influence important business decisions. Evaluated trade-offs between competing objectives under uncertainty. Applied analytical judgment rather than relying solely on predefined rules or models. Translated analysis into practical business decisions and recommendations. Been accountable for the business outcomes of those decisions, not simply the quality of the analysis. Requirements Working capability, hands-on: statistical inference and probability; causal reasoning and selection bias; practical modeling — logistic regression, scorecards, gradient boosting — with clean validation discipline and no data leakage; experiment design and power; expected-value analysis; segmentation. Python and SQL at analysis-and-modeling level. You write your own code. Required Academic Background A degree from a strong university in a quantitative discipline: Decision Science, Operations Research, Applied Mathematics, Statistics, Economics, Engineering, or Computer Science with significant quantitative coursework. Your training should have covered probability and statistics, decision-making under uncertainty, optimization, mathematical modeling, econometrics, operations research, or risk analysis. Above all, we are looking for someone who naturally thinks probabilistically — comfortable making decisions with incomplete information, weighing uncertainty, and updating their judgment as new evidence becomes available. Language: fluent English and Spanish. Both required. What This Role Is Not A Machine Learning Engineer role A Data Engineering role An AI Infrastructure role A Machine Learning Research role A traditional Data Scientist role focused primarily on model development Candidates whose experience is primarily centered on building models, pipelines, platforms, or technical infrastructure will not be considered. What we are screening out is the candidate whose output is a model. Here, the output is a decision — you simply have to build the analysis yourself to get there. How We Work Honest and direct. Feedback here is unvarnished and immediate. You'll get it, and we expect it back. Unafraid to fail. Most of what you test won't work. We would rather run the experiment and find out than defend a rule nobody has questioned. Committed to excellence. High standards, applied to ourselves before anyone else. Dedicated to the customer. The person on the other side of the decision is the reason the work matters. The Setup USD contractor. Fully remote, location-flexible, with meaningful daily overlap with the Americas. You'll work directly with our credit and finance leadership and with the founder. Short path from analysis to decision. Real ownership from day one, across multiple markets.",
   "fit_gaps": [
     "El vínculo disponible para postulación es un agregador de empleo remoto y no una página corporativa de ATS.",
     "La modalidad se describe como contrato remoto en USD, por lo que conviene validar esquema contractual y prestaciones para México."
@@ -18,21 +18,31 @@
   ],
   "fit_summary": "Es el ajuste de negocio más directo de la búsqueda: credit risk, fraude, underwriting y decision science aplicados a decisiones crediticias reales en LATAM.",
   "identity_key": "6fe0c8aa95790e4ea7caabc6d072cf0736a9e10a88d44c74a1b87b9376509b43",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=4130",
     "substantive_requirements=0",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 60.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "América Latina",
   "posted_date": null,
   "posted_date_raw": "Hace 4 días",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "183d66252872a4415f6d6e4e8ff2ef9c50224e65bf779eb97b88e3731deb7dc1",
+      "source_native_id": "c11d1e65592f",
+      "source_path": "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
+      "source_search_date": "2026-08-22",
+      "source_updated_at": null
+    },
     {
       "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
       "source_entry_index": 1,

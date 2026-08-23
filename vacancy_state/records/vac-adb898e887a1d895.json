@@ -1,10 +1,10 @@
 {
-  "application_language": "en",
+  "application_language": "es",
   "city": "Ciudad de México, México",
   "company": "Konfío",
   "company_category": "Fintech",
-  "content_hash": "a2fe32b2e7d015d7e1997ca4baebf451864ed3b6acb40024bdb240871b8015ae",
-  "description": null,
+  "content_hash": "a0b8d036ea51c6fd168c9abc87e6378636dd326e4bca326df5de6990facac62d",
+  "description": "<p><strong>¡Únete a la revolución Fintech y construye el futuro de las finanzas en México!</strong></p><p><br></p><p><strong>¿Quiénes somos?</strong></p><p>Somos la empresa de tecnología financiera líder en México, impulsando a más de 70.000 clientes a alcanzar sus sueños. Nuestra misión es empoderar a las pequeñas y medianas empresas del país con soluciones innovadoras (financiamiento, tarjeta de crédito y pagos) para superar sus desafíos y convertirlas en los motores del crecimiento económico. Aspiramos a ser el aliado ideal de los emprendedores, contribuyendo al desarrollo de la comunidad, el país y el planeta.</p><p><br></p><p><strong>Tu reto:</strong></p><p>Diseñar, desplegar y operar en producción soluciones de machine learning y sistemas agénticos basados en LLMs, cubriendo el ciclo completo: pipelines de datos y features reproducibles, despliegue y monitoreo de modelos, y workflows de agentes virtuales que resuelven casos de uso de negocio con altos estándares de performance, confiabilidad, costo, seguridad y gobierno de datos.</p><p><br></p><p><strong>¿Qué buscamos?</strong></p><ul><li>Licenciatura en Ciencias de la Computación, Ingeniería de Software, Matemáticas, Estadística o afín (concluido y título/cédula profesional).</li><li>Especialidad: Artificial Intelligence, Machine Learning o Sistemas Distribuidos.</li><li>4 años en ingeniería de software o ML, de los cuales al menos 2 años con modelos y/o LLMs en producción.</li><li>Skills técnicos: Python avanzado y concurrencia. AWS (Bedrock/AgentCore, SageMaker). MLOps. Orquestación de agentes (LangGraph). CI/CD en GitLab. Docker/Kubernetes. </li><li>Lenguajes de programación: Python (nivel experto) y SQL avanzado.</li></ul><p><br></p><p><strong>Responsabilidades</strong></p><ul><li>Diseñar, construir y operar pipelines reproducibles de datos, features, entrenamiento e inferencia, asegurando consistencia entre entrenamiento y servicio (training-serving skew).</li><li>Desplegar, versionar y monitorear modelos de machine learning en producción sobre Amazon SageMaker, incluyendo estrategias de rollback, detección de drift y control de latencia y costo.</li><li>Construir workflows agénticos y agentes virtuales de extremo a extremo con frameworks de orquestación modernos, resolviendo manejo de estado, herramientas, memoria y tolerancia a fallas.</li><li>Integrar y operar modelos de lenguaje sobre Amazon Bedrock —incluido AgentCore— y APIs de proveedores, gestionando prompts, structured outputs, throughput, cuotas y costo por interacción.</li><li>Desarrollar pipelines de RAG y búsqueda semántica que garanticen respuestas fundamentadas en las fuentes de información de la organización.</li><li>Definir e instrumentar el framework de evaluación y observabilidad de los sistemas de IA: trazas, datasets de evaluación, métricas de calidad, latencia, alucinación y costo.</li><li>Colaborar para construir o mantener pipelines de CI/CD e infraestructura como código, incluyendo pruebas automatizadas, contenerización y despliegues controlados.</li><li>Desarrollar servicios y procesos distribuidos de alta demanda en Python con foco explícito en performance: concurrencia, colas, backpressure, idempotencia, caching y profiling. Orquestados con Temporal.</li><li>Asegurar que todas las soluciones cumplan con los estándares de seguridad, privacidad, gobierno de datos y guardrails aplicables a flujos con LLMs.</li><li>Documentar diseños, decisiones técnicas y código; formar a otros colaboradores sobre prácticas de ML Engineering e IA aplicada.</li></ul><p><br></p><p><strong>¿Qué ofrecemos?</strong></p><ul><li>Un ambiente de trabajo dinámico y colaborativo donde podrás desarrollar tu potencial al máximo.</li><li>Oportunidades para aprender y crecer profesionalmente utilizando tecnologías de vanguardia.</li><li>Un equipo apasionado y talentoso con el que podrás compartir conocimientos y experiencias.</li><li>Paquete de compensación competitivo y beneficios atractivos.</li><li>La oportunidad de impactar positivamente en la vida de miles de personas y contribuir al desarrollo del país.</li><li>Esquema híbrido CDMX/Estado de México; 100% remoto al interior de la República y/o LATAM.</li></ul>",
   "fit_gaps": [
     "El rol exige profundidad de ingeniería de software distribuido, concurrencia, backpressure, idempotencia y Temporal, más allá de un Data Scientist tradicional.",
     "Pide experiencia explícita con AWS Bedrock/AgentCore y LangGraph en producción."
@@ -18,21 +18,31 @@
   ],
   "fit_summary": "Es el mejor ajuste de la búsqueda: combina fintech, ML productivo, arquitectura end-to-end, GenAI, agentes, liderazgo técnico y un stack directamente compatible con el perfil objetivo.",
   "identity_key": "adb898e887a1d895bb414fac05bddddf79a2a8e32916955b2b2bea3106a8ed45",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
-    "substantive_requirements=0",
+    "description_chars=4197",
+    "substantive_requirements=1",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 65.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Ciudad de México, México",
   "posted_date": null,
   "posted_date_raw": "Hace 1 día",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "f80c53c68813799bec906d8aeebe5dbe63c05c7406b6af60ebd104d51ccce2d6",
+      "source_native_id": "dba476793276",
+      "source_path": "Vacantes/enriched/auto/konf-o-ai-ml-engineer-sr-180871be26.json",
+      "source_search_date": "2026-08-22",
+      "source_updated_at": null
+    },
     {
       "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
       "source_entry_index": 0,
@@ -44,7 +54,9 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
+  "requirements": [
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
   "responsibilities": [],
   "role_title": "AI/ML Engineer Sr.",
   "salary": "No especificado",

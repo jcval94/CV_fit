@@ -1,10 +1,10 @@
 {
-  "application_language": "en",
+  "application_language": "es",
   "city": "México, horario central de Ciudad de México",
   "company": "Spot2.mx",
   "company_category": "Producto Tech",
-  "content_hash": "cf290ae5c7670cc2ec3d8d339082e52d763aa96abd74d8f7631a11696d90c6e1",
-  "description": null,
+  "content_hash": "cd86df7b4e8f8340a15e0065191bc19dafaa24f0296e01f3b8ad64e73e7d6391",
+  "description": "<p><strong>Sobre Spot2</strong></p><p><br></p><p>Spot2 es el primer marketplace B2B en México especializado exclusivamente en el sector de bienes raíces comerciales e industriales. Como una proptech de alto crecimiento, utilizamos tecnología de vanguardia e inteligencia artificial para conectar a marcas, desarrolladores y propietarios en un ecosistema digital eficiente. Nuestra plataforma permite a los usuarios encontrar el espacio ideal para su negocio de manera ágil y transparente, digitalizando un proceso que tradicionalmente era lento y burocrático. En Spot2, no solo listamos propiedades; revolucionamos y profesionalizamos el mercado inmobiliario en Latinoamérica, eliminando la informalidad mediante procesos claros, trazables y basados en datos que reducen significativamente los tiempos de vacancia.</p><p><br></p><p><strong>PropTech Startup (Remoto)</strong></p><p><br></p><p><strong>Requisito clave:</strong> Disponibilidad bajo horario central de la Ciudad de México.</p><p><br></p><p><strong>Stack Core:</strong> Python, SQL (ClickHouse), LLMs/RAG, Inferencia Causal, MLOps (MLflow).</p><p><br></p><p><strong>El Rol</strong></p><p><br></p><p>No es un puesto de \"notebook scientist\". Aquí combinarás ciencia de datos clásica y moderna con expertise práctico en IA generativa (LLMs, RAG y evaluación de agentes) aplicados a problemas reales. Diseñarás experimentos que shippean, producirás modelos que entran a producción y colaborarás con Engineering para integrarlos en el backend y agentes de IA.</p><p><br></p><p><strong>Funciones y Responsabilidades</strong></p><p><br></p><p>* <strong>Análisis avanzado e Insights:</strong> Realizar EDA profundo, feature engineering y modelado estadístico sobre datos del marketplace (ClickHouse/GA4) y fuentes externas, además de construir herramientas de insights asistidas por LLM.</p><p><br></p><p>* <strong>Modelado Predictivo y Recomendación:</strong> Desarrollar y llevar a producción modelos de recomendación/ranking (two-tower, re-ranking), valoración automatizada (AVM), pricing dinámico, forecasting de rentas/ocupación (time-series) y scoring de inversión.</p><p><br></p><p>* <strong>IA Generativa y Agentes:</strong> Diseñar e iterar pipelines RAG y aplicaciones LLM para búsqueda semántica, extracción estructurada de contratos y evaluación de agentes internos (RAGAS, LLM-as-judge).</p><p><br></p><p>* <strong>Experimentación Rigurosa:</strong> Diseñar y analizar experimentos (A/B tests, quasi-experiments) y aplicar inferencia causal (DoubleML, DoWhy, uplift modeling) para medir el impacto real en el negocio.</p><p><br></p><p>* <strong>MLOps y Producción:</strong> Construir pipelines escalables de entrenamiento e inferencia, versionar modelos con MLflow (o equivalente) e implementar monitoreo en producción (drift y degradación).</p><p><br></p><p><strong><strong>Requisitos del Perfil</strong></strong></p><p><br></p><p>* Título universitario en Ingeniería, Matemáticas, Estadística, Física, Economía o carreras afines con componente cuantitativo (Maestría/PhD es un plus).</p><p><br></p><p>* Mínimo 5 años de experiencia profesional como Data Scientist o ML Engineer, con al menos 3 años demostrables desplegando sistemas de ML/AI a producción.</p><p><br></p><p>* Dominio experto de Python para DS/ML y SQL avanzado (ClickHouse, BigQuery, PostgreSQL).</p><p><br></p><p>* Experiencia práctica en Sistemas de recomendación, Forecasting, Inferencia Causal (DoWhy/EconML), MLOps (MLflow/Docker) y GenAI aplicada (RAG, LLMs y frameworks de evaluación).</p><p><br></p><p>* Excelentes habilidades de storytelling con datos en español e inglés profesional.</p><p><br></p><p><strong>Beneficios</strong></p><p><br></p><p>* Trabajo 100% remoto.</p><p><br></p><p>* Laptop de alto rendimiento.</p><p><br></p><p>* Participación en el crecimiento de Spot2.</p>",
   "fit_gaps": [
     "El dominio principal es PropTech y marketplace B2B, por lo que aprovecha menos la especialización en banca y riesgo.",
     "Pide experiencia práctica en sistemas de recomendación e inferencia causal con herramientas específicas como DoWhy/EconML."
@@ -19,21 +19,31 @@
   ],
   "fit_summary": "Excelente ajuste técnico para un perfil senior que combine ciencia de datos clásica, experimentación, GenAI, MLOps y sistemas productivos, aunque con menor ventaja de dominio financiero.",
   "identity_key": "84cc6dffc5671fa724768fe7720cc18f1c08a66e9ef73e446a8d4aaff2f54a07",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
-    "substantive_requirements=0",
+    "description_chars=3825",
+    "substantive_requirements=1",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 65.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "México, horario central de Ciudad de México",
   "posted_date": null,
   "posted_date_raw": "Hace 1 día",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "bed2efe6e4a15cc05f313251ff1404fbd09a7d6678141e2e4adb7be676b02e00",
+      "source_native_id": "fa13c25622e4",
+      "source_path": "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
+      "source_search_date": "2026-08-22",
+      "source_updated_at": null
+    },
     {
       "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
       "source_entry_index": 2,
@@ -45,7 +55,9 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
+  "requirements": [
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
   "responsibilities": [],
   "role_title": "Data Scientist Senior - IA y Experimentación",
   "salary": "No especificado",

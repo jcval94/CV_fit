@@ -3,8 +3,8 @@
   "city": "Mexico City, CDMX",
   "company": "PayJoy",
   "company_category": "Fintech",
-  "content_hash": "361a53432f28ae1a82e190bd0f79e59f2ec37b3ccd3f75d779c225c1cdff0a06",
-  "description": null,
+  "content_hash": "7665980e17c01a1b0a5a081af32d73bf5aa7e0e4c8c846e4f76eef78b8576b5b",
+  "description": "About PayJoy PayJoy, a Public Benefit Corporation, is a mission-first credit provider dedicated to helping under-served customers in emerging markets to achieve financial stability and success. Our patented technology for secured credit provides an on-ramp for new customers to enter the credit system. Through PayJoy’s point-of-sale financing and card offerings, customers gain access to a modern quality of life. PayJoy’s credit also allows our customers to seize opportunities as micro-entrepreneurs, and acts as insurance for tough times. Through our cutting-edge machine learning, data science, and anti-fraud AI, we have served over 18 million customers as of 2025 while achieving solid profitability for sustainable growth. This role As a Machine Learning Engineer, you will be responsible for developing, optimizing and deploying the ML models and infrastructure that power our fraud detection capabilities across all of PayJoy’s products and markets. You will work closely with fraud, engineering, product, risk, and business stakeholders across diverse markets to drive the design, implementation and scaling of ML models, AI agents, and other data products (fraud review queues, transaction authorization system, etc.). Your role will also involve ensuring that we are continuously improving the quality and performance of our models by gathering and integrating new data sources that enhance our predictive capabilities. You will own the whole lifecycle of our fraud ML models, from the feature generation to the model rollout (design, development, deployment and monitoring). You will also build infrastructure to support both manual and automated decisioning of fraud risk. You will be part of a data science team on a mission to improve access to credit and technology in emerging markets with the opportunity of creating a big and real positive impact to our millions of users across the countries we operate in. \\n Responsibilities Collaborate with global teams including Fraud, Engineering, Product, and Risk to deliver world-class data science products to international markets in Latam, South Africa and APAC. Design, build, and deploy machine learning models for fraud detection use cases across PayJoy’s product suite Ensure our delivered ML models are production-ready, optimized for scale and continuously improved based on feedback from our stakeholders and performance in production. Improve our infrastructure for fraud decisioning by extending it to new entity types, identifying and constructing new rules, and supporting greater scale as we grow. Handle large, complex datasets to clean, preprocess and extract relevant features to improve product accuracy and performance. Write production-level code with documentation, testing and peer review. Work with a data-driven mindset and understand the critical importance of handling data properly and safely. Lead the testing, cost-benefit analysis and integration of new data sources to improve the accuracy and robustness of our ML models. Work closely with our ML Platform and Tooling team to design and implement scalable feature generation and extraction pipelines and model deployment/monitoring processes. Requirements Bachelor’s degree in Computer Science, Engineering, or a related field 3+ years of experience as a data scientist, machine learning engineer, data engineer or a closely related position with a proven track record of writing production-level code and developing and maintaining ML models in production. High proficiency in Python and a strong understanding of its related libraries and frameworks (e.g., Scikit-Learn, Pandas, Flask, etc). Comprehensive knowledge of ML lifecycle: from data extraction and feature engineering to model serving and monitoring for live and batch processing. Demonstrated experience with cloud providers (AWS preferred) and related services like containerization (e.g., Docker). Experience in fraud detection or other applications of machine learning in the financial market is a big plus. Experience with LLMs or graph databases is also a plus. Hands-on experience with Databricks for developing, deploying and monitoring machine learning workflows at scale is another plus. Good verbal and written communication skills in English Ability to work in a fast paced environment with constant requirement changes. Benefits 100% Company-funded Health and dental and vision discount plan for employees and immediate family members. Life insurance. Phone finance, Headphone, home office equipment and wellness perks. 30 days of Christmas bonus 20 days paid Vacation 50% Vacation premium 13% Saving funds $2,000 MXN monthly grocery coupons $2,000 USD annual Co-working Travel perk $2,000 USD annual Professional Development perk Catered lunches \\n PayJoy is proud to be an Equal Employment Opportunity employer and we welcome and encourage people of all backgrounds. We do not discriminate based upon race, religion, color, national origin, gender (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender identity, gender expression, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics. PayJoy Principles Finance for the next billion * Ownership * Break Through Walls * Live Communication * Transparency & Directness * Focus on Scale * Work-Life Balance * Embrace Diversity * Speed * Active Listening",
   "fit_gaps": [
     "El título es Machine Learning Engineer y puede cargar más hacia infraestructura que hacia ciencia de datos pura.",
     "La publicación oficial no muestra rango salarial."
@@ -19,12 +19,12 @@
   "identity_key": "14b95b3407bcb148fbc6d976ce1a77b0e45f9b7150a4056714a7c9692b5fe91c",
   "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=5441",
     "substantive_requirements=7",
     "substantive_responsibilities=8",
     "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 40.0,
+  "jd_fidelity_score": 100.0,
   "jd_generation_eligible": true,
   "language_confidence": 1.0,
   "language_source": "explicit_source",
@@ -32,6 +32,16 @@
   "posted_date": null,
   "posted_date_raw": "Hace 1 semana",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "821eb4333b1da1c143fc27d8d11f1be3e69feb4354e5b4d03cb1656b6901d3fd",
+      "source_native_id": "09a0aee1be74",
+      "source_path": "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    },
     {
       "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
       "source_entry_index": 0,

@@ -1,8 +1,16 @@
 {
-  "last_run_id": "f12da0198775b9e6d2b53d99760e7aec04bb13dd-noop",
+  "last_run_id": "87c000b61e92893ddc78a4b18b66a0392f1c27b2-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
+    "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json": {
+      "source_hash": "b0ee70b1172fa1552829c1e70a53b23924873846817fa33586edb5e4c04357ca",
+      "state_file": "sources/GPTW__enriched__auto__konf-o-ai-ml-engineer-sr-d5951e27cf.json--31c75e66a22d2adf.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-04e92192e608ea02"
+      ]
+    },
     "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json": {
       "source_hash": "e23d488d1866a1ce5942cfe4c71bf5bfdf43e29d78cd29f740fc53ad33a0843a",
       "state_file": "sources/GPTW__enriched__konfio_ai_ml_engineer_sr_2026-08-18.json--8fb6c8787cdc29d7.json",
@@ -25,6 +33,70 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-71351017a6b16474"
+      ]
+    },
+    "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json": {
+      "source_hash": "4ddef5104ddbe5342866b05618910db61f29e04fe131262c715c0fc44b023a5b",
+      "state_file": "sources/Vacantes__enriched__auto__creai-senior-machine-learning-engineer-636dc54a9a.json--82284db496a3b9dc.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-b968fdbcca798458"
+      ]
+    },
+    "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json": {
+      "source_hash": "183d66252872a4415f6d6e4e8ff2ef9c50224e65bf779eb97b88e3731deb7dc1",
+      "state_file": "sources/Vacantes__enriched__auto__crncy-group-credit-decision-scientist-b4ea95d9e2.json--d35fc93f3c79b24c.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6fe0c8aa95790e4e"
+      ]
+    },
+    "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json": {
+      "source_hash": "34d78fc7c8f7f66cbe0db54dc131fd39fd3b129ab852936a0fb9b8fd95bfde45",
+      "state_file": "sources/Vacantes__enriched__auto__ford-motor-company-data-scientist-nlp-ai-engineer-2acf--69669ecacac5e2df.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-12dc570424d531ae"
+      ]
+    },
+    "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json": {
+      "source_hash": "e63528499e85965d760c9a6163032673b4b6ff8541fcecf49c67e5abf659a477",
+      "state_file": "sources/Vacantes__enriched__auto__infor-scientist-senior-senior-data-scientist-strategy---8075f348aa706de2.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6d9bdccca1ff49c3"
+      ]
+    },
+    "Vacantes/enriched/auto/konf-o-ai-ml-engineer-sr-180871be26.json": {
+      "source_hash": "f80c53c68813799bec906d8aeebe5dbe63c05c7406b6af60ebd104d51ccce2d6",
+      "state_file": "sources/Vacantes__enriched__auto__konf-o-ai-ml-engineer-sr-180871be26.json--a252c01dfd220216.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-adb898e887a1d895"
+      ]
+    },
+    "Vacantes/enriched/auto/lexisnexis-senior-data-scientist-ii-1f0c752faa.json": {
+      "source_hash": "8862d0a4bbe28d9665d5e61c7b65196fd998efeb6caa88466fba30fede467a76",
+      "state_file": "sources/Vacantes__enriched__auto__lexisnexis-senior-data-scientist-ii-1f0c752faa.json--51d57c559481744c.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-631f0119ff49ee6b"
+      ]
+    },
+    "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json": {
+      "source_hash": "821eb4333b1da1c143fc27d8d11f1be3e69feb4354e5b4d03cb1656b6901d3fd",
+      "state_file": "sources/Vacantes__enriched__auto__payjoy-machine-learning-engineer-fraud-7240f6f8b6.json--3ac6d1b4c76236da.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-14b95b3407bcb148"
+      ]
+    },
+    "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json": {
+      "source_hash": "bed2efe6e4a15cc05f313251ff1404fbd09a7d6678141e2e4adb7be676b02e00",
+      "state_file": "sources/Vacantes__enriched__auto__spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8b--252d23a490efb8a6.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-84cc6dffc5671fa7"
       ]
     },
     "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json": {

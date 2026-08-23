@@ -3,8 +3,8 @@
   "city": "Mexico City, Mexico / Remote",
   "company": "Ford Motor Company",
   "company_category": "Producto Tech",
-  "content_hash": "e2870bbf36408675104d9ef6be4b2ba62c00c013d8e29cec4586b580ed8b485f",
-  "description": null,
+  "content_hash": "416028df008e3e4550ab058ce793a683f23635d2be8f087fc50b45109dfbf47c",
+  "description": "We are seeking a Data Scientist with a strong background in natural language processing and a focus on Large Language Models (LLMs) and generative AI. In this role, you will collaborate with product, engineering, analytics, and business teams to translate complex business needs into intelligent, reliable, scalable, and production-ready AI solutions. The ideal candidate will combine strong applied data science and machine learning expertise with hands-on experience developing LLM-powered applications, model evaluation frameworks, responsible AI controls, and cloud-based AI solutions using Google Cloud Platform (GCP). Experience with agentic AI—including tool-enabled agents, workflow orchestration, and multi-agent systems—is a plus. Design, prototype, evaluate, and productionize LLM-powered applications for enterprise and customer-facing use cases. Develop prompt strategies, structured-output workflows, model routing, context-management approaches, and fine-tuning or adaptation methods when appropriate. Create rigorous LLM evaluation frameworks covering task quality, factuality, relevance, robustness, latency, cost, safety, and user experience. Explore and implement agentic AI patterns such as planning, tool and function calling, memory, reflection, human-in-the-loop approvals, and multi-step workflow execution. Develop and deploy scalable AI and machine learning solutions on GCP using services such as Vertex AI, BigQuery, Cloud Storage, Cloud Run, Cloud Functions, Pub/Sub, and related data and AI services. Build reusable Python components, APIs, experimentation pipelines, and data products that integrate with enterprise platforms and applications. Create and maintain data pipelines that prepare structured and unstructured data for modeling, experimentation, evaluation, and production use. Perform exploratory analysis, feature engineering, statistical modeling, and machine learning to support broader data science needs. Implement observability, monitoring, guardrails, automated testing, and feedback loops to improve model and application performance after deployment. Communicate technical findings, tradeoffs, risks, and recommendations clearly to both technical and non-technical stakeholders. Stay current with emerging generative AI methods and translate promising research into practical business value. Education: Minimum: Bachelor’s degree in data science, Computer Science, Statistics, Mathematics, Engineering, or a related quantitative field, or equivalent practical experience. Master’s degree or Ph.D. in a relevant quantitative or technical discipline Preferred Experience: Minimum: 2+ years professional experience in data science, machine learning, applied AI, natural language processing, or a related technical role. 5+ years experience designing or deploying agentic AI systems, including tool-using agents, graph-based workflows, multi-agent collaboration, or human-in-the-loop controls. Preferred: Licenses and Certifications: Licenses Work Requirements: Minimum Strong programming skills in Python and proficiency with SQL; experience writing maintainable, testable, production-quality code. Hands-on experience developing applications with commercial or open-source LLMs. Experience with prompt engineering, LLM evaluation, model integration, and core NLP concepts. Experience working with GCP data and AI services, particularly Vertex AI and BigQuery, or comparable experience on another major cloud platform with the ability to transition to GCP. Experience with modern software development and cloud deployment practices, including Git, APIs, containers, CI/CD, identity and access management, and production monitoring. Ability to translate ambiguous business needs into measurable technical objectives and deliver iteratively in a cross-functional environment. Strong analytical, problem-solving, documentation, and communication skills. Preferred Hands-on experience with Vertex AI capabilities, including Model Garden, Generative AI Studio, custom training, model endpoints, pipelines, evaluation, and model monitoring. Experience building analytics and machine learning workflows with BigQuery, BigQuery ML, Dataflow, or related GCP services. Experience with fine-tuning, parameter-efficient adaptation, synthetic-data generation, distillation, or model serving and optimization. Experience developing evaluation datasets, automated evaluators, adversarial tests, red-team scenarios, and regression test suites for generative AI. Knowledge of LLMOps and MLOps practices, model and prompt versioning, experiment tracking, monitoring, scalable inference, and cost optimization. Experience delivering AI solutions in a regulated, safety-conscious, or large-enterprise environment.",
   "fit_gaps": [
     "No aprovecha directamente banca, fraude o riesgo.",
     "Puede ser más especializado en NLP/AI engineering que en data science financiero."
@@ -19,12 +19,12 @@
   "identity_key": "12dc570424d531ae74cd380a24bb6a6105ed4068aa6663efe7b2c9e26797b0b0",
   "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=4741",
     "substantive_requirements=8",
     "substantive_responsibilities=9",
     "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 40.0,
+  "jd_fidelity_score": 100.0,
   "jd_generation_eligible": true,
   "language_confidence": 1.0,
   "language_source": "explicit_source",
@@ -32,6 +32,16 @@
   "posted_date": null,
   "posted_date_raw": "Hace 1-2 días",
   "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "34d78fc7c8f7f66cbe0db54dc131fd39fd3b129ab852936a0fb9b8fd95bfde45",
+      "source_native_id": "fd925341b8ab",
+      "source_path": "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json",
+      "source_search_date": "2026-08-21",
+      "source_updated_at": null
+    },
     {
       "source_commit": "0d90d82b8fcab3105d920fcdb56269495c47071f",
       "source_entry_index": 0,
