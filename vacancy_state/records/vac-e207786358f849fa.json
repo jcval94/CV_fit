@@ -1,0 +1,68 @@
+{
+  "application_language": "en",
+  "city": "Guadalajara, Jalisco, México",
+  "company": "Drift / Clari + Salesloft",
+  "company_category": "Producto Tech",
+  "content_hash": "87166c1b4ccf56b4779014f12dba6ad31218b23adbb9c104da4bf7774f6ed447",
+  "description": null,
+  "fit_gaps": [
+    "Requiere residencia en Guadalajara y asistencia a oficina cuando sea necesario, por lo que queda por debajo de roles remotos o híbridos en CDMX.",
+    "No aprovecha directamente experiencia de banca, riesgo, fraude o credit scoring."
+  ],
+  "fit_score": 92.0,
+  "fit_strengths": [
+    "Senior Data Scientist con ownership completo de proyectos de investigación y desarrollo de IA desde scoping y diseño experimental hasta prototipos o modelos listos para producción.",
+    "Foco explícito en agentic systems, NLP, machine learning y experimentación robusta.",
+    "Requiere Python y frameworks de agentes como LangGraph, Google ADK y OpenAI Agents SDK.",
+    "Incluye liderazgo intelectual, mentoría, influencia sobre el roadmap de IA y colaboración estrecha con Producto e Ingeniería."
+  ],
+  "fit_summary": "Excelente ajuste funcional y técnico en Data Science e IA aplicada, con fuerte componente de GenAI, experimentación, producción y liderazgo; pierde prioridad únicamente por la restricción geográfica en Guadalajara.",
+  "identity_key": "e207786358f849fac73b00d231d25da8b1046051bef5d377ea09bd446a7bd14e",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Guadalajara, Jalisco, México",
+  "posted_date": "2026-08-22",
+  "posted_date_raw": "2026-08-22",
+  "provenance": [
+    {
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "source_entry_index": 2,
+      "source_format": "vacantes_v1",
+      "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+      "source_native_id": "salesloft-8111801",
+      "source_path": "Vacantes/vacantes_2026-08-23.json",
+      "source_search_date": "2026-08-23",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Data Scientist",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "Machine Learning",
+    "NLP",
+    "Agentic AI",
+    "LangGraph",
+    "Google ADK",
+    "OpenAI Agents SDK",
+    "Experimentación",
+    "Production ML",
+    "AI Research"
+  ],
+  "url": "https://boards.greenhouse.io/salesloft/jobs/8111801",
+  "vacancy_id": "vac-e207786358f849fa",
+  "work_model": "Hybrid"
+}

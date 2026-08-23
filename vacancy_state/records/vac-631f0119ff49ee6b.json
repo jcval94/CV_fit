@@ -1,0 +1,71 @@
+{
+  "application_language": "en",
+  "city": "Área metropolitana de Ciudad de México, México",
+  "company": "LexisNexis",
+  "company_category": "Producto Tech",
+  "content_hash": "4edbfc6c196584d437e7584662081ed3c87ce9784dbd5286590ab4be04552548",
+  "description": null,
+  "fit_gaps": [
+    "La vacante declara 2 a 5 años de experiencia, por lo que el perfil puede resultar sobrecalificado en seniority.",
+    "No aprovecha directamente experiencia en banca, riesgo, fraude o credit scoring."
+  ],
+  "fit_score": 96.0,
+  "fit_strengths": [
+    "Lidera el ciclo end-to-end de soluciones de IA desde definición del problema y experimentación hasta despliegue, evaluación y mejora continua.",
+    "Foco explícito en GenAI, LLMs, RAG, sistemas agentic y arquitecturas multiagente.",
+    "Requiere Python, LangChain, Google ADK, cloud, NLP, embeddings, vector search y prácticas de software productivo.",
+    "Incluye liderazgo técnico, relación con Producto y stakeholders, evaluación de calidad, alucinaciones y comportamiento de modelos."
+  ],
+  "fit_summary": "Es la mejor nueva oportunidad de la búsqueda por combinar seniority, modalidad favorable, CDMX, GenAI aplicada, arquitectura end-to-end, experimentación y ownership de soluciones productivas.",
+  "identity_key": "631f0119ff49ee6bd283019923d7a2c5a35ffac718ca2a31807c5723295740b9",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Área metropolitana de Ciudad de México, México",
+  "posted_date": "2026-08-21",
+  "posted_date_raw": "2026-08-21",
+  "provenance": [
+    {
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+      "source_native_id": "4456047445",
+      "source_path": "Vacantes/vacantes_2026-08-23.json",
+      "source_search_date": "2026-08-23",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Data Scientist II",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "LLMs",
+    "RAG",
+    "LangChain",
+    "Google ADK",
+    "Agentic AI",
+    "Multi-agent systems",
+    "NLP",
+    "Embeddings",
+    "Vector Search",
+    "Cloud",
+    "Experimentación",
+    "Model Evaluation"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ii-at-lexisnexis-4456047445",
+  "vacancy_id": "vac-631f0119ff49ee6b",
+  "work_model": "Remote"
+}

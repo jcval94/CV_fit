@@ -1,0 +1,219 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Área metropolitana de Ciudad de México, México",
+      "company": "LexisNexis",
+      "company_category": "Producto Tech",
+      "content_hash": "0eda964505d5406c17786517299aa32dcde60f29d0aeba56823f8d5f761b2ceb",
+      "description": null,
+      "fit_gaps": [
+        "La vacante declara 2 a 5 años de experiencia, por lo que el perfil puede resultar sobrecalificado en seniority.",
+        "No aprovecha directamente experiencia en banca, riesgo, fraude o credit scoring."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Lidera el ciclo end-to-end de soluciones de IA desde definición del problema y experimentación hasta despliegue, evaluación y mejora continua.",
+        "Foco explícito en GenAI, LLMs, RAG, sistemas agentic y arquitecturas multiagente.",
+        "Requiere Python, LangChain, Google ADK, cloud, NLP, embeddings, vector search y prácticas de software productivo.",
+        "Incluye liderazgo técnico, relación con Producto y stakeholders, evaluación de calidad, alucinaciones y comportamiento de modelos."
+      ],
+      "fit_summary": "Es la mejor nueva oportunidad de la búsqueda por combinar seniority, modalidad favorable, CDMX, GenAI aplicada, arquitectura end-to-end, experimentación y ownership de soluciones productivas.",
+      "identity_key": "631f0119ff49ee6bd283019923d7a2c5a35ffac718ca2a31807c5723295740b9",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Área metropolitana de Ciudad de México, México",
+      "posted_date": "2026-08-21",
+      "posted_date_raw": "2026-08-21",
+      "provenance": [
+        {
+          "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+          "source_native_id": "4456047445",
+          "source_path": "Vacantes/vacantes_2026-08-23.json",
+          "source_search_date": "2026-08-23",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist II",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "LLMs",
+        "RAG",
+        "LangChain",
+        "Google ADK",
+        "Agentic AI",
+        "Multi-agent systems",
+        "NLP",
+        "Embeddings",
+        "Vector Search",
+        "Cloud",
+        "Experimentación",
+        "Model Evaluation"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ii-at-lexisnexis-4456047445",
+      "vacancy_id": "vac-631f0119ff49ee6b",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "México / Ciudad de México",
+      "company": "Creai",
+      "company_category": "Otro",
+      "content_hash": "9f0c6ff6c727f0b622bc726afc333b079ca40faa1433b06d55b171b3f32fe4f9",
+      "description": null,
+      "fit_gaps": [
+        "Creai presta servicios de IA y consultoría, por lo que se mantiene detrás de empresas puramente de producto según el criterio de priorización.",
+        "No presenta un foco específico en banca, fraude o credit scoring."
+      ],
+      "fit_score": 95.0,
+      "fit_strengths": [
+        "Rol senior publicado en español y 100% remoto, centrado en diseño, escalamiento y gobierno de sistemas de IA y machine learning.",
+        "Exige dominio avanzado de Python, PyTorch, TensorFlow, Scikit-learn y XGBoost, además de experiencia en AWS, GCP o Azure.",
+        "Responsabilidad end-to-end desde ingesta y preparación de datos hasta entrenamiento, validación, despliegue, monitoreo y mantenimiento productivo.",
+        "Incluye arquitectura de plataformas de ML, definición de estándares técnicos, supervisión de agentes y decisiones sobre riesgos y validación formal."
+      ],
+      "fit_summary": "Muy alto ajuste técnico y de liderazgo, especialmente por Python, ML productivo, cloud, diseño end-to-end y gobierno de IA; se conserva pese a ser una empresa de servicios porque el puesto pertenece al núcleo técnico de ML/IA.",
+      "identity_key": "b968fdbcca798458b3515040c4939273f8cac28665808749a7e4cfb461ffb638",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "México / Ciudad de México",
+      "posted_date": "2026-08-22",
+      "posted_date_raw": "2026-08-22",
+      "provenance": [
+        {
+          "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+          "source_native_id": "creai-686991",
+          "source_path": "Vacantes/vacantes_2026-08-23.json",
+          "source_search_date": "2026-08-23",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Machine Learning Engineer",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "XGBoost",
+        "Machine Learning",
+        "Deep Learning",
+        "AWS",
+        "SageMaker",
+        "GCP",
+        "Azure ML",
+        "MLOps",
+        "Model Monitoring",
+        "Agentic AI"
+      ],
+      "url": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "Guadalajara, Jalisco, México",
+      "company": "Drift / Clari + Salesloft",
+      "company_category": "Producto Tech",
+      "content_hash": "8b6215bacaaab417a3f750928f64bd3583a2ce6dbb795d31872c12b6e6da5263",
+      "description": null,
+      "fit_gaps": [
+        "Requiere residencia en Guadalajara y asistencia a oficina cuando sea necesario, por lo que queda por debajo de roles remotos o híbridos en CDMX.",
+        "No aprovecha directamente experiencia de banca, riesgo, fraude o credit scoring."
+      ],
+      "fit_score": 92.0,
+      "fit_strengths": [
+        "Senior Data Scientist con ownership completo de proyectos de investigación y desarrollo de IA desde scoping y diseño experimental hasta prototipos o modelos listos para producción.",
+        "Foco explícito en agentic systems, NLP, machine learning y experimentación robusta.",
+        "Requiere Python y frameworks de agentes como LangGraph, Google ADK y OpenAI Agents SDK.",
+        "Incluye liderazgo intelectual, mentoría, influencia sobre el roadmap de IA y colaboración estrecha con Producto e Ingeniería."
+      ],
+      "fit_summary": "Excelente ajuste funcional y técnico en Data Science e IA aplicada, con fuerte componente de GenAI, experimentación, producción y liderazgo; pierde prioridad únicamente por la restricción geográfica en Guadalajara.",
+      "identity_key": "e207786358f849fac73b00d231d25da8b1046051bef5d377ea09bd446a7bd14e",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Guadalajara, Jalisco, México",
+      "posted_date": "2026-08-22",
+      "posted_date_raw": "2026-08-22",
+      "provenance": [
+        {
+          "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+          "source_entry_index": 2,
+          "source_format": "vacantes_v1",
+          "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+          "source_native_id": "salesloft-8111801",
+          "source_path": "Vacantes/vacantes_2026-08-23.json",
+          "source_search_date": "2026-08-23",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "Machine Learning",
+        "NLP",
+        "Agentic AI",
+        "LangGraph",
+        "Google ADK",
+        "OpenAI Agents SDK",
+        "Experimentación",
+        "Production ML",
+        "AI Research"
+      ],
+      "url": "https://boards.greenhouse.io/salesloft/jobs/8111801",
+      "vacancy_id": "vac-e207786358f849fa",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+  "source_path": "Vacantes/vacantes_2026-08-23.json",
+  "status": "valid"
+}

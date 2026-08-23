@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-631f0119ff49ee6b::core",
+      "chunk_type": "core",
+      "content_hash": "74a6847cd0fb7287a1f11ec7cef2529f89d289718184f9d7209530e3cf691c59",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Role: Senior Data Scientist II\nCompany: LexisNexis\nCompany category: Producto Tech\nLocation: Área metropolitana de Ciudad de México, México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-631f0119ff49ee6b"
+    },
+    {
+      "chunk_id": "vac-631f0119ff49ee6b::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "00415904932c234d811c28c4223f23f845fd258b479a9b7582e79b0e8c934f2c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Technologies / capabilities: Python; LLMs; RAG; LangChain; Google ADK; Agentic AI; Multi-agent systems; NLP; Embeddings; Vector Search; Cloud; Experimentación; Model Evaluation",
+      "vacancy_id": "vac-631f0119ff49ee6b"
+    },
+    {
+      "chunk_id": "vac-631f0119ff49ee6b::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "863374100d64b758c8fddee5cfdcac7de87014ff87f7b502831b5e65aad95501",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Es la mejor nueva oportunidad de la búsqueda por combinar seniority, modalidad favorable, CDMX, GenAI aplicada, arquitectura end-to-end, experimentación y ownership de soluciones productivas.\nSource strengths: Lidera el ciclo end-to-end de soluciones de IA desde definición del problema y experimentación hasta despliegue, evaluación y mejora continua.; Foco explícito en GenAI, LLMs, RAG, sistemas agentic y arquitecturas multiagente.; Requiere Python, LangChain, Google ADK, cloud, NLP, embeddings, vector search y prácticas de software productivo.; Incluye liderazgo técnico, relación con Producto y stakeholders, evaluación de calidad, alucinaciones y comportamiento de modelos.\nSource gaps: La vacante declara 2 a 5 años de experiencia, por lo que el perfil puede resultar sobrecalificado en seniority.; No aprovecha directamente experiencia en banca, riesgo, fraude o credit scoring.",
+      "vacancy_id": "vac-631f0119ff49ee6b"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-631f0119ff49ee6b"
+}

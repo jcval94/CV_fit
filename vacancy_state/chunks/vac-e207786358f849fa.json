@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-e207786358f849fa::core",
+      "chunk_type": "core",
+      "content_hash": "d0f4bfe2460464599f936783ce53b648660f8b2b712a40005ba3ea617774a654",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Role: Senior Data Scientist\nCompany: Drift / Clari + Salesloft\nCompany category: Producto Tech\nLocation: Guadalajara, Jalisco, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-e207786358f849fa"
+    },
+    {
+      "chunk_id": "vac-e207786358f849fa::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "663814df546a032a63993fff18711f9a1577198d033eb075b0a9ce8a3d6a2678",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Technologies / capabilities: Python; Machine Learning; NLP; Agentic AI; LangGraph; Google ADK; OpenAI Agents SDK; Experimentación; Production ML; AI Research",
+      "vacancy_id": "vac-e207786358f849fa"
+    },
+    {
+      "chunk_id": "vac-e207786358f849fa::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "62a9bbc304cbd70cfb3d395f77dc75d6db905ec1d2555702c6f533de676b0a34",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Source fit score: 92/100\nSource fit summary: Excelente ajuste funcional y técnico en Data Science e IA aplicada, con fuerte componente de GenAI, experimentación, producción y liderazgo; pierde prioridad únicamente por la restricción geográfica en Guadalajara.\nSource strengths: Senior Data Scientist con ownership completo de proyectos de investigación y desarrollo de IA desde scoping y diseño experimental hasta prototipos o modelos listos para producción.; Foco explícito en agentic systems, NLP, machine learning y experimentación robusta.; Requiere Python y frameworks de agentes como LangGraph, Google ADK y OpenAI Agents SDK.; Incluye liderazgo intelectual, mentoría, influencia sobre el roadmap de IA y colaboración estrecha con Producto e Ingeniería.\nSource gaps: Requiere residencia en Guadalajara y asistencia a oficina cuando sea necesario, por lo que queda por debajo de roles remotos o híbridos en CDMX.; No aprovecha directamente experiencia de banca, riesgo, fraude o credit scoring.",
+      "vacancy_id": "vac-e207786358f849fa"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-e207786358f849fa"
+}

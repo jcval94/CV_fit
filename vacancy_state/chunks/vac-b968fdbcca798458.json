@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-b968fdbcca798458::core",
+      "chunk_type": "core",
+      "content_hash": "c4eb971afa89f1daf1fda8e7caa733d4616d4e41ff8d5034e9eeb4f0e6b36300",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Role: Senior Machine Learning Engineer\nCompany: Creai\nCompany category: Otro\nLocation: México / Ciudad de México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-b968fdbcca798458"
+    },
+    {
+      "chunk_id": "vac-b968fdbcca798458::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "7a3924a4f10d92f0e02dbfce68d194e23256177025e94234ccf00a42caba566d",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Technologies / capabilities: Python; PyTorch; TensorFlow; Scikit-learn; XGBoost; Machine Learning; Deep Learning; AWS; SageMaker; GCP; Azure ML; MLOps; Model Monitoring; Agentic AI",
+      "vacancy_id": "vac-b968fdbcca798458"
+    },
+    {
+      "chunk_id": "vac-b968fdbcca798458::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "858584f7c6acab5fd9cd595c1a28a33fc82fc65932f6b44dbf35131d323ed302",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-23.json"
+      ],
+      "text": "Source fit score: 95/100\nSource fit summary: Muy alto ajuste técnico y de liderazgo, especialmente por Python, ML productivo, cloud, diseño end-to-end y gobierno de IA; se conserva pese a ser una empresa de servicios porque el puesto pertenece al núcleo técnico de ML/IA.\nSource strengths: Rol senior publicado en español y 100% remoto, centrado en diseño, escalamiento y gobierno de sistemas de IA y machine learning.; Exige dominio avanzado de Python, PyTorch, TensorFlow, Scikit-learn y XGBoost, además de experiencia en AWS, GCP o Azure.; Responsabilidad end-to-end desde ingesta y preparación de datos hasta entrenamiento, validación, despliegue, monitoreo y mantenimiento productivo.; Incluye arquitectura de plataformas de ML, definición de estándares técnicos, supervisión de agentes y decisiones sobre riesgos y validación formal.\nSource gaps: Creai presta servicios de IA y consultoría, por lo que se mantiene detrás de empresas puramente de producto según el criterio de priorización.; No presenta un foco específico en banca, fraude o credit scoring.",
+      "vacancy_id": "vac-b968fdbcca798458"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-b968fdbcca798458"
+}

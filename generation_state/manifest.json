@@ -111,6 +111,17 @@
       "unsupported_requirements": [],
       "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
     },
+    "vac-631f0119ff49ee6b": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "46d16a1ad24f7a02612b15305ef889b396df22ee20892e8e52bbc952a0088fe7",
+      "generation_logic_version": 4,
+      "ready_to_send": false,
+      "reason": "vacancy vac-631f0119ff49ee6b is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "4edbfc6c196584d437e7584662081ed3c87ce9784dbd5286590ab4be04552548"
+    },
     "vac-6d9bdccca1ff49c3": {
       "error": "ValueError: strategy selected unknown/ineligible evidence chunks: ['role-bbva::bbva-m-x-xico::role-chronology::data-scientist-associate']",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
@@ -167,6 +178,28 @@
       "source_commit": "d1f127c67e23ab075a08ccb32524c49584d18cfc",
       "status": "SKIPPED_NOT_ELIGIBLE",
       "vacancy_content_hash": "a2fe32b2e7d015d7e1997ca4baebf451864ed3b6acb40024bdb240871b8015ae"
+    },
+    "vac-b968fdbcca798458": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "ff792e34d33ba4cd9da4293425bffd1e226167e8ac159134b7eb2af9a4c8be02",
+      "generation_logic_version": 4,
+      "ready_to_send": false,
+      "reason": "vacancy vac-b968fdbcca798458 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "75ce22ba4ed560ff3f2bb7e00575f18f3656f2ca94080016e20f4074552fbd30"
+    },
+    "vac-e207786358f849fa": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "737dad360a2b9467a9244a6f1f151ad19551565902b708cb1abf81e35bb177a2",
+      "generation_logic_version": 4,
+      "ready_to_send": false,
+      "reason": "vacancy vac-e207786358f849fa is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "87166c1b4ccf56b4779014f12dba6ad31218b23adbb9c104da4bf7774f6ed447"
     }
   },
   "pipeline_version": 1,
