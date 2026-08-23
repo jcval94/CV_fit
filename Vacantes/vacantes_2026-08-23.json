@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-23",
+    "total_vacantes_encontradas": 3,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "4456047445",
+      "puesto": "Senior Data Scientist II",
+      "empresa": "LexisNexis",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Área metropolitana de Ciudad de México, México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-21",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Lidera el ciclo end-to-end de soluciones de IA desde definición del problema y experimentación hasta despliegue, evaluación y mejora continua.",
+          "Foco explícito en GenAI, LLMs, RAG, sistemas agentic y arquitecturas multiagente.",
+          "Requiere Python, LangChain, Google ADK, cloud, NLP, embeddings, vector search y prácticas de software productivo.",
+          "Incluye liderazgo técnico, relación con Producto y stakeholders, evaluación de calidad, alucinaciones y comportamiento de modelos."
+        ],
+        "posibles_gaps": [
+          "La vacante declara 2 a 5 años de experiencia, por lo que el perfil puede resultar sobrecalificado en seniority.",
+          "No aprovecha directamente experiencia en banca, riesgo, fraude o credit scoring."
+        ],
+        "resumen": "Es la mejor nueva oportunidad de la búsqueda por combinar seniority, modalidad favorable, CDMX, GenAI aplicada, arquitectura end-to-end, experimentación y ownership de soluciones productivas."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "LLMs",
+        "RAG",
+        "LangChain",
+        "Google ADK",
+        "Agentic AI",
+        "Multi-agent systems",
+        "NLP",
+        "Embeddings",
+        "Vector Search",
+        "Cloud",
+        "Experimentación",
+        "Model Evaluation"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ii-at-lexisnexis-4456047445"
+    },
+    {
+      "id_vacante": "creai-686991",
+      "puesto": "Senior Machine Learning Engineer",
+      "empresa": "Creai",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México / Ciudad de México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-22",
+      "porcentaje_ajuste": 95,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol senior publicado en español y 100% remoto, centrado en diseño, escalamiento y gobierno de sistemas de IA y machine learning.",
+          "Exige dominio avanzado de Python, PyTorch, TensorFlow, Scikit-learn y XGBoost, además de experiencia en AWS, GCP o Azure.",
+          "Responsabilidad end-to-end desde ingesta y preparación de datos hasta entrenamiento, validación, despliegue, monitoreo y mantenimiento productivo.",
+          "Incluye arquitectura de plataformas de ML, definición de estándares técnicos, supervisión de agentes y decisiones sobre riesgos y validación formal."
+        ],
+        "posibles_gaps": [
+          "Creai presta servicios de IA y consultoría, por lo que se mantiene detrás de empresas puramente de producto según el criterio de priorización.",
+          "No presenta un foco específico en banca, fraude o credit scoring."
+        ],
+        "resumen": "Muy alto ajuste técnico y de liderazgo, especialmente por Python, ML productivo, cloud, diseño end-to-end y gobierno de IA; se conserva pese a ser una empresa de servicios porque el puesto pertenece al núcleo técnico de ML/IA."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "XGBoost",
+        "Machine Learning",
+        "Deep Learning",
+        "AWS",
+        "SageMaker",
+        "GCP",
+        "Azure ML",
+        "MLOps",
+        "Model Monitoring",
+        "Agentic AI"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer"
+    },
+    {
+      "id_vacante": "salesloft-8111801",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Drift / Clari + Salesloft",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Guadalajara, Jalisco, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-08-22",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Senior Data Scientist con ownership completo de proyectos de investigación y desarrollo de IA desde scoping y diseño experimental hasta prototipos o modelos listos para producción.",
+          "Foco explícito en agentic systems, NLP, machine learning y experimentación robusta.",
+          "Requiere Python y frameworks de agentes como LangGraph, Google ADK y OpenAI Agents SDK.",
+          "Incluye liderazgo intelectual, mentoría, influencia sobre el roadmap de IA y colaboración estrecha con Producto e Ingeniería."
+        ],
+        "posibles_gaps": [
+          "Requiere residencia en Guadalajara y asistencia a oficina cuando sea necesario, por lo que queda por debajo de roles remotos o híbridos en CDMX.",
+          "No aprovecha directamente experiencia de banca, riesgo, fraude o credit scoring."
+        ],
+        "resumen": "Excelente ajuste funcional y técnico en Data Science e IA aplicada, con fuerte componente de GenAI, experimentación, producción y liderazgo; pierde prioridad únicamente por la restricción geográfica en Guadalajara."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "Machine Learning",
+        "NLP",
+        "Agentic AI",
+        "LangGraph",
+        "Google ADK",
+        "OpenAI Agents SDK",
+        "Experimentación",
+        "Production ML",
+        "AI Research"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://boards.greenhouse.io/salesloft/jobs/8111801"
+    }
+  ]
+}
