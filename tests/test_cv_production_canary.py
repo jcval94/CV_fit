@@ -7,12 +7,17 @@ from cv_observability.production_canary import build_summary
 
 
 class ProductionCanaryContractTests(unittest.TestCase):
-    def test_public_issue_trigger_is_not_allowed(self):
-        workflow = Path('.github/workflows/production-canary.yml').read_text(encoding='utf-8')
-        self.assertIn('workflow_dispatch:', workflow)
-        self.assertNotIn('\n  issues:', workflow)
-        self.assertNotIn("github.event.issue.title", workflow)
-        self.assertNotIn("gh issue comment", workflow)
+    def test_public_issue_trigger_is_not_allowed_for_any_paid_canary(self):
+        workflows = [
+            Path('.github/workflows/production-canary.yml').read_text(encoding='utf-8'),
+            Path('.github/workflows/live-canary-once.yml').read_text(encoding='utf-8'),
+        ]
+        for workflow in workflows:
+            self.assertIn('workflow_dispatch:', workflow)
+            self.assertNotIn('\n  issues:', workflow)
+            self.assertNotIn('github.event.issue', workflow)
+            self.assertNotIn('gh issue comment', workflow)
+            self.assertNotIn('issues: write', workflow)
 
     def test_semantic_failure_overrides_successful_process_exit(self):
         with tempfile.TemporaryDirectory() as tmp:
