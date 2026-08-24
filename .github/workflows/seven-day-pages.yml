@@ -1,0 +1,114 @@
+name: Deploy 7-day CV history to GitHub Pages
+
+on:
+  workflow_run:
+    workflows: ["Deploy daily CV showcase to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages-history
+  cancel-in-progress: true
+
+jobs:
+  deploy-history:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Download recent successful daily showcase snapshots
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/cvfit-history _site
+          mkdir -p /tmp/cvfit-history
+          downloaded=0
+          while IFS=$'\t' read -r run_id created_at; do
+            [ -n "$run_id" ] || continue
+            stamp="$(printf '%s' "$created_at" | tr -cd '0-9')"
+            target="/tmp/cvfit-history/${stamp}_${run_id}"
+            mkdir -p "$target"
+            if gh run download "$run_id" -n daily-showcase -D "$target"; then
+              if [ -f "$target/showcase.json" ] && [ -f "$target/index.html" ]; then
+                downloaded=$((downloaded + 1))
+              else
+                rm -rf "$target"
+              fi
+            else
+              rm -rf "$target"
+            fi
+            if [ "$downloaded" -ge 20 ]; then
+              break
+            fi
+          done < <(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=40" \
+              --jq '.workflow_runs[] | [.id, .created_at] | @tsv'
+          )
+          if [ "$downloaded" -eq 0 ]; then
+            echo "No daily-showcase snapshots were downloadable."
+            exit 2
+          fi
+          echo "Downloaded $downloaded candidate snapshot(s)."
+
+      - name: Merge last 7 days and add manual CV status
+        run: >-
+          python -m cv_presentation.history_merge
+          --sites-root /tmp/cvfit-history
+          --site-dir _site
+          --history-days 7
+          --generation-manifest generation_state/manifest.json
+
+      - name: Verify seven-day Pages contract
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path('_site/showcase.json').read_text(encoding='utf-8'))
+          assert payload['schema_version'] == 3, payload
+          assert payload['view'] == 'vacancy_cv_feed_7d', payload
+          assert payload['history_days'] == 7, payload
+          assert payload['window_start'] <= payload['window_end'], payload
+          assert payload['vacancies'], payload
+          html = Path('_site/index.html').read_text(encoding='utf-8')
+          assert 'Vacancies from the last 7 days' in html
+          assert 'Status: CV no enviado' in html
+          assert 'cvfit-send-status:' in html
+          count = len(list(Path('_site/vacancies').glob('*/cv_primary.html')))
+          assert count > 0, 'refusing to deploy a history feed with no public CV HTML'
+          print('seven_day_pages=PASS', payload['window_start'], payload['window_end'], len(payload['vacancies']), count)
+          PY
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload seven-day Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy seven-day history
+        id: deployment
+        uses: actions/deploy-pages@v4
