@@ -39,7 +39,7 @@ def _number(value: Any) -> float | None:
 
 
 def _usage_delta(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any]:
-    """Return only the usage generated since the previous snapshot."""
+    """Return only the usage generated since the previous snapshot, including calls."""
     before_calls = int(before.get("call_count") or 0)
     after_calls = int(after.get("call_count") or 0)
     before_known = _number(before.get("known_estimated_cost_usd")) or 0.0
@@ -49,6 +49,8 @@ def _usage_delta(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any
     exact = None
     if before_exact is not None and after_exact is not None:
         exact = round(max(after_exact - before_exact, 0.0), 8)
+    all_calls = after.get("calls") if isinstance(after.get("calls"), list) else []
+    calls = [dict(item) for item in all_calls[before_calls:after_calls] if isinstance(item, dict)]
     return {
         "call_count": max(after_calls - before_calls, 0),
         "estimated_cost_usd": exact,
@@ -58,6 +60,7 @@ def _usage_delta(before: dict[str, Any], after: dict[str, Any]) -> dict[str, Any
         "candidate_tokens": max(int(after.get("candidate_tokens") or 0) - int(before.get("candidate_tokens") or 0), 0),
         "reasoning_tokens": max(int(after.get("reasoning_tokens") or 0) - int(before.get("reasoning_tokens") or 0), 0),
         "total_tokens": max(int(after.get("total_tokens") or 0) - int(before.get("total_tokens") or 0), 0),
+        "calls": calls,
     }
 
 
