@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "request_id": "manual-2026-08-24-lexisnexis-creai",
+  "requested_at": "2026-08-24T20:01:00Z",
+  "reason": "User-requested validation of adaptive_cost_v1 on two current full-JD vacancies",
+  "vacancy_ids": [
+    "vac-631f0119ff49ee6b",
+    "vac-b968fdbcca798458"
+  ],
+  "max_per_cv_generation_cost_usd": 1.0,
+  "max_batch_generation_cost_usd": 2.0,
+  "history_days": 7
+}

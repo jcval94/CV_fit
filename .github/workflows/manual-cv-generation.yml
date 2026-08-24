@@ -1,0 +1,238 @@
+name: Generate requested CVs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "generation_requests/**/*.json"
+      - ".github/workflows/manual-cv-generation.yml"
+  workflow_dispatch:
+    inputs:
+      request_file:
+        description: "Path under generation_requests/ to a committed request JSON"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: manual-cv-generation
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      CVFIT_EVENT_LOG: /tmp/cvfit-observability/manual-events.jsonl
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Install Chromium for physical CV validation
+        run: python -m playwright install --with-deps chromium
+
+      - name: Resolve explicit generation request
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_FILE: ${{ inputs.request_file }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            request_file="$MANUAL_FILE"
+          else
+            request_file="$(git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep '^generation_requests/.*\.json$' | head -n 1 || true)"
+          fi
+          if [ -z "${request_file:-}" ] || [ ! -f "$request_file" ]; then
+            echo "No committed generation request JSON was resolved."
+            exit 2
+          fi
+          echo "REQUEST_FILE=$request_file" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          request = json.loads(Path(os.environ['REQUEST_FILE']).read_text(encoding='utf-8'))
+          ids = [str(value) for value in request.get('vacancy_ids', []) if value]
+          if not ids:
+              raise SystemExit('generation request contains no vacancy_ids')
+          if len(ids) > 2:
+              raise SystemExit('manual policy-test workflow is intentionally capped at two vacancies per request')
+          request_id = str(request.get('request_id') or '').strip()
+          if not request_id:
+              raise SystemExit('generation request has no request_id')
+          records = []
+          dates = []
+          for vacancy_id in ids:
+              path = Path('vacancy_state/records') / f'{vacancy_id}.json'
+              if not path.exists():
+                  raise SystemExit(f'canonical vacancy missing: {vacancy_id}')
+              record = json.loads(path.read_text(encoding='utf-8'))
+              if record.get('jd_generation_eligible') is not True or record.get('jd_fidelity') not in {'full','partial'}:
+                  raise SystemExit(f'vacancy is not generation eligible: {vacancy_id}')
+              records.append(record)
+              for ref in record.get('provenance', []):
+                  value = str(ref.get('source_search_date') or '')[:10]
+                  if value:
+                      dates.append(value)
+          ingest = {
+              'schema_version': 1,
+              'run_id': request_id,
+              'reindexed_vacancy_ids': ids,
+              'manual_request_id': request_id,
+              'manual_request_reason': request.get('reason'),
+          }
+          Path('/tmp/manual-ingest.json').write_text(json.dumps(ingest, indent=2) + '\n', encoding='utf-8')
+          Path('/tmp/manual-request-context.json').write_text(json.dumps({'request_id': request_id, 'vacancy_ids': ids}, indent=2) + '\n', encoding='utf-8')
+          env = Path(os.environ['GITHUB_ENV'])
+          with env.open('a', encoding='utf-8') as fh:
+              fh.write(f'REQUEST_ID={request_id}\n')
+              fh.write(f'SHOWCASE_DATE={max(dates) if dates else "2026-08-24"}\n')
+              fh.write(f'MAX_PER_CV={float(request.get("max_per_cv_generation_cost_usd", 1.0))}\n')
+              fh.write(f'MAX_BATCH={float(request.get("max_batch_generation_cost_usd", 2.0))}\n')
+          print('manual_request=', request_id, ids)
+          PY
+
+      - name: Freeze historical baseline before paid calls
+        run: >-
+          python -m cv_observability.cost_ledger baseline
+          --manifest generation_state/manifest.json
+          --recovered-metrics generation_state/recovered_metrics.json
+          --ledger generation_state/cost_ledger.json
+          --source-commit ${{ github.sha }}
+
+      - name: Generate only explicitly requested CVs
+        run: >-
+          python -m cv_auto
+          --ingest-report /tmp/manual-ingest.json
+          --vacancy-state vacancy_state
+          --evidence-state rag_state
+          --generation-state generation_state
+          --outputs outputs/manual
+          --run-id manual-${{ github.run_id }}
+          --source-commit ${{ github.sha }}
+          --retrieval-mode hybrid-rerank
+          --max-vacancies-per-run 2
+          --max-estimated-cost-usd "${MAX_PER_CV}"
+          --max-batch-estimated-cost-usd "${MAX_BATCH}"
+          --min-batch-remaining-usd 0.25
+          --skip-stale-logic
+          --skip-deferred-without-candidates
+
+      - name: Generate concise grounded cover letters
+        continue-on-error: true
+        run: >-
+          python -m cv_agent.cover_letter_batch
+          --batch-report outputs/manual/_batch/manual-${{ github.run_id }}/generation_run_report.json
+          --outputs outputs/manual
+          --vacancy-state vacancy_state
+          --max-estimated-cost-usd 0.5
+
+      - name: Build Technical Modern and Harvard application bundles
+        run: >-
+          python -m cv_presentation.batch_bundle
+          --batch-report outputs/manual/_batch/manual-${{ github.run_id }}/generation_run_report.json
+          --outputs outputs/manual
+          --vacancy-state vacancy_state
+          --generation-state generation_state
+          --identity-public cv_presentation/identity.public.yaml
+          --brand-profiles-dir cv_presentation/brands
+          --max-design-cost-usd 0.5
+
+      - name: Record exact known call-level costs
+        if: always()
+        run: |
+          report="outputs/manual/_batch/manual-${GITHUB_RUN_ID}/generation_run_report.json"
+          if [ ! -f "$report" ]; then
+            echo "Generation report missing; nothing can be attributed."
+            exit 0
+          fi
+          python -m cv_observability.cost_ledger record-run \
+            --generation-report "$report" \
+            --cover-report "outputs/manual/_batch/manual-${GITHUB_RUN_ID}/cover_letter_batch_report.json" \
+            --bundle-report "outputs/manual/_batch/manual-${GITHUB_RUN_ID}/application_bundle_batch_report.json" \
+            --outputs outputs/manual \
+            --ledger generation_state/cost_ledger.json \
+            --source-commit "$GITHUB_SHA" \
+            --batch-budget-usd "$MAX_BATCH"
+
+      - name: Persist marginal review evidence and explicit manual spend reason
+        if: always()
+        run: |
+          report="outputs/manual/_batch/manual-${GITHUB_RUN_ID}/generation_run_report.json"
+          if [ ! -f "$report" ]; then exit 0; fi
+          python -m cv_observability.decision_evidence \
+            --outputs outputs/manual \
+            --ledger generation_state/cost_ledger.json \
+            --state generation_state/decision_evidence.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from cv_observability.manual_attribution import classify_manual_request
+          context = json.loads(Path('/tmp/manual-request-context.json').read_text(encoding='utf-8'))
+          result = classify_manual_request(
+              generation_report=Path(f"outputs/manual/_batch/manual-{os.environ['GITHUB_RUN_ID']}/generation_run_report.json"),
+              decision_state=Path('generation_state/decision_evidence.json'),
+              request_id=context['request_id'],
+              vacancy_ids=set(context['vacancy_ids']),
+          )
+          print(json.dumps(result, sort_keys=True))
+          PY
+
+      - name: Build public showcase snapshot for this manual run
+        run: >-
+          python -m cv_presentation.showcase
+          --date "${SHOWCASE_DATE}"
+          --vacancy-state vacancy_state
+          --bundle-batch-report outputs/manual/_batch/manual-${{ github.run_id }}/application_bundle_batch_report.json
+          --outputs outputs/manual
+          --site-dir _site
+
+      - name: Add newest Budget and Cost snapshot
+        run: >-
+          python -m cv_presentation.budget_dashboard
+          --ledger generation_state/cost_ledger.json
+          --manifest generation_state/manifest.json
+          --vacancy-state vacancy_state
+          --site-dir _site
+
+      - name: Upload requested CV artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: manual-cv-${{ github.run_id }}
+          path: outputs/manual/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload manual daily-showcase snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-showcase
+          path: _site/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Commit truthful generation and cost state
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state
+          if git diff --cached --quiet; then
+            echo "No generation-state changes to persist."
+            exit 0
+          fi
+          git commit -m "chore: record requested CV generation ${REQUEST_ID}"
+          git pull --rebase origin main
+          git push origin HEAD:main
