@@ -36,6 +36,7 @@ class DecisionReadinessTests(unittest.TestCase):
                     "truth_rule": "missing stays missing",
                 },
                 "application_economics": {
+                    "cohort_vacancy_count": 1,
                     "application_disposition_coverage_pct": 100.0,
                     "final_applied_outcome_coverage_pct": 100.0,
                 },
@@ -72,12 +73,12 @@ class DecisionReadinessTests(unittest.TestCase):
             self.assertTrue(readiness["completely_informed"])
             self.assertIn("Completeness gate", html.read_text(encoding="utf-8"))
 
-    def test_no_observable_scope_is_not_falsely_decision_grade(self) -> None:
+    def test_zero_paid_cohort_is_not_falsely_decision_grade_even_with_observable_run(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             public = root / "payload.json"
             payload = self._payload()
-            payload["decision_grade"]["scope"] = {"run_count": 0, "run_ids": []}
+            payload["decision_grade"]["application_economics"]["cohort_vacancy_count"] = 0
             self._write(public, payload)
             result = enforce_readiness(public_payload_path=public)
             self.assertEqual(result["status"], "NO_DECISION_GRADE_COHORT_YET")
