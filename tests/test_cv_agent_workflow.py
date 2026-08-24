@@ -162,13 +162,13 @@ class WorkflowTests(unittest.IsolatedAsyncioTestCase):
             output = Path(temp)
             report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=output, run_id="style-repair")
 
-        names = [call["name"] for call in client.calls]
-        self.assertLess(names.index("cv_style_reviser"), names.index("senior_headhunter_1"))
-        self.assertTrue(report["style_preflight"]["attempted"])
-        self.assertTrue(report["style_preflight"]["repaired"])
-        self.assertEqual(report["style_preflight"]["model"], model_ids()["economy"])
-        self.assertTrue((output / "style_preflight.json").exists())
-        self.assertTrue((output / "drafts" / "cv_style_repaired.json").exists())
+            names = [call["name"] for call in client.calls]
+            self.assertLess(names.index("cv_style_reviser"), names.index("senior_headhunter_1"))
+            self.assertTrue(report["style_preflight"]["attempted"])
+            self.assertTrue(report["style_preflight"]["repaired"])
+            self.assertEqual(report["style_preflight"]["model"], model_ids()["economy"])
+            self.assertTrue((output / "style_preflight.json").exists())
+            self.assertTrue((output / "drafts" / "cv_style_repaired.json").exists())
 
     async def test_fifth_failure_returns_best_cv_with_explicit_note(self) -> None:
         client = FakeClient([make_review(70), make_review(91), make_review(86), make_review(89), make_review(88)])
