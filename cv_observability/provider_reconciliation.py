@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA_VERSION = 1
+ALLOWED_SCOPE_KINDS = {"CV_FIT_DEDICATED_SCOPE", "MIXED_PROVIDER_ACCOUNT"}
 
 
 def _read(path: Path, default: Any) -> Any:
@@ -59,6 +60,7 @@ def record_provider_statement(
     period_start: str,
     period_end: str,
     actual_cost_usd: float,
+    scope_kind: str = "MIXED_PROVIDER_ACCOUNT",
     evidence_ref: str | None = None,
     recorded_by: str | None = None,
 ) -> dict[str, Any]:
@@ -69,8 +71,11 @@ def record_provider_statement(
     cost = float(actual_cost_usd)
     if cost < 0:
         raise ValueError("actual_cost_usd must be >= 0")
+    scope_kind = str(scope_kind or "").strip().upper()
+    if scope_kind not in ALLOWED_SCOPE_KINDS:
+        raise ValueError(f"unsupported provider scope_kind: {scope_kind}")
     ref_hash = _sha(evidence_ref)
-    raw = "|".join((start, end, f"{cost:.8f}", ref_hash or ""))
+    raw = "|".join((start, end, f"{cost:.8f}", scope_kind, ref_hash or ""))
     entry_id = hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
     state = _load(state_path)
     if entry_id in state["entries"]:
@@ -82,6 +87,7 @@ def record_provider_statement(
         "actual_cost_usd": round(cost, 8),
         "currency": "USD",
         "source_kind": "PROVIDER_STATEMENT_USER_RECORDED",
+        "scope_kind": scope_kind,
         "evidence_ref_sha256": ref_hash,
         "recorded_at": _now(),
         "recorded_by": str(recorded_by or "").strip() or None,
@@ -97,6 +103,7 @@ def main() -> int:
     parser.add_argument("--period-start", required=True)
     parser.add_argument("--period-end", required=True)
     parser.add_argument("--actual-cost-usd", required=True, type=float)
+    parser.add_argument("--scope-kind", default="MIXED_PROVIDER_ACCOUNT", choices=sorted(ALLOWED_SCOPE_KINDS))
     parser.add_argument("--evidence-ref", default=None)
     parser.add_argument("--recorded-by", default=None)
     args = parser.parse_args()
@@ -105,10 +112,11 @@ def main() -> int:
         period_start=args.period_start,
         period_end=args.period_end,
         actual_cost_usd=args.actual_cost_usd,
+        scope_kind=args.scope_kind,
         evidence_ref=args.evidence_ref,
         recorded_by=args.recorded_by,
     )
-    print(json.dumps({"entry_id": entry["entry_id"], "period_start": entry["period_start"], "period_end": entry["period_end"], "actual_cost_usd": entry["actual_cost_usd"]}, sort_keys=True))
+    print(json.dumps({"entry_id": entry["entry_id"], "period_start": entry["period_start"], "period_end": entry["period_end"], "actual_cost_usd": entry["actual_cost_usd"], "scope_kind": entry["scope_kind"]}, sort_keys=True))
     return 0
 
 
