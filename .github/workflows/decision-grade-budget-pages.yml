@@ -14,6 +14,7 @@ on:
       - "cv_observability/decision_evidence.py"
       - "cv_observability/decision_truth.py"
       - "cv_presentation/decision_dashboard.py"
+      - "cv_presentation/decision_scope.py"
       - "cv_presentation/decision_readiness.py"
       - "cv_auto/__main__.py"
       - ".github/workflows/application-outcome.yml"
@@ -82,14 +83,15 @@ jobs:
           fi
           echo "Using daily-showcase from vacancy-ingest run $selected"
 
-      - name: Download newest reusable auto-cv evidence artifact
+      - name: Download reusable auto-cv evidence artifacts
         id: cv-evidence
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           rm -rf /tmp/cvfit-auto-cv /tmp/cvfit-auto-candidate
-          echo "found=false" >> "$GITHUB_OUTPUT"
+          mkdir -p /tmp/cvfit-auto-cv
+          artifact_count=0
           while IFS= read -r run_id; do
             [ -n "$run_id" ] || continue
             rm -rf /tmp/cvfit-auto-candidate
@@ -98,14 +100,19 @@ jobs:
               continue
             fi
             if find /tmp/cvfit-auto-candidate -type f -name generation_run_report.json -print -quit | grep -q .; then
-              mv /tmp/cvfit-auto-candidate /tmp/cvfit-auto-cv
-              echo "found=true" >> "$GITHUB_OUTPUT"
-              echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
-              break
+              cp -a /tmp/cvfit-auto-candidate/. /tmp/cvfit-auto-cv/
+              artifact_count=$((artifact_count + 1))
             fi
           done < <(
             gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[].id'
           )
+          if [ "$artifact_count" -gt 0 ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "artifact_count=$artifact_count" >> "$GITHUB_OUTPUT"
+          echo "Recovered $artifact_count reusable auto-cv evidence artifact(s)."
 
       - name: Persist exact spend-origin and marginal-review evidence
         if: steps.cv-evidence.outputs.found == 'true'
@@ -148,9 +155,9 @@ jobs:
           --vacancy-state vacancy_state
           --site-dir _site
 
-      - name: Add decision-grade economics and truth gates
+      - name: Add fully observable decision-cohort economics
         run: >-
-          python -m cv_presentation.decision_dashboard
+          python -m cv_presentation.decision_scope
           --site-dir _site
           --ledger generation_state/cost_ledger.json
           --application-state generation_state/application_state.json
@@ -177,6 +184,7 @@ jobs:
           assert readiness['complete_decision_rule'], decision
           print('readiness=', readiness['status'])
           print('completely_informed=', readiness['completely_informed'])
+          print('scope_run_count=', readiness['decision_grade_scope_run_count'])
           print('application_disposition_coverage_pct=', decision['application_economics']['application_disposition_coverage_pct'])
           print('spend_reason_classified_pct=', readiness['spend_reason_classified_pct'])
           print('marginal_review_spend_coverage_pct=', readiness['marginal_review_spend_coverage_pct'])
