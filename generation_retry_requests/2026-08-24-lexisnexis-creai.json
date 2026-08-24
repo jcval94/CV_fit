@@ -2,7 +2,8 @@
   "schema_version": 1,
   "request_id": "manual-2026-08-24-lexisnexis-creai",
   "origin_commit": "2fc60d1aae84f15daa97c835b8082d33067cd645",
-  "reason": "Idempotent retry only if the original requested generation left no persisted paid evidence",
+  "retry_sequence": 2,
+  "reason": "Idempotent retry only if the original requested generation left no persisted paid evidence; sequence 2 explicitly retriggers after the retry workflow already exists on main",
   "vacancy_ids": [
     "vac-631f0119ff49ee6b",
     "vac-b968fdbcca798458"
