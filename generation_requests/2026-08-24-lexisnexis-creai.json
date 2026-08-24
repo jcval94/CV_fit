@@ -3,8 +3,6 @@
   "request_id": "manual-2026-08-24-lexisnexis-creai",
   "requested_at": "2026-08-24T20:01:00Z",
   "reason": "User-requested validation of adaptive_cost_v1 on two current full-JD vacancies",
-  "origin_commit": "2fc60d1aae84f15daa97c835b8082d33067cd645",
-  "retry_sequence": 1,
   "vacancy_ids": [
     "vac-631f0119ff49ee6b",
     "vac-b968fdbcca798458"
