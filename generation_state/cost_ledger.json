@@ -139,6 +139,28 @@
   "pricing_snapshot_date": "2026-08-21",
   "pricing_source": "https://platform.openai.com/pricing",
   "runs": {
+    "auto-be5a54d0eacce901ac839174a20ed3ef27e06f79": {
+      "budget_usd": 2.0,
+      "bundle_result_counts": {},
+      "call_count": 0,
+      "call_level_known_spend_usd": 0,
+      "candidate_count": 0,
+      "downstream_known_spend_usd": 0,
+      "event_count": 0,
+      "event_ids": [],
+      "generation_attempts": 0,
+      "generation_budget_usd": 2.0,
+      "generation_known_spend_usd": 0,
+      "generation_result_counts": {},
+      "known_spend_usd": 0,
+      "ready_count": 0,
+      "recorded_at": "2026-08-24T18:51:47+00:00",
+      "run_id": "auto-be5a54d0eacce901ac839174a20ed3ef27e06f79",
+      "source_candidate_count": 0,
+      "source_commit": "be5a54d0eacce901ac839174a20ed3ef27e06f79",
+      "telemetry_coverage_pct": 100.0,
+      "unpriced_call_count": 0
+    },
     "auto-c924c2dee395c60189851d870411bdb531963fc6": {
       "budget_usd": 2.0,
       "bundle_result_counts": {
