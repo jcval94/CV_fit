@@ -8,11 +8,13 @@ from typing import Any, Protocol
 from pydantic import BaseModel
 
 from cv_agent.context import assemble_application_context, load_evidence_catalog
-from cv_agent.editorial_policy import validate_editorial_policy
+from cv_agent.editorial_policy import editorial_style_advisories, validate_editorial_policy
 from cv_agent.model_policy import MAX_REVIEW_ITERATIONS, model_ids, policy_for_iteration
 from cv_agent.prompts import HEADHUNTER_INSTRUCTION, REVISER_INSTRUCTION, STRATEGIST_INSTRUCTION, WRITER_INSTRUCTION
 from cv_agent.render import render_markdown
 from cv_agent.schemas import CVDocument, HeadhunterReview, StrategyOutput
+from cv_agent.style_contract import validate_resume_style
+from cv_agent.style_prompts import STYLE_REVISER_INSTRUCTION
 from cv_agent.validators import quality_gate, validate_claims, validate_language, validate_structure
 
 
@@ -142,6 +144,87 @@ def _apply_editorial_gate(gate, editorial) -> None:
         gate.passed = False
 
 
+async def _repair_style_before_headhunter(
+    *,
+    cv: CVDocument,
+    client: StructuredClient,
+    vacancy: dict[str, Any],
+    expected_language: str,
+    strategy: StrategyOutput,
+    canonical_backbone_ids: list[str],
+    editorial_anchor_ids: list[str],
+    selected_evidence: list[dict[str, Any]],
+    evidence_catalog: dict[str, dict[str, Any]],
+    strategy_ids: set[str],
+) -> tuple[CVDocument, dict[str, Any]]:
+    """Repair only hard deterministic style defects before paying a Headhunter.
+
+    Clean CVs incur zero extra model calls. A repair is accepted only if style,
+    factual and language checks all pass afterwards.
+    """
+
+    initial = validate_resume_style(cv)
+    initial_advisories = editorial_style_advisories(cv)
+    if initial.status == "PASS":
+        return cv, {
+            "attempted": False,
+            "repaired": False,
+            "initial_status": "PASS",
+            "initial_issues": [],
+            "advisories": [issue.model_dump() for issue in initial_advisories],
+        }
+
+    models = model_ids()
+    style_model = os.getenv("CV_FIT_MODEL_STYLE_REVISER", models["economy"])
+    repaired = await client.call(
+        name="cv_style_reviser",
+        model=style_model,
+        instruction=STYLE_REVISER_INSTRUCTION,
+        payload={
+            "vacancy": vacancy,
+            "application_language": expected_language,
+            "strategy": strategy.model_dump(),
+            "canonical_backbone_chunk_ids": canonical_backbone_ids,
+            "editorial_anchor_chunk_ids": editorial_anchor_ids,
+            "approved_evidence": selected_evidence,
+            "current_cv": cv.model_dump(),
+            "deterministic_style_issues": [issue.model_dump() for issue in initial.issues],
+        },
+        output_schema=CVDocument,
+        max_output_tokens=4500,
+    )
+    assert isinstance(repaired, CVDocument)
+
+    final_style = validate_resume_style(repaired)
+    factual = validate_claims(repaired, evidence_catalog, strategy_ids)
+    language = validate_language(repaired, expected_language)
+    if final_style.status != "PASS":
+        raise ValueError(
+            "conditional style repair did not satisfy deterministic resume style contract: "
+            f"{[issue.code for issue in final_style.issues]}"
+        )
+    if factual.status != "PASS":
+        raise ValueError(
+            "conditional style repair introduced or exposed factual validation failures: "
+            f"{[issue.code for issue in factual.issues]}"
+        )
+    if language.status != "PASS":
+        raise ValueError(
+            "conditional style repair introduced language validation failures: "
+            f"{[issue.code for issue in language.issues]}"
+        )
+
+    return repaired, {
+        "attempted": True,
+        "repaired": True,
+        "model": style_model,
+        "initial_status": initial.status,
+        "initial_issues": [issue.model_dump() for issue in initial.issues],
+        "final_status": final_style.status,
+        "advisories": [issue.model_dump() for issue in editorial_style_advisories(repaired)],
+    }
+
+
 async def run_agentic_cv(
     *,
     vacancy_id: str,
@@ -230,6 +313,22 @@ async def run_agentic_cv(
     )
     assert isinstance(cv, CVDocument)
     _write_json(output_dir / "drafts" / "cv_initial.json", cv.model_dump())
+
+    cv, style_preflight = await _repair_style_before_headhunter(
+        cv=cv,
+        client=client,
+        vacancy=vacancy,
+        expected_language=expected_language,
+        strategy=strategy,
+        canonical_backbone_ids=canonical_backbone_ids,
+        editorial_anchor_ids=editorial_anchor_ids,
+        selected_evidence=selected_evidence,
+        evidence_catalog=evidence_catalog,
+        strategy_ids=strategy_ids,
+    )
+    _write_json(output_dir / "style_preflight.json", style_preflight)
+    if style_preflight.get("repaired"):
+        _write_json(output_dir / "drafts" / "cv_style_repaired.json", cv.model_dump())
 
     iteration_records: list[dict[str, Any]] = []
     best: tuple[tuple[int, int, int], int, CVDocument, HeadhunterReview, dict[str, Any]] | None = None
@@ -385,6 +484,7 @@ async def run_agentic_cv(
         "premium_model_used": any(item["model_policy"]["premium"] for item in iteration_records),
         "canonical_backbone_chunk_ids": canonical_backbone_ids,
         "editorial_anchor_chunk_ids": editorial_anchor_ids,
+        "style_preflight": style_preflight,
         "final_review": final_review.model_dump(),
         "final_validation": final_validation,
         "final_gate_reasons": final_gate_reasons,

@@ -4,6 +4,7 @@ import re
 from typing import Any
 
 from cv_agent.schemas import CVDocument, ValidationIssue, ValidationResult
+from cv_agent.style_contract import collect_style_advisories, validate_resume_style
 
 
 MAX_SKILLS = 15
@@ -193,4 +194,16 @@ def validate_editorial_policy(cv: CVDocument) -> ValidationResult:
                 ))
                 break
 
+    # Resume-writing conventions are deterministic editorial policy, not a paid
+    # Headhunter responsibility. Hard style defects therefore block the same
+    # editorial gate as chronology/identity defects.
+    style = validate_resume_style(cv)
+    issues.extend(style.issues)
+
     return ValidationResult(status="PASS" if not issues else "FAIL", issues=issues)
+
+
+def editorial_style_advisories(cv: CVDocument) -> list[ValidationIssue]:
+    """Expose non-blocking copy signals separately from the hard editorial gate."""
+
+    return collect_style_advisories(cv)

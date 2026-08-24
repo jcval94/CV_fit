@@ -12,7 +12,15 @@ from cv_agent.prompts import HEADHUNTER_INSTRUCTION, REVISER_INSTRUCTION, STRATE
 from cv_agent.render import render_markdown
 from cv_agent.schemas import CVDocument, HeadhunterReview, StrategyOutput
 from cv_agent.validators import quality_gate, validate_claims, validate_language, validate_structure
-from cv_agent.workflow import StructuredClient, _apply_editorial_gate, _attach_required_evidence, _candidate_rank, _validate_strategy, _write_json
+from cv_agent.workflow import (
+    StructuredClient,
+    _apply_editorial_gate,
+    _attach_required_evidence,
+    _candidate_rank,
+    _repair_style_before_headhunter,
+    _validate_strategy,
+    _write_json,
+)
 
 
 OPTIMIZED_MAX_EVIDENCE_CHUNKS = 28
@@ -168,7 +176,7 @@ async def run_cost_optimized_cv(
     run_id: str = "manual-cost-v1",
     retrieval_mode: str | None = None,
 ) -> dict[str, Any]:
-    """A/B-only cost profile. Production baseline remains untouched in workflow.py."""
+    """A/B-only cost profile with the same deterministic editorial/style gates as production."""
 
     context = assemble_application_context(
         vacancy_id,
@@ -248,6 +256,22 @@ async def run_cost_optimized_cv(
     )
     assert isinstance(cv, CVDocument)
     _write_json(output_dir / "drafts" / "cv_initial.json", cv.model_dump())
+
+    cv, style_preflight = await _repair_style_before_headhunter(
+        cv=cv,
+        client=client,
+        vacancy=vacancy,
+        expected_language=expected_language,
+        strategy=strategy,
+        canonical_backbone_ids=canonical_backbone_ids,
+        editorial_anchor_ids=editorial_anchor_ids,
+        selected_evidence=selected_evidence,
+        evidence_catalog=evidence_catalog,
+        strategy_ids=strategy_ids,
+    )
+    _write_json(output_dir / "style_preflight.json", style_preflight)
+    if style_preflight.get("repaired"):
+        _write_json(output_dir / "drafts" / "cv_style_repaired.json", cv.model_dump())
 
     iteration_records: list[dict[str, Any]] = []
     best: tuple[tuple[int, int, int], int, CVDocument, HeadhunterReview, dict[str, Any]] | None = None
@@ -411,6 +435,7 @@ async def run_cost_optimized_cv(
         "selected_evidence_count": len(selected_evidence),
         "canonical_backbone_chunk_ids": canonical_backbone_ids,
         "editorial_anchor_chunk_ids": editorial_anchor_ids,
+        "style_preflight": style_preflight,
         "final_review": final_review.model_dump(),
         "final_validation": final_validation,
         "final_gate_reasons": final_gate_reasons,
