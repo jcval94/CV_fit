@@ -1,16 +1,17 @@
-name: One-time authenticated Konfio canary
+name: Legacy authenticated Konfio canary (manual)
 
 on:
-  issues:
-    types: [opened]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  issues: write
+
+concurrency:
+  group: legacy-konfio-canary
+  cancel-in-progress: false
 
 jobs:
   live-canary:
-    if: github.event.issue.title == '[eval] Run authenticated Konfio canary'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
@@ -166,34 +167,26 @@ jobs:
           print(json.dumps(summary, ensure_ascii=False, sort_keys=True)[:16000])
           PY
 
-      - name: Comment sanitized diagnostic on trigger issue
+      - name: Add sanitized diagnostic to workflow summary
         if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
-          python - <<'PY' > /tmp/canary_comment.md
-          import json
-          from pathlib import Path
-
-          path = Path('/tmp/canary_summary.json')
-          if not path.exists():
-              print('### Authenticated canary diagnostic\n\nDiagnostic summary was not produced. Inspect the workflow logs.')
-          else:
-              data = json.loads(path.read_text(encoding='utf-8'))
-              print('### Authenticated canary diagnostic')
-              print('')
-              print('```json')
-              print(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True))
-              print('```')
-          PY
-          gh issue comment "${{ github.event.issue.number }}" --body-file /tmp/canary_comment.md
+          echo '### Legacy authenticated Konfio canary diagnostic' >> "$GITHUB_STEP_SUMMARY"
+          if [ -f /tmp/canary_summary.json ]; then
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/canary_summary.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Diagnostic summary was not produced. Inspect the workflow logs.' >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Upload canary outputs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: live-canary-${{ github.run_id }}
-          path: outputs/vac-04e92192e608ea02/${{ env.CANARY_RUN_ID }}/
+          path: |
+            outputs/vac-04e92192e608ea02/${{ env.CANARY_RUN_ID }}/
+            /tmp/canary_summary.json
           if-no-files-found: warn
           retention-days: 7
 

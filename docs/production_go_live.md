@@ -62,7 +62,7 @@ No unverified fallback is described as official employer branding.
 
 ## Production canary
 
-Before enabling outbound WhatsApp, run `Production readiness canary`.
+Before enabling outbound WhatsApp, run `Production readiness canary` manually from GitHub Actions.
 
 The canary:
 
@@ -72,14 +72,22 @@ The canary:
 4. generates the grounded cover letter;
 5. builds HTML/PDF Technical Modern and Harvard bundles;
 6. runs physical, visual and presentation gates;
-7. records stage costs and the final ready/review state;
-8. never sends WhatsApp.
+7. records process outcomes separately from semantic stage outcomes;
+8. requires the expected final artifacts before `canary_healthy=true`;
+9. records stage costs and the final ready/review state;
+10. never sends WhatsApp.
 
-The canary can be run manually or by opening an issue with the exact title:
+The production canary is `workflow_dispatch` only. Do **not** use an issue, pull request or other public event to trigger a paid readiness run.
 
-`[eval] Run production readiness canary`
+Run it from:
 
-A successful canary means the pipeline executed end to end. The final vacancy may legitimately be `REVIEW_REQUIRED`; that is a product decision, not an infrastructure failure.
+```text
+GitHub -> Actions -> Production readiness canary -> Run workflow
+```
+
+A successful infrastructure/readiness result requires `canary_healthy=true`. A shell command that exits successfully is not enough if generation, cover or presentation has a failed semantic status.
+
+The historical `live-canary-once.yml` Konfío workflow is retained only as a manual diagnostic path and is not the recommended production-readiness entrypoint.
 
 ## WhatsApp go-live
 
