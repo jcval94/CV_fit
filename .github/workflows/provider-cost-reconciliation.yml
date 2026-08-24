@@ -15,6 +15,14 @@ on:
         description: "Actual provider usage/billing amount in USD for this period"
         required: true
         type: string
+      scope_kind:
+        description: "Does this provider amount contain only CV_fit usage?"
+        required: true
+        default: MIXED_PROVIDER_ACCOUNT
+        type: choice
+        options:
+          - MIXED_PROVIDER_ACCOUNT
+          - CV_FIT_DEDICATED_SCOPE
 
 permissions:
   contents: write
@@ -41,6 +49,7 @@ jobs:
           PERIOD_START: ${{ inputs.period_start }}
           PERIOD_END: ${{ inputs.period_end }}
           ACTUAL_COST_USD: ${{ inputs.actual_cost_usd }}
+          SCOPE_KIND: ${{ inputs.scope_kind }}
           RECORDED_BY: ${{ github.actor }}
         run: >-
           python -m cv_observability.provider_reconciliation
@@ -48,6 +57,7 @@ jobs:
           --period-start "$PERIOD_START"
           --period-end "$PERIOD_END"
           --actual-cost-usd "$ACTUAL_COST_USD"
+          --scope-kind "$SCOPE_KIND"
           --recorded-by "$RECORDED_BY"
 
       - name: Persist reconciliation evidence
