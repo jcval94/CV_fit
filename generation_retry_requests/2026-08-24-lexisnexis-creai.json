@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "request_id": "manual-2026-08-24-lexisnexis-creai",
+  "origin_commit": "2fc60d1aae84f15daa97c835b8082d33067cd645",
+  "reason": "Idempotent retry only if the original requested generation left no persisted paid evidence",
+  "vacancy_ids": [
+    "vac-631f0119ff49ee6b",
+    "vac-b968fdbcca798458"
+  ],
+  "max_per_cv_generation_cost_usd": 1.0,
+  "max_batch_generation_cost_usd": 2.0
+}
