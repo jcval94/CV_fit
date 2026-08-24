@@ -9,7 +9,11 @@ from pydantic import BaseModel
 
 from cv_agent.context import assemble_application_context, load_evidence_catalog
 from cv_agent.editorial_policy import editorial_style_advisories, validate_editorial_policy
-from cv_agent.model_policy import MAX_REVIEW_ITERATIONS, model_ids, policy_for_iteration
+from cv_agent.model_policy import (
+    PRODUCTION_MAX_REVIEW_ITERATIONS,
+    model_ids,
+    production_policy_for_iteration,
+)
 from cv_agent.prompts import HEADHUNTER_INSTRUCTION, REVISER_INSTRUCTION, STRATEGIST_INSTRUCTION, WRITER_INSTRUCTION
 from cv_agent.render import render_markdown
 from cv_agent.schemas import CVDocument, HeadhunterReview, StrategyOutput
@@ -20,6 +24,7 @@ from cv_agent.validators import quality_gate, validate_claims, validate_language
 
 MAX_MODEL_EVIDENCE_CHUNKS = 40
 MAX_MODEL_EVIDENCE_CHARS = 70000
+REVIEW_POLICY_NAME = "adaptive_cost_v1"
 
 
 class StructuredClient(Protocol):
@@ -142,6 +147,47 @@ def _apply_editorial_gate(gate, editorial) -> None:
         if "editorial_validation_failed" not in gate.reasons:
             gate.reasons.append("editorial_validation_failed")
         gate.passed = False
+
+
+def _validation_payload_passes(payload: dict[str, Any]) -> bool:
+    return all(
+        payload.get(name, {}).get("status") == "PASS"
+        for name in ("factual", "language", "structure", "editorial")
+    )
+
+
+def _adaptive_stop_reason(iteration_records: list[dict[str, Any]]) -> str | None:
+    """Stop after the first Terra correction when it produces no material progress.
+
+    Round 1 is a cheap Luna screen. The first revision is already Terra and is
+    evaluated by Terra in round 2. A third round is worth paying for only when
+    that first balanced correction improves the score, removes a blocker,
+    repairs deterministic validators, or leaves the CV genuinely close to pass.
+    """
+    if len(iteration_records) < 2:
+        return None
+    current = iteration_records[-1]
+    previous = iteration_records[-2]
+    if int(current.get("iteration") or 0) != 2:
+        return None
+
+    current_review = current["review"]
+    previous_review = previous["review"]
+    score_gain = int(current_review["overall_score"]) - int(previous_review["overall_score"])
+    blocker_reduction = len(previous_review.get("blocking_issues", [])) - len(current_review.get("blocking_issues", []))
+    validator_improved = (
+        not _validation_payload_passes(previous["validation"])
+        and _validation_payload_passes(current["validation"])
+    )
+    close_to_pass = (
+        _validation_payload_passes(current["validation"])
+        and int(current_review["overall_score"]) >= 89
+        and len(current_review.get("blocking_issues", [])) <= 1
+    )
+
+    if score_gain >= 2 or blocker_reduction > 0 or validator_improved or close_to_pass:
+        return None
+    return "stagnant_after_first_terra_revision"
 
 
 async def _repair_style_before_headhunter(
@@ -333,16 +379,17 @@ async def run_agentic_cv(
     iteration_records: list[dict[str, Any]] = []
     best: tuple[tuple[int, int, int], int, CVDocument, HeadhunterReview, dict[str, Any]] | None = None
     quality_target_reached = False
+    stop_reason: str | None = None
 
-    for iteration in range(1, MAX_REVIEW_ITERATIONS + 1):
-        policy = policy_for_iteration(iteration)
+    for iteration in range(1, PRODUCTION_MAX_REVIEW_ITERATIONS + 1):
+        policy = production_policy_for_iteration(iteration)
         review = await client.call(
             name=f"senior_headhunter_{iteration}",
             model=policy.reviewer_model,
             instruction=HEADHUNTER_INSTRUCTION,
             payload={
                 "iteration": iteration,
-                "max_iterations": MAX_REVIEW_ITERATIONS,
+                "max_iterations": PRODUCTION_MAX_REVIEW_ITERATIONS,
                 "vacancy": vacancy,
                 "application_language": expected_language,
                 "match_plan": context["match_plan"],
@@ -389,9 +436,15 @@ async def run_agentic_cv(
         if gate.passed:
             best = (rank, iteration, cv, review, validation_payload)
             quality_target_reached = True
+            stop_reason = "quality_gate_passed"
             break
 
-        if iteration == MAX_REVIEW_ITERATIONS:
+        stop_reason = _adaptive_stop_reason(iteration_records)
+        if stop_reason:
+            break
+
+        if iteration == PRODUCTION_MAX_REVIEW_ITERATIONS:
+            stop_reason = "max_review_budget_reached"
             break
 
         cv = await client.call(
@@ -420,10 +473,20 @@ async def run_agentic_cv(
 
     _, best_iteration, final_cv, final_review, final_validation = best
     final_status = "PASS" if quality_target_reached else "COMPLETED_BELOW_TARGET"
-    quality_note = None if quality_target_reached else (
-        "Maximum of 5 Senior Headhunter review iterations reached without satisfying all quality gates. "
-        "The best evaluated CV is returned; review run_report.json before submitting."
-    )
+    if quality_target_reached:
+        quality_note = None
+    elif stop_reason == "stagnant_after_first_terra_revision":
+        quality_note = (
+            "Adaptive cost policy stopped after the first Terra revision because it produced no material "
+            "score, blocker or deterministic-validator improvement. The best evaluated CV is returned; "
+            "review run_report.json before submitting."
+        )
+    else:
+        quality_note = (
+            f"Maximum production budget of {PRODUCTION_MAX_REVIEW_ITERATIONS} Senior Headhunter reviews "
+            "was reached without satisfying all quality gates. The best evaluated CV is returned; "
+            "review run_report.json before submitting."
+        )
     final_gate_reasons = [] if quality_target_reached else list(
         final_validation.get("quality_gate", {}).get("reasons", [])
     )
@@ -477,7 +540,9 @@ async def run_agentic_cv(
         "status": final_status,
         "quality_target_reached": quality_target_reached,
         "quality_note": quality_note,
-        "max_review_iterations": MAX_REVIEW_ITERATIONS,
+        "review_policy": REVIEW_POLICY_NAME,
+        "review_stop_reason": stop_reason,
+        "max_review_iterations": PRODUCTION_MAX_REVIEW_ITERATIONS,
         "iterations_executed": len(iteration_records),
         "best_review_iteration": best_iteration,
         "model_escalation": [item["model_policy"] for item in iteration_records],
