@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-24",
+    "total_vacantes_encontradas": 4,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "tilt-9d7151f1-c3f3-41a5-bf9b-dcee065dbd4b",
+      "puesto": "Data Science Lead, LATAM",
+      "empresa": "Tilt Finance",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "México / Brasil / Estados Unidos - Remote Americas",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-21",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol de liderazgo hands-on responsable de la estrategia y roadmap de Data Science para México y Brasil.",
+          "Dominio directo de crédito, underwriting, credit decisioning, portfolio valuation y resultados de P&L, altamente alineado con experiencia bancaria y de riesgo.",
+          "Responsabilidad de construir y desplegar modelos, establecer estándares de modelado, infraestructura y prácticas de entrega.",
+          "Incluye liderazgo y mentoría de un equipo de Data Scientists, manteniendo participación técnica activa.",
+          "Conecta modelado aplicado con impacto medible de negocio y colaboración directa con liderazgo de crédito."
+        ],
+        "posibles_gaps": [
+          "La descripción pública no detalla herramientas específicas como PySpark o SQL.",
+          "Portugués es una ventaja para el mercado de Brasil, aunque no aparece como requisito obligatorio."
+        ],
+        "resumen": "Es la oportunidad con mayor ajuste: combina fintech, crédito, modelado aplicado, ownership end-to-end, liderazgo técnico y alcance regional, además de ser virtual-first y contratar en México."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "Credit Decisioning",
+        "Underwriting",
+        "Portfolio Valuation",
+        "Model Development",
+        "Model Deployment",
+        "Impact Measurement",
+        "P&L Analysis",
+        "Technical Leadership"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.ashbyhq.com/tilthq/9d7151f1-c3f3-41a5-bf9b-dcee065dbd4b/application"
+    },
+    {
+      "id_vacante": "gbm-4457051976",
+      "puesto": "Machine Learning/MLOps",
+      "empresa": "GBM",
+      "categoria_empresa": "Banca",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-08-22",
+      "porcentaje_ajuste": 97,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Empresa de gestión patrimonial, activos y banca privada, por lo que aprovecha directamente experiencia en servicios financieros.",
+          "Requiere 10+ años de experiencia en Machine Learning Engineering, MLOps, Platform Engineering, DevOps o AI Infrastructure.",
+          "Responsabilidad sobre la plataforma MLOps y LLMOps de toda la organización, cubriendo entrenamiento, evaluación, despliegue, monitoreo y operación de modelos y agentes.",
+          "Fuerte componente de GenAI: Bedrock, agentes inteligentes, copilotos, embeddings, knowledge bases, knowledge graphs, guardrails y evaluación automatizada.",
+          "Incluye liderazgo técnico, decisiones de arquitectura, mentoría y coordinación de iniciativas con Data Science, AI Engineering y Producto."
+        ],
+        "posibles_gaps": [
+          "El rol está más orientado a plataforma e infraestructura de ML que a modelado estadístico puro.",
+          "La descripción enfatiza AWS, IaC, serverless, microservicios, seguridad y observabilidad, por lo que exige profundidad de ingeniería de plataforma."
+        ],
+        "resumen": "Excelente ajuste por seniority, sector financiero, ML productivo, GenAI, MLOps/LLMOps y liderazgo técnico; es especialmente atractivo si se busca evolucionar hacia arquitectura y plataforma de IA."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "MLOps",
+        "LLMOps",
+        "AWS",
+        "Bedrock",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "DynamoDB",
+        "Prometheus",
+        "Grafana",
+        "CloudWatch",
+        "PyTest",
+        "Embeddings",
+        "Knowledge Graphs",
+        "Agentic AI",
+        "GenAI Guardrails"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/machine-learning-mlops-at-gbm-4457051976"
+    },
+    {
+      "id_vacante": "mappa-3374",
+      "puesto": "AI / Machine Learning Engineer",
+      "empresa": "Mappa",
+      "categoria_empresa": "Otro",
+      "ubicacion": "Latinoamérica / México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-20",
+      "porcentaje_ajuste": 95,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Proyecto enfocado en lending para PyMEs y construcción de señales para decisiones crediticias, con fuerte cercanía a banca, crédito y riesgo.",
+          "Ownership end-to-end del model layer desde experimentación y evaluación hasta despliegue, monitoreo y mejora continua.",
+          "Pide ML productivo, LLMs en producción, evaluación rigurosa, drift detection, document intelligence y extracción de información financiera.",
+          "Valora explícitamente experiencia en fintech, lending, credit risk, estados de cuenta, buró de crédito, feature stores, champion/challenger y explicabilidad.",
+          "Trabajo directo con founders e influencia sobre decisiones técnicas y de producto."
+        ],
+        "posibles_gaps": [
+          "La empresa visible en la publicación es una plataforma/intermediario de talento y el cliente final no está claramente identificado.",
+          "La compensación publicada es inferior a la esperable para un perfil con 9+ años de experiencia.",
+          "El foco técnico incluye document intelligence y OCR, áreas que pueden requerir experiencia más específica."
+        ],
+        "resumen": "El contenido del rol tiene un ajuste excepcional con crédito, riesgo, ML productivo y GenAI; baja ligeramente por compensación y por la menor transparencia sobre el cliente final."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "Machine Learning",
+        "MLOps",
+        "LLMs",
+        "OpenAI",
+        "Document Intelligence",
+        "OCR",
+        "Model Evaluation",
+        "Drift Detection",
+        "Feature Stores",
+        "Champion/Challenger",
+        "Explainable ML",
+        "Credit Risk"
+      ],
+      "rango_salarial": "USD 2,000–2,400 por mes",
+      "url_postulacion": "https://app.mappa.ai/jobs/3374-ai-machine-learning-engineer"
+    },
+    {
+      "id_vacante": "abstra-senior-ds-topic-genai-20260823",
+      "puesto": "Senior Data Scientist (Topic Analytics, GenAI & Reporting)",
+      "empresa": "Abstra",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-23",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición Senior remota exclusiva para México con ownership sobre soluciones de Topic Analytics impulsadas por ML, NLP y LLMs.",
+          "Requiere Python, PySpark, Scikit-Learn, PyTorch/TensorFlow, LangChain/LangGraph y experiencia desplegando modelos de producción.",
+          "Fuerte componente de GenAI: RAG, vector search, agent-based workflows, prompt engineering, fine-tuning, evaluación y optimización.",
+          "Incluye diseño de frameworks de experimentación para medir calidad, relevancia e impacto de negocio.",
+          "Buen ajuste con plataformas MLOps como Kubeflow, SageMaker, Vertex AI, Databricks y MLflow."
+        ],
+        "posibles_gaps": [
+          "Abstra es una empresa nearshore de servicios, por lo que queda deliberadamente por debajo de empresas de producto y fintech.",
+          "No aprovecha de forma directa la experiencia en banca, fraude o credit scoring.",
+          "La vacante pide 5+ años, por lo que el seniority mínimo requerido está por debajo del perfil objetivo."
+        ],
+        "resumen": "Muy fuerte ajuste técnico en Python, PySpark, GenAI, experimentación y modelos productivos, pero se deprioriza por ser una empresa de servicios y por no tener dominio financiero."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "PySpark",
+        "Scikit-Learn",
+        "Pandas",
+        "NumPy",
+        "PyTorch",
+        "TensorFlow",
+        "SpaCy",
+        "LangChain",
+        "LangGraph",
+        "LLMs",
+        "RAG",
+        "Vector Search",
+        "NLP",
+        "Kubeflow",
+        "SageMaker",
+        "Vertex AI",
+        "Databricks",
+        "MLflow",
+        "Experimentación"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://builtin.com/job/senior-data-scientist-topic-analytics-genai-reporting/10776821"
+    }
+  ]
+}
