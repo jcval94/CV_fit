@@ -1,0 +1,176 @@
+name: Enrich Budget and Cost decision metrics
+
+on:
+  workflow_run:
+    workflows: ["Deploy daily CV showcase to GitHub Pages"]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "generation_state/application_state.json"
+      - "generation_state/provider_reconciliation.json"
+      - "cv_observability/application_state.py"
+      - "cv_observability/provider_reconciliation.py"
+      - "cv_observability/decision_evidence.py"
+      - "cv_presentation/decision_dashboard.py"
+      - "cv_auto/__main__.py"
+      - ".github/workflows/application-outcome.yml"
+      - ".github/workflows/provider-cost-reconciliation.yml"
+      - ".github/workflows/decision-grade-budget-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  enrich-and-deploy:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Download newest non-empty daily showcase
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf _site /tmp/cvfit-site-candidate
+          selected=""
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-site-candidate
+            mkdir -p /tmp/cvfit-site-candidate
+            if ! gh run download "$run_id" -n daily-showcase -D /tmp/cvfit-site-candidate; then
+              continue
+            fi
+            count="$(find /tmp/cvfit-site-candidate/vacancies -type f -name 'cv_primary.html' 2>/dev/null | wc -l | tr -d ' ')"
+            if [ "${count:-0}" -gt 0 ]; then
+              mv /tmp/cvfit-site-candidate _site
+              selected="$run_id"
+              break
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[].id'
+          )
+          if [ -z "$selected" ]; then
+            echo "No non-empty daily-showcase artifact is available; refusing to deploy an empty site."
+            exit 2
+          fi
+          echo "Using daily-showcase from vacancy-ingest run $selected"
+
+      - name: Download newest reusable auto-cv evidence artifact
+        id: cv-evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/cvfit-auto-cv /tmp/cvfit-auto-candidate
+          echo "found=false" >> "$GITHUB_OUTPUT"
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            rm -rf /tmp/cvfit-auto-candidate
+            mkdir -p /tmp/cvfit-auto-candidate
+            if ! gh run download "$run_id" -n "auto-cv-$run_id" -D /tmp/cvfit-auto-candidate; then
+              continue
+            fi
+            if find /tmp/cvfit-auto-candidate -type f -name generation_run_report.json -print -quit | grep -q .; then
+              mv /tmp/cvfit-auto-candidate /tmp/cvfit-auto-cv
+              echo "found=true" >> "$GITHUB_OUTPUT"
+              echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+              break
+            fi
+          done < <(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=30" --jq '.workflow_runs[].id'
+          )
+
+      - name: Persist exact spend-origin and marginal-review evidence
+        if: steps.cv-evidence.outputs.found == 'true'
+        run: >-
+          python -m cv_observability.decision_evidence
+          --outputs /tmp/cvfit-auto-cv
+          --ledger generation_state/cost_ledger.json
+          --state generation_state/decision_evidence.json
+
+      - name: Commit newly derived decision evidence
+        if: steps.cv-evidence.outputs.found == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/decision_evidence.json
+          if git diff --cached --quiet; then
+            echo "Decision evidence already current."
+          else
+            git commit -m "chore: persist decision-grade CV cost evidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Refresh feed without model calls
+        run: python -m cv_presentation.showcase_refresh --site-dir _site
+
+      - name: Rebuild Budget and Cost from current versioned truth
+        run: >-
+          python -m cv_presentation.budget_dashboard
+          --ledger generation_state/cost_ledger.json
+          --manifest generation_state/manifest.json
+          --vacancy-state vacancy_state
+          --site-dir _site
+
+      - name: Add decision-grade economics and truth gates
+        run: >-
+          python -m cv_presentation.decision_dashboard
+          --site-dir _site
+          --ledger generation_state/cost_ledger.json
+          --application-state generation_state/application_state.json
+          --decision-evidence generation_state/decision_evidence.json
+          --provider-reconciliation generation_state/provider_reconciliation.json
+
+      - name: Verify decision-grade public payload exists
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('_site/budget/cost_ledger_public.json')
+          payload = json.loads(path.read_text(encoding='utf-8'))
+          decision = payload.get('decision_grade')
+          assert isinstance(decision, dict), 'decision_grade payload missing'
+          assert decision['readiness']['truth_rule'], decision
+          print('readiness=', decision['readiness']['status'])
+          print('application_disposition_coverage_pct=', decision['application_economics']['application_disposition_coverage_pct'])
+          print('provider_reconciliation_coverage_pct=', decision['provider_reconciliation']['paid_run_coverage_pct'])
+          PY
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy decision-grade Budget and Cost
+        id: deployment
+        uses: actions/deploy-pages@v4
