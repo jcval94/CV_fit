@@ -7,9 +7,11 @@ on:
       - "cv_presentation/manual_send_status.py"
       - "cv_observability/manual_attribution.py"
       - "generation_requests/**/*.json"
+      - "generation_retry_requests/**/*.json"
       - "tests/test_cv_history_merge.py"
       - "tests/test_manual_attribution.py"
       - ".github/workflows/manual-cv-generation.yml"
+      - ".github/workflows/manual-cv-generation-retry.yml"
       - ".github/workflows/seven-day-pages.yml"
       - ".github/workflows/validate-seven-day-pages.yml"
   push:
@@ -19,9 +21,11 @@ on:
       - "cv_presentation/manual_send_status.py"
       - "cv_observability/manual_attribution.py"
       - "generation_requests/**/*.json"
+      - "generation_retry_requests/**/*.json"
       - "tests/test_cv_history_merge.py"
       - "tests/test_manual_attribution.py"
       - ".github/workflows/manual-cv-generation.yml"
+      - ".github/workflows/manual-cv-generation-retry.yml"
       - ".github/workflows/seven-day-pages.yml"
       - ".github/workflows/validate-seven-day-pages.yml"
 
