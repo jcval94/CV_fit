@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import os
 import sys
 from pathlib import Path
@@ -17,18 +18,18 @@ def _arg_value(name: str) -> str | None:
     return sys.argv[index + 1] if index + 1 < len(sys.argv) else None
 
 
-def _prepare_recoverable_candidates(logger: EventLogger) -> None:
+def _prepare_recoverable_candidates(logger: EventLogger) -> Path | None:
     ingest_value = _arg_value("--ingest-report")
     if not ingest_value:
-        return
-    if os.getenv("CVFIT_AUTO_RECOVER_TRANSIENT", "true").casefold() != "true":
-        return
+        return None
 
+    recover_enabled = os.getenv("CVFIT_AUTO_RECOVER_TRANSIENT", "true").casefold() == "true"
     ingest = Path(ingest_value)
     generation_manifest = Path(_arg_value("--generation-state") or "generation_state") / "manifest.json"
     vacancy_state = Path(_arg_value("--vacancy-state") or "vacancy_state")
+    outputs = Path(_arg_value("--outputs") or "outputs/auto")
     max_vacancies = int(_arg_value("--max-vacancies-per-run") or "5")
-    max_recovery = int(os.getenv("CVFIT_MAX_RECOVERY_CANDIDATES", "3"))
+    max_recovery = int(os.getenv("CVFIT_MAX_RECOVERY_CANDIDATES", "3")) if recover_enabled else 0
     run_id = _arg_value("--run-id") or "current"
     output = Path("/tmp") / f"cvfit-generation-candidates-{run_id}.json"
 
@@ -40,8 +41,17 @@ def _prepare_recoverable_candidates(logger: EventLogger) -> None:
         max_vacancies_per_run=max_vacancies,
         max_recovery_candidates=max_recovery,
     )
+    # Persist the exact queue-origin evidence inside the uploaded auto-cv artifact.
+    # This is intentionally public-safe metadata: vacancy ids and origin classes only.
+    persisted_plan = outputs / "_batch" / run_id / "candidate_plan.json"
+    persisted_plan.parent.mkdir(parents=True, exist_ok=True)
+    persisted_plan.write_text(
+        json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+    )
+
     retry_ids = report.get("auto_retry_vacancy_ids", [])
-    if retry_ids:
+    if retry_ids and recover_enabled:
         index = sys.argv.index("--ingest-report")
         sys.argv[index + 1] = str(output)
         if "--retry-failed" not in sys.argv:
@@ -52,7 +62,9 @@ def _prepare_recoverable_candidates(logger: EventLogger) -> None:
         recoverable_retry_count=len(retry_ids),
         total_candidate_count=len(report.get("reindexed_vacancy_ids", [])),
         max_vacancies_per_run=max_vacancies,
+        candidate_plan_file=str(persisted_plan),
     )
+    return persisted_plan
 
 
 if __name__ == "__main__":
