@@ -14,6 +14,7 @@ on:
       - "cv_observability/decision_evidence.py"
       - "cv_observability/decision_truth.py"
       - "cv_presentation/decision_dashboard.py"
+      - "cv_presentation/decision_readiness.py"
       - "cv_auto/__main__.py"
       - ".github/workflows/application-outcome.yml"
       - ".github/workflows/provider-cost-reconciliation.yml"
@@ -156,6 +157,12 @@ jobs:
           --decision-evidence generation_state/decision_evidence.json
           --provider-reconciliation generation_state/provider_reconciliation.json
 
+      - name: Enforce complete-evidence readiness
+        run: >-
+          python -m cv_presentation.decision_readiness
+          --public-payload _site/budget/cost_ledger_public.json
+          --html _site/budget/index.html
+
       - name: Verify decision-grade public payload exists
         run: |
           python - <<'PY'
@@ -165,9 +172,14 @@ jobs:
           payload = json.loads(path.read_text(encoding='utf-8'))
           decision = payload.get('decision_grade')
           assert isinstance(decision, dict), 'decision_grade payload missing'
-          assert decision['readiness']['truth_rule'], decision
-          print('readiness=', decision['readiness']['status'])
+          readiness = decision['readiness']
+          assert readiness['truth_rule'], decision
+          assert readiness['complete_decision_rule'], decision
+          print('readiness=', readiness['status'])
+          print('completely_informed=', readiness['completely_informed'])
           print('application_disposition_coverage_pct=', decision['application_economics']['application_disposition_coverage_pct'])
+          print('spend_reason_classified_pct=', readiness['spend_reason_classified_pct'])
+          print('marginal_review_spend_coverage_pct=', readiness['marginal_review_spend_coverage_pct'])
           print('provider_reconciliation_coverage_pct=', decision['provider_reconciliation']['paid_run_coverage_pct'])
           PY
 
