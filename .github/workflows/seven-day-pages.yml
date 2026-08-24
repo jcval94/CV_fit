@@ -2,7 +2,7 @@ name: Deploy 7-day CV history to GitHub Pages
 
 on:
   workflow_run:
-    workflows: ["Deploy daily CV showcase to GitHub Pages"]
+    workflows: ["Deploy daily CV showcase to GitHub Pages", "Generate requested CVs"]
     types: [completed]
   workflow_dispatch:
 
@@ -45,33 +45,48 @@ jobs:
           rm -rf /tmp/cvfit-history _site
           mkdir -p /tmp/cvfit-history
           downloaded=0
-          while IFS=$'\t' read -r run_id created_at; do
-            [ -n "$run_id" ] || continue
+          download_run() {
+            local run_id="$1"
+            local created_at="$2"
+            local stamp target
             stamp="$(printf '%s' "$created_at" | tr -cd '0-9')"
             target="/tmp/cvfit-history/${stamp}_${run_id}"
+            if [ -d "$target" ]; then return 0; fi
             mkdir -p "$target"
             if gh run download "$run_id" -n daily-showcase -D "$target"; then
               if [ -f "$target/showcase.json" ] && [ -f "$target/index.html" ]; then
                 downloaded=$((downloaded + 1))
-              else
-                rm -rf "$target"
+                return 0
               fi
-            else
-              rm -rf "$target"
             fi
-            if [ "$downloaded" -ge 20 ]; then
-              break
-            fi
+            rm -rf "$target"
+          }
+
+          while IFS=$'\t' read -r run_id created_at; do
+            [ -n "$run_id" ] || continue
+            download_run "$run_id" "$created_at" || true
+            if [ "$downloaded" -ge 20 ]; then break; fi
           done < <(
             gh api \
               "repos/${GITHUB_REPOSITORY}/actions/workflows/vacancy-ingest.yml/runs?branch=main&status=success&per_page=40" \
               --jq '.workflow_runs[] | [.id, .created_at] | @tsv'
           )
+
+          while IFS=$'\t' read -r run_id created_at; do
+            [ -n "$run_id" ] || continue
+            download_run "$run_id" "$created_at" || true
+            if [ "$downloaded" -ge 30 ]; then break; fi
+          done < <(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/manual-cv-generation.yml/runs?branch=main&status=success&per_page=20" \
+              --jq '.workflow_runs[] | [.id, .created_at] | @tsv' 2>/dev/null || true
+          )
+
           if [ "$downloaded" -eq 0 ]; then
             echo "No daily-showcase snapshots were downloadable."
             exit 2
           fi
-          echo "Downloaded $downloaded candidate snapshot(s)."
+          echo "Downloaded $downloaded candidate snapshot(s) across automatic and explicit manual generation."
 
       - name: Merge last 7 days and add manual CV status
         run: >-
