@@ -12,6 +12,7 @@ on:
       - "cv_observability/application_state.py"
       - "cv_observability/provider_reconciliation.py"
       - "cv_observability/decision_evidence.py"
+      - "cv_observability/decision_truth.py"
       - "cv_presentation/decision_dashboard.py"
       - "cv_auto/__main__.py"
       - ".github/workflows/application-outcome.yml"
@@ -127,6 +128,13 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      - name: Validate decision evidence truth contracts
+        run: >-
+          python -m cv_observability.decision_truth
+          --application-state generation_state/application_state.json
+          --provider-reconciliation generation_state/provider_reconciliation.json
+          --decision-evidence generation_state/decision_evidence.json
 
       - name: Refresh feed without model calls
         run: python -m cv_presentation.showcase_refresh --site-dir _site
