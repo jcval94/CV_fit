@@ -1,0 +1,88 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "México",
+      "company": "Abstra",
+      "company_category": "Otro",
+      "content_hash": "0e8004a3672538563abd8b829ae9193eda59d60ba965023452f1a9030c613f58",
+      "description": "We are seeking a Senior Data Scientist to join our Reporting Team and help drive the evolution of topic analytics from traditional rule-based approaches to next-generation AI and Machine Learning powered topic intelligence. This role will contribute to the High Throughput Topic Analytics initiative, developing scalable methods for topic discovery, analysis, and insight generation across large-scale customer experience datasets. Working closely with Data Scientists, Engineers, Product Managers, and Analytics teams across Mexico, India, and South America, the successful candidate will help build intelligent capabilities that power enterprise reporting, monitoring, and customer experience insights. Location : Remote, Mexico only . About Us: Abstra is a fast-growing, Nearshore Tech Talent services company, providing top Latin American tech talent to U.S. companies and beyond. Founded by U.S.-bred engineers with over 15 years of experience, Abstra specializes in sourcing skilled professionals across a wide range of technologies to meet our clients’ needs, driving innovation and efficiency. Responsibilities As a Senior Data Scientist on the Reporting Team, you will lead the development of AI-powered Topic Analytics solutions using Machine Learning, Natural Language Processing, and Large Language Models. Design, develop, and evaluate model-based topic discovery, classification, clustering, and summarisation capabilities. Develop approaches that combine deterministic rule-based topics with ML/LLM-generated topics to improve coverage, flexibility, and accuracy. Build scalable NLP and GenAI pipelines capable of processing large volumes of customer experience and conversational data. Develop experimentation frameworks to benchmark and optimise topic quality, relevance, and business impact. Support initiatives focused on increasing Topic Analytics throughput and enabling onboarding of larger enterprise customers. Contribute to research and innovation in Generative AI, NLP, Topic Analytics, and Customer Experience Intelligence. Minimum Qualifications Bachelor’s degree in Computer Science , Data Science, Statistics, Mathematics, Artificial Intelligence, Machine Learning, or a related technical discipline, or equivalent practical experience. 5+ years of industry experience in Data Science, Machine Learning, Artificial Intelligence, or NLP. 4+ years of hands-on experience building and deploying production-grade ML models. Strong programming skills in Python. Demonstrated experience with machine learning and data science frameworks such as Scikit-Learn, Pandas, NumPy, PyTorch or TensorFlow, SpaC y , LangChain or LangGraph , and PySpark . Strong understanding of Natural Language Processing, Text Classification, Topic Modelling, Clustering Algorithms, Embeddings and Semantic Search, Statistical Analysis and Experimentation. Preferred Qualifications MS or PhD degree in Computer Science, Artificial Intelligence, Machine Learning, Data Science, or related technical discipline. Experience working with Large Language Models, including prompt engineering, fine-tuning, evaluation, and optimisation . Experience in Customer Experience Analytics, Voice of Customer, Survey Analytics, or Contact Centre Analytics. Strong understanding of modern GenAI architectures including RAG, vector search, and agent-based workflows. Experience utilising machine learning platforms such as Kubeflow, SageMaker, Vertex AI, Databricks, or MLflow . Experience building highly scalable analytics platforms and data pipelines. Strong communication skills. Experience in enterprise SaaS product development environments. What We Offer Flexible working hours and hybrid remote work options. Opportunities for professional growth and development. A collaborative and inclusive work environment. The chance to work on impactful projects with a talented team. Excellent compensation in USD. Hardware and software setup (mandatory). Pre-Employment Verification As part of our standard onboarding process, candidates who successfully complete the interview process and accept an employment offer will be required to complete an employment verification check, and background check. This process will confirm job titles and dates of employment with two previous employers and is a standard requirement for all new employees joining the company.",
+      "fit_gaps": [
+        "Abstra es una empresa nearshore de servicios, por lo que queda deliberadamente por debajo de empresas de producto y fintech.",
+        "No aprovecha de forma directa la experiencia en banca, fraude o credit scoring.",
+        "La vacante pide 5+ años, por lo que el seniority mínimo requerido está por debajo del perfil objetivo."
+      ],
+      "fit_score": 92.0,
+      "fit_strengths": [
+        "Posición Senior remota exclusiva para México con ownership sobre soluciones de Topic Analytics impulsadas por ML, NLP y LLMs.",
+        "Requiere Python, PySpark, Scikit-Learn, PyTorch/TensorFlow, LangChain/LangGraph y experiencia desplegando modelos de producción.",
+        "Fuerte componente de GenAI: RAG, vector search, agent-based workflows, prompt engineering, fine-tuning, evaluación y optimización.",
+        "Incluye diseño de frameworks de experimentación para medir calidad, relevancia e impacto de negocio.",
+        "Buen ajuste con plataformas MLOps como Kubeflow, SageMaker, Vertex AI, Databricks y MLflow."
+      ],
+      "fit_summary": "Muy fuerte ajuste técnico en Python, PySpark, GenAI, experimentación y modelos productivos, pero se deprioriza por ser una empresa de servicios y por no tener dominio financiero.",
+      "identity_key": "3779c9b875b7032d49ac420310f5850b7d79ffbb7731f52cf623948b741df50d",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=4346",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 60.0,
+      "jd_generation_eligible": true,
+      "language_confidence": 0.98,
+      "language_source": "vacancy_text",
+      "location_raw": "México",
+      "posted_date": "2026-08-23",
+      "posted_date_raw": "2026-08-23",
+      "provenance": [
+        {
+          "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "1aa06afa129e1b59f55e1a4f12cd5f1b6ed0c7ee127950c6490d19500f4394d0",
+          "source_native_id": "abstra-senior-ds-topic-genai-20260823",
+          "source_path": "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
+          "source_search_date": "2026-08-24",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist (Topic Analytics, GenAI & Reporting)",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "PySpark",
+        "Scikit-Learn",
+        "Pandas",
+        "NumPy",
+        "PyTorch",
+        "TensorFlow",
+        "SpaCy",
+        "LangChain",
+        "LangGraph",
+        "LLMs",
+        "RAG",
+        "Vector Search",
+        "NLP",
+        "Kubeflow",
+        "SageMaker",
+        "Vertex AI",
+        "Databricks",
+        "MLflow",
+        "Experimentación"
+      ],
+      "url": "https://builtin.com/job/senior-data-scientist-topic-analytics-genai-reporting/10776821",
+      "vacancy_id": "vac-3779c9b875b7032d",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "1aa06afa129e1b59f55e1a4f12cd5f1b6ed0c7ee127950c6490d19500f4394d0",
+  "source_path": "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
+  "status": "valid"
+}

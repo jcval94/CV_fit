@@ -88,15 +88,21 @@
       "vacancy_content_hash": "a528f120ef3c91a4dc70d99fdc7df3d651d85d0ebb7af612b4c907ed585a0a5c"
     },
     "vac-08cdc2b18dc43994": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "b9d9ad23e9324b557d7652baa46a42f86d8c712f336e59f792c2c0c2a7d22605",
+      "fingerprint": "e3ac0e778e6ddf8e60ae69d2b74c8b3c96e77c359f8f8aeea4fea782350a70f3",
       "generation_logic_version": 5,
       "ready_to_send": false,
-      "reason": "vacancy vac-08cdc2b18dc43994 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
       "retrieval_mode": "hybrid-rerank",
-      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
-      "status": "SKIPPED_NOT_ELIGIBLE",
-      "vacancy_content_hash": "e762c1b4c0ca3722107bf382b883d4d41f402049f1a82ccbd4548c9b836c7a66"
+      "review_required": true,
+      "run_id": "auto-c924c2dee395c60189851d870411bdb531963fc6-vac-08cdc2b18dc43994",
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "7a1cf21d67bf9313a159405b69e4c10f512925a8c0db922d3d5bf306b5f04f31"
     },
     "vac-12dc570424d531ae": {
       "attempt_estimated_cost_usd": 0.3947715,
@@ -375,15 +381,21 @@
       "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
     },
     "vac-3779c9b875b7032d": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "9b9d1970077f60023c27e724c06a810672224737b9d17ca6c9cad05840a0aa2c",
+      "fingerprint": "9bac4f3de0cbd49dd173ed671afa02a7f289318c3bbc04232cbdefedea7bcf3d",
       "generation_logic_version": 5,
       "ready_to_send": false,
-      "reason": "vacancy vac-3779c9b875b7032d is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
       "retrieval_mode": "hybrid-rerank",
-      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
-      "status": "SKIPPED_NOT_ELIGIBLE",
-      "vacancy_content_hash": "02a8bbc36c3698a5a66100ed3f8ebaacfee09b5bf32cb666382b597381bffaf5"
+      "review_required": true,
+      "run_id": "auto-c924c2dee395c60189851d870411bdb531963fc6-vac-3779c9b875b7032d",
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "1c177412d0ec71213a1c7f3b0ae3dabd11a05b9d4266485c019c1bf2047b1b64"
     },
     "vac-631f0119ff49ee6b": {
       "application_bundle_file": "application_bundle_report.json",
@@ -659,22 +671,28 @@
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-25e90d4d822d4f6ee726fa3d63708312ab387c93-vac-84cc6dffc5671fa7",
-      "source_commit": "25e90d4d822d4f6ee726fa3d63708312ab387c93",
+      "run_id": "auto-c924c2dee395c60189851d870411bdb531963fc6-vac-84cc6dffc5671fa7",
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
       "status": "FAILED_REVIEW_REQUIRED",
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "cd86df7b4e8f8340a15e0065191bc19dafaa24f0296e01f3b8ad64e73e7d6391"
     },
     "vac-88deea25e71219c2": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "8572685e6f5b55c1446831c136676d35dc0ac7bcf5116501bef64b3b5b232d49",
+      "fingerprint": "9ddd172328211c68e00dd5758092e0a3acec16ae7f7b8918e298be29f7659530",
       "generation_logic_version": 5,
       "ready_to_send": false,
-      "reason": "vacancy vac-88deea25e71219c2 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
       "retrieval_mode": "hybrid-rerank",
-      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
-      "status": "SKIPPED_NOT_ELIGIBLE",
-      "vacancy_content_hash": "f110a7e25cfd09871eb038633e66fceee4de5fdfbfcfeec934af03da2a38b4b2"
+      "review_required": true,
+      "run_id": "auto-c924c2dee395c60189851d870411bdb531963fc6-vac-88deea25e71219c2",
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "c0bc67ac674fc6716570e9abe33da8ba01743bc9cd7a4008e5170eaa9e6ec299"
     },
     "vac-a6ea4042585a94c8": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",

@@ -1,10 +1,10 @@
 {
-  "application_language": "en",
+  "application_language": "es",
   "city": "Ciudad de México, México",
   "company": "GBM",
   "company_category": "Banca",
-  "content_hash": "f110a7e25cfd09871eb038633e66fceee4de5fdfbfcfeec934af03da2a38b4b2",
-  "description": null,
+  "content_hash": "c0bc67ac674fc6716570e9abe33da8ba01743bc9cd7a4008e5170eaa9e6ec299",
+  "description": "Acerca de GBM<br><br>Somos una organización de gestión patrimonial, de activos y banca privada con 35 años de experiencia; pioneros en inversión digital innovadora y productos de ahorro. Nuestra misión es mejorar la calidad de vida de nuestros usuarios a través de soluciones financieras inteligentes.<br><br>En GBM Digital y Tecnología hemos experimentado un crecimiento exponencial gracias a nuestros productos y a nuestro equipo de clase mundial. Potencializamos y habilitamos a nuestra gente en un ambiente de trabajo entrepreneur.<br><br>Objetivo<br><br>Como Machine Learning Engineer, serás responsable de diseñar, construir y escalar la plataforma de MLOps y LLMOps que habilita el desarrollo, despliegue y operación de soluciones de Inteligencia Artificial en toda la organización. Trabajarás junto a equipos de Data Science, AI Engineering y Producto para acelerar la adopción de AI, garantizando infraestructura confiable, segura y escalable para modelos, agentes inteligentes y sistemas de nueva generación que impactan directamente la experiencia de nuestros clientes y la eficiencia del negocio.<br><br>En una semana típica:<br><br><br><ul><li>Diseñar, construir y evolucionar la plataforma de MLOps y LLMOps de GBM, cubriendo el ciclo de vida de modelos de Machine Learning y Agentes</li><li>Implementar pipelines automatizados para entrenamiento, evaluación, despliegue y monitoreo de modelos.</li><li>Definir estándares de versionamiento, reproducibilidad y trazabilidad.</li><li>Diseñar e implementar infraestructura cloud sobre AWS utilizando IaC.</li><li>Construir arquitecturas serverless y orientadas a eventos.</li><li>Desarrollar y mantener microservicios para dar cobertura a las necesidades de los diferentes equipos.</li><li>Participar en decisiones de arquitectura relacionadas con escalabilidad, resiliencia y seguridad.</li><li>Habilitar el despliegue y operación de agentes inteligentes y copilotos.</li><li>Implementar frameworks de evaluación automatizada para agentes y modelos generativos.</li><li>Construir y mantener componentes relacionados con embeddings, knowledge bases y knowledge graphs.</li><li>Participar en la evolución de agentes de voz y experiencias multimodales.</li><li>Implementar monitoreo integral para modelos y agentes.</li><li>Diseñar mecanismos de alertamiento y detección temprana de incidentes.</li><li>Implementar guardrails y controles de seguridad para sistemas basados en AI.</li><li>Participar en auditorías y procesos de cumplimiento asociados al uso de modelos en producción.</li><li>Definir estándares de aprobación y despliegue para soluciones de Machine Learning y Generative AI.<br><br><br></li></ul>Escolaridad<br><br><br><ul><li>Licenciatura en Ciencias de la Computación, Ingeniería en Sistemas, Ingeniería de Software o carreras afines.<br><br><br></li></ul>Requisitos<br><br><br><ul><li>10+ años de experiencia de experiencia en Machine Learning Engineering, MLOps, Platform Engineering, DevOps o AI Infrastructure.</li><li>Experiencia diseñando y operando plataformas de Machine Learning en producción.</li><li>Experiencia desarrollando soluciones cloud-native escalables.</li><li>Experiencia construyendo pipelines automatizados para modelos y agentes</li><li>Licenciatura en Ciencias de la Computación, Ingeniería en Sistemas, Ingeniería de Software o carreras afines.</li><li>Maestría en Inteligencia Artificial, Ciencia de Datos, Ingeniería de Software o disciplinas relacionadas.</li><li>Control de Versiones: Git (GitHub, GitLab, Bitbucket)</li><li>Bases de Datos y Clientes:SQL Server Management Studio (SSMS), Amazon Dynamo</li><li>Cloud Platforms: AWS Management Console, AWS CLI</li><li>Testing &amp; QA: Postman, Newman, JMeter, frameworks de testing (xUnit, JUnit, PyTest, Jest)</li><li>Observabilidad &amp; Monitoreo: Alguna de las siguientes: Grafana, Prometheus, Elastic (ELK Stack), CloudWatch, Datadog</li><li>Colaboración y Gestión: Jira, Confluence, Slack, Miro, Notion.</li><li>Seguridad y Gestión de Secretos: Vault, AWS Secrets Manager, Azure Key Vault</li><li>Contenedores y Orquestación: Docker, Kubernetes</li><li>IA Generativa: Copilot, ChatGPT, Bedrock </li><li>Lenguajes de Programación </li><li>Dominio de al menos un lenguaje de propósito general como Python, Node.js </li><li>Capacidad para diseñar librerías reutilizables y escribir código optimizado </li><li>Diseño y Arquitectura de Software </li><li>Patrones de diseño, principios SOLID, arquitecturas de microservicios, DDD, event-driven, serverless</li><li>Bases de Datos </li><li>Modelado y optimización de bases de datos SQL (PostgreSQL, MySQL) y NoSQL (DynamoDB, MongoDB, Redis). Ajuste de performance y particionamiento/sharding.</li><li>Cloud Computing (En desarrollo / Experto)</li><li>Experiencia práctica en AWS (Lambda, API Gateway, ECS, DynamoDB, S3, RDS) Diseño de arquitecturas escalables y resilientes en la nube </li><li>CI/CD &amp; DevOps</li><li>Automatización de pipelines, integración con herramientas de despliegue (GitHub Actions, GitLab CI, Jenkins), Infraestructura como Código (CDK, Terraform, CloudFormation) </li><li>Testing &amp; QA </li><li>Unit testing, integración y pruebas de performance. Diseño de estrategias de cobertura de pruebas </li><li>Observabilidad </li><li>Logging estructurado, métricas, trazas distribuidas, herramientas como Prometheus, Grafana, CloudWatch</li><li>Seguridad en Aplicaciones </li><li>Prácticas de secure coding, autenticación/autorización (OAuth2, JWT), cifrado, manejo de secretos </li><li>Metodologías de Trabajo </li><li>Agile/Scrum/Kanban, code reviews, pair programming</li><li>Liderazgo Técnico </li><li>Capacidad de influir en decisiones de arquitectura, guiar a ingenieros menos experimentados y coordinar iniciativas técnicas<br><br><br></li></ul>Inglés- Avanzado<br><br>Competencias<br><br><br><ul><li>Ownership: Asume responsabilidad total de sistemas y resultados.</li><li>Colaboración interdisciplinaria: Trabaja con Data, AI y Product para alinear objetivos.</li><li>Mentalidad de automatización: Busca eliminar tareas manuales y crear sistemas autosuficientes.</li><li>Resolución de problemas complejos: Diagnostica y soluciona incidentes críticos.</li><li>Innovación y mejora continua: Propone mejoras en pipelines y performance.</li><li>Comunicación técnica: Documenta y comunica de forma clara y efectiva.</li><li>Aprendizaje continuo: Se mantiene actualizado en DevOps/MLOps/AI y AWS.</li><li>Orientación a impacto: Prioriza tareas de alto valor para el negocio</li><li>Cultura de seguridad: Integra seguridad en cada etapa de desarrollo<br><br><br></li></ul>Beneficios<br><br><br><ul><li>Salario y paquete de compensación competitivo</li><li>Prestaciones superiores de ley</li><li>Contratación directamente</li><li>Esquema 100% nominal</li><li>Formación y plan de carrera<br><br><br></li></ul>Join the team!*<br><br><br><ul><li>Para postularte es indispensable que leas y aceptes nuestro Aviso de Privacidad para Candidatos que se alinea a la ley de protección de datos personales y especifica el uso que le daremos a los mismos únicamente con fines de reclutamiento.</li></ul>",
   "fit_gaps": [
     "El rol está más orientado a plataforma e infraestructura de ML que a modelado estadístico puro.",
     "La descripción enfatiza AWS, IaC, serverless, microservicios, seguridad y observabilidad, por lo que exige profundidad de ingeniería de plataforma."
@@ -19,21 +19,31 @@
   ],
   "fit_summary": "Excelente ajuste por seniority, sector financiero, ML productivo, GenAI, MLOps/LLMOps y liderazgo técnico; es especialmente atractivo si se busca evolucionar hacia arquitectura y plataforma de IA.",
   "identity_key": "88deea25e71219c2bbdd942125b1ced88f839becbeea53744006dba1ae9611a0",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
-    "substantive_requirements=0",
+    "description_chars=7121",
+    "substantive_requirements=1",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 65.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Ciudad de México, México",
   "posted_date": "2026-08-22",
   "posted_date_raw": "2026-08-22",
   "provenance": [
+    {
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "cebe90d71a08113de4308b4adbd42c2b57db412f9af8e2199b2a7e4df4e01741",
+      "source_native_id": "gbm-4457051976",
+      "source_path": "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
+      "source_search_date": "2026-08-24",
+      "source_updated_at": null
+    },
     {
       "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
       "source_entry_index": 1,
@@ -45,7 +55,9 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
+  "requirements": [
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
   "responsibilities": [],
   "role_title": "Machine Learning/MLOps",
   "salary": "No especificado",

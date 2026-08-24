@@ -3,24 +3,25 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
+      "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
+      "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
       "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
       "GPTW/vacantes_2026-08-21.json",
       "GPTW/vacantes_2026-08-23.json",
-      "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
       "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json",
-      "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
       "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json",
       "Vacantes/enriched/auto/konf-o-ai-ml-engineer-sr-180871be26.json",
       "Vacantes/enriched/auto/lexisnexis-senior-data-scientist-ii-1f0c752faa.json",
       "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
-      "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
       "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
       "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
       "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
@@ -33,24 +34,28 @@
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "c924c2dee395c60189851d870411bdb531963fc6-noop",
+  "reindexed_vacancy_ids": [
+    "vac-08cdc2b18dc43994",
+    "vac-3779c9b875b7032d",
+    "vac-88deea25e71219c2"
+  ],
+  "run_id": "c924c2dee395c60189851d870411bdb531963fc6",
   "schema_version": 1,
   "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
   "source_counts": {
     "deleted": 0,
     "discovered": 24,
     "modified": 0,
-    "new": 0,
+    "new": 3,
     "quarantined": 0,
-    "unchanged": 24
+    "unchanged": 21
   },
   "status": "success",
   "vacancy_counts": {
     "active": 17,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 3,
+    "reindexed": 3,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

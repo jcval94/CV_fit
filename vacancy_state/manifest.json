@@ -1,5 +1,5 @@
 {
-  "last_run_id": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e-noop",
+  "last_run_id": "c924c2dee395c60189851d870411bdb531963fc6-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -35,6 +35,14 @@
         "vac-71351017a6b16474"
       ]
     },
+    "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json": {
+      "source_hash": "1aa06afa129e1b59f55e1a4f12cd5f1b6ed0c7ee127950c6490d19500f4394d0",
+      "state_file": "sources/Vacantes__enriched__auto__abstra-senior-data-scientist-topic-analytics-genai-rep--e75b054858c32f10.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-3779c9b875b7032d"
+      ]
+    },
     "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json": {
       "source_hash": "4ddef5104ddbe5342866b05618910db61f29e04fe131262c715c0fc44b023a5b",
       "state_file": "sources/Vacantes__enriched__auto__creai-senior-machine-learning-engineer-636dc54a9a.json--82284db496a3b9dc.json",
@@ -57,6 +65,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-12dc570424d531ae"
+      ]
+    },
+    "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json": {
+      "source_hash": "cebe90d71a08113de4308b4adbd42c2b57db412f9af8e2199b2a7e4df4e01741",
+      "state_file": "sources/Vacantes__enriched__auto__gbm-machine-learning-mlops-72bb010731.json--03835180b47128c0.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-88deea25e71219c2"
       ]
     },
     "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json": {
@@ -97,6 +113,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-84cc6dffc5671fa7"
+      ]
+    },
+    "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json": {
+      "source_hash": "857ceb181af168d623c85c6e615504e70b632339133afe2d035e58b4a76545ba",
+      "state_file": "sources/Vacantes__enriched__auto__tilt-finance-data-science-lead-latam-9980025f4f.json--afd3e018c2312d70.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-08cdc2b18dc43994"
       ]
     },
     "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json": {

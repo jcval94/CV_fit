@@ -3,8 +3,8 @@
   "city": "México / Brasil / Estados Unidos - Remote Americas",
   "company": "Tilt Finance",
   "company_category": "Fintech",
-  "content_hash": "e762c1b4c0ca3722107bf382b883d4d41f402049f1a82ccbd4548c9b836c7a66",
-  "description": null,
+  "content_hash": "7a1cf21d67bf9313a159405b69e4c10f512925a8c0db922d3d5bf306b5f04f31",
+  "description": "Join the Tilt team At Tilt, we see a side of people that traditional lenders miss. Our mobile-first products and machine learning-powered credit models look beyond credit scores, using over 250 real-time financial signals to recognize real potential. With millions of customers worldwide , we're not just changing how people access financial products — we're creating a new credit system that backs the working, whatever they're working toward. The Opportunity: Data Science Lead, LATAM We're looking for a Lead Data Scientist to own data science across our two LATAM markets, Mexico and Brazil. Both are fast-growing businesses operating with the speed and autonomy of a startup, backed by the scale and stability of an established group. This is a hands-on leadership role. You'll lead a small team of data scientists across both markets while remaining an active contributor yourself — building models, shaping technical direction, and setting the standard for how the work gets done. The two markets sit at different stages of maturity, and the role spans both. In one, you'll be establishing foundations — infrastructure, modelling standards, and a roadmap to bring capability up to the level of our other markets. In the other, you'll be supporting a more mature practice as it advances model architecture and builds a more integrated approach to credit decisioning and portfolio valuation. How You'll Make an Impact Own the data science strategy and roadmap for Mexico and Brazil — what we build, in what order, and to what standard. Remain hands-on, building and shipping models alongside the team. Establish modelling standards, infrastructure, and delivery practices where they don't yet exist, and raise the bar where they do. Lead, mentor, and develop a small team of data scientists across two markets and a wide range of experience levels. Partner with credit leadership as a peer — understanding business objectives and translating them into modelling, impact measurement, valuation input, and P&L analysis. Bring structure and discipline to how the work runs: clear priorities, visible progress, and reliable delivery. Contribute to methodologies that can be adopted across the wider Tilt data science organisation. Why You're a Great Fit You've led data scientists before, as a manager or technical lead, and can establish credibility quickly with experienced, highly capable people. You're still a builder. You've stayed close to the modelling work and want to keep it that way. Strong applied machine learning and modelling craft, with a clear view of what good looks like and the ability to raise a team to meet it. Sufficient understanding of credit and underwriting to contribute meaningfully to credit conversations. Direct experience in lending, credit, or payments is a strong advantage. Comfortable with ambiguity and pace, with a track record in high-growth or small-company environments. A strong bias toward delivery, and the judgement to know when to stop exploring and start shipping. You connect data science to measurable business outcomes and communicate technical ideas clearly to non-technical stakeholders. Location & Language Based in Brazil, Mexico, or the US . Fluent English required. Portuguese is an advantage; Spanish is welcome. Don’t meet every qualification? We care about potential over your past. If you're bringing ambition and drive to what we're building, we want to hear from you. What you'll get at Tilt Virtual-first teamwork: The Tilt team is collaborating across 14 countries, 12 time zones, and counting. You’ll get started with a WFH office reimbursement. Competitive pay: We're big on potential, and it's reflected in our competitive compensation packages and generous equity. Complete support: Find flexible health plans at every premium level, and substantial subsidies that stand up to global standards. Visibility is yours : You can count on direct exposure to our leadership team — we’re a team where good ideas travel quickly. Paid global onsites : Magic happens IRL: we gather twice yearly to reconnect over shared meals or kayaking adventures. (We’ve visited Vail, San Diego, and Mexico City, to name a few.) Impact is recognized : Growth opportunities follow your contributions, not rigid promotion timelines. The Tilt Way We're looking for people who chase excellence and impact. Those who stand behind their work, celebrating the wins and learning from the missteps equally. We foster an environment where every voice is valued and mutual respect is non-negotiable — brilliant jerks need not apply. We're in this together, working to expand access to fair credit and prove that people are incredible. When you join us, it's not just another day at the [virtual] office, you're helping millions of hardworking people reach better financial futures. You’re pushing ahead in your career? We can get behind that. Join us in building the credit system that people deserve.",
   "fit_gaps": [
     "La descripción pública no detalla herramientas específicas como PySpark o SQL.",
     "Portugués es una ventaja para el mercado de Brasil, aunque no aparece como requisito obligatorio."
@@ -19,21 +19,31 @@
   ],
   "fit_summary": "Es la oportunidad con mayor ajuste: combina fintech, crédito, modelado aplicado, ownership end-to-end, liderazgo técnico y alcance regional, además de ser virtual-first y contratar en México.",
   "identity_key": "08cdc2b18dc4399437e418c8a6b145af107662a048245770bd28e532c7d879e6",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=4938",
     "substantive_requirements=0",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 60.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "México / Brasil / Estados Unidos - Remote Americas",
   "posted_date": "2026-08-21",
   "posted_date_raw": "2026-08-21",
   "provenance": [
+    {
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "857ceb181af168d623c85c6e615504e70b632339133afe2d035e58b4a76545ba",
+      "source_native_id": "tilt-9d7151f1-c3f3-41a5-bf9b-dcee065dbd4b",
+      "source_path": "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
+      "source_search_date": "2026-08-24",
+      "source_updated_at": null
+    },
     {
       "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
       "source_entry_index": 0,

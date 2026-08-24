@@ -1,0 +1,170 @@
+{
+  "events": {},
+  "legacy_baseline": {
+    "agent_detail_available": false,
+    "captured_at": "2026-08-24T17:58:53+00:00",
+    "entries": {
+      "vac-04e92192e608ea02": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.998218,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.008218,
+          "generation": 0.985739,
+          "presentation": 0.004261
+        }
+      },
+      "vac-12dc570424d531ae": {
+        "agent_detail_available": false,
+        "current_status": "FAILED_REVIEW_REQUIRED",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.3947715,
+        "ready_to_send": false,
+        "stages": {
+          "generation": 0.3947715
+        }
+      },
+      "vac-14b95b3407bcb148": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.9291095,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.007453,
+          "generation": 0.9179095,
+          "presentation": 0.003747
+        }
+      },
+      "vac-21cefd168f6539b4": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.8806665,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.00682,
+          "generation": 0.8692595,
+          "presentation": 0.004587
+        }
+      },
+      "vac-2de566514601700a": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.847898,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.007038,
+          "generation": 0.837366,
+          "presentation": 0.003494
+        }
+      },
+      "vac-631f0119ff49ee6b": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.8823195,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.00607,
+          "generation": 0.8674825,
+          "presentation": 0.008767
+        }
+      },
+      "vac-6d9bdccca1ff49c3": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.932029,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.008401,
+          "generation": 0.914188,
+          "presentation": 0.00944
+        }
+      },
+      "vac-6fe0c8aa95790e4e": {
+        "agent_detail_available": false,
+        "current_status": "COMPLETED_BELOW_TARGET",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.818255,
+        "ready_to_send": false,
+        "stages": {
+          "cover_letter": 0.006812,
+          "generation": 0.802228,
+          "presentation": 0.009215
+        }
+      },
+      "vac-84cc6dffc5671fa7": {
+        "agent_detail_available": false,
+        "current_status": "FAILED_REVIEW_REQUIRED",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.0,
+        "ready_to_send": false,
+        "stages": {
+          "generation": 0.0
+        }
+      },
+      "vac-adb898e887a1d895": {
+        "agent_detail_available": false,
+        "current_status": "FAILED_REVIEW_REQUIRED",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.0,
+        "ready_to_send": false,
+        "stages": {
+          "generation": 0.0
+        }
+      },
+      "vac-b968fdbcca798458": {
+        "agent_detail_available": false,
+        "current_status": "FAILED_REVIEW_REQUIRED",
+        "historical_cost_complete": false,
+        "known_cost_usd": 0.0,
+        "ready_to_send": false,
+        "stages": {
+          "generation": 0.0
+        }
+      }
+    },
+    "historical_cost_complete": false,
+    "known_cost_usd": 6.683267,
+    "note": "Known pre-ledger aggregate reconstructed from versioned state. Old per-call telemetry and repeated downstream costs are not fully recoverable; this is a lower-bound estimate, not fabricated precision.",
+    "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+    "vacancy_count": 11
+  },
+  "pricing_basis": "OpenAI standard short-context text pricing, USD per 1M tokens",
+  "pricing_snapshot_date": "2026-08-21",
+  "pricing_source": "https://platform.openai.com/pricing",
+  "runs": {
+    "auto-c924c2dee395c60189851d870411bdb531963fc6": {
+      "budget_usd": 2.0,
+      "bundle_result_counts": {
+        "SKIPPED_MISSING_OUTPUT": 4
+      },
+      "call_count": 0,
+      "call_level_known_spend_usd": 0,
+      "candidate_count": 4,
+      "downstream_known_spend_usd": 0,
+      "event_count": 0,
+      "event_ids": [],
+      "generation_attempts": 4,
+      "generation_budget_usd": 2.0,
+      "generation_known_spend_usd": 0,
+      "generation_result_counts": {
+        "FAILED_REVIEW_REQUIRED": 4
+      },
+      "known_spend_usd": 0,
+      "ready_count": 0,
+      "recorded_at": "2026-08-24T17:59:10+00:00",
+      "run_id": "auto-c924c2dee395c60189851d870411bdb531963fc6",
+      "source_candidate_count": 4,
+      "source_commit": "c924c2dee395c60189851d870411bdb531963fc6",
+      "telemetry_coverage_pct": 100.0,
+      "unpriced_call_count": 0
+    }
+  },
+  "schema_version": 1
+}
