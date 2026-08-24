@@ -47,6 +47,27 @@ class GenerationRecoveryTests(unittest.TestCase):
             self.assertEqual(report["auto_retry_vacancy_ids"], ["vac-old-a"])
             self.assertEqual(report["reindexed_vacancy_ids"], ["vac-new-1", "vac-new-2", "vac-old-a"])
 
+    def test_recovery_never_starts_a_paid_run_without_new_candidates(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            ingest = root / "ingest.json"
+            manifest = root / "manifest.json"
+            vacancy_state = root / "vacancy_state"
+            output = root / "candidates.json"
+            self._write(ingest, {"reindexed_vacancy_ids": []})
+            self._write(manifest, {"entries": {"vac-old": {"status": "FAILED_REVIEW_REQUIRED", "error": "HTTP 429 insufficient_quota"}}})
+            self._write(vacancy_state / "records" / "vac-old.json", {"jd_generation_eligible": True})
+            report = build_generation_candidate_report(
+                ingest_report=ingest,
+                generation_manifest=manifest,
+                vacancy_state=vacancy_state,
+                output=output,
+                max_vacancies_per_run=6,
+                max_recovery_candidates=3,
+            )
+            self.assertEqual(report["auto_retry_vacancy_ids"], [])
+            self.assertEqual(report["reindexed_vacancy_ids"], [])
+
     def test_sparse_old_failure_is_not_retried(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

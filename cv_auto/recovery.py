@@ -55,8 +55,12 @@ def build_generation_candidate_report(
     entries = manifest.get("entries") or {}
     original = [str(value) for value in report.get("reindexed_vacancy_ids", []) if value]
 
+    # Recovery is opportunistic, never a reason to start a paid run by itself.
+    # This prevents code-only commits and Pages/observability work from repeatedly
+    # retrying old quota/network failures. New vacancies always consume capacity
+    # first; at most the configured spare capacity can be used for recovery.
     capacity = max(max_vacancies_per_run - len(original), 0)
-    recovery_limit = min(capacity, max(max_recovery_candidates, 0))
+    recovery_limit = 0 if not original else min(capacity, max(max_recovery_candidates, 0))
     recovery: list[str] = []
     for vacancy_id in sorted(entries):
         if len(recovery) >= recovery_limit:

@@ -20,6 +20,8 @@ TERMINAL_STATUSES = {
     "FAILED_REVIEW_REQUIRED",
 }
 DEFERRED_STATUS = "DEFERRED_CAP"
+DEFERRED_BUDGET_STATUS = "DEFERRED_BUDGET"
+DEFERRED_STATUSES = {DEFERRED_STATUS, DEFERRED_BUDGET_STATUS}
 GenerationCallable = Callable[..., tuple[dict[str, Any], dict[str, Any]]]
 
 
@@ -180,10 +182,9 @@ def _ordered_unique(values: list[str]) -> list[str]:
 def stale_generation_logic_ids(entries: dict[str, Any], vacancy_state: Path) -> list[str]:
     """Return active vacancies generated with older code semantics.
 
-    A code-only correction (for example the canonical chronology backbone) must
-    trigger one controlled regeneration even when the vacancy JSON and RAG state
-    are unchanged. Once an entry is persisted with the current logic version it
-    becomes idempotent again.
+    A code-only correction can request a controlled regeneration, but production
+    may explicitly exclude stale logic from the daily paid queue and handle it as
+    a manual/backfill budget instead.
     """
     stale: list[str] = []
     for vacancy_id, entry in entries.items():
@@ -263,6 +264,26 @@ def _base_entry(
     }
 
 
+def _deferred_entry(
+    *,
+    base_entry: dict[str, Any],
+    status: str,
+    previous: dict[str, Any] | None,
+    reason: str | None = None,
+) -> dict[str, Any]:
+    entry = {
+        **base_entry,
+        "status": status,
+        "ready_to_send": False,
+    }
+    last_known = _last_known_metrics(previous)
+    if last_known:
+        entry["last_known_metrics"] = last_known
+    if reason:
+        entry["reason"] = reason
+    return entry
+
+
 def run_generation_batch(
     *,
     candidate_ids: list[str],
@@ -275,23 +296,40 @@ def run_generation_batch(
     retrieval_mode: str = "hybrid-rerank",
     max_vacancies_per_run: int = 5,
     max_estimated_cost_usd: float = 2.0,
+    max_batch_estimated_cost_usd: float | None = None,
+    min_batch_remaining_usd: float = 0.25,
     retry_failed: bool = False,
+    include_stale_logic: bool = True,
+    process_deferred_without_candidates: bool = True,
     generator: GenerationCallable | None = None,
 ) -> dict[str, Any]:
     if max_vacancies_per_run < 1:
         raise ValueError("max_vacancies_per_run must be >= 1")
     if max_estimated_cost_usd <= 0:
         raise ValueError("max_estimated_cost_usd must be > 0")
+    if max_batch_estimated_cost_usd is not None and max_batch_estimated_cost_usd <= 0:
+        raise ValueError("max_batch_estimated_cost_usd must be > 0 when configured")
+    if min_batch_remaining_usd < 0:
+        raise ValueError("min_batch_remaining_usd must be >= 0")
 
     manifest = _load_manifest(generation_state)
     entries: dict[str, Any] = manifest["entries"]
     evidence_hash = evidence_fingerprint(evidence_state)
-    deferred = sorted(vacancy_id for vacancy_id, entry in entries.items() if entry.get("status") == DEFERRED_STATUS)
+    deferred = sorted(
+        vacancy_id for vacancy_id, entry in entries.items()
+        if entry.get("status") in DEFERRED_STATUSES
+    )
     stale_logic = stale_generation_logic_ids(entries, vacancy_state)
-    queue = _ordered_unique(deferred + stale_logic + candidate_ids)
+    deferred_queue = deferred if candidate_ids or process_deferred_without_candidates else []
+    stale_queue = stale_logic if include_stale_logic else []
+    # New/modified vacancies always receive priority over backlog and code-only
+    # backfills. This is the paid production queue order.
+    queue = _ordered_unique(candidate_ids + deferred_queue + stale_queue)
     generate_one = generator or _default_generate_one
 
     generated_attempts = 0
+    batch_known_spend = 0.0
+    batch_cost_complete = True
     results: list[dict[str, Any]] = []
     manifest_changed = False
 
@@ -335,16 +373,38 @@ def run_generation_batch(
             continue
 
         if generated_attempts >= max_vacancies_per_run:
-            entry = {
-                **base_entry,
-                "status": DEFERRED_STATUS,
-                "ready_to_send": False,
-            }
+            entry = _deferred_entry(base_entry=base_entry, status=DEFERRED_STATUS, previous=previous)
             if previous != entry:
                 entries[vacancy_id] = entry
                 manifest_changed = True
             results.append({"vacancy_id": vacancy_id, "status": DEFERRED_STATUS})
             continue
+
+        per_vacancy_budget = max_estimated_cost_usd
+        if max_batch_estimated_cost_usd is not None:
+            remaining = round(max(max_batch_estimated_cost_usd - batch_known_spend, 0.0), 8)
+            if remaining < min_batch_remaining_usd:
+                reason = (
+                    f"global generation batch budget has only ${remaining:.4f} remaining; "
+                    f"minimum safe start reserve is ${min_batch_remaining_usd:.4f}"
+                )
+                entry = _deferred_entry(
+                    base_entry=base_entry,
+                    status=DEFERRED_BUDGET_STATUS,
+                    previous=previous,
+                    reason=reason,
+                )
+                if previous != entry:
+                    entries[vacancy_id] = entry
+                    manifest_changed = True
+                results.append({
+                    "vacancy_id": vacancy_id,
+                    "status": DEFERRED_BUDGET_STATUS,
+                    "remaining_batch_budget_usd": remaining,
+                    "reason": reason,
+                })
+                continue
+            per_vacancy_budget = min(per_vacancy_budget, remaining)
 
         generated_attempts += 1
         vacancy_run_id = f"{run_id}-{vacancy_id}"
@@ -358,9 +418,13 @@ def run_generation_batch(
                 output_dir=output_dir,
                 run_id=vacancy_run_id,
                 retrieval_mode=retrieval_mode,
-                max_estimated_cost_usd=max_estimated_cost_usd,
+                max_estimated_cost_usd=per_vacancy_budget,
             )
             attempt_known_cost = _known_usage_cost(usage)
+            if attempt_known_cost is None:
+                batch_cost_complete = False
+            else:
+                batch_known_spend = round(batch_known_spend + attempt_known_cost, 8)
             cumulative_known_cost = round(prior_cumulative + (attempt_known_cost or 0.0), 8)
             final_review = dict(report.get("final_review") or {})
             entry = {
@@ -392,6 +456,8 @@ def run_generation_batch(
                 "estimated_cost_usd": entry["estimated_cost_usd"],
                 "known_estimated_cost_usd": entry["known_estimated_cost_usd"],
                 "cumulative_known_cost_usd": entry["cumulative_known_cost_usd"],
+                "attempt_known_cost_usd": attempt_known_cost,
+                "batch_known_spend_usd": batch_known_spend,
                 "run_id": vacancy_run_id,
             })
         except Exception as exc:
@@ -401,6 +467,10 @@ def run_generation_batch(
                 usage = exc.usage
                 cause = exc.cause
             attempt_known_cost = _known_usage_cost(usage)
+            if attempt_known_cost is None:
+                batch_cost_complete = False
+            else:
+                batch_known_spend = round(batch_known_spend + attempt_known_cost, 8)
             cumulative_known_cost = round(prior_cumulative + (attempt_known_cost or 0.0), 8)
             last_known = _last_known_metrics(previous)
             entry = {
@@ -426,6 +496,7 @@ def run_generation_batch(
                 "error": entry["error"],
                 "attempt_known_cost_usd": attempt_known_cost,
                 "cumulative_known_cost_usd": cumulative_known_cost,
+                "batch_known_spend_usd": batch_known_spend,
                 "run_id": vacancy_run_id,
             })
 
@@ -440,9 +511,18 @@ def run_generation_batch(
         "source_commit": source_commit,
         "retrieval_mode": retrieval_mode,
         "evidence_fingerprint": evidence_hash,
+        "source_candidate_count": len(candidate_ids),
+        "deferred_candidate_count": len(deferred_queue),
         "stale_logic_candidate_count": len(stale_logic),
+        "stale_logic_included_count": len(stale_queue),
         "candidate_count": len(queue),
         "generation_attempts": generated_attempts,
+        "max_vacancies_per_run": max_vacancies_per_run,
+        "max_estimated_cost_per_vacancy_usd": max_estimated_cost_usd,
+        "max_batch_estimated_cost_usd": max_batch_estimated_cost_usd,
+        "min_batch_remaining_usd": min_batch_remaining_usd,
+        "batch_known_spend_usd": round(batch_known_spend, 8),
+        "batch_cost_complete": batch_cost_complete,
         "result_counts": {
             status: sum(item["status"] == status for item in results)
             for status in sorted({item["status"] for item in results})
@@ -465,8 +545,12 @@ def main() -> int:
     parser.add_argument("--source-commit", default=None)
     parser.add_argument("--retrieval-mode", default="hybrid-rerank", choices=["lexical", "hybrid", "hybrid-rerank"])
     parser.add_argument("--max-vacancies-per-run", type=int, default=5)
-    parser.add_argument("--max-estimated-cost-usd", type=float, default=2.0)
+    parser.add_argument("--max-estimated-cost-usd", type=float, default=2.0, help="Per-vacancy live-call ceiling.")
+    parser.add_argument("--max-batch-estimated-cost-usd", type=float, default=None, help="Global known generation-spend ceiling for the whole batch.")
+    parser.add_argument("--min-batch-remaining-usd", type=float, default=0.25, help="Do not start another CV below this remaining global budget.")
     parser.add_argument("--retry-failed", action="store_true")
+    parser.add_argument("--skip-stale-logic", action="store_true", help="Keep code-only historical backfills out of this paid queue.")
+    parser.add_argument("--skip-deferred-without-candidates", action="store_true", help="Do not start a paid backlog-only run when no new/modified vacancy exists.")
     args = parser.parse_args()
 
     candidate_ids = list(args.vacancy_id)
@@ -487,14 +571,22 @@ def main() -> int:
         retrieval_mode=args.retrieval_mode,
         max_vacancies_per_run=args.max_vacancies_per_run,
         max_estimated_cost_usd=args.max_estimated_cost_usd,
+        max_batch_estimated_cost_usd=args.max_batch_estimated_cost_usd,
+        min_batch_remaining_usd=args.min_batch_remaining_usd,
         retry_failed=args.retry_failed,
+        include_stale_logic=not args.skip_stale_logic,
+        process_deferred_without_candidates=not args.skip_deferred_without_candidates,
     )
     print(json.dumps({
         "run_id": report["run_id"],
         "generation_logic_version": report["generation_logic_version"],
+        "source_candidate_count": report["source_candidate_count"],
         "stale_logic_candidate_count": report["stale_logic_candidate_count"],
+        "stale_logic_included_count": report["stale_logic_included_count"],
         "candidate_count": report["candidate_count"],
         "generation_attempts": report["generation_attempts"],
+        "batch_known_spend_usd": report["batch_known_spend_usd"],
+        "max_batch_estimated_cost_usd": report["max_batch_estimated_cost_usd"],
         "result_counts": report["result_counts"],
     }, ensure_ascii=False, sort_keys=True))
     return 0
