@@ -1,0 +1,358 @@
+name: Retry requested CVs safely
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "generation_retry_requests/**/*.json"
+      - ".github/workflows/manual-cv-generation-retry.yml"
+  workflow_dispatch:
+    inputs:
+      request_file:
+        description: "Path under generation_retry_requests/"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+# Shared with Generate requested CVs so a retry can never overlap the original run.
+concurrency:
+  group: manual-cv-generation
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      CVFIT_EVENT_LOG: /tmp/cvfit-observability/manual-retry-events.jsonl
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main before idempotency check
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B main origin/main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Resolve request and check prior paid evidence
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_FILE: ${{ inputs.request_file }}
+          TRIGGER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            request_file="$MANUAL_FILE"
+          else
+            request_file="$(git show --pretty='' --name-only "$TRIGGER_SHA" | grep '^generation_retry_requests/.*\.json$' | head -n 1 || true)"
+          fi
+          if [ -z "${request_file:-}" ] || [ ! -f "$request_file" ]; then
+            echo "No retry request JSON was resolved."
+            exit 2
+          fi
+          echo "REQUEST_FILE=$request_file" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          def read(path, default):
+              p = Path(path)
+              return json.loads(p.read_text(encoding='utf-8')) if p.exists() else default
+
+          request = read(os.environ['REQUEST_FILE'], {})
+          request_id = str(request.get('request_id') or '').strip()
+          origin_commit = str(request.get('origin_commit') or '').strip()
+          ids = [str(value) for value in request.get('vacancy_ids', []) if value]
+          if not request_id or not origin_commit or not ids:
+              raise SystemExit('retry request requires request_id, origin_commit and vacancy_ids')
+          if len(ids) > 2:
+              raise SystemExit('retry request is capped at two vacancies')
+          for vacancy_id in ids:
+              path = Path('vacancy_state/records') / f'{vacancy_id}.json'
+              if not path.exists():
+                  raise SystemExit(f'canonical vacancy missing: {vacancy_id}')
+              record = read(path, {})
+              if record.get('jd_generation_eligible') is not True or record.get('jd_fidelity') not in {'full', 'partial'}:
+                  raise SystemExit(f'vacancy is not generation eligible: {vacancy_id}')
+
+          decision = read('generation_state/decision_evidence.json', {})
+          explicit = any(
+              row.get('manual_request_id') == request_id
+              for row in (decision.get('spend_attribution') or {}).values()
+              if isinstance(row, dict)
+          ) or any(
+              row.get('manual_request_id') == request_id
+              for row in (decision.get('runs') or {}).values()
+              if isinstance(row, dict)
+          )
+
+          ledger = read('generation_state/cost_ledger.json', {})
+          matching_batches = {
+              str(row.get('run_id'))
+              for row in (ledger.get('runs') or {}).values()
+              if isinstance(row, dict)
+              and str(row.get('run_id') or '').startswith('manual-')
+              and str(row.get('source_commit') or '') == origin_commit
+              and int(row.get('event_count') or 0) > 0
+          }
+          observed_vacancies = sorted({
+              str(event.get('vacancy_id'))
+              for event in (ledger.get('events') or {}).values()
+              if isinstance(event, dict)
+              and str(event.get('batch_run_id') or '') in matching_batches
+              and event.get('vacancy_id')
+          })
+          prior_paid_evidence = bool(matching_batches)
+          skip = explicit or prior_paid_evidence
+
+          context = {
+              'request_id': request_id,
+              'origin_commit': origin_commit,
+              'vacancy_ids': ids,
+              'prior_explicit_attribution': explicit,
+              'prior_paid_evidence': prior_paid_evidence,
+              'prior_batch_run_ids': sorted(matching_batches),
+              'prior_observed_vacancy_ids': observed_vacancies,
+          }
+          Path('/tmp/manual-retry-context.json').write_text(json.dumps(context, indent=2) + '\n', encoding='utf-8')
+          ingest = {
+              'schema_version': 1,
+              'run_id': request_id,
+              'reindexed_vacancy_ids': ids,
+              'manual_request_id': request_id,
+              'manual_request_reason': request.get('reason'),
+          }
+          Path('/tmp/manual-ingest.json').write_text(json.dumps(ingest, indent=2) + '\n', encoding='utf-8')
+          env = Path(os.environ['GITHUB_ENV'])
+          with env.open('a', encoding='utf-8') as fh:
+              fh.write(f'REQUEST_ID={request_id}\n')
+              fh.write(f'ORIGIN_COMMIT={origin_commit}\n')
+              fh.write(f'SKIP_GENERATION={str(skip).lower()}\n')
+              fh.write(f'MAX_PER_CV={float(request.get("max_per_cv_generation_cost_usd", 1.0))}\n')
+              fh.write(f'MAX_BATCH={float(request.get("max_batch_generation_cost_usd", 2.0))}\n')
+          print('idempotency_check=', json.dumps(context, sort_keys=True), 'skip=', skip)
+          PY
+
+      - name: Persist observable RUNNING or SKIPPED receipt before paid calls
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+          context = json.loads(Path('/tmp/manual-retry-context.json').read_text(encoding='utf-8'))
+          path = Path('generation_state/manual_request_receipts.json')
+          state = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {'schema_version': 1, 'requests': {}}
+          skip = os.environ.get('SKIP_GENERATION') == 'true'
+          state.setdefault('requests', {})[context['request_id']] = {
+              **context,
+              'workflow_run_id': os.environ['GITHUB_RUN_ID'],
+              'trigger_commit': os.environ['GITHUB_SHA'],
+              'status': 'SKIPPED_PRIOR_PAID_EVIDENCE' if skip else 'RUNNING',
+              'updated_at': datetime.now(timezone.utc).isoformat(),
+          }
+          path.write_text(json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/manual_request_receipts.json
+          git commit -m "chore: receipt ${REQUEST_ID} run ${GITHUB_RUN_ID}"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Install Chromium for physical CV validation
+        if: env.SKIP_GENERATION != 'true'
+        run: python -m playwright install --with-deps chromium
+
+      - name: Freeze historical baseline before paid calls
+        if: env.SKIP_GENERATION != 'true'
+        run: >-
+          python -m cv_observability.cost_ledger baseline
+          --manifest generation_state/manifest.json
+          --recovered-metrics generation_state/recovered_metrics.json
+          --ledger generation_state/cost_ledger.json
+          --source-commit ${{ github.sha }}
+
+      - name: Generate only explicitly requested CVs
+        id: generate
+        if: env.SKIP_GENERATION != 'true'
+        continue-on-error: true
+        run: >-
+          python -m cv_auto
+          --ingest-report /tmp/manual-ingest.json
+          --vacancy-state vacancy_state
+          --evidence-state rag_state
+          --generation-state generation_state
+          --outputs outputs/manual
+          --run-id manual-${{ github.run_id }}
+          --source-commit ${{ github.sha }}
+          --retrieval-mode hybrid-rerank
+          --max-vacancies-per-run 2
+          --max-estimated-cost-usd "${MAX_PER_CV}"
+          --max-batch-estimated-cost-usd "${MAX_BATCH}"
+          --min-batch-remaining-usd 0.25
+          --skip-stale-logic
+          --skip-deferred-without-candidates
+
+      - name: Generate concise grounded cover letters
+        if: env.SKIP_GENERATION != 'true' && steps.generate.outcome == 'success'
+        continue-on-error: true
+        run: >-
+          python -m cv_agent.cover_letter_batch
+          --batch-report outputs/manual/_batch/manual-${{ github.run_id }}/generation_run_report.json
+          --outputs outputs/manual
+          --vacancy-state vacancy_state
+          --max-estimated-cost-usd 0.5
+
+      - name: Build Technical Modern and Harvard application bundles
+        id: bundle
+        if: env.SKIP_GENERATION != 'true' && steps.generate.outcome == 'success'
+        continue-on-error: true
+        run: >-
+          python -m cv_presentation.batch_bundle
+          --batch-report outputs/manual/_batch/manual-${{ github.run_id }}/generation_run_report.json
+          --outputs outputs/manual
+          --vacancy-state vacancy_state
+          --generation-state generation_state
+          --identity-public cv_presentation/identity.public.yaml
+          --brand-profiles-dir cv_presentation/brands
+          --max-design-cost-usd 0.5
+
+      - name: Record exact known call-level costs
+        if: always() && env.SKIP_GENERATION != 'true'
+        run: |
+          report="outputs/manual/_batch/manual-${GITHUB_RUN_ID}/generation_run_report.json"
+          if [ ! -f "$report" ]; then
+            echo "Generation report missing; no live cost can be attributed from this retry."
+            exit 0
+          fi
+          python -m cv_observability.cost_ledger record-run \
+            --generation-report "$report" \
+            --cover-report "outputs/manual/_batch/manual-${GITHUB_RUN_ID}/cover_letter_batch_report.json" \
+            --bundle-report "outputs/manual/_batch/manual-${GITHUB_RUN_ID}/application_bundle_batch_report.json" \
+            --outputs outputs/manual \
+            --ledger generation_state/cost_ledger.json \
+            --source-commit "$GITHUB_SHA" \
+            --batch-budget-usd "$MAX_BATCH"
+
+      - name: Persist marginal review evidence and explicit manual spend reason
+        if: always() && env.SKIP_GENERATION != 'true'
+        run: |
+          report="outputs/manual/_batch/manual-${GITHUB_RUN_ID}/generation_run_report.json"
+          if [ ! -f "$report" ]; then exit 0; fi
+          python -m cv_observability.decision_evidence \
+            --outputs outputs/manual \
+            --ledger generation_state/cost_ledger.json \
+            --state generation_state/decision_evidence.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from cv_observability.manual_attribution import classify_manual_request
+          context = json.loads(Path('/tmp/manual-retry-context.json').read_text(encoding='utf-8'))
+          print(json.dumps(classify_manual_request(
+              generation_report=Path(f"outputs/manual/_batch/manual-{os.environ['GITHUB_RUN_ID']}/generation_run_report.json"),
+              decision_state=Path('generation_state/decision_evidence.json'),
+              request_id=context['request_id'],
+              vacancy_ids=set(context['vacancy_ids']),
+          ), sort_keys=True))
+          PY
+
+      - name: Build public showcase snapshot
+        if: env.SKIP_GENERATION != 'true' && steps.bundle.outcome == 'success'
+        run: >-
+          python -m cv_presentation.showcase
+          --date "2026-08-24"
+          --vacancy-state vacancy_state
+          --bundle-batch-report outputs/manual/_batch/manual-${{ github.run_id }}/application_bundle_batch_report.json
+          --outputs outputs/manual
+          --site-dir _site
+
+      - name: Add newest Budget and Cost snapshot
+        if: env.SKIP_GENERATION != 'true' && steps.bundle.outcome == 'success'
+        run: >-
+          python -m cv_presentation.budget_dashboard
+          --ledger generation_state/cost_ledger.json
+          --manifest generation_state/manifest.json
+          --vacancy-state vacancy_state
+          --site-dir _site
+
+      - name: Upload requested CV artifacts
+        if: always() && env.SKIP_GENERATION != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: manual-cv-${{ github.run_id }}
+          path: outputs/manual/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload manual daily-showcase snapshot
+        if: env.SKIP_GENERATION != 'true' && steps.bundle.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-showcase
+          path: _site/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Persist terminal receipt and truthful generation state
+        if: always()
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          context = json.loads(Path('/tmp/manual-retry-context.json').read_text(encoding='utf-8'))
+          receipt_path = Path('generation_state/manual_request_receipts.json')
+          receipts = json.loads(receipt_path.read_text(encoding='utf-8')) if receipt_path.exists() else {'schema_version': 1, 'requests': {}}
+          skip = os.environ.get('SKIP_GENERATION') == 'true'
+          report_path = Path(f"outputs/manual/_batch/manual-{os.environ['GITHUB_RUN_ID']}/generation_run_report.json")
+          report = json.loads(report_path.read_text(encoding='utf-8')) if report_path.exists() else {}
+          results = [row for row in report.get('results', []) if isinstance(row, dict)]
+          statuses = {str(row.get('vacancy_id')): row.get('status') for row in results if row.get('vacancy_id')}
+          ledger_path = Path('generation_state/cost_ledger.json')
+          ledger = json.loads(ledger_path.read_text(encoding='utf-8')) if ledger_path.exists() else {}
+          batch = (ledger.get('runs') or {}).get(f"manual-{os.environ['GITHUB_RUN_ID']}", {})
+          if skip:
+              terminal = 'SKIPPED_PRIOR_PAID_EVIDENCE'
+          elif report_path.exists():
+              terminal = 'RECORDED'
+          else:
+              terminal = 'FAILED_NO_GENERATION_REPORT'
+          receipts.setdefault('requests', {})[context['request_id']] = {
+              **context,
+              'workflow_run_id': os.environ['GITHUB_RUN_ID'],
+              'trigger_commit': os.environ['GITHUB_SHA'],
+              'batch_run_id': f"manual-{os.environ['GITHUB_RUN_ID']}" if report_path.exists() else None,
+              'status': terminal,
+              'vacancy_statuses': statuses,
+              'known_spend_usd': batch.get('known_spend_usd'),
+              'generation_known_spend_usd': batch.get('generation_known_spend_usd'),
+              'call_count': batch.get('call_count'),
+              'updated_at': datetime.now(timezone.utc).isoformat(),
+          }
+          receipt_path.write_text(json.dumps(receipts, ensure_ascii=False, indent=2, sort_keys=True) + '\n', encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state
+          if git diff --cached --quiet; then
+            echo "No terminal generation-state changes to persist."
+            exit 0
+          fi
+          git commit -m "chore: finalize ${REQUEST_ID} run ${GITHUB_RUN_ID}"
+          git pull --rebase origin main
+          git push origin HEAD:main
