@@ -34,7 +34,7 @@
   },
   "pipeline_version": 5,
   "reindexed_vacancy_ids": [],
-  "run_id": "2fc60d1aae84f15daa97c835b8082d33067cd645-noop",
+  "run_id": "2fc60d1aae84f15daa97c835b8082d33067cd645",
   "schema_version": 1,
   "source_commit": "2fc60d1aae84f15daa97c835b8082d33067cd645",
   "source_counts": {
