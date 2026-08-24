@@ -5,7 +5,13 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from cv_agent.model_policy import MAX_REVIEW_ITERATIONS, model_ids, policy_for_iteration
+from cv_agent.model_policy import (
+    MAX_REVIEW_ITERATIONS,
+    PRODUCTION_MAX_REVIEW_ITERATIONS,
+    model_ids,
+    policy_for_iteration,
+    production_policy_for_iteration,
+)
 from cv_agent.schemas import CVDocument, CVEvidenceLine, CVExperienceItem, HeadhunterReview, ReviewScores, StrategyOutput
 from cv_agent.workflow import run_agentic_cv
 
@@ -136,14 +142,26 @@ class StyleRepairClient(FakeClient):
 
 
 class ModelPolicyTests(unittest.TestCase):
-    def test_exact_five_iteration_escalation(self) -> None:
+    def test_legacy_five_iteration_escalation_remains_for_ab(self) -> None:
         self.assertEqual(MAX_REVIEW_ITERATIONS, 5)
         self.assertEqual([policy_for_iteration(i).tier for i in range(1, 6)], ["economy", "economy", "balanced", "balanced", "premium"])
         self.assertTrue(policy_for_iteration(5).premium)
 
+    def test_production_policy_is_three_reviews_without_premium(self) -> None:
+        self.assertEqual(PRODUCTION_MAX_REVIEW_ITERATIONS, 3)
+        first = production_policy_for_iteration(1)
+        self.assertEqual(first.reviewer_model, model_ids()["economy"])
+        self.assertEqual(first.reviser_model, model_ids()["balanced"])
+        self.assertFalse(first.premium)
+        for iteration in (2, 3):
+            policy = production_policy_for_iteration(iteration)
+            self.assertEqual(policy.reviewer_model, model_ids()["balanced"])
+            self.assertEqual(policy.reviser_model, model_ids()["balanced"])
+            self.assertFalse(policy.premium)
+
 
 class WorkflowTests(unittest.IsolatedAsyncioTestCase):
-    async def test_early_pass_avoids_premium_model(self) -> None:
+    async def test_early_pass_avoids_balanced_revision(self) -> None:
         client = FakeClient([make_review(97, "PASS")])
         with tempfile.TemporaryDirectory() as temp, patch("cv_agent.workflow.assemble_application_context", return_value=context_fixture()), patch("cv_agent.workflow.load_evidence_catalog", return_value=catalog_fixture()):
             report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=Path(temp), run_id="early-pass")
@@ -152,9 +170,14 @@ class WorkflowTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(report["iterations_executed"], 1)
             self.assertEqual(report["best_review_iteration"], 1)
             self.assertFalse(report["premium_model_used"])
+            self.assertEqual(report["review_stop_reason"], "quality_gate_passed")
             self.assertEqual(report["final_validation"]["editorial"]["status"], "PASS")
             self.assertFalse(report["style_preflight"]["attempted"])
-            self.assertFalse(any(call["name"] == "cv_style_reviser" for call in client.calls))
+            reviewers = [call for call in client.calls if call["name"].startswith("senior_headhunter_")]
+            revisers = [call for call in client.calls if call["name"].startswith("cv_reviser_")]
+            self.assertEqual(len(reviewers), 1)
+            self.assertEqual(len(revisers), 0)
+            self.assertEqual(reviewers[0]["model"], model_ids()["economy"])
 
     async def test_style_violation_is_repaired_before_headhunter(self) -> None:
         client = StyleRepairClient([make_review(97, "PASS")])
@@ -170,24 +193,45 @@ class WorkflowTests(unittest.IsolatedAsyncioTestCase):
             self.assertTrue((output / "style_preflight.json").exists())
             self.assertTrue((output / "drafts" / "cv_style_repaired.json").exists())
 
-    async def test_fifth_failure_returns_best_cv_with_explicit_note(self) -> None:
-        client = FakeClient([make_review(70), make_review(91), make_review(86), make_review(89), make_review(88)])
+    async def test_stagnant_terra_revision_stops_after_two_reviews(self) -> None:
+        client = FakeClient([make_review(88), make_review(88)])
         with tempfile.TemporaryDirectory() as temp, patch("cv_agent.workflow.assemble_application_context", return_value=context_fixture()), patch("cv_agent.workflow.load_evidence_catalog", return_value=catalog_fixture()):
             output = Path(temp)
-            report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=output, run_id="five-fail")
+            report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=output, run_id="stagnant")
             self.assertEqual(report["status"], "COMPLETED_BELOW_TARGET")
             self.assertFalse(report["quality_target_reached"])
-            self.assertEqual(report["iterations_executed"], 5)
-            self.assertEqual(report["best_review_iteration"], 2)
-            self.assertEqual(report["final_review"]["overall_score"], 91)
-            self.assertTrue(report["premium_model_used"])
-            self.assertIn("Maximum of 5", report["quality_note"])
-            self.assertTrue((output / "cv_final.md").exists())
+            self.assertEqual(report["iterations_executed"], 2)
+            self.assertEqual(report["best_review_iteration"], 1)
+            self.assertEqual(report["review_stop_reason"], "stagnant_after_first_terra_revision")
+            self.assertFalse(report["premium_model_used"])
             reviewers = [call for call in client.calls if call["name"].startswith("senior_headhunter_")]
             revisers = [call for call in client.calls if call["name"].startswith("cv_reviser_")]
-            self.assertEqual(len(reviewers), 5)
-            self.assertEqual(len(revisers), 4)
-            self.assertEqual(reviewers[-1]["model"], policy_for_iteration(5).reviewer_model)
+            self.assertEqual(len(reviewers), 2)
+            self.assertEqual(len(revisers), 1)
+            self.assertEqual(reviewers[0]["model"], model_ids()["economy"])
+            self.assertEqual(revisers[0]["model"], model_ids()["balanced"])
+            self.assertEqual(reviewers[1]["model"], model_ids()["balanced"])
+            self.assertIn("no material", report["quality_note"])
+
+    async def test_material_progress_allows_third_review_then_stops(self) -> None:
+        client = FakeClient([make_review(82), make_review(86), make_review(85)])
+        with tempfile.TemporaryDirectory() as temp, patch("cv_agent.workflow.assemble_application_context", return_value=context_fixture()), patch("cv_agent.workflow.load_evidence_catalog", return_value=catalog_fixture()):
+            output = Path(temp)
+            report = await run_agentic_cv(vacancy_id="vac-test", client=client, output_dir=output, run_id="progress")
+            self.assertEqual(report["status"], "COMPLETED_BELOW_TARGET")
+            self.assertEqual(report["iterations_executed"], 3)
+            self.assertEqual(report["best_review_iteration"], 2)
+            self.assertEqual(report["final_review"]["overall_score"], 86)
+            self.assertEqual(report["review_stop_reason"], "max_review_budget_reached")
+            self.assertFalse(report["premium_model_used"])
+            self.assertEqual(report["max_review_iterations"], 3)
+            reviewers = [call for call in client.calls if call["name"].startswith("senior_headhunter_")]
+            revisers = [call for call in client.calls if call["name"].startswith("cv_reviser_")]
+            self.assertEqual(len(reviewers), 3)
+            self.assertEqual(len(revisers), 2)
+            self.assertEqual(reviewers[0]["model"], model_ids()["economy"])
+            self.assertTrue(all(call["model"] == model_ids()["balanced"] for call in reviewers[1:] + revisers))
+            self.assertIn("Maximum production budget of 3", report["quality_note"])
 
 
 if __name__ == "__main__":
