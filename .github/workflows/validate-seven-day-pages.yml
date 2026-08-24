@@ -5,7 +5,11 @@ on:
     paths:
       - "cv_presentation/history_merge.py"
       - "cv_presentation/manual_send_status.py"
+      - "cv_observability/manual_attribution.py"
+      - "generation_requests/**/*.json"
       - "tests/test_cv_history_merge.py"
+      - "tests/test_manual_attribution.py"
+      - ".github/workflows/manual-cv-generation.yml"
       - ".github/workflows/seven-day-pages.yml"
       - ".github/workflows/validate-seven-day-pages.yml"
   push:
@@ -13,7 +17,11 @@ on:
     paths:
       - "cv_presentation/history_merge.py"
       - "cv_presentation/manual_send_status.py"
+      - "cv_observability/manual_attribution.py"
+      - "generation_requests/**/*.json"
       - "tests/test_cv_history_merge.py"
+      - "tests/test_manual_attribution.py"
+      - ".github/workflows/manual-cv-generation.yml"
       - ".github/workflows/seven-day-pages.yml"
       - ".github/workflows/validate-seven-day-pages.yml"
 
@@ -30,5 +38,9 @@ jobs:
           python-version: "3.12"
       - name: Install project
         run: python -m pip install --disable-pip-version-check -e .
-      - name: Test seven-day history and local Status control
-        run: python -m unittest tests.test_cv_history_merge -v
+      - name: Test seven-day history, local Status and manual spend attribution
+        run: >-
+          python -m unittest
+          tests.test_cv_history_merge
+          tests.test_manual_attribution
+          -v
