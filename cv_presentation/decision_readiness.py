@@ -82,8 +82,9 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
     final_outcomes = _num(applications.get("final_applied_outcome_coverage_pct")) or 0.0
     provider_reconciled = bool(provider.get("fully_reconciled"))
     scope_run_count = int(scope.get("run_count") or 0)
+    paid_cohort_vacancy_count = int(applications.get("cohort_vacancy_count") or 0)
 
-    if scope_run_count == 0:
+    if paid_cohort_vacancy_count == 0:
         status = "NO_DECISION_GRADE_COHORT_YET"
     elif telemetry < 100.0:
         status = "PARTIAL_COST_ATTRIBUTION"
@@ -103,14 +104,16 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
     old_status = str(readiness.get("status") or "")
     readiness["status"] = status
     readiness["decision_grade_scope_run_count"] = scope_run_count
+    readiness["paid_cohort_vacancy_count"] = paid_cohort_vacancy_count
     readiness["marginal_review_spend_coverage_pct"] = review_coverage
     readiness["review_loop_known_spend_usd"] = round(review_loop_total, 8)
     readiness["review_loop_accounted_spend_usd"] = round(accounted_review, 8)
     readiness["completely_informed"] = status == "DECISION_GRADE_RECONCILED"
     readiness["complete_decision_rule"] = (
-        "DECISION_GRADE_RECONCILED requires at least one fully observable decision-grade run, 100% ledger call-cost attribution, "
-        "100% classified spend origin, 100% accounted review-loop spend, 100% paid-vacancy application disposition, "
-        "100% final outcomes for confirmed applications, and provider reconciliation from a CV_fit-dedicated billing scope."
+        "DECISION_GRADE_RECONCILED requires at least one paid vacancy in a fully observable decision-grade run, "
+        "100% ledger call-cost attribution, 100% classified spend origin, 100% accounted review-loop spend, "
+        "100% paid-vacancy application disposition, 100% final outcomes for confirmed applications, and provider "
+        "reconciliation from a CV_fit-dedicated billing scope."
     )
     _write(public_payload_path, payload)
 
@@ -122,9 +125,10 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
         if marker in source and "decision-readiness-completeness" not in source:
             notice = (
                 '<div id="decision-readiness-completeness" class="notice"><strong>Completeness gate:</strong> '
-                f'cohort {scope_run_count} run(s) · cost attribution {telemetry:.1f}% · spend origin {spend_reason:.1f}% · '
-                f'review attribution {review_coverage:.1f}% · application dispositions {disposition:.1f}% · '
-                f'final outcomes {final_outcomes:.1f}% · provider reconciliation {"complete" if provider_reconciled else "pending"}. '
+                f'paid cohort {paid_cohort_vacancy_count} vacancy(s) in {scope_run_count} observable run(s) · '
+                f'cost attribution {telemetry:.1f}% · spend origin {spend_reason:.1f}% · review attribution {review_coverage:.1f}% · '
+                f'application dispositions {disposition:.1f}% · final outcomes {final_outcomes:.1f}% · '
+                f'provider reconciliation {"complete" if provider_reconciled else "pending"}. '
                 'The green decision-grade state is unavailable until every required dimension is complete.</div>'
             )
             source = source.replace(marker, marker + notice, 1)
@@ -134,6 +138,7 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
         "status": status,
         "completely_informed": status == "DECISION_GRADE_RECONCILED",
         "decision_grade_scope_run_count": scope_run_count,
+        "paid_cohort_vacancy_count": paid_cohort_vacancy_count,
         "ledger_call_cost_coverage_pct": telemetry,
         "spend_reason_classified_pct": spend_reason,
         "marginal_review_spend_coverage_pct": review_coverage,
