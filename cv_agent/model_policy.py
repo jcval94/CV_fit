@@ -6,7 +6,10 @@ from dataclasses import asdict, dataclass
 from cv_agent.openai_provider import validate_openai_model_id
 
 
+# Legacy five-round policy is retained for the blind A/B harness and historical
+# comparisons. Production uses the bounded adaptive policy below.
 MAX_REVIEW_ITERATIONS = 5
+PRODUCTION_MAX_REVIEW_ITERATIONS = 3
 
 
 @dataclass(frozen=True)
@@ -34,6 +37,7 @@ def model_ids() -> dict[str, str]:
 
 
 def policy_for_iteration(iteration: int) -> IterationModelPolicy:
+    """Historical five-round baseline kept for A/B comparisons only."""
     if not 1 <= iteration <= MAX_REVIEW_ITERATIONS:
         raise ValueError(f"iteration must be between 1 and {MAX_REVIEW_ITERATIONS}")
     models = model_ids()
@@ -59,6 +63,40 @@ def policy_for_iteration(iteration: int) -> IterationModelPolicy:
     )
 
 
+def production_policy_for_iteration(iteration: int) -> IterationModelPolicy:
+    """Cost-first production review policy.
+
+    The Writer is already balanced/Terra. A cheap Luna review therefore acts as
+    the first screening step. If the draft needs work, the first paid revision
+    escalates immediately to Terra. At most two Terra revision/review cycles are
+    allowed after that initial screen. Sol is deliberately absent from routine
+    production because historical evidence showed no selected-best fifth-round
+    candidate in the observed completed runs.
+    """
+    if not 1 <= iteration <= PRODUCTION_MAX_REVIEW_ITERATIONS:
+        raise ValueError(
+            f"production iteration must be between 1 and {PRODUCTION_MAX_REVIEW_ITERATIONS}"
+        )
+    models = model_ids()
+    if iteration == 1:
+        return IterationModelPolicy(
+            iteration=iteration,
+            tier="economy_screen_balanced_revise",
+            reviewer_model=models["economy"],
+            reviser_model=models["balanced"],
+            max_output_tokens=5000,
+            premium=False,
+        )
+    return IterationModelPolicy(
+        iteration=iteration,
+        tier="balanced",
+        reviewer_model=models["balanced"],
+        reviser_model=models["balanced"],
+        max_output_tokens=6000,
+        premium=False,
+    )
+
+
 def cost_optimized_policy_for_iteration(
     iteration: int,
     *,
@@ -66,9 +104,9 @@ def cost_optimized_policy_for_iteration(
     previous_blocking_issues: int | None = None,
     previous_validators_pass: bool = False,
 ) -> IterationModelPolicy:
-    """Conservative cost policy used only by the A/B cost experiment.
+    """Conservative cost policy used only by the legacy A/B experiment.
 
-    Iterations 1-4 are identical to the production baseline. Iteration 5 keeps
+    Iterations 1-4 are identical to the historical baseline. Iteration 5 keeps
     the premium model only when the previous candidate is genuinely close to
     passing and all deterministic validators already pass. Otherwise the fifth
     review stays on the balanced tier; a premium model cannot repair missing
@@ -101,3 +139,10 @@ def cost_optimized_policy_for_iteration(
 
 def escalation_plan() -> list[IterationModelPolicy]:
     return [policy_for_iteration(iteration) for iteration in range(1, MAX_REVIEW_ITERATIONS + 1)]
+
+
+def production_escalation_plan() -> list[IterationModelPolicy]:
+    return [
+        production_policy_for_iteration(iteration)
+        for iteration in range(1, PRODUCTION_MAX_REVIEW_ITERATIONS + 1)
+    ]
