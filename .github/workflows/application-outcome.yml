@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       status:
-        description: "Explicit observed application outcome"
+        description: "Explicit outcome you personally confirmed"
         required: true
         type: choice
         options:
@@ -20,18 +20,9 @@ on:
           - WITHDRAWN
           - ACCEPTED
       occurred_at:
-        description: "Optional ISO-8601 event time with timezone; blank records current time as fallback"
+        description: "Optional ISO-8601 event time with timezone; blank records workflow time as fallback"
         required: false
         type: string
-      evidence_kind:
-        description: "How this status is known"
-        required: true
-        default: USER_CONFIRMED
-        type: choice
-        options:
-          - USER_CONFIRMED
-          - EXTERNAL_RECORD
-          - SYSTEM_OBSERVED
 
 permissions:
   contents: write
@@ -53,12 +44,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Record append-only outcome
+      - name: Record append-only user-confirmed outcome
         env:
           VACANCY_ID: ${{ inputs.vacancy_id }}
           STATUS: ${{ inputs.status }}
           OCCURRED_AT: ${{ inputs.occurred_at }}
-          EVIDENCE_KIND: ${{ inputs.evidence_kind }}
           RECORDED_BY: ${{ github.actor }}
         run: |
           set -euo pipefail
@@ -67,7 +57,7 @@ jobs:
             --vacancy-state vacancy_state
             --vacancy-id "$VACANCY_ID"
             --status "$STATUS"
-            --evidence-kind "$EVIDENCE_KIND"
+            --evidence-kind USER_CONFIRMED
             --recorded-by "$RECORDED_BY"
           )
           if [ -n "${OCCURRED_AT:-}" ]; then
