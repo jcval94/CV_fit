@@ -29,6 +29,22 @@ def _pct(part: float, total: float) -> float:
     return round(min(max(part / total * 100.0, 0.0), 100.0), 2)
 
 
+def _scoped_review_spend(payload: dict[str, Any], decision: dict[str, Any]) -> float:
+    scope = decision.get("scope") if isinstance(decision.get("scope"), dict) else {}
+    run_ids = {str(value) for value in scope.get("run_ids", []) if value}
+    if not run_ids and int(scope.get("run_count") or 0) == 0:
+        return 0.0
+    if run_ids:
+        return round(sum(
+            _num(event.get("cost_usd")) or 0.0
+            for event in payload.get("events", [])
+            if isinstance(event, dict)
+            and str(event.get("batch_run_id") or "") in run_ids
+            and str(event.get("agent") or "").startswith(("senior_headhunter_", "cv_reviser_"))
+        ), 8)
+    return _num((payload.get("cost_concentrations") or {}).get("review_loop_spend_usd")) or 0.0
+
+
 def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = None) -> dict[str, Any]:
     payload = _read(public_payload_path)
     decision = payload.get("decision_grade")
@@ -39,10 +55,11 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
     reasons = decision.get("spend_reasons")
     marginal = decision.get("marginal_reviews")
     provider = decision.get("provider_reconciliation")
+    scope = decision.get("scope") if isinstance(decision.get("scope"), dict) else {}
     if not all(isinstance(x, dict) for x in (readiness, applications, reasons, marginal, provider)):
         raise ValueError("decision_grade payload is missing required evidence sections")
 
-    review_loop_total = _num((payload.get("cost_concentrations") or {}).get("review_loop_spend_usd")) or 0.0
+    review_loop_total = _scoped_review_spend(payload, decision)
     accounted_review = sum(
         _num(marginal.get(key)) or 0.0
         for key in (
@@ -54,7 +71,6 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
         )
     )
     review_coverage = _pct(accounted_review, review_loop_total)
-    # Never report >100% due to overlap/rounding. A material over-attribution is a data-quality failure.
     if review_loop_total > 0 and accounted_review > review_loop_total + 0.000001:
         raise ValueError(
             f"marginal-review evidence over-attributes spend: accounted={accounted_review:.8f}, ledger={review_loop_total:.8f}"
@@ -65,8 +81,11 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
     disposition = _num(applications.get("application_disposition_coverage_pct")) or 0.0
     final_outcomes = _num(applications.get("final_applied_outcome_coverage_pct")) or 0.0
     provider_reconciled = bool(provider.get("fully_reconciled"))
+    scope_run_count = int(scope.get("run_count") or 0)
 
-    if telemetry < 100.0:
+    if scope_run_count == 0:
+        status = "NO_DECISION_GRADE_COHORT_YET"
+    elif telemetry < 100.0:
         status = "PARTIAL_COST_ATTRIBUTION"
     elif spend_reason < 100.0:
         status = "PARTIAL_SPEND_ORIGIN"
@@ -83,14 +102,15 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
 
     old_status = str(readiness.get("status") or "")
     readiness["status"] = status
+    readiness["decision_grade_scope_run_count"] = scope_run_count
     readiness["marginal_review_spend_coverage_pct"] = review_coverage
     readiness["review_loop_known_spend_usd"] = round(review_loop_total, 8)
     readiness["review_loop_accounted_spend_usd"] = round(accounted_review, 8)
     readiness["completely_informed"] = status == "DECISION_GRADE_RECONCILED"
     readiness["complete_decision_rule"] = (
-        "DECISION_GRADE_RECONCILED requires 100% ledger call-cost attribution, 100% classified spend origin, "
-        "100% accounted review-loop spend, 100% paid-vacancy application disposition, 100% final outcomes for "
-        "confirmed applications, and provider reconciliation from a CV_fit-dedicated billing scope."
+        "DECISION_GRADE_RECONCILED requires at least one fully observable decision-grade run, 100% ledger call-cost attribution, "
+        "100% classified spend origin, 100% accounted review-loop spend, 100% paid-vacancy application disposition, "
+        "100% final outcomes for confirmed applications, and provider reconciliation from a CV_fit-dedicated billing scope."
     )
     _write(public_payload_path, payload)
 
@@ -102,9 +122,9 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
         if marker in source and "decision-readiness-completeness" not in source:
             notice = (
                 '<div id="decision-readiness-completeness" class="notice"><strong>Completeness gate:</strong> '
-                f'cost attribution {telemetry:.1f}% · spend origin {spend_reason:.1f}% · review attribution {review_coverage:.1f}% · '
-                f'application dispositions {disposition:.1f}% · final outcomes {final_outcomes:.1f}% · '
-                f'provider reconciliation {"complete" if provider_reconciled else "pending"}. '
+                f'cohort {scope_run_count} run(s) · cost attribution {telemetry:.1f}% · spend origin {spend_reason:.1f}% · '
+                f'review attribution {review_coverage:.1f}% · application dispositions {disposition:.1f}% · '
+                f'final outcomes {final_outcomes:.1f}% · provider reconciliation {"complete" if provider_reconciled else "pending"}. '
                 'The green decision-grade state is unavailable until every required dimension is complete.</div>'
             )
             source = source.replace(marker, marker + notice, 1)
@@ -113,6 +133,7 @@ def enforce_readiness(*, public_payload_path: Path, html_path: Path | None = Non
     return {
         "status": status,
         "completely_informed": status == "DECISION_GRADE_RECONCILED",
+        "decision_grade_scope_run_count": scope_run_count,
         "ledger_call_cost_coverage_pct": telemetry,
         "spend_reason_classified_pct": spend_reason,
         "marginal_review_spend_coverage_pct": review_coverage,
