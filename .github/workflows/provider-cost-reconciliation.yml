@@ -1,0 +1,82 @@
+name: Record provider cost statement
+
+on:
+  workflow_dispatch:
+    inputs:
+      period_start:
+        description: "Inclusive ISO-8601 UTC/offset start of billing period"
+        required: true
+        type: string
+      period_end:
+        description: "Exclusive ISO-8601 UTC/offset end of billing period"
+        required: true
+        type: string
+      actual_cost_usd:
+        description: "Actual provider usage/billing amount in USD for this period"
+        required: true
+        type: string
+      dedicated_cvfit_scope:
+        description: "I confirm this amount contains only CV_fit provider usage"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cvfit-provider-reconciliation
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Reject mixed provider-account totals
+        env:
+          DEDICATED_CVFIT_SCOPE: ${{ inputs.dedicated_cvfit_scope }}
+        run: |
+          set -euo pipefail
+          if [ "${DEDICATED_CVFIT_SCOPE,,}" != "true" ]; then
+            echo "Cannot reconcile a mixed provider-account amount to CV_fit."
+            echo "Use telemetry estimates until a CV_fit-dedicated billing/usage scope is available."
+            exit 2
+          fi
+
+      - name: Record dedicated provider statement without storing invoice identifiers
+        env:
+          PERIOD_START: ${{ inputs.period_start }}
+          PERIOD_END: ${{ inputs.period_end }}
+          ACTUAL_COST_USD: ${{ inputs.actual_cost_usd }}
+          RECORDED_BY: ${{ github.actor }}
+        run: >-
+          python -m cv_observability.provider_reconciliation
+          --state generation_state/provider_reconciliation.json
+          --period-start "$PERIOD_START"
+          --period-end "$PERIOD_END"
+          --actual-cost-usd "$ACTUAL_COST_USD"
+          --scope-kind CV_FIT_DEDICATED_SCOPE
+          --recorded-by "$RECORDED_BY"
+
+      - name: Persist reconciliation evidence
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/provider_reconciliation.json
+          if git diff --cached --quiet; then
+            echo "Provider statement already existed; no state change."
+            exit 0
+          fi
+          git commit -m "chore: record provider cost reconciliation period"
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -1,0 +1,61 @@
+name: Validate decision-grade Budget and Cost
+
+on:
+  pull_request:
+    paths:
+      - "cv_observability/application_state.py"
+      - "cv_observability/provider_reconciliation.py"
+      - "cv_observability/decision_evidence.py"
+      - "cv_observability/decision_truth.py"
+      - "cv_presentation/decision_dashboard.py"
+      - "cv_presentation/decision_scope.py"
+      - "cv_presentation/decision_readiness.py"
+      - "cv_auto/__main__.py"
+      - "generation_state/application_state.json"
+      - "generation_state/provider_reconciliation.json"
+      - "generation_state/decision_evidence.json"
+      - "tests/test_observability.py"
+      - "tests/test_cost_ledger.py"
+      - "tests/test_budget_dashboard.py"
+      - "tests/test_decision_readiness.py"
+      - ".github/workflows/application-outcome.yml"
+      - ".github/workflows/provider-cost-reconciliation.yml"
+      - ".github/workflows/decision-grade-budget-pages.yml"
+      - ".github/workflows/decision-grade-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "cv_observability/application_state.py"
+      - "cv_observability/provider_reconciliation.py"
+      - "cv_observability/decision_evidence.py"
+      - "cv_observability/decision_truth.py"
+      - "cv_presentation/decision_dashboard.py"
+      - "cv_presentation/decision_scope.py"
+      - "cv_presentation/decision_readiness.py"
+      - "tests/test_observability.py"
+      - "tests/test_cost_ledger.py"
+      - "tests/test_budget_dashboard.py"
+      - "tests/test_decision_readiness.py"
+      - ".github/workflows/decision-grade-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  truthful-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install project
+        run: python -m pip install --disable-pip-version-check -e .
+      - name: Run decision-grade cost and outcome tests
+        run: >-
+          python -m unittest
+          tests.test_observability
+          tests.test_cost_ledger
+          tests.test_budget_dashboard
+          tests.test_decision_readiness
+          -v

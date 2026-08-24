@@ -1,0 +1,80 @@
+name: Record application outcome
+
+on:
+  workflow_dispatch:
+    inputs:
+      vacancy_id:
+        description: "Canonical vacancy id (for example vac-...)"
+        required: true
+        type: string
+      status:
+        description: "Explicit outcome you personally confirmed"
+        required: true
+        type: choice
+        options:
+          - NOT_APPLIED
+          - APPLIED
+          - INTERVIEW
+          - REJECTED
+          - OFFER
+          - WITHDRAWN
+          - ACCEPTED
+      occurred_at:
+        description: "Optional ISO-8601 event time with timezone; blank records workflow time as fallback"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cvfit-application-outcome
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Record append-only user-confirmed outcome
+        env:
+          VACANCY_ID: ${{ inputs.vacancy_id }}
+          STATUS: ${{ inputs.status }}
+          OCCURRED_AT: ${{ inputs.occurred_at }}
+          RECORDED_BY: ${{ github.actor }}
+        run: |
+          set -euo pipefail
+          args=(
+            --state generation_state/application_state.json
+            --vacancy-state vacancy_state
+            --vacancy-id "$VACANCY_ID"
+            --status "$STATUS"
+            --evidence-kind USER_CONFIRMED
+            --recorded-by "$RECORDED_BY"
+          )
+          if [ -n "${OCCURRED_AT:-}" ]; then
+            args+=(--occurred-at "$OCCURRED_AT")
+          fi
+          python -m cv_observability.application_state "${args[@]}"
+
+      - name: Persist outcome evidence
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generation_state/application_state.json
+          if git diff --cached --quiet; then
+            echo "Outcome event already existed; no state change."
+            exit 0
+          fi
+          git commit -m "chore: record application outcome ${{ inputs.status }} for ${{ inputs.vacancy_id }}"
+          git pull --rebase origin main
+          git push origin HEAD:main

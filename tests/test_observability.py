@@ -6,8 +6,11 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from cv_observability.application_state import record_application_event, summarize_entry
+from cv_observability.decision_truth import validate_decision_sources
 from cv_observability.logging import EventLogger, sanitize
 from cv_observability.pipeline_summary import build_summary, render_markdown
+from cv_observability.provider_reconciliation import record_provider_statement
 
 
 class ObservabilityTests(unittest.TestCase):
@@ -167,6 +170,120 @@ class ObservabilityTests(unittest.TestCase):
             self.assertEqual(row["generation_cost_usd"], 0.0)
             self.assertEqual(row["pipeline_cost_usd"], 0.0)
             self.assertFalse(row["cost_complete"])
+
+    def test_application_state_is_explicit_append_only_and_never_stores_raw_evidence_ref(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            vacancy_state = root / "vacancy_state"
+            state_path = root / "generation_state" / "application_state.json"
+            record_path = vacancy_state / "records" / "vac-1.json"
+            record_path.parent.mkdir(parents=True)
+            record_path.write_text("{}", encoding="utf-8")
+
+            first = record_application_event(
+                state_path=state_path,
+                vacancy_state=vacancy_state,
+                vacancy_id="vac-1",
+                status="APPLIED",
+                occurred_at="2026-08-24T12:00:00-06:00",
+                evidence_kind="EXTERNAL_RECORD",
+                evidence_ref="private-email-message-id-123",
+                recorded_by="tester",
+            )
+            duplicate = record_application_event(
+                state_path=state_path,
+                vacancy_state=vacancy_state,
+                vacancy_id="vac-1",
+                status="APPLIED",
+                occurred_at="2026-08-24T12:00:00-06:00",
+                evidence_kind="EXTERNAL_RECORD",
+                evidence_ref="private-email-message-id-123",
+                recorded_by="tester",
+            )
+            record_application_event(
+                state_path=state_path,
+                vacancy_state=vacancy_state,
+                vacancy_id="vac-1",
+                status="INTERVIEW",
+                occurred_at="2026-08-25T10:00:00-06:00",
+                evidence_kind="USER_CONFIRMED",
+                recorded_by="tester",
+            )
+            state = json.loads(state_path.read_text(encoding="utf-8"))
+            entry = state["entries"]["vac-1"]
+            self.assertEqual(first["event_id"], duplicate["event_id"])
+            self.assertEqual(len(entry["events"]), 2)
+            self.assertEqual(entry["current_status"], "INTERVIEW")
+            summary = summarize_entry(entry)
+            self.assertTrue(summary["applied"])
+            self.assertTrue(summary["interviewed"])
+            self.assertFalse(summary["terminal"])
+            persisted = state_path.read_text(encoding="utf-8")
+            self.assertNotIn("private-email-message-id-123", persisted)
+            self.assertIn("evidence_ref_sha256", persisted)
+
+    def test_missing_application_event_remains_unknown_not_not_applied(self) -> None:
+        summary = summarize_entry({})
+        self.assertIsNone(summary["current_status"])
+        self.assertFalse(summary["applied"])
+        self.assertFalse(summary["explicitly_not_applied"])
+        self.assertFalse(summary["terminal"])
+
+    def test_provider_reconciliation_is_idempotent_hashes_reference_and_requires_dedicated_scope(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "provider.json"
+            with self.assertRaisesRegex(ValueError, "dedicated to CV_fit"):
+                record_provider_statement(
+                    state_path=path,
+                    period_start="2026-08-24T00:00:00Z",
+                    period_end="2026-08-25T00:00:00Z",
+                    actual_cost_usd=1.2345,
+                    scope_kind="MIXED_PROVIDER_ACCOUNT",
+                    recorded_by="tester",
+                )
+            first = record_provider_statement(
+                state_path=path,
+                period_start="2026-08-24T00:00:00Z",
+                period_end="2026-08-25T00:00:00Z",
+                actual_cost_usd=1.2345,
+                scope_kind="CV_FIT_DEDICATED_SCOPE",
+                evidence_ref="invoice-secret-reference",
+                recorded_by="tester",
+            )
+            second = record_provider_statement(
+                state_path=path,
+                period_start="2026-08-24T00:00:00Z",
+                period_end="2026-08-25T00:00:00Z",
+                actual_cost_usd=1.2345,
+                scope_kind="CV_FIT_DEDICATED_SCOPE",
+                evidence_ref="invoice-secret-reference",
+                recorded_by="tester",
+            )
+            self.assertEqual(first["entry_id"], second["entry_id"])
+            state = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(len(state["entries"]), 1)
+            self.assertNotIn("invoice-secret-reference", path.read_text(encoding="utf-8"))
+            self.assertEqual(first["currency"], "USD")
+            self.assertEqual(first["scope_kind"], "CV_FIT_DEDICATED_SCOPE")
+
+    def test_truth_validator_fails_closed_on_mixed_provider_state(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            app = root / "application.json"
+            provider = root / "provider.json"
+            evidence = root / "decision.json"
+            app.write_text(json.dumps({"schema_version": 1, "entries": {}}), encoding="utf-8")
+            provider.write_text(json.dumps({"schema_version": 1, "entries": {"bad": {
+                "scope_kind": "MIXED_PROVIDER_ACCOUNT",
+                "source_kind": "PROVIDER_STATEMENT_USER_RECORDED",
+            }}}), encoding="utf-8")
+            evidence.write_text(json.dumps({"schema_version": 1, "spend_attribution": {}, "review_cycles": {}, "unpaired_revisions": {}}), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "only CV_FIT_DEDICATED_SCOPE"):
+                validate_decision_sources(
+                    application_state_path=app,
+                    provider_reconciliation_path=provider,
+                    decision_evidence_path=evidence,
+                )
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from cv_observability.cost_ledger import capture_legacy_baseline, record_run
+from cv_observability.decision_evidence import enrich_from_outputs
 
 
 class CostLedgerTests(unittest.TestCase):
@@ -40,7 +41,6 @@ class CostLedgerTests(unittest.TestCase):
             self.assertAlmostEqual(baseline["known_cost_usd"], 0.815)
             self.assertFalse(baseline["historical_cost_complete"])
 
-            # A later manifest edit must not move the historical boundary.
             self._write(manifest, {"entries": {"vac-1": {"cumulative_known_cost_usd": 99.0}}})
             frozen = capture_legacy_baseline(
                 manifest_path=manifest,
@@ -102,6 +102,65 @@ class CostLedgerTests(unittest.TestCase):
             persisted = json.loads(ledger.read_text(encoding="utf-8"))
             self.assertEqual(len(persisted["events"]), 4)
             self.assertEqual(len(persisted["runs"]), 1)
+
+    def test_decision_evidence_uses_candidate_plan_and_attributes_delta_only_to_observed_followup(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            outputs = root / "auto"
+            ledger = root / "cost_ledger.json"
+            state = root / "decision_evidence.json"
+            run_id = "auto-xyz"
+            vacancy_id = "vac-1"
+            vacancy_run_id = f"{run_id}-{vacancy_id}"
+            batch_dir = outputs / "_batch" / run_id
+            run_dir = outputs / vacancy_id / vacancy_run_id
+            self._write(batch_dir / "generation_run_report.json", {
+                "run_id": run_id,
+                "source_commit": "xyz",
+                "deferred_candidate_count": 0,
+                "stale_logic_included_count": 0,
+                "results": [{"vacancy_id": vacancy_id, "run_id": vacancy_run_id, "status": "COMPLETED_BELOW_TARGET"}],
+            })
+            self._write(batch_dir / "candidate_plan.json", {
+                "original_reindexed_vacancy_ids": [vacancy_id],
+                "auto_retry_vacancy_ids": [],
+            })
+            self._write(run_dir / "reviews" / "iteration_01.json", {
+                "iteration": 1,
+                "review": {"overall_score": 80, "decision": "REVISE"},
+                "validation": {"quality_gate": {"passed": False}},
+            })
+            self._write(run_dir / "reviews" / "iteration_02.json", {
+                "iteration": 2,
+                "review": {"overall_score": 86, "decision": "REVISE"},
+                "validation": {"quality_gate": {"passed": False}},
+            })
+            self._write(ledger, {
+                "schema_version": 1,
+                "events": {
+                    "h1": {"batch_run_id": run_id, "vacancy_id": vacancy_id, "stage": "generation", "agent": "senior_headhunter_1", "cost_usd": 0.10, "precision": "call_telemetry"},
+                    "r1": {"batch_run_id": run_id, "vacancy_id": vacancy_id, "stage": "generation", "agent": "cv_reviser_1", "cost_usd": 0.12, "precision": "call_telemetry"},
+                    "h2": {"batch_run_id": run_id, "vacancy_id": vacancy_id, "stage": "generation", "agent": "senior_headhunter_2", "cost_usd": 0.08, "precision": "call_telemetry"},
+                    "r2": {"batch_run_id": run_id, "vacancy_id": vacancy_id, "stage": "generation", "agent": "cv_reviser_2", "cost_usd": 0.11, "precision": "call_telemetry"},
+                },
+                "runs": {},
+            })
+
+            report = enrich_from_outputs(outputs_root=outputs, ledger_path=ledger, state_path=state)
+            self.assertEqual(report["processed_runs"], 1)
+            persisted = json.loads(state.read_text(encoding="utf-8"))
+            attribution = next(iter(persisted["spend_attribution"].values()))
+            self.assertEqual(attribution["spend_reason"], "NEW_OR_MODIFIED_VACANCY")
+            self.assertEqual(attribution["attribution_precision"], "candidate_plan_exact")
+            cycles = sorted(persisted["review_cycles"].values(), key=lambda row: row["iteration"])
+            self.assertIsNone(cycles[0]["score_delta"])
+            self.assertAlmostEqual(cycles[0]["cycle_known_cost_usd"], 0.10)
+            self.assertEqual(cycles[1]["score_delta"], 6.0)
+            self.assertAlmostEqual(cycles[1]["cycle_known_cost_usd"], 0.20)
+            self.assertAlmostEqual(cycles[1]["cost_per_positive_score_point_usd"], 0.20 / 6.0)
+            unpaired = next(iter(persisted["unpaired_revisions"].values()))
+            self.assertEqual(unpaired["agent"], "cv_reviser_2")
+            self.assertIn("no subsequent persisted headhunter score", unpaired["reason"])
 
 
 if __name__ == "__main__":
