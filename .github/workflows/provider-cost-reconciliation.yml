@@ -15,14 +15,11 @@ on:
         description: "Actual provider usage/billing amount in USD for this period"
         required: true
         type: string
-      scope_kind:
-        description: "Does this provider amount contain only CV_fit usage?"
+      dedicated_cvfit_scope:
+        description: "I confirm this amount contains only CV_fit provider usage"
         required: true
-        default: MIXED_PROVIDER_ACCOUNT
-        type: choice
-        options:
-          - MIXED_PROVIDER_ACCOUNT
-          - CV_FIT_DEDICATED_SCOPE
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -44,12 +41,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Record provider statement without storing invoice identifiers
+      - name: Reject mixed provider-account totals
+        env:
+          DEDICATED_CVFIT_SCOPE: ${{ inputs.dedicated_cvfit_scope }}
+        run: |
+          set -euo pipefail
+          if [ "${DEDICATED_CVFIT_SCOPE,,}" != "true" ]; then
+            echo "Cannot reconcile a mixed provider-account amount to CV_fit."
+            echo "Use telemetry estimates until a CV_fit-dedicated billing/usage scope is available."
+            exit 2
+          fi
+
+      - name: Record dedicated provider statement without storing invoice identifiers
         env:
           PERIOD_START: ${{ inputs.period_start }}
           PERIOD_END: ${{ inputs.period_end }}
           ACTUAL_COST_USD: ${{ inputs.actual_cost_usd }}
-          SCOPE_KIND: ${{ inputs.scope_kind }}
           RECORDED_BY: ${{ github.actor }}
         run: >-
           python -m cv_observability.provider_reconciliation
@@ -57,7 +64,7 @@ jobs:
           --period-start "$PERIOD_START"
           --period-end "$PERIOD_END"
           --actual-cost-usd "$ACTUAL_COST_USD"
-          --scope-kind "$SCOPE_KIND"
+          --scope-kind CV_FIT_DEDICATED_SCOPE
           --recorded-by "$RECORDED_BY"
 
       - name: Persist reconciliation evidence
