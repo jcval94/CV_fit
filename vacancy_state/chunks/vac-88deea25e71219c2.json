@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-88deea25e71219c2::core",
+      "chunk_type": "core",
+      "content_hash": "36701fc877fa3fcb694bf22d08297d241d4ff504fcc6e7e80db3c62786a6c957",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Role: Machine Learning/MLOps\nCompany: GBM\nCompany category: Banca\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-88deea25e71219c2"
+    },
+    {
+      "chunk_id": "vac-88deea25e71219c2::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "819e92698011672c087a60daa57b10f8c9fc059724d6b8154b254d87a9374494",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Technologies / capabilities: Machine Learning; MLOps; LLMOps; AWS; Bedrock; Docker; Kubernetes; Git; DynamoDB; Prometheus; Grafana; CloudWatch; PyTest; Embeddings; Knowledge Graphs; Agentic AI; GenAI Guardrails",
+      "vacancy_id": "vac-88deea25e71219c2"
+    },
+    {
+      "chunk_id": "vac-88deea25e71219c2::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "b329b1d26b8dd27f10512035e0893eee27efe90c4b3c3095fc718e013fe264ae",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Source fit score: 97/100\nSource fit summary: Excelente ajuste por seniority, sector financiero, ML productivo, GenAI, MLOps/LLMOps y liderazgo técnico; es especialmente atractivo si se busca evolucionar hacia arquitectura y plataforma de IA.\nSource strengths: Empresa de gestión patrimonial, activos y banca privada, por lo que aprovecha directamente experiencia en servicios financieros.; Requiere 10+ años de experiencia en Machine Learning Engineering, MLOps, Platform Engineering, DevOps o AI Infrastructure.; Responsabilidad sobre la plataforma MLOps y LLMOps de toda la organización, cubriendo entrenamiento, evaluación, despliegue, monitoreo y operación de modelos y agentes.; Fuerte componente de GenAI: Bedrock, agentes inteligentes, copilotos, embeddings, knowledge bases, knowledge graphs, guardrails y evaluación automatizada.; Incluye liderazgo técnico, decisiones de arquitectura, mentoría y coordinación de iniciativas con Data Science, AI Engineering y Producto.\nSource gaps: El rol está más orientado a plataforma e infraestructura de ML que a modelado estadístico puro.; La descripción enfatiza AWS, IaC, serverless, microservicios, seguridad y observabilidad, por lo que exige profundidad de ingeniería de plataforma.",
+      "vacancy_id": "vac-88deea25e71219c2"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-88deea25e71219c2"
+}

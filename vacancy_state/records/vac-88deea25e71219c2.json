@@ -1,0 +1,76 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "GBM",
+  "company_category": "Banca",
+  "content_hash": "f110a7e25cfd09871eb038633e66fceee4de5fdfbfcfeec934af03da2a38b4b2",
+  "description": null,
+  "fit_gaps": [
+    "El rol está más orientado a plataforma e infraestructura de ML que a modelado estadístico puro.",
+    "La descripción enfatiza AWS, IaC, serverless, microservicios, seguridad y observabilidad, por lo que exige profundidad de ingeniería de plataforma."
+  ],
+  "fit_score": 97.0,
+  "fit_strengths": [
+    "Empresa de gestión patrimonial, activos y banca privada, por lo que aprovecha directamente experiencia en servicios financieros.",
+    "Requiere 10+ años de experiencia en Machine Learning Engineering, MLOps, Platform Engineering, DevOps o AI Infrastructure.",
+    "Responsabilidad sobre la plataforma MLOps y LLMOps de toda la organización, cubriendo entrenamiento, evaluación, despliegue, monitoreo y operación de modelos y agentes.",
+    "Fuerte componente de GenAI: Bedrock, agentes inteligentes, copilotos, embeddings, knowledge bases, knowledge graphs, guardrails y evaluación automatizada.",
+    "Incluye liderazgo técnico, decisiones de arquitectura, mentoría y coordinación de iniciativas con Data Science, AI Engineering y Producto."
+  ],
+  "fit_summary": "Excelente ajuste por seniority, sector financiero, ML productivo, GenAI, MLOps/LLMOps y liderazgo técnico; es especialmente atractivo si se busca evolucionar hacia arquitectura y plataforma de IA.",
+  "identity_key": "88deea25e71219c2bbdd942125b1ced88f839becbeea53744006dba1ae9611a0",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": "2026-08-22",
+  "posted_date_raw": "2026-08-22",
+  "provenance": [
+    {
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "eb9af130dea3484cf63cd31428616e9451924ab5750112ee866d8b8c7388a73e",
+      "source_native_id": "gbm-4457051976",
+      "source_path": "Vacantes/vacantes_2026-08-24.json",
+      "source_search_date": "2026-08-24",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Machine Learning/MLOps",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Machine Learning",
+    "MLOps",
+    "LLMOps",
+    "AWS",
+    "Bedrock",
+    "Docker",
+    "Kubernetes",
+    "Git",
+    "DynamoDB",
+    "Prometheus",
+    "Grafana",
+    "CloudWatch",
+    "PyTest",
+    "Embeddings",
+    "Knowledge Graphs",
+    "Agentic AI",
+    "GenAI Guardrails"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/machine-learning-mlops-at-gbm-4457051976",
+  "vacancy_id": "vac-88deea25e71219c2",
+  "work_model": "Hybrid"
+}

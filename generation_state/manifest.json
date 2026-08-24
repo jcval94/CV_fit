@@ -87,6 +87,17 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "a528f120ef3c91a4dc70d99fdc7df3d651d85d0ebb7af612b4c907ed585a0a5c"
     },
+    "vac-08cdc2b18dc43994": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "b9d9ad23e9324b557d7652baa46a42f86d8c712f336e59f792c2c0c2a7d22605",
+      "generation_logic_version": 5,
+      "ready_to_send": false,
+      "reason": "vacancy vac-08cdc2b18dc43994 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "e762c1b4c0ca3722107bf382b883d4d41f402049f1a82ccbd4548c9b836c7a66"
+    },
     "vac-12dc570424d531ae": {
       "attempt_estimated_cost_usd": 0.3947715,
       "attempt_known_cost_usd": 0.3947715,
@@ -363,6 +374,17 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "44c60f12357f8c47760dff82215a6b6e7d4609fcf8abe20bfa12326ffd9aeb81"
     },
+    "vac-3779c9b875b7032d": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "9b9d1970077f60023c27e724c06a810672224737b9d17ca6c9cad05840a0aa2c",
+      "generation_logic_version": 5,
+      "ready_to_send": false,
+      "reason": "vacancy vac-3779c9b875b7032d is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "02a8bbc36c3698a5a66100ed3f8ebaacfee09b5bf32cb666382b597381bffaf5"
+    },
     "vac-631f0119ff49ee6b": {
       "application_bundle_file": "application_bundle_report.json",
       "attempt_known_cost_usd": 0.8674825,
@@ -448,36 +470,170 @@
       "vacancy_content_hash": "c9e574a0dd106bc182a630927719c4fba8c45d4228f058738e6ffc6d249ae032"
     },
     "vac-6d9bdccca1ff49c3": {
-      "attempt_estimated_cost_usd": 0,
-      "attempt_known_cost_usd": 0.0,
-      "cumulative_known_cost_usd": 0.0,
-      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "application_bundle_file": "application_bundle_report.json",
+      "attempt_known_cost_usd": 0.914188,
+      "best_review_iteration": 2,
+      "content_quality_target_reached": false,
+      "cover_letter_cost_usd": 0.008401,
+      "cover_letter_status": "PASS",
+      "cover_letter_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 1,
+        "candidate_tokens": 576,
+        "estimated_cost_usd": 0.008401,
+        "known_estimated_cost_usd": 0.008401,
+        "prompt_tokens": 4141,
+        "reasoning_tokens": 134,
+        "total_tokens": 4717
+      },
+      "coverage_score": 72.9,
+      "cumulative_known_cost_usd": 0.914188,
+      "estimated_cost_usd": 0.914188,
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "bc125224009195562d9ff6ebcee0333459f07dd6e1d0dee9a2f438e134a9e1e9",
       "generation_logic_version": 5,
+      "headhunter_decision": "REVISE",
+      "headhunter_iterations": 5,
+      "headhunter_score": 76,
+      "known_estimated_cost_usd": 0.914188,
+      "premium_model_used": true,
+      "presentation_cost_usd": 0.00944,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_presentation_review_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "alternate_visual_status": "PASS",
+        "cover_letter_ready": true,
+        "primary_page_utilization": [
+          0.7953,
+          0.7793
+        ],
+        "primary_physical_status": "PASS",
+        "primary_presentation_review_status": "PASS",
+        "primary_section_area_ratios": {
+          "certifications": 0.0744,
+          "education": 0.0587,
+          "experience": 0.6699,
+          "projects": 0.1359,
+          "skills": 0.0612
+        },
+        "primary_section_item_counts": {
+          "certifications": 3,
+          "education": 2,
+          "experience": 7,
+          "projects": 2,
+          "skills": 8
+        },
+        "primary_template": "technical_modern_v1",
+        "primary_visual_status": "PASS",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "presentation_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 3,
+        "candidate_tokens": 879,
+        "estimated_cost_usd": 0.00944,
+        "known_estimated_cost_usd": 0.00944,
+        "prompt_tokens": 2552,
+        "reasoning_tokens": 269,
+        "total_tokens": 3431
+      },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-87c000b61e92893ddc78a4b18b66a0392f1c27b2-vac-6d9bdccca1ff49c3",
-      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
-      "status": "FAILED_REVIEW_REQUIRED",
+      "run_id": "auto-39fefd29a4726f66ce69d87a91c9f57e142a6e6e-vac-6d9bdccca1ff49c3",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "COMPLETED_BELOW_TARGET",
+      "total_pipeline_cost_complete": true,
+      "total_pipeline_known_cost_usd": 0.932029,
+      "unsupported_requirements": [],
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "66615889efe333cb0a2ae30e5c0489217e4d076048eb580506b1cabf8cd94679"
     },
     "vac-6fe0c8aa95790e4e": {
-      "attempt_estimated_cost_usd": 0,
-      "attempt_known_cost_usd": 0.0,
-      "cumulative_known_cost_usd": 0.0,
-      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+      "application_bundle_file": "application_bundle_report.json",
+      "attempt_known_cost_usd": 0.802228,
+      "best_review_iteration": 1,
+      "content_quality_target_reached": false,
+      "cover_letter_cost_usd": 0.006812,
+      "cover_letter_status": "PASS",
+      "cover_letter_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 1,
+        "candidate_tokens": 442,
+        "estimated_cost_usd": 0.006812,
+        "known_estimated_cost_usd": 0.006812,
+        "prompt_tokens": 3680,
+        "reasoning_tokens": 80,
+        "total_tokens": 4122
+      },
+      "coverage_score": 75.5,
+      "cumulative_known_cost_usd": 0.802228,
+      "estimated_cost_usd": 0.802228,
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "839937707b8b3b9ebb98c881b92f03ca617fefe249a2fbe8ffd8a55340bcf4d9",
       "generation_logic_version": 5,
+      "headhunter_decision": "REVISE",
+      "headhunter_iterations": 5,
+      "headhunter_score": 78,
+      "known_estimated_cost_usd": 0.802228,
+      "premium_model_used": true,
+      "presentation_cost_usd": 0.009215,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_presentation_review_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "alternate_visual_status": "PASS",
+        "cover_letter_ready": true,
+        "primary_page_utilization": [
+          0.6787,
+          0.7251
+        ],
+        "primary_physical_status": "PASS",
+        "primary_presentation_review_status": "PASS",
+        "primary_section_area_ratios": {
+          "certifications": 0.0837,
+          "education": 0.0511,
+          "experience": 0.7433,
+          "projects": 0.0,
+          "skills": 0.1219
+        },
+        "primary_section_item_counts": {
+          "certifications": 3,
+          "education": 2,
+          "experience": 7,
+          "projects": 0,
+          "skills": 13
+        },
+        "primary_template": "technical_modern_v1",
+        "primary_visual_status": "PASS",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "presentation_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 3,
+        "candidate_tokens": 827,
+        "estimated_cost_usd": 0.009215,
+        "known_estimated_cost_usd": 0.009215,
+        "prompt_tokens": 2525,
+        "reasoning_tokens": 288,
+        "total_tokens": 3352
+      },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-87c000b61e92893ddc78a4b18b66a0392f1c27b2-vac-6fe0c8aa95790e4e",
-      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
-      "status": "FAILED_REVIEW_REQUIRED",
+      "run_id": "auto-39fefd29a4726f66ce69d87a91c9f57e142a6e6e-vac-6fe0c8aa95790e4e",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "COMPLETED_BELOW_TARGET",
+      "total_pipeline_cost_complete": true,
+      "total_pipeline_known_cost_usd": 0.818255,
+      "unsupported_requirements": [],
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "17ddd624b2f0dbd439147e5f6f842df14f42b29b7a9f86afdbc4a6bbecd5765d"
     },
@@ -508,6 +664,28 @@
       "status": "FAILED_REVIEW_REQUIRED",
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "cd86df7b4e8f8340a15e0065191bc19dafaa24f0296e01f3b8ad64e73e7d6391"
+    },
+    "vac-88deea25e71219c2": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "8572685e6f5b55c1446831c136676d35dc0ac7bcf5116501bef64b3b5b232d49",
+      "generation_logic_version": 5,
+      "ready_to_send": false,
+      "reason": "vacancy vac-88deea25e71219c2 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "f110a7e25cfd09871eb038633e66fceee4de5fdfbfcfeec934af03da2a38b4b2"
+    },
+    "vac-a6ea4042585a94c8": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "3f4d9992f28e1feb1e90d5112d2c80352d92c0d3e4f96da23fefa57e83952509",
+      "generation_logic_version": 5,
+      "ready_to_send": false,
+      "reason": "vacancy vac-a6ea4042585a94c8 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "6ce7e0cdc86bfc5fea281d447b63613d3e954bb8b9c7b7bc221f5e62f760fe31"
     },
     "vac-adb898e887a1d895": {
       "attempt_estimated_cost_usd": 0,

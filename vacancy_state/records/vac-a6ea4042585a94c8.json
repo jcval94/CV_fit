@@ -1,0 +1,73 @@
+{
+  "application_language": "en",
+  "city": "Latinoamérica / México",
+  "company": "Mappa",
+  "company_category": "Otro",
+  "content_hash": "6ce7e0cdc86bfc5fea281d447b63613d3e954bb8b9c7b7bc221f5e62f760fe31",
+  "description": null,
+  "fit_gaps": [
+    "La empresa visible en la publicación es una plataforma/intermediario de talento y el cliente final no está claramente identificado.",
+    "La compensación publicada es inferior a la esperable para un perfil con 9+ años de experiencia.",
+    "El foco técnico incluye document intelligence y OCR, áreas que pueden requerir experiencia más específica."
+  ],
+  "fit_score": 95.0,
+  "fit_strengths": [
+    "Proyecto enfocado en lending para PyMEs y construcción de señales para decisiones crediticias, con fuerte cercanía a banca, crédito y riesgo.",
+    "Ownership end-to-end del model layer desde experimentación y evaluación hasta despliegue, monitoreo y mejora continua.",
+    "Pide ML productivo, LLMs en producción, evaluación rigurosa, drift detection, document intelligence y extracción de información financiera.",
+    "Valora explícitamente experiencia en fintech, lending, credit risk, estados de cuenta, buró de crédito, feature stores, champion/challenger y explicabilidad.",
+    "Trabajo directo con founders e influencia sobre decisiones técnicas y de producto."
+  ],
+  "fit_summary": "El contenido del rol tiene un ajuste excepcional con crédito, riesgo, ML productivo y GenAI; baja ligeramente por compensación y por la menor transparencia sobre el cliente final.",
+  "identity_key": "a6ea4042585a94c821c86f668c50c40375608fe1997a6a99c3ea6025e591ae22",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Latinoamérica / México",
+  "posted_date": "2026-08-20",
+  "posted_date_raw": "2026-08-20",
+  "provenance": [
+    {
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "source_entry_index": 2,
+      "source_format": "vacantes_v1",
+      "source_hash": "eb9af130dea3484cf63cd31428616e9451924ab5750112ee866d8b8c7388a73e",
+      "source_native_id": "mappa-3374",
+      "source_path": "Vacantes/vacantes_2026-08-24.json",
+      "source_search_date": "2026-08-24",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "AI / Machine Learning Engineer",
+  "salary": "USD 2,000–2,400 por mes",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "Machine Learning",
+    "MLOps",
+    "LLMs",
+    "OpenAI",
+    "Document Intelligence",
+    "OCR",
+    "Model Evaluation",
+    "Drift Detection",
+    "Feature Stores",
+    "Champion/Challenger",
+    "Explainable ML",
+    "Credit Risk"
+  ],
+  "url": "https://app.mappa.ai/jobs/3374-ai-machine-learning-engineer",
+  "vacancy_id": "vac-a6ea4042585a94c8",
+  "work_model": "Remote"
+}

@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-08cdc2b18dc43994::core",
+      "chunk_type": "core",
+      "content_hash": "7942f8ff71d57e3ec0b630cf976add91e6413e784590877cc28191c7bf1915ab",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Role: Data Science Lead, LATAM\nCompany: Tilt Finance\nCompany category: Fintech\nLocation: México / Brasil / Estados Unidos - Remote Americas\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-08cdc2b18dc43994"
+    },
+    {
+      "chunk_id": "vac-08cdc2b18dc43994::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "bd1f522330a332bed5dd1eb73a631301ffa5ca18218dca6f3417353c15a961eb",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Technologies / capabilities: Machine Learning; Credit Decisioning; Underwriting; Portfolio Valuation; Model Development; Model Deployment; Impact Measurement; P&L Analysis; Technical Leadership",
+      "vacancy_id": "vac-08cdc2b18dc43994"
+    },
+    {
+      "chunk_id": "vac-08cdc2b18dc43994::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "f5702ab8acf4f906b0ec052287c96828282f2a4b6e2002f1bbc935d6e37f0588",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Source fit score: 99/100\nSource fit summary: Es la oportunidad con mayor ajuste: combina fintech, crédito, modelado aplicado, ownership end-to-end, liderazgo técnico y alcance regional, además de ser virtual-first y contratar en México.\nSource strengths: Rol de liderazgo hands-on responsable de la estrategia y roadmap de Data Science para México y Brasil.; Dominio directo de crédito, underwriting, credit decisioning, portfolio valuation y resultados de P&L, altamente alineado con experiencia bancaria y de riesgo.; Responsabilidad de construir y desplegar modelos, establecer estándares de modelado, infraestructura y prácticas de entrega.; Incluye liderazgo y mentoría de un equipo de Data Scientists, manteniendo participación técnica activa.; Conecta modelado aplicado con impacto medible de negocio y colaboración directa con liderazgo de crédito.\nSource gaps: La descripción pública no detalla herramientas específicas como PySpark o SQL.; Portugués es una ventaja para el mercado de Brasil, aunque no aparece como requisito obligatorio.",
+      "vacancy_id": "vac-08cdc2b18dc43994"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-08cdc2b18dc43994"
+}

@@ -3,7 +3,9 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/vacantes_2026-08-24.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -25,29 +27,33 @@
       "Vacantes/enriched/payjoy_machine_learning_engineer_fraud_2026-08-21.json",
       "Vacantes/vacantes_2026-08-21.json",
       "Vacantes/vacantes_2026-08-22.json",
-      "Vacantes/vacantes_2026-08-23.json",
-      "Vacantes/vacantes_2026-08-24.json"
+      "Vacantes/vacantes_2026-08-23.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e-noop",
+  "reindexed_vacancy_ids": [
+    "vac-08cdc2b18dc43994",
+    "vac-3779c9b875b7032d",
+    "vac-88deea25e71219c2",
+    "vac-a6ea4042585a94c8"
+  ],
+  "run_id": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
   "schema_version": 1,
   "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
   "source_counts": {
     "deleted": 0,
     "discovered": 21,
     "modified": 0,
-    "new": 0,
+    "new": 1,
     "quarantined": 0,
-    "unchanged": 21
+    "unchanged": 20
   },
   "status": "success",
   "vacancy_counts": {
     "active": 17,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 4,
+    "reindexed": 4,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

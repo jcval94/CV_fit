@@ -1,0 +1,68 @@
+{
+  "application_language": "en",
+  "city": "México / Brasil / Estados Unidos - Remote Americas",
+  "company": "Tilt Finance",
+  "company_category": "Fintech",
+  "content_hash": "e762c1b4c0ca3722107bf382b883d4d41f402049f1a82ccbd4548c9b836c7a66",
+  "description": null,
+  "fit_gaps": [
+    "La descripción pública no detalla herramientas específicas como PySpark o SQL.",
+    "Portugués es una ventaja para el mercado de Brasil, aunque no aparece como requisito obligatorio."
+  ],
+  "fit_score": 99.0,
+  "fit_strengths": [
+    "Rol de liderazgo hands-on responsable de la estrategia y roadmap de Data Science para México y Brasil.",
+    "Dominio directo de crédito, underwriting, credit decisioning, portfolio valuation y resultados de P&L, altamente alineado con experiencia bancaria y de riesgo.",
+    "Responsabilidad de construir y desplegar modelos, establecer estándares de modelado, infraestructura y prácticas de entrega.",
+    "Incluye liderazgo y mentoría de un equipo de Data Scientists, manteniendo participación técnica activa.",
+    "Conecta modelado aplicado con impacto medible de negocio y colaboración directa con liderazgo de crédito."
+  ],
+  "fit_summary": "Es la oportunidad con mayor ajuste: combina fintech, crédito, modelado aplicado, ownership end-to-end, liderazgo técnico y alcance regional, además de ser virtual-first y contratar en México.",
+  "identity_key": "08cdc2b18dc4399437e418c8a6b145af107662a048245770bd28e532c7d879e6",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "México / Brasil / Estados Unidos - Remote Americas",
+  "posted_date": "2026-08-21",
+  "posted_date_raw": "2026-08-21",
+  "provenance": [
+    {
+      "source_commit": "39fefd29a4726f66ce69d87a91c9f57e142a6e6e",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "eb9af130dea3484cf63cd31428616e9451924ab5750112ee866d8b8c7388a73e",
+      "source_native_id": "tilt-9d7151f1-c3f3-41a5-bf9b-dcee065dbd4b",
+      "source_path": "Vacantes/vacantes_2026-08-24.json",
+      "source_search_date": "2026-08-24",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Data Science Lead, LATAM",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Machine Learning",
+    "Credit Decisioning",
+    "Underwriting",
+    "Portfolio Valuation",
+    "Model Development",
+    "Model Deployment",
+    "Impact Measurement",
+    "P&L Analysis",
+    "Technical Leadership"
+  ],
+  "url": "https://jobs.ashbyhq.com/tilthq/9d7151f1-c3f3-41a5-bf9b-dcee065dbd4b/application",
+  "vacancy_id": "vac-08cdc2b18dc43994",
+  "work_model": "Remote"
+}

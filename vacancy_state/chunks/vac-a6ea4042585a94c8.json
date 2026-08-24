@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-a6ea4042585a94c8::core",
+      "chunk_type": "core",
+      "content_hash": "e3e2bc5631a2b066ec10045736e95705ba2e6b567ff38bdfd0f49e2a7aef5059",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Role: AI / Machine Learning Engineer\nCompany: Mappa\nCompany category: Otro\nLocation: Latinoamérica / México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-a6ea4042585a94c8"
+    },
+    {
+      "chunk_id": "vac-a6ea4042585a94c8::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "822c0d1794c20a530cce6e994393cbd20bb08c8da24603afab431dd9e8de52f9",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Technologies / capabilities: Python; Machine Learning; MLOps; LLMs; OpenAI; Document Intelligence; OCR; Model Evaluation; Drift Detection; Feature Stores; Champion/Challenger; Explainable ML; Credit Risk",
+      "vacancy_id": "vac-a6ea4042585a94c8"
+    },
+    {
+      "chunk_id": "vac-a6ea4042585a94c8::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "e10456eee329ff4761f61a34c6a1ca6466af84584c604055b4724506995dca5f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-24.json"
+      ],
+      "text": "Source fit score: 95/100\nSource fit summary: El contenido del rol tiene un ajuste excepcional con crédito, riesgo, ML productivo y GenAI; baja ligeramente por compensación y por la menor transparencia sobre el cliente final.\nSource strengths: Proyecto enfocado en lending para PyMEs y construcción de señales para decisiones crediticias, con fuerte cercanía a banca, crédito y riesgo.; Ownership end-to-end del model layer desde experimentación y evaluación hasta despliegue, monitoreo y mejora continua.; Pide ML productivo, LLMs en producción, evaluación rigurosa, drift detection, document intelligence y extracción de información financiera.; Valora explícitamente experiencia en fintech, lending, credit risk, estados de cuenta, buró de crédito, feature stores, champion/challenger y explicabilidad.; Trabajo directo con founders e influencia sobre decisiones técnicas y de producto.\nSource gaps: La empresa visible en la publicación es una plataforma/intermediario de talento y el cliente final no está claramente identificado.; La compensación publicada es inferior a la esperable para un perfil con 9+ años de experiencia.; El foco técnico incluye document intelligence y OCR, áreas que pueden requerir experiencia más específica.",
+      "vacancy_id": "vac-a6ea4042585a94c8"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-a6ea4042585a94c8"
+}
