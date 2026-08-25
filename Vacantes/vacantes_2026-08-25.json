@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-25",
+    "total_vacantes_encontradas": 3,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "pfizer-4962047",
+      "puesto": "Data Science Manager",
+      "empresa": "Pfizer",
+      "categoria_empresa": "Otro",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-08-19",
+      "porcentaje_ajuste": 94,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol hands-on con responsabilidad directa sobre análisis avanzados, experimentación y decisiones de negocio, no puramente gerencial.",
+          "Requiere Python, SQL, frameworks de machine learning y experiencia con diseño experimental y POCs.",
+          "La formación cuantitativa buscada incluye explícitamente Actuaría y se valora posgrado en un campo cuantitativo.",
+          "Incluye colaboración con stakeholders senior, liderazgo de proyectos y resolución de problemas de negocio no estructurados.",
+          "El esquema es híbrido en Ciudad de México, con asistencia de 2 a 3 días por semana."
+        ],
+        "posibles_gaps": [
+          "No aprovecha directamente experiencia en banca, fraude o credit scoring.",
+          "El mínimo requerido de 4 a 5 años está por debajo del seniority del perfil objetivo.",
+          "El dominio principal es analítica comercial farmacéutica, por lo que existe una curva de aprendizaje sectorial."
+        ],
+        "resumen": "Muy buena oportunidad para combinar liderazgo técnico, experimentación, Python/SQL y machine learning en un entorno global de producto, con un rol suficientemente hands-on para aprovechar experiencia senior."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "Machine Learning",
+        "Experimental Design",
+        "CI/CD",
+        "GitHub Actions",
+        "Jenkins",
+        "AWS",
+        "Azure",
+        "Snowflake",
+        "GCP",
+        "Docker"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://pfizer.wd1.myworkdayjobs.com/es/PfizerCareers/job/Mexico---Mexico-City/Data-Science-Manager_4962047"
+    },
+    {
+      "id_vacante": "kake-4454662183",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Kake",
+      "categoria_empresa": "Otro",
+      "ubicacion": "Área metropolitana de Ciudad de México / LATAM",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-24",
+      "porcentaje_ajuste": 93,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición Senior Product Data Scientist totalmente remota y compatible con horario LATAM.",
+          "Fuerte foco en experimentación, diseño estadístico y A/B testing para orientar decisiones de producto.",
+          "Pide dominio de Python y SQL, ownership técnico y colaboración estrecha con Product Managers y equipos multifuncionales.",
+          "Incluye construcción de workflows de experimentación e infraestructura de datos escalable.",
+          "La compensación se maneja en USD y la empresa opera remote-first."
+        ],
+        "posibles_gaps": [
+          "Kake opera como proveedor de talento/equipos tecnológicos, por lo que se deprioriza frente a empresas de producto directo.",
+          "No existe foco explícito en banca, riesgo, fraude, credit scoring o GenAI.",
+          "El anuncio marca nivel de antigüedad intermedio pese al título Senior."
+        ],
+        "resumen": "Excelente ajuste para la vertiente de Product/Decision Science por experimentación, estadística, Python, SQL y ownership, con la ventaja adicional de modalidad 100% remota."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "A/B Testing",
+        "Experiment Design",
+        "Statistics",
+        "Product Analytics",
+        "Snowflake",
+        "Superset",
+        "Eppo",
+        "Airflow"
+      ],
+      "rango_salarial": "Competitivo en USD; monto no especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-kake-4454662183"
+    },
+    {
+      "id_vacante": "ingredion-req-37680",
+      "puesto": "Data Scientist",
+      "empresa": "Ingredion",
+      "categoria_empresa": "Otro",
+      "ubicacion": "Home Office - ECoE Mexico",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-21",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Aunque el título no incluye Senior, el alcance sí es de liderazgo: dirige iniciativas de Data Science y mentoriza citizen data scientists.",
+          "Responsabilidad end-to-end desde diseño y modelado hasta despliegue, monitoreo y refinamiento de modelos en producción.",
+          "Trabaja con modelos predictivos, prescriptivos, machine learning, simulación, clustering, PCA, clasificación y regresión.",
+          "Incluye construcción de pipelines escalables, integración con bases SQL y colaboración con IT/Data Engineering para producción.",
+          "La descripción menciona explícitamente financial risk analytics como uno de los casos de uso relevantes."
+        ],
+        "posibles_gaps": [
+          "El dominio principal es Supply Chain, Manufacturing y Quality, no banca o fintech.",
+          "Python y PySpark no aparecen como requisitos explícitos en la publicación recuperada.",
+          "Requiere disponibilidad para viajar hasta 20%."
+        ],
+        "resumen": "Buen ajuste por liderazgo técnico, ML end-to-end, modelos productivos y trabajo con grandes problemas operativos; pierde puntos por dominio sectorial y por no explicitar Python/PySpark."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "SQL",
+        "Predictive Modeling",
+        "Prescriptive Analytics",
+        "Simulation",
+        "Clustering",
+        "PCA",
+        "Classification",
+        "Regression",
+        "Data Pipelines",
+        "Model Monitoring",
+        "MLOps"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://ingredion.wd1.myworkdayjobs.com/ingredioncareers/job/home-office---ecoe-mexico/data-scientist_req-37680"
+    }
+  ]
+}
