@@ -1,0 +1,57 @@
+{
+  "jd_capture_mode": "official_source_jsonld_jobposting_auto",
+  "jd_retrieved_at": "2026-08-25T14:45:25.270224Z",
+  "jd_source_url": "https://pfizer.wd1.myworkdayjobs.com/es/PfizerCareers/job/Mexico---Mexico-City/Data-Science-Manager_4962047",
+  "metadata": {
+    "criterio_temporal": "Preservación automática de JD oficial para generación CV",
+    "fecha_busqueda": "2026-08-25",
+    "total_vacantes_encontradas": 1
+  },
+  "vacantes": [
+    {
+      "categoria_empresa": "Otro",
+      "description": "Work Location Assignment: Mexico City, must be able to work from assigned Pfizer office 2-3 days per week, or as needed by the business. ROLE SUMMARY Global Commercial Analytics (GCA) harnesses the power of data to drive robust analytical insights that inform some of Pfizer's most critical business questions. With colleagues across the globe, GCA’s rigorous analytical expertise is depended on as the compass and decision support for the enterprise. Our dynamic, exciting team of subject-matter experts comes from diverse backgrounds and experiences, including data science, engineering, market research, and consulting. As a team, we collaborate to turn data into meaningful insights that will have a direct impact on patient's lives and the future of Pfizer as a data-driven organization. As a Data Science Manager, you will work in a dynamic, fast-paced environment. You will collaborate closely with senior business stakeholders in the Chief Marketing Officer (CMO) organization and other organizations within Pfizer, and help drive data-driven decision-making across the commercial organization. In your day to day, you’ll be challenged to utilize advanced analytic techniques to address key business questions, provide valuable insights on performance and customer understanding to enable major decision-making for the North America commercial organization. Successful candidates will be team-oriented, will demonstrate strong communication and consulting skills and will have hands-on experience working with and analyzing large datasets. ROLE RESPONSIBILITIES Develop and implement sound, objective secondary data analysis on marketing and field force promotional effort to enable the execution of key marketing and sales initiatives. Solve unstructured business problems by designing and executing customized, novel and high priority analytical projects utilizing advanced analytical techniques. Execute statistical and data mining techniques on large datasets to identify trends, facts and opportunities. Collaborate closely with cross-functional teams to align analytics capabilities with broader business objectives, fostering collaboration and effective decision-making. Partner with colleagues on experimental design, ensuring statistical/methodological rigor across POCs. Be a hands-on teammate who can Utilize tools like R, SQL, Python, to conduct analysis to communicate results to the business stakeholders. Code and experimental work at a meaningful capacity (not purely managerial). BASIC QUALIFICATIONS BA/BS plus min 4-5 years of work experience as a data analyst and project lead for a diverse range of projects Background in STEM (Science, Technology, Engineering, Mathematics) majors with quantitative emphasis such as Actuarial Science, Statistics, Computer Science, Operations Research, Economics, Engineering Fluent in English, both written and verbal. Strong hands-on coding ability in Python; working knowledge of common ML frameworks (PyTorch, TensorFlow, or scikit-learn). Hands-on experience with CI/CD tools (GitHub Actions, Jenkins, or similar) Basic cloud platform experience (AWS, Azure, Snowflake or GCP); container experience (Docker) a plus. Solid grasp of ML/AI fundamentals and experimental design basics (train/test splits, evaluation metrics, avoiding common pitfalls). Collaborative and results-oriented with a strong work ethic and the ability to manage multiple priorities effectively. PREFERRED QUALIFICATIONS Advanced degree in quantitative field or quantitative MBA is preferred. Experience in the pharmaceutical commercial analytics industry and management consulting Knowledge, insight and understanding of the pharma health care space (IQVIA, Rx/Sales, etc.) Declaración de igualdad de oportunidades Nos comprometemos a garantizar que todas las personas interesadas en trabajar en Pfizer sean tratadas por igual, sin discriminación por motivos de género, reasignación de género, orientación sexual, estado civil, raza, color, nacionalidad, origen étnico o nacional, religión o creencia, discapacidad o edad. To learn more about acceptable and prohibited uses of AI during the recruitment process, please review our candidate AI-use guidelines available on Pfizer Careers. Marketing and Market Research Una carrera en Pfizer es como ninguna otra. En nuestra cultura de propiedad individual, creemos en nuestra capacidad para mejorar el futuro de la sanidad y en nuestro potencial para cambiar millones de vidas. Estamos buscando talento nuevo para unirse a nuestra comunidad global, para descubrir nuevas terapias innovadoras que hagan del mundo un lugar con mejor salud.",
+      "empresa": "Pfizer",
+      "fecha_publicacion": "2026-08-19",
+      "id_vacante": "pfizer-4962047",
+      "modalidad": "Híbrido",
+      "porcentaje_ajuste": 94,
+      "puesto": "Data Science Manager",
+      "rango_salarial": "No especificado",
+      "razon_ajuste": {
+        "posibles_gaps": [
+          "No aprovecha directamente experiencia en banca, fraude o credit scoring.",
+          "El mínimo requerido de 4 a 5 años está por debajo del seniority del perfil objetivo.",
+          "El dominio principal es analítica comercial farmacéutica, por lo que existe una curva de aprendizaje sectorial."
+        ],
+        "puntos_fuertes": [
+          "Rol hands-on con responsabilidad directa sobre análisis avanzados, experimentación y decisiones de negocio, no puramente gerencial.",
+          "Requiere Python, SQL, frameworks de machine learning y experiencia con diseño experimental y POCs.",
+          "La formación cuantitativa buscada incluye explícitamente Actuaría y se valora posgrado en un campo cuantitativo.",
+          "Incluye colaboración con stakeholders senior, liderazgo de proyectos y resolución de problemas de negocio no estructurados.",
+          "El esquema es híbrido en Ciudad de México, con asistencia de 2 a 3 días por semana."
+        ],
+        "resumen": "Muy buena oportunidad para combinar liderazgo técnico, experimentación, Python/SQL y machine learning en un entorno global de producto, con un rol suficientemente hands-on para aprovechar experiencia senior."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "Machine Learning",
+        "Experimental Design",
+        "CI/CD",
+        "GitHub Actions",
+        "Jenkins",
+        "AWS",
+        "Azure",
+        "Snowflake",
+        "GCP",
+        "Docker"
+      ],
+      "ubicacion": "Ciudad de México, México",
+      "url_postulacion": "https://pfizer.wd1.myworkdayjobs.com/es/PfizerCareers/job/Mexico---Mexico-City/Data-Science-Manager_4962047"
+    }
+  ]
+}
