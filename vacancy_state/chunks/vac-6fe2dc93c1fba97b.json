@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-6fe2dc93c1fba97b::core",
+      "chunk_type": "core",
+      "content_hash": "77a56b5c66efe541dd5a2c27c12157345b2b28ec53ecae685a2bc9e8b177c81c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Role: Data Science Manager\nCompany: Pfizer\nCompany category: Otro\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-6fe2dc93c1fba97b"
+    },
+    {
+      "chunk_id": "vac-6fe2dc93c1fba97b::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "1e1e5cbaa3c4ed4f7f58ab69b49b30f68126e67168afefc534f54b83f1546cbc",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Scikit-learn; PyTorch; TensorFlow; Machine Learning; Experimental Design; CI/CD; GitHub Actions; Jenkins; AWS; Azure; Snowflake; GCP; Docker",
+      "vacancy_id": "vac-6fe2dc93c1fba97b"
+    },
+    {
+      "chunk_id": "vac-6fe2dc93c1fba97b::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "4c23555702cc9e1dddb640f84520823c377fc48ec2d944770624fb57cd47b146",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Source fit score: 94/100\nSource fit summary: Muy buena oportunidad para combinar liderazgo técnico, experimentación, Python/SQL y machine learning en un entorno global de producto, con un rol suficientemente hands-on para aprovechar experiencia senior.\nSource strengths: Rol hands-on con responsabilidad directa sobre análisis avanzados, experimentación y decisiones de negocio, no puramente gerencial.; Requiere Python, SQL, frameworks de machine learning y experiencia con diseño experimental y POCs.; La formación cuantitativa buscada incluye explícitamente Actuaría y se valora posgrado en un campo cuantitativo.; Incluye colaboración con stakeholders senior, liderazgo de proyectos y resolución de problemas de negocio no estructurados.; El esquema es híbrido en Ciudad de México, con asistencia de 2 a 3 días por semana.\nSource gaps: No aprovecha directamente experiencia en banca, fraude o credit scoring.; El mínimo requerido de 4 a 5 años está por debajo del seniority del perfil objetivo.; El dominio principal es analítica comercial farmacéutica, por lo que existe una curva de aprendizaje sectorial.",
+      "vacancy_id": "vac-6fe2dc93c1fba97b"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-6fe2dc93c1fba97b"
+}

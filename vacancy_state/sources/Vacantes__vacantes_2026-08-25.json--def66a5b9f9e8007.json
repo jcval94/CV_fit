@@ -1,0 +1,225 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Pfizer",
+      "company_category": "Otro",
+      "content_hash": "01ea019a106e94bc68eb885d47364a074ee4833ac31c80670d8052fc9481da54",
+      "description": null,
+      "fit_gaps": [
+        "No aprovecha directamente experiencia en banca, fraude o credit scoring.",
+        "El mínimo requerido de 4 a 5 años está por debajo del seniority del perfil objetivo.",
+        "El dominio principal es analítica comercial farmacéutica, por lo que existe una curva de aprendizaje sectorial."
+      ],
+      "fit_score": 94.0,
+      "fit_strengths": [
+        "Rol hands-on con responsabilidad directa sobre análisis avanzados, experimentación y decisiones de negocio, no puramente gerencial.",
+        "Requiere Python, SQL, frameworks de machine learning y experiencia con diseño experimental y POCs.",
+        "La formación cuantitativa buscada incluye explícitamente Actuaría y se valora posgrado en un campo cuantitativo.",
+        "Incluye colaboración con stakeholders senior, liderazgo de proyectos y resolución de problemas de negocio no estructurados.",
+        "El esquema es híbrido en Ciudad de México, con asistencia de 2 a 3 días por semana."
+      ],
+      "fit_summary": "Muy buena oportunidad para combinar liderazgo técnico, experimentación, Python/SQL y machine learning en un entorno global de producto, con un rol suficientemente hands-on para aprovechar experiencia senior.",
+      "identity_key": "6fe2dc93c1fba97b1f247002aef6ed77b1204590d32e1b0ad1ce16fb5b4b08be",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-08-19",
+      "posted_date_raw": "2026-08-19",
+      "provenance": [
+        {
+          "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+          "source_native_id": "pfizer-4962047",
+          "source_path": "Vacantes/vacantes_2026-08-25.json",
+          "source_search_date": "2026-08-25",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Data Science Manager",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Scikit-learn",
+        "PyTorch",
+        "TensorFlow",
+        "Machine Learning",
+        "Experimental Design",
+        "CI/CD",
+        "GitHub Actions",
+        "Jenkins",
+        "AWS",
+        "Azure",
+        "Snowflake",
+        "GCP",
+        "Docker"
+      ],
+      "url": "https://pfizer.wd1.myworkdayjobs.com/es/PfizerCareers/job/Mexico---Mexico-City/Data-Science-Manager_4962047",
+      "vacancy_id": "vac-6fe2dc93c1fba97b",
+      "work_model": "Hybrid"
+    },
+    {
+      "application_language": "en",
+      "city": "Área metropolitana de Ciudad de México / LATAM",
+      "company": "Kake",
+      "company_category": "Otro",
+      "content_hash": "2e59ba1c658725dcb59f745006685edf841fbfed7573e4a7242f4a3f7b453eea",
+      "description": null,
+      "fit_gaps": [
+        "Kake opera como proveedor de talento/equipos tecnológicos, por lo que se deprioriza frente a empresas de producto directo.",
+        "No existe foco explícito en banca, riesgo, fraude, credit scoring o GenAI.",
+        "El anuncio marca nivel de antigüedad intermedio pese al título Senior."
+      ],
+      "fit_score": 93.0,
+      "fit_strengths": [
+        "Posición Senior Product Data Scientist totalmente remota y compatible con horario LATAM.",
+        "Fuerte foco en experimentación, diseño estadístico y A/B testing para orientar decisiones de producto.",
+        "Pide dominio de Python y SQL, ownership técnico y colaboración estrecha con Product Managers y equipos multifuncionales.",
+        "Incluye construcción de workflows de experimentación e infraestructura de datos escalable.",
+        "La compensación se maneja en USD y la empresa opera remote-first."
+      ],
+      "fit_summary": "Excelente ajuste para la vertiente de Product/Decision Science por experimentación, estadística, Python, SQL y ownership, con la ventaja adicional de modalidad 100% remota.",
+      "identity_key": "e1579e279d47b8a930ebafe7eead5fa95a2299d3c0b9a38cd8e8e49e8d98002d",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Área metropolitana de Ciudad de México / LATAM",
+      "posted_date": "2026-08-24",
+      "posted_date_raw": "2026-08-24",
+      "provenance": [
+        {
+          "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+          "source_native_id": "kake-4454662183",
+          "source_path": "Vacantes/vacantes_2026-08-25.json",
+          "source_search_date": "2026-08-25",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist",
+      "salary": "Competitivo en USD; monto no especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "A/B Testing",
+        "Experiment Design",
+        "Statistics",
+        "Product Analytics",
+        "Snowflake",
+        "Superset",
+        "Eppo",
+        "Airflow"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-kake-4454662183",
+      "vacancy_id": "vac-e1579e279d47b8a9",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "Home Office - ECoE Mexico",
+      "company": "Ingredion",
+      "company_category": "Otro",
+      "content_hash": "900555fc467fd06fac108f961197f9a2d98e485701d02c13a788ce716fd8767b",
+      "description": null,
+      "fit_gaps": [
+        "El dominio principal es Supply Chain, Manufacturing y Quality, no banca o fintech.",
+        "Python y PySpark no aparecen como requisitos explícitos en la publicación recuperada.",
+        "Requiere disponibilidad para viajar hasta 20%."
+      ],
+      "fit_score": 92.0,
+      "fit_strengths": [
+        "Aunque el título no incluye Senior, el alcance sí es de liderazgo: dirige iniciativas de Data Science y mentoriza citizen data scientists.",
+        "Responsabilidad end-to-end desde diseño y modelado hasta despliegue, monitoreo y refinamiento de modelos en producción.",
+        "Trabaja con modelos predictivos, prescriptivos, machine learning, simulación, clustering, PCA, clasificación y regresión.",
+        "Incluye construcción de pipelines escalables, integración con bases SQL y colaboración con IT/Data Engineering para producción.",
+        "La descripción menciona explícitamente financial risk analytics como uno de los casos de uso relevantes."
+      ],
+      "fit_summary": "Buen ajuste por liderazgo técnico, ML end-to-end, modelos productivos y trabajo con grandes problemas operativos; pierde puntos por dominio sectorial y por no explicitar Python/PySpark.",
+      "identity_key": "4cd82869cadf198dee7dd3b48ead60ca84b30491402fbda4e8777a5c7642acfa",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Home Office - ECoE Mexico",
+      "posted_date": "2026-08-21",
+      "posted_date_raw": "2026-08-21",
+      "provenance": [
+        {
+          "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
+          "source_entry_index": 2,
+          "source_format": "vacantes_v1",
+          "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+          "source_native_id": "ingredion-req-37680",
+          "source_path": "Vacantes/vacantes_2026-08-25.json",
+          "source_search_date": "2026-08-25",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Machine Learning",
+        "SQL",
+        "Predictive Modeling",
+        "Prescriptive Analytics",
+        "Simulation",
+        "Clustering",
+        "PCA",
+        "Classification",
+        "Regression",
+        "Data Pipelines",
+        "Model Monitoring",
+        "MLOps"
+      ],
+      "url": "https://ingredion.wd1.myworkdayjobs.com/ingredioncareers/job/home-office---ecoe-mexico/data-scientist_req-37680",
+      "vacancy_id": "vac-4cd82869cadf198d",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+  "source_path": "Vacantes/vacantes_2026-08-25.json",
+  "status": "valid"
+}

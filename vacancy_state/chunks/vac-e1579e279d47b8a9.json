@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-e1579e279d47b8a9::core",
+      "chunk_type": "core",
+      "content_hash": "c748ecd0560b8fe346c794e480c96fabd75b8a2665c58de0e145e2685ffd0fa6",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Role: Senior Data Scientist\nCompany: Kake\nCompany category: Otro\nLocation: Área metropolitana de Ciudad de México / LATAM\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-e1579e279d47b8a9"
+    },
+    {
+      "chunk_id": "vac-e1579e279d47b8a9::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "cde56a91cae339eec985e111ad90ef225b3c93eda600430356fa63e762636c11",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; A/B Testing; Experiment Design; Statistics; Product Analytics; Snowflake; Superset; Eppo; Airflow",
+      "vacancy_id": "vac-e1579e279d47b8a9"
+    },
+    {
+      "chunk_id": "vac-e1579e279d47b8a9::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "4ad10a4e9670cf8fa33b077733fc3756d071afa4397b385f36013e7a1201fc60",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Source fit score: 93/100\nSource fit summary: Excelente ajuste para la vertiente de Product/Decision Science por experimentación, estadística, Python, SQL y ownership, con la ventaja adicional de modalidad 100% remota.\nSource strengths: Posición Senior Product Data Scientist totalmente remota y compatible con horario LATAM.; Fuerte foco en experimentación, diseño estadístico y A/B testing para orientar decisiones de producto.; Pide dominio de Python y SQL, ownership técnico y colaboración estrecha con Product Managers y equipos multifuncionales.; Incluye construcción de workflows de experimentación e infraestructura de datos escalable.; La compensación se maneja en USD y la empresa opera remote-first.\nSource gaps: Kake opera como proveedor de talento/equipos tecnológicos, por lo que se deprioriza frente a empresas de producto directo.; No existe foco explícito en banca, riesgo, fraude, credit scoring o GenAI.; El anuncio marca nivel de antigüedad intermedio pese al título Senior.",
+      "vacancy_id": "vac-e1579e279d47b8a9"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-e1579e279d47b8a9"
+}

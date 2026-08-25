@@ -1,0 +1,70 @@
+{
+  "application_language": "en",
+  "city": "Área metropolitana de Ciudad de México / LATAM",
+  "company": "Kake",
+  "company_category": "Otro",
+  "content_hash": "01af9b58fab114a96337ff69c795c5b864180dcefe3a4c72605199743fef494b",
+  "description": null,
+  "fit_gaps": [
+    "Kake opera como proveedor de talento/equipos tecnológicos, por lo que se deprioriza frente a empresas de producto directo.",
+    "No existe foco explícito en banca, riesgo, fraude, credit scoring o GenAI.",
+    "El anuncio marca nivel de antigüedad intermedio pese al título Senior."
+  ],
+  "fit_score": 93.0,
+  "fit_strengths": [
+    "Posición Senior Product Data Scientist totalmente remota y compatible con horario LATAM.",
+    "Fuerte foco en experimentación, diseño estadístico y A/B testing para orientar decisiones de producto.",
+    "Pide dominio de Python y SQL, ownership técnico y colaboración estrecha con Product Managers y equipos multifuncionales.",
+    "Incluye construcción de workflows de experimentación e infraestructura de datos escalable.",
+    "La compensación se maneja en USD y la empresa opera remote-first."
+  ],
+  "fit_summary": "Excelente ajuste para la vertiente de Product/Decision Science por experimentación, estadística, Python, SQL y ownership, con la ventaja adicional de modalidad 100% remota.",
+  "identity_key": "e1579e279d47b8a930ebafe7eead5fa95a2299d3c0b9a38cd8e8e49e8d98002d",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Área metropolitana de Ciudad de México / LATAM",
+  "posted_date": "2026-08-24",
+  "posted_date_raw": "2026-08-24",
+  "provenance": [
+    {
+      "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+      "source_native_id": "kake-4454662183",
+      "source_path": "Vacantes/vacantes_2026-08-25.json",
+      "source_search_date": "2026-08-25",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Data Scientist",
+  "salary": "Competitivo en USD; monto no especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "A/B Testing",
+    "Experiment Design",
+    "Statistics",
+    "Product Analytics",
+    "Snowflake",
+    "Superset",
+    "Eppo",
+    "Airflow"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-kake-4454662183",
+  "vacancy_id": "vac-e1579e279d47b8a9",
+  "work_model": "Remote"
+}

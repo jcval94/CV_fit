@@ -1,0 +1,75 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "Pfizer",
+  "company_category": "Otro",
+  "content_hash": "702c8e5c41c67a7747427bee982b12ad3f179af231d7753ca811a8165febd556",
+  "description": null,
+  "fit_gaps": [
+    "No aprovecha directamente experiencia en banca, fraude o credit scoring.",
+    "El mínimo requerido de 4 a 5 años está por debajo del seniority del perfil objetivo.",
+    "El dominio principal es analítica comercial farmacéutica, por lo que existe una curva de aprendizaje sectorial."
+  ],
+  "fit_score": 94.0,
+  "fit_strengths": [
+    "Rol hands-on con responsabilidad directa sobre análisis avanzados, experimentación y decisiones de negocio, no puramente gerencial.",
+    "Requiere Python, SQL, frameworks de machine learning y experiencia con diseño experimental y POCs.",
+    "La formación cuantitativa buscada incluye explícitamente Actuaría y se valora posgrado en un campo cuantitativo.",
+    "Incluye colaboración con stakeholders senior, liderazgo de proyectos y resolución de problemas de negocio no estructurados.",
+    "El esquema es híbrido en Ciudad de México, con asistencia de 2 a 3 días por semana."
+  ],
+  "fit_summary": "Muy buena oportunidad para combinar liderazgo técnico, experimentación, Python/SQL y machine learning en un entorno global de producto, con un rol suficientemente hands-on para aprovechar experiencia senior.",
+  "identity_key": "6fe2dc93c1fba97b1f247002aef6ed77b1204590d32e1b0ad1ce16fb5b4b08be",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": "2026-08-19",
+  "posted_date_raw": "2026-08-19",
+  "provenance": [
+    {
+      "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "03e40c0a128a4ee68dc781a3200ccd38ea920b29b6c9ace77c6305076edc305e",
+      "source_native_id": "pfizer-4962047",
+      "source_path": "Vacantes/vacantes_2026-08-25.json",
+      "source_search_date": "2026-08-25",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Data Science Manager",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Scikit-learn",
+    "PyTorch",
+    "TensorFlow",
+    "Machine Learning",
+    "Experimental Design",
+    "CI/CD",
+    "GitHub Actions",
+    "Jenkins",
+    "AWS",
+    "Azure",
+    "Snowflake",
+    "GCP",
+    "Docker"
+  ],
+  "url": "https://pfizer.wd1.myworkdayjobs.com/es/PfizerCareers/job/Mexico---Mexico-City/Data-Science-Manager_4962047",
+  "vacancy_id": "vac-6fe2dc93c1fba97b",
+  "work_model": "Hybrid"
+}

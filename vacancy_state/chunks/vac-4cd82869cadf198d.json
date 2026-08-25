@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-4cd82869cadf198d::core",
+      "chunk_type": "core",
+      "content_hash": "d851c9c7c0f939a9ee6692af69253fd386dd554424758543279b0e56c46554db",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Role: Data Scientist\nCompany: Ingredion\nCompany category: Otro\nLocation: Home Office - ECoE Mexico\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-4cd82869cadf198d"
+    },
+    {
+      "chunk_id": "vac-4cd82869cadf198d::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "b8a6e34112f85a8ab1b923dfffea0b367611f413f3c6345f0006e501880d0e83",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Technologies / capabilities: Machine Learning; SQL; Predictive Modeling; Prescriptive Analytics; Simulation; Clustering; PCA; Classification; Regression; Data Pipelines; Model Monitoring; MLOps",
+      "vacancy_id": "vac-4cd82869cadf198d"
+    },
+    {
+      "chunk_id": "vac-4cd82869cadf198d::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "2b804bbae7eb1eb11a3889369974ad0d5557739dd04b45ca1c734d4878de2807",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-25.json"
+      ],
+      "text": "Source fit score: 92/100\nSource fit summary: Buen ajuste por liderazgo técnico, ML end-to-end, modelos productivos y trabajo con grandes problemas operativos; pierde puntos por dominio sectorial y por no explicitar Python/PySpark.\nSource strengths: Aunque el título no incluye Senior, el alcance sí es de liderazgo: dirige iniciativas de Data Science y mentoriza citizen data scientists.; Responsabilidad end-to-end desde diseño y modelado hasta despliegue, monitoreo y refinamiento de modelos en producción.; Trabaja con modelos predictivos, prescriptivos, machine learning, simulación, clustering, PCA, clasificación y regresión.; Incluye construcción de pipelines escalables, integración con bases SQL y colaboración con IT/Data Engineering para producción.; La descripción menciona explícitamente financial risk analytics como uno de los casos de uso relevantes.\nSource gaps: El dominio principal es Supply Chain, Manufacturing y Quality, no banca o fintech.; Python y PySpark no aparecen como requisitos explícitos en la publicación recuperada.; Requiere disponibilidad para viajar hasta 20%.",
+      "vacancy_id": "vac-4cd82869cadf198d"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-4cd82869cadf198d"
+}
