@@ -1,5 +1,5 @@
 {
-  "last_run_id": "c4c50d5125722380c4781d4884ed612a435986c8-noop",
+  "last_run_id": "332523c992fca83270f75bc4c310e921ab6890e1-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -83,6 +83,22 @@
         "vac-6d9bdccca1ff49c3"
       ]
     },
+    "Vacantes/enriched/auto/ingredion-data-scientist-7855e20e5f.json": {
+      "source_hash": "502e7e631670a2a8fa2b0007fd4fef495e5f729c9c8d567d6cd87f31150494bc",
+      "state_file": "sources/Vacantes__enriched__auto__ingredion-data-scientist-7855e20e5f.json--d8704c442dda16a9.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-4cd82869cadf198d"
+      ]
+    },
+    "Vacantes/enriched/auto/kake-senior-data-scientist-67bc1a0d13.json": {
+      "source_hash": "912093622a9800633342ab0da8aa8cd0311eefd37ac422510733e00319fb7bf0",
+      "state_file": "sources/Vacantes__enriched__auto__kake-senior-data-scientist-67bc1a0d13.json--b110b1c8dda888b4.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-e1579e279d47b8a9"
+      ]
+    },
     "Vacantes/enriched/auto/konf-o-ai-ml-engineer-sr-180871be26.json": {
       "source_hash": "f80c53c68813799bec906d8aeebe5dbe63c05c7406b6af60ebd104d51ccce2d6",
       "state_file": "sources/Vacantes__enriched__auto__konf-o-ai-ml-engineer-sr-180871be26.json--a252c01dfd220216.json",
@@ -105,6 +121,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-14b95b3407bcb148"
+      ]
+    },
+    "Vacantes/enriched/auto/pfizer-data-science-manager-6b0826f58d.json": {
+      "source_hash": "9d2d4e9a1863d0df78f20ea8e741adfaf1678999103a57a0f07ed4510a769182",
+      "state_file": "sources/Vacantes__enriched__auto__pfizer-data-science-manager-6b0826f58d.json--ce9613f2021a2cc9.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6fe2dc93c1fba97b"
       ]
     },
     "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json": {

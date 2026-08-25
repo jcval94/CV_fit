@@ -3,8 +3,8 @@
   "city": "Área metropolitana de Ciudad de México / LATAM",
   "company": "Kake",
   "company_category": "Otro",
-  "content_hash": "01af9b58fab114a96337ff69c795c5b864180dcefe3a4c72605199743fef494b",
-  "description": null,
+  "content_hash": "1df36b450477597f1bba0404cb6e514b4c79a594c0f4b8486e00490a61455d64",
+  "description": "<p><strong>About the Role</strong></p><p>We’re looking for a <strong>Senior Product Data Scientist</strong> with strong technical expertise and a true ownership mindset. This person will go beyond assigned tasks, proactively identifying opportunities for improvement and driving impact across the product. You’ll work closely with Product Managers and cross-functional teams (design, engineering, marketing, research) to translate data into actionable insights that shape product direction.</p><p><br></p><p>The team operates around <strong>Latin America's time zone</strong>, so you’ll need at least <strong>6 hours of overlap</strong> with GMT-7.</p><p><br></p><p><strong>What You’ll Do</strong></p><p>Partner with Product Managers and cross-functional stakeholders to inform product strategy with data-driven insights.</p><p>Design and run experiments (A/B testing, experimentation frameworks) to measure impact and guide decision-making.</p><p>Translate data into clear, actionable product recommendations.</p><p>Develop metrics, dashboards, and reports to monitor product health and growth.</p><p>Contribute to building scalable data infrastructure and experimentation workflows.</p><p><br></p><p><strong>What We’re Looking For</strong></p><p>Strong foundation in Data Science with hands-on experience in <strong>experimentation, research, and product improvements</strong>.</p><p>Expertise in <strong>statistics, experiment design, and A/B testing</strong>, with a track record of delivering actionable insights.</p><p>Product-focused data science background — comfortable collaborating with PMs and communicating with both technical and non-technical stakeholders.</p><p>Proficiency in <strong>Python and SQL</strong> for data analysis, modeling, and reporting.</p><p>Excellent communication skills, with the ability to distill complex data into clear recommendations.</p><p>Proactive, ownership-driven mindset and willingness to go beyond assigned tasks.</p><p><br></p><p><strong>Nice to Have</strong></p><p>Experience with <strong>Snowflake, Superset, Eppo, or Airflow</strong>.</p><p>Background in <strong>SEO, acquisition, conversion optimization, or growth analytics</strong>.</p><p>Experience in <strong>consumer tech or high-growth product environments</strong>.</p><p>Previous remote work experience.</p><p><br></p><p><strong>Why Join Kake?</strong></p><p>Kake is a remote-first company with a global community — fully believing that it’s not where your table is, but what you bring to the table that matters. We provide top-tier engineering teams to support some of the world’s most innovative companies, and we’ve built a culture where great people stay, grow, and thrive. We’re proud to be more than just a stop along the way in your career — we’re the destination.</p><p><br></p><p><strong>The icing on the Kake:</strong></p><p>💵 Competitive Pay in USD – Work globally, get paid globally.</p><p>🏡 Fully Remote – Simply put, we trust you.</p><p>🌱 Better Me Fund – We invest in your personal growth and passions.</p><p>❤️ Compassion is Badass – Join a community that invests in social good.</p>",
   "fit_gaps": [
     "Kake opera como proveedor de talento/equipos tecnológicos, por lo que se deprioriza frente a empresas de producto directo.",
     "No existe foco explícito en banca, riesgo, fraude, credit scoring o GenAI.",
@@ -20,21 +20,31 @@
   ],
   "fit_summary": "Excelente ajuste para la vertiente de Product/Decision Science por experimentación, estadística, Python, SQL y ownership, con la ventaja adicional de modalidad 100% remota.",
   "identity_key": "e1579e279d47b8a930ebafe7eead5fa95a2299d3c0b9a38cd8e8e49e8d98002d",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
-    "substantive_requirements=0",
+    "description_chars=3111",
+    "substantive_requirements=1",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 65.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Área metropolitana de Ciudad de México / LATAM",
   "posted_date": "2026-08-24",
   "posted_date_raw": "2026-08-24",
   "provenance": [
+    {
+      "source_commit": "332523c992fca83270f75bc4c310e921ab6890e1",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "912093622a9800633342ab0da8aa8cd0311eefd37ac422510733e00319fb7bf0",
+      "source_native_id": "kake-4454662183",
+      "source_path": "Vacantes/enriched/auto/kake-senior-data-scientist-67bc1a0d13.json",
+      "source_search_date": "2026-08-25",
+      "source_updated_at": null
+    },
     {
       "source_commit": "c4c50d5125722380c4781d4884ed612a435986c8",
       "source_entry_index": 1,
@@ -46,7 +56,9 @@
       "source_updated_at": null
     }
   ],
-  "requirements": [],
+  "requirements": [
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
   "responsibilities": [],
   "role_title": "Senior Data Scientist",
   "salary": "Competitivo en USD; monto no especificado",
