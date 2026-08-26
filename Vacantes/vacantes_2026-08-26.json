@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-26",
+    "total_vacantes_encontradas": 3,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "relx-4457198673",
+      "puesto": "Senior Machine Learning Engineer III",
+      "empresa": "RELX / LexisNexis Legal & Professional",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-26",
+      "porcentaje_ajuste": 97,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol senior de Machine Learning enfocado en GenAI productiva, RAG, evaluación y sistemas confiables de recuperación de información.",
+          "Responsabilidad end-to-end sobre ingestión, chunking, embeddings, retrieval, reranking, evaluación reproducible, monitoreo de calidad, latencia y costo.",
+          "Fuerte alineación con experiencia en LLMs, RAG, arquitectura de soluciones y producción, además de trabajo en un dominio regulado y de alta exigencia de precisión.",
+          "Valora experiencia con agentes, LangChain, Google ADK, MCP, observabilidad de LLMs y flujos multi-step.",
+          "El rango de experiencia publicado es 5-10 años, cercano al seniority objetivo."
+        ],
+        "posibles_gaps": [
+          "No está enfocado directamente en banca, fraude o credit scoring.",
+          "El rol se concentra más en GenAI/RAG y retrieval engineering que en modelado tabular o PySpark clásico.",
+          "La descripción pública no explicita PySpark como requisito."
+        ],
+        "resumen": "La mejor oportunidad nueva de esta corrida: seniority adecuado, modalidad remota, GenAI aplicada a producción, ownership técnico y arquitectura de sistemas de IA confiables."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "Generative AI",
+        "RAG",
+        "LLMs",
+        "Embeddings",
+        "Vector Search",
+        "Hybrid Search",
+        "LangChain",
+        "Google ADK",
+        "MCP",
+        "Agentic AI",
+        "LLM Evaluation",
+        "Model Monitoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-machine-learning-engineer-iii-at-relx-4457198673"
+    },
+    {
+      "id_vacante": "ford-67563",
+      "puesto": "Data Scientist NLP (AI) Engineer",
+      "empresa": "Ford Motor Company",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-20",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición remota desde Ciudad de México centrada en NLP, LLMs, GenAI y soluciones empresariales listas para producción.",
+          "Pide Python y SQL, desarrollo de código productivo, APIs, contenedores, CI/CD, monitoreo y despliegue cloud.",
+          "Incluye diseño, prototipado, evaluación y productización de aplicaciones LLM, con foco en Responsible AI y mitigación de alucinaciones.",
+          "Valora AI agentic, tool use, workflow orchestration, sistemas multiagente, MLOps/LLMOps y experiment tracking.",
+          "El alcance end-to-end y la colaboración con Producto, Ingeniería, Analytics y negocio encajan muy bien con un perfil técnico senior."
+        ],
+        "posibles_gaps": [
+          "El título no incluye explícitamente Senior o Lead.",
+          "El dominio principal es automotriz y tecnología empresarial, por lo que no capitaliza directamente banca, riesgo o fraude.",
+          "GCP y Vertex AI aparecen como plataforma preferida y podrían requerir adaptación si la experiencia reciente está concentrada en otros clouds."
+        ],
+        "resumen": "Match técnico muy alto para IA aplicada: Python, SQL, LLMs, agentes, evaluación, producción y MLOps, con la ventaja adicional de ser remoto en CDMX."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "NLP",
+        "LLMs",
+        "Generative AI",
+        "Vertex AI",
+        "BigQuery",
+        "GCP",
+        "Agentic AI",
+        "Multi-agent Systems",
+        "MLOps",
+        "LLMOps",
+        "Docker",
+        "CI/CD",
+        "Model Evaluation"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://www.careers.ford.com/en/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056"
+    },
+    {
+      "id_vacante": "braintrust-sedrus-4457527442",
+      "puesto": "Senior AI Engineer (LATAM - Remote)",
+      "empresa": "Sedrus (vía Braintrust)",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "LATAM / México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-23",
+      "porcentaje_ajuste": 95,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Wealth-tech enfocada en automatización del back office financiero mediante agentes y sistemas de IA.",
+          "Rol senior hands-on con ownership completo sobre agentes, workflows, herramientas internas e integraciones en producción.",
+          "Pide experiencia con LLMs, LangChain/LangGraph, tool calling, retrieval, context management, evaluación y sistemas multi-step.",
+          "El contexto financiero permite aprovechar conocimiento de procesos, riesgo, operaciones y cumplimiento mejor que un rol de IA genérico.",
+          "Modalidad 100% remota para LATAM y trabajo directo con founders, con alta autonomía técnica."
+        ],
+        "posibles_gaps": [
+          "El foco es AI engineering y automatización interna más que Data Science estadística o credit scoring.",
+          "Se requieren 5+ años de software engineering y fuerte experiencia en APIs e integraciones productivas.",
+          "La contratación se publica mediante Braintrust, por lo que conviene validar condiciones contractuales y beneficios para México."
+        ],
+        "resumen": "Muy buen fit para evolucionar hacia Applied AI/Agentic AI dentro de un contexto financiero, manteniendo alto ownership técnico y trabajo remoto."
+      },
+      "stack_clave_detectado": [
+        "LLMs",
+        "Agentic AI",
+        "LangChain",
+        "LangGraph",
+        "Tool Calling",
+        "RAG",
+        "Context Management",
+        "LLM Evaluation",
+        "APIs",
+        "n8n",
+        "Zapier",
+        "Production AI"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-ai-engineer-latam-remote-at-braintrust-4457527442"
+    }
+  ]
+}
