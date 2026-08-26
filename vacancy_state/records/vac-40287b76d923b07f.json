@@ -1,0 +1,72 @@
+{
+  "application_language": "en",
+  "city": "LATAM / México",
+  "company": "Sedrus (vía Braintrust)",
+  "company_category": "Fintech",
+  "content_hash": "ca7ecd78092d9a824ab534a8009edfa8ee66ef807c148c6b6eb4c21766ea96a5",
+  "description": null,
+  "fit_gaps": [
+    "El foco es AI engineering y automatización interna más que Data Science estadística o credit scoring.",
+    "Se requieren 5+ años de software engineering y fuerte experiencia en APIs e integraciones productivas.",
+    "La contratación se publica mediante Braintrust, por lo que conviene validar condiciones contractuales y beneficios para México."
+  ],
+  "fit_score": 95.0,
+  "fit_strengths": [
+    "Wealth-tech enfocada en automatización del back office financiero mediante agentes y sistemas de IA.",
+    "Rol senior hands-on con ownership completo sobre agentes, workflows, herramientas internas e integraciones en producción.",
+    "Pide experiencia con LLMs, LangChain/LangGraph, tool calling, retrieval, context management, evaluación y sistemas multi-step.",
+    "El contexto financiero permite aprovechar conocimiento de procesos, riesgo, operaciones y cumplimiento mejor que un rol de IA genérico.",
+    "Modalidad 100% remota para LATAM y trabajo directo con founders, con alta autonomía técnica."
+  ],
+  "fit_summary": "Muy buen fit para evolucionar hacia Applied AI/Agentic AI dentro de un contexto financiero, manteniendo alto ownership técnico y trabajo remoto.",
+  "identity_key": "40287b76d923b07fc6e6b4d00aa3708dc3c270594ff46a665d63c40b556bf4b7",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "LATAM / México",
+  "posted_date": "2026-08-23",
+  "posted_date_raw": "2026-08-23",
+  "provenance": [
+    {
+      "source_commit": "fc97b77153f4aa49f78de0490c56a4cb17a0d869",
+      "source_entry_index": 2,
+      "source_format": "vacantes_v1",
+      "source_hash": "ce6aa7f930cecfb8b74823367e7b8c872231aa648dd05fb397394b126db1c304",
+      "source_native_id": "braintrust-sedrus-4457527442",
+      "source_path": "Vacantes/vacantes_2026-08-26.json",
+      "source_search_date": "2026-08-26",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior AI Engineer (LATAM - Remote)",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "LLMs",
+    "Agentic AI",
+    "LangChain",
+    "LangGraph",
+    "Tool Calling",
+    "RAG",
+    "Context Management",
+    "LLM Evaluation",
+    "APIs",
+    "n8n",
+    "Zapier",
+    "Production AI"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/senior-ai-engineer-latam-remote-at-braintrust-4457527442",
+  "vacancy_id": "vac-40287b76d923b07f",
+  "work_model": "Remote"
+}

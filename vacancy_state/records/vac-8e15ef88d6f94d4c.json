@@ -1,0 +1,75 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "Ford Motor Company",
+  "company_category": "Producto Tech",
+  "content_hash": "f29cf082ce37b76d39c04b65a2d0563c8e8d76f4ab703974b4a776a3e991ee15",
+  "description": null,
+  "fit_gaps": [
+    "El título no incluye explícitamente Senior o Lead.",
+    "El dominio principal es automotriz y tecnología empresarial, por lo que no capitaliza directamente banca, riesgo o fraude.",
+    "GCP y Vertex AI aparecen como plataforma preferida y podrían requerir adaptación si la experiencia reciente está concentrada en otros clouds."
+  ],
+  "fit_score": 96.0,
+  "fit_strengths": [
+    "Posición remota desde Ciudad de México centrada en NLP, LLMs, GenAI y soluciones empresariales listas para producción.",
+    "Pide Python y SQL, desarrollo de código productivo, APIs, contenedores, CI/CD, monitoreo y despliegue cloud.",
+    "Incluye diseño, prototipado, evaluación y productización de aplicaciones LLM, con foco en Responsible AI y mitigación de alucinaciones.",
+    "Valora AI agentic, tool use, workflow orchestration, sistemas multiagente, MLOps/LLMOps y experiment tracking.",
+    "El alcance end-to-end y la colaboración con Producto, Ingeniería, Analytics y negocio encajan muy bien con un perfil técnico senior."
+  ],
+  "fit_summary": "Match técnico muy alto para IA aplicada: Python, SQL, LLMs, agentes, evaluación, producción y MLOps, con la ventaja adicional de ser remoto en CDMX.",
+  "identity_key": "8e15ef88d6f94d4c102f020365a6688b975dbed91ebd575344076a280d238a61",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": "2026-08-20",
+  "posted_date_raw": "2026-08-20",
+  "provenance": [
+    {
+      "source_commit": "fc97b77153f4aa49f78de0490c56a4cb17a0d869",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "ce6aa7f930cecfb8b74823367e7b8c872231aa648dd05fb397394b126db1c304",
+      "source_native_id": "ford-67563",
+      "source_path": "Vacantes/vacantes_2026-08-26.json",
+      "source_search_date": "2026-08-26",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Data Scientist NLP (AI) Engineer",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "NLP",
+    "LLMs",
+    "Generative AI",
+    "Vertex AI",
+    "BigQuery",
+    "GCP",
+    "Agentic AI",
+    "Multi-agent Systems",
+    "MLOps",
+    "LLMOps",
+    "Docker",
+    "CI/CD",
+    "Model Evaluation"
+  ],
+  "url": "https://www.careers.ford.com/en/job/mexico-city/data-scientist-nlp-ai-engineer/48560/99370903056",
+  "vacancy_id": "vac-8e15ef88d6f94d4c",
+  "work_model": "Remote"
+}
