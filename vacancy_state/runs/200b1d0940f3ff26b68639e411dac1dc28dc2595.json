@@ -3,14 +3,15 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "GPTW/vacantes_2026-08-26.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
       "GPTW/enriched/konfio_ai_ml_engineer_sr_2026-08-18.json",
       "GPTW/vacantes_2026-08-21.json",
       "GPTW/vacantes_2026-08-23.json",
-      "GPTW/vacantes_2026-08-26.json",
       "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
       "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
@@ -38,24 +39,26 @@
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "200b1d0940f3ff26b68639e411dac1dc28dc2595-noop",
+  "reindexed_vacancy_ids": [
+    "vac-5cbdd1b45ef6adc3"
+  ],
+  "run_id": "200b1d0940f3ff26b68639e411dac1dc28dc2595",
   "schema_version": 1,
   "source_commit": "200b1d0940f3ff26b68639e411dac1dc28dc2595",
   "source_counts": {
     "deleted": 0,
     "discovered": 29,
     "modified": 0,
-    "new": 0,
+    "new": 1,
     "quarantined": 0,
-    "unchanged": 29
+    "unchanged": 28
   },
   "status": "success",
   "vacancy_counts": {
     "active": 21,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

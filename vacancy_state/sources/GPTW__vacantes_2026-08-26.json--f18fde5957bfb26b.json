@@ -1,0 +1,72 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México",
+      "company": "Amazon Music",
+      "company_category": null,
+      "content_hash": "598479686d5513b8e5bb4743e264f5eed1c860c88fbab745ffb911d01837c9f1",
+      "description": null,
+      "fit_gaps": [],
+      "fit_score": 88.0,
+      "fit_strengths": [],
+      "fit_summary": "Encaje alto para un perfil senior con experiencia en Python/SQL, procesamiento distribuido y construcción de pipelines de datos a escala. El rol tiene impacto directo sobre iniciativas de Data Science y ML en Amazon Music, aunque está más orientado a ingeniería de datos avanzada que a modelado o GenAI hands-on.",
+      "identity_key": "5cbdd1b45ef6adc3aaec1f0a5bb590e9b3f635a192b67ebe07cebb77e6f1c2be",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México",
+      "posted_date": "2026-08-21",
+      "posted_date_raw": "2026-08-21",
+      "provenance": [
+        {
+          "source_commit": "200b1d0940f3ff26b68639e411dac1dc28dc2595",
+          "source_entry_index": 0,
+          "source_format": "gptw_v1",
+          "source_hash": "d73cdc85b0ee4b8fac4a3f2ac29fec6a30106de0d25dcf7fd18996b680f47f02",
+          "source_native_id": "amazon-music-sr-data-engineer-disco-10478794-2026-08-21",
+          "source_path": "GPTW/vacantes_2026-08-26.json",
+          "source_search_date": null,
+          "source_updated_at": "2026-08-26T14:09:36Z"
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Sr Data Engineer - Music DISCO, Music DISCO",
+      "salary": null,
+      "schema_version": 2,
+      "seniority": "Senior",
+      "tech_stack": [
+        "SQL",
+        "Python",
+        "Java",
+        "Scala",
+        "Spark",
+        "EMR",
+        "Redshift",
+        "S3",
+        "DynamoDB",
+        "Kinesis Firehose",
+        "Lambda",
+        "Airflow",
+        "Data Lakes",
+        "ETL"
+      ],
+      "url": "https://www.amazon.jobs/en/jobs/10478794/sr-data-engineer-music-disco-music-disco",
+      "vacancy_id": "vac-5cbdd1b45ef6adc3",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "d73cdc85b0ee4b8fac4a3f2ac29fec6a30106de0d25dcf7fd18996b680f47f02",
+  "source_path": "GPTW/vacantes_2026-08-26.json",
+  "status": "valid"
+}

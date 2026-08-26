@@ -1,5 +1,5 @@
 {
-  "last_run_id": "332523c992fca83270f75bc4c310e921ab6890e1-noop",
+  "last_run_id": "200b1d0940f3ff26b68639e411dac1dc28dc2595-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -33,6 +33,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-71351017a6b16474"
+      ]
+    },
+    "GPTW/vacantes_2026-08-26.json": {
+      "source_hash": "d73cdc85b0ee4b8fac4a3f2ac29fec6a30106de0d25dcf7fd18996b680f47f02",
+      "state_file": "sources/GPTW__vacantes_2026-08-26.json--f18fde5957bfb26b.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-5cbdd1b45ef6adc3"
       ]
     },
     "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json": {

@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-5cbdd1b45ef6adc3::core",
+      "chunk_type": "core",
+      "content_hash": "033b76949fe00f647c721db51f1c431984af7eef318d27a35d8d7feb2fb36219",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-26.json"
+      ],
+      "text": "Role: Sr Data Engineer - Music DISCO, Music DISCO\nCompany: Amazon Music\nSeniority: Senior\nLocation: Ciudad de México\nWork model: On-site\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-5cbdd1b45ef6adc3"
+    },
+    {
+      "chunk_id": "vac-5cbdd1b45ef6adc3::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "f490b22a66af8a8005193a02ba44abb9191f7e713c4b1a39410e9a8b1e308cdb",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-26.json"
+      ],
+      "text": "Technologies / capabilities: SQL; Python; Java; Scala; Spark; EMR; Redshift; S3; DynamoDB; Kinesis Firehose; Lambda; Airflow; Data Lakes; ETL",
+      "vacancy_id": "vac-5cbdd1b45ef6adc3"
+    },
+    {
+      "chunk_id": "vac-5cbdd1b45ef6adc3::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "646ae9b3c78a2aa114ba62db5c21f62353dbafcf12c20303428c99cc35315c61",
+      "source_paths": [
+        "GPTW/vacantes_2026-08-26.json"
+      ],
+      "text": "Source fit score: 88/100\nSource fit summary: Encaje alto para un perfil senior con experiencia en Python/SQL, procesamiento distribuido y construcción de pipelines de datos a escala. El rol tiene impacto directo sobre iniciativas de Data Science y ML en Amazon Music, aunque está más orientado a ingeniería de datos avanzada que a modelado o GenAI hands-on.",
+      "vacancy_id": "vac-5cbdd1b45ef6adc3"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-5cbdd1b45ef6adc3"
+}
