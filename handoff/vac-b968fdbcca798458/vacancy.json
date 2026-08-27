@@ -1,0 +1,82 @@
+{
+  "application_language": "es",
+  "city": "México / Ciudad de México",
+  "company": "Creai",
+  "company_category": "Otro",
+  "content_hash": "7260cf254784b1c09fdbfadf84b6e6a4745ccc894ef2de87f0c24aa962f8d1ec",
+  "description": "<h3><strong>Sobre Creai</strong></h3><p>En Creai, nos especializamos en aprovechar el poder de la inteligencia artificial y el aprendizaje automático para transformar negocios. Nuestra misión es ayudar a los clientes a reducir costos, aumentar la eficiencia y desbloquear nuevas oportunidades mediante soluciones de IA de vanguardia.</p><h4><span>Descripción del Puesto</span></h4><p><span>Como Senior Machine Learning Engineer, tu trabajo ya no es supervisar modelos uno por uno, sino diseñar, escalar y gobernar la práctica completa con la que el equipo dirige, valida y responde por los sistemas de IA que construye. Usarás tu juicio estratégico y tu dominio del negocio para decidir qué problemas ameritan una solución de ML, cuánto cuesta equivocarse en cada caso, y qué evidencia es suficiente antes de delegar un experimento completo a un agente o de exponer un modelo a un cliente.</span></p><div><p><span>Serás responsable de que delegar sea seguro a escala, no solo en tus propios proyectos: diseñarás las plataformas, los contratos entre etapas y los límites explícitos de lo que un agente puede generar sin verificación humana, porque cuando experimentar cuesta minutos, el cuello de botella deja de ser la capacidad de construir y pasa a ser la capacidad de decidir qué construir y en qué confiar. Colaborarás con líderes de producto, data scientists y equipos de ingeniería para alinear estas decisiones con los objetivos estratégicos de Creai, definiendo los estándares técnicos y las prácticas de supervisión de IA que el resto del equipo sigue.</span></p></div><div><h4><span>Este Puesto Exige</span></h4></div><div><ul><li><p><span>Desarrollo de Soluciones Avanzadas: Diseñar, desarrollar e implementar soluciones avanzadas de ML en ambientes productivos de alta disponibilidad y baja latencia. Esto incluye la selección de algoritmos apropiados, optimización de modelos y aseguramiento de la calidad del código.</span></p></li></ul></div><div><ul><li><p><span>Diseñar plataformas de ML legibles para humanos y para agentes: pipelines modulares, contratos explícitos entre etapas, semántica documentada de forma ejecutable, entornos reproducibles. Una plataforma bien delimitada permite delegar experimentos completos; una improvisada obliga a que cada corrida pase por quien la construyó.</span></p></li></ul></div><div><ul><li><p><span>Definir la línea entre lo que se delega y lo que no para su ámbito técnico, y hacerla explícita: qué experimentos pueden generarse y validarse automáticamente, qué decisiones de modelado exigen diseño humano previo, y qué casos de uso — de alto impacto, regulados o irreversibles — no admiten generación sin verificación formal.</span></p></li></ul></div><div><ul><li><p><span>Liderazgo Técnico: Liderar iniciativas técnicas y proyectos de alto impacto que involucren múltiples equipos y dominios. Serás un referente técnico, proporcionando guía y dirección en la toma de decisiones clave.</span></p></li></ul></div><div><ul><li><p><span>Arquitectura y Estrategia: Participar activamente en la definición de estrategias de datos, incluyendo la identificación y selección de features relevantes, preprocesamiento de datos y diseño de arquitecturas de modelos eficientes y escalables.</span></p></li></ul></div><div><ul><li><p><span>Colaboración Estratégica: Trabajar en conjunto con líderes de producto para entender las necesidades del negocio, con data scientists para la experimentación y validación de modelos, y con equipos de ingeniería para asegurar la integración y el despliegue exitoso, alineando siempre los desarrollos con objetivos estratégicos de la empresa.</span></p></li></ul></div><div><ul><li><p><span>Mejora Continua: Evaluar y mejorar continuamente el stack de ML, las herramientas, los procesos y las prácticas de MLOps para optimizar la eficiencia y la fiabilidad de las soluciones.</span></p></li></ul></div><div><ul><li><p><span>Mentoría: Mentorizar activamente a ingenieros junior y mid-level, compartiendo conocimiento profundo en ML y MLOps, y fomentando las buenas prácticas de desarrollo y despliegue.</span></p></li></ul></div><div><ul><li><p><span>Cultura de Excelencia: Promover una cultura de excelencia técnica, innovación y mejora continua dentro del equipo y en la organización.</span></p></li></ul></div><div><ul><li><p><span>Liderazgo y Mentoría: Habilidades sólidas de liderazgo técnico, influencia y mentoría, capaces de inspirar y guiar a otros ingenieros.</span></p></li></ul></div><div><ul><li><p><span>Comunicación Estratégica: Capacidad de comunicación efectiva y persuasiva con stakeholders técnicos y no técnicos, presentando ideas complejas de manera clara y concisa.</span></p></li></ul></div><div><ul><li><p><span>Visión de Negocio: Enfoque estratégico y una mentalidad fuertemente orientada al negocio, entendiendo cómo las soluciones de ML impactan directamente en los objetivos de la empresa.</span></p></li></ul></div><div><div><ul><li><p><span>Toma de Decisiones: Capacidad probada de toma de decisiones rápidas y efectivas, así como de resolución de problemas complejos y ambiguos en entornos dinámicos.</span></p></li></ul></div><div><p></p></div><div><h4><span>Requisitos</span></h4></div><div><ul><li><p><span>Formación Académica: Título universitario en Ciencias de la Computación, Ingeniería, Matemáticas, Estadística o campos afines. Un posgrado (Maestría o Doctorado) en áreas relacionadas con Machine Learning o Inteligencia Artificial es un plus significativo.</span></p></li></ul></div><div><ul><li><p><span>Experiencia Profesional: Más de 5 años de experiencia comprobada en machine learning aplicado, con un enfoque particular en el diseño, desarrollo y despliegue de modelos en entornos de producción a gran escala</span></p></li></ul></div><div><ul><li><p><span>Dominio de Python: Dominio avanzado de Python, incluyendo su ecosistema de librerías para ML, y experiencia práctica con frameworks de deep learning como PyTorch y TensorFlow, así como librerías de machine learning tradicional como Scikit-learn y XGBoost.</span></p></li></ul></div><div><ul><li><p><span>Cloud Computing: Experiencia sólida en plataformas de cloud computing (AWS, GCP, Azure), incluyendo el uso de servicios específicos para ML (ej. SageMaker, AI Platform, Azure ML) y conocimiento de sus arquitecturas.</span></p></li></ul></div><div><ul><li><p><span>Diseño End-to-End: Capacidad demostrada para diseñar y construir soluciones de ML de principio a fin, desde la ingesta y preprocesamiento de datos, entrenamiento y validación de modelos, hasta el despliegue, monitoreo y mantenimiento en producción.</span></p></li></ul></div><div><ul><li><p><span>MLOps Avanzado: Conocimientos profundos y experiencia práctica en MLOps, incluyendo el diseño e implementación de pipelines de CI/CD para ML, versionado de modelos y datos, monitoreo de rendimiento de modelos en producción y estrategias de rollback.</span></p></li></ul></div><div><ul><li><p><span>Experiencia en Liderazgo: Experiencia liderando equipos técnicos, gestionando proyectos de ML o dirigiendo iniciativas técnicas complejas.</span></p></li></ul></div><div><ul><li><p><span>Especialización Técnica (Valorado): Experiencia con modelos generativos (ej. LLMs, GANs), procesamiento de lenguaje natural (NLP), visión por computador o análisis de series temporales, y sus aplicaciones prácticas.</span></p></li></ul></div><div><ul><li><p><span>Ética y Gobernanza (Valorado): Conocimientos en privacidad de datos, ética en IA, interpretabilidad de modelos (XAI) y gobernanza de modelos, asegurando que las soluciones sean responsables y transparentes</span></p></li></ul></div><div><ul><li><p><span>Comunidad y Open Source (Valorado): Participación activa en comunidades técnicas, contribuciones a proyectos open source, publicaciones en conferencias o blogs técnicos, o speaking en eventos de la industria.</span></p></li></ul></div><div><ul><li><p><span>Herramientas MLOps (Valorado): Experiencia práctica con herramientas específicas de MLOps como MLflow, Kubeflow, DVC, Airflow o Vertex AI, para la orquestación, gestión y seguimiento de experimentos y modelos.</span></p></li></ul></div><div><ul><li><p><span>Uso de agentes de IA en trabajo productivo real de ML, con criterio demostrable sobre dónde aportan y dónde introducen riesgo sistémico.</span></p></li></ul></div></div><h3><strong>Beneficios</strong></h3><ul><li><p>💻 <strong>Trabajo</strong> 100% remoto con horario alineado a CST.</p></li></ul><ul><li><p>🏖️ <strong>PTO </strong>ilimitado: Confiamos en que gestionarás tu tiempo de manera efectiva.</p></li></ul><ul><li><p>🎓 <strong>Presupuesto</strong> anual para desarrollo: Acceso a cursos, certificaciones y conferencias.</p></li></ul><ul><li><p>🛠️ <strong>Presupuesto</strong> para equipamiento: Configura tu espacio de trabajo remoto ideal.</p></li></ul><ul><li><p>🩺 <strong>Beneficio</strong> de salud: Acceso a cobertura médica privada o subsidios para seguro médico.</p></li></ul><ul><li><p>🚀 <strong>Oportunidades</strong> de crecimiento: Plan de carrera y mentoría con expertos en IA y tecnología.</p></li></ul><ul><li><p>🚀 <strong>Ambiente de </strong>startup dinámico y flexible: Autonomía para tomar decisiones y proponer ideas, con un enfoque en resultados en lugar de horas trabajadas.</p></li></ul><ul><li><p>⚖️ <strong>Balance </strong>vida-trabajo: Cultura que prioriza la flexibilidad y el bienestar, permitiéndote gestionar tu tiempo sin sacrificar tu vida personal.</p></li></ul><p><strong>¡</strong>Te invitamos a postularte!</p><p>Incluso si no cumples con todos los requisitos, valoramos experiencias y perspectivas diversas. Si te apasiona el reclutamiento y quieres crecer en una empresa enfocada en datos e IA, ¡nos encantaría conocerte!</p><p><br></p>",
+  "fit_gaps": [
+    "Creai presta servicios de IA y consultoría, por lo que se mantiene detrás de empresas puramente de producto según el criterio de priorización.",
+    "No presenta un foco específico en banca, fraude o credit scoring."
+  ],
+  "fit_score": 95.0,
+  "fit_strengths": [
+    "Rol senior publicado en español y 100% remoto, centrado en diseño, escalamiento y gobierno de sistemas de IA y machine learning.",
+    "Exige dominio avanzado de Python, PyTorch, TensorFlow, Scikit-learn y XGBoost, además de experiencia en AWS, GCP o Azure.",
+    "Responsabilidad end-to-end desde ingesta y preparación de datos hasta entrenamiento, validación, despliegue, monitoreo y mantenimiento productivo.",
+    "Incluye arquitectura de plataformas de ML, definición de estándares técnicos, supervisión de agentes y decisiones sobre riesgos y validación formal."
+  ],
+  "fit_summary": "Muy alto ajuste técnico y de liderazgo, especialmente por Python, ML productivo, cloud, diseño end-to-end y gobierno de IA; se conserva pese a ser una empresa de servicios porque el puesto pertenece al núcleo técnico de ML/IA.",
+  "identity_key": "b968fdbcca798458b3515040c4939273f8cac28665808749a7e4cfb461ffb638",
+  "jd_fidelity": "full",
+  "jd_fidelity_reasons": [
+    "description_chars=9753",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "substantive employer-authored JD detail is preserved"
+  ],
+  "jd_fidelity_score": 60.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
+  "location_raw": "México / Ciudad de México",
+  "posted_date": "2026-08-22",
+  "posted_date_raw": "2026-08-22",
+  "provenance": [
+    {
+      "source_commit": "87c000b61e92893ddc78a4b18b66a0392f1c27b2",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "4ddef5104ddbe5342866b05618910db61f29e04fe131262c715c0fc44b023a5b",
+      "source_native_id": "creai-686991",
+      "source_path": "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
+      "source_search_date": "2026-08-23",
+      "source_updated_at": null
+    },
+    {
+      "source_commit": "0c79dc7286d5eecd32febff80ac8158b1ac14ec6",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "197028ed630aa3655a779d546ee9b09e27c05a4e1e56c3edb82eadf1606f8714",
+      "source_native_id": "creai-686991",
+      "source_path": "Vacantes/vacantes_2026-08-23.json",
+      "source_search_date": "2026-08-23",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Machine Learning Engineer",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "PyTorch",
+    "TensorFlow",
+    "Scikit-learn",
+    "XGBoost",
+    "Machine Learning",
+    "Deep Learning",
+    "AWS",
+    "SageMaker",
+    "GCP",
+    "Azure ML",
+    "MLOps",
+    "Model Monitoring",
+    "Agentic AI"
+  ],
+  "url": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer",
+  "vacancy_id": "vac-b968fdbcca798458",
+  "work_model": "Remote"
+}

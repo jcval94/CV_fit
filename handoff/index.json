@@ -1,0 +1,40 @@
+{
+  "candidates": [
+    {
+      "company": "Creai",
+      "files": {
+        "cv_proposed": "cv_proposed.json",
+        "cv_proposed_html": "cv_proposed.html",
+        "final_html": null,
+        "final_pdf": null,
+        "html_base": "html_base.html.j2",
+        "prompt": "prompt.md",
+        "review_notes": null,
+        "vacancy": "vacancy.md",
+        "vacancy_json": "vacancy.json"
+      },
+      "links": {
+        "final_html": null,
+        "final_pdf": null,
+        "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/cv_proposed.html"
+      },
+      "pipeline_status": "COMPLETED_BELOW_TARGET",
+      "quality_kpi": 78,
+      "ready_to_send": false,
+      "repo_folder_url": "https://github.com/jcval94/CV_fit/tree/main/handoff/vac-b968fdbcca798458",
+      "role_title": "Senior Machine Learning Engineer",
+      "run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458",
+      "schema_version": 1,
+      "source_date": "2026-08-23",
+      "source_fit": 95.0,
+      "status": "pending_final_review",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_url": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer"
+    }
+  ],
+  "finalized_count": 0,
+  "pending_count": 1,
+  "repository": "jcval94/CV_fit",
+  "schema_version": 1,
+  "selection_policy": "pending first; then source_fit descending; recency available as source_date"
+}
