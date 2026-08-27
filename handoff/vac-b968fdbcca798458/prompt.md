@@ -10,10 +10,11 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 3. `cv_proposed.json` and `cv_proposed.html`: the current content and rendered proposal.
 4. `match_plan.json`: requirement-level supported / partial / unsupported coverage from the matching stage.
 5. `evidence_snapshot.json`: public-safe evidence split into proposal refs and opportunity refs selected by matching, including constraints and claim boundaries.
-6. `html_base.html.j2`: the visual/template baseline.
-7. `public_identity.yaml`: identity fields that are safe to commit publicly.
-8. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
-9. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
+6. `canonical_backbone.json`, when present: stable chronology and evidence anchors that should not drift during optimization.
+7. `html_base.html.j2`: the visual/template baseline.
+8. `public_identity.yaml`: identity fields that are safe to commit publicly.
+9. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
+10. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
 
 ## Rules
 - Use the vacancy to decide what deserves emphasis.
@@ -37,5 +38,6 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 Create:
 - `final.html`: the final public-safe, self-contained CV ready to render.
 - `review_notes.md`: a concise explanation of the most important changes, remaining gaps, evidence used, and any claim deliberately not made.
+- `cover_letter_final.md` when `cover_letter_proposed.md` exists: a concise final cover letter aligned with the final CV and grounded in the same evidence.
 
 The automated quality KPI is advisory. A below-target proposal can still become the strongest honest application.
