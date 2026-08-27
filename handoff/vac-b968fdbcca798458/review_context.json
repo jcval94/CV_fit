@@ -1,0 +1,148 @@
+{
+  "application_language": "es",
+  "evidence_coverage": {
+    "coverage_score": 80.0,
+    "unsupported_requirements": []
+  },
+  "final_gate_reasons": [
+    "headhunter_decision_not_pass",
+    "overall_score_below_92",
+    "vacancy_alignment_below_90",
+    "evidence_strength_below_95",
+    "language_quality_below_95",
+    "blocking_issues_present"
+  ],
+  "headhunter": {
+    "best_review_iteration": 2,
+    "blocking_issues": [
+      {
+        "problem": "El CV comunica experiencia sólida de ejecución, pero no demuestra con suficiente nitidez el nivel de liderazgo técnico y gobierno de práctica que exige Creai: definición de estándares, decisiones de riesgo/validación, coordinación con producto e ingeniería y guía técnica a otros. La frase «Lidera y contribuye» es demasiado amplia para sostener por sí sola una posición de Senior ML Engineer con responsabilidad de plataforma.",
+        "required_change": "Reformular los bullets de BBVA para priorizar evidencia ya disponible de liderazgo técnico acotado: diseño de arquitecturas de procesos/estados/SLA para operaciones regulatorias, revisión y refactorización de pipelines productivos, automatización segura bajo restricciones corporativas y diseño de workflows GenAI con validación. Mantener explícitamente como brecha la mentoría formal o gestión de equipos si no existe evidencia verificable; no atribuirla.",
+        "section": "Resumen y experiencia reciente en BBVA"
+      },
+      {
+        "problem": "El CV deja fuera capacidades con evidencia seleccionada para esta vacante —AWS/SageMaker, herramientas MLOps y monitoreo— y, por ello, parece menos alineado con el requisito de cloud, operación y gobierno de modelos de lo que permite el expediente. A la vez, no debe sugerir cobertura de PyTorch, XGBoost o Azure ML, que siguen siendo brechas reales.",
+        "required_change": "Incorporar de forma breve y con el nivel de dominio respaldado la evidencia de AWS/SageMaker, MLflow, Kubeflow, Kubernetes, productización y monitoreo de modelos disponible en el respaldo canónico. Separar claramente herramientas usadas de aquellas con dominio operativo. No añadir PyTorch, XGBoost ni Azure ML como competencias.",
+        "section": "Competencias técnicas / ajuste al stack de la vacante"
+      },
+      {
+        "problem": "La experiencia está bien sustentada y mantiene la progresión BBVA y Management Solutions, pero los primeros bullets actuales de BBVA enfatizan detección de fraude y funciones analíticas antes que el hilo diferenciador para Creai: sistemas productivos, calidad de pipelines, reproducibilidad, serving, validación y límites de automatización/GenAI. Esto reduce el impacto inicial para un lector de ML engineering.",
+        "required_change": "Reordenar los cuatro bullets de la posición actual: abrir con producción/calidad de código y pipelines distribuidos; continuar con diseño de workflows GenAI validados y automatización segura; después exponer los sistemas híbridos de detección y las extracciones auditables. Conservar fraude como dominio de aplicación, no como identidad principal.",
+        "section": "Experiencia profesional — priorización para el puesto"
+      }
+    ],
+    "decision": "REVISE",
+    "iterations": 3,
+    "score": 78
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "presentation": {
+    "bundle_reasons": [
+      "content_quality_target_not_reached"
+    ],
+    "gate": {
+      "alternate_physical_status": "PASS",
+      "alternate_presentation_review_status": "PASS",
+      "alternate_template": "harvard_v1",
+      "alternate_visual_status": "PASS",
+      "cover_letter_ready": true,
+      "primary_page_utilization": [
+        0.7428,
+        0.7686
+      ],
+      "primary_physical_status": "PASS",
+      "primary_presentation_review_status": "PASS",
+      "primary_section_area_ratios": {
+        "certifications": 0.0634,
+        "education": 0.0471,
+        "experience": 0.6367,
+        "projects": 0.1569,
+        "skills": 0.096
+      },
+      "primary_section_item_counts": {
+        "certifications": 3,
+        "education": 2,
+        "experience": 7,
+        "projects": 2,
+        "skills": 11
+      },
+      "primary_template": "technical_modern_v1",
+      "primary_visual_status": "PASS",
+      "reasons": [
+        "content_quality_target_not_reached"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    "ready_to_send": false
+  },
+  "quality_kpi": 78,
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_target_reached": false,
+  "review_stop_reason": "max_review_budget_reached",
+  "schema_version": 1,
+  "style_preflight": {
+    "advisories": [],
+    "attempted": false,
+    "initial_issues": [],
+    "initial_status": "PASS",
+    "repaired": false
+  },
+  "vacancy_fit": {
+    "gaps": [
+      "Creai presta servicios de IA y consultoría, por lo que se mantiene detrás de empresas puramente de producto según el criterio de priorización.",
+      "No presenta un foco específico en banca, fraude o credit scoring."
+    ],
+    "source_fit": 95.0,
+    "strengths": [
+      "Rol senior publicado en español y 100% remoto, centrado en diseño, escalamiento y gobierno de sistemas de IA y machine learning.",
+      "Exige dominio avanzado de Python, PyTorch, TensorFlow, Scikit-learn y XGBoost, además de experiencia en AWS, GCP o Azure.",
+      "Responsabilidad end-to-end desde ingesta y preparación de datos hasta entrenamiento, validación, despliegue, monitoreo y mantenimiento productivo.",
+      "Incluye arquitectura de plataformas de ML, definición de estándares técnicos, supervisión de agentes y decisiones sobre riesgos y validación formal."
+    ],
+    "tech_stack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "XGBoost",
+      "Machine Learning",
+      "Deep Learning",
+      "AWS",
+      "SageMaker",
+      "GCP",
+      "Azure ML",
+      "MLOps",
+      "Model Monitoring",
+      "Agentic AI"
+    ]
+  },
+  "validation": {
+    "editorial": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "factual": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "language": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "quality_gate": {
+      "passed": false,
+      "reasons": [
+        "headhunter_decision_not_pass",
+        "overall_score_below_92",
+        "vacancy_alignment_below_90",
+        "evidence_strength_below_95",
+        "language_quality_below_95",
+        "blocking_issues_present"
+      ]
+    },
+    "structure": {
+      "issues": [],
+      "status": "PASS"
+    }
+  }
+}
