@@ -4208,6 +4208,15 @@
       ],
       "unpaired_revision_ids": []
     },
+    "auto-11b2854b3ba5c130084270fee7660e38dc29a3ea": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [],
+      "run_id": "auto-11b2854b3ba5c130084270fee7660e38dc29a3ea",
+      "source_commit": "11b2854b3ba5c130084270fee7660e38dc29a3ea",
+      "source_generation_report_sha256": "a1dd5b543d0e3b1eff2bee289bbd1e97792960e8e9f2e2e3f9275d684be6b65c",
+      "spend_attribution_ids": [],
+      "unpaired_revision_ids": []
+    },
     "auto-200b1d0940f3ff26b68639e411dac1dc28dc2595": {
       "candidate_plan_available": true,
       "review_cycle_ids": [
@@ -4583,12 +4592,30 @@
       ],
       "unpaired_revision_ids": []
     },
+    "auto-9b6f5e3a2c2bea768e32ba201d251e1e3beee5bc": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [],
+      "run_id": "auto-9b6f5e3a2c2bea768e32ba201d251e1e3beee5bc",
+      "source_commit": "9b6f5e3a2c2bea768e32ba201d251e1e3beee5bc",
+      "source_generation_report_sha256": "ae8a88f4e0689b4db81a3d98a79d8bfc569ed82901755a197110756e604214d6",
+      "spend_attribution_ids": [],
+      "unpaired_revision_ids": []
+    },
     "auto-aeec19f356f98c6c0b2e424b1e135d095fb97a38": {
       "candidate_plan_available": false,
       "review_cycle_ids": [],
       "run_id": "auto-aeec19f356f98c6c0b2e424b1e135d095fb97a38",
       "source_commit": "aeec19f356f98c6c0b2e424b1e135d095fb97a38",
       "source_generation_report_sha256": "fe30adc727874c7e1bd5fa797c478ef17c79f1518f2ca34a5bcb9dc56b044676",
+      "spend_attribution_ids": [],
+      "unpaired_revision_ids": []
+    },
+    "auto-b019eb98e16fb227062903fc7a53bfa0ef7f4b1a": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [],
+      "run_id": "auto-b019eb98e16fb227062903fc7a53bfa0ef7f4b1a",
+      "source_commit": "b019eb98e16fb227062903fc7a53bfa0ef7f4b1a",
+      "source_generation_report_sha256": "e4514b972bb384a70ce20cfa91096d1e6a9d73b4aa6a2324f5a955cb4a95d740",
       "spend_attribution_ids": [],
       "unpaired_revision_ids": []
     },
@@ -4653,6 +4680,15 @@
         "40f979d61629f6698176bcdb",
         "f2895de855585c0b0fb8f78b"
       ],
+      "unpaired_revision_ids": []
+    },
+    "auto-e4324df7d8123cdea2fa1fdf6be5fcf344038408": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [],
+      "run_id": "auto-e4324df7d8123cdea2fa1fdf6be5fcf344038408",
+      "source_commit": "e4324df7d8123cdea2fa1fdf6be5fcf344038408",
+      "source_generation_report_sha256": "52c38f094341d2497321284f38b9620fee29f2f3ffaac7dab0c218a5516ca3b2",
+      "spend_attribution_ids": [],
       "unpaired_revision_ids": []
     },
     "auto-e7f6b51a6e51d7d9930a8ce5b5f52a8111b38aed": {
