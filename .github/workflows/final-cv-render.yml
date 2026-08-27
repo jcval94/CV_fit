@@ -80,6 +80,7 @@ jobs:
             handoff/*/final.png
             handoff/*/final_report.json
             handoff/*/review_notes.md
+            handoff/*/cover_letter_final.md
           if-no-files-found: ignore
           retention-days: 30
 
@@ -95,6 +96,7 @@ jobs:
             dir="$(dirname "$target")"
             git add "$dir/final.pdf" "$dir/final.png" "$dir/final_report.json" "$dir/handoff.json"
             [ ! -f "$dir/review_notes.md" ] || git add "$dir/review_notes.md"
+            [ ! -f "$dir/cover_letter_final.md" ] || git add "$dir/cover_letter_final.md"
           done < /tmp/final-cv-targets.txt
 
           if git diff --cached --quiet; then

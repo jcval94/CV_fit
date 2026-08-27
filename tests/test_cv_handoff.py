@@ -80,6 +80,11 @@ class WorkHandoffTests(unittest.TestCase):
             (run_dir / "cv_primary.html").write_text("<html>proposal</html>", encoding="utf-8")
             (run_dir / "cv_final.md").write_text("# Senior Data Scientist\n\nGrounded summary.", encoding="utf-8")
             (run_dir / "cover_letter_final.md").write_text("Dear Hiring Team", encoding="utf-8")
+            self._write_json(run_dir / "canonical_backbone.json", {
+                "chunk_ids": ["role-demo::summary"],
+                "editorial_anchor_chunk_ids": ["role-demo::opportunity"],
+                "source_paths": ["experience/roles/demo.md"],
+            })
             self._write_json(run_dir / "match_plan.json", {
                 "coverage_score": 73.5,
                 "requirements": [
@@ -170,6 +175,7 @@ class WorkHandoffTests(unittest.TestCase):
                 "review_context.json",
                 "match_plan.json",
                 "evidence_snapshot.json",
+                "canonical_backbone.json",
                 "vacancy.md",
                 "vacancy.json",
                 "cv_proposed.json",
@@ -208,6 +214,10 @@ class WorkHandoffTests(unittest.TestCase):
             self.assertEqual(evidence_by_id["role-demo::opportunity"]["constraints"], ["Do not claim people management."])
             self.assertEqual(match_plan["requirements"][1]["coverage"], "unsupported")
             self.assertIn("Grounded summary", (package / "cv_proposed.md").read_text(encoding="utf-8"))
+            backbone = json.loads((package / "canonical_backbone.json").read_text(encoding="utf-8"))
+            self.assertEqual(backbone["chunk_ids"], ["role-demo::summary"])
+            self.assertEqual(manifest["files"]["canonical_backbone"], "canonical_backbone.json")
+            self.assertIn("cover_letter_final.md", (package / "prompt.md").read_text(encoding="utf-8"))
             self.assertEqual(manifest["quality_kpi"], 81)
             self.assertEqual(manifest["status"], "pending_final_review")
             self.assertEqual(manifest["contact_policy"], "public_safe_only_in_repo")

@@ -32,10 +32,11 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 3. `cv_proposed.json` and `cv_proposed.html`: the current content and rendered proposal.
 4. `match_plan.json`: requirement-level supported / partial / unsupported coverage from the matching stage.
 5. `evidence_snapshot.json`: public-safe evidence split into proposal refs and opportunity refs selected by matching, including constraints and claim boundaries.
-6. `html_base.html.j2`: the visual/template baseline.
-7. `public_identity.yaml`: identity fields that are safe to commit publicly.
-8. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
-9. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
+6. `canonical_backbone.json`, when present: stable chronology and evidence anchors that should not drift during optimization.
+7. `html_base.html.j2`: the visual/template baseline.
+8. `public_identity.yaml`: identity fields that are safe to commit publicly.
+9. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
+10. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
 
 ## Rules
 - Use the vacancy to decide what deserves emphasis.
@@ -59,6 +60,7 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 Create:
 - `final.html`: the final public-safe, self-contained CV ready to render.
 - `review_notes.md`: a concise explanation of the most important changes, remaining gaps, evidence used, and any claim deliberately not made.
+- `cover_letter_final.md` when `cover_letter_proposed.md` exists: a concise final cover letter aligned with the final CV and grounded in the same evidence.
 
 The automated quality KPI is advisory. A below-target proposal can still become the strongest honest application.
 """
@@ -404,6 +406,7 @@ def build_handoffs(
         proposed_md = run_dir / "cv_final.md"
         cover_letter = run_dir / "cover_letter_final.md"
         match_plan = run_dir / "match_plan.json"
+        canonical_backbone = run_dir / "canonical_backbone.json"
 
         (package_dir / "vacancy.md").write_text(_vacancy_markdown(vacancy), encoding="utf-8")
         _write_json(package_dir / "vacancy.json", _redact(vacancy))
@@ -442,6 +445,8 @@ def build_handoffs(
             shutil.copy2(template_file, package_dir / "html_base.html.j2")
         if public_identity.exists():
             shutil.copy2(public_identity, package_dir / "public_identity.yaml")
+        if canonical_backbone.exists():
+            _write_json(package_dir / "canonical_backbone.json", _redact(_read_json(canonical_backbone)))
         if cover_letter.exists():
             shutil.copy2(cover_letter, package_dir / "cover_letter_proposed.md")
         (package_dir / "prompt.md").write_text(FINAL_REVIEW_PROMPT, encoding="utf-8")
@@ -469,6 +474,7 @@ def build_handoffs(
                 "review_context": "review_context.json",
                 "match_plan": "match_plan.json" if match_plan.exists() else None,
                 "evidence_snapshot": "evidence_snapshot.json",
+                "canonical_backbone": "canonical_backbone.json" if canonical_backbone.exists() else None,
                 "vacancy": "vacancy.md",
                 "vacancy_json": "vacancy.json",
                 "cv_proposed": "cv_proposed.json",
@@ -481,6 +487,7 @@ def build_handoffs(
                 "final_html": "final.html" if final_exists else None,
                 "final_pdf": "final.pdf" if (package_dir / "final.pdf").exists() else None,
                 "review_notes": "review_notes.md" if (package_dir / "review_notes.md").exists() else None,
+                "cover_letter_final": "cover_letter_final.md" if (package_dir / "cover_letter_final.md").exists() else None,
             },
             "links": {
                 "proposed_html": f"{raw_base}/cv_proposed.html" if proposed_html.exists() else None,
