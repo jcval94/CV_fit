@@ -1,0 +1,77 @@
+name: Morning CV readiness watchdog
+
+on:
+  schedule:
+    # GitHub Actions cron is UTC. Mexico City is UTC-6.
+    # 14:55 UTC = 08:55 America/Mexico_City
+    # 15:10 UTC = 09:10 America/Mexico_City
+    - cron: "55 14 * * *"
+    - cron: "10 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: morning-cv-readiness
+  cancel-in-progress: true
+
+jobs:
+  ensure-current-handoff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Compare newest raw vacancy update with handoff freshness
+        id: freshness
+        run: |
+          set -euo pipefail
+
+          today="$(TZ=America/Mexico_City date +%F)"
+          source_sha="$(git log -1 --format=%H -- ':(glob)Vacantes/vacantes_*.json' ':(glob)GPTW/vacantes_*.json' || true)"
+
+          if [ -z "$source_sha" ]; then
+            echo "needs_refresh=false" >> "$GITHUB_OUTPUT"
+            echo "No raw vacancy source commit exists."
+            exit 0
+          fi
+
+          source_ts="$(git show -s --format=%ct "$source_sha")"
+          source_date="$(TZ=America/Mexico_City git show -s --format=%cd --date=format-local:%Y-%m-%d "$source_sha")"
+          handoff_ts="$(git log -1 --format=%ct -- handoff/index.json 2>/dev/null || echo 0)"
+          handoff_sha="$(git log -1 --format=%H -- handoff/index.json 2>/dev/null || true)"
+
+          echo "today=$today"
+          echo "source_sha=$source_sha"
+          echo "source_date=$source_date"
+          echo "source_ts=$source_ts"
+          echo "handoff_sha=$handoff_sha"
+          echo "handoff_ts=$handoff_ts"
+
+          if [ "$source_date" = "$today" ] && [ "$handoff_ts" -lt "$source_ts" ]; then
+            echo "needs_refresh=true" >> "$GITHUB_OUTPUT"
+            echo "Fresh vacancy input exists but the Work handoff is older."
+          else
+            echo "needs_refresh=false" >> "$GITHUB_OUTPUT"
+            echo "Morning handoff is current, or today's vacancy source has not arrived yet."
+          fi
+
+      - name: Re-enter canonical enrichment → ingest chain only when stale
+        if: steps.freshness.outputs.needs_refresh == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh workflow run auto-enrich-jd.yml --ref main
+          echo "Dispatched auto-enrich-jd.yml; it will dispatch vacancy-ingest.yml after enrichment."
+
+      - name: Record watchdog outcome
+        run: |
+          echo "## Morning CV readiness" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Refresh required: **${{ steps.freshness.outputs.needs_refresh }}**" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Primary path remains event-driven for minimum latency." >> "$GITHUB_STEP_SUMMARY"
+          echo "- Scheduled checks are recovery-only and do not duplicate healthy morning work." >> "$GITHUB_STEP_SUMMARY"
