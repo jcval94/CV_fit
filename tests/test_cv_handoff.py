@@ -78,7 +78,15 @@ class WorkHandoffTests(unittest.TestCase):
                 "final_validation": {"factual": {"status": "PASS"}},
             })
             (run_dir / "cv_primary.html").write_text("<html>proposal</html>", encoding="utf-8")
+            (run_dir / "cv_final.md").write_text("# Senior Data Scientist\n\nGrounded summary.", encoding="utf-8")
             (run_dir / "cover_letter_final.md").write_text("Dear Hiring Team", encoding="utf-8")
+            self._write_json(run_dir / "match_plan.json", {
+                "coverage_score": 73.5,
+                "requirements": [
+                    {"requirement": "Python", "coverage": "supported"},
+                    {"requirement": "Kubeflow", "coverage": "unsupported"},
+                ],
+            })
             self._write_json(run_dir / "application_bundle_report.json", {
                 "ready_to_send": False,
                 "reasons": ["content_quality_target_not_reached"],
@@ -144,10 +152,12 @@ class WorkHandoffTests(unittest.TestCase):
             package = handoff / vacancy_id
             for name in (
                 "review_context.json",
+                "match_plan.json",
                 "evidence_snapshot.json",
                 "vacancy.md",
                 "vacancy.json",
                 "cv_proposed.json",
+                "cv_proposed.md",
                 "cv_proposed.html",
                 "html_base.html.j2",
                 "public_identity.yaml",
@@ -162,6 +172,7 @@ class WorkHandoffTests(unittest.TestCase):
             manifest = json.loads((package / "handoff.json").read_text(encoding="utf-8"))
             context = json.loads((package / "review_context.json").read_text(encoding="utf-8"))
             evidence = json.loads((package / "evidence_snapshot.json").read_text(encoding="utf-8"))
+            match_plan = json.loads((package / "match_plan.json").read_text(encoding="utf-8"))
             index = json.loads((handoff / "index.json").read_text(encoding="utf-8"))
             vacancy_md = (package / "vacancy.md").read_text(encoding="utf-8")
 
@@ -175,6 +186,8 @@ class WorkHandoffTests(unittest.TestCase):
             self.assertEqual(context["headhunter"]["decision"], "REVISE")
             self.assertEqual(evidence["resolved_ref_count"], 1)
             self.assertEqual(evidence["evidence"][0]["constraints"], ["Do not claim Kubeflow."])
+            self.assertEqual(match_plan["requirements"][1]["coverage"], "unsupported")
+            self.assertIn("Grounded summary", (package / "cv_proposed.md").read_text(encoding="utf-8"))
             self.assertEqual(manifest["quality_kpi"], 81)
             self.assertEqual(manifest["status"], "pending_final_review")
             self.assertEqual(manifest["contact_policy"], "public_safe_only_in_repo")
