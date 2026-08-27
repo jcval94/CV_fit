@@ -279,6 +279,9 @@ jobs:
           --vacancy-state vacancy_state
           --template-file cv_presentation/templates/technical_modern_v1.html.j2
           --handoff-dir handoff
+          --generation-manifest generation_state/manifest.json
+          --evidence-state rag_state
+          --public-identity cv_presentation/identity.public.yaml
           --repository jcval94/CV_fit
 
       - name: Persist append-only call-level cost ledger
@@ -390,6 +393,9 @@ jobs:
           git add vacancy_state
           if [ -d generation_state ]; then
             git add generation_state
+          fi
+          if [ -d handoff ]; then
+            git add handoff
           fi
           if git diff --cached --quiet; then
             echo "No vacancy/generation/handoff state changes to commit."
