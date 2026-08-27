@@ -37,6 +37,22 @@ def _status_class(value: Any) -> str:
     return "ok" if normalized in {"PASS", "READY", "READY TO SEND"} else "warn"
 
 
+def _quality_score(run_report: dict[str, Any] | None) -> float | int | None:
+    value = ((run_report or {}).get("final_review") or {}).get("overall_score")
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    return int(number) if number.is_integer() else round(number, 1)
+
+
+def _quality_label(run_report: dict[str, Any] | None) -> str:
+    score = _quality_score(run_report)
+    return "n/a" if score is None else f"{score}/100"
+
+
 def _source_date_matches(record: dict[str, Any], target_date: str) -> bool:
     for item in record.get("provenance", []):
         if str(item.get("source_search_date") or "") == target_date:
@@ -100,6 +116,7 @@ def _detail_page(
     fidelity = _safe(record.get("jd_fidelity"))
     final_review = (run_report or {}).get("final_review", {})
     final_validation = (run_report or {}).get("final_validation", {})
+    quality_label = _quality_label(run_report)
 
     primary = _primary(bundle)
     page_util = list(primary.get("page_utilization") or [])
@@ -135,9 +152,15 @@ def _detail_page(
     else:
         preview_html = '<div class="empty">No public CV bundle was generated for this vacancy in the current run.</div>'
 
-    status = "READY TO SEND" if bundle and bundle.get("ready_to_send") else "REVIEW REQUIRED"
+    status = (
+        "READY TO SEND"
+        if bundle and bundle.get("ready_to_send")
+        else "SENDABLE · REVIEW ADVISED"
+        if bundle
+        else "NOT GENERATED"
+    )
     content_metrics = "".join([
-        _metric("Headhunter", final_review.get("overall_score", "n/a")),
+        _metric("Quality KPI", quality_label),
         _metric("Factual", final_validation.get("factual", {}).get("status", "n/a"), status=True),
         _metric("Editorial", final_validation.get("editorial", {}).get("status", "n/a"), status=True),
         _metric("Language", final_validation.get("language", {}).get("status", "n/a"), status=True),
@@ -223,11 +246,19 @@ def _feed_post(
     fit = record.get("fit_score")
     coverage = (run_report or {}).get("match_coverage_score")
     ready = bool(bundle and bundle.get("ready_to_send"))
-    status = "READY" if ready else (batch_item or {}).get("status", "NOT GENERATED")
+    sendable = bool(bundle)
+    status = (
+        "READY"
+        if ready
+        else "SENDABLE · REVIEW ADVISED"
+        if sendable
+        else (batch_item or {}).get("status", "NOT GENERATED")
+    )
     primary = _template(bundle, "primary")
     alternate = _template(bundle, "alternate")
     final_review = (run_report or {}).get("final_review", {})
     headhunter = final_review.get("overall_score", "n/a")
+    quality_label = _quality_label(run_report)
     summary = record.get("fit_summary") or record.get("description") or ""
     initials = "".join(part[:1] for part in company.split()[:2]).upper() or "CV"
 
@@ -256,7 +287,7 @@ def _feed_post(
         <div class="fit-strip">
           <span><b>Source fit</b> {_safe(fit if fit is not None else 'n/a')}</span>
           <span><b>RAG coverage</b> {_safe(coverage if coverage is not None else 'n/a')}</span>
-          <span><b>Headhunter</b> {_safe(headhunter)}</span>
+          <span><b>Quality KPI</b> {_safe(quality_label)}</span>
           <span><b>JD</b> {_safe(record.get('jd_fidelity') or 'n/a')}</span>
           <span><b>Visual</b> {_safe(primary.get('visual_status') or 'n/a')}</span>
         </div>
@@ -342,6 +373,8 @@ def build_showcase(
             "jd_fidelity": record.get("jd_fidelity"),
             "generation_status": status,
             "ready_to_send": ready,
+            "sendable": bool(bundle),
+            "quality_score": _quality_score(run_report),
             "has_technical_modern_html": bool(primary_link),
             "has_harvard_html": bool(harvard_link),
             "primary_physical_status": primary.get("physical_status"),
@@ -361,11 +394,11 @@ def build_showcase(
 @media(max-width:1050px){{.layout{{grid-template-columns:180px minmax(0,1fr)}}.side.right{{display:none}}}}
 @media(max-width:800px){{.topbar-inner{{align-items:flex-start}}.top-stats{{display:none}}.layout{{display:block;padding:0 10px;margin-top:10px}}.side.left{{position:static;margin-bottom:10px}}.side-card.filters{{display:flex;gap:4px;padding:7px;overflow-x:auto}}.side-card.filters h2{{display:none}}.filter{{width:auto;white-space:nowrap}}.feed{{gap:10px}}.feed-intro{{border-radius:10px}}.feed-post{{border-radius:10px}}.post-head{{grid-template-columns:42px minmax(0,1fr);padding:12px}}.avatar{{width:42px;height:42px}}.vacancy-cta{{grid-column:1/-1;text-align:center}}.post-body{{padding:10px 12px}}.cv-gallery{{grid-template-columns:1fr}}.cv-canvas{{height:620px}}.post-review{{align-items:flex-start;flex-direction:column}}.feed-review-actions{{justify-content:flex-start}}}}
 </style></head><body>
-<div class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">CV</div><div><h1>CV_fit Review Feed</h1><small>{html.escape(target_date)} · vacancy-to-CV pipeline</small></div></div><div class="top-stats"><span class="top-stat">{len(summary_rows)} vacancies</span><span class="top-stat">{generated_count} generated</span><span class="top-stat">{ready_count} ready</span></div></div></div>
+<div class="topbar"><div class="topbar-inner"><div class="brand"><div class="brand-mark">CV</div><div><h1>CV_fit Review Feed</h1><small>{html.escape(target_date)} · vacancy-to-CV pipeline</small></div></div><div class="top-stats"><span class="top-stat">{len(summary_rows)} vacancies</span><span class="top-stat">{generated_count} sendable</span><span class="top-stat">{ready_count} passed all gates</span></div></div></div>
 <main class="layout">
   <aside class="side left"><div class="side-card filters"><h2>Feed filter</h2><button class="filter active" data-filter="all">All ({len(summary_rows)})</button><button class="filter" data-filter="ready">Ready ({ready_count})</button><button class="filter" data-filter="review">Review ({len(summary_rows)-ready_count})</button></div></aside>
-  <section class="feed"><div class="feed-intro"><h2>Today's vacancies and generated CVs</h2><p>Each post contains the original vacancy link plus both employer-facing CV variants. Scroll the document previews directly, or open HTML/PDF in a new tab.</p></div>{''.join(feed_posts)}</section>
-  <aside class="side right"><div class="side-card legend"><h2>What you are seeing</h2><p><b>Source fit</b> comes from the vacancy source.</p><p><b>RAG coverage</b> is deterministic evidence coverage and stays separate.</p><p><b>Technical Modern</b> is the primary branded ATS-first CV.</p><p><b>Harvard Executive</b> keeps its locked visual system.</p></div><div class="privacy-note" style="margin-top:10px">Public-safe identity only. Human decisions stay in localStorage and are never published.</div></aside>
+  <section class="feed"><div class="feed-intro"><h2>Today's vacancies and generated CVs</h2><p>Generated CVs remain available even when the quality target is not reached. Use the visible Quality KPI and review warning to decide whether to send as-is or edit first.</p></div>{''.join(feed_posts)}</section>
+  <aside class="side right"><div class="side-card legend"><h2>What you are seeing</h2><p><b>Quality KPI</b> is the latest Headhunter overall score out of 100.</p><p><b>SENDABLE · REVIEW ADVISED</b> means a usable CV artifact exists but did not clear every automated quality gate.</p><p><b>Source fit</b> comes from the vacancy source.</p><p><b>RAG coverage</b> is deterministic evidence coverage and stays separate.</p><p><b>Technical Modern</b> is the primary branded ATS-first CV.</p><p><b>Harvard Executive</b> keeps its locked visual system.</p></div><div class="privacy-note" style="margin-top:10px">Public-safe identity only. Human decisions stay in localStorage and are never published.</div></aside>
 </main>
 <script>
 (()=>{{
@@ -398,6 +431,40 @@ def build_showcase(
         "generated_count": generated_count,
         "ready_count": ready_count,
         "vacancies": summary_rows,
+    }
+
+
+def refresh_existing_showcase(site_dir: Path) -> dict[str, Any]:
+    """Validate an existing showcase artifact and report its current publishable state.
+
+    The Pages refresh workflow operates on a previously uploaded _site artifact.
+    It should never require model calls or rebuild CVs; this function restores
+    the lightweight contract expected by showcase_refresh.py.
+    """
+    index_path = site_dir / "index.html"
+    payload_path = site_dir / "showcase.json"
+    if not index_path.exists():
+        raise FileNotFoundError(index_path)
+    payload = _read_json(payload_path, {"vacancies": []})
+    rows = payload.get("vacancies", []) if isinstance(payload, dict) else []
+    generated_count = sum(
+        bool(row.get("sendable"))
+        or bool(row.get("has_technical_modern_html"))
+        or bool(row.get("has_harvard_html"))
+        for row in rows
+        if isinstance(row, dict)
+    )
+    ready_count = sum(
+        bool(row.get("ready_to_send"))
+        for row in rows
+        if isinstance(row, dict)
+    )
+    return {
+        "date": payload.get("date") if isinstance(payload, dict) else None,
+        "vacancy_count": len(rows),
+        "generated_count": generated_count,
+        "ready_count": ready_count,
+        "sendable_count": generated_count,
     }
 
 

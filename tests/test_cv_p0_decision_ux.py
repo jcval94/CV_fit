@@ -48,13 +48,14 @@ class P0DecisionUxTests(unittest.TestCase):
             self.assertIn(P0_UX_MARKER, html)
             self.assertIn("Application recommendation", html)
             self.assertIn("Ready to apply with the recommended CV", html)
-            self.assertIn("Review before applying", html)
+            self.assertIn("CV available to send — review advised", html)
+            self.assertIn("No sendable CV artifact yet", html)
             self.assertIn("Do not apply with this artifact yet", html)
 
             self.assertIn("decision-metrics", html)
             self.assertIn("supporting-metrics", html)
             for label in (
-                "Source fit", "Headhunter", "RAG coverage", "Unsupported gaps", "Pipeline cost",
+                "Source fit", "Quality KPI", "RAG coverage", "Unsupported gaps", "Pipeline cost",
                 "Review rounds", "Generation cost", "Cover cost", "Presentation cost",
             ):
                 self.assertIn(label, html)
@@ -69,7 +70,7 @@ class P0DecisionUxTests(unittest.TestCase):
             self.assertIn("Needs edits", html)
             self.assertIn("Dismiss", html)
             self.assertIn('button[data-review="SEND"]{background:var(--blue)!important', html)
-            self.assertIn("Open recommended CV", html)
+            self.assertIn("Open CV to send", html)
             self.assertIn("Application decision", html)
 
     def test_layer_is_idempotent(self) -> None:
