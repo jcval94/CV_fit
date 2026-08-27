@@ -227,6 +227,50 @@ def _load_evidence_snapshot(evidence_state: Path, refs: set[str]) -> dict[str, A
     }
 
 
+def _refresh_existing_packages(
+    handoff_dir: Path,
+    *,
+    evidence_state: Path,
+) -> list[str]:
+    """Refresh schema-derived files even when the current generation batch is idempotent.
+
+    Existing handoffs are durable review artifacts. Builder/schema improvements
+    must therefore migrate them independently of whether a new CV was generated.
+    """
+    refreshed: list[str] = []
+    for package_dir in sorted(path for path in handoff_dir.iterdir() if path.is_dir()):
+        manifest_path = package_dir / "handoff.json"
+        cv_path = package_dir / "cv_proposed.json"
+        if not manifest_path.exists() or not cv_path.exists():
+            continue
+
+        cv_payload = _read_json(cv_path, {})
+        match_plan_payload = _read_json(package_dir / "match_plan.json", {})
+        proposal_refs = _collect_evidence_refs(cv_payload)
+        selected_refs = {
+            str(ref)
+            for ref in (match_plan_payload.get("selected_evidence_chunk_ids") or [])
+            if str(ref).strip()
+        } if isinstance(match_plan_payload, dict) else set()
+        opportunity_refs = selected_refs - proposal_refs
+
+        snapshot = _load_evidence_snapshot(evidence_state, proposal_refs | opportunity_refs)
+        snapshot["proposal_refs"] = sorted(proposal_refs)
+        snapshot["opportunity_refs"] = sorted(opportunity_refs)
+        _write_json(package_dir / "evidence_snapshot.json", snapshot)
+        (package_dir / "prompt.md").write_text(FINAL_REVIEW_PROMPT, encoding="utf-8")
+
+        manifest = _read_json(manifest_path, {})
+        if isinstance(manifest, dict):
+            manifest["schema_version"] = max(int(manifest.get("schema_version") or 1), 2)
+            files = manifest.setdefault("files", {})
+            files["evidence_snapshot"] = "evidence_snapshot.json"
+            files["prompt"] = "prompt.md"
+            _write_json(manifest_path, manifest)
+        refreshed.append(package_dir.name)
+    return refreshed
+
+
 def _review_context(
     *,
     vacancy: dict[str, Any],
@@ -447,8 +491,17 @@ def build_handoffs(
         _write_json(package_dir / "handoff.json", manifest)
         built.append(vacancy_id)
 
+    refreshed_existing = _refresh_existing_packages(
+        handoff_dir,
+        evidence_state=evidence_state,
+    )
     index = rebuild_index(handoff_dir, repository=repository)
-    return {"built": built, "skipped": skipped, "index": index}
+    return {
+        "built": built,
+        "refreshed_existing": refreshed_existing,
+        "skipped": skipped,
+        "index": index,
+    }
 
 
 def main() -> int:
