@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from cv_presentation.showcase import build_showcase
+from cv_presentation.showcase import build_showcase, refresh_existing_showcase
 
 
 class ShowcaseTests(unittest.TestCase):
@@ -161,6 +161,94 @@ class ShowcaseTests(unittest.TestCase):
             self.assertEqual(showcase["vacancies"][0]["section_item_counts"]["skills"], 12)
             self.assertNotIn("secret@example.com", index)
             self.assertTrue((site / ".nojekyll").exists())
+
+
+    def test_review_required_bundle_remains_sendable_and_exposes_quality_kpi(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            vacancy_id = "vac-review"
+            vacancy_state = root / "vacancy_state"
+            outputs = root / "outputs"
+            site = root / "site"
+            run_id = "run-review"
+            run_dir = outputs / vacancy_id / run_id
+
+            self._write_json(vacancy_state / "records" / f"{vacancy_id}.json", {
+                "vacancy_id": vacancy_id,
+                "company": "Review Co",
+                "role_title": "Senior ML Engineer",
+                "url": "https://example.com/jobs/review",
+                "fit_score": 97,
+                "fit_summary": "Strong fit but below the automated quality target.",
+                "jd_fidelity": "full",
+                "provenance": [{"source_search_date": "2026-08-26"}],
+            })
+            run_dir.mkdir(parents=True)
+            for name in ("primary.html", "alternate.html", "primary.pdf", "alternate.pdf"):
+                (run_dir / name).write_text("artifact", encoding="utf-8")
+            self._write_json(run_dir / "run_report.json", {
+                "match_coverage_score": 81.3,
+                "final_review": {"overall_score": 80},
+                "final_validation": {},
+            })
+            primary = {
+                "role": "primary",
+                "html_file": "primary.html",
+                "pdf_file": "primary.pdf",
+                "physical_status": "PASS",
+                "visual_status": "PASS",
+                "presentation_review_status": "PASS",
+                "expected_pages": 2,
+            }
+            alternate = {
+                "role": "alternate",
+                "html_file": "alternate.html",
+                "pdf_file": "alternate.pdf",
+                "physical_status": "PASS",
+                "visual_status": "PASS",
+                "presentation_review_status": "PASS",
+                "expected_pages": 2,
+            }
+            self._write_json(run_dir / "application_bundle_report.json", {
+                "ready_to_send": False,
+                "templates": [primary, alternate],
+            })
+            batch = root / "batch.json"
+            self._write_json(batch, {
+                "results": [{
+                    "vacancy_id": vacancy_id,
+                    "run_id": run_id,
+                    "status": "REVIEW_REQUIRED",
+                    "ready_to_send": False,
+                }]
+            })
+
+            report = build_showcase(
+                target_date="2026-08-26",
+                vacancy_state=vacancy_state,
+                bundle_batch_report=batch,
+                outputs=outputs,
+                site_dir=site,
+            )
+            self.assertEqual(report["generated_count"], 1)
+            self.assertEqual(report["ready_count"], 0)
+
+            index = (site / "index.html").read_text(encoding="utf-8")
+            payload = json.loads((site / "showcase.json").read_text(encoding="utf-8"))
+            row = payload["vacancies"][0]
+
+            self.assertIn("SENDABLE · REVIEW ADVISED", index)
+            self.assertIn("Quality KPI", index)
+            self.assertIn("80/100", index)
+            self.assertIn("primary.html", index)
+            self.assertIn("primary.pdf", index)
+            self.assertTrue(row["sendable"])
+            self.assertFalse(row["ready_to_send"])
+            self.assertEqual(row["quality_score"], 80)
+
+            refreshed = refresh_existing_showcase(site)
+            self.assertEqual(refreshed["sendable_count"], 1)
+            self.assertEqual(refreshed["ready_count"], 0)
 
 
 if __name__ == "__main__":
