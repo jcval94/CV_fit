@@ -30,11 +30,12 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 1. `review_context.json`: why the automated CV did or did not pass, including quality, coverage, gaps and presentation diagnostics.
 2. `vacancy.md` / `vacancy.json`: what the employer actually asks for.
 3. `cv_proposed.json` and `cv_proposed.html`: the current content and rendered proposal.
-4. `evidence_snapshot.json`: exact public-safe evidence cited by the proposal, including constraints and claim boundaries.
-5. `html_base.html.j2`: the visual/template baseline.
-6. `public_identity.yaml`: identity fields that are safe to commit publicly.
-7. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
-8. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
+4. `match_plan.json`: requirement-level supported / partial / unsupported coverage from the matching stage.
+5. `evidence_snapshot.json`: exact public-safe evidence cited by the proposal, including constraints and claim boundaries.
+6. `html_base.html.j2`: the visual/template baseline.
+7. `public_identity.yaml`: identity fields that are safe to commit publicly.
+8. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
+9. The repository `experience/` evidence only when the snapshot is insufficient or a stronger factual angle is needed.
 
 ## Rules
 - Use the vacancy to decide what deserves emphasis.
@@ -245,7 +246,11 @@ def _review_context(
             or cv_payload.get("quality_target_reached")
             or generation_entry.get("content_quality_target_reached")
         ),
-        "quality_note": cv_payload.get("quality_note"),
+        "quality_note": cv_payload.get("quality_note") or run_report.get("quality_note"),
+        "application_language": run_report.get("application_language") or vacancy.get("application_language"),
+        "review_stop_reason": run_report.get("review_stop_reason"),
+        "final_gate_reasons": run_report.get("final_gate_reasons") or [],
+        "style_preflight": _redact(run_report.get("style_preflight") or {}),
         "headhunter": {
             "decision": generation_entry.get("headhunter_decision") or final_review.get("decision"),
             "score": generation_entry.get("headhunter_score") or final_review.get("overall_score"),
@@ -351,11 +356,15 @@ def build_handoffs(
             {},
         )
         proposed_html = run_dir / str(primary.get("html_file") or "cv_primary.html")
+        proposed_md = run_dir / "cv_final.md"
         cover_letter = run_dir / "cover_letter_final.md"
+        match_plan = run_dir / "match_plan.json"
 
         (package_dir / "vacancy.md").write_text(_vacancy_markdown(vacancy), encoding="utf-8")
         _write_json(package_dir / "vacancy.json", _redact(vacancy))
         _write_json(package_dir / "cv_proposed.json", _redact(cv_payload))
+        if match_plan.exists():
+            _write_json(package_dir / "match_plan.json", _redact(_read_json(match_plan)))
         _write_json(
             package_dir / "review_context.json",
             _review_context(
@@ -372,6 +381,8 @@ def build_handoffs(
 
         if proposed_html.exists():
             shutil.copy2(proposed_html, package_dir / "cv_proposed.html")
+        if proposed_md.exists():
+            shutil.copy2(proposed_md, package_dir / "cv_proposed.md")
         if template_file.exists():
             shutil.copy2(template_file, package_dir / "html_base.html.j2")
         if public_identity.exists():
@@ -401,10 +412,12 @@ def build_handoffs(
             "contact_policy": "public_safe_only_in_repo",
             "files": {
                 "review_context": "review_context.json",
+                "match_plan": "match_plan.json" if match_plan.exists() else None,
                 "evidence_snapshot": "evidence_snapshot.json",
                 "vacancy": "vacancy.md",
                 "vacancy_json": "vacancy.json",
                 "cv_proposed": "cv_proposed.json",
+                "cv_proposed_markdown": "cv_proposed.md" if proposed_md.exists() else None,
                 "cv_proposed_html": "cv_proposed.html" if proposed_html.exists() else None,
                 "html_base": "html_base.html.j2" if template_file.exists() else None,
                 "public_identity": "public_identity.yaml" if public_identity.exists() else None,
