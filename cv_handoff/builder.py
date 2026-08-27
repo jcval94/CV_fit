@@ -31,7 +31,7 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 2. `vacancy.md` / `vacancy.json`: what the employer actually asks for.
 3. `cv_proposed.json` and `cv_proposed.html`: the current content and rendered proposal.
 4. `match_plan.json`: requirement-level supported / partial / unsupported coverage from the matching stage.
-5. `evidence_snapshot.json`: exact public-safe evidence cited by the proposal, including constraints and claim boundaries.
+5. `evidence_snapshot.json`: public-safe evidence split into proposal refs and opportunity refs selected by matching, including constraints and claim boundaries.
 6. `html_base.html.j2`: the visual/template baseline.
 7. `public_identity.yaml`: identity fields that are safe to commit publicly.
 8. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
@@ -42,6 +42,7 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 - Use real candidate evidence as the factual boundary.
 - Never invent technologies, responsibilities, metrics, employers, titles, dates, achievements or contact details.
 - Respect every evidence constraint/boundary in `evidence_snapshot.json`.
+- Use `proposal_refs` to verify current claims and `opportunity_refs` to find stronger evidence the automated CV failed to surface.
 - Transferable experience may be reframed when the connection is defensible, but never presented as direct experience when it is not.
 - Prefer quantified evidence and concrete outcomes over adjectives.
 - Remove true-but-distracting material when it weakens the application.
@@ -363,8 +364,9 @@ def build_handoffs(
         (package_dir / "vacancy.md").write_text(_vacancy_markdown(vacancy), encoding="utf-8")
         _write_json(package_dir / "vacancy.json", _redact(vacancy))
         _write_json(package_dir / "cv_proposed.json", _redact(cv_payload))
-        if match_plan.exists():
-            _write_json(package_dir / "match_plan.json", _redact(_read_json(match_plan)))
+        match_plan_payload = _read_json(match_plan, {}) if match_plan.exists() else {}
+        if match_plan_payload:
+            _write_json(package_dir / "match_plan.json", _redact(match_plan_payload))
         _write_json(
             package_dir / "review_context.json",
             _review_context(
@@ -376,8 +378,17 @@ def build_handoffs(
                 pipeline_item=item,
             ),
         )
-        evidence_refs = _collect_evidence_refs(cv_payload)
-        _write_json(package_dir / "evidence_snapshot.json", _load_evidence_snapshot(evidence_state, evidence_refs))
+        proposal_refs = _collect_evidence_refs(cv_payload)
+        selected_refs = {
+            str(ref)
+            for ref in (match_plan_payload.get("selected_evidence_chunk_ids") or [])
+            if str(ref).strip()
+        } if isinstance(match_plan_payload, dict) else set()
+        opportunity_refs = selected_refs - proposal_refs
+        snapshot = _load_evidence_snapshot(evidence_state, proposal_refs | opportunity_refs)
+        snapshot["proposal_refs"] = sorted(proposal_refs)
+        snapshot["opportunity_refs"] = sorted(opportunity_refs)
+        _write_json(package_dir / "evidence_snapshot.json", snapshot)
 
         if proposed_html.exists():
             shutil.copy2(proposed_html, package_dir / "cv_proposed.html")
