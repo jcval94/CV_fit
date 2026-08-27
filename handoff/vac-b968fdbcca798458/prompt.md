@@ -9,7 +9,7 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 2. `vacancy.md` / `vacancy.json`: what the employer actually asks for.
 3. `cv_proposed.json` and `cv_proposed.html`: the current content and rendered proposal.
 4. `match_plan.json`: requirement-level supported / partial / unsupported coverage from the matching stage.
-5. `evidence_snapshot.json`: exact public-safe evidence cited by the proposal, including constraints and claim boundaries.
+5. `evidence_snapshot.json`: public-safe evidence split into proposal refs and opportunity refs selected by matching, including constraints and claim boundaries.
 6. `html_base.html.j2`: the visual/template baseline.
 7. `public_identity.yaml`: identity fields that are safe to commit publicly.
 8. `cover_letter_proposed.md`, when present, to keep the application narrative consistent.
@@ -20,6 +20,7 @@ Your goal is not to regenerate the CV from scratch. Improve the existing proposa
 - Use real candidate evidence as the factual boundary.
 - Never invent technologies, responsibilities, metrics, employers, titles, dates, achievements or contact details.
 - Respect every evidence constraint/boundary in `evidence_snapshot.json`.
+- Use `proposal_refs` to verify current claims and `opportunity_refs` to find stronger evidence the automated CV failed to surface.
 - Transferable experience may be reframed when the connection is defensible, but never presented as direct experience when it is not.
 - Prefer quantified evidence and concrete outcomes over adjectives.
 - Remove true-but-distracting material when it weakens the application.
