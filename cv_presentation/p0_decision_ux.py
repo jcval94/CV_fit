@@ -88,9 +88,10 @@ _P0_JS = r'''
   const decisionMetric=(label,value,primary=false)=>`<div class="decision-metric${primary?' primary':''}"><span>${label}</span><strong>${safe(value)}</strong></div>`;
   const supportMetric=(label,value)=>`<span class="supporting-metric"><b>${label}</b>${safe(value)}</span>`;
 
-  function recommendation(post,process){
+  function recommendation(post,process,row){
     const ready=process?.ready_to_send===true||post.dataset.status==='ready';
-    const blocked=String(process?.status||'').includes('FAILED')&&!ready;
+    const sendable=row?.sendable===true||Boolean(post.querySelector('.cv-actions a[href*=".html"],.cv-actions a[href$=".pdf"],.cv-actions a[href$=".PDF"]'));
+    const blocked=String(process?.status||'').includes('FAILED')&&!ready&&!sendable;
     const gaps=Number(process?.unsupported_requirements_count||0);
     if(ready){
       return {
@@ -110,14 +111,23 @@ _P0_JS = r'''
         body:'The latest generation state failed. Keep the vacancy, but resolve the pipeline or CV review issue before using this version.'
       };
     }
+    if(sendable){
+      return {
+        tone:'review',
+        kicker:'Application recommendation',
+        title:'CV available to send — review advised',
+        state:'Sendable',
+        body:gaps>0
+          ?`A usable CV artifact exists even though ${gaps} unsupported requirement${gaps===1?'':'s'} remain. Check the Quality KPI and send as-is if the trade-off is acceptable.`
+          :'A usable CV artifact exists even though one or more automated quality gates did not clear. Check the Quality KPI and send as-is or edit first.'
+      };
+    }
     return {
       tone:'review',
       kicker:'Application recommendation',
-      title:'Review before applying',
+      title:'No sendable CV artifact yet',
       state:'Review',
-      body:gaps>0
-        ?`${gaps} unsupported requirement${gaps===1?'':'s'} remain in the evidence check. The vacancy can still be valuable, but the CV needs a deliberate review.`
-        :'The vacancy remains worth reviewing, but at least one content or presentation gate has not cleared yet.'
+      body:'The vacancy remains worth reviewing, but no public CV bundle is available from the current run.'
     };
   }
 
@@ -125,7 +135,7 @@ _P0_JS = r'''
     if(post.querySelector('.recommendation-banner'))return;
     const body=post.querySelector('.post-body');
     if(!body)return;
-    const rec=recommendation(post,process);
+    const rec=recommendation(post,process,row);
     const banner=document.createElement('section');
     banner.className=`recommendation-banner ${rec.tone}`;
     banner.innerHTML=`<div><span class="recommendation-kicker">${rec.kicker}</span><strong>${rec.title}</strong><p>${rec.body}</p></div><span class="recommendation-state">${rec.state}</span>`;
@@ -144,7 +154,7 @@ _P0_JS = r'''
     primary.className='decision-metrics';
     primary.innerHTML=[
       decisionMetric('Source fit',sourceFit,true),
-      decisionMetric('Headhunter',headhunter,true),
+      decisionMetric('Quality KPI',present(headhunter)?`${headhunter}/100`:'n/a',true),
       decisionMetric('RAG coverage',coverage,true),
       decisionMetric('Unsupported gaps',gaps),
       decisionMetric('Pipeline cost',money(totalCost)),
@@ -185,7 +195,7 @@ _P0_JS = r'''
     if(revise)revise.textContent='Needs edits';
     if(reject)reject.textContent='Dismiss';
     const openCta=post.querySelector('.cv-send-cta');
-    if(openCta)openCta.textContent='Open recommended CV';
+    if(openCta)openCta.textContent='Open CV to send';
 
     const current=post.querySelector('[data-review-current]');
     const pretty={SEND:'approved',REVISE:'needs edits',REJECT:'dismissed'};
