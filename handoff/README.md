@@ -6,7 +6,8 @@ Each vacancy package contains:
 
 - `review_context.json` — automated quality, headhunter, evidence-coverage, unsupported-requirement and presentation diagnostics.
 - `match_plan.json` — requirement-level supported / partial / unsupported matching evidence.
-- `evidence_snapshot.json` — the exact public-safe RAG evidence cited by the proposed CV, including claim constraints.
+- `evidence_snapshot.json` — proposal evidence plus matching-selected opportunity evidence, including claim constraints.
+- `canonical_backbone.json` — stable chronology/evidence anchors that should not drift during final optimization, when available.
 - `vacancy.md` — a cleaned human-readable version of the employer JD.
 - `vacancy.json` — canonical structured vacancy data.
 - `cv_proposed.json` — current evidence-grounded CV proposal.
@@ -18,7 +19,7 @@ Each vacancy package contains:
 - `prompt.md` — final-review contract.
 - `handoff.json` — manifest, status, KPI and links.
 
-The final reviewer writes `final.html` and `review_notes.md`. The **Final CV render** GitHub Action then creates `final.pdf`, `final.png`, and `final_report.json`.
+The final reviewer writes `final.html`, `review_notes.md`, and—when a proposed cover letter exists—`cover_letter_final.md`. The **Final CV render** GitHub Action then creates `final.pdf`, `final.png`, and `final_report.json`.
 
 ## Queue order
 
