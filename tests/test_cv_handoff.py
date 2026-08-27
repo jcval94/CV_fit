@@ -216,6 +216,82 @@ class WorkHandoffTests(unittest.TestCase):
             self.assertEqual(index["pending_count"], 1)
             self.assertEqual(index["schema_version"], 2)
 
+    def test_empty_batch_refreshes_existing_package_schema(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            handoff = root / "handoff"
+            package = handoff / "vac-existing"
+            evidence_state = root / "rag_state"
+            package.mkdir(parents=True)
+
+            self._write_json(package / "handoff.json", {
+                "vacancy_id": "vac-existing",
+                "company": "Existing",
+                "source_fit": 90,
+                "status": "pending_final_review",
+                "schema_version": 1,
+                "files": {},
+            })
+            self._write_json(package / "cv_proposed.json", {
+                "cv": {
+                    "summary": {
+                        "text": "Current claim",
+                        "evidence_refs": ["role-demo::used"],
+                    }
+                }
+            })
+            self._write_json(package / "match_plan.json", {
+                "selected_evidence_chunk_ids": [
+                    "role-demo::used",
+                    "role-demo::opportunity",
+                ]
+            })
+            self._write_json(evidence_state / "chunks" / "role-demo.json", {
+                "chunks": [
+                    {
+                        "chunk_id": "role-demo::used",
+                        "title": "Used",
+                        "text": "Used evidence",
+                        "constraints": [],
+                        "confidence": "high",
+                        "public_safe": True,
+                    },
+                    {
+                        "chunk_id": "role-demo::opportunity",
+                        "title": "Opportunity",
+                        "text": "Opportunity evidence",
+                        "constraints": ["Do not overclaim."],
+                        "confidence": "high",
+                        "public_safe": True,
+                    },
+                ]
+            })
+            batch = root / "batch.json"
+            self._write_json(batch, {"results": []})
+
+            report = build_handoffs(
+                batch_report=batch,
+                outputs=root / "outputs",
+                vacancy_state=root / "vacancy_state",
+                template_file=root / "missing-template.j2",
+                handoff_dir=handoff,
+                generation_manifest=root / "missing-generation.json",
+                evidence_state=evidence_state,
+                public_identity=root / "missing-identity.yaml",
+                repository="jcval94/CV_fit",
+            )
+
+            self.assertEqual(report["built"], [])
+            self.assertEqual(report["refreshed_existing"], ["vac-existing"])
+            snapshot = json.loads((package / "evidence_snapshot.json").read_text(encoding="utf-8"))
+            manifest = json.loads((package / "handoff.json").read_text(encoding="utf-8"))
+            self.assertEqual(snapshot["proposal_refs"], ["role-demo::used"])
+            self.assertEqual(snapshot["opportunity_refs"], ["role-demo::opportunity"])
+            self.assertEqual(snapshot["resolved_ref_count"], 2)
+            self.assertEqual(manifest["schema_version"], 2)
+            self.assertEqual(manifest["files"]["evidence_snapshot"], "evidence_snapshot.json")
+            self.assertIn("opportunity_refs", (package / "prompt.md").read_text(encoding="utf-8"))
+
     def test_existing_final_html_is_preserved_as_finalized(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             handoff = Path(tmp) / "handoff"
