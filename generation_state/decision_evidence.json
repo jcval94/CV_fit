@@ -4455,6 +4455,15 @@
       ],
       "unpaired_revision_ids": []
     },
+    "auto-546fde06cbe4439a123be0a46ee93a5e0eebbcfd": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [],
+      "run_id": "auto-546fde06cbe4439a123be0a46ee93a5e0eebbcfd",
+      "source_commit": "546fde06cbe4439a123be0a46ee93a5e0eebbcfd",
+      "source_generation_report_sha256": "d2bcb2d5255ce50ddc418f9c0c33d4534c412ddb36dc735639cf582a88c7cfac",
+      "spend_attribution_ids": [],
+      "unpaired_revision_ids": []
+    },
     "auto-571a633df607cf18b129e20a42ecdfa4f0b6ab80": {
       "candidate_plan_available": false,
       "review_cycle_ids": [
