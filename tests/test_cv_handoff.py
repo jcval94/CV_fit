@@ -86,6 +86,10 @@ class WorkHandoffTests(unittest.TestCase):
                     {"requirement": "Python", "coverage": "supported"},
                     {"requirement": "Kubeflow", "coverage": "unsupported"},
                 ],
+                "selected_evidence_chunk_ids": [
+                    "role-demo::summary",
+                    "role-demo::opportunity",
+                ],
             })
             self._write_json(run_dir / "application_bundle_report.json", {
                 "ready_to_send": False,
@@ -118,6 +122,18 @@ class WorkHandoffTests(unittest.TestCase):
                     "title": "Role summary",
                     "text": "Built production ML systems with Python.",
                     "constraints": ["Do not claim Kubeflow."],
+                    "confidence": "high",
+                    "proficiency": None,
+                    "source_path": "experience/roles/demo.md",
+                    "record_type": "role",
+                    "chunk_type": "role_detail",
+                    "metric_refs": [],
+                    "public_safe": True,
+                }, {
+                    "chunk_id": "role-demo::opportunity",
+                    "title": "Opportunity evidence",
+                    "text": "Led production pipeline quality and safe automation.",
+                    "constraints": ["Do not claim people management."],
                     "confidence": "high",
                     "proficiency": None,
                     "source_path": "experience/roles/demo.md",
@@ -184,8 +200,12 @@ class WorkHandoffTests(unittest.TestCase):
             self.assertEqual(context["quality_kpi"], 81)
             self.assertEqual(context["evidence_coverage"]["unsupported_requirements"], ["Kubeflow"])
             self.assertEqual(context["headhunter"]["decision"], "REVISE")
-            self.assertEqual(evidence["resolved_ref_count"], 1)
-            self.assertEqual(evidence["evidence"][0]["constraints"], ["Do not claim Kubeflow."])
+            self.assertEqual(evidence["resolved_ref_count"], 2)
+            self.assertEqual(evidence["proposal_refs"], ["role-demo::summary"])
+            self.assertEqual(evidence["opportunity_refs"], ["role-demo::opportunity"])
+            evidence_by_id = {item["chunk_id"]: item for item in evidence["evidence"]}
+            self.assertEqual(evidence_by_id["role-demo::summary"]["constraints"], ["Do not claim Kubeflow."])
+            self.assertEqual(evidence_by_id["role-demo::opportunity"]["constraints"], ["Do not claim people management."])
             self.assertEqual(match_plan["requirements"][1]["coverage"], "unsupported")
             self.assertIn("Grounded summary", (package / "cv_proposed.md").read_text(encoding="utf-8"))
             self.assertEqual(manifest["quality_kpi"], 81)
