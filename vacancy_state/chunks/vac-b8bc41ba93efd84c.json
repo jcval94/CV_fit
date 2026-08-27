@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-b8bc41ba93efd84c::core",
+      "chunk_type": "core",
+      "content_hash": "cfb58910d7ec188de1f7b1081218d3fc0e8f4afee02f2a44696bbcac83ea5b4c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-27.json"
+      ],
+      "text": "Role: Senior Data Scientist\nCompany: Kueski\nCompany category: Fintech\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-b8bc41ba93efd84c"
+    },
+    {
+      "chunk_id": "vac-b8bc41ba93efd84c::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "bbf503ce95255e4364b4751cab1eca81e7745caed3e18e1dee954bbcf95fefd6",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-27.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Fraud Detection; Risk Modeling; Graph Analytics; Network Science; Device Fingerprinting; Behavioral Biometrics; Real-time Decisioning; AML; KYC; AWS Machine Learning; Causal Inference; Experimentación; Model Monitoring",
+      "vacancy_id": "vac-b8bc41ba93efd84c"
+    },
+    {
+      "chunk_id": "vac-b8bc41ba93efd84c::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "c5497fedc0e0b62f7942c50ab03f86cafb7d8e5f8550e9fcda8b0f1092046fb2",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-27.json"
+      ],
+      "text": "Source fit score: 99/100\nSource fit summary: Es la oportunidad nueva con mejor ajuste de esta corrida: combina fintech, fraude, riesgo, machine learning productivo, experimentación, Python/SQL, ownership end-to-end y mentoría técnica en una posición remota para México.\nSource strengths: Fintech mexicana de crédito y BNPL con foco explícito en detección y prevención de fraude en lending y pagos.; Ownership end-to-end de modelos de machine learning, desde experimentación y feature engineering hasta monitoreo y mejora continua en producción.; Requiere Python avanzado, SQL, machine learning, experimentación y colaboración directa con Risk, Product, Engineering y Business.; Valora experiencia en fraude organizado, graph analytics, network science, device fingerprinting, behavioral biometrics y sistemas híbridos de reglas + ML para decisioning en tiempo real.; Alineación directa con riesgo, originación/scoring, AML/KYC, modelos productivos y liderazgo técnico mediante mentoría, code reviews y soporte de recruiting.; Incluye uso de herramientas de IA emergente, causal inference y AWS ML como capacidades adicionales relevantes.\nSource gaps: PySpark no aparece como requisito explícito en la descripción actual.; La publicación etiqueta el nivel de antigüedad como intermedio pese a que el alcance y el título son Senior.",
+      "vacancy_id": "vac-b8bc41ba93efd84c"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-b8bc41ba93efd84c"
+}

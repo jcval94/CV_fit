@@ -1788,20 +1788,158 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "a0b8d036ea51c6fd168c9abc87e6378636dd326e4bca326df5de6990facac62d"
     },
-    "vac-b968fdbcca798458": {
-      "attempt_estimated_cost_usd": 0,
-      "attempt_known_cost_usd": 0.0,
-      "cumulative_known_cost_usd": 0.0,
-      "error": "RateLimitError: Error code: 429 - {'error': {'message': 'You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/.', 'type': 'insufficient_quota', 'param': None, 'code': 'credit_balance_exhausted'}}",
+    "vac-b8bc41ba93efd84c": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "e6ddd6eba2adb4ac7ec27280c5575c985341188e281da6f45bb185ccc1788638",
-      "generation_logic_version": 5,
+      "fingerprint": "26c4457743eaa5548c34c16ae6c2daaffdbe601b0d7e7a3a197b33e6a3d173b0",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-b8bc41ba93efd84c is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "6f0c9742cbf9a592b63b672f580dc6f7ae1ea767edf2346ee85082647287d229"
+    },
+    "vac-b968fdbcca798458": {
+      "application_bundle_file": "application_bundle_report.json",
+      "attempt_known_cost_usd": 0.626479,
+      "best_review_iteration": 2,
+      "content_quality_target_reached": false,
+      "cover_letter_cost_usd": 0.007412,
+      "cover_letter_status": "PASS",
+      "cover_letter_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 1,
+        "calls": [
+          {
+            "cached_input_tokens": 0,
+            "candidate_tokens": 528,
+            "duration_ms": 7846,
+            "error": null,
+            "estimated_cost_usd": 0.007412,
+            "model": "gpt-5.6-luna",
+            "name": "cover_letter_writer",
+            "pricing_basis": "OpenAI standard short-context text pricing, USD per 1M tokens",
+            "pricing_snapshot_date": "2026-08-21",
+            "prompt_tokens": 3938,
+            "reasoning_tokens": 51,
+            "total_tokens": 4466
+          }
+        ],
+        "candidate_tokens": 528,
+        "estimated_cost_usd": 0.007412,
+        "known_estimated_cost_usd": 0.007412,
+        "prompt_tokens": 3938,
+        "reasoning_tokens": 51,
+        "total_tokens": 4466
+      },
+      "coverage_score": 80.0,
+      "cumulative_known_cost_usd": 0.626479,
+      "estimated_cost_usd": 0.626479,
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "eb1939814165a0ba7a96c5e131919785aedba2076512570d90c4fd8ca17c86d6",
+      "generation_logic_version": 6,
+      "headhunter_decision": "REVISE",
+      "headhunter_iterations": 3,
+      "headhunter_score": 78,
+      "known_estimated_cost_usd": 0.626479,
+      "premium_model_used": false,
+      "presentation_cost_usd": 0.009437,
+      "presentation_gate": {
+        "alternate_physical_status": "PASS",
+        "alternate_presentation_review_status": "PASS",
+        "alternate_template": "harvard_v1",
+        "alternate_visual_status": "PASS",
+        "cover_letter_ready": true,
+        "primary_page_utilization": [
+          0.7428,
+          0.7686
+        ],
+        "primary_physical_status": "PASS",
+        "primary_presentation_review_status": "PASS",
+        "primary_section_area_ratios": {
+          "certifications": 0.0634,
+          "education": 0.0471,
+          "experience": 0.6367,
+          "projects": 0.1569,
+          "skills": 0.096
+        },
+        "primary_section_item_counts": {
+          "certifications": 3,
+          "education": 2,
+          "experience": 7,
+          "projects": 2,
+          "skills": 11
+        },
+        "primary_template": "technical_modern_v1",
+        "primary_visual_status": "PASS",
+        "reasons": [
+          "content_quality_target_not_reached"
+        ],
+        "status": "REVIEW_REQUIRED"
+      },
+      "presentation_usage": {
+        "cached_input_tokens": 0,
+        "call_count": 3,
+        "calls": [
+          {
+            "cached_input_tokens": 0,
+            "candidate_tokens": 358,
+            "duration_ms": 7861,
+            "error": null,
+            "estimated_cost_usd": 0.003994,
+            "model": "gpt-5.6-luna",
+            "name": "cv_design_reviewer",
+            "pricing_basis": "OpenAI standard short-context text pricing, USD per 1M tokens",
+            "pricing_snapshot_date": "2026-08-21",
+            "prompt_tokens": 994,
+            "reasoning_tokens": 142,
+            "total_tokens": 1352
+          },
+          {
+            "cached_input_tokens": 0,
+            "candidate_tokens": 236,
+            "duration_ms": 2740,
+            "error": null,
+            "estimated_cost_usd": 0.002559,
+            "model": "gpt-5.6-luna",
+            "name": "cv_presentation_reviewer_primary",
+            "pricing_basis": "OpenAI standard short-context text pricing, USD per 1M tokens",
+            "pricing_snapshot_date": "2026-08-21",
+            "prompt_tokens": 765,
+            "reasoning_tokens": 63,
+            "total_tokens": 1001
+          },
+          {
+            "cached_input_tokens": 0,
+            "candidate_tokens": 260,
+            "duration_ms": 3156,
+            "error": null,
+            "estimated_cost_usd": 0.002884,
+            "model": "gpt-5.6-luna",
+            "name": "cv_presentation_reviewer_alternate",
+            "pricing_basis": "OpenAI standard short-context text pricing, USD per 1M tokens",
+            "pricing_snapshot_date": "2026-08-21",
+            "prompt_tokens": 766,
+            "reasoning_tokens": 93,
+            "total_tokens": 1026
+          }
+        ],
+        "candidate_tokens": 854,
+        "estimated_cost_usd": 0.009437,
+        "known_estimated_cost_usd": 0.009437,
+        "prompt_tokens": 2525,
+        "reasoning_tokens": 298,
+        "total_tokens": 3379
+      },
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-25e90d4d822d4f6ee726fa3d63708312ab387c93-vac-b968fdbcca798458",
-      "source_commit": "25e90d4d822d4f6ee726fa3d63708312ab387c93",
-      "status": "FAILED_REVIEW_REQUIRED",
+      "run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458",
+      "source_commit": "6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "status": "COMPLETED_BELOW_TARGET",
+      "total_pipeline_cost_complete": true,
+      "total_pipeline_known_cost_usd": 0.643328,
+      "unsupported_requirements": [],
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "7260cf254784b1c09fdbfadf84b6e6a4745ccc894ef2de87f0c24aa962f8d1ec"
     },

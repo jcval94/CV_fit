@@ -1,0 +1,76 @@
+{
+  "application_language": "en",
+  "city": "México",
+  "company": "Kueski",
+  "company_category": "Fintech",
+  "content_hash": "6f0c9742cbf9a592b63b672f580dc6f7ae1ea767edf2346ee85082647287d229",
+  "description": null,
+  "fit_gaps": [
+    "PySpark no aparece como requisito explícito en la descripción actual.",
+    "La publicación etiqueta el nivel de antigüedad como intermedio pese a que el alcance y el título son Senior."
+  ],
+  "fit_score": 99.0,
+  "fit_strengths": [
+    "Fintech mexicana de crédito y BNPL con foco explícito en detección y prevención de fraude en lending y pagos.",
+    "Ownership end-to-end de modelos de machine learning, desde experimentación y feature engineering hasta monitoreo y mejora continua en producción.",
+    "Requiere Python avanzado, SQL, machine learning, experimentación y colaboración directa con Risk, Product, Engineering y Business.",
+    "Valora experiencia en fraude organizado, graph analytics, network science, device fingerprinting, behavioral biometrics y sistemas híbridos de reglas + ML para decisioning en tiempo real.",
+    "Alineación directa con riesgo, originación/scoring, AML/KYC, modelos productivos y liderazgo técnico mediante mentoría, code reviews y soporte de recruiting.",
+    "Incluye uso de herramientas de IA emergente, causal inference y AWS ML como capacidades adicionales relevantes."
+  ],
+  "fit_summary": "Es la oportunidad nueva con mejor ajuste de esta corrida: combina fintech, fraude, riesgo, machine learning productivo, experimentación, Python/SQL, ownership end-to-end y mentoría técnica en una posición remota para México.",
+  "identity_key": "b8bc41ba93efd84cf642776172ee432a2b00fc111c3754c838869b5394067038",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "México",
+  "posted_date": null,
+  "posted_date_raw": "Hace 13 horas",
+  "provenance": [
+    {
+      "source_commit": "6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "c251b4ba9ee3856bfd1a188cff730932d7bade2ae691e794b3bb28d0f0ec4359",
+      "source_native_id": "kueski-4458311985",
+      "source_path": "Vacantes/vacantes_2026-08-27.json",
+      "source_search_date": "2026-08-27",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Data Scientist",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Machine Learning",
+    "Fraud Detection",
+    "Risk Modeling",
+    "Graph Analytics",
+    "Network Science",
+    "Device Fingerprinting",
+    "Behavioral Biometrics",
+    "Real-time Decisioning",
+    "AML",
+    "KYC",
+    "AWS Machine Learning",
+    "Causal Inference",
+    "Experimentación",
+    "Model Monitoring"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-kueski-4458311985",
+  "vacancy_id": "vac-b8bc41ba93efd84c",
+  "work_model": "Remote"
+}
