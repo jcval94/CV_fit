@@ -9,6 +9,7 @@ on:
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_handoff/**"
       - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
@@ -22,12 +23,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "GPTW/**/*.json"
-      - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_handoff/**"
       - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
@@ -39,6 +39,373 @@ on:
       - "pyproject.toml"
       - ".github/workflows/vacancy-ingest.yml"
   workflow_dispatch:
+
+concurrency:
+  group: vacancy-ingest-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  validate-or-ingest:
+    runs-on: ubuntu-latest
+    env:
+      # Enabled after issue #15 passed the authenticated Retrieval V2 safety gate.
+      AUTO_CV_ENABLED: "true"
+      OPENAI_APY_KEY: ${{ secrets.OPENAI_APY_KEY }}
+      CVFIT_EVENT_LOG: /tmp/cvfit-observability/events.jsonl
+      CVFIT_RUN_ID: gha-${{ github.run_id }}-${{ github.run_attempt }}
+      # Recovery is deliberately a small spare-capacity lane, never the primary queue.
+      CVFIT_MAX_RECOVERY_CANDIDATES: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run vacancy, budget, observability and automatic-generation tests
+        run: >-
+          python -m unittest
+          tests.test_vacancy_pipeline
+          tests.test_vacancy_fidelity
+          tests.test_cv_auto
+          tests.test_cv_recovery
+          tests.test_cv_budget_controls
+          tests.test_cv_showcase
+          tests.test_cv_handoff
+          tests.test_workflow_orchestration
+          tests.test_observability
+          tests.test_cost_ledger
+          tests.test_budget_dashboard
+          -v
+
+      - name: Validate PR inputs E2E
+        if: github.event_name == 'pull_request'
+        run: >-
+          python -m vacancy_pipeline
+          --repo .
+          --state-dir /tmp/cv-fit-vacancy-state
+          --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}
+          --source-commit ${{ github.sha }}
+          --full-rebuild
+          --fail-on-quarantine
+
+      - name: Validate current vacancy JD generation-safety contracts
+        if: github.event_name == 'pull_request'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          records = [json.loads(path.read_text(encoding='utf-8')) for path in sorted(Path('/tmp/cv-fit-vacancy-state/records').glob('*.json'))]
+          assert records, 'expected at least one canonical vacancy'
+          for record in records:
+              assert record['fit_score'] is not None, f"source fit metadata lost for {record['company']}"
+              if record['jd_generation_eligible'] is True:
+                  assert record['jd_fidelity'] in {'full', 'partial'}, record
+                  description_chars = len(str(record.get('description') or '').strip())
+                  assert description_chars >= 300 or record['requirements'] or record['responsibilities'], record
+              else:
+                  assert record['jd_fidelity'] == 'sparse', record
+              print(
+                  record['vacancy_id'],
+                  record['company'],
+                  record['role_title'],
+                  'fit=', record['fit_score'],
+                  'jd=', record['jd_fidelity_score'],
+                  'fidelity=', record['jd_fidelity'],
+                  'generation_eligible=', record['jd_generation_eligible'],
+              )
+          PY
+
+      - name: Prove PR vacancy no-op idempotence
+        if: github.event_name == 'pull_request'
+        run: |
+          python -m vacancy_pipeline \
+            --repo . \
+            --state-dir /tmp/cv-fit-vacancy-state \
+            --run-id pr-${{ github.event.pull_request.number }}-${{ github.sha }}-noop \
+            --source-commit ${{ github.sha }} \
+            --fail-on-quarantine
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('/tmp/cv-fit-vacancy-state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['source_counts']['quarantined'] == 0, report
+          assert report['vacancy_counts']['impacted'] == 0, report
+          assert report['vacancy_counts']['reindexed'] == 0, report
+          print('vacancy_noop_idempotence=PASS', report['source_counts'], report['vacancy_counts'])
+          PY
+
+      - name: Sync latest main before incremental ingest
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git fetch origin main
+          git checkout -B main origin/main
+          echo "PROCESSED_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Incrementally ingest main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: >-
+          python -m vacancy_pipeline
+          --repo .
+          --state-dir vacancy_state
+          --run-id ${{ env.PROCESSED_SHA }}
+          --source-commit ${{ env.PROCESSED_SHA }}
+
+      - name: Capture impacted vacancies before no-op proof
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: cp vacancy_state/latest_run.json /tmp/vacancy-ingest-run.json
+
+      - name: Prove main vacancy no-op idempotence
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          python -m vacancy_pipeline \
+            --repo . \
+            --state-dir vacancy_state \
+            --run-id "${PROCESSED_SHA}-noop" \
+            --source-commit "$PROCESSED_SHA"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path('vacancy_state/latest_run.json').read_text(encoding='utf-8'))
+          assert report['source_counts']['new'] == 0, report
+          assert report['source_counts']['modified'] == 0, report
+          assert report['vacancy_counts']['impacted'] == 0, report
+          assert report['vacancy_counts']['reindexed'] == 0, report
+          print('main_vacancy_noop_idempotence=PASS', report['source_counts'], report['vacancy_counts'])
+          PY
+
+      - name: Retrieval smoke test
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          python -m vacancy_pipeline.retrieve "machine learning" --state-dir vacancy_state --top-k 3 > /tmp/vacancy-retrieval.json
+          cat /tmp/vacancy-retrieval.json
+
+      - name: Install CV generation and presentation project
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Install Chromium for physical CV validation
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: python -m playwright install --with-deps chromium
+
+      - name: Freeze pre-ledger historical cost baseline before any new paid calls
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.cost_ledger baseline
+          --manifest generation_state/manifest.json
+          --recovered-metrics generation_state/recovered_metrics.json
+          --ledger generation_state/cost_ledger.json
+          --source-commit ${{ env.PROCESSED_SHA }}
+
+      - name: Generate CV artifacts for new vacancies within a real batch budget
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_auto
+          --ingest-report /tmp/vacancy-ingest-run.json
+          --vacancy-state vacancy_state
+          --evidence-state rag_state
+          --generation-state generation_state
+          --outputs outputs/auto
+          --run-id auto-${{ env.PROCESSED_SHA }}
+          --source-commit ${{ env.PROCESSED_SHA }}
+          --retrieval-mode hybrid-rerank
+          --max-vacancies-per-run 6
+          --max-estimated-cost-usd 1.0
+          --max-batch-estimated-cost-usd 2.0
+          --min-batch-remaining-usd 0.25
+          --skip-stale-logic
+          --skip-deferred-without-candidates
+
+      - name: Log generation and Headhunter details
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.stage_reports generation
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+
+      - name: Generate concise grounded cover letters
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        continue-on-error: true
+        run: >-
+          python -m cv_agent.cover_letter_batch
+          --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+          --vacancy-state vacancy_state
+          --max-estimated-cost-usd 0.5
+
+      - name: Log cover-letter details
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.stage_reports cover
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/cover_letter_batch_report.json
+
+      - name: Build Technical Modern + Harvard HTML/PDF bundles with presentation gates
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        # A below-target or partially failed presentation review must not discard
+        # otherwise usable CV bundles. Downstream showcase/upload steps publish
+        # generated artifacts with an explicit review warning and KPI.
+        continue-on-error: true
+        run: >-
+          python -m cv_presentation.batch_bundle
+          --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+          --vacancy-state vacancy_state
+          --generation-state generation_state
+          --identity-public cv_presentation/identity.public.yaml
+          --brand-profiles-dir cv_presentation/brands
+          --max-design-cost-usd 0.5
+
+      - name: Log presentation and pipeline-cost details
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.stage_reports presentation
+          --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
+
+      - name: Build versioned ChatGPT Work final-review handoffs
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        continue-on-error: true
+        run: >-
+          python -m cv_handoff.builder
+          --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+          --vacancy-state vacancy_state
+          --template-file cv_presentation/templates/technical_modern_v1.html.j2
+          --handoff-dir handoff
+          --generation-manifest generation_state/manifest.json
+          --evidence-state rag_state
+          --public-identity cv_presentation/identity.public.yaml
+          --repository jcval94/CV_fit
+
+      - name: Persist append-only call-level cost ledger
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: |
+          report="outputs/auto/_batch/auto-${PROCESSED_SHA}/generation_run_report.json"
+          if [ ! -f "$report" ]; then
+            echo "No generation report exists; no live generation spend can be attributed for this run."
+            exit 0
+          fi
+          python -m cv_observability.cost_ledger record-run \
+            --generation-report "$report" \
+            --cover-report "outputs/auto/_batch/auto-${PROCESSED_SHA}/cover_letter_batch_report.json" \
+            --bundle-report "outputs/auto/_batch/auto-${PROCESSED_SHA}/application_bundle_batch_report.json" \
+            --outputs outputs/auto \
+            --ledger generation_state/cost_ledger.json \
+            --source-commit "$PROCESSED_SHA" \
+            --batch-budget-usd 2.0
+
+      - name: Write E2E observability summary
+        if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_observability.pipeline_summary
+          --ingest-report /tmp/vacancy-ingest-run.json
+          --generation-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --cover-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/cover_letter_batch_report.json
+          --bundle-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
+          --generation-manifest generation_state/manifest.json
+          --whatsapp-state generation_state/whatsapp_notifications.json
+
+      - name: Resolve daily showcase date
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: |
+          python - <<'PY'
+          import json, re
+          from pathlib import Path
+          dates = []
+          for path in Path('vacancy_state/records').glob('*.json'):
+              record = json.loads(path.read_text(encoding='utf-8'))
+              for ref in record.get('provenance', []):
+                  value = ref.get('source_search_date')
+                  if value:
+                      dates.append(str(value)[:10])
+                  updated = str(ref.get('source_updated_at') or '')
+                  if re.match(r'^\d{4}-\d{2}-\d{2}', updated):
+                      dates.append(updated[:10])
+                  match = re.search(r'\d{4}-\d{2}-\d{2}', str(ref.get('source_path') or ''))
+                  if match:
+                      dates.append(match.group(0))
+          if not dates:
+              raise SystemExit('Could not resolve a showcase source date')
+          resolved = max(dates)
+          with open(Path(__import__('os').environ['GITHUB_ENV']), 'a', encoding='utf-8') as fh:
+              fh.write(f'SHOWCASE_DATE={resolved}\n')
+          print('SHOWCASE_DATE=', resolved)
+          PY
+
+      - name: Build static daily vacancy showcase
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_presentation.showcase
+          --date "${SHOWCASE_DATE}"
+          --vacancy-state vacancy_state
+          --bundle-batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
+          --outputs outputs/auto
+          --site-dir _site
+
+      - name: Build Budget and Cost GitHub Pages tab
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        run: >-
+          python -m cv_presentation.budget_dashboard
+          --ledger generation_state/cost_ledger.json
+          --manifest generation_state/manifest.json
+          --vacancy-state vacancy_state
+          --site-dir _site
+
+      - name: Upload generated application artifacts
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-cv-${{ github.run_id }}
+          path: outputs/auto/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload daily GitHub Pages showcase source
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-showcase
+          path: _site/
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload redacted observability events
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvfit-observability-${{ github.run_id }}
+          path: /tmp/cvfit-observability/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Commit versioned vacancy and generation state
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add vacancy_state
+          if [ -d generation_state ]; then
+            git add generation_state
+          fi
+          if [ -d handoff ]; then
+            git add handoff
+          fi
+          if git diff --cached --quiet; then
+            echo "No vacancy/generation/handoff state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update vacancy generation state for ${PROCESSED_SHA::12}"
+          git pull --rebase origin main
+          git push origin HEAD:main  workflow_dispatch:
 
 concurrency:
   group: vacancy-ingest-main
