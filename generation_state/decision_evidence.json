@@ -792,6 +792,30 @@
       "vacancy_id": "vac-14b95b3407bcb148",
       "vacancy_run_id": "auto-8b2e232c84c3b09499fce57807e4f7602ebf6ac9-vac-14b95b3407bcb148"
     },
+    "33b7d5296a6a214cf5649f6d": {
+      "batch_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "became_quality_gate_pass": false,
+      "cost_per_positive_score_point_usd": null,
+      "cycle_cost_complete": true,
+      "cycle_id": "33b7d5296a6a214cf5649f6d",
+      "cycle_known_cost_usd": 0.1896725,
+      "cycle_type": "REVISION_AND_REVIEW",
+      "decision": "REVISE",
+      "headhunter_agent": "senior_headhunter_3",
+      "headhunter_known_cost_usd": 0.0846975,
+      "iteration": 3,
+      "preceding_reviser_agent": "cv_reviser_2",
+      "preceding_reviser_known_cost_usd": 0.104975,
+      "precision": "review_artifact_join_call_ledger",
+      "previous_quality_gate_passed": false,
+      "previous_score": 78.0,
+      "quality_gate_passed": false,
+      "score": 72.0,
+      "score_delta": -6.0,
+      "source_review_file": "reviews/iteration_03.json",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458"
+    },
     "34649a3a0cfef437500f33df": {
       "batch_run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f",
       "became_quality_gate_pass": false,
@@ -911,6 +935,30 @@
       "source_review_file": "reviews/iteration_01.json",
       "vacancy_id": "vac-6d9bdccca1ff49c3",
       "vacancy_run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f-vac-6d9bdccca1ff49c3"
+    },
+    "39fa624ed3d8ab6df6bce266": {
+      "batch_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "became_quality_gate_pass": false,
+      "cost_per_positive_score_point_usd": null,
+      "cycle_cost_complete": true,
+      "cycle_id": "39fa624ed3d8ab6df6bce266",
+      "cycle_known_cost_usd": 0.030994,
+      "cycle_type": "INITIAL_EVALUATION",
+      "decision": "REVISE",
+      "headhunter_agent": "senior_headhunter_1",
+      "headhunter_known_cost_usd": 0.030994,
+      "iteration": 1,
+      "preceding_reviser_agent": null,
+      "preceding_reviser_known_cost_usd": null,
+      "precision": "review_artifact_join_call_ledger",
+      "previous_quality_gate_passed": null,
+      "previous_score": null,
+      "quality_gate_passed": false,
+      "score": 82.0,
+      "score_delta": null,
+      "source_review_file": "reviews/iteration_01.json",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458"
     },
     "3bc5818a5987ee268e7034f7": {
       "batch_run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f",
@@ -1703,6 +1751,30 @@
       "source_review_file": "reviews/iteration_02.json",
       "vacancy_id": "vac-21cefd168f6539b4",
       "vacancy_run_id": "auto-2524933315ff32e654baf83518349f1d3d9b5d50-vac-21cefd168f6539b4"
+    },
+    "6ecf9c1021f1076ecfef58eb": {
+      "batch_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "became_quality_gate_pass": false,
+      "cost_per_positive_score_point_usd": null,
+      "cycle_cost_complete": true,
+      "cycle_id": "6ecf9c1021f1076ecfef58eb",
+      "cycle_known_cost_usd": 0.2135875,
+      "cycle_type": "REVISION_AND_REVIEW",
+      "decision": "REVISE",
+      "headhunter_agent": "senior_headhunter_2",
+      "headhunter_known_cost_usd": 0.0904825,
+      "iteration": 2,
+      "preceding_reviser_agent": "cv_reviser_1",
+      "preceding_reviser_known_cost_usd": 0.123105,
+      "precision": "review_artifact_join_call_ledger",
+      "previous_quality_gate_passed": false,
+      "previous_score": 82.0,
+      "quality_gate_passed": false,
+      "score": 78.0,
+      "score_delta": -4.0,
+      "source_review_file": "reviews/iteration_02.json",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458"
     },
     "6f6b8f8aec7a1359961271b8": {
       "batch_run_id": "auto-0d90d82b8fcab3105d920fcdb56269495c47071f",
@@ -4421,6 +4493,22 @@
       ],
       "unpaired_revision_ids": []
     },
+    "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c": {
+      "candidate_plan_available": true,
+      "review_cycle_ids": [
+        "39fa624ed3d8ab6df6bce266",
+        "6ecf9c1021f1076ecfef58eb",
+        "33b7d5296a6a214cf5649f6d"
+      ],
+      "run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "source_commit": "6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "source_generation_report_sha256": "0c6c3a72e5b486f4da42276ba5662752925d04641350365f36623a5041862110",
+      "spend_attribution_ids": [
+        "e54c725afae4703e0c62f441",
+        "d1dd889a7537055f65f1194b"
+      ],
+      "unpaired_revision_ids": []
+    },
     "auto-6b3249fd08010ef786149d37a636771a40a36be2": {
       "candidate_plan_available": false,
       "review_cycle_ids": [],
@@ -5422,6 +5510,16 @@
       "vacancy_id": "vac-71351017a6b16474",
       "vacancy_run_id": null
     },
+    "d1dd889a7537055f65f1194b": {
+      "attribution_id": "d1dd889a7537055f65f1194b",
+      "attribution_precision": "candidate_plan_exact",
+      "batch_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "generation_status": "COMPLETED_BELOW_TARGET",
+      "source_candidate_plan_present": true,
+      "spend_reason": "AUTO_RETRY_TRANSIENT",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458"
+    },
     "d263d5eea4f62e3ba530b8ab": {
       "attribution_id": "d263d5eea4f62e3ba530b8ab",
       "attribution_precision": "missing_candidate_plan",
@@ -5470,6 +5568,16 @@
       "source_candidate_plan_present": false,
       "spend_reason": "UNCLASSIFIED",
       "vacancy_id": "vac-a6ea4042585a94c8",
+      "vacancy_run_id": null
+    },
+    "e54c725afae4703e0c62f441": {
+      "attribution_id": "e54c725afae4703e0c62f441",
+      "attribution_precision": "candidate_plan_exact",
+      "batch_run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c",
+      "generation_status": "SKIPPED_NOT_ELIGIBLE",
+      "source_candidate_plan_present": true,
+      "spend_reason": "NEW_OR_MODIFIED_VACANCY",
+      "vacancy_id": "vac-b8bc41ba93efd84c",
       "vacancy_run_id": null
     },
     "e8fcb753edbcde9a9abfb78b": {
