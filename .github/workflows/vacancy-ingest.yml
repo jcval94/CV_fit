@@ -9,6 +9,7 @@ on:
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_handoff/**"
       - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
@@ -22,12 +23,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "GPTW/**/*.json"
-      - "Vacantes/**/*.json"
       - "vacancy_pipeline/**"
       - "contracts/vacancies/**"
       - "cv_auto/**"
       - "cv_agent/**"
+      - "cv_handoff/**"
       - "cv_observability/**"
       - "cv_presentation/**"
       - "tests/test_vacancy_*.py"
@@ -76,6 +76,8 @@ jobs:
           tests.test_cv_recovery
           tests.test_cv_budget_controls
           tests.test_cv_showcase
+          tests.test_cv_handoff
+          tests.test_workflow_orchestration
           tests.test_observability
           tests.test_cost_ledger
           tests.test_budget_dashboard
