@@ -237,6 +237,8 @@ def _feed_post(
     bundle: dict[str, Any] | None,
     run_report: dict[str, Any] | None,
     batch_item: dict[str, Any] | None,
+    *,
+    handoff_available: bool = False,
 ) -> str:
     vacancy_id = str(record["vacancy_id"])
     company = str(record.get("company") or "Unknown company")
@@ -269,6 +271,12 @@ def _feed_post(
         if bundle
         else ""
     )
+    handoff_link = (
+        f'<a href="https://github.com/jcval94/CV_fit/tree/main/handoff/{_safe(vacancy_id)}" '
+        'target="_blank" rel="noopener">Work final-review handoff ↗</a>'
+        if handoff_available
+        else ""
+    )
     ready_class = "ok" if ready else "warn"
 
     return f"""
@@ -292,7 +300,7 @@ def _feed_post(
           <span><b>Visual</b> {_safe(primary.get('visual_status') or 'n/a')}</span>
         </div>
         <p class="post-summary">{_safe(summary)}</p>
-        <div class="post-links"><a href="vacancies/{_safe(vacancy_id)}/index.html">Full review</a>{cover_link}</div>
+        <div class="post-links"><a href="vacancies/{_safe(vacancy_id)}/index.html">Full review</a>{cover_link}{handoff_link}</div>
       </div>
 
       <div class="cv-gallery">{primary_preview}{alternate_preview}</div>
@@ -317,6 +325,7 @@ def build_showcase(
     bundle_batch_report: Path,
     outputs: Path,
     site_dir: Path,
+    handoff_dir: Path = Path("handoff"),
 ) -> dict[str, Any]:
     if site_dir.exists():
         shutil.rmtree(site_dir)
@@ -363,7 +372,16 @@ def build_showcase(
         alternate = _template(bundle, "alternate")
         harvard_link = f"vacancies/{vacancy_id}/{alternate.get('html_file')}" if alternate.get("html_file") else None
 
-        feed_posts.append(_feed_post(record, bundle, run_report, batch_item))
+        handoff_available = (handoff_dir / vacancy_id / "handoff.json").exists()
+        feed_posts.append(
+            _feed_post(
+                record,
+                bundle,
+                run_report,
+                batch_item,
+                handoff_available=handoff_available,
+            )
+        )
         summary_rows.append({
             "vacancy_id": vacancy_id,
             "company": record.get("company"),
@@ -375,6 +393,7 @@ def build_showcase(
             "ready_to_send": ready,
             "sendable": bool(bundle),
             "quality_score": _quality_score(run_report),
+            "handoff_available": handoff_available,
             "has_technical_modern_html": bool(primary_link),
             "has_harvard_html": bool(harvard_link),
             "primary_physical_status": primary.get("physical_status"),
@@ -475,6 +494,7 @@ def main() -> int:
     parser.add_argument("--bundle-batch-report", required=True)
     parser.add_argument("--outputs", default="outputs/auto")
     parser.add_argument("--site-dir", default="_site")
+    parser.add_argument("--handoff-dir", default="handoff")
     args = parser.parse_args()
     report = build_showcase(
         target_date=args.date,
@@ -482,6 +502,7 @@ def main() -> int:
         bundle_batch_report=Path(args.bundle_batch_report),
         outputs=Path(args.outputs),
         site_dir=Path(args.site_dir),
+        handoff_dir=Path(args.handoff_dir),
     )
     print(json.dumps({
         "date": report["date"],

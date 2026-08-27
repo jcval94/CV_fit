@@ -1,0 +1,107 @@
+name: Final CV render
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "handoff/*/final.html"
+  workflow_dispatch:
+    inputs:
+      vacancy_id:
+        description: "Vacancy id under handoff/ to render"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: final-cv-render
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install CV project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Resolve final HTML targets
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_VACANCY_ID: ${{ inputs.vacancy_id }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          : > /tmp/final-cv-targets.txt
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            target="handoff/${MANUAL_VACANCY_ID}/final.html"
+            test -f "$target"
+            printf '%s\n' "$target" >> /tmp/final-cv-targets.txt
+          else
+            if [ -n "${BEFORE_SHA:-}" ] && ! echo "$BEFORE_SHA" | grep -Eq '^0+$'; then
+              git diff --name-only "$BEFORE_SHA" "$CURRENT_SHA"
+            else
+              git show --pretty="" --name-only "$CURRENT_SHA"
+            fi | grep -E '^handoff/[^/]+/final\.html$' >> /tmp/final-cv-targets.txt || true
+          fi
+
+          sort -u /tmp/final-cv-targets.txt -o /tmp/final-cv-targets.txt
+          cat /tmp/final-cv-targets.txt
+
+      - name: Render final HTML to PDF and preview
+        run: |
+          set -euo pipefail
+          while IFS= read -r target; do
+            [ -n "$target" ] || continue
+            python -m cv_handoff.finalize               --html "$target"               --repository jcval94/CV_fit
+          done < /tmp/final-cv-targets.txt
+
+      - name: Upload final CV artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-cv-${{ github.run_id }}
+          path: |
+            handoff/*/final.html
+            handoff/*/final.pdf
+            handoff/*/final.png
+            handoff/*/final_report.json
+            handoff/*/review_notes.md
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit rendered final CVs
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add handoff/index.json
+          while IFS= read -r target; do
+            [ -n "$target" ] || continue
+            dir="$(dirname "$target")"
+            git add "$dir/final.pdf" "$dir/final.png" "$dir/final_report.json" "$dir/handoff.json"
+            [ ! -f "$dir/review_notes.md" ] || git add "$dir/review_notes.md"
+          done < /tmp/final-cv-targets.txt
+
+          if git diff --cached --quiet; then
+            echo "No rendered final CV changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: render Work-refined final CV"
+          git pull --rebase origin main
+          git push origin HEAD:main

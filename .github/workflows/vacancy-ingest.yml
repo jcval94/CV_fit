@@ -269,6 +269,18 @@ jobs:
           python -m cv_observability.stage_reports presentation
           --report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/application_bundle_batch_report.json
 
+      - name: Build versioned ChatGPT Work final-review handoffs
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
+        continue-on-error: true
+        run: >-
+          python -m cv_handoff.builder
+          --batch-report outputs/auto/_batch/auto-${{ env.PROCESSED_SHA }}/generation_run_report.json
+          --outputs outputs/auto
+          --vacancy-state vacancy_state
+          --template-file cv_presentation/templates/technical_modern_v1.html.j2
+          --handoff-dir handoff
+          --repository jcval94/CV_fit
+
       - name: Persist append-only call-level cost ledger
         if: always() && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && env.AUTO_CV_ENABLED == 'true'
         run: |
@@ -380,7 +392,7 @@ jobs:
             git add generation_state
           fi
           if git diff --cached --quiet; then
-            echo "No vacancy/generation state changes to commit."
+            echo "No vacancy/generation/handoff state changes to commit."
             exit 0
           fi
           git commit -m "chore: update vacancy generation state for ${PROCESSED_SHA::12}"

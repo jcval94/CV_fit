@@ -1,0 +1,100 @@
+name: Backfill Work handoffs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/backfill-handoffs.yml"
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: "Optional successful Incremental vacancy ingest run id with auto-cv artifact"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install CV project
+        run: python -m pip install --disable-pip-version-check -e .
+
+      - name: Resolve latest usable auto-cv run
+        env:
+          REQUESTED_RUN_ID: ${{ inputs.source_run_id }}
+        run: |
+          set -euo pipefail
+          if [ -n "${REQUESTED_RUN_ID:-}" ]; then
+            echo "SOURCE_RUN_ID=$REQUESTED_RUN_ID" >> "$GITHUB_ENV"
+            exit 0
+          fi
+
+          selected=""
+          while IFS= read -r run_id; do
+            [ -n "$run_id" ] || continue
+            count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${run_id}/artifacts"               --jq '[.artifacts[] | select(.expired == false and (.name | startswith("auto-cv-")))] | length')"
+            if [ "$count" -gt 0 ]; then
+              selected="$run_id"
+              break
+            fi
+          done < <(
+            gh run list               --workflow "Incremental vacancy ingest"               --branch main               --status success               --limit 30               --json databaseId               --jq '.[].databaseId'
+          )
+
+          if [ -z "$selected" ]; then
+            echo "No non-expired auto-cv artifact found." >&2
+            exit 1
+          fi
+          echo "SOURCE_RUN_ID=$selected" >> "$GITHUB_ENV"
+
+      - name: Download existing generated CV artifact
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/cvfit-backfill
+          mkdir -p /tmp/cvfit-backfill
+          gh run download "$SOURCE_RUN_ID" -p 'auto-cv-*' -D /tmp/cvfit-backfill
+          find /tmp/cvfit-backfill -maxdepth 5 -type f | head -100
+
+      - name: Build handoff packages from existing outputs
+        run: |
+          set -euo pipefail
+          found=0
+          while IFS= read -r report; do
+            found=1
+            outputs_root="$(dirname "$(dirname "$(dirname "$report")")")"
+            echo "Backfilling from $report | outputs=$outputs_root"
+            python -m cv_handoff.builder               --batch-report "$report"               --outputs "$outputs_root"               --vacancy-state vacancy_state               --template-file cv_presentation/templates/technical_modern_v1.html.j2               --handoff-dir handoff               --repository jcval94/CV_fit
+          done < <(find /tmp/cvfit-backfill -type f -path '*/_batch/*/generation_run_report.json' | sort)
+
+          if [ "$found" -eq 0 ]; then
+            echo "Downloaded artifact contained no generation_run_report.json." >&2
+            exit 1
+          fi
+
+      - name: Commit backfilled Work handoffs
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add handoff
+          if git diff --cached --quiet; then
+            echo "No handoff changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: backfill Work final-review handoffs"
+          git pull --rebase origin main
+          git push origin HEAD:main
