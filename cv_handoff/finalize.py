@@ -72,8 +72,12 @@ def render_final(
         files["final_screenshot"] = "final.png"
         if (package_dir / "review_notes.md").exists():
             files["review_notes"] = "review_notes.md"
+        if (package_dir / "cover_letter_final.md").exists():
+            files["cover_letter_final"] = "cover_letter_final.md"
         links = manifest.setdefault("links", {})
         links.update(report["links"])
+        if (package_dir / "cover_letter_final.md").exists():
+            links["cover_letter_final"] = f"{raw_base}/cover_letter_final.md"
         manifest["final_render"] = {
             "status": report["status"],
             "pdf_pages": pdf_pages,
