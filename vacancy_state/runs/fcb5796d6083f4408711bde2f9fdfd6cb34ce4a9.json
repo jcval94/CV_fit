@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json",
+      "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -15,7 +18,6 @@
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
       "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json",
-      "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json",
       "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
       "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json",
       "Vacantes/enriched/auto/ingredion-data-scientist-7855e20e5f.json",
@@ -24,7 +26,6 @@
       "Vacantes/enriched/auto/lexisnexis-senior-data-scientist-ii-1f0c752faa.json",
       "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json",
       "Vacantes/enriched/auto/pfizer-data-science-manager-6b0826f58d.json",
-      "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
       "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
       "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
@@ -41,24 +42,27 @@
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "fcb5796d6083f4408711bde2f9fdfd6cb34ce4a9-noop",
+  "reindexed_vacancy_ids": [
+    "vac-4d221178a483222a",
+    "vac-8e15ef88d6f94d4c"
+  ],
+  "run_id": "fcb5796d6083f4408711bde2f9fdfd6cb34ce4a9",
   "schema_version": 1,
   "source_commit": "fcb5796d6083f4408711bde2f9fdfd6cb34ce4a9",
   "source_counts": {
     "deleted": 0,
     "discovered": 32,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 32
+    "unchanged": 30
   },
   "status": "success",
   "vacancy_counts": {
     "active": 24,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 2,
+    "reindexed": 2,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

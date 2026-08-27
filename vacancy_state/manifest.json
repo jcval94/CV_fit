@@ -1,5 +1,5 @@
 {
-  "last_run_id": "fc97b77153f4aa49f78de0490c56a4cb17a0d869-noop",
+  "last_run_id": "fcb5796d6083f4408711bde2f9fdfd6cb34ce4a9-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -75,6 +75,14 @@
         "vac-12dc570424d531ae"
       ]
     },
+    "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json": {
+      "source_hash": "3fa0a1776d5159f84bf0ef3e0a5b23c3b5614a8346d6e3ec7869e057dcdc7e72",
+      "state_file": "sources/Vacantes__enriched__auto__ford-motor-company-data-scientist-nlp-ai-engineer-d763--b17e465a93286ec0.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-8e15ef88d6f94d4c"
+      ]
+    },
     "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json": {
       "source_hash": "cebe90d71a08113de4308b4adbd42c2b57db412f9af8e2199b2a7e4df4e01741",
       "state_file": "sources/Vacantes__enriched__auto__gbm-machine-learning-mlops-72bb010731.json--03835180b47128c0.json",
@@ -137,6 +145,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-6fe2dc93c1fba97b"
+      ]
+    },
+    "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json": {
+      "source_hash": "523254f6744393c7679186df0fbb8bc3c57d160d92bfa8a6f565ef88a39f7f57",
+      "state_file": "sources/Vacantes__enriched__auto__relx-lexisnexis-legal-professional-senior-machine-lear--8167c62b7bc7729c.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-4d221178a483222a"
       ]
     },
     "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json": {
