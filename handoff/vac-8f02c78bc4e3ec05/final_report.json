@@ -1,0 +1,15 @@
+{
+  "html_file": "final.html",
+  "links": {
+    "html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.html",
+    "pdf": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.pdf",
+    "screenshot": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.png"
+  },
+  "pdf_file": "final.pdf",
+  "pdf_pages": 2,
+  "schema_version": 1,
+  "screenshot_file": "final.png",
+  "status": "PASS",
+  "vacancy_id": "vac-8f02c78bc4e3ec05",
+  "warnings": []
+}

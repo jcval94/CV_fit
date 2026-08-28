@@ -9,8 +9,9 @@
     "cv_proposed_html": "cv_proposed.html",
     "cv_proposed_markdown": "cv_proposed.md",
     "evidence_snapshot": "evidence_snapshot.json",
-    "final_html": null,
-    "final_pdf": null,
+    "final_html": "final.html",
+    "final_pdf": "final.pdf",
+    "final_screenshot": "final.png",
     "html_base": "html_base.html.j2",
     "match_plan": "match_plan.json",
     "prompt": "prompt.md",
@@ -20,10 +21,18 @@
     "vacancy": "vacancy.md",
     "vacancy_json": "vacancy.json"
   },
+  "final_render": {
+    "pdf_pages": 2,
+    "status": "PASS",
+    "warnings": []
+  },
   "links": {
     "final_html": null,
     "final_pdf": null,
-    "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/cv_proposed.html"
+    "html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.html",
+    "pdf": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.pdf",
+    "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/cv_proposed.html",
+    "screenshot": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-8f02c78bc4e3ec05/final.png"
   },
   "pipeline_status": "COMPLETED_BELOW_TARGET",
   "quality_kpi": 74,
@@ -34,7 +43,7 @@
   "schema_version": 2,
   "source_date": "2026-08-28",
   "source_fit": 99.0,
-  "status": "pending_final_review",
+  "status": "finalized",
   "vacancy_id": "vac-8f02c78bc4e3ec05",
   "vacancy_url": "https://mx.linkedin.com/jobs/view/cientifico-de-datos-subdirector-de-generative-ai-engineering-at-grupo-financiero-banorte-4453249003"
 }
