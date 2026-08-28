@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-28",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "banorte-4453249003",
+      "puesto": "CIENTIFICO DE DATOS - SUBDIRECTOR DE GENERATIVE AI ENGINEERING",
+      "empresa": "Grupo Financiero Banorte",
+      "categoria_empresa": "Banca",
+      "ubicacion": "Área metropolitana de Ciudad de México, México",
+      "modalidad": "Presencial",
+      "fecha_publicacion": "Hace 8 horas",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol de nivel Subdirector en banca mexicana, directamente alineado con liderazgo técnico y experiencia en entornos financieros regulados.",
+          "Busca entre 6 y 10 años de experiencia en Machine Learning, Ciencia de Datos, Inteligencia Artificial o ingeniería de software enfocada en analítica avanzada.",
+          "Responsabilidad end-to-end para transformar casos de uso de GenAI en soluciones empresariales escalables, desde experimentación hasta producción, monitoreo y generación de valor.",
+          "Stack altamente alineado: Python, SQL, LLMs, RAG, embeddings, búsqueda semántica, LangChain, LangGraph, Vertex AI, Airflow, Docker, CI/CD, APIs REST y bases de datos vectoriales.",
+          "Incluye diseño de agentes especializados, tool calling, sistemas multiagente, evaluación y monitoreo de agentes en producción.",
+          "Exige balancear innovación con seguridad, riesgo regulatorio, costo y gobernanza, aprovechando directamente experiencia previa en banca, riesgo y coordinación transversal.",
+          "Formación objetivo incluye Actuaría y se considera deseable una Maestría en Ciencia de Datos, Machine Learning o IA."
+        ],
+        "posibles_gaps": [
+          "La publicación aparece como presencial en fuentes secundarias; no se confirmó un esquema híbrido o remoto.",
+          "El rol exige profundidad específica en industrialización de GenAI, arquitecturas cloud-native, Kubernetes y operación de sistemas LLM en producción.",
+          "PySpark no figura entre los requisitos explícitos de la publicación."
+        ],
+        "resumen": "Es la oportunidad nueva con mayor ajuste de esta búsqueda: combina banca, seniority directivo, IA Generativa, RAG, agentes, Python/SQL, arquitectura end-to-end, gobernanza y liderazgo técnico. Por dominio y nivel de responsabilidad, merece prioridad inmediata."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Generative AI",
+        "LLMs",
+        "RAG",
+        "Embeddings",
+        "Semantic Search",
+        "Prompt Engineering",
+        "Fine-Tuning",
+        "Agentic AI",
+        "Tool Calling",
+        "Multi-agent Systems",
+        "LangChain",
+        "LangGraph",
+        "Vertex AI",
+        "Airflow",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "REST APIs",
+        "Vector Databases",
+        "Model Evaluation",
+        "AI Safety",
+        "Model Governance"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/cientifico-de-datos-subdirector-de-generative-ai-engineering-at-grupo-financiero-banorte-4453249003"
+    }
+  ]
+}
