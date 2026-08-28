@@ -1,0 +1,196 @@
+{
+  "application_language": "es",
+  "evidence_coverage": {
+    "coverage_score": 69.2,
+    "unsupported_requirements": [
+      "Fine-Tuning"
+    ]
+  },
+  "final_gate_reasons": [
+    "headhunter_decision_not_pass",
+    "overall_score_below_92",
+    "vacancy_alignment_below_90",
+    "evidence_strength_below_95",
+    "language_quality_below_95",
+    "blocking_issues_present"
+  ],
+  "headhunter": {
+    "best_review_iteration": 3,
+    "blocking_issues": [
+      {
+        "problem": "El CV demuestra exposición relevante a asistentes normativos, arquitectura de procesos/SLA, calidad productiva y GenAI, pero la propuesta de valor inicial no prueba con suficiente contundencia la preparación para un nivel Subdirector de Generative AI Engineering. El liderazgo técnico documentado, la industrialización y la gobernanza quedan diluidos entre fraude, cumplimiento y una lista amplia de capacidades.",
+        "required_change": "Reescribir el resumen y reordenar las viñetas de BBVA Expert para abrir con la evidencia más directa: arquitectura de workflows GenAI para operaciones regulatorias, curación de conocimiento y medición de impacto de asistentes internos, y revisión/refactorización de pipelines productivos. Incorporar como señal histórica el esfuerzo multidisciplinario liderado en Management Solutions. No afirmar gestión de personas, escala empresarial, despliegue productivo de LLMs ni métricas que no estén documentadas.",
+        "section": "Resumen y experiencia reciente en BBVA"
+      },
+      {
+        "problem": "La sección de habilidades intenta cubrir gran parte del stack de la vacante mediante 15 entradas, incluyendo varios conceptos muy específicos de LLM. Esto reduce la señal de priorización ejecutiva y puede parecer cobertura de palabras clave, especialmente porque no hay evidencia directa para fine-tuning, búsqueda semántica como capacidad explícita, tool calling, LangChain, LangGraph, Vertex AI, bases vectoriales, APIs REST o Kubernetes a nivel requerido.",
+        "required_change": "Compactar las habilidades en 4–6 grupos orientados al puesto y conservar únicamente tecnologías y capacidades con respaldo directo. Mantener explícitamente Python, SQL, PySpark/procesamiento distribuido, diseño de aplicaciones LLM, RAG/grounded generation, embeddings, evaluación/validación, trazabilidad y CI/CD/producción cuando el respaldo correspondiente esté disponible. No incorporar ni sugerir dominio de las brechas no demostradas.",
+        "section": "Habilidades"
+      },
+      {
+        "problem": "La vacante solicita inglés y el CV no contiene una sección de idiomas ni un nivel verificable. La estancia en Irlanda y el fortalecimiento de inglés son evidencia de desarrollo, pero no acreditan un nivel profesional actual.",
+        "required_change": "Añadir un apartado de idiomas solo si existe evidencia verificable de nivel o uso profesional actual. Si no existe, mantener esta condición como una brecha real para validar durante el proceso; no inferir fluidez a partir del intercambio.",
+        "section": "Requisitos de idioma"
+      }
+    ],
+    "decision": "REVISE",
+    "iterations": 3,
+    "score": 74
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "presentation": {
+    "bundle_reasons": [
+      "content_quality_target_not_reached"
+    ],
+    "gate": {
+      "alternate_physical_status": "PASS",
+      "alternate_presentation_review_status": "PASS",
+      "alternate_template": "harvard_v1",
+      "alternate_visual_status": "PASS",
+      "cover_letter_ready": true,
+      "primary_page_utilization": [
+        0.6422,
+        0.8663
+      ],
+      "primary_physical_status": "PASS",
+      "primary_presentation_review_status": "PASS",
+      "primary_section_area_ratios": {
+        "certifications": 0.0635,
+        "education": 0.0472,
+        "experience": 0.6682,
+        "projects": 0.1412,
+        "skills": 0.0799
+      },
+      "primary_section_item_counts": {
+        "certifications": 3,
+        "education": 2,
+        "experience": 7,
+        "projects": 2,
+        "skills": 10
+      },
+      "primary_template": "technical_modern_v1",
+      "primary_visual_status": "PASS",
+      "reasons": [
+        "content_quality_target_not_reached"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    "ready_to_send": false
+  },
+  "quality_kpi": 74,
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_target_reached": false,
+  "review_stop_reason": "max_review_budget_reached",
+  "schema_version": 1,
+  "style_preflight": {
+    "advisories": [
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[1].bullets[0]",
+        "message": "Leading verb 'construyó' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[2].bullets[2]",
+        "message": "Leading verb 'construyó' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[3].bullets[1]",
+        "message": "Leading verb 'desarrolló' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[5].bullets[0]",
+        "message": "Leading verb 'desarrolló' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[6].bullets[1]",
+        "message": "Leading verb 'desarrolló' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "projects[0].bullets[0]",
+        "message": "Leading verb 'construyó' is repeated at least three times; vary wording only when evidence permits."
+      }
+    ],
+    "attempted": false,
+    "initial_issues": [],
+    "initial_status": "PASS",
+    "repaired": false
+  },
+  "vacancy_fit": {
+    "gaps": [
+      "La publicación aparece como presencial en fuentes secundarias; no se confirmó un esquema híbrido o remoto.",
+      "El rol exige profundidad específica en industrialización de GenAI, arquitecturas cloud-native, Kubernetes y operación de sistemas LLM en producción.",
+      "PySpark no figura entre los requisitos explícitos de la publicación."
+    ],
+    "source_fit": 99.0,
+    "strengths": [
+      "Rol de nivel Subdirector en banca mexicana, directamente alineado con liderazgo técnico y experiencia en entornos financieros regulados.",
+      "Busca entre 6 y 10 años de experiencia en Machine Learning, Ciencia de Datos, Inteligencia Artificial o ingeniería de software enfocada en analítica avanzada.",
+      "Responsabilidad end-to-end para transformar casos de uso de GenAI en soluciones empresariales escalables, desde experimentación hasta producción, monitoreo y generación de valor.",
+      "Stack altamente alineado: Python, SQL, LLMs, RAG, embeddings, búsqueda semántica, LangChain, LangGraph, Vertex AI, Airflow, Docker, CI/CD, APIs REST y bases de datos vectoriales.",
+      "Incluye diseño de agentes especializados, tool calling, sistemas multiagente, evaluación y monitoreo de agentes en producción.",
+      "Exige balancear innovación con seguridad, riesgo regulatorio, costo y gobernanza, aprovechando directamente experiencia previa en banca, riesgo y coordinación transversal.",
+      "Formación objetivo incluye Actuaría y se considera deseable una Maestría en Ciencia de Datos, Machine Learning o IA."
+    ],
+    "tech_stack": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Generative AI",
+      "LLMs",
+      "RAG",
+      "Embeddings",
+      "Semantic Search",
+      "Prompt Engineering",
+      "Fine-Tuning",
+      "Agentic AI",
+      "Tool Calling",
+      "Multi-agent Systems",
+      "LangChain",
+      "LangGraph",
+      "Vertex AI",
+      "Airflow",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "REST APIs",
+      "Vector Databases",
+      "Model Evaluation",
+      "AI Safety",
+      "Model Governance"
+    ]
+  },
+  "validation": {
+    "editorial": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "factual": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "language": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "quality_gate": {
+      "passed": false,
+      "reasons": [
+        "headhunter_decision_not_pass",
+        "overall_score_below_92",
+        "vacancy_alignment_below_90",
+        "evidence_strength_below_95",
+        "language_quality_below_95",
+        "blocking_issues_present"
+      ]
+    },
+    "structure": {
+      "issues": [],
+      "status": "PASS"
+    }
+  }
+}

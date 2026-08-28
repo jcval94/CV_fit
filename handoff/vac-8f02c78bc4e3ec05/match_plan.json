@@ -1,0 +1,808 @@
+{
+  "coverage_counts": {
+    "partial": 4,
+    "strong": 13,
+    "unsupported": 1,
+    "weak": 8
+  },
+  "coverage_score": 69.2,
+  "guardrails": [
+    "unsupported requirements must not be turned into candidate claims",
+    "familiarity proficiency must never be upgraded to working or core",
+    "exact metrics require approved ACH-* evidence",
+    "named technologies require direct evidence after semantic reranking before being treated as supported"
+  ],
+  "requirements": [
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::python",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+        "certifications::cert-ibm-ml-python-2019"
+      ],
+      "evidence_record_ids": [
+        "certifications",
+        "project-bbva-atm-analytics",
+        "project-bbva-fraud-detection",
+        "project-cloud-ml-recommender",
+        "project-coi-fraud-toolkit",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/certifications.md",
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/cloud_ml_recommender.md",
+        "experience/projects/coi_fraud_toolkit.md",
+        "experience/projects/fraud_detection.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Python",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::sql",
+        "achievement-metrics::ACH-REPORTING-TIME-001",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+        "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies"
+      ],
+      "evidence_record_ids": [
+        "achievement-metrics",
+        "project-bbva-atm-analytics",
+        "project-bbva-next-best-offer",
+        "project-ms-data-migration",
+        "project-r-statistical-tooling",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/achievements/metrics.md",
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/consulting_data_migration.md",
+        "experience/projects/r_statistical_tooling.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "SQL",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::supervised-machine-learning",
+        "skills::tree-based-machine-learning-random-forests",
+        "professional-profile::professional-profile::core-professional-areas",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+        "role-management-solutions::management-solutions::skills-evidenced"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-ms-clarification-prioritization",
+        "role-management-solutions",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/roles/previous_roles.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Machine Learning",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+        "project-narrative-dna::narrative-dna-adnarrativa::summary",
+        "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+        "certifications::cert-pending-genai",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer"
+      ],
+      "evidence_record_ids": [
+        "cert-bourbaki-genai-2026",
+        "certifications",
+        "project-mvp-agent-factory",
+        "project-narrative-dna"
+      ],
+      "evidence_source_paths": [
+        "experience/certifications.md",
+        "experience/certifications_bourbaki.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "Generative AI",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::llm-application-design",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+        "skills::llm-evaluation-evals",
+        "skills::llm-safety-hallucination-mitigation",
+        "skills::structured-llm-outputs",
+        "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+      ],
+      "evidence_record_ids": [
+        "cert-bourbaki-genai-2026",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/certifications_bourbaki.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "LLMs",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::retrieval-augmented-retrieval-grounded-generation",
+        "professional-profile::professional-profile::technical-themes",
+        "professional-profile::professional-profile::core-professional-areas"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "RAG",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::similarity-auditor",
+        "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+        "skills::semantic-similarity-embeddings"
+      ],
+      "evidence_record_ids": [
+        "project-cloud-ml-recommender",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/cloud_ml_recommender.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Embeddings",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "skills::semantic-similarity-embeddings",
+        "skills::approximate-nearest-neighbor-search",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::business-problem",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-llm-internal-tools",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/llm_internal_tools.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Semantic Search",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+        "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+        "skills::prompt-engineering",
+        "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+        "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-llm-internal-tools",
+        "project-mvp-agent-factory",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/llm_internal_tools.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Prompt Engineering",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "unsupported",
+      "evidence_chunk_ids": [],
+      "evidence_record_ids": [],
+      "evidence_source_paths": [],
+      "importance": "critical",
+      "rationale": "No eligible professional evidence chunk matched this requirement.",
+      "requirement": "Fine-Tuning",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+        "skills::agentic-workflows",
+        "professional-profile::professional-profile::core-professional-areas",
+        "professional-profile::professional-profile::differentiators",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-mvp-agent-factory",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Agentic AI",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+        "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed",
+        "skills::api-cli-design",
+        "skills::prompt-engineering"
+      ],
+      "evidence_record_ids": [
+        "project-mvp-agent-factory",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/mvp_agent_factory.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Tool Calling",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::agentic-workflows",
+        "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+        "project-mvp-agent-factory::mvp-agent-factory::agent-skill-methodology",
+        "professional-profile::professional-profile::professional-positioning",
+        "professional-profile::professional-profile::canonical-summary"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-mvp-agent-factory",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Multi-agent Systems",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::unit-classifier",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::relationship-chain-detection"
+      ],
+      "evidence_record_ids": [
+        "project-narrative-dna"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/narrative_dna.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "LangChain",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "skills::structured-llm-outputs",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+        "skills::llm-evaluation-evals"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-llm-internal-tools",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/llm_internal_tools.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "LangGraph",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "achievement-metrics::ACH-GENAI-NORA-001",
+        "professional-profile::professional-profile::core-professional-areas",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+        "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+      ],
+      "evidence_record_ids": [
+        "achievement-metrics",
+        "cert-bourbaki-genai-2026",
+        "professional-profile",
+        "project-mvp-agent-factory",
+        "project-narrative-dna"
+      ],
+      "evidence_source_paths": [
+        "experience/achievements/metrics.md",
+        "experience/certifications_bourbaki.md",
+        "experience/profile.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Vertex AI",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::airflow",
+        "professional-profile::professional-profile::technical-themes",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::floor",
+        "skills::kubeflow",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-data-quality-mlops",
+        "project-financial-ml-pipelines",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_data_quality_mlops.md",
+        "experience/projects/financial_ml_pipelines.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Airflow",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::docker",
+        "professional-profile::professional-profile::technical-themes"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Docker",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "skills::kubernetes",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+        "professional-profile::professional-profile::technical-themes",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::boundaries"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-movilidad-social-mx",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/movilidad_social_mx.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Only familiarity-level skill evidence was found; do not upgrade proficiency.",
+      "requirement": "Kubernetes",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::ci-cd",
+        "role-bbva::bbva-m-xico::technologies-with-role-evidence",
+        "professional-profile::professional-profile::technical-themes",
+        "skills::productionization-of-data-science-solutions",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::summary"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-data-quality-mlops",
+        "role-bbva",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_data_quality_mlops.md",
+        "experience/roles/bbva.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "CI/CD",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "skills::api-cli-design",
+        "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+        "project-insideforest::insideforest::strong-cv-narratives::ml-engineering",
+        "project-metacraft::metacraft::technologies-concepts-evidenced",
+        "skills::openai-api-responses-api",
+        "role-bbva::bbva-m-xico::end-to-end-scope"
+      ],
+      "evidence_record_ids": [
+        "project-cloud-ml-recommender",
+        "project-insideforest",
+        "project-metacraft",
+        "role-bbva",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/cloud_ml_recommender.md",
+        "experience/projects/insideforest.md",
+        "experience/projects/metacraft.md",
+        "experience/roles/bbva.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "REST APIs",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+        "skills::retrieval-augmented-retrieval-grounded-generation"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-llm-internal-tools",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/llm_internal_tools.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Vector Databases",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::model-evaluation-validation",
+        "skills::supervised-machine-learning",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+        "skills::llm-evaluation-evals",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-outputs",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-next-best-offer",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Model Evaluation",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+        "professional-profile::professional-profile::core-professional-areas"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-mvp-agent-factory",
+        "project-narrative-dna"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "AI Safety",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "professional-profile::professional-profile::core-professional-areas",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::contribution-and-ownership",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-next-best-offer",
+        "project-bbva-supervisory-relations"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/bbva_supervisory_relations.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "Model Governance",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "education::education::bachelor-s-degree-in-actuarial-science",
+        "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+        "education::education::master-s-degree-in-data-science",
+        "education::education::master-s-degree-in-data-science::how-to-represent-this-degree"
+      ],
+      "evidence_record_ids": [
+        "education"
+      ],
+      "evidence_source_paths": [
+        "experience/education.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}",
+      "requirement_type": "requirement",
+      "retrieval_mode": "hybrid-rerank"
+    }
+  ],
+  "retrieval_mode": "hybrid-rerank",
+  "schema_version": 1,
+  "selected_evidence_chunk_ids": [
+    "achievement-metrics::ACH-GENAI-NORA-001",
+    "achievement-metrics::ACH-REPORTING-TIME-001",
+    "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+    "certifications::cert-ibm-ml-python-2019",
+    "certifications::cert-pending-genai",
+    "education::education::bachelor-s-degree-in-actuarial-science",
+    "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+    "education::education::master-s-degree-in-data-science",
+    "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+    "professional-profile::professional-profile::canonical-summary",
+    "professional-profile::professional-profile::core-professional-areas",
+    "professional-profile::professional-profile::differentiators",
+    "professional-profile::professional-profile::professional-positioning",
+    "professional-profile::professional-profile::technical-themes",
+    "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::cloud-and-production-delivery",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::summary",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+    "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::business-problem",
+    "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::technologies-and-patterns",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+    "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::approved-public-narrative",
+    "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::business-problem",
+    "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::contribution-and-ownership",
+    "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::summary",
+    "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+    "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+    "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+    "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+    "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::floor",
+    "project-insideforest::insideforest::strong-cv-narratives::ml-engineering",
+    "project-metacraft::metacraft::technologies-concepts-evidenced",
+    "project-movilidad-social-mx::movilidad-social-en-m-xico::boundaries",
+    "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+    "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+    "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+    "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+    "project-mvp-agent-factory::mvp-agent-factory::agent-skill-methodology",
+    "project-mvp-agent-factory::mvp-agent-factory::artifacts-generated-designed",
+    "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+    "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+    "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+    "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::relationship-chain-detection",
+    "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::similarity-auditor",
+    "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture::unit-classifier",
+    "project-narrative-dna::narrative-dna-adnarrativa::evaluation-outputs",
+    "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::llm-evaluation",
+    "project-narrative-dna::narrative-dna-adnarrativa::summary",
+    "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::sql-reporting-tool",
+    "role-bbva::bbva-m-xico::end-to-end-scope",
+    "role-bbva::bbva-m-xico::technologies-with-role-evidence",
+    "role-management-solutions::management-solutions::skills-evidenced",
+    "skills::agentic-workflows",
+    "skills::airflow",
+    "skills::api-cli-design",
+    "skills::approximate-nearest-neighbor-search",
+    "skills::ci-cd",
+    "skills::docker",
+    "skills::kubeflow",
+    "skills::kubernetes",
+    "skills::llm-application-design",
+    "skills::llm-evaluation-evals",
+    "skills::llm-safety-hallucination-mitigation",
+    "skills::model-evaluation-validation",
+    "skills::openai-api-responses-api",
+    "skills::productionization-of-data-science-solutions",
+    "skills::prompt-engineering",
+    "skills::python",
+    "skills::retrieval-augmented-retrieval-grounded-generation",
+    "skills::semantic-similarity-embeddings",
+    "skills::sql",
+    "skills::structured-llm-outputs",
+    "skills::supervised-machine-learning",
+    "skills::tree-based-machine-learning-random-forests"
+  ],
+  "selected_evidence_record_ids": [
+    "achievement-metrics",
+    "cert-bourbaki-genai-2026",
+    "certifications",
+    "education",
+    "professional-profile",
+    "project-bbva-atm-analytics",
+    "project-bbva-data-quality-mlops",
+    "project-bbva-fraud-detection",
+    "project-bbva-llm-internal-tools",
+    "project-bbva-next-best-offer",
+    "project-bbva-supervisory-relations",
+    "project-cloud-ml-recommender",
+    "project-coi-fraud-toolkit",
+    "project-financial-ml-pipelines",
+    "project-insideforest",
+    "project-metacraft",
+    "project-movilidad-social-mx",
+    "project-ms-clarification-prioritization",
+    "project-ms-data-migration",
+    "project-mvp-agent-factory",
+    "project-narrative-dna",
+    "project-r-statistical-tooling",
+    "role-bbva",
+    "role-management-solutions",
+    "skills"
+  ],
+  "selected_evidence_source_paths": [
+    "experience/achievements/metrics.md",
+    "experience/certifications.md",
+    "experience/certifications_bourbaki.md",
+    "experience/education.md",
+    "experience/profile.md",
+    "experience/projects/bbva_atm_analytics.md",
+    "experience/projects/bbva_data_quality_mlops.md",
+    "experience/projects/bbva_next_best_offer.md",
+    "experience/projects/bbva_supervisory_relations.md",
+    "experience/projects/cloud_ml_recommender.md",
+    "experience/projects/coi_fraud_toolkit.md",
+    "experience/projects/consulting_clarification_prioritization.md",
+    "experience/projects/consulting_data_migration.md",
+    "experience/projects/financial_ml_pipelines.md",
+    "experience/projects/fraud_detection.md",
+    "experience/projects/insideforest.md",
+    "experience/projects/llm_internal_tools.md",
+    "experience/projects/metacraft.md",
+    "experience/projects/movilidad_social_mx.md",
+    "experience/projects/mvp_agent_factory.md",
+    "experience/projects/narrative_dna.md",
+    "experience/projects/r_statistical_tooling.md",
+    "experience/roles/bbva.md",
+    "experience/roles/previous_roles.md",
+    "experience/skills.md"
+  ],
+  "vacancy_content_hash": "bb96381d1e9c470cbbc25efbecc4d949fd200dd8a9c66fdba31cc5af1203429d",
+  "vacancy_id": "vac-8f02c78bc4e3ec05"
+}

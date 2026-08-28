@@ -1,5 +1,5 @@
 {
-  "last_run_id": "546fde06cbe4439a123be0a46ee93a5e0eebbcfd-noop",
+  "last_run_id": "4b1c8ecfacb660db6e0c61fff72e705f11851137-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -89,6 +89,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-88deea25e71219c2"
+      ]
+    },
+    "Vacantes/enriched/auto/grupo-financiero-banorte-cientifico-de-datos-subdirector-de-generative-ai-engineering-497b5c1e3d.json": {
+      "source_hash": "913e00eb8e04a962694a2b097712b31142aa82307259d6dfbcc1b7e5801c484b",
+      "state_file": "sources/Vacantes__enriched__auto__grupo-financiero-banorte-cientifico-de-datos-subdirect--6ae513b28ed591fb.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-8f02c78bc4e3ec05"
       ]
     },
     "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json": {
@@ -280,6 +288,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-b8bc41ba93efd84c"
+      ]
+    },
+    "Vacantes/vacantes_2026-08-28.json": {
+      "source_hash": "c352f87e9552a626abd042449bc266f96fa5869fc710e5e4ffbdb8718fe09b3b",
+      "state_file": "sources/Vacantes__vacantes_2026-08-28.json--1b786ded16e39c2c.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-8f02c78bc4e3ec05"
       ]
     }
   }

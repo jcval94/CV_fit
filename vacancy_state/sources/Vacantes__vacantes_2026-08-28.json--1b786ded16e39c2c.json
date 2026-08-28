@@ -1,0 +1,95 @@
+{
+  "records": [
+    {
+      "application_language": "und",
+      "city": "Área metropolitana de Ciudad de México, México",
+      "company": "Grupo Financiero Banorte",
+      "company_category": "Banca",
+      "content_hash": "18d1c1071f09d721d43078014ee95c75132b9e1aac95da85524d485827a3cae9",
+      "description": null,
+      "fit_gaps": [
+        "La publicación aparece como presencial en fuentes secundarias; no se confirmó un esquema híbrido o remoto.",
+        "El rol exige profundidad específica en industrialización de GenAI, arquitecturas cloud-native, Kubernetes y operación de sistemas LLM en producción.",
+        "PySpark no figura entre los requisitos explícitos de la publicación."
+      ],
+      "fit_score": 99.0,
+      "fit_strengths": [
+        "Rol de nivel Subdirector en banca mexicana, directamente alineado con liderazgo técnico y experiencia en entornos financieros regulados.",
+        "Busca entre 6 y 10 años de experiencia en Machine Learning, Ciencia de Datos, Inteligencia Artificial o ingeniería de software enfocada en analítica avanzada.",
+        "Responsabilidad end-to-end para transformar casos de uso de GenAI en soluciones empresariales escalables, desde experimentación hasta producción, monitoreo y generación de valor.",
+        "Stack altamente alineado: Python, SQL, LLMs, RAG, embeddings, búsqueda semántica, LangChain, LangGraph, Vertex AI, Airflow, Docker, CI/CD, APIs REST y bases de datos vectoriales.",
+        "Incluye diseño de agentes especializados, tool calling, sistemas multiagente, evaluación y monitoreo de agentes en producción.",
+        "Exige balancear innovación con seguridad, riesgo regulatorio, costo y gobernanza, aprovechando directamente experiencia previa en banca, riesgo y coordinación transversal.",
+        "Formación objetivo incluye Actuaría y se considera deseable una Maestría en Ciencia de Datos, Machine Learning o IA."
+      ],
+      "fit_summary": "Es la oportunidad nueva con mayor ajuste de esta búsqueda: combina banca, seniority directivo, IA Generativa, RAG, agentes, Python/SQL, arquitectura end-to-end, gobernanza y liderazgo técnico. Por dominio y nivel de responsabilidad, merece prioridad inmediata.",
+      "identity_key": "8f02c78bc4e3ec058e41690d2faddbdb7aec6a6cd31539b8b1edaea763836de5",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.0,
+      "language_source": "undetermined",
+      "location_raw": "Área metropolitana de Ciudad de México, México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 8 horas",
+      "provenance": [
+        {
+          "source_commit": "4b1c8ecfacb660db6e0c61fff72e705f11851137",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "c352f87e9552a626abd042449bc266f96fa5869fc710e5e4ffbdb8718fe09b3b",
+          "source_native_id": "banorte-4453249003",
+          "source_path": "Vacantes/vacantes_2026-08-28.json",
+          "source_search_date": "2026-08-28",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "CIENTIFICO DE DATOS - SUBDIRECTOR DE GENERATIVE AI ENGINEERING",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Generative AI",
+        "LLMs",
+        "RAG",
+        "Embeddings",
+        "Semantic Search",
+        "Prompt Engineering",
+        "Fine-Tuning",
+        "Agentic AI",
+        "Tool Calling",
+        "Multi-agent Systems",
+        "LangChain",
+        "LangGraph",
+        "Vertex AI",
+        "Airflow",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "REST APIs",
+        "Vector Databases",
+        "Model Evaluation",
+        "AI Safety",
+        "Model Governance"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/cientifico-de-datos-subdirector-de-generative-ai-engineering-at-grupo-financiero-banorte-4453249003",
+      "vacancy_id": "vac-8f02c78bc4e3ec05",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "c352f87e9552a626abd042449bc266f96fa5869fc710e5e4ffbdb8718fe09b3b",
+  "source_path": "Vacantes/vacantes_2026-08-28.json",
+  "status": "valid"
+}

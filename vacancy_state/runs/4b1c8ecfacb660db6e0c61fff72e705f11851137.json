@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/grupo-financiero-banorte-cientifico-de-datos-subdirector-de-generative-ai-engineering-497b5c1e3d.json",
+      "Vacantes/vacantes_2026-08-28.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -17,7 +20,6 @@
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json",
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json",
       "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
-      "Vacantes/enriched/auto/grupo-financiero-banorte-cientifico-de-datos-subdirector-de-generative-ai-engineering-497b5c1e3d.json",
       "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json",
       "Vacantes/enriched/auto/ingredion-data-scientist-7855e20e5f.json",
       "Vacantes/enriched/auto/kake-senior-data-scientist-67bc1a0d13.json",
@@ -39,29 +41,30 @@
       "Vacantes/vacantes_2026-08-24.json",
       "Vacantes/vacantes_2026-08-25.json",
       "Vacantes/vacantes_2026-08-26.json",
-      "Vacantes/vacantes_2026-08-27.json",
-      "Vacantes/vacantes_2026-08-28.json"
+      "Vacantes/vacantes_2026-08-27.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "4b1c8ecfacb660db6e0c61fff72e705f11851137-noop",
+  "reindexed_vacancy_ids": [
+    "vac-8f02c78bc4e3ec05"
+  ],
+  "run_id": "4b1c8ecfacb660db6e0c61fff72e705f11851137",
   "schema_version": 1,
   "source_commit": "4b1c8ecfacb660db6e0c61fff72e705f11851137",
   "source_counts": {
     "deleted": 0,
     "discovered": 35,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 35
+    "unchanged": 33
   },
   "status": "success",
   "vacancy_counts": {
     "active": 26,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

@@ -1,0 +1,359 @@
+{
+  "best_review_iteration": 3,
+  "cv": {
+    "certifications": [
+      {
+        "evidence_refs": [
+          "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+        ],
+        "text": "GenAI Aplicado: ChatGPT & Gemini — Colegio de Matemáticas Bourbaki, marzo 2026 | ID: 68177741-cert-242290851."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-psm-i-2020"
+        ],
+        "text": "Professional Scrum Master I — Scrum.org, febrero 2020 | ID: 507770."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-cs50-harvardx-2020"
+        ],
+        "text": "CS50's Introduction to Computer Science — HarvardX, julio 2020 | ID: 1986a0a4d3864cdf94fd71e77d1c2b1e."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-ibm-ml-python-2019"
+        ],
+        "text": "Machine Learning with Python: A Practical Introduction — IBM, octubre 2019 | ID: 65985b23a4964c5f85f8682a62e8471f."
+      }
+    ],
+    "education": [
+      {
+        "evidence_refs": [
+          "education::education::master-s-degree-in-data-science"
+        ],
+        "text": "Maestría en Ciencia de Datos, Universidad Panamericana — junio 2023–diciembre 2024 | Calificación final: 9.6/10."
+      },
+      {
+        "evidence_refs": [
+          "education::education::bachelor-s-degree-in-actuarial-science"
+        ],
+        "text": "Licenciatura en Actuaría, Universidad Nacional Autónoma de México (UNAM) — 2013–2018."
+      }
+    ],
+    "experience": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+            ],
+            "text": "Diseña arquitecturas de proceso, estado y SLA asistidas por IA Generativa para operaciones regulatorias, bajo restricciones corporativas de seguridad y automatización."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+            ],
+            "text": "Cura fuentes de conocimiento y mide el impacto operativo de asistentes normativos internos para orientar su adopción y evolución."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+            ],
+            "text": "Traduce hipótesis de investigación en extracciones analíticas auditables y lógica de alertas para detección de siniestros, malas prácticas y riesgo de conducta."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+            ],
+            "text": "Revisa código productivo y refactoriza pipelines distribuidos afectados por insumos obsoletos, ambigüedad temporal o límites de memoria."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::canonical-employment-record",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "organization": "BBVA México",
+        "period": "abril 2024 – actualidad",
+        "title": "Senior Data Scientist (nivel corporativo Expert)"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+            ],
+            "text": "Construyó lógica de población, segmentación y priorización en SQL y PySpark para flujos comerciales."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+            ],
+            "text": "Operó liberaciones recurrentes de Best Time to Call y contribuyó a evaluaciones de tratamiento y control para CRMi/Next Best Offer."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+            ],
+            "text": "Diagnosticó sesgo de muestreo en un grupo de control experimental y contribuyó a alinear restricciones comerciales."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+        ],
+        "organization": "BBVA México",
+        "period": "mayo 2022 – marzo 2024",
+        "title": "Data Scientist — Associate"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+            ],
+            "text": "Evaluó modelos de ML y procesos ETL para pronóstico de efectivo, y apoyó decisiones de red de cajeros y sucursales mediante clustering y análisis de mercado."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+            ],
+            "text": "Construyó automatización recurrente de datos y pronósticos en Python para casos de uso de infraestructura."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+        ],
+        "organization": "BBVA México",
+        "period": "mayo 2021 – abril 2022",
+        "title": "Data Scientist — Analyst"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+            ],
+            "text": "Lideró un esfuerzo multidisciplinario de pronóstico de costos mensuales de operación mainframe mediante regresión lineal bayesiana."
+          },
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+            ],
+            "text": "Desarrolló un modelo y tablero en PySpark/MicroStrategy para predecir y priorizar aclaraciones falsas, incorporando conocimiento de especialistas en prevención de fraude."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::canonical-employment-record",
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+        ],
+        "organization": "Management Solutions",
+        "period": "julio 2020 – mayo 2021",
+        "title": "Business Consultant — Senior Data Scientist"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii"
+            ],
+            "text": "Apoyó la migración a Salesforce y de data lake a data warehouse, realizando pruebas A/B y definiendo layouts y relaciones para preservar consistencia de información."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii"
+        ],
+        "organization": "Management Solutions",
+        "period": "noviembre 2019 – julio 2020",
+        "title": "Business Consultant — Data Specialist (Assistant II)"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+            ],
+            "text": "Desarrolló trabajo estadístico en R, incluido FitUltD, durante un intercambio en Irlanda y un periodo intencional de fortalecimiento de inglés."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+        ],
+        "organization": "Desarrollo profesional",
+        "period": "2019",
+        "title": "Intercambio, inglés y trabajo estadístico open source"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant"
+            ],
+            "text": "Diseñó KPIs de monitoreo de fraude y desarrolló herramientas en R e indicadores no supervisados para salud de cartera aseguradora."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant"
+        ],
+        "organization": "Management Solutions",
+        "period": "octubre 2017 – marzo 2019",
+        "title": "Business Consultant — Data Specialist (Assistant)"
+      }
+    ],
+    "headline": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::professional-positioning"
+      ],
+      "text": "Senior Data Scientist | IA Generativa y Machine Learning"
+    },
+    "language": "es",
+    "projects": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "project-narrative-dna::narrative-dna-adnarrativa::summary",
+              "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer"
+            ],
+            "text": "Construyó un pipeline LLM JSON-first para transformar transcripciones en representaciones interpretables y auditables de estructura narrativa."
+          },
+          {
+            "evidence_refs": [
+              "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+              "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced"
+            ],
+            "text": "Implementó Structured Outputs de OpenAI, validación con Pydantic, auditoría semántica, revisión sintética, evaluación de regresión y fallbacks deterministas."
+          }
+        ],
+        "evidence_refs": [
+          "project-narrative-dna::narrative-dna-adnarrativa::summary",
+          "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer"
+        ],
+        "name": "narrative_dna"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced"
+            ],
+            "text": "Implementó serving HTTP en Google Cloud Functions Gen2 con Python, Flask, carga de artefactos, logging, manejo de excepciones, embeddings Transformer y similitud coseno."
+          }
+        ],
+        "evidence_refs": [
+          "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced"
+        ],
+        "name": "Cloud ML Recommender"
+      }
+    ],
+    "skills": [
+      {
+        "evidence_refs": [
+          "skills::python"
+        ],
+        "text": "Python (core)"
+      },
+      {
+        "evidence_refs": [
+          "skills::sql"
+        ],
+        "text": "SQL (core)"
+      },
+      {
+        "evidence_refs": [
+          "skills::llm-application-design"
+        ],
+        "text": "IA Generativa y diseño de aplicaciones LLM (core)"
+      },
+      {
+        "evidence_refs": [
+          "skills::supervised-machine-learning"
+        ],
+        "text": "Machine Learning supervisado (core)"
+      },
+      {
+        "evidence_refs": [
+          "skills::tree-based-machine-learning-random-forests"
+        ],
+        "text": "Machine Learning basado en árboles y Random Forests (core)"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "PySpark, ETL y procesamiento distribuido"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Detección de anomalías, outliers y análisis relacional"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Fuzzy matching y resolución de identidad"
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::core-professional-areas",
+          "skills::llm-application-design"
+        ],
+        "text": "RAG y flujos de generación fundamentada"
+      },
+      {
+        "evidence_refs": [
+          "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced"
+        ],
+        "text": "Structured Outputs, JSON Schema y validación con Pydantic"
+      },
+      {
+        "evidence_refs": [
+          "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced"
+        ],
+        "text": "Evaluación de LLMs, pruebas de regresión y fallbacks deterministas"
+      },
+      {
+        "evidence_refs": [
+          "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced"
+        ],
+        "text": "Trazabilidad, auditoría semántica y control de errores LLM"
+      },
+      {
+        "evidence_refs": [
+          "project-narrative-dna::narrative-dna-adnarrativa::skills-evidenced",
+          "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced"
+        ],
+        "text": "Embeddings y similitud semántica"
+      },
+      {
+        "evidence_refs": [
+          "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced"
+        ],
+        "text": "Serving HTTP, Cloud Functions y manejo de artefactos"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Revisión de código y pipelines reproducibles"
+      }
+    ],
+    "summary": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::canonical-summary",
+        "professional-profile::professional-profile::professional-experience-basis",
+        "professional-profile::professional-profile::core-professional-areas",
+        "skills::python",
+        "skills::sql",
+        "skills::llm-application-design"
+      ],
+      "text": "Senior Data Scientist con 8+ años en banca y consultoría. Diseña soluciones de datos, ML e IA Generativa para entornos operativos y regulados, desde el planteamiento y procesamiento distribuido hasta la automatización, validación y comunicación de resultados. Combina Python, SQL, PySpark y diseño de aplicaciones LLM auditables con colaboración transversal entre negocio, tecnología, ingeniería y cumplimiento."
+    },
+    "target_role": "Científico de Datos — Subdirector de Generative AI Engineering"
+  },
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_status": "COMPLETED_BELOW_TARGET",
+  "quality_target_reached": false
+}
