@@ -2675,6 +2675,17 @@
       "source_commit": "6b3249fd08010ef786149d37a636771a40a36be2",
       "status": "SKIPPED_NOT_ELIGIBLE",
       "vacancy_content_hash": "87166c1b4ccf56b4779014f12dba6ad31218b23adbb9c104da4bf7774f6ed447"
+    },
+    "vac-eea30930c49313c6": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "fda473c881c7b5de1fa74c9ff6b4703a76a4c2deb2319932b71df8eaa747b043",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-eea30930c49313c6 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "859f1641e12d604c4b7895a6df8573adafb322ecdc7f139cc8e48287885515e6"
     }
   },
   "pipeline_version": 1,

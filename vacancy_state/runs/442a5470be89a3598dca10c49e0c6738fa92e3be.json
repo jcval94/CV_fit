@@ -2,7 +2,9 @@
   "deleted_vacancy_ids": [],
   "paths": {
     "deleted": [],
-    "modified": [],
+    "modified": [
+      "Vacantes/vacantes_2026-08-29.json"
+    ],
     "new": [],
     "quarantined": [],
     "unchanged": [
@@ -43,30 +45,31 @@
       "Vacantes/vacantes_2026-08-25.json",
       "Vacantes/vacantes_2026-08-26.json",
       "Vacantes/vacantes_2026-08-27.json",
-      "Vacantes/vacantes_2026-08-28.json",
-      "Vacantes/vacantes_2026-08-29.json"
+      "Vacantes/vacantes_2026-08-28.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "442a5470be89a3598dca10c49e0c6738fa92e3be-noop",
+  "reindexed_vacancy_ids": [
+    "vac-eea30930c49313c6"
+  ],
+  "run_id": "442a5470be89a3598dca10c49e0c6738fa92e3be",
   "schema_version": 1,
   "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
   "source_counts": {
     "deleted": 0,
     "discovered": 39,
-    "modified": 0,
+    "modified": 1,
     "new": 0,
     "quarantined": 0,
-    "unchanged": 39
+    "unchanged": 38
   },
   "status": "success",
   "vacancy_counts": {
     "active": 30,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
-    "semantic_unchanged": 0
+    "impacted": 4,
+    "reindexed": 1,
+    "semantic_unchanged": 3
   },
   "validation_errors": {}
 }

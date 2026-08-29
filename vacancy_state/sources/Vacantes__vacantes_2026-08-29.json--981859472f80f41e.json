@@ -5,7 +5,7 @@
       "city": "México (teleworker; viajes ocasionales a Ciudad de México)",
       "company": "Zillow",
       "company_category": "Producto Tech",
-      "content_hash": "63970ad49361f3f6f2e0d0e4b794e905220eed12ddea7bede92e02380ed49b1c",
+      "content_hash": "c5aa94575b7dad4eac3e2b696125e72abb09fb60e07164fe6d1a00b2bce9db84",
       "description": null,
       "fit_gaps": [
         "No está enfocado directamente en banca, riesgo, fraude o credit scoring.",
@@ -21,7 +21,7 @@
         "Incluye diseño y evaluación de experimentos e inferencia causal para medir impacto de modelos y producto.",
         "Responsabilidad explícita de mentoría, revisión de trabajo y establecimiento de buenas prácticas de Data Science y Responsible AI."
       ],
-      "fit_summary": "Es la mejor nueva oportunidad de la corrida por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico.",
+      "fit_summary": "Es la mejor oportunidad por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico.",
       "identity_key": "6cb5f8926375e8d194b9b57156fe6e4c2ec7ba74626b7bf391548d4628b4761f",
       "jd_fidelity": "sparse",
       "jd_fidelity_reasons": [
@@ -39,10 +39,10 @@
       "posted_date_raw": "2026-08-27",
       "provenance": [
         {
-          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
+          "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
           "source_entry_index": 0,
           "source_format": "vacantes_v1",
-          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_hash": "51db1d2b1accf8d10c6d3657c241191b50b331e01559393eafe6b3b02d4ae96c",
           "source_native_id": "zillow-4440846424",
           "source_path": "Vacantes/vacantes_2026-08-29.json",
           "source_search_date": "2026-08-29",
@@ -71,6 +71,86 @@
       ],
       "url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-zillow-4440846424",
       "vacancy_id": "vac-6cb5f8926375e8d1",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "México",
+      "company": "Vonage",
+      "company_category": "Producto Tech",
+      "content_hash": "76968aba68f02499554c5e7bb71dd7413fedc6e389d23f1576b380884e45301d",
+      "description": null,
+      "fit_gaps": [
+        "No está enfocado en banca, fraude o credit scoring.",
+        "PySpark no aparece como requisito y el stack de datos se concentra en Snowflake y Salesforce.",
+        "El liderazgo es principalmente por ownership e influencia transversal; no se explicita people management o mentoría formal."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Vacante 100% work-from-home para México y con 8 años de experiencia requeridos, muy próxima al seniority objetivo.",
+        "Exige Python y SQL avanzados y utiliza scikit-learn, statsmodels, Prophet, pandas y NumPy para forecasting y modelado predictivo.",
+        "Ownership de capacidades de demand y revenue intelligence, desde modelado y segmentación hasta scoring y adopción operativa de resultados.",
+        "Incluye personalización y next-best-action, conectando modelos directamente con decisiones comerciales y automatización.",
+        "Pide fluidez de trabajo con herramientas de IA y workflows basados en LLMs, además de estructuras AI-ready en Snowflake.",
+        "La experiencia previa con Salesforce Einstein Analytics / Tableau CRM es especialmente transferible al rol."
+      ],
+      "fit_summary": "Nueva oportunidad de alto ajuste por modalidad remota, seniority, Python/SQL, modelado predictivo, forecasting, next-best-action, Snowflake y adopción explícita de workflows con LLMs.",
+      "identity_key": "eea30930c49313c6567016f2e472324b5ba854659f13d2c37a4918676745e6f0",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 2 horas",
+      "provenance": [
+        {
+          "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "51db1d2b1accf8d10c6d3657c241191b50b331e01559393eafe6b3b02d4ae96c",
+          "source_native_id": "vonage-8540318002",
+          "source_path": "Vacantes/vacantes_2026-08-29.json",
+          "source_search_date": "2026-08-29",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Marketing Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "scikit-learn",
+        "statsmodels",
+        "Prophet",
+        "Pandas",
+        "NumPy",
+        "Snowflake",
+        "Salesforce",
+        "Salesforce Einstein Analytics",
+        "Tableau CRM",
+        "Forecasting",
+        "Predictive Modeling",
+        "Next Best Action",
+        "LLM Workflows",
+        "AWS",
+        "GCP",
+        "Azure",
+        "Git"
+      ],
+      "url": "https://job-boards.greenhouse.io/vonage/jobs/8540318002",
+      "vacancy_id": "vac-eea30930c49313c6",
       "work_model": "Remote"
     },
     {
@@ -112,10 +192,10 @@
       "posted_date_raw": "2026-08-29",
       "provenance": [
         {
-          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
-          "source_entry_index": 1,
+          "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
+          "source_entry_index": 2,
           "source_format": "vacantes_v1",
-          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_hash": "51db1d2b1accf8d10c6d3657c241191b50b331e01559393eafe6b3b02d4ae96c",
           "source_native_id": "grupo-modelo-4460508694",
           "source_path": "Vacantes/vacantes_2026-08-29.json",
           "source_search_date": "2026-08-29",
@@ -156,7 +236,7 @@
       "city": "Miguel Hidalgo, Ciudad de México, México",
       "company": "Grupo Modelo",
       "company_category": "Producto Tech",
-      "content_hash": "dc45fe7ed5e04de1059e38b277fa5c0880baecdfbd0349e6ca1e30ebcd5f40e1",
+      "content_hash": "462b74d69025636ca128afdedb0f185f61f95af5fbebd32752217a90202a436b",
       "description": null,
       "fit_gaps": [
         "El rol pide 4+ años, por debajo del seniority objetivo y podría implicar cierto riesgo de sobrecalificación.",
@@ -172,7 +252,7 @@
         "Incluye code reviews, guía a perfiles junior, delegación y participación en decisiones técnicas del producto.",
         "La formación deseada incluye Actuaría y Maestría en Ciencia de Datos."
       ],
-      "fit_summary": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás del Principal por nivel y del Zillow por modalidad.",
+      "fit_summary": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás de alternativas remotas y del rol Principal por nivel.",
       "identity_key": "89b026f359c34a6effc5382502dbd9d84b576b585ac821b28f2ef2e25898f793",
       "jd_fidelity": "sparse",
       "jd_fidelity_reasons": [
@@ -190,10 +270,10 @@
       "posted_date_raw": "2026-08-28",
       "provenance": [
         {
-          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
-          "source_entry_index": 2,
+          "source_commit": "442a5470be89a3598dca10c49e0c6738fa92e3be",
+          "source_entry_index": 3,
           "source_format": "vacantes_v1",
-          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_hash": "51db1d2b1accf8d10c6d3657c241191b50b331e01559393eafe6b3b02d4ae96c",
           "source_native_id": "grupo-modelo-4459877680",
           "source_path": "Vacantes/vacantes_2026-08-29.json",
           "source_search_date": "2026-08-29",
@@ -230,7 +310,7 @@
     }
   ],
   "schema_version": 1,
-  "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+  "source_hash": "51db1d2b1accf8d10c6d3657c241191b50b331e01559393eafe6b3b02d4ae96c",
   "source_path": "Vacantes/vacantes_2026-08-29.json",
   "status": "valid"
 }

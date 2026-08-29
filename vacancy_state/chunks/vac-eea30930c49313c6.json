@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-eea30930c49313c6::core",
+      "chunk_type": "core",
+      "content_hash": "4c43a8b4fcdcde7e9e3e9145654823e97258a9be9810b11b0c32d9c0a053347f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-29.json"
+      ],
+      "text": "Role: Marketing Data Scientist\nCompany: Vonage\nCompany category: Producto Tech\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-eea30930c49313c6"
+    },
+    {
+      "chunk_id": "vac-eea30930c49313c6::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "585fca2afed7740d148ee2d8652eef74d0ad78c978c09ec184ae8ee629e78b63",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-29.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; scikit-learn; statsmodels; Prophet; Pandas; NumPy; Snowflake; Salesforce; Salesforce Einstein Analytics; Tableau CRM; Forecasting; Predictive Modeling; Next Best Action; LLM Workflows; AWS; GCP; Azure; Git",
+      "vacancy_id": "vac-eea30930c49313c6"
+    },
+    {
+      "chunk_id": "vac-eea30930c49313c6::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "98b1aa1935f3b5a656fbc7f6bf8c692d4a807acc10dfe3cc1d61c740bb83680e",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-29.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Nueva oportunidad de alto ajuste por modalidad remota, seniority, Python/SQL, modelado predictivo, forecasting, next-best-action, Snowflake y adopción explícita de workflows con LLMs.\nSource strengths: Vacante 100% work-from-home para México y con 8 años de experiencia requeridos, muy próxima al seniority objetivo.; Exige Python y SQL avanzados y utiliza scikit-learn, statsmodels, Prophet, pandas y NumPy para forecasting y modelado predictivo.; Ownership de capacidades de demand y revenue intelligence, desde modelado y segmentación hasta scoring y adopción operativa de resultados.; Incluye personalización y next-best-action, conectando modelos directamente con decisiones comerciales y automatización.; Pide fluidez de trabajo con herramientas de IA y workflows basados en LLMs, además de estructuras AI-ready en Snowflake.; La experiencia previa con Salesforce Einstein Analytics / Tableau CRM es especialmente transferible al rol.\nSource gaps: No está enfocado en banca, fraude o credit scoring.; PySpark no aparece como requisito y el stack de datos se concentra en Snowflake y Salesforce.; El liderazgo es principalmente por ownership e influencia transversal; no se explicita people management o mentoría formal.",
+      "vacancy_id": "vac-eea30930c49313c6"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-eea30930c49313c6"
+}
