@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-29",
+    "total_vacantes_encontradas": 3,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "zillow-4440846424",
+      "puesto": "Sr. Data Scientist",
+      "empresa": "Zillow",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "México (teleworker; viajes ocasionales a Ciudad de México)",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-08-27",
+      "porcentaje_ajuste": 98,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición remota para cualquier ubicación en México, con visitas ocasionales a Ciudad de México.",
+          "Requiere 8+ años de experiencia en estadística, machine learning o analítica avanzada, muy cercano al seniority objetivo.",
+          "Ownership end-to-end desde problem framing e hipótesis hasta desarrollo, validación, despliegue y monitoreo de modelos.",
+          "Pide Python o R, SQL, grandes volúmenes de datos, feature engineering y construcción de pipelines escalables.",
+          "Incluye diseño y evaluación de experimentos e inferencia causal para medir impacto de modelos y producto.",
+          "Responsabilidad explícita de mentoría, revisión de trabajo y establecimiento de buenas prácticas de Data Science y Responsible AI."
+        ],
+        "posibles_gaps": [
+          "No está enfocado directamente en banca, riesgo, fraude o credit scoring.",
+          "PySpark y GenAI no aparecen como requisitos explícitos centrales en la descripción recuperada.",
+          "El dominio es PropTech/real estate, por lo que parte de la ventaja sectorial financiera se traslada a habilidades analíticas y de producto."
+        ],
+        "resumen": "Es la mejor nueva oportunidad de la corrida por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Statistical Modeling",
+        "Experimentation",
+        "Causal Inference",
+        "Feature Engineering",
+        "Data Pipelines",
+        "Model Deployment",
+        "Model Monitoring",
+        "Responsible AI",
+        "Technical Mentoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-zillow-4440846424"
+    },
+    {
+      "id_vacante": "grupo-modelo-4460508694",
+      "puesto": "Principal Data Scientist",
+      "empresa": "Grupo Modelo",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Miguel Hidalgo, Ciudad de México, México",
+      "modalidad": "Presencial",
+      "fecha_publicacion": "2026-08-29",
+      "porcentaje_ajuste": 97,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol Principal con responsabilidad directa sobre la dirección técnica de productos analíticos y liderazgo de Data Scientists y Senior Data Scientists.",
+          "Requiere al menos 7 años y valora explícitamente formación en Actuaría y Maestría en disciplinas cuantitativas.",
+          "Dominio sólido de Python y SQL, arquitectura de soluciones analíticas y desarrollo de productos desde definición del problema hasta producción, adopción y monitoreo.",
+          "Incluye experimentación, inferencia causal, clasificación, regresión, clustering, forecasting, recomendadores, optimización y detección de anomalías.",
+          "PySpark/Spark, Databricks, MLflow, Feature Engineering, Delta Lake, Workflows y prácticas MLOps aparecen como capacidades deseables.",
+          "Incorpora evaluación explícita de AI/GenAI y decisiones build-vs-reuse-vs-buy, con fuerte componente de arquitectura y liderazgo técnico."
+        ],
+        "posibles_gaps": [
+          "La publicación recuperada no confirma esquema remoto o híbrido y fuentes secundarias la clasifican como presencial.",
+          "El dominio principal es Corporate/One Supply, no banca o riesgo financiero.",
+          "GenAI aparece como capacidad complementaria y no como núcleo exclusivo del rol."
+        ],
+        "resumen": "Ajuste excepcional para una evolución a Principal Data Scientist: combina Python, SQL, PySpark, experimentación, arquitectura end-to-end, MLOps, GenAI y liderazgo técnico en una compañía global."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "PySpark",
+        "Spark",
+        "Machine Learning",
+        "Experimentation",
+        "Causal Inference",
+        "Forecasting",
+        "Recommendation Systems",
+        "Optimization",
+        "Anomaly Detection",
+        "Databricks",
+        "MLflow",
+        "Delta Lake",
+        "MLOps",
+        "GenAI",
+        "Solution Architecture"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/principal-data-scientist-at-grupo-modelo-s-a-de-c-v-4460508694"
+    },
+    {
+      "id_vacante": "grupo-modelo-4459877680",
+      "puesto": "Sr. Data Scientist",
+      "empresa": "Grupo Modelo",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Miguel Hidalgo, Ciudad de México, México",
+      "modalidad": "Presencial",
+      "fecha_publicacion": "2026-08-28",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Responsabilidad end-to-end desde requerimiento de negocio hasta puesta en producción de productos analíticos.",
+          "Requiere Python avanzado, SQL optimizado para procesamiento masivo, machine learning y estadística aplicada.",
+          "Experiencia explícita en diseño de experimentos, clasificación, clustering, recomendadores y forecasting.",
+          "PySpark, Spark MLlib, distributed XGBoost, Azure Databricks, Unity Catalog, Feature Store, MLflow y Delta Lake aparecen como deseables.",
+          "Incluye code reviews, guía a perfiles junior, delegación y participación en decisiones técnicas del producto.",
+          "La formación deseada incluye Actuaría y Maestría en Ciencia de Datos."
+        ],
+        "posibles_gaps": [
+          "El rol pide 4+ años, por debajo del seniority objetivo y podría implicar cierto riesgo de sobrecalificación.",
+          "No capitaliza directamente experiencia en banca, riesgo, fraude o credit scoring.",
+          "GenAI no es un componente central de la descripción."
+        ],
+        "resumen": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás del Principal por nivel y del Zillow por modalidad."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Polars",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "PyTorch",
+        "TensorFlow",
+        "PySpark",
+        "Spark MLlib",
+        "Azure Databricks",
+        "MLflow",
+        "Delta Lake",
+        "Experiment Design",
+        "Machine Learning"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680"
+    }
+  ]
+}
