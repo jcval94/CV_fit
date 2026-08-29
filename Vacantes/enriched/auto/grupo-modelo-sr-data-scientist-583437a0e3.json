@@ -1,0 +1,62 @@
+{
+  "jd_capture_mode": "official_source_jsonld_jobposting_auto",
+  "jd_retrieved_at": "2026-08-29T14:32:19.037506Z",
+  "jd_source_url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680",
+  "metadata": {
+    "criterio_temporal": "Preservación automática de JD oficial para generación CV",
+    "fecha_busqueda": "2026-08-29",
+    "total_vacantes_encontradas": 1
+  },
+  "vacantes": [
+    {
+      "categoria_empresa": "Producto Tech",
+      "description": "<p><em>Nos enorgullece ser una empresa que ha traspasado fronteras con sus productos. Todo esto gracias a las 30,969 personas que colaboran en esta gran compañía.</em></p><p><em>Hoy forma parte de AB-InBev, la compañía cervecera más grande del mundo.</em></p><p><br></p><p><em>Te invitamos a participar en la vacante de:</em></p><p><br></p><p><strong>Senior Data Scientist</strong></p><p><br></p><p><strong>Requisitos:</strong></p><p><br></p><p><strong>Escolaridad:</strong> Licenciatura en Ciencia de datos, Licenciatura en Ciencias de la computación, Licenciatura en actuaría, Licenciatura en estadística, Ingeniería en sistemas o afines. Maestría en Ciencia de datos / MBA (Deseable).</p><p><strong>Años y área de experiencia:</strong> Más de 4 años de experiencia en posiciones como Data Scientist.</p><p><strong>Idioma: </strong>Inglés – Avanzado (80%)</p><p><strong>Competencias:</strong> Comunicación efectiva, pensamiento crítico, Liderazgo, gestión del tiempo y prioridades, colaboración y trabajo en equipo, adaptabilidad, Negociación e influencia, curiosidad y aprendizaje continuo.</p><p><strong>Lugar de trabajo:</strong> Miguel Hidalgo, CDMX, México.</p><p><strong>Horario:</strong> 8 a 5 pm</p><p><br></p><p><strong><u>Acerca del puesto</u></strong></p><p><br></p><p><strong>Actividades:</strong></p><ul><li>Desarrollar productos analíticos E2E, desde el requerimiento de negocio, hasta la puesta en producción.</li><li>Escribir código de alto rendimiento para procesamiento de datos listos para ser usados para entrenar nuestros modelos de Machine Learning.</li><li>Entrenar modelos de machine learning y extraer el máximo performance en diversas aplicaciones como: Clasificación, clustering, sistemas de recomendación, forecasting, etc.</li><li>Integrar nuestros modelos de machine learning en la infraestructura de la compañía, asegurando su correcto funcionamiento.</li><li>Formar parte de sesiones técnicas para discutir el futuro de nuestros productos e implementaciones.</li><li>Revisión de código para asegurar la calidad de nuestra base de código (PR reviews)</li><li>Guiar y ayudar activamente a los miembros más junior del equipo</li></ul><p><br></p><p><strong><u>Requisitos minímos:</u></strong></p><ul><li>Programación avanzada en python, sentirse cómodo trabajando con programación orientada a objetos, patrones de diseño y principios de diseño.</li><li>Conocimiento en SQL para la consulta y procesamiento de datos, con sólida experiencia en el desarrollo de consultas optimizadas para el manejo masivo de datos.</li><li>Sentirse cómodo trabajando con módulos para el procesamiento de datos como Pandas o Polars.</li><li>Experiencia con frameworks para–Machine Learning como sci-kit learn, xgboost, lightgbm, pytorch, tensorflow, etc.</li><li>Ser capaz de reconocer e implementar patrones de diseño para mejorar nuestro código de entrenamiento de modelos, pipelines de datos, etc.</li><li>Experiencia en estadística aplicada, diseño de experimentos, y análisis del output de modelos de ML.</li><li>Experiencia en herramientas de desarrollo como git, shell scripting, CLIs, manejadores de dependencias de python, etc.</li><li>Sentirse cómodo explicando insights de datos, en una manera entendible para stakeholders no técnicos.</li><li>Habilidad para priorizar historias de usuario, tareas y delegar tareas a miembros más junior de manera adecuada.</li></ul><p><br></p><p><strong>Deseable:</strong></p><ul><li>Experiencia programando código eficiente en paquetes de procesamiento de datos distribuidos como Pyspark.</li><li>Experiencia con frameworks distribuidos de ML/AI como: Spark MLlib, Distributed xgboost, Pytorch, Horovod, etc.</li><li>Experiencia de desarrollo en Azure Databricks como plataforma: Distributed Computes, Unity Catalog, Feature Store, ML Flow, Delta Lake, etc.</li></ul><p><br></p>",
+      "empresa": "Grupo Modelo",
+      "fecha_publicacion": "2026-08-28",
+      "id_vacante": "grupo-modelo-4459877680",
+      "modalidad": "Presencial",
+      "porcentaje_ajuste": 96,
+      "puesto": "Sr. Data Scientist",
+      "rango_salarial": "No especificado",
+      "razon_ajuste": {
+        "posibles_gaps": [
+          "El rol pide 4+ años, por debajo del seniority objetivo y podría implicar cierto riesgo de sobrecalificación.",
+          "No capitaliza directamente experiencia en banca, riesgo, fraude o credit scoring.",
+          "GenAI no es un componente central de la descripción."
+        ],
+        "puntos_fuertes": [
+          "Responsabilidad end-to-end desde requerimiento de negocio hasta puesta en producción de productos analíticos.",
+          "Requiere Python avanzado, SQL optimizado para procesamiento masivo, machine learning y estadística aplicada.",
+          "Experiencia explícita en diseño de experimentos, clasificación, clustering, recomendadores y forecasting.",
+          "PySpark, Spark MLlib, distributed XGBoost, Azure Databricks, Unity Catalog, Feature Store, MLflow y Delta Lake aparecen como deseables.",
+          "Incluye code reviews, guía a perfiles junior, delegación y participación en decisiones técnicas del producto.",
+          "La formación deseada incluye Actuaría y Maestría en Ciencia de Datos."
+        ],
+        "resumen": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás del Principal por nivel y del Zillow por modalidad."
+      },
+      "requirements": [
+        "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Polars",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "PyTorch",
+        "TensorFlow",
+        "PySpark",
+        "Spark MLlib",
+        "Azure Databricks",
+        "MLflow",
+        "Delta Lake",
+        "Experiment Design",
+        "Machine Learning"
+      ],
+      "ubicacion": "Miguel Hidalgo, Ciudad de México, México",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680"
+    }
+  ]
+}
