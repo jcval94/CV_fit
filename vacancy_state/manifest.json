@@ -1,5 +1,5 @@
 {
-  "last_run_id": "713ea7780cedca9ea82fd2cb94f27ba10420090c-noop",
+  "last_run_id": "44b1c57371e276c9ee216b90893c4602722f821a-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -99,6 +99,22 @@
         "vac-8f02c78bc4e3ec05"
       ]
     },
+    "Vacantes/enriched/auto/grupo-modelo-principal-data-scientist-c252925c0f.json": {
+      "source_hash": "6509f14ce6082c67e91baeea93796b387773c337890dc48db920e35896075e10",
+      "state_file": "sources/Vacantes__enriched__auto__grupo-modelo-principal-data-scientist-c252925c0f.json--2b095f1f31187a33.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-823f77b83c66b2b3"
+      ]
+    },
+    "Vacantes/enriched/auto/grupo-modelo-sr-data-scientist-583437a0e3.json": {
+      "source_hash": "2f26bbb864709d306801572ce96c599bd33a804bca32e12cc614cc7c0aaf9086",
+      "state_file": "sources/Vacantes__enriched__auto__grupo-modelo-sr-data-scientist-583437a0e3.json--5e6c400b50605026.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-89b026f359c34a6e"
+      ]
+    },
     "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json": {
       "source_hash": "e63528499e85965d760c9a6163032673b4b6ff8541fcecf49c67e5abf659a477",
       "state_file": "sources/Vacantes__enriched__auto__infor-scientist-senior-senior-data-scientist-strategy---8075f348aa706de2.json",
@@ -177,6 +193,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-08cdc2b18dc43994"
+      ]
+    },
+    "Vacantes/enriched/auto/zillow-sr-data-scientist-cdc3441963.json": {
+      "source_hash": "cecc98049ae77de21f083d81e3dfc478aeaba239d64cfb92658c507d76d8c93f",
+      "state_file": "sources/Vacantes__enriched__auto__zillow-sr-data-scientist-cdc3441963.json--5ba2ba911d4bc3ca.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6cb5f8926375e8d1"
       ]
     },
     "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json": {
@@ -296,6 +320,16 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-8f02c78bc4e3ec05"
+      ]
+    },
+    "Vacantes/vacantes_2026-08-29.json": {
+      "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+      "state_file": "sources/Vacantes__vacantes_2026-08-29.json--981859472f80f41e.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-6cb5f8926375e8d1",
+        "vac-823f77b83c66b2b3",
+        "vac-89b026f359c34a6e"
       ]
     }
   }

@@ -1,0 +1,158 @@
+{
+  "application_language": "es",
+  "evidence_coverage": {
+    "coverage_score": 73.2,
+    "unsupported_requirements": []
+  },
+  "final_gate_reasons": [
+    "headhunter_decision_not_pass",
+    "overall_score_below_92",
+    "vacancy_alignment_below_90",
+    "evidence_strength_below_95",
+    "language_quality_below_95",
+    "blocking_issues_present"
+  ],
+  "headhunter": {
+    "best_review_iteration": 2,
+    "blocking_issues": [
+      {
+        "problem": "La experiencia más reciente, que debería ser la principal prueba para un puesto Senior Data Scientist, está formulada de manera demasiado amplia y sin mostrar con suficiente claridad el ciclo E2E exigido: preparación eficiente de datos, entrenamiento/evaluación, integración operativa y comunicación con usuarios de negocio. El segundo bullet (“Contribuyo a productizar...”) es especialmente genérico y no diferencia al candidato frente a perfiles de nivel intermedio.",
+        "required_change": "Sustituir el bullet genérico por una evidencia concreta ya aprobada del rol actual que muestre producto analítico en producción, calidad/MLOps, automatización segura o arquitectura de procesos. Reordenar los bullets para que Python/PySpark/SQL, pipelines distribuidos, revisión de código y resultado operativo aparezcan antes que la descripción de dominio de fraude.",
+        "section": "Experiencia — BBVA México (abril 2024–presente)"
+      },
+      {
+        "problem": "El CV no hace visible evidencia de inglés avanzado, requisito explícito de la vacante. Tampoco aclara si el candidato tiene experiencia demostrable con mentoría/delegación a perfiles junior, otra responsabilidad explícita del puesto. No deben inferirse estas capacidades a partir de seniority técnico.",
+        "required_change": "Incluir una sección breve de idiomas con nivel de inglés únicamente si existe respaldo verificable. Añadir evidencia de guía técnica, colaboración o liderazgo de personas sólo si está documentada; si no existe, mantenerlo como una brecha real y no inventar cobertura.",
+        "section": "Alineación con requisitos del puesto"
+      },
+      {
+        "problem": "La sección técnica es sólida pero no está priorizada para el stack de Grupo Modelo. MLflow aparece como evidencia fuerte en el plan de matching, pero no aparece en el CV; a la vez, faltan señales ATS de prácticas de ingeniería solicitadas, como diseño de APIs/OO y testing, pese a que InsideForest aporta evidencia concreta. El CV no debe declarar como dominadas las brechas reales: Polars, XGBoost, PyTorch, Spark MLlib, Azure Databricks y Delta Lake.",
+        "required_change": "Reorganizar Skills en bloques priorizados: lenguajes/procesamiento, ML/experimentación y calidad/producción. Incorporar MLflow y pruebas/pytest o APIs tipo scikit-learn sólo con sus referencias aprobadas. Mantener las tecnologías sin evidencia directa fuera del listado y no convertir familiaridad con LightGBM en dominio avanzado.",
+        "section": "Skills / ATS"
+      },
+      {
+        "problem": "El proyecto de fraude repite una línea técnica ya cubierta en la experiencia actual y aporta menos diferenciación que el proyecto InsideForest para una vacante que valora ingeniería Python, patrones de diseño, calidad de código y módulos reutilizables.",
+        "required_change": "Reducir o eliminar el proyecto de fraude como proyecto independiente y conservarlo en Experiencia. Dar prioridad a InsideForest y expresar su evidencia de APIs de estimador, persistencia, pruebas, benchmarking, documentación y compatibilidad hacia atrás como prueba complementaria de ingeniería, sin desplazar el peso persuasivo de la experiencia profesional.",
+        "section": "Proyectos"
+      }
+    ],
+    "decision": "REVISE",
+    "iterations": 3,
+    "score": 78
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "presentation": {
+    "bundle_reasons": [
+      "content_quality_target_not_reached"
+    ],
+    "gate": {
+      "alternate_physical_status": "PASS",
+      "alternate_presentation_review_status": "PASS",
+      "alternate_template": "harvard_v1",
+      "alternate_visual_status": "PASS",
+      "cover_letter_ready": true,
+      "primary_page_utilization": [
+        0.7519,
+        0.6687
+      ],
+      "primary_physical_status": "PASS",
+      "primary_presentation_review_status": "PASS",
+      "primary_section_area_ratios": {
+        "certifications": 0.0847,
+        "education": 0.0501,
+        "experience": 0.628,
+        "projects": 0.1179,
+        "skills": 0.1193
+      },
+      "primary_section_item_counts": {
+        "certifications": 4,
+        "education": 2,
+        "experience": 7,
+        "projects": 2,
+        "skills": 15
+      },
+      "primary_template": "technical_modern_v1",
+      "primary_visual_status": "PASS",
+      "reasons": [
+        "content_quality_target_not_reached"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    "ready_to_send": false
+  },
+  "quality_kpi": 78,
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_target_reached": false,
+  "review_stop_reason": "max_review_budget_reached",
+  "schema_version": 1,
+  "style_preflight": {
+    "advisories": [],
+    "attempted": false,
+    "initial_issues": [],
+    "initial_status": "PASS",
+    "repaired": false
+  },
+  "vacancy_fit": {
+    "gaps": [
+      "El rol pide 4+ años, por debajo del seniority objetivo y podría implicar cierto riesgo de sobrecalificación.",
+      "No capitaliza directamente experiencia en banca, riesgo, fraude o credit scoring.",
+      "GenAI no es un componente central de la descripción."
+    ],
+    "source_fit": 96.0,
+    "strengths": [
+      "Responsabilidad end-to-end desde requerimiento de negocio hasta puesta en producción de productos analíticos.",
+      "Requiere Python avanzado, SQL optimizado para procesamiento masivo, machine learning y estadística aplicada.",
+      "Experiencia explícita en diseño de experimentos, clasificación, clustering, recomendadores y forecasting.",
+      "PySpark, Spark MLlib, distributed XGBoost, Azure Databricks, Unity Catalog, Feature Store, MLflow y Delta Lake aparecen como deseables.",
+      "Incluye code reviews, guía a perfiles junior, delegación y participación en decisiones técnicas del producto.",
+      "La formación deseada incluye Actuaría y Maestría en Ciencia de Datos."
+    ],
+    "tech_stack": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "Polars",
+      "Scikit-learn",
+      "XGBoost",
+      "LightGBM",
+      "PyTorch",
+      "TensorFlow",
+      "PySpark",
+      "Spark MLlib",
+      "Azure Databricks",
+      "MLflow",
+      "Delta Lake",
+      "Experiment Design",
+      "Machine Learning"
+    ]
+  },
+  "validation": {
+    "editorial": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "factual": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "language": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "quality_gate": {
+      "passed": false,
+      "reasons": [
+        "headhunter_decision_not_pass",
+        "overall_score_below_92",
+        "vacancy_alignment_below_90",
+        "evidence_strength_below_95",
+        "language_quality_below_95",
+        "blocking_issues_present"
+      ]
+    },
+    "structure": {
+      "issues": [],
+      "status": "PASS"
+    }
+  }
+}

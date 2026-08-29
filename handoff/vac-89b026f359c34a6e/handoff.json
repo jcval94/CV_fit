@@ -1,0 +1,40 @@
+{
+  "company": "Grupo Modelo",
+  "contact_policy": "public_safe_only_in_repo",
+  "files": {
+    "canonical_backbone": "canonical_backbone.json",
+    "cover_letter_final": null,
+    "cover_letter_proposed": "cover_letter_proposed.md",
+    "cv_proposed": "cv_proposed.json",
+    "cv_proposed_html": "cv_proposed.html",
+    "cv_proposed_markdown": "cv_proposed.md",
+    "evidence_snapshot": "evidence_snapshot.json",
+    "final_html": null,
+    "final_pdf": null,
+    "html_base": "html_base.html.j2",
+    "match_plan": "match_plan.json",
+    "prompt": "prompt.md",
+    "public_identity": "public_identity.yaml",
+    "review_context": "review_context.json",
+    "review_notes": null,
+    "vacancy": "vacancy.md",
+    "vacancy_json": "vacancy.json"
+  },
+  "links": {
+    "final_html": null,
+    "final_pdf": null,
+    "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-89b026f359c34a6e/cv_proposed.html"
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "quality_kpi": 78,
+  "ready_to_send": false,
+  "repo_folder_url": "https://github.com/jcval94/CV_fit/tree/main/handoff/vac-89b026f359c34a6e",
+  "role_title": "Sr. Data Scientist",
+  "run_id": "auto-44b1c57371e276c9ee216b90893c4602722f821a-vac-89b026f359c34a6e",
+  "schema_version": 2,
+  "source_date": "2026-08-29",
+  "source_fit": 96.0,
+  "status": "pending_final_review",
+  "vacancy_id": "vac-89b026f359c34a6e",
+  "vacancy_url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680"
+}

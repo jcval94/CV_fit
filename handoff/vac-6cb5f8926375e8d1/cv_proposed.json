@@ -1,0 +1,329 @@
+{
+  "best_review_iteration": 2,
+  "cv": {
+    "certifications": [
+      {
+        "evidence_refs": [
+          "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+        ],
+        "text": "GenAI Aplicado: ChatGPT & Gemini — Colegio de Matemáticas Bourbaki | Issued March 2026 | Credential ID: 68177741-cert-242290851."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-psm-i-2020"
+        ],
+        "text": "Professional Scrum Master I — Scrum.org | Issued February 2020 | Credential ID: 507770."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-cs50-harvardx-2020"
+        ],
+        "text": "CS50's Introduction to Computer Science — HarvardX, through edX | Issued July 2020."
+      }
+    ],
+    "education": [
+      {
+        "evidence_refs": [
+          "education::education::master-s-degree-in-data-science"
+        ],
+        "text": "Maestría en Ciencia de Datos, Universidad Panamericana — June 2023 – December 2024 | Completed | 9.6/10."
+      },
+      {
+        "evidence_refs": [
+          "education::education::bachelor-s-degree-in-actuarial-science"
+        ],
+        "text": "Licenciatura en Actuaría, Universidad Nacional Autónoma de México (UNAM) — 2013 – 2018 | Completed."
+      }
+    ],
+    "experience": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+              "professional-profile::professional-profile::canonical-summary"
+            ],
+            "text": "Lead and co-develop hybrid rule-and-ML detection systems, translating investigation hypotheses into auditable alert logic, validation, and investigation workflows."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+            ],
+            "text": "Strengthen production quality by reviewing code, refactoring distributed pipelines, calibrating alert thresholds, and investigating false positives across transactional, HR, and security data."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+            ],
+            "text": "Enable technical adoption of NotebookLM, Gemini, ChatGPT, and Google Workspace automation while curating knowledge sources for secure internal normative assistants."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::canonical-employment-record",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "organization": "BBVA México",
+        "period": "April 2024 – Present",
+        "title": "Senior Data Scientist"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+              "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+            ],
+            "text": "Built SQL and PySpark customer-segmentation, eligibility, and prioritization logic for commercial workflows and recurring operational releases."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+              "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+            ],
+            "text": "Contributed to Next Best Offer releases and Best Time to Call operations using treatment/control and placebo evaluation for causal inference, campaign monitoring, and business dashboards."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+        ],
+        "organization": "BBVA México",
+        "period": "May 2022 – March 2024",
+        "title": "Data Scientist — Associate"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+            ],
+            "text": "Evaluated and adapted ML models and ETL processes for cash-demand forecasting, supporting ATM and branch strategy through clustering, market-potential analysis, visualization, and recurring-data automation."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+        ],
+        "organization": "BBVA México",
+        "period": "May 2021 – April 2022",
+        "title": "Data Scientist — Analyst"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+            ],
+            "text": "Led a multidisciplinary effort to forecast monthly mainframe operating costs using Bayesian linear regression and developed a PySpark and MicroStrategy model to prioritize false clarifications."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::canonical-employment-record",
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+        ],
+        "organization": "Management Solutions",
+        "period": "July 2020 – May 2021",
+        "title": "Business Consultant — Senior Data Scientist"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii"
+            ],
+            "text": "Supported Salesforce and data-lake-to-data-warehouse migrations by translating business rules, performing A/B testing, and defining layouts and relationships for information consistency."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii"
+        ],
+        "organization": "Management Solutions",
+        "period": "November 2019 – July 2020",
+        "title": "Business Consultant — Data Specialist (Assistant II)"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+            ],
+            "text": "Completed an exchange in Ireland, strengthened English, and developed early R work including FitUltD."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+        ],
+        "organization": "Professional Development",
+        "period": "2019",
+        "title": "Exchange and Open-Source Statistical Work"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant"
+            ],
+            "text": "Designed insurance fraud-monitoring KPIs and applied principal component analysis, outlier detection, and R tooling for portfolio-health monitoring."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant"
+        ],
+        "organization": "Management Solutions",
+        "period": "October 2017 – March 2019",
+        "title": "Business Consultant — Data Specialist (Assistant)"
+      }
+    ],
+    "headline": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::professional-positioning",
+        "professional-profile::professional-profile::canonical-summary",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+      ],
+      "text": "Senior Data Scientist | End-to-End ML & Experimentation"
+    },
+    "language": "en",
+    "projects": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution"
+            ],
+            "text": "Applied Python, PySpark, and SQL to distributed ETL, large-scale joins, anomaly detection, fuzzy identity matching, and reproducible investigation-support pipelines."
+          }
+        ],
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution"
+        ],
+        "name": "Fraud, Malpractice and Conduct-Risk Detection"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+            ],
+            "text": "Implemented distributed segmentation and eligibility workflows with treatment/control and placebo evaluation, campaign monitoring, and an interactive prototype for explaining recommendations."
+          }
+        ],
+        "evidence_refs": [
+          "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+        ],
+        "name": "Next Best Offer / CRMi"
+      }
+    ],
+    "skills": [
+      {
+        "evidence_refs": [
+          "skills::python"
+        ],
+        "text": "Python — core"
+      },
+      {
+        "evidence_refs": [
+          "skills::sql"
+        ],
+        "text": "SQL — core"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+          "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+        ],
+        "text": "PySpark — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "skills::supervised-machine-learning"
+        ],
+        "text": "Supervised Machine Learning — core"
+      },
+      {
+        "evidence_refs": [
+          "skills::statistical-modeling"
+        ],
+        "text": "Statistical Modeling — core"
+      },
+      {
+        "evidence_refs": [
+          "skills::r"
+        ],
+        "text": "R — core"
+      },
+      {
+        "evidence_refs": [
+          "skills::llm-application-design"
+        ],
+        "text": "LLM Application Design / Generative AI — core"
+      },
+      {
+        "evidence_refs": [
+          "skills::supervised-machine-learning"
+        ],
+        "text": "Feature Engineering — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+        ],
+        "text": "Experimentation and Causal-Inference Evaluation — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Data Pipelines / ETL — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::canonical-summary",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "text": "Model Deployment / Operationalization — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::canonical-summary",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "text": "Model Validation and Monitoring — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "text": "Data Quality — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+        ],
+        "text": "Customer Segmentation and Prioritization — evidenced"
+      },
+      {
+        "evidence_refs": [
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Fraud, Anomaly, and Outlier Detection — evidenced"
+      }
+    ],
+    "summary": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::canonical-summary",
+        "professional-profile::professional-profile::professional-experience-basis",
+        "skills::python",
+        "skills::sql",
+        "skills::llm-application-design",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+      ],
+      "text": "Senior Data Scientist with 8+ years delivering end-to-end statistical and machine-learning solutions from problem framing and evaluation through operationalization. Combines Python, SQL, PySpark, large-scale data pipelines, experimentation and causal-inference evaluation with production quality, model monitoring, and cross-functional decision support. Applies Generative AI to grounded, secure analytical workflows."
+    },
+    "target_role": "Senior Data Scientist"
+  },
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_status": "COMPLETED_BELOW_TARGET",
+  "quality_target_reached": false
+}

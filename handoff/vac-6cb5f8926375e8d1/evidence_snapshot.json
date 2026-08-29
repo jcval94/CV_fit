@@ -1,0 +1,1162 @@
+{
+  "evidence": [
+    {
+      "chunk_id": "achievement-metrics::ACH-REPORTING-TIME-001",
+      "chunk_type": "achievement_metric",
+      "confidence": "high",
+      "constraints": [
+        "preserve `approximately`; do not attribute the value to the separate shortcuts package."
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "record_type": "achievement_registry",
+      "source_path": "experience/achievements/metrics.md",
+      "text": "ACH-REPORTING-TIME-001 — SQL/R reporting time saved\n- **Project:** SQL Reporting tool\n- **Metric:** weekly analyst time saved\n- **Result:** `approximately 10 hours per week`\n- **Status:** validated_public\n- **Public safe:** true\n- **CV usage:** approved\n- **Source:** current public professional portfolio\n- **Approved CV wording:** \"Built an SQL/R reporting tool that integrated Office/PDF outputs and saved approximately 10 hours per week.\"\n- **Usage constraint:** preserve `approximately`; do not attribute the value to the separate shortcuts package.\n\n---",
+      "title": "ACH-REPORTING-TIME-001 — SQL/R reporting time saved"
+    },
+    {
+      "chunk_id": "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "certifications",
+      "source_path": "experience/certifications_bourbaki.md",
+      "text": "GenAI Aplicado: ChatGPT & Gemini\n- **Credential:** GenAI Aplicado: ChatGPT & Gemini\n- **Issuer:** Colegio de Matemáticas Bourbaki\n- **Issued:** March 2026\n- **Credential ID:** `68177741-cert-242290851`\n- **Status:** verified\n- **Category:** Generative AI / LLMs\n- **CV priority:** mandatory / sticky for generated CVs\n- **Usage note:** preserve the exact credential title and issuer; do not infer a different certification level or provider.",
+      "title": "GenAI Aplicado: ChatGPT & Gemini"
+    },
+    {
+      "chunk_id": "certifications::cert-cs50-harvardx-2020",
+      "chunk_type": "credential",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "certifications",
+      "source_path": "experience/certifications.md",
+      "text": "CERT-CS50-HARVARDX-2020\n- **Credential:** CS50's Introduction to Computer Science\n- **Issuer:** HarvardX — An Online Learning Initiative by Harvard University through edX\n- **Issued:** July 2020\n- **Credential ID:** `1986a0a4d3864cdf94fd71e77d1c2b1e`\n- **Status:** verified\n- **Category:** Computer Science / Software Foundations\n- **CV priority:** high for software-heavy Data Science, ML Engineering and AI roles\n- **Source:** public LinkedIn credential record\n- **Notes:** LinkedIn also contains a June 2020 CS50 entry for the same course. Treat the two entries as the same learning achievement unless a future reconciliation proves they are distinct credentials.",
+      "title": "CERT-CS50-HARVARDX-2020"
+    },
+    {
+      "chunk_id": "certifications::cert-ibm-ds-ml-capstone-2019",
+      "chunk_type": "credential",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "certifications",
+      "source_path": "experience/certifications.md",
+      "text": "CERT-IBM-DS-ML-CAPSTONE-2019\n- **Credential:** Data Science and Machine Learning Capstone Project\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `7551cd1904674ba0aad8d5ade7d1eb5e`\n- **Status:** verified\n- **Category:** Data Science / Machine Learning\n- **CV priority:** medium\n- **Source:** public LinkedIn credential record",
+      "title": "CERT-IBM-DS-ML-CAPSTONE-2019"
+    },
+    {
+      "chunk_id": "certifications::cert-ibm-ml-python-2019",
+      "chunk_type": "credential",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "certifications",
+      "source_path": "experience/certifications.md",
+      "text": "CERT-IBM-ML-PYTHON-2019\n- **Credential:** Machine Learning with Python: A Practical Introduction\n- **Issuer:** IBM\n- **Issued:** October 2019\n- **Credential ID:** `65985b23a4964c5f85f8682a62e8471f`\n- **Status:** verified\n- **Category:** Machine Learning / Python\n- **CV priority:** medium-high for ML-focused applications\n- **Source:** public LinkedIn credential record",
+      "title": "CERT-IBM-ML-PYTHON-2019"
+    },
+    {
+      "chunk_id": "certifications::cert-psm-i-2020",
+      "chunk_type": "credential",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "certifications",
+      "source_path": "experience/certifications.md",
+      "text": "CERT-PSM-I-2020\n- **Credential:** Professional Scrum Master I\n- **Issuer:** Scrum.org\n- **Issued:** February 2020\n- **Credential ID:** `507770`\n- **Credential URL:** `https://www.scrum.org/certificates/507770`\n- **Status:** verified\n- **Category:** Agile / Delivery\n- **CV priority:** medium-high for roles requiring project ownership, agile delivery or cross-functional work\n- **Source:** public professional portfolio and official public certificate URL\n- **Privacy note:** use the numeric official certificate ID; do not reproduce the unrelated email-like value exposed by an older LinkedIn record.",
+      "title": "CERT-PSM-I-2020"
+    },
+    {
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "education",
+      "source_path": "experience/education.md",
+      "text": "Bachelor's Degree in Actuarial Science\n- **Institution:** Universidad Nacional Autónoma de México (UNAM)\n- **Degree:** Licenciatura en Actuaría\n- **Period:** 2013 – 2018\n- **Status:** Completed",
+      "title": "Bachelor's Degree in Actuarial Science"
+    },
+    {
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "education",
+      "source_path": "experience/education.md",
+      "text": "How to represent this degree\nPreferred concise CV form:\n\n> **B.Sc. / Bachelor's in Actuarial Science — Universidad Nacional Autónoma de México (UNAM), 2013–2018**\n\nFor roles requiring deeper quantitative evidence, emphasize the degree's grounding in probability, statistics, mathematics and risk modeling rather than listing generic Data Science keywords.\n\n---",
+      "title": "How to represent this degree"
+    },
+    {
+      "chunk_id": "education::education::bachelor-s-degree-in-actuarial-science::quantitative-foundation",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "education",
+      "source_path": "experience/education.md",
+      "text": "Quantitative foundation\nActuarial training provided a rigorous foundation in mathematics, probability, statistics, financial and risk-oriented quantitative reasoning. This background underpins later work in statistical modeling, machine learning, experimentation, forecasting and risk analytics.\n\nRelevant areas of quantitative depth include:\n\n- Probability and statistical inference\n- Mathematical analysis and calculus\n- Regression and statistical modeling\n- Risk and uncertainty modeling\n- Financial and actuarial mathematics\n- Optimization-oriented quantitative reasoning\n- Data analysis and computational problem solving\n\nThese areas describe the degree's quantitative foundation and should not be interpreted as an exhaustive list of exact course titles.",
+      "title": "Quantitative foundation"
+    },
+    {
+      "chunk_id": "education::education::master-s-degree-in-data-science",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "education",
+      "source_path": "experience/education.md",
+      "text": "Master's Degree in Data Science\n- **Institution:** Universidad Panamericana\n- **Degree:** Maestría en Ciencia de Datos\n- **Period:** June 2023 – December 2024\n- **Final grade:** 9.6 / 10\n- **Location:** Mexico\n- **Status:** Completed",
+      "title": "Master's Degree in Data Science"
+    },
+    {
+      "chunk_id": "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Keep institution names explicit: **Universidad Nacional Autónoma de México (UNAM)** and **Universidad Panamericana**.\n- Do not invent thesis titles, research topics, exact course names or academic honors not recorded in this source of truth.\n- Use **9.6/10** only for the Master's degree.\n- When a vacancy asks for quantitative depth, explain the actuarial foundation instead of merely stating the degree name.\n- Use university teaching/social service and IMEF leadership as supporting evidence, not as additional professional-employment tenure."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "education",
+      "source_path": "experience/education.md",
+      "text": "How to represent this degree\nPreferred concise CV form:\n\n> **M.Sc. / Master's in Data Science — Universidad Panamericana, 2023–2024**\n\nWhen academic performance is relevant, the final grade **9.6/10** may be included.\n\n---",
+      "title": "How to represent this degree"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::canonical-summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Canonical summary\nActuary and Data Scientist with 8+ years of professional experience building analytical, statistical and AI solutions across banking, consulting and other business environments. Holds a Master's degree in Data Science and combines a strong quantitative foundation with hands-on ownership of Python, PySpark, SQL, ML pipelines, production code and business-facing analytical products.\n\nExperience spans the full lifecycle of data products: problem framing, data extraction and quality, feature engineering, statistical and machine-learning modeling, validation, deployment, monitoring, automation, visualization and communication with senior business stakeholders. Has led and independently owned end-to-end initiatives while also contributing to broader team-owned systems where the evidence supports shared rather than exclusive ownership.\n\nParticularly strong at translating complex data into measurable business outcomes and production systems rather than treating modeling as an isolated activity. Comfortable operating between business, analytics, engineering, technology, compliance and executive stakeholders.",
+      "title": "Canonical summary"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::core-professional-areas",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Core professional areas\n- Data Science and statistical modeling\n- Machine Learning and predictive analytics\n- Generative AI, LLM applications, RAG and agentic workflows\n- Fraud, anomaly and behavioral detection\n- Customer analytics and commercial optimization\n- Forecasting and time-series analysis\n- Big Data processing and analytical ETLs\n- Productionization, data quality and model monitoring\n- Business Intelligence and executive analytics\n- Analytical governance and decision support",
+      "title": "Core professional areas"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::professional-experience-basis",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Professional-experience basis\nThe canonical **8+ years** figure is based on the enumerated professional chronology beginning in October 2017. Earlier university teaching/service, IMEF leadership and academic activities are valuable supporting experience, but they are tracked separately and are not used to inflate formal professional tenure.",
+      "title": "Professional-experience basis"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::professional-positioning",
+      "chunk_type": "section",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Professional positioning\n- **Current company:** BBVA México\n- **Current corporate level:** Expert\n- **Market-facing role:** Senior Data Scientist\n- **Preferred general CV positioning:** Líder de Data Science, Modelado e Inteligencia Artificial\n- **Professional experience:** 8+ years\n- **Primary focus:** Data Science, Machine Learning, Generative AI, Advanced Analytics and production-grade analytical systems",
+      "title": "Professional positioning"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::technical-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Technical ownership\nJosé Carlos typically works beyond isolated model development. Depending on the project, his scope can include:\n\n1. Translating a business problem into an analytical design.\n2. Extracting, integrating and validating large datasets.\n3. Developing statistical, ML or AI approaches.\n4. Writing and maintaining production-oriented Python, PySpark and SQL code.\n5. Building reusable pipelines and automated analytical processes.\n6. Integrating outputs into operational or business workflows.\n7. Monitoring performance, data quality and model behavior.\n8. Presenting findings, trade-offs and business impact to senior stakeholders.\n\nProject files remain authoritative for the exact ownership verb: `owned`, `led`, `co-developed`, `contributed`, `operated`, `maintained` or `reviewed`.",
+      "title": "Technical ownership"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::technical-themes",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Technical themes\nThis profile intentionally lists only broad, defensible capability areas. Exact proficiency must be read from `skills.md` and must never be flattened during CV generation.\n\n- **Programming / data:** Python, SQL, PySpark / Spark, R\n- **Machine Learning / statistics:** supervised and unsupervised learning, tree-based methods, anomaly detection, interpretable ML, statistical modeling, model evaluation and forecasting\n- **Generative AI:** LLM application design, retrieval-grounded / RAG workflows, prompting, structured outputs, evaluation, guardrails and agentic patterns\n- **Data engineering / production:** ETL, data quality, analytical pipelines, testing, productionization, monitoring and CI/CD-oriented delivery\n- **Cloud / platforms:** AWS and Google Cloud / Google Workspace analytical workloads at project-dependent depth\n- **BI / visualization:** Tableau, Power BI, Looker Studio and analytical visualization\n\nSupporting MLOps or platform technologies such as Docker, MLflow, Airflow, Kubernetes, Kubeflow and Kafka must be represented only at the proficiency level recorded in `skills.md`.",
+      "title": "Technical themes"
+    },
+    {
+      "chunk_id": "professional-profile::professional-profile::usage-rules",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "profile",
+      "source_path": "experience/profile.md",
+      "text": "Usage rules\n- Use **8+ years** as the canonical professional-experience figure unless a future primary source extends the formal employment chronology.\n- Treat university teaching/service, IMEF leadership and similar activities as supporting leadership/teaching experience, not as additional formal-employment years.\n- Do not present **Expert** as the main external job title; it is a BBVA corporate level. Prefer a market-readable functional title such as **Senior Data Scientist**.\n- For general CV positioning, prefer **Líder de Data Science, Modelado e Inteligencia Artificial** when a Spanish leadership-oriented headline is appropriate.\n- Quantified achievements must be sourced from `achievements/metrics.md` by metric ID.\n- Skill claims must preserve the exact `core`, `working` or `familiarity` level from `skills.md`.\n- Do not invent tools, metrics, team sizes, dates, ownership or business impact to match a vacancy.",
+      "title": "Usage rules"
+    },
+    {
+      "chunk_id": "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every ATM subproject as one personally owned model.\n- Do not add internal device counts, redistribution percentages or licensing savings without explicit public approval.\n- Use market-readable technologies in generated CVs; internal/deprecated platform names are unnecessary."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-ATM-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_atm_analytics.md",
+      "text": "Technologies and methods\n- Python, PySpark and SQL\n- Teradata and corporate data platforms\n- clustering and geospatial analysis\n- forecasting / time-series reasoning\n- ETL and recurring automation\n- Tableau and other BI reporting\n- model modernization and validation",
+      "title": "Technologies and methods"
+    },
+    {
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "text": "Approved public narratives\n> Refactored distributed analytical pipelines affected by deprecated inputs and memory bottlenecks, improving temporal determinism, traceability and execution frequency.\n\n> Resolved production false positives through forensic data lineage and automated PySpark schema normalization.\n\n> Reviewed critical analytical code and supported production deployment of AWS/PySpark data engines in a regulated environment.",
+      "title": "Approved public narratives"
+    },
+    {
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "text": "Code review and MLOps\n- reviewed and approved pull requests in critical analytical repositories\n- validated PySpark components before integration\n- worked with versioned deployment and internal MLOps practices\n- used internal deployment frameworks primarily as a user/reviewer rather than claiming framework authorship",
+      "title": "Code review and MLOps"
+    },
+    {
+      "chunk_id": "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim authorship of the internal MLOps framework.\n- Do not claim financial recovery impact for geolocation engines without outcome evidence.\n- Treat vendor RPA as a useful but recalibration-sensitive solution, not a finished autonomous control system."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_data_quality_mlops.md",
+      "text": "Engine and pipeline refactoring\nEvidence supports:\n\n- replacing deprecated input dependencies\n- making temporal cutoff logic deterministic\n- partitioning a memory-intensive engine to support more frequent execution\n- resolving out-of-memory bottlenecks in distributed workloads\n- improving traceability through dictionaries and explicit data contracts",
+      "title": "Engine and pipeline refactoring"
+    },
+    {
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/fraud_detection.md",
+      "text": "Contribution\n- led/co-developed a hybrid approach combining expert rules, supervised/unsupervised modeling, anomaly detection and statistical validation\n- used techniques including Isolation Forest, distribution/goodness-of-fit reasoning and Benford-oriented checks where appropriate\n- created claim-probability/prioritization logic and identified factors associated with higher risk\n- translated model outputs into an investigation workflow rather than treating scoring as the final deliverable",
+      "title": "Contribution"
+    },
+    {
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/fraud_detection.md",
+      "text": "2. Conduct and operational-risk alert calibration\nEvidence supports:\n\n- recurring monitoring of alert effectiveness\n- root-cause analysis of false positives\n- threshold and rule calibration\n- contextual joins across transactional, HR and security data\n- stronger evidence packages for investigators\n\nInternal alert-effectiveness figures from different populations are not published or merged with the hybrid model metrics.",
+      "title": "2. Conduct and operational-risk alert calibration"
+    },
+    {
+      "chunk_id": "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not combine metrics across alert populations, periods or workstreams.\n- Do not claim final disciplinary decisions as the analytical team's result.\n- Do not present inferred NLP/graph libraries as confirmed implementation facts.\n- Do not attribute the detection-rate improvement to LLM deployment."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-FRAUD-DETECTION-001",
+        "ACH-BBVA-FRAUD-REVIEW-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/fraud_detection.md",
+      "text": "Technologies and methods\n- Python, PySpark and SQL\n- distributed ETL and large-scale joins\n- Isolation Forest and supervised/unsupervised models\n- anomaly and outlier detection\n- descriptive statistics and goodness-of-fit reasoning\n- fuzzy matching / identity resolution\n- relational analysis and text-derived signals\n- dashboards, recurring reports and investigation support\n- code review and reproducible pipeline practices",
+      "title": "Technologies and methods"
+    },
+    {
+      "chunk_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-NBO-PRIVATE"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_next_best_offer.md",
+      "text": "Approved public narratives\n> Built segmentation and eligibility logic for recurring Next Best Offer recommendations in remote banking, integrating model outputs with commercial restrictions and operational delivery.\n\n> Designed treatment/control evaluation for a recommendation workflow and diagnosed sampling bias caused by inconsistent eligibility filters.",
+      "title": "Approved public narratives"
+    },
+    {
+      "chunk_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries",
+      "chunk_type": "boundary",
+      "confidence": "high",
+      "constraints": [
+        "- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-NBO-PRIVATE"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_next_best_offer.md",
+      "text": "Boundaries\n- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts.",
+      "title": "Boundaries"
+    },
+    {
+      "chunk_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-NBO-PRIVATE"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_next_best_offer.md",
+      "text": "Contribution and ownership\nEvidence supports:\n\n- construction of SQL/PySpark population and segmentation logic\n- preparation and recurring release of analytical labels/layouts\n- integration of propensities and commercial eligibility rules\n- support for campaigns and prioritization across several financial product families\n- design/implementation of treatment-control evaluation for a weekly optimized label\n- diagnosis of sampling bias caused by non-homogeneous commercial restrictions\n- alignment of treatment/placebo filters before interpreting uplift\n- contribution to recarterization logic that removed ineligible customers and prioritized stronger prospects\n\nThe evidence does not support exclusive ownership of every underlying propensity model or the complete recommendation engine.",
+      "title": "Contribution and ownership"
+    },
+    {
+      "chunk_id": "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Keep overall CRMi strategy and the specific causal experiment related but distinct.\n- Do not convert effectiveness levels into uplift or percentage points without denominator evidence.\n- Do not claim the recommendation engine alone caused all downstream sales.\n- Do not list specific internal tables, paths or campaign identifiers in public artifacts."
+      ],
+      "metric_refs": [
+        "ACH-BBVA-NBO-PRIVATE"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/bbva_next_best_offer.md",
+      "text": "Implementation evidence\n- SQL and PySpark\n- Teradata\n- distributed analytical workflows\n- treatment/control and placebo logic\n- customer segmentation and eligibility rules\n- recurring operational layouts\n- business dashboards and campaign monitoring\n- interactive Streamlit/LLM prototype for explaining recommendations",
+      "title": "Implementation evidence"
+    },
+    {
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "text": "Deployment evidence\nThe public deployment script uses Google Cloud Functions Gen2 with:\n\n- Python 3.10 runtime\n- HTTP trigger\n- `us-central1`\n- explicit CPU / memory allocation\n- explicit timeout configuration\n- environment-variable based OpenAI credential injection\n\nThe exact infrastructure settings are implementation details and should not normally be shown on a CV.",
+      "title": "Deployment evidence"
+    },
+    {
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "text": "ML inference workflow\nThe public code demonstrates a pipeline that:\n\n1. receives request data through an HTTP function\n2. translates Spanish text to English through OpenAI when required\n3. loads model/data artifacts from Google Cloud Storage\n4. loads a Keras model\n5. loads a Transformer tokenizer/model\n6. generates text embeddings\n7. predicts genre-score representations\n8. computes cosine similarity against stored series representations\n9. returns top recommendations in JSON-friendly structures\n10. translates recommendation text back to Spanish",
+      "title": "ML inference workflow"
+    },
+    {
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "text": "Summary\nPublic Google Cloud Function implementation for serving a text-based TV-series recommendation workflow. The project combines cloud-hosted model artifacts, Transformer embeddings, a Keras model, cosine similarity and OpenAI-assisted translation behind an HTTP-triggered serverless function.\n\nThis repository provides direct evidence that José Carlos has implemented **cloud model serving and end-to-end ML inference plumbing**, not only offline modeling.",
+      "title": "Summary"
+    },
+    {
+      "chunk_id": "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not imply Kubernetes or container-orchestration ownership from this project; it is a serverless Cloud Functions deployment.\n- Do not expose bucket names, environment values or deployment internals in generated CVs.\n- Do not describe the recommender as a production commercial service unless deployment/adoption evidence is separately confirmed."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/cloud_ml_recommender.md",
+      "text": "Technologies evidenced\n- Google Cloud Functions Gen2\n- Google Cloud Storage\n- Python\n- Flask request/JSON patterns\n- TensorFlow / Keras\n- Hugging Face Transformers\n- BERT / TinyBERT-style text embeddings\n- scikit-learn cosine similarity\n- Pandas / NumPy\n- OpenAI API\n- model artifact loading\n- logging\n- exception handling / fallback paths\n- HTTP model serving",
+      "title": "Technologies evidenced"
+    },
+    {
+      "chunk_id": "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim production use or employer adoption from the public repository alone.\n- Do not publish real sensitive transaction data.\n- Do not infer model precision or business impact without an evaluated dataset.\n- Describe optional embeddings/NLP components only to the level implemented in the repository."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/coi_fraud_toolkit.md",
+      "text": "Technologies\n- Python\n- Pandas and NumPy\n- scikit-learn and SciPy where optional analytical components are used\n- Seaborn and Matplotlib\n- package installation / editable development\n- Google Colab\n- NLP-style text categorization and interpretable rules",
+      "title": "Technologies"
+    },
+    {
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "text": "Skills evidenced\n- Python pipeline architecture\n- time-series and market-data handling\n- feature engineering and temporal validation\n- training/evaluation separation\n- artifact and snapshot contracts\n- SQLite and JSON/JSONL\n- GitHub Actions\n- static dashboard delivery\n- operational documentation and state transparency",
+      "title": "Skills evidenced"
+    },
+    {
+      "chunk_id": "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not claim real trading returns, production capital deployment or investment advice.\n- Keep yahoo framed as educational.\n- Preserve floor's documented partial/degraded state when discussing reliability.\n- Dependency presence is not proof of deep expertise in every listed model family."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/financial_ml_pipelines.md",
+      "text": "yahoo\nThe repository documents a modular educational flow for selecting tickers, downloading market data, preprocessing, feature engineering, training, prediction, evaluation, portfolio optimization, configuration-driven execution, temporal validation and GitHub Pages publication.",
+      "title": "yahoo"
+    },
+    {
+      "chunk_id": "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not normalize or publish the unresolved migration row-count value.\n- Do not claim target-platform architecture ownership without additional evidence.\n- Keep migration/reconciliation evidence distinct from later production data-engineering work at BBVA."
+      ],
+      "metric_refs": [
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/consulting_data_migration.md",
+      "text": "Methods and technologies\n- data migration and reconciliation\n- SQL / data manipulation\n- schema/layout definition\n- data-quality validation\n- A/B testing\n- Salesforce delivery context\n- cross-platform traceability",
+      "title": "Methods and technologies"
+    },
+    {
+      "chunk_id": "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::contribution-and-ownership",
+      "chunk_type": "ownership",
+      "confidence": "high",
+      "constraints": [
+        "- Treat the public metric as project/team impact with bounded personal contribution.\n- Do not imply that every identified case was produced by one algorithm.\n- Do not merge this engagement with later BBVA fraud/compliance workstreams."
+      ],
+      "metric_refs": [
+        "ACH-MS-FRAUD-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/consulting_insurance_fraud_monitoring.md",
+      "text": "Contribution and ownership\nEvidence supports:\n\n- designing fraud-monitoring KPIs for excessive sales/prescriptions and related risk patterns\n- applying principal component analysis and outlier detection\n- contributing unsupervised indicators for risk/behavioral monitoring\n- developing supporting R tooling\n- helping deliver a monitoring application for insurance-portfolio health\n- translating analytical outputs into controls and client-facing reporting\n\nThe evidence supports meaningful implementation and analytical design, but not exclusive ownership of every control, case decision or downstream investigation.",
+      "title": "Contribution and ownership"
+    },
+    {
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "text": "Agentic AI / AI Engineer\n> Designed a reusable agent-development framework with explicit skill contracts, eval rubrics, operating specs and quality gates for converting ambiguous MVP ideas into development-ready vertical slices.",
+      "title": "Agentic AI / AI Engineer"
+    },
+    {
+      "chunk_id": "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present the repository as a deployed SaaS product.\n- The `4+` rubric threshold is a Definition-of-Ready rule, not a measured product outcome.\n- Use this project primarily as evidence of agent-system thinking, product/engineering structure and evaluation methodology."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/mvp_agent_factory.md",
+      "text": "Technical Leadership / AI Product\n> Built a documentation-first methodology for coordinating AI coding agents and human teams around PRDs, architecture decisions, acceptance criteria and regression-oriented evals.",
+      "title": "Technical Leadership / AI Product"
+    },
+    {
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/narrative_dna.md",
+      "text": "AI Safety / Reliability\n> Combined strict output schemas, deterministic validators, confidence escalation and fallback paths to keep an LLM classification pipeline auditable and bounded.",
+      "title": "AI Safety / Reliability"
+    },
+    {
+      "chunk_id": "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- The `1.0` regression pass rate applies only to the maintained high-confidence regression fixture.\n- Do not call it an external benchmark, production accuracy or human-level performance.\n- Do not claim fine-tuning or model training from this repository; the evidence is application architecture, evaluation and structured LLM orchestration."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/narrative_dna.md",
+      "text": "Generative AI / AI Engineer\n> Built a JSON-first LLM analysis pipeline using OpenAI Structured Outputs, Pydantic validation, deterministic fallbacks, semantic auditing, synthetic review/adjudication and regression evaluation.",
+      "title": "Generative AI / AI Engineer"
+    },
+    {
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "text": "Evidence value\n- time-series forecasting\n- ensemble learning\n- R\n- interactive analytical delivery through Shiny",
+      "title": "Evidence value"
+    },
+    {
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00::evidence-value",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "text": "Evidence value\n- statistical distribution fitting\n- actuarial modeling\n- R package development\n- statistical research translated into reusable code\n\nUse the thesis/research records for exact methodological or quantitative claims rather than inferring them solely from the repository name.",
+      "title": "Evidence value"
+    },
+    {
+      "chunk_id": "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::skills-evidenced-across-this-project-family",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Do not infer current proficiency solely from repository age; current R proficiency is supported elsewhere in `skills.md`.\n- Do not present an educational extension as original invention of the underlying published method.\n- Do not auto-promote old course/research repositories over stronger recent open-source projects."
+      ],
+      "metric_refs": [
+        "ACH-REPORTING-TIME-001"
+      ],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/r_statistical_tooling.md",
+      "text": "Skills evidenced across this project family\n- R\n- CRAN package publication\n- RStudio add-ins\n- statistical modeling\n- probability/distribution fitting\n- package development\n- forecasting\n- ensemble methods\n- Shiny\n- SQL/R reporting automation\n- ggplot2 / analytical visualization\n- reproducible quantitative research",
+      "title": "Skills evidenced across this project family"
+    },
+    {
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "text": "Applied Scientist / Research DS\n> Designed interpretable rule-discovery and decision-surface exploration methods for classification/regression, with reproducible multi-seed benchmarks on 30k × 25 synthetic datasets.",
+      "title": "Applied Scientist / Research DS"
+    },
+    {
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+      "chunk_type": "project_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "text": "DelDel experimental discipline\nThe PureSheShe/DelDel repository defines a mandatory experiment protocol. Experiments record metrics including:\n\n- F1\n- precision / recall\n- precision lift\n- runtime\n- per-class and global summaries\n\nThe project also defines a composite `compass_score` based on the geometric mean of F1, lift precision and minimum class lift for selected regions.",
+      "title": "DelDel experimental discipline"
+    },
+    {
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "text": "Skills evidenced\n- algorithm design\n- high-dimensional ML\n- interpretable ML / XAI\n- classification / regression\n- supervised clustering\n- numerical optimization/search\n- rule extraction\n- beam / greedy search patterns\n- feature/subspace exploration\n- benchmark design\n- reproducible experimentation\n- Python package engineering\n- pytest\n- developer documentation",
+      "title": "Skills evidenced"
+    },
+    {
+      "chunk_id": "project-sheshe-deldel::sheshe-deldel::summary",
+      "chunk_type": "summary",
+      "confidence": "high",
+      "constraints": [
+        "- Always label the 30k × 25 metrics as synthetic benchmarks.\n- Do not describe optional LightGBM/SHAP/Interpret dependencies as core expertise without separate evidence.\n- Prefer InsideForest adoption metrics for standard CVs; use SheShe/DelDel when the target role rewards algorithmic/research depth."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "project",
+      "source_path": "experience/projects/sheshe_deldel.md",
+      "text": "Summary\nSheShe (**Smart High-dimensional Edge Segmentation & Hyperboundary Explorer**) and its experimental DelDel/PureSheShe work form a public research-oriented toolkit for turning probabilistic models into guided explorers of decision surfaces and discovering **human-readable rules in low-dimensional subspaces**.\n\nThis project family is direct evidence of algorithmic experimentation, model interpretation, numerical search and reproducible benchmark design.",
+      "title": "Summary"
+    },
+    {
+      "chunk_id": "role-bbva::bbva-m-xico::canonical-employment-record",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/bbva.md",
+      "text": "Canonical employment record\n- **Employment period:** May 2021 – present\n- **Functional track:** Data Science / Advanced Analytics\n- **Current corporate level:** Expert\n- **Current market-facing title:** Senior Data Scientist\n- **Primary domains:** banking operations, remote banking, commercial analytics, fraud, compliance, risk, data engineering and Generative AI\n\nThe corporate level **Expert** is retained for internal chronology. External career materials should normally use a market-readable title such as **Senior Data Scientist** or the user-approved general positioning **Líder de Data Science, Modelado e Inteligencia Artificial**.",
+      "title": "Canonical employment record"
+    },
+    {
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/bbva.md",
+      "text": "Data Scientist — Analyst\n- **Period:** May 2021 – April 2022\n- **Primary scope:** analytical infrastructure, forecasting, ATM/branch strategy and operational automation\n- **Observable contributions:**\n  - evaluated and adapted ML models and ETL processes for forecasting cash demand\n  - supported ATM/branch deployment and decommissioning decisions with clustering, market-potential analysis and visualization\n  - contributed to predictive-maintenance, footprint and operational-dashboard work\n  - built Python-based forecasting and recurring-data automation for infrastructure use cases\n- **Canonical projects:** [ATM and physical-network analytics](../projects/bbva_atm_analytics.md)",
+      "title": "Data Scientist — Analyst"
+    },
+    {
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/bbva.md",
+      "text": "Data Scientist — Associate\n- **Period:** May 2022 – March 2024\n- **Primary scope:** remote banking, customer segmentation, contact optimization and recommendation strategy\n- **Observable contributions:**\n  - supported and refined geospatial/footprint analysis for remote ATMs\n  - participated in contactability pilots and later operated recurring Best Time to Call releases\n  - built population, segmentation and prioritization logic in SQL/PySpark for commercial workflows\n  - contributed to CRMi/Next Best Offer releases and treatment/control evaluation\n  - diagnosed sampling bias in an experimental control group and helped align commercial restrictions\n  - developed prototypes that translated analytical recommendations into interactive business-facing experiences\n- **Canonical projects:**\n  - [Best Time to Call](../projects/bbva_btc.md)\n  - [Next Best Offer / CRMi](../projects/bbva_next_best_offer.md)",
+      "title": "Data Scientist — Associate"
+    },
+    {
+      "chunk_id": "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Do not present every initiative as individual ownership; the project files state whether the role was lead, contributor, operator or reviewer.\n- Do not attribute the public fraud-detection improvement to the normative LLM assistant; these were separate workstreams.\n- Do not claim platform engineering ownership for tools that were only used or reviewed.\n- Preserve April 2024 as the current canonical Expert start date; the older public portfolio says March 2024 and is logged as a resolved discrepancy."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/bbva.md",
+      "text": "Data Scientist — Expert\n- **Period:** April 2024 – present\n- **Primary scope:** fraud and compliance analytics, production quality, data architecture and applied GenAI\n- **Observable contributions:**\n  - led and contributed to hybrid rule/ML systems for claim, malpractice and conduct-risk detection\n  - translated investigation hypotheses into auditable analytical extractions and alert logic\n  - calibrated alert thresholds and investigated false positives across transactional, HR and security data\n  - worked on fuzzy identity matching, relational fraud analysis and external-data enrichment\n  - reviewed production code and refactored distributed pipelines affected by deprecated inputs, temporal ambiguity or memory limits\n  - helped productize data engines and design secure automation under corporate constraints\n  - curated knowledge sources and measured operational impact for internal normative assistants\n  - designed process/state/SLA architectures and GenAI-assisted workflows for regulatory operations\n  - supported technical adoption of NotebookLM, Gemini, ChatGPT and Google Workspace automation\n- **Canonical projects:**\n  - [Fraud and inappropriate-practice detection](../projects/fraud_detection.md)\n  - [Internal LLM tools](../projects/llm_internal_tools.md)\n  - [Data quality, MLOps and analytical engines](../projects/bbva_data_quality_mlops.md)\n  - [Supervisory Relations To-Be](../projects/bbva_supervisory_relations.md)",
+      "title": "Data Scientist — Expert"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::canonical-employment-record",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Canonical employment record\n- **Organization:** Management Solutions\n- **Overall period:** October 2017 – May 2021\n- **Location:** Mexico City\n- **Professional context:** data and business consulting across insurance, fraud, technology migration, cost forecasting and operational analytics\n\nThe public portfolio shows a deliberate pause during 2019 for an exchange in Ireland, English development and open-source/statistical work. It also explains that a new corporate user was assigned on return, which can make external employment records appear to start later than the original October 2017 date.",
+      "title": "Canonical employment record"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Business Consultant — Data Specialist (Assistant)\n- **Period:** October 2017 – March 2019\n- **Contributions:**\n  - designed fraud-monitoring KPIs for excessive sales/prescriptions\n  - applied principal component analysis and outlier detection\n  - developed supporting R tooling\n  - defined unsupervised indicators related to willingness and ability to pay\n  - helped deliver a monitoring application for insurance-portfolio health\n- **Canonical project:** [Insurance Fraud Monitoring](../projects/consulting_insurance_fraud_monitoring.md)\n- **Public outcome:** `ACH-MS-FRAUD-001` in the achievement registry",
+      "title": "Business Consultant — Data Specialist (Assistant)"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Business Consultant — Data Specialist (Assistant II)\n- **Period:** November 2019 – July 2020\n- **Contributions:**\n  - supported migration of corporate tools to Salesforce\n  - translated business rules into front-end behavior\n  - performed A/B testing on deployed solutions\n  - supported data-lake-to-data-warehouse migration\n  - defined layouts, formats and relationships to preserve information consistency\n- **Canonical project:** [Data Migration, Reconciliation & QA](../projects/consulting_data_migration.md)\n- **Public outcome:** `ACH-MS-MIGRATION-001` remains conditional until its unit representation is reconciled",
+      "title": "Business Consultant — Data Specialist (Assistant II)"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Business Consultant — Senior Data Scientist\n- **Period:** July 2020 – May 2021\n- **Contributions:**\n  - led a multidisciplinary effort to forecast monthly mainframe operating costs using Bayesian linear regression\n  - developed a PySpark/MicroStrategy model and dashboard to predict/prioritize false clarifications\n  - collaborated with fraud-prevention specialists to incorporate expert insight into prioritization\n- **Canonical project:** [Clarification Prioritization](../projects/consulting_clarification_prioritization.md)\n- **Public outcomes:** `ACH-MS-CLARIFICATIONS-001` and `ACH-MS-CLARIFICATIONS-002`",
+      "title": "Business Consultant — Senior Data Scientist"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::role-chronology::professional-development-pause",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Professional-development pause\n- **Period:** 2019\n- **Purpose:** exchange in Ireland, strengthening English and developing/publishing early R work including FitUltD\n- **Usage:** describe as an intentional development period, not as unexplained unemployment",
+      "title": "Professional-development pause"
+    },
+    {
+      "chunk_id": "role-management-solutions::management-solutions::skills-evidenced",
+      "chunk_type": "skill_group",
+      "confidence": "high",
+      "constraints": [
+        "- Use the exact subrole periods above from the current public portfolio.\n- Do not describe the 2019 pause as a nine-month value unless a primary date record is supplied; source wording and visible dates are not perfectly aligned.\n- Treat impact as team/project impact with a bounded personal contribution unless independent ownership is explicitly documented.\n- Use project files for detailed implementation evidence and the achievement registry for exact numeric wording."
+      ],
+      "metric_refs": [
+        "ACH-MS-CLARIFICATIONS-001",
+        "ACH-MS-CLARIFICATIONS-002",
+        "ACH-MS-FRAUD-001",
+        "ACH-MS-MIGRATION-001"
+      ],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/previous_roles.md",
+      "text": "Skills evidenced\n- R, Python, PySpark and SQL\n- PCA, outlier detection and unsupervised learning\n- Bayesian regression and forecasting\n- A/B testing\n- data migration and layout/schema definition\n- Salesforce delivery\n- MicroStrategy and operational dashboards\n- fraud/insurance analytics\n- cross-functional consulting and technical leadership",
+      "title": "Skills evidenced"
+    },
+    {
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::internal-technical-enablement",
+      "chunk_type": "technology",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/teaching.md",
+      "text": "Internal technical enablement\nProfessional evidence also supports recurring knowledge transfer through:\n\n- technical presentations and internal analytical meetups\n- documentation and demos for analytical methodologies\n- Generative AI cases, workshops and community support\n- code review and peer guidance\n- public open-source documentation and examples\n\nThis is supporting leadership evidence. It must not be converted into formal people-management or program ownership without project-specific proof.",
+      "title": "Internal technical enablement"
+    },
+    {
+      "chunk_id": "role-teaching::teaching-and-knowledge-transfer::unam-academic-instruction-and-social-service",
+      "chunk_type": "role_detail",
+      "confidence": "high",
+      "constraints": [
+        "- Use January 2023 as the canonical end date. A derivative source says February 2023; the discrepancy is recorded in the conflict log.\n- Do not invent cohort sizes, satisfaction scores or completion outcomes."
+      ],
+      "metric_refs": [],
+      "proficiency": null,
+      "record_type": "role",
+      "source_path": "experience/roles/teaching.md",
+      "text": "UNAM academic instruction and social service\nDuring the Bachelor's in Actuarial Science, public profile evidence and current user confirmation support:\n\n- approximately one semester as an assistant in Mathematical Analysis\n- university teaching/instruction in a preventive program for subjects with high failure rates\n- social-service experience carried out through teaching in the faculty\n\nThese activities are strong evidence of early quantitative communication, teaching and academic service. They are intentionally **not counted as formal professional-employment years** in the canonical `8+ years` figure.",
+      "title": "UNAM academic instruction and social service"
+    },
+    {
+      "chunk_id": "skills::etl-data-quality",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "ETL & Data Quality\n- **Level:** core\n- **Coverage:** extraction, transformation, integration, validation, reconciliation, data-quality controls and analytical dataset construction",
+      "title": "ETL & Data Quality"
+    },
+    {
+      "chunk_id": "skills::google-cloud",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "working",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Google Cloud\n- **Level:** working\n- **Evidence:** Cloud Functions Gen2, Cloud Storage, HTTP model serving and cloud-hosted model artifacts in public code",
+      "title": "Google Cloud"
+    },
+    {
+      "chunk_id": "skills::healthcare-risk-modeling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "working",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Healthcare / Risk Modeling\n- **Level:** working\n- **Coverage:** statistical modeling and distribution fitting applied to medical/risk contexts\n\n---",
+      "title": "Healthcare / Risk Modeling"
+    },
+    {
+      "chunk_id": "skills::llm-application-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "LLM Application Design\n- **Level:** core\n- **Coverage:** business use-case design, grounded workflows, structured generation, validation, deterministic fallbacks and integration into analytical processes\n- **Evidence:** internal knowledge tooling plus public narrative_dna, MetaCraft and agent-oriented projects",
+      "title": "LLM Application Design"
+    },
+    {
+      "chunk_id": "skills::python",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Python\n- **Level:** core\n- **Evidence:** repeated professional Data Science/ML work plus independently authored Python libraries and systems including InsideForest, SheShe/DelDel, MetaCraft, narrative_dna and fraud/compliance tooling\n- **Typical use:** modeling, statistical analysis, package development, pipelines, APIs, experimentation, automation, GenAI workflows, CLI tooling and validation",
+      "title": "Python"
+    },
+    {
+      "chunk_id": "skills::r",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "R\n- **Level:** core\n- **Evidence:** actuarial/statistical modeling, CRAN/public package development, thesis work, forecasting and reporting automation\n- **Typical use:** statistical modeling, distributions, risk modeling, research, visualization and package development",
+      "title": "R"
+    },
+    {
+      "chunk_id": "skills::reproducible-experiment-design",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "working",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Reproducible Experiment Design\n- **Level:** working\n- **Evidence:** multi-seed benchmarks, experiment protocols and golden-regression fixtures\n\n---",
+      "title": "Reproducible Experiment Design"
+    },
+    {
+      "chunk_id": "skills::risk-fraud-analytics",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Risk & Fraud Analytics\n- **Level:** core\n- **Coverage:** statistical anomaly detection, hybrid rule + ML approaches, monitoring, prioritization, interpretability and investigation support",
+      "title": "Risk & Fraud Analytics"
+    },
+    {
+      "chunk_id": "skills::sql",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "SQL\n- **Level:** core\n- **Evidence:** repeated professional analytical, migration, segmentation, reporting and data-processing workflows\n- **Typical use:** extraction, transformation, aggregation, analytical datasets, validation and feature preparation",
+      "title": "SQL"
+    },
+    {
+      "chunk_id": "skills::statistical-modeling",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Statistical Modeling\n- **Level:** core\n- **Coverage:** probability distributions, hypothesis testing, model fitting, statistical validation, regression and risk modeling\n- **Evidence:** actuarial education, thesis/research, R packages and professional analytics",
+      "title": "Statistical Modeling"
+    },
+    {
+      "chunk_id": "skills::supervised-machine-learning",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Supervised Machine Learning\n- **Level:** core\n- **Coverage:** classification, regression, feature engineering, model evaluation and business-oriented predictive modeling",
+      "title": "Supervised Machine Learning"
+    },
+    {
+      "chunk_id": "skills::teaching-knowledge-transfer",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "working",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Teaching & Knowledge Transfer\n- **Level:** working\n- **Coverage:** Python instruction, technical mentoring, AI/GenAI workshops, internal talks, documentation and examples",
+      "title": "Teaching & Knowledge Transfer"
+    },
+    {
+      "chunk_id": "skills::technical-project-leadership",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [
+        "project/technical leadership must not be converted into formal people-management claims without direct evidence"
+      ],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Technical / Project Leadership\n- **Level:** core\n- **Coverage:** project direction, solution architecture, quality/evaluation criteria, mentoring, technical presentations and cross-functional coordination\n- **Boundary:** project/technical leadership must not be converted into formal people-management claims without direct evidence",
+      "title": "Technical / Project Leadership"
+    },
+    {
+      "chunk_id": "skills::tree-based-machine-learning-random-forests",
+      "chunk_type": "skill",
+      "confidence": "high",
+      "constraints": [],
+      "metric_refs": [],
+      "proficiency": "core",
+      "record_type": "skills",
+      "source_path": "experience/skills.md",
+      "text": "Tree-based Machine Learning / Random Forests\n- **Level:** core\n- **Coverage:** classification/regression, leaf/region extraction, feature importance and interpretable rule discovery\n- **Repository evidence:** InsideForest and SheShe/DelDel",
+      "title": "Tree-based Machine Learning / Random Forests"
+    }
+  ],
+  "missing_refs": [],
+  "opportunity_refs": [
+    "achievement-metrics::ACH-REPORTING-TIME-001",
+    "certifications::cert-ibm-ds-ml-capstone-2019",
+    "certifications::cert-ibm-ml-python-2019",
+    "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+    "education::education::bachelor-s-degree-in-actuarial-science::quantitative-foundation",
+    "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+    "professional-profile::professional-profile::core-professional-areas",
+    "professional-profile::professional-profile::technical-ownership",
+    "professional-profile::professional-profile::technical-themes",
+    "professional-profile::professional-profile::usage-rules",
+    "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::engine-and-pipeline-refactoring",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::2-conduct-and-operational-risk-alert-calibration",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+    "project-cloud-ml-recommender::cloud-ml-recommender::deployment-evidence",
+    "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+    "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+    "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+    "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+    "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::skills-evidenced",
+    "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+    "project-ms-data-migration::management-solutions-data-migration-reconciliation-qa::methods-and-technologies",
+    "project-ms-insurance-fraud-monitoring::management-solutions-insurance-fraud-monitoring::contribution-and-ownership",
+    "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::agentic-ai-ai-engineer",
+    "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::ai-safety-reliability",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+    "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series::evidence-value",
+    "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::fitult-v00::evidence-value",
+    "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::skills-evidenced-across-this-project-family",
+    "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+    "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+    "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+    "project-sheshe-deldel::sheshe-deldel::summary",
+    "role-management-solutions::management-solutions::skills-evidenced",
+    "role-teaching::teaching-and-knowledge-transfer::internal-technical-enablement",
+    "role-teaching::teaching-and-knowledge-transfer::unam-academic-instruction-and-social-service",
+    "skills::etl-data-quality",
+    "skills::google-cloud",
+    "skills::healthcare-risk-modeling",
+    "skills::reproducible-experiment-design",
+    "skills::risk-fraud-analytics",
+    "skills::teaching-knowledge-transfer",
+    "skills::technical-project-leadership",
+    "skills::tree-based-machine-learning-random-forests"
+  ],
+  "proposal_refs": [
+    "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+    "certifications::cert-cs50-harvardx-2020",
+    "certifications::cert-psm-i-2020",
+    "education::education::bachelor-s-degree-in-actuarial-science",
+    "education::education::master-s-degree-in-data-science",
+    "professional-profile::professional-profile::canonical-summary",
+    "professional-profile::professional-profile::professional-experience-basis",
+    "professional-profile::professional-profile::professional-positioning",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+    "role-bbva::bbva-m-xico::canonical-employment-record",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+    "role-management-solutions::management-solutions::canonical-employment-record",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+    "role-management-solutions::management-solutions::role-chronology::professional-development-pause",
+    "skills::llm-application-design",
+    "skills::python",
+    "skills::r",
+    "skills::sql",
+    "skills::statistical-modeling",
+    "skills::supervised-machine-learning"
+  ],
+  "requested_ref_count": 75,
+  "resolved_ref_count": 75,
+  "schema_version": 1
+}

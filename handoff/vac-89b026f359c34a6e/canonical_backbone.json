@@ -1,0 +1,34 @@
+{
+  "chunk_ids": [
+    "professional-profile::professional-profile::professional-positioning",
+    "professional-profile::professional-profile::professional-experience-basis",
+    "professional-profile::professional-profile::canonical-summary",
+    "role-bbva::bbva-m-xico::canonical-employment-record",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+    "role-management-solutions::management-solutions::canonical-employment-record",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+    "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+    "role-management-solutions::management-solutions::role-chronology::professional-development-pause",
+    "education::education::master-s-degree-in-data-science",
+    "education::education::bachelor-s-degree-in-actuarial-science"
+  ],
+  "editorial_anchor_chunk_ids": [
+    "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+    "certifications::cert-cs50-course-record-2020",
+    "certifications::cert-cs50-harvardx-2020",
+    "certifications::cert-psm-i-2020",
+    "skills::llm-application-design"
+  ],
+  "source_paths": [
+    "experience/certifications.md",
+    "experience/certifications_bourbaki.md",
+    "experience/education.md",
+    "experience/profile.md",
+    "experience/roles/bbva.md",
+    "experience/roles/previous_roles.md",
+    "experience/skills.md"
+  ]
+}

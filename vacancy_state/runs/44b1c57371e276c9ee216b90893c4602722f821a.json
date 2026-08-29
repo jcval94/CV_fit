@@ -3,7 +3,12 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/grupo-modelo-principal-data-scientist-c252925c0f.json",
+      "Vacantes/enriched/auto/grupo-modelo-sr-data-scientist-583437a0e3.json",
+      "Vacantes/enriched/auto/zillow-sr-data-scientist-cdc3441963.json",
+      "Vacantes/vacantes_2026-08-29.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -18,8 +23,6 @@
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json",
       "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
       "Vacantes/enriched/auto/grupo-financiero-banorte-cientifico-de-datos-subdirector-de-generative-ai-engineering-497b5c1e3d.json",
-      "Vacantes/enriched/auto/grupo-modelo-principal-data-scientist-c252925c0f.json",
-      "Vacantes/enriched/auto/grupo-modelo-sr-data-scientist-583437a0e3.json",
       "Vacantes/enriched/auto/infor-scientist-senior-senior-data-scientist-strategy-data-science-c1036a945f.json",
       "Vacantes/enriched/auto/ingredion-data-scientist-7855e20e5f.json",
       "Vacantes/enriched/auto/kake-senior-data-scientist-67bc1a0d13.json",
@@ -30,7 +33,6 @@
       "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
       "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
-      "Vacantes/enriched/auto/zillow-sr-data-scientist-cdc3441963.json",
       "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
       "Vacantes/enriched/ford_data_scientist_nlp_ai_engineer_2026-08-21.json",
       "Vacantes/enriched/infor_scientist_senior_strategy_data_science_2026-08-21.json",
@@ -43,29 +45,32 @@
       "Vacantes/vacantes_2026-08-25.json",
       "Vacantes/vacantes_2026-08-26.json",
       "Vacantes/vacantes_2026-08-27.json",
-      "Vacantes/vacantes_2026-08-28.json",
-      "Vacantes/vacantes_2026-08-29.json"
+      "Vacantes/vacantes_2026-08-28.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "44b1c57371e276c9ee216b90893c4602722f821a-noop",
+  "reindexed_vacancy_ids": [
+    "vac-6cb5f8926375e8d1",
+    "vac-823f77b83c66b2b3",
+    "vac-89b026f359c34a6e"
+  ],
+  "run_id": "44b1c57371e276c9ee216b90893c4602722f821a",
   "schema_version": 1,
   "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
   "source_counts": {
     "deleted": 0,
     "discovered": 39,
     "modified": 0,
-    "new": 0,
+    "new": 4,
     "quarantined": 0,
-    "unchanged": 39
+    "unchanged": 35
   },
   "status": "success",
   "vacancy_counts": {
     "active": 29,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 3,
+    "reindexed": 3,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

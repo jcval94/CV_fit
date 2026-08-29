@@ -1,0 +1,274 @@
+{
+  "best_review_iteration": 1,
+  "cv": {
+    "certifications": [
+      {
+        "evidence_refs": [
+          "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+        ],
+        "text": "GenAI Aplicado: ChatGPT & Gemini — Colegio de Matemáticas Bourbaki, marzo de 2026. ID: 68177741-cert-242290851."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-psm-i-2020"
+        ],
+        "text": "Professional Scrum Master I — Scrum.org, febrero de 2020. ID: 507770."
+      },
+      {
+        "evidence_refs": [
+          "certifications::cert-cs50-harvardx-2020"
+        ],
+        "text": "CS50's Introduction to Computer Science — HarvardX, vía edX, julio de 2020."
+      }
+    ],
+    "education": [
+      {
+        "evidence_refs": [
+          "education::education::master-s-degree-in-data-science"
+        ],
+        "text": "Maestría en Ciencia de Datos, Universidad Panamericana — junio de 2023 a diciembre de 2024; calificación final: 9.6/10."
+      },
+      {
+        "evidence_refs": [
+          "education::education::bachelor-s-degree-in-actuarial-science"
+        ],
+        "text": "Licenciatura en Actuaría, Universidad Nacional Autónoma de México (UNAM) — 2013 a 2018."
+      }
+    ],
+    "experience": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+            ],
+            "text": "Lidera y contribuye a sistemas híbridos de reglas y ML para detección de siniestros, malas prácticas y riesgo de conducta; traduce hipótesis de investigación en extracciones auditables y lógica de alertas."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+              "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops"
+            ],
+            "text": "Revisa código crítico, valida componentes PySpark y refactoriza pipelines distribuidos ante insumos deprecados, ambigüedad temporal y límites de memoria, fortaleciendo determinismo, trazabilidad y frecuencia de ejecución."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate"
+            ],
+            "text": "Operó liberaciones recurrentes de Best Time to Call y desarrolló lógica de segmentación, priorización y población en SQL/PySpark para flujos comerciales durante la etapa Associate."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst"
+            ],
+            "text": "Construyó automatización recurrente y pronósticos en Python para casos de infraestructura; evaluó modelos ML y ETL para demanda de efectivo y apoyó decisiones de red de cajeros y sucursales durante la etapa Analyst."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::canonical-employment-record",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-associate",
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert"
+        ],
+        "organization": "BBVA México",
+        "period": "mayo de 2021 – presente",
+        "title": "Senior Data Scientist — progresión interna: Data Scientist Analyst → Associate → Expert"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist"
+            ],
+            "text": "Lideró un esfuerzo multidisciplinario para pronosticar costos operativos mensuales de mainframe mediante regresión lineal bayesiana como Senior Data Scientist, de julio de 2020 a mayo de 2021."
+          },
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+              "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+              "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies"
+            ],
+            "text": "Desarrolló un modelo PySpark y flujo de reporteo interactivo para priorizar aclaraciones, integrando machine learning con conocimiento de especialistas en prevención de fraude."
+          },
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant"
+            ],
+            "text": "Diseñó KPIs de monitoreo de fraude, aplicó PCA y detección de outliers, y desarrolló herramientas de apoyo en R durante la etapa Data Specialist Assistant, de octubre de 2017 a marzo de 2019."
+          },
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii"
+            ],
+            "text": "Apoyó migraciones a Salesforce y de data lake a data warehouse mediante traducción de reglas de negocio, pruebas A/B y definición de layouts, formatos y relaciones durante la etapa Assistant II."
+          },
+          {
+            "evidence_refs": [
+              "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+            ],
+            "text": "Completó una pausa intencional de desarrollo profesional en 2019, con intercambio en Irlanda, fortalecimiento de inglés y trabajo estadístico de código abierto."
+          }
+        ],
+        "evidence_refs": [
+          "role-management-solutions::management-solutions::canonical-employment-record",
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant",
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-data-specialist-assistant-ii",
+          "role-management-solutions::management-solutions::role-chronology::business-consultant-senior-data-scientist",
+          "role-management-solutions::management-solutions::role-chronology::professional-development-pause"
+        ],
+        "organization": "Management Solutions",
+        "period": "octubre de 2017 – mayo de 2021",
+        "title": "Business Consultant — progresión a Senior Data Scientist"
+      }
+    ],
+    "headline": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::professional-positioning",
+        "professional-profile::professional-profile::technical-themes"
+      ],
+      "text": "Senior Data Scientist | Modelado, ML y sistemas analíticos de producción"
+    },
+    "language": "es",
+    "projects": [
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+            ],
+            "text": "Diseña y ajusta alertas mediante modelos supervisados y no supervisados, Isolation Forest, reglas de negocio y análisis de anomalías sobre datos transaccionales, de RH y seguridad."
+          },
+          {
+            "evidence_refs": [
+              "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+              "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+            ],
+            "text": "Investiga falsos positivos y aplica fuzzy matching, resolución de identidad, análisis relacional y señales derivadas de texto para apoyar procesos de investigación."
+          }
+        ],
+        "evidence_refs": [
+          "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "name": "Detección de fraude, malas prácticas y riesgo de conducta"
+      },
+      {
+        "bullets": [
+          {
+            "evidence_refs": [
+              "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives"
+            ],
+            "text": "Refactorizó pipelines analíticos distribuidos y resolvió falsos positivos de producción mediante linaje forense de datos y normalización automatizada de esquemas PySpark."
+          },
+          {
+            "evidence_refs": [
+              "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops"
+            ],
+            "text": "Revisó pull requests y validó componentes PySpark antes de integración, colaborando con prácticas internas de despliegue versionado y MLOps."
+          }
+        ],
+        "evidence_refs": [
+          "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+          "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops"
+        ],
+        "name": "Calidad de datos, MLOps y motores analíticos"
+      }
+    ],
+    "skills": [
+      {
+        "evidence_refs": [
+          "skills::python"
+        ],
+        "text": "Python — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "skills::sql"
+        ],
+        "text": "SQL — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "skills::pyspark-apache-spark"
+        ],
+        "text": "PySpark / Apache Spark — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "skills::supervised-machine-learning"
+        ],
+        "text": "Machine Learning supervisado — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "skills::tree-based-machine-learning-random-forests"
+        ],
+        "text": "Machine Learning basado en árboles / Random Forests — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "skills::llm-application-design"
+        ],
+        "text": "Diseño de aplicaciones LLM — nivel core."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::technical-themes",
+          "skills::llm-application-design"
+        ],
+        "text": "GenAI / IA generativa: RAG, prompting, salidas estructuradas, evaluación y guardrails."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::technical-themes",
+          "professional-profile::professional-profile::core-professional-areas"
+        ],
+        "text": "Modelado estadístico, evaluación de modelos y forecasting."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::core-professional-areas",
+          "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+        ],
+        "text": "Detección de anomalías, outliers y fraude."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::technical-themes",
+          "skills::pyspark-apache-spark"
+        ],
+        "text": "ETL distribuido, ingeniería de variables y preparación de datos."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::technical-themes",
+          "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives"
+        ],
+        "text": "Calidad de datos, trazabilidad analítica y reproducibilidad."
+      },
+      {
+        "evidence_refs": [
+          "professional-profile::professional-profile::canonical-summary",
+          "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops"
+        ],
+        "text": "Producción de soluciones analíticas y revisión de código."
+      }
+    ],
+    "summary": {
+      "evidence_refs": [
+        "professional-profile::professional-profile::canonical-summary",
+        "professional-profile::professional-profile::professional-experience-basis",
+        "education::education::master-s-degree-in-data-science",
+        "education::education::bachelor-s-degree-in-actuarial-science"
+      ],
+      "text": "Senior Data Scientist con 8+ años desarrollando productos analíticos end-to-end en banca y consultoría. Combina formación actuarial y Maestría en Ciencia de Datos con experiencia práctica en Python, SQL, PySpark, modelado estadístico, detección de anomalías, calidad de datos y preparación para producción. Traduce problemas operativos complejos en soluciones auditables, escalables y alineadas con negocio, tecnología y cumplimiento."
+    },
+    "target_role": "Principal Data Scientist"
+  },
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_status": "COMPLETED_BELOW_TARGET",
+  "quality_target_reached": false
+}

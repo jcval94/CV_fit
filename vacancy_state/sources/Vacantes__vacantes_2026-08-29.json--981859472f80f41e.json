@@ -1,0 +1,236 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "México (teleworker; viajes ocasionales a Ciudad de México)",
+      "company": "Zillow",
+      "company_category": "Producto Tech",
+      "content_hash": "63970ad49361f3f6f2e0d0e4b794e905220eed12ddea7bede92e02380ed49b1c",
+      "description": null,
+      "fit_gaps": [
+        "No está enfocado directamente en banca, riesgo, fraude o credit scoring.",
+        "PySpark y GenAI no aparecen como requisitos explícitos centrales en la descripción recuperada.",
+        "El dominio es PropTech/real estate, por lo que parte de la ventaja sectorial financiera se traslada a habilidades analíticas y de producto."
+      ],
+      "fit_score": 98.0,
+      "fit_strengths": [
+        "Posición remota para cualquier ubicación en México, con visitas ocasionales a Ciudad de México.",
+        "Requiere 8+ años de experiencia en estadística, machine learning o analítica avanzada, muy cercano al seniority objetivo.",
+        "Ownership end-to-end desde problem framing e hipótesis hasta desarrollo, validación, despliegue y monitoreo de modelos.",
+        "Pide Python o R, SQL, grandes volúmenes de datos, feature engineering y construcción de pipelines escalables.",
+        "Incluye diseño y evaluación de experimentos e inferencia causal para medir impacto de modelos y producto.",
+        "Responsabilidad explícita de mentoría, revisión de trabajo y establecimiento de buenas prácticas de Data Science y Responsible AI."
+      ],
+      "fit_summary": "Es la mejor nueva oportunidad de la corrida por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico.",
+      "identity_key": "6cb5f8926375e8d194b9b57156fe6e4c2ec7ba74626b7bf391548d4628b4761f",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "México (teleworker; viajes ocasionales a Ciudad de México)",
+      "posted_date": "2026-08-27",
+      "posted_date_raw": "2026-08-27",
+      "provenance": [
+        {
+          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_native_id": "zillow-4440846424",
+          "source_path": "Vacantes/vacantes_2026-08-29.json",
+          "source_search_date": "2026-08-29",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Sr. Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Statistical Modeling",
+        "Experimentation",
+        "Causal Inference",
+        "Feature Engineering",
+        "Data Pipelines",
+        "Model Deployment",
+        "Model Monitoring",
+        "Responsible AI",
+        "Technical Mentoring"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-zillow-4440846424",
+      "vacancy_id": "vac-6cb5f8926375e8d1",
+      "work_model": "Remote"
+    },
+    {
+      "application_language": "en",
+      "city": "Miguel Hidalgo, Ciudad de México, México",
+      "company": "Grupo Modelo",
+      "company_category": "Producto Tech",
+      "content_hash": "39727c56a50ee470ca18370489ce6b5ca47ca83edd80eb4eb88d2c5058164220",
+      "description": null,
+      "fit_gaps": [
+        "La publicación recuperada no confirma esquema remoto o híbrido y fuentes secundarias la clasifican como presencial.",
+        "El dominio principal es Corporate/One Supply, no banca o riesgo financiero.",
+        "GenAI aparece como capacidad complementaria y no como núcleo exclusivo del rol."
+      ],
+      "fit_score": 97.0,
+      "fit_strengths": [
+        "Rol Principal con responsabilidad directa sobre la dirección técnica de productos analíticos y liderazgo de Data Scientists y Senior Data Scientists.",
+        "Requiere al menos 7 años y valora explícitamente formación en Actuaría y Maestría en disciplinas cuantitativas.",
+        "Dominio sólido de Python y SQL, arquitectura de soluciones analíticas y desarrollo de productos desde definición del problema hasta producción, adopción y monitoreo.",
+        "Incluye experimentación, inferencia causal, clasificación, regresión, clustering, forecasting, recomendadores, optimización y detección de anomalías.",
+        "PySpark/Spark, Databricks, MLflow, Feature Engineering, Delta Lake, Workflows y prácticas MLOps aparecen como capacidades deseables.",
+        "Incorpora evaluación explícita de AI/GenAI y decisiones build-vs-reuse-vs-buy, con fuerte componente de arquitectura y liderazgo técnico."
+      ],
+      "fit_summary": "Ajuste excepcional para una evolución a Principal Data Scientist: combina Python, SQL, PySpark, experimentación, arquitectura end-to-end, MLOps, GenAI y liderazgo técnico en una compañía global.",
+      "identity_key": "823f77b83c66b2b336e33bedcad3277d2251c4df418d35aef6bd6da0c5146e1c",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Miguel Hidalgo, Ciudad de México, México",
+      "posted_date": "2026-08-29",
+      "posted_date_raw": "2026-08-29",
+      "provenance": [
+        {
+          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_native_id": "grupo-modelo-4460508694",
+          "source_path": "Vacantes/vacantes_2026-08-29.json",
+          "source_search_date": "2026-08-29",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Principal Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "PySpark",
+        "Spark",
+        "Machine Learning",
+        "Experimentation",
+        "Causal Inference",
+        "Forecasting",
+        "Recommendation Systems",
+        "Optimization",
+        "Anomaly Detection",
+        "Databricks",
+        "MLflow",
+        "Delta Lake",
+        "MLOps",
+        "GenAI",
+        "Solution Architecture"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/principal-data-scientist-at-grupo-modelo-s-a-de-c-v-4460508694",
+      "vacancy_id": "vac-823f77b83c66b2b3",
+      "work_model": "On-site"
+    },
+    {
+      "application_language": "en",
+      "city": "Miguel Hidalgo, Ciudad de México, México",
+      "company": "Grupo Modelo",
+      "company_category": "Producto Tech",
+      "content_hash": "dc45fe7ed5e04de1059e38b277fa5c0880baecdfbd0349e6ca1e30ebcd5f40e1",
+      "description": null,
+      "fit_gaps": [
+        "El rol pide 4+ años, por debajo del seniority objetivo y podría implicar cierto riesgo de sobrecalificación.",
+        "No capitaliza directamente experiencia en banca, riesgo, fraude o credit scoring.",
+        "GenAI no es un componente central de la descripción."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Responsabilidad end-to-end desde requerimiento de negocio hasta puesta en producción de productos analíticos.",
+        "Requiere Python avanzado, SQL optimizado para procesamiento masivo, machine learning y estadística aplicada.",
+        "Experiencia explícita en diseño de experimentos, clasificación, clustering, recomendadores y forecasting.",
+        "PySpark, Spark MLlib, distributed XGBoost, Azure Databricks, Unity Catalog, Feature Store, MLflow y Delta Lake aparecen como deseables.",
+        "Incluye code reviews, guía a perfiles junior, delegación y participación en decisiones técnicas del producto.",
+        "La formación deseada incluye Actuaría y Maestría en Ciencia de Datos."
+      ],
+      "fit_summary": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás del Principal por nivel y del Zillow por modalidad.",
+      "identity_key": "89b026f359c34a6effc5382502dbd9d84b576b585ac821b28f2ef2e25898f793",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Miguel Hidalgo, Ciudad de México, México",
+      "posted_date": "2026-08-28",
+      "posted_date_raw": "2026-08-28",
+      "provenance": [
+        {
+          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
+          "source_entry_index": 2,
+          "source_format": "vacantes_v1",
+          "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+          "source_native_id": "grupo-modelo-4459877680",
+          "source_path": "Vacantes/vacantes_2026-08-29.json",
+          "source_search_date": "2026-08-29",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Sr. Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Polars",
+        "Scikit-learn",
+        "XGBoost",
+        "LightGBM",
+        "PyTorch",
+        "TensorFlow",
+        "PySpark",
+        "Spark MLlib",
+        "Azure Databricks",
+        "MLflow",
+        "Delta Lake",
+        "Experiment Design",
+        "Machine Learning"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680",
+      "vacancy_id": "vac-89b026f359c34a6e",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "8e8b602d6ecc0c28d41911313febe71cf4a3f7f78969c7a52574bb47d4a77a67",
+  "source_path": "Vacantes/vacantes_2026-08-29.json",
+  "status": "valid"
+}

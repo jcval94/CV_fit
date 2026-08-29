@@ -1,0 +1,645 @@
+{
+  "coverage_counts": {
+    "partial": 3,
+    "strong": 13,
+    "unsupported": 0,
+    "weak": 2
+  },
+  "coverage_score": 86.4,
+  "guardrails": [
+    "unsupported requirements must not be turned into candidate claims",
+    "familiarity proficiency must never be upgraded to working or core",
+    "exact metrics require approved ACH-* evidence",
+    "named technologies require direct evidence after semantic reranking before being treated as supported"
+  ],
+  "requirements": [
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::python",
+        "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+        "certifications::cert-ibm-ml-python-2019"
+      ],
+      "evidence_record_ids": [
+        "certifications",
+        "project-bbva-atm-analytics",
+        "project-bbva-fraud-detection",
+        "project-cloud-ml-recommender",
+        "project-coi-fraud-toolkit",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/certifications.md",
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/cloud_ml_recommender.md",
+        "experience/projects/coi_fraud_toolkit.md",
+        "experience/projects/fraud_detection.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Python",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "achievement-metrics::ACH-REPORTING-TIME-001",
+        "skills::sql",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies"
+      ],
+      "evidence_record_ids": [
+        "achievement-metrics",
+        "project-bbva-atm-analytics",
+        "project-bbva-fraud-detection",
+        "project-bbva-next-best-offer",
+        "project-ms-clarification-prioritization",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/achievements/metrics.md",
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/projects/fraud_detection.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "SQL",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::pyspark-apache-spark",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-atm-analytics",
+        "project-bbva-btc",
+        "project-bbva-data-quality-mlops",
+        "project-bbva-fraud-detection",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/bbva_btc.md",
+        "experience/projects/bbva_data_quality_mlops.md",
+        "experience/projects/fraud_detection.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "PySpark",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+        "skills::pyspark-apache-spark",
+        "professional-profile::professional-profile::technical-themes",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+        "project-metacraft::metacraft::technologies-concepts-evidenced",
+        "project-metacraft::metacraft::core-capabilities::export-schema"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-next-best-offer",
+        "project-metacraft",
+        "project-ms-clarification-prioritization",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/projects/metacraft.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Spark",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::supervised-machine-learning",
+        "skills::tree-based-machine-learning-random-forests",
+        "professional-profile::professional-profile::core-professional-areas",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+        "role-management-solutions::management-solutions::skills-evidenced"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-ms-clarification-prioritization",
+        "role-management-solutions",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/roles/previous_roles.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Machine Learning",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::reproducible-experiment-design",
+        "project-sheshe-deldel::sheshe-deldel::summary",
+        "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+        "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+        "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+        "skills::python"
+      ],
+      "evidence_record_ids": [
+        "project-sheshe-deldel",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/sheshe_deldel.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Experimentation",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::data-and-methods",
+        "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+        "skills::statistical-modeling"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-next-best-offer",
+        "project-movilidad-social-mx",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/movilidad_social_mx.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Causal Inference",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution",
+        "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+        "skills::time-series-forecasting",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::approved-public-narrative",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-atm-analytics",
+        "project-r-statistical-tooling",
+        "role-bbva",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/r_statistical_tooling.md",
+        "experience/roles/bbva.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Forecasting",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::summary",
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+        "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+        "project-cloud-ml-recommender::cloud-ml-recommender::summary"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-next-best-offer",
+        "project-cloud-ml-recommender"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/cloud_ml_recommender.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "Recommendation Systems",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-sheshe-deldel::sheshe-deldel::mathematical-algorithmic-ideas",
+        "skills::optimization-decision-modeling",
+        "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+        "professional-profile::professional-profile::core-professional-areas",
+        "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::summary"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-financial-ml-pipelines",
+        "project-ms-clarification-prioritization",
+        "project-sheshe-deldel",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/projects/financial_ml_pipelines.md",
+        "experience/projects/sheshe_deldel.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Optimization",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+        "achievement-metrics::ACH-BBVA-FRAUD-DETECTION-001",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::approved-public-narratives",
+        "skills::unsupervised-anomaly-detection",
+        "skills::risk-fraud-analytics"
+      ],
+      "evidence_record_ids": [
+        "achievement-metrics",
+        "project-bbva-fraud-detection",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/achievements/metrics.md",
+        "experience/projects/fraud_detection.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Anomaly Detection",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "skills::pyspark-apache-spark",
+        "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+        "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+        "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+        "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+        "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-atm-analytics",
+        "project-bbva-btc",
+        "project-bbva-fraud-detection",
+        "project-metacraft",
+        "project-ms-clarification-prioritization",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_atm_analytics.md",
+        "experience/projects/bbva_btc.md",
+        "experience/projects/consulting_clarification_prioritization.md",
+        "experience/projects/fraud_detection.md",
+        "experience/projects/metacraft.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Databricks",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::mlflow",
+        "professional-profile::professional-profile::technical-themes",
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-data-quality-mlops",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_data_quality_mlops.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "MLflow",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "weak",
+      "evidence_chunk_ids": [
+        "skills::pyspark-apache-spark",
+        "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+        "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+        "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-btc",
+        "project-bbva-next-best-offer",
+        "project-metacraft",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_btc.md",
+        "experience/projects/bbva_next_best_offer.md",
+        "experience/projects/metacraft.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "The semantic reranker found related evidence but no direct support for the requested capability.",
+      "requirement": "Delta Lake",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+        "skills::mlflow",
+        "skills::kubeflow",
+        "skills::kubernetes",
+        "skills::productionization-of-data-science-solutions",
+        "professional-profile::professional-profile::technical-themes"
+      ],
+      "evidence_record_ids": [
+        "professional-profile",
+        "project-bbva-data-quality-mlops",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/profile.md",
+        "experience/projects/bbva_data_quality_mlops.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "MLOps",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+        "project-metacraft::metacraft::cv-positioning::genai-data-quality",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
+        "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+        "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
+        "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini"
+      ],
+      "evidence_record_ids": [
+        "cert-bourbaki-genai-2026",
+        "project-bbva-llm-internal-tools",
+        "project-metacraft",
+        "project-narrative-dna",
+        "role-bbva"
+      ],
+      "evidence_source_paths": [
+        "experience/certifications_bourbaki.md",
+        "experience/projects/llm_internal_tools.md",
+        "experience/projects/metacraft.md",
+        "experience/projects/narrative_dna.md",
+        "experience/roles/bbva.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "GenAI",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "strong",
+      "evidence_chunk_ids": [
+        "skills::technical-project-leadership",
+        "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+        "skills::process-workflow-architecture",
+        "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+        "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture",
+        "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::boundaries"
+      ],
+      "evidence_record_ids": [
+        "project-bbva-supervisory-relations",
+        "project-mvp-agent-factory",
+        "project-narrative-dna",
+        "skills"
+      ],
+      "evidence_source_paths": [
+        "experience/projects/bbva_supervisory_relations.md",
+        "experience/projects/mvp_agent_factory.md",
+        "experience/projects/narrative_dna.md",
+        "experience/skills.md"
+      ],
+      "importance": "critical",
+      "rationale": "Matched demonstrated skill proficiency with corroborating evidence.",
+      "requirement": "Solution Architecture",
+      "requirement_type": "technology_or_capability",
+      "retrieval_mode": "hybrid-rerank"
+    },
+    {
+      "coverage": "partial",
+      "evidence_chunk_ids": [
+        "education::education::bachelor-s-degree-in-actuarial-science",
+        "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+        "education::education::master-s-degree-in-data-science",
+        "education::education::master-s-degree-in-data-science::how-to-represent-this-degree"
+      ],
+      "evidence_record_ids": [
+        "education"
+      ],
+      "evidence_source_paths": [
+        "experience/education.md"
+      ],
+      "importance": "critical",
+      "rationale": "Relevant evidence exists, but the matcher cannot prove full requirement coverage.",
+      "requirement": "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}",
+      "requirement_type": "requirement",
+      "retrieval_mode": "hybrid-rerank"
+    }
+  ],
+  "retrieval_mode": "hybrid-rerank",
+  "schema_version": 1,
+  "selected_evidence_chunk_ids": [
+    "achievement-metrics::ACH-BBVA-FRAUD-DETECTION-001",
+    "achievement-metrics::ACH-REPORTING-TIME-001",
+    "cert-bourbaki-genai-2026::genai-aplicado-chatgpt-gemini",
+    "certifications::cert-ibm-ml-python-2019",
+    "education::education::bachelor-s-degree-in-actuarial-science",
+    "education::education::bachelor-s-degree-in-actuarial-science::how-to-represent-this-degree",
+    "education::education::master-s-degree-in-data-science",
+    "education::education::master-s-degree-in-data-science::how-to-represent-this-degree",
+    "professional-profile::professional-profile::core-professional-areas",
+    "professional-profile::professional-profile::technical-themes",
+    "project-bbva-atm-analytics::atm-and-physical-network-analytics::approved-public-narrative",
+    "project-bbva-atm-analytics::atm-and-physical-network-analytics::contribution",
+    "project-bbva-atm-analytics::atm-and-physical-network-analytics::technologies-and-methods",
+    "project-bbva-btc::bbva-best-time-to-call-btc::implementation-evidence",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::approved-public-narratives",
+    "project-bbva-data-quality-mlops::data-quality-mlops-and-analytical-engines::code-review-and-mlops",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::1-hybrid-claim-and-malpractice-prioritization::contribution",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::approved-public-narratives",
+    "project-bbva-fraud-detection::fraud-malpractice-and-conduct-risk-detection::technologies-and-methods",
+    "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::approved-public-narratives",
+    "project-bbva-llm-internal-tools::internal-llm-and-normative-knowledge-tools::related-genai-work",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::approved-public-narratives",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::boundaries",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::contribution-and-ownership",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::implementation-evidence",
+    "project-bbva-next-best-offer::bbva-next-best-offer-crmi::summary",
+    "project-bbva-supervisory-relations::supervisory-relations-to-be-architecture::boundaries",
+    "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::end-to-end-data-scientist",
+    "project-cloud-ml-recommender::cloud-ml-recommender::cv-positioning::ml-engineer-production-data-scientist",
+    "project-cloud-ml-recommender::cloud-ml-recommender::ml-inference-workflow",
+    "project-cloud-ml-recommender::cloud-ml-recommender::summary",
+    "project-cloud-ml-recommender::cloud-ml-recommender::technologies-evidenced",
+    "project-coi-fraud-toolkit::coi-fraud-analysis-toolkit::technologies",
+    "project-financial-ml-pipelines::financial-ml-pipelines-floor-and-yahoo::yahoo",
+    "project-metacraft::metacraft::core-capabilities::export-schema",
+    "project-metacraft::metacraft::cv-positioning::data-scientist-data-platform",
+    "project-metacraft::metacraft::cv-positioning::genai-data-quality",
+    "project-metacraft::metacraft::technologies-concepts-evidenced",
+    "project-movilidad-social-mx::movilidad-social-en-m-xico::data-and-methods",
+    "project-movilidad-social-mx::movilidad-social-en-m-xico::observable-capabilities",
+    "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::approved-public-narrative",
+    "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::methods-and-technologies",
+    "project-ms-clarification-prioritization::management-solutions-clarification-prioritization::summary",
+    "project-mvp-agent-factory::mvp-agent-factory::cv-positioning::technical-leadership-ai-product",
+    "project-mvp-agent-factory::mvp-agent-factory::skills-evidenced",
+    "project-narrative-dna::narrative-dna-adnarrativa::evaluation-adjudication-architecture",
+    "project-narrative-dna::narrative-dna-adnarrativa::strong-cv-narratives::generative-ai-ai-engineer",
+    "project-r-statistical-tooling::r-statistical-tooling-early-quantitative-projects::ensemble-learning-for-time-series",
+    "project-sheshe-deldel::sheshe-deldel::cv-positioning::applied-scientist-research-ds",
+    "project-sheshe-deldel::sheshe-deldel::deldel-experimental-discipline",
+    "project-sheshe-deldel::sheshe-deldel::mathematical-algorithmic-ideas",
+    "project-sheshe-deldel::sheshe-deldel::skills-evidenced",
+    "project-sheshe-deldel::sheshe-deldel::summary",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-analyst",
+    "role-bbva::bbva-m-xico::role-chronology::data-scientist-expert",
+    "role-management-solutions::management-solutions::skills-evidenced",
+    "skills::kubeflow",
+    "skills::kubernetes",
+    "skills::mlflow",
+    "skills::optimization-decision-modeling",
+    "skills::process-workflow-architecture",
+    "skills::productionization-of-data-science-solutions",
+    "skills::pyspark-apache-spark",
+    "skills::python",
+    "skills::reproducible-experiment-design",
+    "skills::risk-fraud-analytics",
+    "skills::sql",
+    "skills::statistical-modeling",
+    "skills::supervised-machine-learning",
+    "skills::technical-project-leadership",
+    "skills::time-series-forecasting",
+    "skills::tree-based-machine-learning-random-forests",
+    "skills::unsupervised-anomaly-detection"
+  ],
+  "selected_evidence_record_ids": [
+    "achievement-metrics",
+    "cert-bourbaki-genai-2026",
+    "certifications",
+    "education",
+    "professional-profile",
+    "project-bbva-atm-analytics",
+    "project-bbva-btc",
+    "project-bbva-data-quality-mlops",
+    "project-bbva-fraud-detection",
+    "project-bbva-llm-internal-tools",
+    "project-bbva-next-best-offer",
+    "project-bbva-supervisory-relations",
+    "project-cloud-ml-recommender",
+    "project-coi-fraud-toolkit",
+    "project-financial-ml-pipelines",
+    "project-metacraft",
+    "project-movilidad-social-mx",
+    "project-ms-clarification-prioritization",
+    "project-mvp-agent-factory",
+    "project-narrative-dna",
+    "project-r-statistical-tooling",
+    "project-sheshe-deldel",
+    "role-bbva",
+    "role-management-solutions",
+    "skills"
+  ],
+  "selected_evidence_source_paths": [
+    "experience/achievements/metrics.md",
+    "experience/certifications.md",
+    "experience/certifications_bourbaki.md",
+    "experience/education.md",
+    "experience/profile.md",
+    "experience/projects/bbva_atm_analytics.md",
+    "experience/projects/bbva_btc.md",
+    "experience/projects/bbva_data_quality_mlops.md",
+    "experience/projects/bbva_next_best_offer.md",
+    "experience/projects/bbva_supervisory_relations.md",
+    "experience/projects/cloud_ml_recommender.md",
+    "experience/projects/coi_fraud_toolkit.md",
+    "experience/projects/consulting_clarification_prioritization.md",
+    "experience/projects/financial_ml_pipelines.md",
+    "experience/projects/fraud_detection.md",
+    "experience/projects/llm_internal_tools.md",
+    "experience/projects/metacraft.md",
+    "experience/projects/movilidad_social_mx.md",
+    "experience/projects/mvp_agent_factory.md",
+    "experience/projects/narrative_dna.md",
+    "experience/projects/r_statistical_tooling.md",
+    "experience/projects/sheshe_deldel.md",
+    "experience/roles/bbva.md",
+    "experience/roles/previous_roles.md",
+    "experience/skills.md"
+  ],
+  "vacancy_content_hash": "f474a41bd2f1e19c801fb6fb5b8f2777360f5686a6ba9deacecf75f13e0496f5",
+  "vacancy_id": "vac-823f77b83c66b2b3"
+}

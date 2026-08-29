@@ -1,0 +1,88 @@
+{
+  "records": [
+    {
+      "application_language": "es",
+      "city": "Miguel Hidalgo, Ciudad de México, México",
+      "company": "Grupo Modelo",
+      "company_category": "Producto Tech",
+      "content_hash": "7c4360c806de26125ca18d87ed6acff9ea06df19099a0c07eaf0b2548acf201f",
+      "description": "<p><strong>Grupo Modelo es líder en la elaboración, distribución y venta de cerveza en México</strong></p><p><strong>Nos enorgullece ser una empresa que ha traspasado fronteras con sus productos. Todo esto gracias a las 30,969 personas que colaboran en esta gran compañía.</strong></p><p><strong>Hoy forma parte de AB-InBev, la compañía cervecera más grande del mundo.</strong></p><p><strong>Te invitamos a participar en la vacante de:</strong></p><p><br></p><p><strong><em>Principal Data Scientist</em></strong></p><p><br></p><p><strong>Sobre el puesto:</strong></p><p>Buscamos un/a <strong>Principal Data Scientist</strong> que lidere la dirección técnica y la entrega de productos analíticos que den soporte a nuestras funciones de <strong>Corporate y One Supply</strong>.</p><p>En este puesto, actuarás como una autoridad técnica senior en <strong>Data Science</strong>, definiendo cómo se abordan problemas analíticos complejos en todo el portafolio. Traducirás desafíos de negocio en soluciones escalables de Data Science, definirás enfoques analíticos y arquitecturas de solución, y proporcionarás liderazgo técnico a Data Scientists y Senior Data Scientists durante todo el ciclo de vida de los productos.</p><p>Combinarás liderazgo técnico estratégico con experiencia práctica para garantizar que nuestros productos analíticos sean metodológicamente sólidos, estén listos para producción, sean escalables y estén conectados con resultados de negocio medibles.</p><p>También desempeñarás un papel clave a la hora de determinar cuándo conviene <strong>construir, reutilizar, adaptar o integrar capacidades existentes</strong>, asegurando que las decisiones técnicas equilibren el valor de negocio, la complejidad, la escalabilidad y la velocidad para generar impacto.</p><p><br></p><p><strong>Sobre el equipo</strong></p><p>Te incorporarás a un equipo multidisciplinario compuesto por <strong>Data Scientist, Data Engineers, Product Managers, AI Engineers, equipos de MLOps y de plataforma, así como stakeholders de negocio</strong>.</p><p>Como líder técnico senior dentro de Data Science, proporcionarás dirección técnica y mentoría a Data Scientists de distintos niveles, establecerás estándares técnicos y patrones de solución reutilizables, y garantizarás la calidad y consistencia de los productos analíticos del equipo.</p><p>Trabajarás estrechamente con los equipos de <strong>Producto y Negocio</strong> para garantizar que las soluciones de Data Science no solo tengan un buen desempeño técnico, sino que también se integren exitosamente en los procesos de negocio, sean adoptadas por los usuarios y generen valor medible.</p><p><br></p><p><strong>Sobre el puesto</strong></p><p>Serás responsable de:</p><ol><li><strong>Liderar la dirección técnica</strong> de los productos analíticos, desde la definición y estructuración del problema de negocio y el diseño de la solución, hasta la validación, implementación, adopción, materialización del valor y mejora continua.</li><li>Traducir desafíos de negocio complejos o ambiguos en <strong>enfoques analíticos, planes de implementación, criterios de éxito medibles y KPIs de negocio</strong>.</li><li>Definir la <strong>arquitectura de la solución analítica</strong>, incluyendo preparación de datos, ingeniería de variables (<em>feature engineering</em>), modelado, validación, inferencia, integración y monitoreo, colaborando con Data Engineering, AI Engineering, MLOps y los equipos de plataforma en la arquitectura técnica integral.</li><li>Determinar la combinación adecuada de <strong>machine learning, modelado estadístico, optimización matemática, simulación, experimentación, inferencia causal, técnicas de AI/GenAI o enfoques basados en reglas</strong>, en función del problema de negocio.</li><li>Proporcionar dirección técnica en casos de uso como <strong>optimización, sistemas de recomendación, forecasting, clasificación, regresión, clustering, segmentación, experimentación y detección de anomalías</strong>.</li><li>Evaluar la <strong>viabilidad técnica</strong> y tomar decisiones de <em>build vs. reuse vs. buy</em> (construir vs. reutilizar vs. comprar), equilibrando valor de negocio, complejidad, escalabilidad, mantenibilidad, requisitos operativos y tiempo hasta generar impacto.</li><li>Revisar decisiones metodológicas y de ingeniería críticas, incluyendo la <strong>formulación del problema, selección de modelos, estrategia de evaluación, diseño experimental, calidad del código, escalabilidad, explicabilidad y preparación para producción</strong>.</li><li>Establecer y promover <strong>estándares de Data Science</strong> para el diseño de soluciones, pruebas, documentación, reproducibilidad, validación de modelos, monitoreo y uso responsable de métodos analíticos.</li><li>Colaborar con Data Engineering, MLOps, Producto, AI Engineering y equipos de plataforma para diseñar <strong>flujos de datos escalables</strong> e integrar soluciones analíticas en sistemas de producción y procesos de negocio.</li><li>Proporcionar <strong>liderazgo técnico y mentoría</strong> a Data Scientists y Senior Data Scientists mediante diseño de soluciones, orientación metodológica, revisiones de diseño y código, coaching y retroalimentación técnica continua.</li><li>Garantizar que los productos analíticos tengan <strong>KPIs de negocio claramente definidos y mecanismos para medir el valor</strong>, conectando el desempeño técnico con la adopción y los resultados de negocio medibles.</li><li>Presentar <strong>estrategias analíticas, resultados, supuestos, limitaciones, riesgos y recomendaciones</strong> a stakeholders técnicos y de negocio senior, traduciendo decisiones técnicas complejas en implicaciones claras para el negocio.</li><li>Mantener una participación práctica (<em>hands-on</em>) en iniciativas críticas cuando su complejidad, riesgo, relevancia estratégica o impacto de negocio requiera una participación a nivel Principal.</li><li>Identificar oportunidades para crear <strong>componentes analíticos, metodologías y patrones de solución reutilizables</strong> que mejoren la velocidad de desarrollo, calidad y escalabilidad en todo el portafolio de Data Science.</li></ol><p><br></p><p><strong>Requisitos básicos</strong></p><ul><li>Licenciatura en <strong>Data Science, Computer Science, Actuarial Science, Estadística, Matemáticas, Investigación de Operaciones, Ingeniería</strong> o una disciplina cuantitativa relacionada, o experiencia práctica equivalente.</li><li>Al menos <strong>7 años de experiencia</strong> desarrollando e implementando productos de Data Science o analíticos, incluyendo responsabilidad técnica sobre iniciativas complejas desde la definición del problema hasta producción y adopción.</li><li>Experiencia demostrada traduciendo problemas de negocio complejos en <strong>enfoques analíticos, diseños técnicos y soluciones escalables</strong>.</li><li>Experiencia definiendo <strong>arquitecturas de soluciones analíticas</strong> que involucren múltiples fuentes de datos, componentes de modelado, restricciones de negocio, integraciones de sistemas y requisitos de producción.</li><li>Experiencia proporcionando <strong>liderazgo técnico a Data Scientists</strong> mediante planificación técnica, orientación metodológica, revisiones de soluciones y código, mentoría y retroalimentación continua.</li><li>Dominio sólido de <strong>Python y SQL</strong>, demostrado mediante el desarrollo de soluciones analíticas modulares, probadas, eficientes y mantenibles, utilizando prácticas de desarrollo de software como control de versiones, pruebas automatizadas, gestión de dependencias y documentación técnica.</li><li>Experiencia profunda en al menos un <strong>dominio avanzado de Data Science</strong>, con experiencia demostrada en otras áreas como optimización matemática, sistemas de recomendación, forecasting, experimentación, inferencia causal, clasificación, regresión, clustering o simulación.</li><li>Capacidad para traducir <strong>decisiones y restricciones de negocio en formulaciones cuantitativas de problemas</strong>, incluyendo objetivos, supuestos, escenarios, restricciones y trade-offs medibles.</li><li>Sólidos conocimientos de <strong>estadística aplicada, probabilidad, diseño experimental, validación de modelos, análisis de incertidumbre e interpretación de resultados analíticos</strong>.</li><li>Experiencia diseñando flujos de <strong>preparación de datos, feature engineering, modelado, validación e inferencia</strong> para datasets grandes y complejos, e integrando sus resultados en sistemas de producción o procesos operativos.</li><li>Capacidad para evaluar soluciones analíticas en función de su <strong>desempeño técnico, valor de negocio, escalabilidad, mantenibilidad, explicabilidad, complejidad operativa y riesgo</strong>.</li><li>Excelentes habilidades de comunicación, con capacidad para presentar <strong>recomendaciones, supuestos, limitaciones y trade-offs</strong> a stakeholders técnicos y no técnicos de nivel senior.</li><li><strong>Idioma:</strong> Dominio profesional del inglés, incluyendo la capacidad de liderar conversaciones técnicas y presentaciones ante stakeholders.</li></ul><p><br></p><p><strong>Requisitos deseables</strong></p><ul><li>Maestría o PhD en <strong>Computer Science, Actuarial Science, Estadística, Matemáticas, Investigación de Operaciones, Ingeniería</strong> o una disciplina cuantitativa relacionada.</li><li>Experiencia implementando soluciones de <strong>optimización</strong> utilizando programación lineal, programación entera mixta (<em>mixed-integer programming</em>), programación por restricciones, heurísticas, metaheurísticas o simulación.</li><li>Experiencia implementando <strong>forecasting, sistemas de recomendación, optimización, experimentación</strong> u otras soluciones analíticas avanzadas que respalden decisiones comerciales, corporativas u operativas a escala.</li><li>Familiaridad con enfoques de <strong>AI/GenAI</strong> y capacidad para evaluar cuándo estas técnicas ofrecen ventajas significativas frente a métodos analíticos tradicionales.</li><li>Familiaridad con conceptos de <strong>procesamiento distribuido de datos</strong> y conocimientos prácticos de <strong>PySpark o Spark</strong>.</li><li>Experiencia práctica con capacidades de <strong>Databricks</strong>, como Unity Catalog, MLflow, Feature Engineering, Delta Lake o Workflows.</li><li>Experiencia colaborando con equipos de <strong>MLOps</strong> o aplicando prácticas como seguimiento de experimentos, versionado de modelos, validación automatizada, pipelines de implementación, monitoreo y reentrenamiento.</li><li>Experiencia creando <strong>componentes analíticos reutilizables, patrones de solución, estándares de desarrollo o arquitecturas de referencia</strong> adoptados por otros miembros del equipo.</li><li>Experiencia desarrollando productos analíticos en áreas como <strong>ventas digitales, analítica comercial, pricing, promociones, surtido, gestión de ingresos, finanzas, procurement/compras, planificación de la demanda, inventarios, analítica de clientes, logística, manufactura o supply chain</strong>.</li><li>Experiencia trabajando en organizaciones grandes, multidisciplinarias o geográficamente distribuidas, colaborando entre equipos de negocio y tecnología.</li></ul><p><br></p><p><br></p>",
+      "fit_gaps": [
+        "La publicación recuperada no confirma esquema remoto o híbrido y fuentes secundarias la clasifican como presencial.",
+        "El dominio principal es Corporate/One Supply, no banca o riesgo financiero.",
+        "GenAI aparece como capacidad complementaria y no como núcleo exclusivo del rol."
+      ],
+      "fit_score": 97.0,
+      "fit_strengths": [
+        "Rol Principal con responsabilidad directa sobre la dirección técnica de productos analíticos y liderazgo de Data Scientists y Senior Data Scientists.",
+        "Requiere al menos 7 años y valora explícitamente formación en Actuaría y Maestría en disciplinas cuantitativas.",
+        "Dominio sólido de Python y SQL, arquitectura de soluciones analíticas y desarrollo de productos desde definición del problema hasta producción, adopción y monitoreo.",
+        "Incluye experimentación, inferencia causal, clasificación, regresión, clustering, forecasting, recomendadores, optimización y detección de anomalías.",
+        "PySpark/Spark, Databricks, MLflow, Feature Engineering, Delta Lake, Workflows y prácticas MLOps aparecen como capacidades deseables.",
+        "Incorpora evaluación explícita de AI/GenAI y decisiones build-vs-reuse-vs-buy, con fuerte componente de arquitectura y liderazgo técnico."
+      ],
+      "fit_summary": "Ajuste excepcional para una evolución a Principal Data Scientist: combina Python, SQL, PySpark, experimentación, arquitectura end-to-end, MLOps, GenAI y liderazgo técnico en una compañía global.",
+      "identity_key": "823f77b83c66b2b336e33bedcad3277d2251c4df418d35aef6bd6da0c5146e1c",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=11322",
+        "substantive_requirements=1",
+        "substantive_responsibilities=0",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 65.0,
+      "jd_generation_eligible": true,
+      "language_confidence": 0.98,
+      "language_source": "vacancy_text",
+      "location_raw": "Miguel Hidalgo, Ciudad de México, México",
+      "posted_date": "2026-08-29",
+      "posted_date_raw": "2026-08-29",
+      "provenance": [
+        {
+          "source_commit": "44b1c57371e276c9ee216b90893c4602722f821a",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "6509f14ce6082c67e91baeea93796b387773c337890dc48db920e35896075e10",
+          "source_native_id": "grupo-modelo-4460508694",
+          "source_path": "Vacantes/enriched/auto/grupo-modelo-principal-data-scientist-c252925c0f.json",
+          "source_search_date": "2026-08-29",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [
+        "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+      ],
+      "responsibilities": [],
+      "role_title": "Principal Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "PySpark",
+        "Spark",
+        "Machine Learning",
+        "Experimentation",
+        "Causal Inference",
+        "Forecasting",
+        "Recommendation Systems",
+        "Optimization",
+        "Anomaly Detection",
+        "Databricks",
+        "MLflow",
+        "Delta Lake",
+        "MLOps",
+        "GenAI",
+        "Solution Architecture"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/principal-data-scientist-at-grupo-modelo-s-a-de-c-v-4460508694",
+      "vacancy_id": "vac-823f77b83c66b2b3",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "6509f14ce6082c67e91baeea93796b387773c337890dc48db920e35896075e10",
+  "source_path": "Vacantes/enriched/auto/grupo-modelo-principal-data-scientist-c252925c0f.json",
+  "status": "valid"
+}

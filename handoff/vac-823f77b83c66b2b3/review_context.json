@@ -1,0 +1,159 @@
+{
+  "application_language": "es",
+  "evidence_coverage": {
+    "coverage_score": 86.4,
+    "unsupported_requirements": []
+  },
+  "final_gate_reasons": [
+    "headhunter_decision_not_pass",
+    "overall_score_below_92",
+    "vacancy_alignment_below_90",
+    "evidence_strength_below_95",
+    "language_quality_below_95",
+    "blocking_issues_present"
+  ],
+  "headhunter": {
+    "best_review_iteration": 1,
+    "blocking_issues": [
+      {
+        "problem": "El CV demuestra buen dominio técnico, pero no evidencia suficientemente la dimensión Principal del puesto: dirección técnica de productos, definición de arquitecturas, establecimiento de estándares, mentoría a Data Scientists y toma de decisiones entre construir, reutilizar o integrar capacidades.",
+        "required_change": "Reforzar la experiencia de BBVA con evidencia documentada —sin inventar alcance— sobre arquitectura de soluciones, revisiones metodológicas o de diseño, estándares de calidad/reproducibilidad, colaboración con MLOps, plataforma y negocio, y cualquier mentoría o liderazgo técnico formalmente ejercido.",
+        "section": "Experiencia — BBVA México"
+      },
+      {
+        "problem": "La mayoría de los bullets describen actividades y métodos, pero no conectan suficientemente el trabajo con adopción, KPIs, capacidad operativa o resultados de negocio. Para un puesto Principal, esto reduce la credibilidad de la responsabilidad end-to-end.",
+        "required_change": "Añadir resultados verificables de los proyectos más relevantes utilizando únicamente la redacción y métricas aprobadas en el registro de logros. Cuando no exista una métrica válida, explicar con precisión el cambio operativo, la frecuencia de uso, el proceso habilitado o la decisión empresarial soportada.",
+        "section": "Experiencia — impacto y resultados"
+      },
+      {
+        "problem": "Capacidades importantes para la vacante —recomendadores, experimentación/inferencia causal, GenAI y arquitectura de soluciones— aparecen principalmente en Skills o no aparecen en la sección de Experience. El lector puede interpretar el perfil como fuerte en fraude y analítica bancaria, pero menos amplio para Corporate y One Supply.",
+        "required_change": "Trasladar a BBVA o Management Solutions los casos profesionales documentados que evidencien recomendación, experimentación, inferencia causal, forecasting, optimización, GenAI o arquitectura. Mantener la atribución real de lead, contributor, operator o reviewer en cada caso.",
+        "section": "Experiencia — priorización de evidencia"
+      },
+      {
+        "problem": "El resumen es sólido, pero todavía funciona principalmente como descripción general de Senior Data Scientist y no como candidatura de evolución a Principal Data Scientist. No explicita con suficiente fuerza la combinación de liderazgo técnico, arquitectura, decisión metodológica y entrega de productos reutilizables.",
+        "required_change": "Ajustar el resumen para posicionar al candidato como líder técnico hands-on de soluciones analíticas complejas, destacando la traducción de problemas ambiguos a arquitecturas, la revisión de calidad y producción, y la colaboración con negocio, ingeniería y MLOps, sin afirmar gestión de personas o alcance no documentados.",
+        "section": "Resumen profesional"
+      }
+    ],
+    "decision": "REVISE",
+    "iterations": 3,
+    "score": 79
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "presentation": {
+    "bundle_reasons": [
+      "content_quality_target_not_reached"
+    ],
+    "gate": {
+      "alternate_physical_status": "PASS",
+      "alternate_presentation_review_status": "PASS",
+      "alternate_template": "harvard_v1",
+      "alternate_visual_status": "PASS",
+      "cover_letter_ready": true,
+      "primary_page_utilization": [
+        0.6783,
+        0.4993
+      ],
+      "primary_physical_status": "PASS",
+      "primary_presentation_review_status": "PASS",
+      "primary_section_area_ratios": {
+        "certifications": 0.0862,
+        "education": 0.064,
+        "experience": 0.443,
+        "projects": 0.2321,
+        "skills": 0.1747
+      },
+      "primary_section_item_counts": {
+        "certifications": 3,
+        "education": 2,
+        "experience": 2,
+        "projects": 2,
+        "skills": 12
+      },
+      "primary_template": "technical_modern_v1",
+      "primary_visual_status": "PASS",
+      "reasons": [
+        "content_quality_target_not_reached"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    "ready_to_send": false
+  },
+  "quality_kpi": 79,
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_target_reached": false,
+  "review_stop_reason": "max_review_budget_reached",
+  "schema_version": 1,
+  "style_preflight": {
+    "advisories": [],
+    "attempted": false,
+    "initial_issues": [],
+    "initial_status": "PASS",
+    "repaired": false
+  },
+  "vacancy_fit": {
+    "gaps": [
+      "La publicación recuperada no confirma esquema remoto o híbrido y fuentes secundarias la clasifican como presencial.",
+      "El dominio principal es Corporate/One Supply, no banca o riesgo financiero.",
+      "GenAI aparece como capacidad complementaria y no como núcleo exclusivo del rol."
+    ],
+    "source_fit": 97.0,
+    "strengths": [
+      "Rol Principal con responsabilidad directa sobre la dirección técnica de productos analíticos y liderazgo de Data Scientists y Senior Data Scientists.",
+      "Requiere al menos 7 años y valora explícitamente formación en Actuaría y Maestría en disciplinas cuantitativas.",
+      "Dominio sólido de Python y SQL, arquitectura de soluciones analíticas y desarrollo de productos desde definición del problema hasta producción, adopción y monitoreo.",
+      "Incluye experimentación, inferencia causal, clasificación, regresión, clustering, forecasting, recomendadores, optimización y detección de anomalías.",
+      "PySpark/Spark, Databricks, MLflow, Feature Engineering, Delta Lake, Workflows y prácticas MLOps aparecen como capacidades deseables.",
+      "Incorpora evaluación explícita de AI/GenAI y decisiones build-vs-reuse-vs-buy, con fuerte componente de arquitectura y liderazgo técnico."
+    ],
+    "tech_stack": [
+      "Python",
+      "SQL",
+      "PySpark",
+      "Spark",
+      "Machine Learning",
+      "Experimentation",
+      "Causal Inference",
+      "Forecasting",
+      "Recommendation Systems",
+      "Optimization",
+      "Anomaly Detection",
+      "Databricks",
+      "MLflow",
+      "Delta Lake",
+      "MLOps",
+      "GenAI",
+      "Solution Architecture"
+    ]
+  },
+  "validation": {
+    "editorial": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "factual": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "language": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "quality_gate": {
+      "passed": false,
+      "reasons": [
+        "headhunter_decision_not_pass",
+        "overall_score_below_92",
+        "vacancy_alignment_below_90",
+        "evidence_strength_below_95",
+        "language_quality_below_95",
+        "blocking_issues_present"
+      ]
+    },
+    "structure": {
+      "issues": [],
+      "status": "PASS"
+    }
+  }
+}

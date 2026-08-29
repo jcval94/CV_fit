@@ -1,0 +1,160 @@
+{
+  "application_language": "en",
+  "evidence_coverage": {
+    "coverage_score": 92.5,
+    "unsupported_requirements": []
+  },
+  "final_gate_reasons": [
+    "headhunter_decision_not_pass",
+    "overall_score_below_92",
+    "vacancy_alignment_below_90",
+    "evidence_strength_below_95",
+    "language_quality_below_95",
+    "blocking_issues_present"
+  ],
+  "headhunter": {
+    "best_review_iteration": 2,
+    "blocking_issues": [
+      {
+        "problem": "The experience is credible and relevant but almost entirely activity-based. It does not surface any validated business, operational, model-quality, or adoption outcome, so the profile reads as a capable senior contributor rather than someone who demonstrably drove measurable product decisions and impact. This is material for Zillow’s emphasis on measurable business outcomes and scalable data-informed decisions.",
+        "required_change": "Add one or two concise, approved outcome-led bullets using only validated achievement-registry evidence. Prioritize the current BBVA fraud/compliance work or the Management Solutions clarification-prioritization work where an approved metric can be represented accurately; retain bounded ownership language and do not combine workstream metrics.",
+        "section": "Experience — BBVA México / Management Solutions"
+      },
+      {
+        "problem": "The CV does not make the candidate’s evidence of knowledge transfer, work review, or technical enablement visible, despite Zillow explicitly requiring mentoring and a culture of learning. Code review and tool adoption are mentioned, but their senior leadership value is not made explicit.",
+        "required_change": "Recast or replace the lowest-priority current-role bullet to foreground supported technical enablement, knowledge-source curation, code review, or sharing of applied GenAI practices. Do not claim formal people management or direct-report mentoring unless documented.",
+        "section": "Experience — current BBVA role"
+      }
+    ],
+    "decision": "REVISE",
+    "iterations": 3,
+    "score": 82
+  },
+  "pipeline_status": "COMPLETED_BELOW_TARGET",
+  "presentation": {
+    "bundle_reasons": [
+      "content_quality_target_not_reached"
+    ],
+    "gate": {
+      "alternate_physical_status": "PASS",
+      "alternate_presentation_review_status": "PASS",
+      "alternate_template": "harvard_v1",
+      "alternate_visual_status": "PASS",
+      "cover_letter_ready": true,
+      "primary_page_utilization": [
+        0.7509,
+        0.6655
+      ],
+      "primary_physical_status": "PASS",
+      "primary_presentation_review_status": "PASS",
+      "primary_section_area_ratios": {
+        "certifications": 0.0836,
+        "education": 0.0511,
+        "experience": 0.6232,
+        "projects": 0.1203,
+        "skills": 0.1217
+      },
+      "primary_section_item_counts": {
+        "certifications": 3,
+        "education": 2,
+        "experience": 7,
+        "projects": 2,
+        "skills": 15
+      },
+      "primary_template": "technical_modern_v1",
+      "primary_visual_status": "PASS",
+      "reasons": [
+        "content_quality_target_not_reached"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    "ready_to_send": false
+  },
+  "quality_kpi": 82,
+  "quality_note": "Maximum production budget of 3 Senior Headhunter reviews was reached without satisfying all quality gates. The best evaluated CV is returned; review run_report.json before submitting.",
+  "quality_target_reached": false,
+  "review_stop_reason": "max_review_budget_reached",
+  "schema_version": 1,
+  "style_preflight": {
+    "advisories": [
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[1].bullets[3]",
+        "message": "Leading verb 'developed' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "experience[3].bullets[1]",
+        "message": "Leading verb 'developed' is repeated at least three times; vary wording only when evidence permits."
+      },
+      {
+        "code": "repeated_leading_verb",
+        "location": "projects[1].bullets[1]",
+        "message": "Leading verb 'developed' is repeated at least three times; vary wording only when evidence permits."
+      }
+    ],
+    "attempted": false,
+    "initial_issues": [],
+    "initial_status": "PASS",
+    "repaired": false
+  },
+  "vacancy_fit": {
+    "gaps": [
+      "No está enfocado directamente en banca, riesgo, fraude o credit scoring.",
+      "PySpark y GenAI no aparecen como requisitos explícitos centrales en la descripción recuperada.",
+      "El dominio es PropTech/real estate, por lo que parte de la ventaja sectorial financiera se traslada a habilidades analíticas y de producto."
+    ],
+    "source_fit": 98.0,
+    "strengths": [
+      "Posición remota para cualquier ubicación en México, con visitas ocasionales a Ciudad de México.",
+      "Requiere 8+ años de experiencia en estadística, machine learning o analítica avanzada, muy cercano al seniority objetivo.",
+      "Ownership end-to-end desde problem framing e hipótesis hasta desarrollo, validación, despliegue y monitoreo de modelos.",
+      "Pide Python o R, SQL, grandes volúmenes de datos, feature engineering y construcción de pipelines escalables.",
+      "Incluye diseño y evaluación de experimentos e inferencia causal para medir impacto de modelos y producto.",
+      "Responsabilidad explícita de mentoría, revisión de trabajo y establecimiento de buenas prácticas de Data Science y Responsible AI."
+    ],
+    "tech_stack": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Statistical Modeling",
+      "Experimentation",
+      "Causal Inference",
+      "Feature Engineering",
+      "Data Pipelines",
+      "Model Deployment",
+      "Model Monitoring",
+      "Responsible AI",
+      "Technical Mentoring"
+    ]
+  },
+  "validation": {
+    "editorial": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "factual": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "language": {
+      "issues": [],
+      "status": "PASS"
+    },
+    "quality_gate": {
+      "passed": false,
+      "reasons": [
+        "headhunter_decision_not_pass",
+        "overall_score_below_92",
+        "vacancy_alignment_below_90",
+        "evidence_strength_below_95",
+        "language_quality_below_95",
+        "blocking_issues_present"
+      ]
+    },
+    "structure": {
+      "issues": [],
+      "status": "PASS"
+    }
+  }
+}
