@@ -1,7 +1,7 @@
 {
   "metadata": {
     "fecha_busqueda": "2026-08-29",
-    "total_vacantes_encontradas": 3,
+    "total_vacantes_encontradas": 4,
     "criterio_temporal": "Últimos 7 días"
   },
   "vacantes": [
@@ -28,7 +28,7 @@
           "PySpark y GenAI no aparecen como requisitos explícitos centrales en la descripción recuperada.",
           "El dominio es PropTech/real estate, por lo que parte de la ventaja sectorial financiera se traslada a habilidades analíticas y de producto."
         ],
-        "resumen": "Es la mejor nueva oportunidad de la corrida por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico."
+        "resumen": "Es la mejor oportunidad por modalidad 100% remota en México, seniority cercano a 9+ años, ownership E2E, experimentación, Python/SQL y liderazgo técnico."
       },
       "stack_clave_detectado": [
         "Python",
@@ -46,6 +46,55 @@
       ],
       "rango_salarial": "No especificado",
       "url_postulacion": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-zillow-4440846424"
+    },
+    {
+      "id_vacante": "vonage-8540318002",
+      "puesto": "Marketing Data Scientist",
+      "empresa": "Vonage",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 2 horas",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Vacante 100% work-from-home para México y con 8 años de experiencia requeridos, muy próxima al seniority objetivo.",
+          "Exige Python y SQL avanzados y utiliza scikit-learn, statsmodels, Prophet, pandas y NumPy para forecasting y modelado predictivo.",
+          "Ownership de capacidades de demand y revenue intelligence, desde modelado y segmentación hasta scoring y adopción operativa de resultados.",
+          "Incluye personalización y next-best-action, conectando modelos directamente con decisiones comerciales y automatización.",
+          "Pide fluidez de trabajo con herramientas de IA y workflows basados en LLMs, además de estructuras AI-ready en Snowflake.",
+          "La experiencia previa con Salesforce Einstein Analytics / Tableau CRM es especialmente transferible al rol."
+        ],
+        "posibles_gaps": [
+          "No está enfocado en banca, fraude o credit scoring.",
+          "PySpark no aparece como requisito y el stack de datos se concentra en Snowflake y Salesforce.",
+          "El liderazgo es principalmente por ownership e influencia transversal; no se explicita people management o mentoría formal."
+        ],
+        "resumen": "Nueva oportunidad de alto ajuste por modalidad remota, seniority, Python/SQL, modelado predictivo, forecasting, next-best-action, Snowflake y adopción explícita de workflows con LLMs."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "scikit-learn",
+        "statsmodels",
+        "Prophet",
+        "Pandas",
+        "NumPy",
+        "Snowflake",
+        "Salesforce",
+        "Salesforce Einstein Analytics",
+        "Tableau CRM",
+        "Forecasting",
+        "Predictive Modeling",
+        "Next Best Action",
+        "LLM Workflows",
+        "AWS",
+        "GCP",
+        "Azure",
+        "Git"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://job-boards.greenhouse.io/vonage/jobs/8540318002"
     },
     {
       "id_vacante": "grupo-modelo-4460508694",
@@ -117,7 +166,7 @@
           "No capitaliza directamente experiencia en banca, riesgo, fraude o credit scoring.",
           "GenAI no es un componente central de la descripción."
         ],
-        "resumen": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás del Principal por nivel y del Zillow por modalidad."
+        "resumen": "Muy buen match técnico por Python, SQL, PySpark, ML E2E, experimentación, Databricks y mentoría; queda detrás de alternativas remotas y del rol Principal por nivel."
       },
       "stack_clave_detectado": [
         "Python",
