@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-30",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "etsy-1a525f1f-43bc-433b-b37c-b485602533ba",
+      "puesto": "Senior Data Scientist, Seller Analytics",
+      "empresa": "Etsy",
+      "categoria_empresa": "E-commerce",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-08-29",
+      "porcentaje_ajuste": 94,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol Senior Data Scientist en una empresa global de producto y marketplace, con impacto directo sobre roadmap, experiencia de sellers y métricas de negocio.",
+          "Modalidad híbrida favorable en Ciudad de México, con presencia requerida solo una o dos veces por semana según proximidad a la oficina.",
+          "Requiere SQL y experiencia con Python o R, análisis de datasets complejos, trabajo reproducible y colaboración con Product, Design, Engineering y Research.",
+          "Incluye liderazgo técnico mediante mentoría, mejora de prácticas analíticas y capacidad para llevar proyectos cuantitativos hasta su finalización.",
+          "El foco en seller analytics, adopción de producto, onboarding y crecimiento conecta bien con experiencia en analítica avanzada, segmentación, propensión y toma de decisiones basada en datos."
+        ],
+        "posibles_gaps": [
+          "La vacante está más orientada a Product Analytics y Seller Analytics que a modelado avanzado end-to-end o MLOps.",
+          "PySpark, GenAI, fraude, riesgo y credit scoring no aparecen como requisitos explícitos.",
+          "El mínimo publicado es 4+ años, por debajo del seniority del perfil objetivo, aunque el alcance incluye liderazgo y colaboración de nivel senior."
+        ],
+        "resumen": "Oportunidad nueva de alto ajuste por ser un rol Senior de producto en una compañía tecnológica global, híbrido en CDMX y con fuerte componente de SQL, Python/R, analítica de producto, liderazgo e influencia sobre roadmap. Pierde algunos puntos frente a roles fintech o ML-heavy porque no explota directamente banca, fraude, PySpark o GenAI."
+      },
+      "stack_clave_detectado": [
+        "SQL",
+        "Python",
+        "R",
+        "Looker",
+        "Product Analytics",
+        "E-commerce Analytics",
+        "Data Visualization",
+        "Quantitative Analysis",
+        "Experimentation",
+        "Technical Mentoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://careers.etsy.com/jobs/senior-data-scientist-seller-analytics-cdmx-mexico-city-mexico-1a525f1f-43bc-433b-b37c-b485602533ba"
+    }
+  ]
+}
