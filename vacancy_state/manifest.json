@@ -1,5 +1,5 @@
 {
-  "last_run_id": "442a5470be89a3598dca10c49e0c6738fa92e3be-noop",
+  "last_run_id": "404df2e8705e1c2b1391ec4375fb887c5a275e2e-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -65,6 +65,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-6fe0c8aa95790e4e"
+      ]
+    },
+    "Vacantes/enriched/auto/etsy-senior-data-scientist-seller-analytics-e28ceeb72e.json": {
+      "source_hash": "87feb1e32b097af282998012294e6570866fbdb96b7e9479e22a76ecf901669e",
+      "state_file": "sources/Vacantes__enriched__auto__etsy-senior-data-scientist-seller-analytics-e28ceeb72e--d6ac6d69113d2082.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-a675ea74767544e2"
       ]
     },
     "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json": {
@@ -331,6 +339,14 @@
         "vac-823f77b83c66b2b3",
         "vac-89b026f359c34a6e",
         "vac-eea30930c49313c6"
+      ]
+    },
+    "Vacantes/vacantes_2026-08-30.json": {
+      "source_hash": "4e2185e63f8d3a51167c35efdc78f28f540ec42bdc94ae5151d4f76cc2f63927",
+      "state_file": "sources/Vacantes__vacantes_2026-08-30.json--121ff5f319661974.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-a675ea74767544e2"
       ]
     }
   }

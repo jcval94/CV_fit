@@ -1,0 +1,78 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Etsy",
+      "company_category": "E-commerce",
+      "content_hash": "1ea026445868268d8142cc78c7390414487cd6d5187ea4fcdf25d1364d45316d",
+      "description": null,
+      "fit_gaps": [
+        "La vacante está más orientada a Product Analytics y Seller Analytics que a modelado avanzado end-to-end o MLOps.",
+        "PySpark, GenAI, fraude, riesgo y credit scoring no aparecen como requisitos explícitos.",
+        "El mínimo publicado es 4+ años, por debajo del seniority del perfil objetivo, aunque el alcance incluye liderazgo y colaboración de nivel senior."
+      ],
+      "fit_score": 94.0,
+      "fit_strengths": [
+        "Rol Senior Data Scientist en una empresa global de producto y marketplace, con impacto directo sobre roadmap, experiencia de sellers y métricas de negocio.",
+        "Modalidad híbrida favorable en Ciudad de México, con presencia requerida solo una o dos veces por semana según proximidad a la oficina.",
+        "Requiere SQL y experiencia con Python o R, análisis de datasets complejos, trabajo reproducible y colaboración con Product, Design, Engineering y Research.",
+        "Incluye liderazgo técnico mediante mentoría, mejora de prácticas analíticas y capacidad para llevar proyectos cuantitativos hasta su finalización.",
+        "El foco en seller analytics, adopción de producto, onboarding y crecimiento conecta bien con experiencia en analítica avanzada, segmentación, propensión y toma de decisiones basada en datos."
+      ],
+      "fit_summary": "Oportunidad nueva de alto ajuste por ser un rol Senior de producto en una compañía tecnológica global, híbrido en CDMX y con fuerte componente de SQL, Python/R, analítica de producto, liderazgo e influencia sobre roadmap. Pierde algunos puntos frente a roles fintech o ML-heavy porque no explota directamente banca, fraude, PySpark o GenAI.",
+      "identity_key": "a675ea74767544e26e0d6c3b37b4dce000c359073d7aeeea6ff3a70364c557b4",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-08-29",
+      "posted_date_raw": "2026-08-29",
+      "provenance": [
+        {
+          "source_commit": "404df2e8705e1c2b1391ec4375fb887c5a275e2e",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "4e2185e63f8d3a51167c35efdc78f28f540ec42bdc94ae5151d4f76cc2f63927",
+          "source_native_id": "etsy-1a525f1f-43bc-433b-b37c-b485602533ba",
+          "source_path": "Vacantes/vacantes_2026-08-30.json",
+          "source_search_date": "2026-08-30",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist, Seller Analytics",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "SQL",
+        "Python",
+        "R",
+        "Looker",
+        "Product Analytics",
+        "E-commerce Analytics",
+        "Data Visualization",
+        "Quantitative Analysis",
+        "Experimentation",
+        "Technical Mentoring"
+      ],
+      "url": "https://careers.etsy.com/jobs/senior-data-scientist-seller-analytics-cdmx-mexico-city-mexico-1a525f1f-43bc-433b-b37c-b485602533ba",
+      "vacancy_id": "vac-a675ea74767544e2",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "4e2185e63f8d3a51167c35efdc78f28f540ec42bdc94ae5151d4f76cc2f63927",
+  "source_path": "Vacantes/vacantes_2026-08-30.json",
+  "status": "valid"
+}

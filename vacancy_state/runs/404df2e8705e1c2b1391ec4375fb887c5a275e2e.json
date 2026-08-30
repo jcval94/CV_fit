@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/etsy-senior-data-scientist-seller-analytics-e28ceeb72e.json",
+      "Vacantes/vacantes_2026-08-30.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -14,7 +17,6 @@
       "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
       "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
-      "Vacantes/enriched/auto/etsy-senior-data-scientist-seller-analytics-e28ceeb72e.json",
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-2acf573491.json",
       "Vacantes/enriched/auto/ford-motor-company-data-scientist-nlp-ai-engineer-d763ef89b9.json",
       "Vacantes/enriched/auto/gbm-machine-learning-mlops-72bb010731.json",
@@ -45,29 +47,30 @@
       "Vacantes/vacantes_2026-08-26.json",
       "Vacantes/vacantes_2026-08-27.json",
       "Vacantes/vacantes_2026-08-28.json",
-      "Vacantes/vacantes_2026-08-29.json",
-      "Vacantes/vacantes_2026-08-30.json"
+      "Vacantes/vacantes_2026-08-29.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "404df2e8705e1c2b1391ec4375fb887c5a275e2e-noop",
+  "reindexed_vacancy_ids": [
+    "vac-a675ea74767544e2"
+  ],
+  "run_id": "404df2e8705e1c2b1391ec4375fb887c5a275e2e",
   "schema_version": 1,
   "source_commit": "404df2e8705e1c2b1391ec4375fb887c5a275e2e",
   "source_counts": {
     "deleted": 0,
     "discovered": 41,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 41
+    "unchanged": 39
   },
   "status": "success",
   "vacancy_counts": {
     "active": 31,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}
