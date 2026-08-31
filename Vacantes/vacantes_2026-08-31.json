@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-08-31",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "payjoy-4eabe147-7c4c-44a1-bc36-6cec2c47d5c5",
+      "puesto": "Machine Learning Engineer - Fraud",
+      "empresa": "PayJoy",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-08-30",
+      "porcentaje_ajuste": 96,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Fintech de crédito para mercados emergentes con una posición directamente enfocada en detección de fraude, riesgo y decisioning, altamente alineada con experiencia en banca y modelos antifraude.",
+          "Ownership completo del ciclo de vida de modelos: feature generation, diseño, desarrollo, despliegue, rollout, monitoreo y mejora continua en producción.",
+          "Requiere Python avanzado y experiencia construyendo modelos de machine learning productivos, además de AWS, Docker y pipelines escalables de generación de features y deployment.",
+          "Trabaja de forma transversal con Fraud, Risk, Product, Engineering y Business para construir modelos, reglas, colas de revisión y sistemas de autorización/decisioning.",
+          "Valora experiencia con LLMs, bases de datos de grafos y Databricks, lo que conecta con IA aplicada, detección de patrones complejos y modernización del stack de ML.",
+          "El contexto combina crédito, fraude, ML aplicado y operación internacional en LATAM, África y APAC, aportando un ajuste de dominio superior al de una vacante genérica de Data Science."
+        ],
+        "posibles_gaps": [
+          "La vacante solicita 3+ años de experiencia, bastante por debajo del seniority objetivo de 9+ años, por lo que existe riesgo de sobrecalificación o nivel/compensación menor al esperado.",
+          "El título es Machine Learning Engineer y no Senior/Lead, aunque el alcance incluye ownership end-to-end y responsabilidades de diseño de sistemas de fraude.",
+          "PySpark y liderazgo formal de equipo no aparecen como requisitos explícitos; Databricks sí figura como experiencia deseable."
+        ],
+        "resumen": "Es la mejor oportunidad nueva de esta corrida por la combinación de fintech, crédito, fraude, Python, ML productivo, decisioning y ownership end-to-end. El principal riesgo es de seniority: funcionalmente encaja muy bien, pero el nivel mínimo publicado es inferior al perfil objetivo."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "Scikit-Learn",
+        "Pandas",
+        "Flask",
+        "Machine Learning",
+        "Fraud Detection",
+        "Risk Decisioning",
+        "Feature Engineering",
+        "Model Deployment",
+        "Model Monitoring",
+        "AWS",
+        "Docker",
+        "Databricks",
+        "LLMs",
+        "Graph Databases",
+        "Production ML"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.lever.co/payjoy/4eabe147-7c4c-44a1-bc36-6cec2c47d5c5"
+    }
+  ]
+}
