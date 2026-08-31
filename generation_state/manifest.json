@@ -2538,6 +2538,17 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "7260cf254784b1c09fdbfadf84b6e6a4745ccc894ef2de87f0c24aa962f8d1ec"
     },
+    "vac-c3b310c0b6bbeb81": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "f6070197349e8f278d180fbfc8ca373d6716b4480c1a3fd6ad95d78ac14692b3",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-c3b310c0b6bbeb81 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "edffec1881db57f499eff196cfd172e6c4f21dcc",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "f2c2e4e78108f427b6da5f93ae69c84efb179d6df53b632d4c28a9cac7fe85ef"
+    },
     "vac-e1579e279d47b8a9": {
       "application_bundle_file": "application_bundle_report.json",
       "attempt_known_cost_usd": 0.562811,

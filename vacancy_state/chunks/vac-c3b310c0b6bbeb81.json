@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-c3b310c0b6bbeb81::core",
+      "chunk_type": "core",
+      "content_hash": "36a39c893e81dc304fe808b86438f59173ef887399cf84a1034a9dbb9081bb73",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-31.json"
+      ],
+      "text": "Role: Machine Learning Engineer - Fraud\nCompany: PayJoy\nCompany category: Fintech\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-c3b310c0b6bbeb81"
+    },
+    {
+      "chunk_id": "vac-c3b310c0b6bbeb81::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "0cb7449ec924c1b55e33e2d29f66ab658a17bddd59dd5a309bd3f8345e3a5aab",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-31.json"
+      ],
+      "text": "Technologies / capabilities: Python; Scikit-Learn; Pandas; Flask; Machine Learning; Fraud Detection; Risk Decisioning; Feature Engineering; Model Deployment; Model Monitoring; AWS; Docker; Databricks; LLMs; Graph Databases; Production ML",
+      "vacancy_id": "vac-c3b310c0b6bbeb81"
+    },
+    {
+      "chunk_id": "vac-c3b310c0b6bbeb81::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "b7d2fb7078a120d3dc697c71ce9bd9d3d1d7da81a0db300b8e473c1310a9cd3a",
+      "source_paths": [
+        "Vacantes/vacantes_2026-08-31.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Es la mejor oportunidad nueva de esta corrida por la combinación de fintech, crédito, fraude, Python, ML productivo, decisioning y ownership end-to-end. El principal riesgo es de seniority: funcionalmente encaja muy bien, pero el nivel mínimo publicado es inferior al perfil objetivo.\nSource strengths: Fintech de crédito para mercados emergentes con una posición directamente enfocada en detección de fraude, riesgo y decisioning, altamente alineada con experiencia en banca y modelos antifraude.; Ownership completo del ciclo de vida de modelos: feature generation, diseño, desarrollo, despliegue, rollout, monitoreo y mejora continua en producción.; Requiere Python avanzado y experiencia construyendo modelos de machine learning productivos, además de AWS, Docker y pipelines escalables de generación de features y deployment.; Trabaja de forma transversal con Fraud, Risk, Product, Engineering y Business para construir modelos, reglas, colas de revisión y sistemas de autorización/decisioning.; Valora experiencia con LLMs, bases de datos de grafos y Databricks, lo que conecta con IA aplicada, detección de patrones complejos y modernización del stack de ML.; El contexto combina crédito, fraude, ML aplicado y operación internacional en LATAM, África y APAC, aportando un ajuste de dominio superior al de una vacante genérica de Data Science.\nSource gaps: La vacante solicita 3+ años de experiencia, bastante por debajo del seniority objetivo de 9+ años, por lo que existe riesgo de sobrecalificación o nivel/compensación menor al esperado.; El título es Machine Learning Engineer y no Senior/Lead, aunque el alcance incluye ownership end-to-end y responsabilidades de diseño de sistemas de fraude.; PySpark y liderazgo formal de equipo no aparecen como requisitos explícitos; Databricks sí figura como experiencia deseable.",
+      "vacancy_id": "vac-c3b310c0b6bbeb81"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-c3b310c0b6bbeb81"
+}
