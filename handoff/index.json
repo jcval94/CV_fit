@@ -1,44 +1,6 @@
 {
   "candidates": [
     {
-      "company": "Creai",
-      "contact_policy": "public_safe_only_in_repo",
-      "files": {
-        "cover_letter_proposed": "cover_letter_proposed.md",
-        "cv_proposed": "cv_proposed.json",
-        "cv_proposed_html": "cv_proposed.html",
-        "cv_proposed_markdown": "cv_proposed.md",
-        "evidence_snapshot": "evidence_snapshot.json",
-        "final_html": null,
-        "final_pdf": null,
-        "html_base": "html_base.html.j2",
-        "match_plan": "match_plan.json",
-        "prompt": "prompt.md",
-        "public_identity": "public_identity.yaml",
-        "review_context": "review_context.json",
-        "review_notes": null,
-        "vacancy": "vacancy.md",
-        "vacancy_json": "vacancy.json"
-      },
-      "links": {
-        "final_html": null,
-        "final_pdf": null,
-        "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/cv_proposed.html"
-      },
-      "pipeline_status": "COMPLETED_BELOW_TARGET",
-      "quality_kpi": 78,
-      "ready_to_send": false,
-      "repo_folder_url": "https://github.com/jcval94/CV_fit/tree/main/handoff/vac-b968fdbcca798458",
-      "role_title": "Senior Machine Learning Engineer",
-      "run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458",
-      "schema_version": 2,
-      "source_date": "2026-08-23",
-      "source_fit": 95.0,
-      "status": "pending_final_review",
-      "vacancy_id": "vac-b968fdbcca798458",
-      "vacancy_url": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer"
-    },
-    {
       "company": "Grupo Financiero Banorte",
       "contact_policy": "public_safe_only_in_repo",
       "files": {
@@ -235,10 +197,57 @@
       "status": "finalized",
       "vacancy_id": "vac-89b026f359c34a6e",
       "vacancy_url": "https://mx.linkedin.com/jobs/view/sr-data-scientist-at-grupo-modelo-s-a-de-c-v-4459877680"
+    },
+    {
+      "company": "Creai",
+      "contact_policy": "public_safe_only_in_repo",
+      "files": {
+        "cover_letter_proposed": "cover_letter_proposed.md",
+        "cv_proposed": "cv_proposed.json",
+        "cv_proposed_html": "cv_proposed.html",
+        "cv_proposed_markdown": "cv_proposed.md",
+        "evidence_snapshot": "evidence_snapshot.json",
+        "final_html": "final.html",
+        "final_pdf": "final.pdf",
+        "final_screenshot": "final.png",
+        "html_base": "html_base.html.j2",
+        "match_plan": "match_plan.json",
+        "prompt": "prompt.md",
+        "public_identity": "public_identity.yaml",
+        "review_context": "review_context.json",
+        "review_notes": null,
+        "vacancy": "vacancy.md",
+        "vacancy_json": "vacancy.json"
+      },
+      "final_render": {
+        "pdf_pages": 1,
+        "status": "PASS",
+        "warnings": []
+      },
+      "links": {
+        "final_html": null,
+        "final_pdf": null,
+        "html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/final.html",
+        "pdf": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/final.pdf",
+        "proposed_html": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/cv_proposed.html",
+        "screenshot": "https://raw.githubusercontent.com/jcval94/CV_fit/main/handoff/vac-b968fdbcca798458/final.png"
+      },
+      "pipeline_status": "COMPLETED_BELOW_TARGET",
+      "quality_kpi": 78,
+      "ready_to_send": false,
+      "repo_folder_url": "https://github.com/jcval94/CV_fit/tree/main/handoff/vac-b968fdbcca798458",
+      "role_title": "Senior Machine Learning Engineer",
+      "run_id": "auto-6890aaf2e9682ec8f34c74b9b9942731cec6a58c-vac-b968fdbcca798458",
+      "schema_version": 2,
+      "source_date": "2026-08-23",
+      "source_fit": 95.0,
+      "status": "finalized",
+      "vacancy_id": "vac-b968fdbcca798458",
+      "vacancy_url": "https://creai.na.teamtailor.com/jobs/686991-senior-machine-learning-engineer"
     }
   ],
-  "finalized_count": 4,
-  "pending_count": 1,
+  "finalized_count": 5,
+  "pending_count": 0,
   "repository": "jcval94/CV_fit",
   "schema_version": 2,
   "selection_policy": "pending first; then source_fit descending; then recency descending"
