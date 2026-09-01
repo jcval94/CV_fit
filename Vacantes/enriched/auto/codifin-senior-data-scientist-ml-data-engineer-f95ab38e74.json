@@ -1,0 +1,65 @@
+{
+  "jd_capture_mode": "official_source_jsonld_jobposting_auto",
+  "jd_retrieved_at": "2026-09-01T14:51:31.663616Z",
+  "jd_source_url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ml-data-engineer-at-codifin-4459270186",
+  "metadata": {
+    "criterio_temporal": "Preservación automática de JD oficial para generación CV",
+    "fecha_busqueda": "2026-09-01",
+    "total_vacantes_encontradas": 1
+  },
+  "vacantes": [
+    {
+      "categoria_empresa": "Otro",
+      "description": "<p><strong>¡Estamos buscando Senior Data Scientist (ML &amp; Data Engineer)!</strong></p><p><br></p><p>Si tienes experiencia sólida en Machine Learning, Data Engineering y desarrollo de soluciones de AI en producción, esta oportunidad puede ser para ti.</p><p><br></p><ul><li>Ubicación: CDMX – Polanco</li><li>Modalidad: Híbrida</li><li>Inglés conversacional avanzado – INDISPENSABLE</li></ul><p><br></p><p><strong>¿Qué buscamos?</strong></p><ul><li>Experiencia sólida en Python y Node.js</li><li>Desarrollo, entrenamiento, validación y deployment de modelos de Machine Learning</li><li>Experiencia con PyTorch, TensorFlow, scikit-learn, LangChain o similares</li><li>SQL avanzado, optimización de queries y grandes volúmenes de datos</li><li>Diseño y mantenimiento de ETLs y Data Pipelines</li><li>Experiencia con estadística, model validation y experimental design</li><li>Experiencia práctica con embeddings, vector-based systems e indexing/retrieval</li><li>Capacidad para llevar soluciones end-to-end, desde PoC hasta producción</li></ul><p><br></p><p><strong>Será un gran plus contar con experiencia en:</strong></p><p><br></p><p>LLMs, RAG, AI Agents, embeddings, dbt, Airflow, Kafka, Spark, real-time data/event streaming, geospatial data o producción de pipelines AI/ML.</p><p><br></p><p>Buscamos un perfil hands-on, con excelente capacidad de programación y experiencia trabajando con problemas complejos de datos, ML y AI. La posición participa en proyectos de recommendation engines, AI agents, real-time decision making y data pipelines.</p><p><br></p><p><strong>¿Te interesa o conoces a alguien que pueda hacer match? Envíame DM o comparte tu CV.</strong></p><p><br></p><p>#Hiring #DataScientist #SeniorDataScientist #MachineLearning #DataEngineering #Python #ArtificialIntelligence #GenAI #LLM #RAG #AIJobs #CDMX #Polanco #TechJobs</p>",
+      "empresa": "Codifin",
+      "fecha_publicacion": "Hace 10 horas",
+      "id_vacante": "codifin-4459270186",
+      "modalidad": "Híbrido",
+      "porcentaje_ajuste": 95,
+      "puesto": "Senior Data Scientist (ML & Data Engineer)",
+      "rango_salarial": "No especificado",
+      "razon_ajuste": {
+        "posibles_gaps": [
+          "Codifin opera como firma de tecnología/reclutamiento y no como compañía de producto prioritaria, por lo que se deprioriza frente a fintech, banca o Big Tech directas.",
+          "Node.js aparece junto a Python como requisito y podría requerir mayor profundidad de software engineering fuera del stack principal del perfil.",
+          "No existe un componente explícito de banca, fraude, riesgo o credit scoring en la descripción recuperada."
+        ],
+        "puntos_fuertes": [
+          "Rol senior hands-on en CDMX con responsabilidad sobre soluciones de Machine Learning y AI desde PoC hasta producción.",
+          "Alineación técnica especialmente alta: Python, SQL avanzado, Spark, modelos de ML, ETLs, data pipelines y diseño experimental.",
+          "Incluye GenAI aplicada mediante LLMs, RAG, AI Agents, embeddings, LangChain, vector-based systems e indexing/retrieval.",
+          "Valora Airflow, Kafka, real-time/event streaming y sistemas de decisión en tiempo real, reforzando el componente de arquitectura end-to-end.",
+          "El alcance combina Data Science, ML Engineering y Data Engineering, adecuado para un perfil senior con ownership técnico amplio."
+        ],
+        "resumen": "Es la mejor vacante genuinamente nueva y no procesada detectada hoy: combina modalidad híbrida en CDMX, Python/SQL, ML end-to-end, experimentación, Spark y GenAI/agentic AI. Se mantiene debajo de un match casi perfecto únicamente por el tipo de empresa y la ausencia de dominio financiero explícito."
+      },
+      "requirements": [
+        "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Spark",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "Machine Learning",
+        "Experimental Design",
+        "ETL",
+        "Data Pipelines",
+        "LLMs",
+        "RAG",
+        "AI Agents",
+        "LangChain",
+        "Embeddings",
+        "Vector Search",
+        "dbt",
+        "Airflow",
+        "Kafka",
+        "Real-time Decisioning"
+      ],
+      "ubicacion": "Polanco, Ciudad de México, México",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ml-data-engineer-at-codifin-4459270186"
+    }
+  ]
+}
