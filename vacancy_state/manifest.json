@@ -1,5 +1,5 @@
 {
-  "last_run_id": "edffec1881db57f499eff196cfd172e6c4f21dcc-noop",
+  "last_run_id": "f3c002ab46021434d327bdeb07a45da6dc2ff249-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -49,6 +49,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-3779c9b875b7032d"
+      ]
+    },
+    "Vacantes/enriched/auto/codifin-senior-data-scientist-ml-data-engineer-f95ab38e74.json": {
+      "source_hash": "b23b4bc387177acaa21e112b1d3a09548de5e3590787ef4b7653b5d19f0f1bae",
+      "state_file": "sources/Vacantes__enriched__auto__codifin-senior-data-scientist-ml-data-engineer-f95ab38--e3aac971520267ac.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-0b8d9e2486263c90"
       ]
     },
     "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json": {
@@ -355,6 +363,15 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-c3b310c0b6bbeb81"
+      ]
+    },
+    "Vacantes/vacantes_2026-09-01.json": {
+      "source_hash": "19ec24081d55501bfa01dcdeeeced8dbfefa4996561602672235213b36616d86",
+      "state_file": "sources/Vacantes__vacantes_2026-09-01.json--2309a6e0092e0188.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-0b8d9e2486263c90",
+        "vac-4085811308aea748"
       ]
     }
   }

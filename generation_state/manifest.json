@@ -231,6 +231,23 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "7a1cf21d67bf9313a159405b69e4c10f512925a8c0db922d3d5bf306b5f04f31"
     },
+    "vac-0b8d9e2486263c90": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************rGQA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}",
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "8c51d60a474690c8c57504c14cdff9446883f63f1d6051bc8872a6552b2b31e0",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-f3c002ab46021434d327bdeb07a45da6dc2ff249-vac-0b8d9e2486263c90",
+      "source_commit": "f3c002ab46021434d327bdeb07a45da6dc2ff249",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "88476972e9e7dc32a5ba9454ab26ef2eccb1791dbe416e07b0af808d03203cc8"
+    },
     "vac-12dc570424d531ae": {
       "attempt_estimated_cost_usd": 0.3947715,
       "attempt_known_cost_usd": 0.3947715,
@@ -534,6 +551,17 @@
       "source_commit": "fc97b77153f4aa49f78de0490c56a4cb17a0d869",
       "status": "SKIPPED_NOT_ELIGIBLE",
       "vacancy_content_hash": "ca7ecd78092d9a824ab534a8009edfa8ee66ef807c148c6b6eb4c21766ea96a5"
+    },
+    "vac-4085811308aea748": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "8d7455b48b202cfbfd35c65aa18a6efca2953f064dce86d994a59321c750bfb0",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-4085811308aea748 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "f3c002ab46021434d327bdeb07a45da6dc2ff249",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "05f1d4b815784136f344fdfa39384d259975416089083a1615a67c6ab52fc5b2"
     },
     "vac-4cd82869cadf198d": {
       "application_bundle_file": "application_bundle_report.json",

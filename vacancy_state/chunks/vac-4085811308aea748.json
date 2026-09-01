@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-4085811308aea748::core",
+      "chunk_type": "core",
+      "content_hash": "5b8b35b174aa7876909d862bc350aa39c6e71b74ad6d25181109fd2a8b8584e1",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-01.json"
+      ],
+      "text": "Role: Senior Data Scientist\nCompany: Golabs Tech\nCompany category: Otro\nLocation: México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-4085811308aea748"
+    },
+    {
+      "chunk_id": "vac-4085811308aea748::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "67e383e8f151012cb2b8d1c47a1233581a7a83720c30f709726df5fdadfb5a30",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-01.json"
+      ],
+      "text": "Technologies / capabilities: Python; Machine Learning; Generative AI; LLMs; Agentic AI; AI Agents; Optimization; Linear Programming; Mixed-Integer Programming; Heuristics; Production AI",
+      "vacancy_id": "vac-4085811308aea748"
+    },
+    {
+      "chunk_id": "vac-4085811308aea748::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "ecde6af151dc22496f2d24bbecdc055e5cab9491d4c3525e35eaa8e3c617a7df",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-01.json"
+      ],
+      "text": "Source fit score: 92/100\nSource fit summary: Buen match por modalidad 100% remota, Python, GenAI, agentes en producción y ownership de soluciones end-to-end. Se incluye como segunda opción por su fuerte ajuste técnico, aunque el contrato corto y el modelo de servicios reducen considerablemente su prioridad.\nSource strengths: Posición 100% remota para México con compensación en USD.; Rol hands-on orientado a diseñar, desarrollar, desplegar y mejorar continuamente soluciones de Data Science e IA productivas.; Exige Python y experiencia reciente con Generative AI, LLMs y agentic workflows, incluyendo agentes desplegados en producción.; Incluye optimización matemática mediante programación lineal, mixed-integer programming y heurísticas, ampliando el rango de problemas de decisión abordados.; El alcance exige traducir problemas de negocio en soluciones analíticas escalables y colaborar con equipos multifuncionales.\nSource gaps: Es un proyecto contractual inicial de tres meses, aunque existe posibilidad de extensión, lo que reduce estabilidad frente a una contratación permanente.; Golabs es una empresa de servicios tecnológicos y no una compañía de producto prioritaria.; El dominio requerido se concentra en CPG, ventas, finanzas o supply chain y no en banca, fraude o credit scoring.; PySpark y SQL no aparecen como requisitos explícitos en la publicación recuperada.",
+      "vacancy_id": "vac-4085811308aea748"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-4085811308aea748"
+}
