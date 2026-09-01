@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-01",
+    "total_vacantes_encontradas": 2,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "codifin-4459270186",
+      "puesto": "Senior Data Scientist (ML & Data Engineer)",
+      "empresa": "Codifin",
+      "categoria_empresa": "Otro",
+      "ubicacion": "Polanco, Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "Hace 10 horas",
+      "porcentaje_ajuste": 95,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol senior hands-on en CDMX con responsabilidad sobre soluciones de Machine Learning y AI desde PoC hasta producción.",
+          "Alineación técnica especialmente alta: Python, SQL avanzado, Spark, modelos de ML, ETLs, data pipelines y diseño experimental.",
+          "Incluye GenAI aplicada mediante LLMs, RAG, AI Agents, embeddings, LangChain, vector-based systems e indexing/retrieval.",
+          "Valora Airflow, Kafka, real-time/event streaming y sistemas de decisión en tiempo real, reforzando el componente de arquitectura end-to-end.",
+          "El alcance combina Data Science, ML Engineering y Data Engineering, adecuado para un perfil senior con ownership técnico amplio."
+        ],
+        "posibles_gaps": [
+          "Codifin opera como firma de tecnología/reclutamiento y no como compañía de producto prioritaria, por lo que se deprioriza frente a fintech, banca o Big Tech directas.",
+          "Node.js aparece junto a Python como requisito y podría requerir mayor profundidad de software engineering fuera del stack principal del perfil.",
+          "No existe un componente explícito de banca, fraude, riesgo o credit scoring en la descripción recuperada."
+        ],
+        "resumen": "Es la mejor vacante genuinamente nueva y no procesada detectada hoy: combina modalidad híbrida en CDMX, Python/SQL, ML end-to-end, experimentación, Spark y GenAI/agentic AI. Se mantiene debajo de un match casi perfecto únicamente por el tipo de empresa y la ausencia de dominio financiero explícito."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Spark",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "Machine Learning",
+        "Experimental Design",
+        "ETL",
+        "Data Pipelines",
+        "LLMs",
+        "RAG",
+        "AI Agents",
+        "LangChain",
+        "Embeddings",
+        "Vector Search",
+        "dbt",
+        "Airflow",
+        "Kafka",
+        "Real-time Decisioning"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-ml-data-engineer-at-codifin-4459270186"
+    },
+    {
+      "id_vacante": "golabs-4454096526",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Golabs Tech",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 2 días",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición 100% remota para México con compensación en USD.",
+          "Rol hands-on orientado a diseñar, desarrollar, desplegar y mejorar continuamente soluciones de Data Science e IA productivas.",
+          "Exige Python y experiencia reciente con Generative AI, LLMs y agentic workflows, incluyendo agentes desplegados en producción.",
+          "Incluye optimización matemática mediante programación lineal, mixed-integer programming y heurísticas, ampliando el rango de problemas de decisión abordados.",
+          "El alcance exige traducir problemas de negocio en soluciones analíticas escalables y colaborar con equipos multifuncionales."
+        ],
+        "posibles_gaps": [
+          "Es un proyecto contractual inicial de tres meses, aunque existe posibilidad de extensión, lo que reduce estabilidad frente a una contratación permanente.",
+          "Golabs es una empresa de servicios tecnológicos y no una compañía de producto prioritaria.",
+          "El dominio requerido se concentra en CPG, ventas, finanzas o supply chain y no en banca, fraude o credit scoring.",
+          "PySpark y SQL no aparecen como requisitos explícitos en la publicación recuperada."
+        ],
+        "resumen": "Buen match por modalidad 100% remota, Python, GenAI, agentes en producción y ownership de soluciones end-to-end. Se incluye como segunda opción por su fuerte ajuste técnico, aunque el contrato corto y el modelo de servicios reducen considerablemente su prioridad."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "Machine Learning",
+        "Generative AI",
+        "LLMs",
+        "Agentic AI",
+        "AI Agents",
+        "Optimization",
+        "Linear Programming",
+        "Mixed-Integer Programming",
+        "Heuristics",
+        "Production AI"
+      ],
+      "rango_salarial": "Competitivo en USD; monto no especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-golabs-tech-4454096526"
+    }
+  ]
+}
