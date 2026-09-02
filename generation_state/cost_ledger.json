@@ -3959,6 +3959,28 @@
       "telemetry_coverage_pct": 100.0,
       "unpriced_call_count": 0
     },
+    "auto-ddcd3db37ee4f90e13184436127270fe44e65917": {
+      "budget_usd": 2.0,
+      "bundle_result_counts": {},
+      "call_count": 0,
+      "call_level_known_spend_usd": 0,
+      "candidate_count": 0,
+      "downstream_known_spend_usd": 0,
+      "event_count": 0,
+      "event_ids": [],
+      "generation_attempts": 0,
+      "generation_budget_usd": 2.0,
+      "generation_known_spend_usd": 0,
+      "generation_result_counts": {},
+      "known_spend_usd": 0,
+      "ready_count": 0,
+      "recorded_at": "2026-09-02T18:11:43+00:00",
+      "run_id": "auto-ddcd3db37ee4f90e13184436127270fe44e65917",
+      "source_candidate_count": 0,
+      "source_commit": "ddcd3db37ee4f90e13184436127270fe44e65917",
+      "telemetry_coverage_pct": 100.0,
+      "unpriced_call_count": 0
+    },
     "auto-e4324df7d8123cdea2fa1fdf6be5fcf344038408": {
       "budget_usd": 2.0,
       "bundle_result_counts": {},
