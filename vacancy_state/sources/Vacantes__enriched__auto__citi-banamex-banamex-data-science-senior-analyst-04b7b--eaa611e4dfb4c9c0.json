@@ -1,0 +1,76 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Citi / Banamex",
+      "company_category": "Banca",
+      "content_hash": "772e9331af6163a795879eb636ca7e991ee18158c54edc96e8854e21ffd5fe83",
+      "description": "The Data Science Senior Analyst is a seasoned professional role. Applies in-depth disciplinary knowledge, contributing to the development of new techniques and the improvement of processes and work-flow for the area or function. Integrates subject matter and industry expertise within a defined area. Requires in-depth understanding of how areas collectively integrate within the sub-function as well as coordinate and contribute to the objectives of the function and overall business. Evaluates moderately complex and variable issues with substantial potential impact, where development of an approach/taking of an action involves weighing various alternatives and balancing potentially conflicting situations using multiple sources of information. Requires good analytical skills in order to filter, prioritize and validate potentially complex and dynamic material from multiple sources. Strong communication and diplomacy skills are required. Regularly assumes informal/formal leadership role within teams. Involved in coaching and training of new recruits. Significant impact in terms of project size, geography, etc. by influencing decisions through advice, counsel and/or facilitating services to others in area of specialization. Work and performance of all teams in the area are directly affected by the performance of the individual. Responsibilities: Conducts strategic data analysis, identifies insights and implications and make strategic recommendations, develops data displays that clearly communicate complex analysis. Mines and analyzes data from various banking platforms to drive optimization and improve data quality. Deliver analytics initiatives to address business problems with the ability to determine data required, assess time & effort required and establish a project plan. Consults with business clients to determine system functional specifications. Applies comprehensive understanding of how multiple areas collectively integrate to contribute towards achieving business objectives. Consults with users and clients to solve complex system issues/problems through in-depth evaluation of business processes, systems and industry standards; recommends solutions. Leads system change process from requirements through implementation; provides user and operational support of application to business users. Formulates and defines systems scope and objectives for complex projects through research and fact-finding combined with an understanding of applicable business systems and industry standards. Impacts the business directly by ensuring the quality of work provided by self and others; impacts own team and closely related work teams. Considers the business implications of the application of technology to the current business environment; identifies and communicates risks and impacts. Drives communication between business leaders and IT; exhibits sound and comprehensive communication and diplomacy skills to exchange complex information. Performs other duties and functions as assigned. Appropriately assess risk when business decisions are made, demonstrating particular consideration for the firm's reputation and safeguarding Citigroup, its clients and assets, by driving compliance with applicable laws, rules and regulations, adhering to Policy, applying sound ethical judgment regarding personal behavior, conduct and business practices, and escalating, managing and reporting control issues with transparency. Qualifications: 5-8 years experience in business and data analysis, process improvement and project management Ability to effectively use complex analytical, interpretive and problem solving techniques. Demonstrated interpersonal, verbal and written communication skills. Methodical attention to detail Experience using tools for statistical modeling of large data sets Education: Bachelor’s/University degree or equivalent experience This job description provides a high-level review of the types of work performed. Other job-related duties may be assigned as required. Experiencia como Data Scientist con manejo de solución de problemas con base en data (Data Driven) y uso de algoritmos de machine learning ------------------------------------------------------ Job Family Group: Technology ------------------------------------------------------ Job Family: Data Science ------------------------------------------------------ Time Type: Full time ------------------------------------------------------ Most Relevant Skills Please see the requirements listed above. ------------------------------------------------------ Other Relevant Skills For complementary skills, please see above and/or contact the recruiter. ------------------------------------------------------ Citi is an equal opportunity employer, and qualified candidates will receive consideration without regard to their race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or any other characteristic protected by law. If you are a person with a disability and need a reasonable accommodation to use our search tools and/or apply for a career opportunity review Accessibility at Citi . View Citi’s EEO Policy Statement and the Know Your Rights poster.",
+      "fit_gaps": [
+        "La descripción pública no explicita Python, PySpark o SQL como requisitos concretos.",
+        "El rol parece tener mayor peso en analytics, procesos y coordinación que en arquitectura avanzada de modelos o GenAI.",
+        "Solicita 5-8 años de experiencia, por debajo del seniority total del perfil."
+      ],
+      "fit_score": 94.0,
+      "fit_strengths": [
+        "Vacante publicada el 1 de septiembre de 2026 en banca, con modalidad híbrida en Ciudad de México.",
+        "Rol senior orientado a Data Science y análisis estratégico sobre plataformas bancarias, con impacto directo en decisiones y optimización de procesos.",
+        "Requiere experiencia como Data Scientist, resolución de problemas data-driven, machine learning y modelado estadístico sobre grandes conjuntos de datos.",
+        "Incluye liderazgo informal/formal, coaching de nuevos integrantes y coordinación entre negocio y tecnología.",
+        "La experiencia en banca, riesgo, cumplimiento y analítica avanzada es altamente transferible al contexto del puesto."
+      ],
+      "fit_summary": "Muy buen ajuste por dominio bancario, seniority, modalidad híbrida en CDMX, machine learning, modelado estadístico y liderazgo. Queda debajo de Aplazo porque la vacante es menos explícita en stack técnico, GenAI y ownership de ML productivo.",
+      "identity_key": "f681c22e0be1959b2f8452a839580d290fa0b8b2dedcf020a6f32cd67f446b6b",
+      "jd_fidelity": "full",
+      "jd_fidelity_reasons": [
+        "description_chars=5243",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "substantive employer-authored JD detail is preserved"
+      ],
+      "jd_fidelity_score": 60.0,
+      "jd_generation_eligible": true,
+      "language_confidence": 0.98,
+      "language_source": "vacancy_text",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-09-01",
+      "posted_date_raw": "2026-09-01",
+      "provenance": [
+        {
+          "source_commit": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "1b2817091ef70c9990906d2c084ec3703d4516613dd38ccf7e536653edd98180",
+          "source_native_id": "citi-banamex-26979431",
+          "source_path": "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json",
+          "source_search_date": "2026-09-02",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Banamex- Data Science Senior Analyst",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Data Science",
+        "Machine Learning",
+        "Statistical Modeling",
+        "Banking Analytics",
+        "Data Analysis",
+        "Data Quality",
+        "Risk Assessment",
+        "Project Leadership"
+      ],
+      "url": "https://jobs.citi.com/job/ciudad-de-mexico/banamex-data-science-senior-analyst/287/98220906000",
+      "vacancy_id": "vac-f681c22e0be1959b",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "1b2817091ef70c9990906d2c084ec3703d4516613dd38ccf7e536653edd98180",
+  "source_path": "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json",
+  "status": "valid"
+}

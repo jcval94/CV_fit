@@ -1,5 +1,5 @@
 {
-  "last_run_id": "f3c002ab46021434d327bdeb07a45da6dc2ff249-noop",
+  "last_run_id": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -49,6 +49,22 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-3779c9b875b7032d"
+      ]
+    },
+    "Vacantes/enriched/auto/aplazo-senior-data-scientist-520a158022.json": {
+      "source_hash": "a607f5963d86742775c4bcda0d43dc3ee12ab4cd14344260f0013303122d99a4",
+      "state_file": "sources/Vacantes__enriched__auto__aplazo-senior-data-scientist-520a158022.json--6480fd28dc2e4794.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-ec60c81f6e6eed7e"
+      ]
+    },
+    "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json": {
+      "source_hash": "1b2817091ef70c9990906d2c084ec3703d4516613dd38ccf7e536653edd98180",
+      "state_file": "sources/Vacantes__enriched__auto__citi-banamex-banamex-data-science-senior-analyst-04b7b--eaa611e4dfb4c9c0.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-f681c22e0be1959b"
       ]
     },
     "Vacantes/enriched/auto/codifin-senior-data-scientist-ml-data-engineer-f95ab38e74.json": {
@@ -372,6 +388,15 @@
       "vacancy_ids": [
         "vac-0b8d9e2486263c90",
         "vac-4085811308aea748"
+      ]
+    },
+    "Vacantes/vacantes_2026-09-02.json": {
+      "source_hash": "8255e37f9fd9e8eb4e8745228a0e36156f7f0e7d3fcf00a60b84c419f1e49be5",
+      "state_file": "sources/Vacantes__vacantes_2026-09-02.json--c53111a24a92eea5.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-ec60c81f6e6eed7e",
+        "vac-f681c22e0be1959b"
       ]
     }
   }

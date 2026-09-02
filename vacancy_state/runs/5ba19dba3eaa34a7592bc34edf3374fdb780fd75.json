@@ -3,7 +3,11 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/aplazo-senior-data-scientist-520a158022.json",
+      "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json",
+      "Vacantes/vacantes_2026-09-02.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -12,8 +16,6 @@
       "GPTW/vacantes_2026-08-23.json",
       "GPTW/vacantes_2026-08-26.json",
       "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
-      "Vacantes/enriched/auto/aplazo-senior-data-scientist-520a158022.json",
-      "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json",
       "Vacantes/enriched/auto/codifin-senior-data-scientist-ml-data-engineer-f95ab38e74.json",
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
       "Vacantes/enriched/auto/crncy-group-credit-decision-scientist-b4ea95d9e2.json",
@@ -51,29 +53,31 @@
       "Vacantes/vacantes_2026-08-29.json",
       "Vacantes/vacantes_2026-08-30.json",
       "Vacantes/vacantes_2026-08-31.json",
-      "Vacantes/vacantes_2026-09-01.json",
-      "Vacantes/vacantes_2026-09-02.json"
+      "Vacantes/vacantes_2026-09-01.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75-noop",
+  "reindexed_vacancy_ids": [
+    "vac-ec60c81f6e6eed7e",
+    "vac-f681c22e0be1959b"
+  ],
+  "run_id": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75",
   "schema_version": 1,
   "source_commit": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75",
   "source_counts": {
     "deleted": 0,
     "discovered": 47,
     "modified": 0,
-    "new": 0,
+    "new": 3,
     "quarantined": 0,
-    "unchanged": 47
+    "unchanged": 44
   },
   "status": "success",
   "vacancy_counts": {
     "active": 36,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 2,
+    "reindexed": 2,
     "semantic_unchanged": 0
   },
   "validation_errors": {}
