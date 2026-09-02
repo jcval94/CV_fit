@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-02",
+    "total_vacantes_encontradas": 2,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "aplazo-senior-data-scientist-20260902",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Aplazo",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 7 días",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Fintech mexicana BNPL con trabajo directo en Credit Risk, underwriting, fraude, collections, Growth e iniciativas de AI.",
+          "Ownership end-to-end de proyectos: datos, modelado, deployment y monitoreo post-lanzamiento en producción.",
+          "Requiere Python, SQL y frameworks estándar de machine learning, con experiencia explícita llevando modelos más allá del notebook.",
+          "Hands-on con LLMs y Generative AI como parte del flujo de trabajo habitual y cultura AI-first.",
+          "Valora experiencia en experimentación y A/B testing a escala, MLOps, feature pipelines, model monitoring y deployment.",
+          "La experiencia previa en banca, riesgo, fraude y modelos de decisión crediticia se transfiere directamente al dominio central del puesto."
+        ],
+        "posibles_gaps": [
+          "La vacante solicita 4-8 años, ligeramente por debajo de los 9+ años del perfil, aunque el alcance y autonomía son claramente senior.",
+          "PySpark no aparece como requisito explícito.",
+          "El rol es Senior IC; el liderazgo formal de personas no es el núcleo, aunque colabora con Lead y Staff Data Scientists y ofrece trayectoria hacia esos niveles."
+        ],
+        "resumen": "Match prácticamente ideal: remoto en México, fintech, crédito y fraude, Python/SQL, ML productivo end-to-end, A/B testing, MLOps y GenAI. Es una oportunidad de prioridad máxima."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "Credit Risk",
+        "Fraud Modeling",
+        "Underwriting",
+        "A/B Testing",
+        "LLMs",
+        "Generative AI",
+        "MLOps",
+        "Feature Pipelines",
+        "Model Deployment",
+        "Model Monitoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://builtin.com/job/senior-data-scientist/10461128"
+    },
+    {
+      "id_vacante": "citi-banamex-26979431",
+      "puesto": "Banamex- Data Science Senior Analyst",
+      "empresa": "Citi / Banamex",
+      "categoria_empresa": "Banca",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-09-01",
+      "porcentaje_ajuste": 94,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Vacante publicada el 1 de septiembre de 2026 en banca, con modalidad híbrida en Ciudad de México.",
+          "Rol senior orientado a Data Science y análisis estratégico sobre plataformas bancarias, con impacto directo en decisiones y optimización de procesos.",
+          "Requiere experiencia como Data Scientist, resolución de problemas data-driven, machine learning y modelado estadístico sobre grandes conjuntos de datos.",
+          "Incluye liderazgo informal/formal, coaching de nuevos integrantes y coordinación entre negocio y tecnología.",
+          "La experiencia en banca, riesgo, cumplimiento y analítica avanzada es altamente transferible al contexto del puesto."
+        ],
+        "posibles_gaps": [
+          "La descripción pública no explicita Python, PySpark o SQL como requisitos concretos.",
+          "El rol parece tener mayor peso en analytics, procesos y coordinación que en arquitectura avanzada de modelos o GenAI.",
+          "Solicita 5-8 años de experiencia, por debajo del seniority total del perfil."
+        ],
+        "resumen": "Muy buen ajuste por dominio bancario, seniority, modalidad híbrida en CDMX, machine learning, modelado estadístico y liderazgo. Queda debajo de Aplazo porque la vacante es menos explícita en stack técnico, GenAI y ownership de ML productivo."
+      },
+      "stack_clave_detectado": [
+        "Data Science",
+        "Machine Learning",
+        "Statistical Modeling",
+        "Banking Analytics",
+        "Data Analysis",
+        "Data Quality",
+        "Risk Assessment",
+        "Project Leadership"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.citi.com/job/ciudad-de-mexico/banamex-data-science-senior-analyst/287/98220906000"
+    }
+  ]
+}
