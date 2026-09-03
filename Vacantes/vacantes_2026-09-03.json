@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-03",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "konfio-4460638295",
+      "puesto": "Data Scientist Specialist",
+      "empresa": "Konfío",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Híbrido",
+      "fecha_publicacion": "2026-09-03",
+      "porcentaje_ajuste": 98,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Fintech mexicana enfocada en financiamiento, tarjeta de crédito y pagos para PyMEs, con alta transferencia de experiencia previa en banca y servicios financieros.",
+          "El rol desarrolla e implementa soluciones avanzadas de Data Science combinando Generative AI con técnicas tradicionales de Machine Learning.",
+          "Requiere más de 5 años de experiencia en análisis de datos y Machine Learning sobre bases masivas, además de Big Data, Deep Learning, análisis predictivo y CI/CD.",
+          "Incluye diseño, desarrollo y despliegue de soluciones de GenAI con RAG, bases de datos vectoriales, LangChain y Hugging Face.",
+          "Existe responsabilidad de optimizar modelos existentes, colaborar transversalmente y guiar a perfiles junior, lo que encaja con liderazgo técnico y mentoría.",
+          "La formación objetivo incluye explícitamente Actuaría y disciplinas cuantitativas afines."
+        ],
+        "posibles_gaps": [
+          "La vacante pide +5 años y LinkedIn la clasifica como nivel intermedio, por debajo del seniority total del perfil; conviene validar nivel interno, alcance y compensación desde el primer contacto.",
+          "Python, SQL y PySpark no aparecen explicitados en el texto público recuperado, aunque el stack de ML incluye TensorFlow, Keras, PyTorch y scikit-learn.",
+          "El rol parece más centrado en GenAI y ML aplicado que en credit scoring o fraude como dominio principal."
+        ],
+        "resumen": "Oportunidad de prioridad muy alta por empresa objetivo, dominio fintech, GenAI productiva, ML sobre datos masivos, liderazgo técnico y formación cuantitativa. El principal punto a validar es el nivel real del puesto frente al seniority del candidato."
+      },
+      "stack_clave_detectado": [
+        "Machine Learning",
+        "Generative AI",
+        "Deep Learning",
+        "Big Data",
+        "RAG",
+        "Vector Databases",
+        "LangChain",
+        "Hugging Face",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Scikit-learn",
+        "GitLab CI/CD",
+        "OCR",
+        "Predictive Analytics"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/data-scientist-specialist-at-konf%C3%ADo-4460638295"
+    }
+  ]
+}
