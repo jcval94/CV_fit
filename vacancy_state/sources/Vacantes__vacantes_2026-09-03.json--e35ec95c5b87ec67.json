@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Konfío",
+      "company_category": "Fintech",
+      "content_hash": "405fadd3105ffe1f06032030cedc3b61f228d23f5c8d90a1ab33e358d2507a7f",
+      "description": null,
+      "fit_gaps": [
+        "La vacante pide +5 años y LinkedIn la clasifica como nivel intermedio, por debajo del seniority total del perfil; conviene validar nivel interno, alcance y compensación desde el primer contacto.",
+        "Python, SQL y PySpark no aparecen explicitados en el texto público recuperado, aunque el stack de ML incluye TensorFlow, Keras, PyTorch y scikit-learn.",
+        "El rol parece más centrado en GenAI y ML aplicado que en credit scoring o fraude como dominio principal."
+      ],
+      "fit_score": 98.0,
+      "fit_strengths": [
+        "Fintech mexicana enfocada en financiamiento, tarjeta de crédito y pagos para PyMEs, con alta transferencia de experiencia previa en banca y servicios financieros.",
+        "El rol desarrolla e implementa soluciones avanzadas de Data Science combinando Generative AI con técnicas tradicionales de Machine Learning.",
+        "Requiere más de 5 años de experiencia en análisis de datos y Machine Learning sobre bases masivas, además de Big Data, Deep Learning, análisis predictivo y CI/CD.",
+        "Incluye diseño, desarrollo y despliegue de soluciones de GenAI con RAG, bases de datos vectoriales, LangChain y Hugging Face.",
+        "Existe responsabilidad de optimizar modelos existentes, colaborar transversalmente y guiar a perfiles junior, lo que encaja con liderazgo técnico y mentoría.",
+        "La formación objetivo incluye explícitamente Actuaría y disciplinas cuantitativas afines."
+      ],
+      "fit_summary": "Oportunidad de prioridad muy alta por empresa objetivo, dominio fintech, GenAI productiva, ML sobre datos masivos, liderazgo técnico y formación cuantitativa. El principal punto a validar es el nivel real del puesto frente al seniority del candidato.",
+      "identity_key": "e678a6f22c3d2512644ccebe9ce4db10734f87ae97f3bb7a69d17a1aab0792f0",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-09-03",
+      "posted_date_raw": "2026-09-03",
+      "provenance": [
+        {
+          "source_commit": "9ad65d1dbc20f6efa42926465bed30738852a676",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "f90a0db55d4f72aed139f469ba4511053a52640a45ecfcdb51c60f267692ab3b",
+          "source_native_id": "konfio-4460638295",
+          "source_path": "Vacantes/vacantes_2026-09-03.json",
+          "source_search_date": "2026-09-03",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Data Scientist Specialist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Machine Learning",
+        "Generative AI",
+        "Deep Learning",
+        "Big Data",
+        "RAG",
+        "Vector Databases",
+        "LangChain",
+        "Hugging Face",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Scikit-learn",
+        "GitLab CI/CD",
+        "OCR",
+        "Predictive Analytics"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/data-scientist-specialist-at-konf%C3%ADo-4460638295",
+      "vacancy_id": "vac-e678a6f22c3d2512",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "f90a0db55d4f72aed139f469ba4511053a52640a45ecfcdb51c60f267692ab3b",
+  "source_path": "Vacantes/vacantes_2026-09-03.json",
+  "status": "valid"
+}

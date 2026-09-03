@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-e678a6f22c3d2512::core",
+      "chunk_type": "core",
+      "content_hash": "7edfa2cd248ce370cc164939179edf0f8149e80019d4c5192043c6c2a4ff1dc2",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-03.json"
+      ],
+      "text": "Role: Data Scientist Specialist\nCompany: Konfío\nCompany category: Fintech\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-e678a6f22c3d2512"
+    },
+    {
+      "chunk_id": "vac-e678a6f22c3d2512::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "91aa48395b3cf5b22f8b14742db2def4efc0fbd4bba3dc90de6684e4c6d6521c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-03.json"
+      ],
+      "text": "Technologies / capabilities: Machine Learning; Generative AI; Deep Learning; Big Data; RAG; Vector Databases; LangChain; Hugging Face; TensorFlow; Keras; PyTorch; Scikit-learn; GitLab CI/CD; OCR; Predictive Analytics",
+      "vacancy_id": "vac-e678a6f22c3d2512"
+    },
+    {
+      "chunk_id": "vac-e678a6f22c3d2512::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "2747ddfae5871eeba75e2962ffa643500b66c278fcc4a662c7f47bcc7696a46b",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-03.json"
+      ],
+      "text": "Source fit score: 98/100\nSource fit summary: Oportunidad de prioridad muy alta por empresa objetivo, dominio fintech, GenAI productiva, ML sobre datos masivos, liderazgo técnico y formación cuantitativa. El principal punto a validar es el nivel real del puesto frente al seniority del candidato.\nSource strengths: Fintech mexicana enfocada en financiamiento, tarjeta de crédito y pagos para PyMEs, con alta transferencia de experiencia previa en banca y servicios financieros.; El rol desarrolla e implementa soluciones avanzadas de Data Science combinando Generative AI con técnicas tradicionales de Machine Learning.; Requiere más de 5 años de experiencia en análisis de datos y Machine Learning sobre bases masivas, además de Big Data, Deep Learning, análisis predictivo y CI/CD.; Incluye diseño, desarrollo y despliegue de soluciones de GenAI con RAG, bases de datos vectoriales, LangChain y Hugging Face.; Existe responsabilidad de optimizar modelos existentes, colaborar transversalmente y guiar a perfiles junior, lo que encaja con liderazgo técnico y mentoría.; La formación objetivo incluye explícitamente Actuaría y disciplinas cuantitativas afines.\nSource gaps: La vacante pide +5 años y LinkedIn la clasifica como nivel intermedio, por debajo del seniority total del perfil; conviene validar nivel interno, alcance y compensación desde el primer contacto.; Python, SQL y PySpark no aparecen explicitados en el texto público recuperado, aunque el stack de ML incluye TensorFlow, Keras, PyTorch y scikit-learn.; El rol parece más centrado en GenAI y ML aplicado que en credit scoring o fraude como dominio principal.",
+      "vacancy_id": "vac-e678a6f22c3d2512"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-e678a6f22c3d2512"
+}

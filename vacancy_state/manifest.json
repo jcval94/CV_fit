@@ -1,5 +1,5 @@
 {
-  "last_run_id": "04b8f17e6bd618272031151d07ffb0e65c602e1e-noop",
+  "last_run_id": "9ad65d1dbc20f6efa42926465bed30738852a676-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -397,6 +397,14 @@
       "vacancy_ids": [
         "vac-ec60c81f6e6eed7e",
         "vac-f681c22e0be1959b"
+      ]
+    },
+    "Vacantes/vacantes_2026-09-03.json": {
+      "source_hash": "f90a0db55d4f72aed139f469ba4511053a52640a45ecfcdb51c60f267692ab3b",
+      "state_file": "sources/Vacantes__vacantes_2026-09-03.json--e35ec95c5b87ec67.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-e678a6f22c3d2512"
       ]
     }
   }
