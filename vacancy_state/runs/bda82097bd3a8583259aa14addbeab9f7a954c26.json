@@ -3,7 +3,9 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/vacantes_2026-09-06.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -55,22 +57,21 @@
       "Vacantes/vacantes_2026-09-02.json",
       "Vacantes/vacantes_2026-09-03.json",
       "Vacantes/vacantes_2026-09-04.json",
-      "Vacantes/vacantes_2026-09-05.json",
-      "Vacantes/vacantes_2026-09-06.json"
+      "Vacantes/vacantes_2026-09-05.json"
     ]
   },
   "pipeline_version": 5,
   "reindexed_vacancy_ids": [],
-  "run_id": "bda82097bd3a8583259aa14addbeab9f7a954c26-noop",
+  "run_id": "bda82097bd3a8583259aa14addbeab9f7a954c26",
   "schema_version": 1,
   "source_commit": "bda82097bd3a8583259aa14addbeab9f7a954c26",
   "source_counts": {
     "deleted": 0,
     "discovered": 51,
     "modified": 0,
-    "new": 0,
+    "new": 1,
     "quarantined": 0,
-    "unchanged": 51
+    "unchanged": 50
   },
   "status": "success",
   "vacancy_counts": {
