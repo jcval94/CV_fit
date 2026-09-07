@@ -3,7 +3,9 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -32,7 +34,6 @@
       "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json",
       "Vacantes/enriched/auto/pfizer-data-science-manager-6b0826f58d.json",
       "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json",
-      "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json",
       "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
       "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
@@ -63,24 +64,26 @@
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c-noop",
+  "reindexed_vacancy_ids": [
+    "vac-1816ac379c3f1f5c"
+  ],
+  "run_id": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c",
   "schema_version": 1,
   "source_commit": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c",
   "source_counts": {
     "deleted": 0,
     "discovered": 54,
     "modified": 0,
-    "new": 0,
+    "new": 1,
     "quarantined": 0,
-    "unchanged": 54
+    "unchanged": 53
   },
   "status": "success",
   "vacancy_counts": {
     "active": 40,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

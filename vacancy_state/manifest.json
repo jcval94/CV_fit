@@ -1,5 +1,5 @@
 {
-  "last_run_id": "40842a592a9de0fb18e3c6a0b42ae5af00895791-noop",
+  "last_run_id": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -209,6 +209,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-4d221178a483222a"
+      ]
+    },
+    "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json": {
+      "source_hash": "f4124a7aa57f427d8e7c77ffc6bb5b7220aac821bab78ca9e148f096d2d69978",
+      "state_file": "sources/Vacantes__enriched__auto__santander-m-xico-gte-estrateg-decisi-credit-aut-428276--d9d372d757271fa2.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-1816ac379c3f1f5c"
       ]
     },
     "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json": {

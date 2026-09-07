@@ -1,10 +1,10 @@
 {
-  "application_language": "und",
+  "application_language": "es",
   "city": "Corporativo Santa Fe, Ciudad de México, México",
   "company": "Santander México",
   "company_category": "Banca",
-  "content_hash": "ddf3ebb8db37a7409ec325b1846cff34fee0f49fb6aeae87dd19d6c43798041c",
-  "description": null,
+  "content_hash": "a89ab5cb4bf2f10957abe8f1429735808c976ef1034e7a5914aad33a06b376b5",
+  "description": "Gte Estrateg Decisi Credit Aut Country: Messico ES EL MOMENTO Santander (www.santander.com) está evolucionando de ser una marca global de alto impacto a una organización impulsada por la tecnología, y las personas están en el centro de este camino. Juntos, estamos liderando una transformación centrada en el cliente que valora el pensamiento disruptivo, la valentía de desafiar lo posible y la capacidad de innovar. Esto es más que un cambio estratégico: es una oportunidad para crecer, aprender y generar un impacto real. Nuestra misión es contribuir a que más personas y empresas prosperen. Adoptamos una sólida cultura de riesgos y esperamos que todos nuestros equipos asuman un enfoque proactivo y responsable en la gestión del riesgo. Somos Banco Santander México, institución financiera líder que, a través de más de 160 años de reinvención, ha llegado a ser una organización sin fronteras con presencia en más de 40 países, 95 nacionalidades y equipos multiculturales que comparten 4 idiomas. EL IMPACTO QUE GENERARÁS Estamos buscando un/a GTE. ESTRATEGIAS DECISION CRED AUTO con base en Corporativo Santa Fe, CDMX. Estamos redefiniendo nuestra forma de trabajar a través de la innovación, la tecnología de última generación, la colaboración y la libertad de explorar nuevas ideas. En este puesto, tus principales responsabilidades incluirán: 1. Aplicar técnicas de Inteligencia Artificial, Machine Learning y analítica avanzada para desarrollar modelos predictivos que fortalezcan las estrategias de admisión, cobranza, campañas de clientes preaprobados, estimación de parámetros de riesgo, propensión y comportamiento del cliente, promoviendo una toma de decisiones basada en datos (Data-Driven Decision Making). 2. Diseñar, implementar y optimizar las estrategias de decisión para las etapas de originación y administración del portafolio de Crédito Automotriz, asegurando su correcta ejecución, monitoreo continuo y alineación con los objetivos de riesgo, rentabilidad y crecimiento del negocio. 3. Desarrollar modelos de monitoreo automatizados (dashboards e indicadores) que permitan evaluar el desempeño del portafolio en tiempo real, identificando desviaciones, oportunidades de mejora y generando información estratégica para la toma de decisiones de la Dirección mediante analítica avanzada. 4. Liderar, en conjunto con el área de Metodología, el diseño, desarrollo, calibración y seguimiento de modelos analíticos de Credit Scoring, estrategias de decisión, Risk-Based Pricing y modelos predictivos, incorporando técnicas de Inteligencia Artificial y Machine Learning para optimizar la administración del riesgo y maximizar la rentabilidad del portafolio. 5. Diseñar y evolucionar las estrategias de decisión asociadas a nuevos modelos de riesgo, garantizando el cumplimiento de los indicadores clave de desempeño (KPIs), así como una adecuada implementación en los procesos de originación y gestión del crédito. 6. Definir y proponer mejoras a las políticas de Crédito Automotriz, sustentadas en el análisis del comportamiento del portafolio, tendencias del mercado, indicadores de riesgo y modelos analíticos, con el objetivo de optimizar los niveles de aprobación, formalización, morosidad y rentabilidad. 7. Coordinar la definición y seguimiento de la Planeación Estratégica Comercial (PEC), facilitando la alineación de prioridades, iniciativas y objetivos con las estrategias del negocio y del Banco. LO QUE APORTARÁS AL EQUIPO Nuestra gente es nuestra mayor fortaleza. Cada persona contribuye con perspectivas únicas que nos hacen más fuertes como equipo y como organización. Valoramos quiénes son y potenciamos lo que aportan. Los siguientes requisitos representan los conocimientos, habilidades y competencias esenciales para este puesto. Experiencia profesional Experiencia minima de 4 años como Data Analytics. (Obligatorio) Educación Licenciatura en Actuaría, Matemáticas, Economía, Finanzas, Ingeniería Industrial (Obligatorio) Habilidades técnicas Conocimiento en bases de datos (Obligatorio). Tecnicas de Machine Learning, SQL, SAS, Python, Power BI. (Obligatorio) Conocimiento y manejo de Office intermedio avanzado (Obligatorio). Inglés Intermedio (deseable). Habilidades interpersonales Pensamiento analítico y estratégico, servicio al cliente, atención al detalle, organización, sentido de urgencia, enfoque a resultados, comunicación asertiva, solución a problemas, trabajo en equipo, proactividad, etc. VALORAMOS TU IMPACTO Tu contribución importa, y la reconocemos. En Santander puedes esperar un paquete retributivo justo y competitivo que refleje tu impacto y el valor que entregarás. Toma un momento para entender a lo que nos referimos: Contratación directa con Banco Santander. Esquema de contratación permanente. Prestaciones de Ley y superiores. Beneficios exclusivos de Banco Santander Estamos aquí para mantener tu motivación, ayudarte a alcanzar tus metas y celebrar tus logros en cada paso del camino. CUMPLIMIENTO LOCAL Santander se enorgullece de ser una organización que ofrece igualdad de oportunidades sin importar edad, género, discapacidad, estado civil, raza, religión u orientación sexual. Estamos comprometidos en ofrecer un proceso de selección inclusivo y accesible para todas las personas. ¿Y AHORA QUÉ? Si todo lo que acabas de leer encaja contigo, aplica y únete a nuestro equipo. ¿Listo/a para dar el siguiente paso? The Santander Effect Il nostro lavoro coinvolge 140 milioni di persone ogni giorno. Come? Innovando sempre, condividendo le nostre esperienze, mettendo sempre in discussione il nostro modo di fare le cose e adattandoci alle nuove sfide. Intanto, continuiamo a reinventarci per essere sempre al passo in questa nuova era digitale; scoprirai che con noi anche la tua più piccola azione avrà un impatto enorme. Questo è The Santander Effect.",
   "fit_gaps": [
     "El requisito mínimo de experiencia es 4 años, bastante menor al seniority de 9+ años del perfil, por lo que conviene validar nivel, banda y alcance real.",
     "PySpark y GenAI no aparecen como requisitos explícitos.",
@@ -20,21 +20,31 @@
   ],
   "fit_summary": "Match excepcional para combinar experiencia bancaria, credit scoring, riesgo, ML, Python/SQL y liderazgo. Es especialmente atractiva por el dominio de decisión crediticia y la ubicación en Santa Fe con modalidad híbrida reportada.",
   "identity_key": "1816ac379c3f1f5c6f136874da4e09bf908e04048dacbc1142fc9c03280170a9",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=5823",
     "substantive_requirements=0",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.0,
-  "language_source": "undetermined",
+  "jd_fidelity_score": 60.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Corporativo Santa Fe, Ciudad de México, México",
   "posted_date": null,
   "posted_date_raw": "Hace 6 días",
   "provenance": [
+    {
+      "source_commit": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "f4124a7aa57f427d8e7c77ffc6bb5b7220aac821bab78ca9e148f096d2d69978",
+      "source_native_id": "santander-Req1610092",
+      "source_path": "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json",
+      "source_search_date": "2026-09-07",
+      "source_updated_at": null
+    },
     {
       "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
       "source_entry_index": 1,
