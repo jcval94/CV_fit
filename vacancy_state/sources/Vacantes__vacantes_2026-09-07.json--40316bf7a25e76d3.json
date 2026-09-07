@@ -1,0 +1,217 @@
+{
+  "records": [
+    {
+      "application_language": "und",
+      "city": "Cuautitlán Izcalli, Estado de México, México",
+      "company": "Scotiabank",
+      "company_category": "Banca",
+      "content_hash": "f3ad1b515362440840abb3a32f0427dd1ffe859b18d93fcf8af9fec4c2959b44",
+      "description": null,
+      "fit_gaps": [
+        "La publicación no menciona PySpark, GenAI ni A/B testing como componentes del rol.",
+        "El enfoque parece combinar Data Science con estrategia operativa de fraude y reglas, no exclusivamente modelado ML avanzado.",
+        "No se confirmó modalidad remota o híbrida; la publicación está asociada a Cuautitlán Izcalli."
+      ],
+      "fit_score": 99.0,
+      "fit_strengths": [
+        "Ajuste de dominio excepcional: el propósito del puesto es analizar transacciones de fraude y desarrollar acciones preventivas para tarjetas de crédito, débito y banca electrónica en México y otros mercados.",
+        "Incluye creación y evaluación de reglas antifraude, análisis costo-beneficio, recalibración de estrategias y optimización del balance entre captación de fraude y capacidad operativa.",
+        "Responsabilidad explícita de liderazgo sobre algoritmos de detección, data warehouse de fraude y gestión del equipo que atiende patrones de fraude.",
+        "Requiere Python y SQL, además de experiencia programando reglas para detección de fraude.",
+        "El nivel Subdirector capitaliza experiencia en banca, riesgo, fraude, liderazgo técnico y coordinación con Producto, Operaciones, Investigación, marcas y reguladores."
+      ],
+      "fit_summary": "Es la vacante con mayor ajuste de esta corrida por dominio: banca, prevención de fraude, Python/SQL, algoritmos de detección, estrategia, liderazgo y seniority. Aunque pierde puntos en GenAI/PySpark y modalidad, el encaje funcional es extraordinariamente directo.",
+      "identity_key": "fda43fe81d1d93f8bbb67e68e1fe695d1823ca35ec93c99f73c36021b3e49ecb",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.0,
+      "language_source": "undetermined",
+      "location_raw": "Cuautitlán Izcalli, Estado de México, México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 5 días",
+      "provenance": [
+        {
+          "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+          "source_native_id": "scotiabank-254020",
+          "source_path": "Vacantes/vacantes_2026-09-07.json",
+          "source_search_date": "2026-09-07",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Subdir Data Science",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Fraud Detection",
+        "Fraud Rules",
+        "Risk Analytics",
+        "Data Warehouse",
+        "Detection Algorithms",
+        "Cost-Benefit Analysis",
+        "Portfolio Monitoring",
+        "Team Leadership"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/subdir-data-science-at-scotiabank-4459591506",
+      "vacancy_id": "vac-fda43fe81d1d93f8",
+      "work_model": "On-site"
+    },
+    {
+      "application_language": "und",
+      "city": "Corporativo Santa Fe, Ciudad de México, México",
+      "company": "Santander México",
+      "company_category": "Banca",
+      "content_hash": "d13e2f51333300a63f13d587024e2e1108500ffa04ec46bba2ff0ef879e8c53a",
+      "description": null,
+      "fit_gaps": [
+        "El requisito mínimo de experiencia es 4 años, bastante menor al seniority de 9+ años del perfil, por lo que conviene validar nivel, banda y alcance real.",
+        "PySpark y GenAI no aparecen como requisitos explícitos.",
+        "El título es de Gerencia de Estrategias de Decisión y no Data Scientist, aunque las responsabilidades son altamente compatibles con Decision Science y Credit Risk."
+      ],
+      "fit_score": 98.0,
+      "fit_strengths": [
+        "Alineación directa con riesgo de crédito: diseña y optimiza estrategias de decisión para originación y administración del portafolio de Crédito Automotriz.",
+        "Aplica Inteligencia Artificial, Machine Learning y analítica avanzada a admisión, cobranza, clientes preaprobados, parámetros de riesgo, propensión y comportamiento.",
+        "Incluye liderazgo sobre modelos de Credit Scoring y Risk-Based Pricing, además de monitoreo de portafolio y definición de políticas de crédito.",
+        "Requiere SQL, Python, SAS, técnicas de Machine Learning y bases de datos.",
+        "La formación objetivo incluye Actuaría y el puesto está contratado directamente por Santander con esquema permanente."
+      ],
+      "fit_summary": "Match excepcional para combinar experiencia bancaria, credit scoring, riesgo, ML, Python/SQL y liderazgo. Es especialmente atractiva por el dominio de decisión crediticia y la ubicación en Santa Fe con modalidad híbrida reportada.",
+      "identity_key": "1816ac379c3f1f5c6f136874da4e09bf908e04048dacbc1142fc9c03280170a9",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.0,
+      "language_source": "undetermined",
+      "location_raw": "Corporativo Santa Fe, Ciudad de México, México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 6 días",
+      "provenance": [
+        {
+          "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+          "source_native_id": "santander-Req1610092",
+          "source_path": "Vacantes/vacantes_2026-09-07.json",
+          "source_search_date": "2026-09-07",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Gte Estrateg Decisi Credit Aut",
+      "salary": "MXN 900,000 - 1,200,000 anuales (estimación publicada por fuente secundaria; no confirmado por Santander)",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "SAS",
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Credit Scoring",
+        "Risk-Based Pricing",
+        "Credit Risk",
+        "Portfolio Analytics",
+        "Power BI",
+        "Decision Strategies"
+      ],
+      "url": "https://santander.wd3.myworkdayjobs.com/it-IT/SantanderCareers/job/Gte-Estrateg-Decisi-Credit-Aut_Req1610092",
+      "vacancy_id": "vac-1816ac379c3f1f5c",
+      "work_model": "Hybrid"
+    },
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Banamex",
+      "company_category": "Banca",
+      "content_hash": "24a4b94a0d9f9cbdb29140d6b10eb1c24a798e5d52384cf0c1a8ae756a2023f5",
+      "description": null,
+      "fit_gaps": [
+        "El rol parece más orientado a Specialized Analytics y estrategia comercial que a modelado ML end-to-end puro.",
+        "PySpark, GenAI, fraude, credit scoring y experimentación no aparecen como requisitos explícitos en la descripción pública.",
+        "Puede representar un movimiento más hacia management analítico que hacia un track Staff/Lead Data Scientist hands-on."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Rol híbrido en Ciudad de México y de nivel manager, con responsabilidad sobre áreas analíticas complejas y liderazgo directo de profesionales.",
+        "Busca transformar grandes volúmenes de información en estrategias accionables que impulsen adquisición, crecimiento comercial e ingresos.",
+        "Requiere Python, SAS, bases de datos y dominio sólido de Data Analytics aplicado a negocio.",
+        "El nivel de responsabilidad encaja con liderazgo técnico, gestión de stakeholders y traducción de analítica a impacto de negocio en banca.",
+        "La Maestría es preferida y el puesto combina profundidad técnica con visión comercial y ejecución."
+      ],
+      "fit_summary": "Muy buen ajuste por banca, modalidad híbrida, Python, analítica avanzada, liderazgo y seniority. Queda detrás de Scotiabank y Santander porque su foco público es más comercial y menos específico en riesgo, fraude y ML productivo.",
+      "identity_key": "06b8a139f4c052529c0db1fbee16e5b6bcfaa0650d0e278e236b4af176ab933a",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-09-04",
+      "posted_date_raw": "2026-09-04",
+      "provenance": [
+        {
+          "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+          "source_entry_index": 2,
+          "source_format": "vacantes_v1",
+          "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+          "source_native_id": "citi-26984602",
+          "source_path": "Vacantes/vacantes_2026-09-07.json",
+          "source_search_date": "2026-09-07",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "BANAMEX Specialized Analytics Grp Mgr",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SAS",
+        "Data Analytics",
+        "Databases",
+        "Business Analytics",
+        "Commercial Analytics",
+        "Team Leadership",
+        "Stakeholder Management"
+      ],
+      "url": "https://jobs.citi.com/job/ciudad-de-mexico/banamex-specialized-analytics-grp-mgr/287/100186060704",
+      "vacancy_id": "vac-06b8a139f4c05252",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+  "source_path": "Vacantes/vacantes_2026-09-07.json",
+  "status": "valid"
+}

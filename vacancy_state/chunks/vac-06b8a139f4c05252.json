@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-06b8a139f4c05252::core",
+      "chunk_type": "core",
+      "content_hash": "ffc504bdc4a94c5624469ffd1b54b52cee8736fdf55ea9026c95056bade9623c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Role: BANAMEX Specialized Analytics Grp Mgr\nCompany: Banamex\nCompany category: Banca\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-06b8a139f4c05252"
+    },
+    {
+      "chunk_id": "vac-06b8a139f4c05252::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "04f132a75324ef9abd2913c3af6b10f0272843ccc877d4bfc48f4a3b3343c706",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Technologies / capabilities: Python; SAS; Data Analytics; Databases; Business Analytics; Commercial Analytics; Team Leadership; Stakeholder Management",
+      "vacancy_id": "vac-06b8a139f4c05252"
+    },
+    {
+      "chunk_id": "vac-06b8a139f4c05252::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "dd7badb30f985eb08f1d8ad2d664525cac5ed28d7fe725fa02dbb4f9b8b81d29",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Muy buen ajuste por banca, modalidad híbrida, Python, analítica avanzada, liderazgo y seniority. Queda detrás de Scotiabank y Santander porque su foco público es más comercial y menos específico en riesgo, fraude y ML productivo.\nSource strengths: Rol híbrido en Ciudad de México y de nivel manager, con responsabilidad sobre áreas analíticas complejas y liderazgo directo de profesionales.; Busca transformar grandes volúmenes de información en estrategias accionables que impulsen adquisición, crecimiento comercial e ingresos.; Requiere Python, SAS, bases de datos y dominio sólido de Data Analytics aplicado a negocio.; El nivel de responsabilidad encaja con liderazgo técnico, gestión de stakeholders y traducción de analítica a impacto de negocio en banca.; La Maestría es preferida y el puesto combina profundidad técnica con visión comercial y ejecución.\nSource gaps: El rol parece más orientado a Specialized Analytics y estrategia comercial que a modelado ML end-to-end puro.; PySpark, GenAI, fraude, credit scoring y experimentación no aparecen como requisitos explícitos en la descripción pública.; Puede representar un movimiento más hacia management analítico que hacia un track Staff/Lead Data Scientist hands-on.",
+      "vacancy_id": "vac-06b8a139f4c05252"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-06b8a139f4c05252"
+}

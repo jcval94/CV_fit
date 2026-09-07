@@ -1,0 +1,68 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "Banamex",
+  "company_category": "Banca",
+  "content_hash": "55dc97bc5b7727112d0e14b3f0a395acfdfd2ad44ba7c492c0c9f8f17fdc5170",
+  "description": null,
+  "fit_gaps": [
+    "El rol parece más orientado a Specialized Analytics y estrategia comercial que a modelado ML end-to-end puro.",
+    "PySpark, GenAI, fraude, credit scoring y experimentación no aparecen como requisitos explícitos en la descripción pública.",
+    "Puede representar un movimiento más hacia management analítico que hacia un track Staff/Lead Data Scientist hands-on."
+  ],
+  "fit_score": 96.0,
+  "fit_strengths": [
+    "Rol híbrido en Ciudad de México y de nivel manager, con responsabilidad sobre áreas analíticas complejas y liderazgo directo de profesionales.",
+    "Busca transformar grandes volúmenes de información en estrategias accionables que impulsen adquisición, crecimiento comercial e ingresos.",
+    "Requiere Python, SAS, bases de datos y dominio sólido de Data Analytics aplicado a negocio.",
+    "El nivel de responsabilidad encaja con liderazgo técnico, gestión de stakeholders y traducción de analítica a impacto de negocio en banca.",
+    "La Maestría es preferida y el puesto combina profundidad técnica con visión comercial y ejecución."
+  ],
+  "fit_summary": "Muy buen ajuste por banca, modalidad híbrida, Python, analítica avanzada, liderazgo y seniority. Queda detrás de Scotiabank y Santander porque su foco público es más comercial y menos específico en riesgo, fraude y ML productivo.",
+  "identity_key": "06b8a139f4c052529c0db1fbee16e5b6bcfaa0650d0e278e236b4af176ab933a",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": "2026-09-04",
+  "posted_date_raw": "2026-09-04",
+  "provenance": [
+    {
+      "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+      "source_entry_index": 2,
+      "source_format": "vacantes_v1",
+      "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+      "source_native_id": "citi-26984602",
+      "source_path": "Vacantes/vacantes_2026-09-07.json",
+      "source_search_date": "2026-09-07",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "BANAMEX Specialized Analytics Grp Mgr",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "SAS",
+    "Data Analytics",
+    "Databases",
+    "Business Analytics",
+    "Commercial Analytics",
+    "Team Leadership",
+    "Stakeholder Management"
+  ],
+  "url": "https://jobs.citi.com/job/ciudad-de-mexico/banamex-specialized-analytics-grp-mgr/287/100186060704",
+  "vacancy_id": "vac-06b8a139f4c05252",
+  "work_model": "Hybrid"
+}

@@ -1,5 +1,5 @@
 {
-  "last_run_id": "bcb26f8d0910695658d12aa94919777394c6154b-noop",
+  "last_run_id": "40842a592a9de0fb18e3c6a0b42ae5af00895791-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -209,6 +209,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-4d221178a483222a"
+      ]
+    },
+    "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json": {
+      "source_hash": "a0bf50ecb4eeda16fd10fa3bd1606fefe5ce2a1ff0fe00039a81444b4d180c5f",
+      "state_file": "sources/Vacantes__enriched__auto__scotiabank-subdir-data-science-acd92e9818.json--fc9ba47e834e0527.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-fda43fe81d1d93f8"
       ]
     },
     "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json": {
@@ -424,6 +432,16 @@
       "state_file": "sources/Vacantes__vacantes_2026-09-06.json--ff50fe645f681ec5.json",
       "status": "valid",
       "vacancy_ids": []
+    },
+    "Vacantes/vacantes_2026-09-07.json": {
+      "source_hash": "67b8c176ee334c388a6f788fd42307fa1b11519ba0c25d329ec21651006665ec",
+      "state_file": "sources/Vacantes__vacantes_2026-09-07.json--40316bf7a25e76d3.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-06b8a139f4c05252",
+        "vac-1816ac379c3f1f5c",
+        "vac-fda43fe81d1d93f8"
+      ]
     }
   }
 }

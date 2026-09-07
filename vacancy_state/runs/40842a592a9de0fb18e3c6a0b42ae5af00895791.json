@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json",
+      "Vacantes/vacantes_2026-09-07.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -32,7 +35,6 @@
       "Vacantes/enriched/auto/payjoy-machine-learning-engineer-fraud-7240f6f8b6.json",
       "Vacantes/enriched/auto/pfizer-data-science-manager-6b0826f58d.json",
       "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json",
-      "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
       "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
       "Vacantes/enriched/auto/zillow-sr-data-scientist-cdc3441963.json",
@@ -57,29 +59,32 @@
       "Vacantes/vacantes_2026-09-03.json",
       "Vacantes/vacantes_2026-09-04.json",
       "Vacantes/vacantes_2026-09-05.json",
-      "Vacantes/vacantes_2026-09-06.json",
-      "Vacantes/vacantes_2026-09-07.json"
+      "Vacantes/vacantes_2026-09-06.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "40842a592a9de0fb18e3c6a0b42ae5af00895791-noop",
+  "reindexed_vacancy_ids": [
+    "vac-06b8a139f4c05252",
+    "vac-1816ac379c3f1f5c",
+    "vac-fda43fe81d1d93f8"
+  ],
+  "run_id": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
   "schema_version": 1,
   "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
   "source_counts": {
     "deleted": 0,
     "discovered": 53,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 53
+    "unchanged": 51
   },
   "status": "success",
   "vacancy_counts": {
     "active": 40,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 3,
+    "reindexed": 3,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

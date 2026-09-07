@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-1816ac379c3f1f5c::core",
+      "chunk_type": "core",
+      "content_hash": "49fed4cb5b5573affed028147e25341f645fa925b9db825abb228c3b9fef630f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Role: Gte Estrateg Decisi Credit Aut\nCompany: Santander México\nCompany category: Banca\nLocation: Corporativo Santa Fe, Ciudad de México, México\nWork model: Hybrid\nApplication language: und\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-1816ac379c3f1f5c"
+    },
+    {
+      "chunk_id": "vac-1816ac379c3f1f5c::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "11be436383494203be1926c3393aca62d60e98c1e87cf62c690d3520a6ae355c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; SAS; Machine Learning; Artificial Intelligence; Credit Scoring; Risk-Based Pricing; Credit Risk; Portfolio Analytics; Power BI; Decision Strategies",
+      "vacancy_id": "vac-1816ac379c3f1f5c"
+    },
+    {
+      "chunk_id": "vac-1816ac379c3f1f5c::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "34ccb834e89d81ab832a78c5a1d985c6d689cd490fb042ce1fa64f0adb5730f6",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-07.json"
+      ],
+      "text": "Source fit score: 98/100\nSource fit summary: Match excepcional para combinar experiencia bancaria, credit scoring, riesgo, ML, Python/SQL y liderazgo. Es especialmente atractiva por el dominio de decisión crediticia y la ubicación en Santa Fe con modalidad híbrida reportada.\nSource strengths: Alineación directa con riesgo de crédito: diseña y optimiza estrategias de decisión para originación y administración del portafolio de Crédito Automotriz.; Aplica Inteligencia Artificial, Machine Learning y analítica avanzada a admisión, cobranza, clientes preaprobados, parámetros de riesgo, propensión y comportamiento.; Incluye liderazgo sobre modelos de Credit Scoring y Risk-Based Pricing, además de monitoreo de portafolio y definición de políticas de crédito.; Requiere SQL, Python, SAS, técnicas de Machine Learning y bases de datos.; La formación objetivo incluye Actuaría y el puesto está contratado directamente por Santander con esquema permanente.\nSource gaps: El requisito mínimo de experiencia es 4 años, bastante menor al seniority de 9+ años del perfil, por lo que conviene validar nivel, banda y alcance real.; PySpark y GenAI no aparecen como requisitos explícitos.; El título es de Gerencia de Estrategias de Decisión y no Data Scientist, aunque las responsabilidades son altamente compatibles con Decision Science y Credit Risk.",
+      "vacancy_id": "vac-1816ac379c3f1f5c"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-1816ac379c3f1f5c"
+}

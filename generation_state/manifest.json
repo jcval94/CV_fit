@@ -87,6 +87,17 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "a528f120ef3c91a4dc70d99fdc7df3d651d85d0ebb7af612b4c907ed585a0a5c"
     },
+    "vac-06b8a139f4c05252": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "67e646d131e4e57a1e05bb105bf22a946faae559309575a4e182aba3aea1c3de",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-06b8a139f4c05252 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "55dc97bc5b7727112d0e14b3f0a395acfdfd2ad44ba7c492c0c9f8f17fdc5170"
+    },
     "vac-08cdc2b18dc43994": {
       "application_bundle_file": "application_bundle_report.json",
       "attempt_known_cost_usd": 0.532202,
@@ -351,6 +362,17 @@
       "unsupported_requirements": [],
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "7665980e17c01a1b0a5a081af32d73bf5aa7e0e4c8c846e4f76eef78b8576b5b"
+    },
+    "vac-1816ac379c3f1f5c": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "15057f7faeba023fe94306a59604be5fcdbd0fc38a49eb4dd0b2910f242c926a",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-1816ac379c3f1f5c has undetermined application_language; set an explicit source language before CV generation",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "ddf3ebb8db37a7409ec325b1846cff34fee0f49fb6aeae87dd19d6c43798041c"
     },
     "vac-21cefd168f6539b4": {
       "application_bundle_file": "application_bundle_report.json",
@@ -2787,6 +2809,23 @@
       "status": "FAILED_REVIEW_REQUIRED",
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "7484c738021cec6e28a40b76f2db28f3e9a60b52cc67523f0e56ac06abf10454"
+    },
+    "vac-fda43fe81d1d93f8": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************rGQA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}",
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "65d2ffaeb0cf66d5d343c346c254c64efe0373fdbea3024db84f3d9e81fde3db",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-40842a592a9de0fb18e3c6a0b42ae5af00895791-vac-fda43fe81d1d93f8",
+      "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "608c529d40be7445853c440e7c492ba3c5807351422feb0df4fd41a80ba204d4"
     }
   },
   "pipeline_version": 1,
