@@ -3,7 +3,9 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/banamex-banamex-specialized-analytics-grp-mgr-d4a8b3d876.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -13,7 +15,6 @@
       "GPTW/vacantes_2026-08-26.json",
       "Vacantes/enriched/auto/abstra-senior-data-scientist-topic-analytics-genai-reporting-31afdcb506.json",
       "Vacantes/enriched/auto/aplazo-senior-data-scientist-520a158022.json",
-      "Vacantes/enriched/auto/banamex-banamex-specialized-analytics-grp-mgr-d4a8b3d876.json",
       "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json",
       "Vacantes/enriched/auto/codifin-senior-data-scientist-ml-data-engineer-f95ab38e74.json",
       "Vacantes/enriched/auto/creai-senior-machine-learning-engineer-636dc54a9a.json",
@@ -64,24 +65,26 @@
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "2dcea1979c2c7f20fe17f677adf739196fba6839-noop",
+  "reindexed_vacancy_ids": [
+    "vac-06b8a139f4c05252"
+  ],
+  "run_id": "2dcea1979c2c7f20fe17f677adf739196fba6839",
   "schema_version": 1,
   "source_commit": "2dcea1979c2c7f20fe17f677adf739196fba6839",
   "source_counts": {
     "deleted": 0,
     "discovered": 55,
     "modified": 0,
-    "new": 0,
+    "new": 1,
     "quarantined": 0,
-    "unchanged": 55
+    "unchanged": 54
   },
   "status": "success",
   "vacancy_counts": {
     "active": 40,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

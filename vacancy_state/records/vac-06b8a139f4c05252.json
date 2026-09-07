@@ -3,8 +3,8 @@
   "city": "Ciudad de México, México",
   "company": "Banamex",
   "company_category": "Banca",
-  "content_hash": "55dc97bc5b7727112d0e14b3f0a395acfdfd2ad44ba7c492c0c9f8f17fdc5170",
-  "description": null,
+  "content_hash": "f8ddc37142b9f95d3f758396875ddc000e457bf3f29bd9e7c2e1dea420f0f412",
+  "description": "The Specialized Analytics Grp Mgr is accountable for management of complex/critical/large professional disciplinary areas. Leads and directs a team of professionals. Requires a comprehensive understanding of multiple areas within a function and how they interact in order to achieve the objectives of the function. Applies in-depth understanding of the business impact of technical contributions. Excellent commercial awareness is a necessity. Generally accountable for delivery of a full range of services to one or more businesses/ geographic regions. Excellent communication skills required in order to negotiate internally, often at a senior level. Some external communication may be necessary. Accountable for the end results of an area. Exercises control over resources, policy formulation and planning. Primarily affects a sub-function. Involved in short- to medium-term planning of actions and resources for own area. Full management responsibility of a team or multiple teams, including management of people, budget and planning, to include performance evaluation, compensation, hiring, disciplinary actions and terminations and budget approval. Responsibilities: Incumbents work with large and complex data sets (both internal and external data) to evaluate, recommend, and support the implementation of business strategies Identifies and compiles data sets using a variety of tools (e.g. SQL, Access) to help predict, improve, and measure the success of key business to business outcomes Responsible for documenting data requirements, data collection / processing / cleaning, and exploratory data analysis; which may include utilizing statistical models / algorithms and data visualization techniques Incumbents in this role may often be referred to as Data Scientists Specialization in marketing, risk, digital and AML fields possible Appropriately assess risk when business decisions are made, demonstrating particular consideration for the firm's reputation and safeguarding Citigroup, its clients and assets, by driving compliance with applicable laws, rules and regulations, adhering to Policy, applying sound ethical judgment regarding personal behavior, conduct and business practices, and escalating, managing and reporting control issues with transparency, as well as effectively supervise the activity of others and create accountability with those who fail to maintain these standards. Qualifications: 10+ years of experience Financial/Business Analysis and/or credit/risk analysis with ability to impact key business drivers via a disciplined analytic process Provide analytic thought leadership Manage project planning effectively In-depth understanding of the various financial service business models, expert knowledge of advanced statistical techniques and how to apply the techniques to drive substantial business results Creative problem solving skills Education: Bachelors/University degree, Master’s degree preferred This job description provides a high-level review of the types of work performed. Other job-related duties may be assigned as required. Breve descripción del rol Liderar iniciativas de Data Analytics con enfoque comercial, transformando grandes volúmenes de información en estrategias accionables que impulsen la adquisición de clientes, el crecimiento comercial y la generación de ingresos. Será responsable de conectar los análisis y modelos analíticos con la realidad operativa del negocio, asegurando la implementación de soluciones con impacto tangible en resultados. Requisitos importantes: Experiencia sólida en Data Analytics aplicado a negocio y estrategias comerciales. Capacidad para transformar análisis complejos en acciones concretas que generen clientes, ventas y crecimiento. Dominio de análisis de datos, SAS, Python y bases de datos. Perfil con visión comercial y fuerte capacidad de ejecución. Habilidad para interactuar con áreas de negocio y traducir necesidades operativas en soluciones basadas en datos. Experiencia validando e implementando estrategias analíticas con impacto medible en resultados. Capacidad para comunicar insights de forma clara y orientada a la toma de decisiones. ------------------------------------------------------ Job Family Group: Decision Management ------------------------------------------------------ Job Family: Specialized Analytics (Data Science/Computational Statistics) ------------------------------------------------------ Time Type: Full time ------------------------------------------------------ Most Relevant Skills Please see the requirements listed above. ------------------------------------------------------ Other Relevant Skills For complementary skills, please see above and/or contact the recruiter. ------------------------------------------------------ Citi is an equal opportunity employer, and qualified candidates will receive consideration without regard to their race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or any other characteristic protected by law. If you are a person with a disability and need a reasonable accommodation to use our search tools and/or apply for a career opportunity review Accessibility at Citi . View Citi’s EEO Policy Statement and the Know Your Rights poster.",
   "fit_gaps": [
     "El rol parece más orientado a Specialized Analytics y estrategia comercial que a modelado ML end-to-end puro.",
     "PySpark, GenAI, fraude, credit scoring y experimentación no aparecen como requisitos explícitos en la descripción pública.",
@@ -20,21 +20,31 @@
   ],
   "fit_summary": "Muy buen ajuste por banca, modalidad híbrida, Python, analítica avanzada, liderazgo y seniority. Queda detrás de Scotiabank y Santander porque su foco público es más comercial y menos específico en riesgo, fraude y ML productivo.",
   "identity_key": "06b8a139f4c052529c0db1fbee16e5b6bcfaa0650d0e278e236b4af176ab933a",
-  "jd_fidelity": "sparse",
+  "jd_fidelity": "full",
   "jd_fidelity_reasons": [
-    "description_chars=0",
+    "description_chars=5296",
     "substantive_requirements=0",
     "substantive_responsibilities=0",
-    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+    "substantive employer-authored JD detail is preserved"
   ],
-  "jd_fidelity_score": 0.0,
-  "jd_generation_eligible": false,
-  "language_confidence": 0.86,
-  "language_source": "role_title",
+  "jd_fidelity_score": 60.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
   "location_raw": "Ciudad de México, México",
   "posted_date": "2026-09-04",
   "posted_date_raw": "2026-09-04",
   "provenance": [
+    {
+      "source_commit": "2dcea1979c2c7f20fe17f677adf739196fba6839",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "9f52a32a9f1c47d561de45ef8ea95d8d1e22032a6e9950fcdd5ea2d161193136",
+      "source_native_id": "citi-26984602",
+      "source_path": "Vacantes/enriched/auto/banamex-banamex-specialized-analytics-grp-mgr-d4a8b3d876.json",
+      "source_search_date": "2026-09-07",
+      "source_updated_at": null
+    },
     {
       "source_commit": "40842a592a9de0fb18e3c6a0b42ae5af00895791",
       "source_entry_index": 2,

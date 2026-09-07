@@ -1,5 +1,5 @@
 {
-  "last_run_id": "f670f56f2b27dab7e75b2d7bfb46ecc32b7a913c-noop",
+  "last_run_id": "2dcea1979c2c7f20fe17f677adf739196fba6839-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -57,6 +57,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-ec60c81f6e6eed7e"
+      ]
+    },
+    "Vacantes/enriched/auto/banamex-banamex-specialized-analytics-grp-mgr-d4a8b3d876.json": {
+      "source_hash": "9f52a32a9f1c47d561de45ef8ea95d8d1e22032a6e9950fcdd5ea2d161193136",
+      "state_file": "sources/Vacantes__enriched__auto__banamex-banamex-specialized-analytics-grp-mgr-d4a8b3d8--0de89ca85c93aefe.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-06b8a139f4c05252"
       ]
     },
     "Vacantes/enriched/auto/citi-banamex-banamex-data-science-senior-analyst-04b7b9172e.json": {
