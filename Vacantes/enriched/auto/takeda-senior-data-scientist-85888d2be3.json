@@ -1,0 +1,66 @@
+{
+  "jd_capture_mode": "official_source_jsonld_jobposting_auto",
+  "jd_retrieved_at": "2026-09-10T14:42:34.625030Z",
+  "jd_source_url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-takeda-4463085565",
+  "metadata": {
+    "criterio_temporal": "Preservación automática de JD oficial para generación CV",
+    "fecha_busqueda": "2026-09-10",
+    "total_vacantes_encontradas": 1
+  },
+  "vacantes": [
+    {
+      "categoria_empresa": "Producto Tech",
+      "description": "By clicking the “Apply” button, I understand that my employment application process with Takeda will commence and that the information I provide in my application will be processed in line with Takeda’s Privacy Notice and Terms of Use. I further attest that all information I submit in my employment application is true to the best of my knowledge.<br><br><strong>Job Description:<br><br></strong><strong>The Future Begins Here:<br><br></strong>At Takeda, we are leading digital evolution and global transformation. By building innovative solutions and future-driven capabilities, we are improving the lives of millions of patients around the world.<br><br>Mexico City has been selected to be home to Takeda’s recently launched Innovation Capability Center thanks to its international recognition in qualified and experienced talent in the data, digital and technology fields. We invite you to join our digital transformation journey.<br><br>In this role, you will have the opportunity to boost your skills and become the heart of an innovative engine that is contributing to global impact and improvement.<br><br><strong>At Takeda’s ICC we Unite in Diversity:<br><br></strong>Takeda is committed to creating an inclusive and collaborative workplace, where individuals are recognized for their backgrounds and abilities they bring to our company. We are continuously improving our collaborators’ journey in Takeda, and we welcome applications from all qualified candidates. Here, you will feel welcomed, respected, and valued as an important contributor to our diverse team.<br><br><strong>About the role :<br><br></strong>The Senior Data Scientist is responsible for performing complex data analysis to support business operations, with a primary focus on machine learning applications.<br><br>This role involves developing data architectures, mining methodologies, and machine learning models to identify trends and insights from large datasets.<br><br>By implementing advanced data science principles and techniques, this role helps drive informed business decisions and contributes significantly to Takeda’s mission.<br><br><strong>How will you contribute :<br><br></strong><ul><li>Collect and analyze large datasets from diverse sources to drive key business insights.</li><li>Develop machine learning models, including supervised and unsupervised learning techniques, to predict and optimize business outcomes.</li><li>Implement and optimize deep learning architectures and algorithms such as neural networks and reinforcement learning.</li><li>Construct data architectures, models, and protocols to identify trends and insights.</li><li>Create visualizations and dashboards to present data insights to stakeholders clearly and effectively.</li><li>Work collaboratively with cross-functional teams to integrate machine learning insights into business strategies.</li><li>Manage projects independently and provide guidance to junior professionals.</li><li>Stay updated with the latest trends and advancements in machine learning and data science, applying them as needed.</li><li>Implement MLOps best practices to streamline the deployment, monitoring, and lifecycle management of machine learning models in production environments using tools such as MLflow, Kubeflow, or Amazon SageMaker, Databricks.</li><li>Collaborate with engineering teams to build scalable, reliable, and automated pipelines for machine learning workflows, leveraging tools like Airflow, Prefect, or AWS Step Functions for orchestration.</li><li>Ensure robustness and compliance of ML solutions, focusing on CI/CD processes with tools like GitHub Actions, Jenkins, or Azure DevOps.</li><li>Collaborate with teams to integrate LLM-based capabilities, such as advanced natural language understanding, automated content generation, and conversational AI, into existing workflows and applications.</li><li>Lead evaluation and implementation of responsible AI practices, ensuring ethical and regulatory compliance when deploying Generative AI models.<br><br></li></ul><strong>What you bring to Takeda:<br><br></strong><ul><li>Bachelor or higher educational background in mathematics, computer science, statistics, economics, or related fields.</li><li>5+ years of relevant experience.</li><li>Proficient in programming languages such as Python and R, with a strong emphasis on machine learning libraries (e.g., scikit-learn, TensorFlow, Keras, PyTorch).</li><li>Strong understanding of machine learning algorithms, including regression, classification, clustering, and dimensionality reduction techniques.</li><li>Experience with deep learning frameworks and building complex neural network models.</li><li>Expertise in natural language processing (NLP) techniques and applications.</li><li>Proficiency in data visualization tools like Tableau or Power BI, and ability to communicate findings effectively.</li><li>Strong data manipulation and database management skills, including SQL.</li><li>Analytical thinking and problem-solving skills with the ability to develop innovative solutions.</li><li>Strong business acumen and ability to translate machine learning insights into actionable business strategies.</li><li>Excellent communication and interpersonal skills for effective collaboration with stakeholders.</li><li>Knowledge of AutoML platforms and emerging technologies like generative AI.</li><li>Hands-on experience with MLOps platforms (e.g., MLflow, Kubeflow, or SageMaker) for managing the end-to-end lifecycle of machine learning models.</li><li>Experience with containerization technologies (e.g., Docker) and orchestration frameworks (e.g., Kubernetes) for scalable deployment of ML models.</li><li>Design, fine-tune, and deploy applications using Generative AI models such as GPT, LLaMA, or other state-of-the-art Large Language Models (LLMs) to drive innovative solutions across business functions.<br><br></li></ul><strong>What Takeda’s ICC Can Offer You:<br><br></strong>At Takeda, you take the lead on building and shaping your own career.<br><br>Joining the ICC in Mexico City will give you access to high-end technology, continuous training and a diverse and inclusive network of colleagues who will support your career growth.<br><br>It is our priority to provide competitive compensation and a benefit package that bridges your personal life with your professional career. Amongst our benefits are<br><br><ul><li>Competitive Salary + Performance Annual Bonus</li><li>Monthly Supermarket and Food Vouchers</li><li>Flexible Working Schemes</li><li>Comprehensive Healthcare Insurance Plans Life, Medical, Dental &amp; Vision</li><li>Additional Time Off</li><li>Diversity, Equity, and Inclusion Programs<br><br></li></ul><strong><em>Work Location Mexico City – Santa Fe.</em>:<br><br></strong><strong><em>Hybrid model with a minimum in-office requirement of at least 10 (ten) days per month.</em>:<br><br></strong>If you have further inquiries on the ICC Mexico City or this role, follow us on LinkedIn, and look up for our upcoming online events where we will elaborate on open roles and host Q&amp;A sessions.<br><br><strong>Locations:<br><br></strong>MEX - Santa Fe<br><br><strong>Worker Type:<br><br></strong>Employee<br><br><strong>Worker Sub-Type:<br><br></strong>Regular<br><br><strong>Time Type:<br><br></strong>Full time",
+      "empresa": "Takeda",
+      "fecha_publicacion": "2026-09-10",
+      "id_vacante": "takeda-4463085565",
+      "modalidad": "Híbrido",
+      "porcentaje_ajuste": 97,
+      "puesto": "Senior Data Scientist",
+      "rango_salarial": "No especificado",
+      "razon_ajuste": {
+        "posibles_gaps": [
+          "El dominio principal es farmacéutico y no banca, riesgo, fraude o credit scoring.",
+          "PySpark no aparece como requisito explícito.",
+          "El mínimo publicado es 5+ años, por debajo de los 9+ años del perfil, aunque el alcance es claramente senior."
+        ],
+        "puntos_fuertes": [
+          "Rol Senior de Data Science con ownership de machine learning, arquitectura de datos y proyectos end-to-end.",
+          "Alineación técnica muy alta con Python, SQL, scikit-learn, TensorFlow, Keras y PyTorch.",
+          "Incluye MLOps con MLflow, Kubeflow o SageMaker, además de Docker y Kubernetes para despliegues escalables.",
+          "Uso explícito de Generative AI y LLMs como GPT y LLaMA, incluyendo diseño, fine-tuning y deployment de aplicaciones.",
+          "Responsabilidad de gestionar proyectos de forma independiente y guiar a profesionales junior, alineada con liderazgo técnico y mentoría.",
+          "Modalidad híbrida en CDMX con requisito mínimo de 10 días al mes en oficina."
+        ],
+        "resumen": "Excelente oportunidad híbrida en CDMX para capitalizar Python/SQL, ML productivo, GenAI, MLOps y liderazgo técnico. Pierde algunos puntos únicamente porque no explota directamente la experiencia bancaria y de riesgo."
+      },
+      "requirements": [
+        "{'@type': 'OccupationalExperienceRequirements', 'monthsOfExperience': 60}",
+        "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+      ],
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Scikit-learn",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Generative AI",
+        "LLMs",
+        "GPT",
+        "LLaMA",
+        "MLflow",
+        "Kubeflow",
+        "SageMaker",
+        "Docker",
+        "Kubernetes",
+        "MLOps"
+      ],
+      "ubicacion": "Santa Fe, Ciudad de México, México",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-takeda-4463085565"
+    }
+  ]
+}
