@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-f563f704f36a7477::core",
+      "chunk_type": "core",
+      "content_hash": "44458f946a3419bd4bbb896483b79b68ad87e25551309a587895fe47d80e0efb",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-10.json"
+      ],
+      "text": "Role: Senior Data Scientist I\nCompany: Elsevier\nCompany category: Producto Tech\nLocation: Ciudad de México, México\nWork model: On-site\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-f563f704f36a7477"
+    },
+    {
+      "chunk_id": "vac-f563f704f36a7477::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "701e3e36aaafae599718cb3b61ce77a521505edeebe8e9a660f463a9622b449f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-10.json"
+      ],
+      "text": "Technologies / capabilities: Python; Machine Learning; NLP; Generative AI; LLMs; RAG; Prompt Engineering; Fine-tuning; Information Retrieval; Ranking; Recommendation Systems; Experimentation; Model Evaluation; Model Monitoring; Responsible AI",
+      "vacancy_id": "vac-f563f704f36a7477"
+    },
+    {
+      "chunk_id": "vac-f563f704f36a7477::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "f30e2720bced5d8e58ded1de67711476c20557275619ece200bd08f9a5ecc870",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-10.json"
+      ],
+      "text": "Source fit score: 96/100\nSource fit summary: Oportunidad de altísimo ajuste para un track Senior Applied AI/Data Science: Python, LLMs, RAG, experimentación, producción y liderazgo técnico. Queda debajo de Takeda por no confirmarse modalidad híbrida/remota y por menor alineación de dominio.\nSource strengths: Rol orientado a construir sistemas avanzados de AI/ML, NLP y Generative AI con impacto directo en productos de conocimiento y decisión.; Uso intensivo de Python y desarrollo de soluciones productivas con LLMs, RAG, retrieval, ranking, recomendación y decision support.; Responsabilidad explícita sobre evaluación, experimentación y monitoreo de sistemas de IA.; Incluye liderazgo técnico y mentoría, además de colaboración estrecha con ingeniería para desplegar soluciones a escala.; Alineación especialmente fuerte con experiencia reciente en LLMs, IA aplicada y arquitectura end-to-end.\nSource gaps: La publicación recuperada no confirma modalidad remota o híbrida, por lo que se clasifica conservadoramente como presencial.; SQL y PySpark no aparecen como requisitos explícitos centrales.; El dominio es información científica y salud, no banca, fraude o credit scoring.",
+      "vacancy_id": "vac-f563f704f36a7477"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-f563f704f36a7477"
+}

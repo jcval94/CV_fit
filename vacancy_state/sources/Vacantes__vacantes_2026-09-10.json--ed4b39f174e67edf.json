@@ -1,0 +1,163 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Santa Fe, Ciudad de México, México",
+      "company": "Takeda",
+      "company_category": "Producto Tech",
+      "content_hash": "6ef1bbebc3733dbb3fa2eab81302ac1e3361ddae062cdb259cdaf300f1fa8ef4",
+      "description": null,
+      "fit_gaps": [
+        "El dominio principal es farmacéutico y no banca, riesgo, fraude o credit scoring.",
+        "PySpark no aparece como requisito explícito.",
+        "El mínimo publicado es 5+ años, por debajo de los 9+ años del perfil, aunque el alcance es claramente senior."
+      ],
+      "fit_score": 97.0,
+      "fit_strengths": [
+        "Rol Senior de Data Science con ownership de machine learning, arquitectura de datos y proyectos end-to-end.",
+        "Alineación técnica muy alta con Python, SQL, scikit-learn, TensorFlow, Keras y PyTorch.",
+        "Incluye MLOps con MLflow, Kubeflow o SageMaker, además de Docker y Kubernetes para despliegues escalables.",
+        "Uso explícito de Generative AI y LLMs como GPT y LLaMA, incluyendo diseño, fine-tuning y deployment de aplicaciones.",
+        "Responsabilidad de gestionar proyectos de forma independiente y guiar a profesionales junior, alineada con liderazgo técnico y mentoría.",
+        "Modalidad híbrida en CDMX con requisito mínimo de 10 días al mes en oficina."
+      ],
+      "fit_summary": "Excelente oportunidad híbrida en CDMX para capitalizar Python/SQL, ML productivo, GenAI, MLOps y liderazgo técnico. Pierde algunos puntos únicamente porque no explota directamente la experiencia bancaria y de riesgo.",
+      "identity_key": "aa5a49e7562dfce4be29659695614906d7a7a773c1af7dc3832f9c8e910cb98f",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Santa Fe, Ciudad de México, México",
+      "posted_date": "2026-09-10",
+      "posted_date_raw": "2026-09-10",
+      "provenance": [
+        {
+          "source_commit": "d2f1d238afd61553bac500c18eed71de4691da65",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "c7303b9a9cd6e411f80c4679d03b48825bc96e05e2893291ae6e358b09cd6633",
+          "source_native_id": "takeda-4463085565",
+          "source_path": "Vacantes/vacantes_2026-09-10.json",
+          "source_search_date": "2026-09-10",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Scikit-learn",
+        "TensorFlow",
+        "Keras",
+        "PyTorch",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "Generative AI",
+        "LLMs",
+        "GPT",
+        "LLaMA",
+        "MLflow",
+        "Kubeflow",
+        "SageMaker",
+        "Docker",
+        "Kubernetes",
+        "MLOps"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-takeda-4463085565",
+      "vacancy_id": "vac-aa5a49e7562dfce4",
+      "work_model": "Hybrid"
+    },
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "Elsevier",
+      "company_category": "Producto Tech",
+      "content_hash": "a51747554ac762234e2f6ed35f00e9e0d1628c9be4818aa31f04f3d1d23b2542",
+      "description": null,
+      "fit_gaps": [
+        "La publicación recuperada no confirma modalidad remota o híbrida, por lo que se clasifica conservadoramente como presencial.",
+        "SQL y PySpark no aparecen como requisitos explícitos centrales.",
+        "El dominio es información científica y salud, no banca, fraude o credit scoring."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Rol orientado a construir sistemas avanzados de AI/ML, NLP y Generative AI con impacto directo en productos de conocimiento y decisión.",
+        "Uso intensivo de Python y desarrollo de soluciones productivas con LLMs, RAG, retrieval, ranking, recomendación y decision support.",
+        "Responsabilidad explícita sobre evaluación, experimentación y monitoreo de sistemas de IA.",
+        "Incluye liderazgo técnico y mentoría, además de colaboración estrecha con ingeniería para desplegar soluciones a escala.",
+        "Alineación especialmente fuerte con experiencia reciente en LLMs, IA aplicada y arquitectura end-to-end."
+      ],
+      "fit_summary": "Oportunidad de altísimo ajuste para un track Senior Applied AI/Data Science: Python, LLMs, RAG, experimentación, producción y liderazgo técnico. Queda debajo de Takeda por no confirmarse modalidad híbrida/remota y por menor alineación de dominio.",
+      "identity_key": "f563f704f36a7477d970329272198b8b82dd1819305dfba21677224d45bd2f8a",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-09-09",
+      "posted_date_raw": "2026-09-09",
+      "provenance": [
+        {
+          "source_commit": "d2f1d238afd61553bac500c18eed71de4691da65",
+          "source_entry_index": 1,
+          "source_format": "vacantes_v1",
+          "source_hash": "c7303b9a9cd6e411f80c4679d03b48825bc96e05e2893291ae6e358b09cd6633",
+          "source_native_id": "elsevier-4464107585",
+          "source_path": "Vacantes/vacantes_2026-09-10.json",
+          "source_search_date": "2026-09-10",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist I",
+      "salary": "No especificado para México",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "Machine Learning",
+        "NLP",
+        "Generative AI",
+        "LLMs",
+        "RAG",
+        "Prompt Engineering",
+        "Fine-tuning",
+        "Information Retrieval",
+        "Ranking",
+        "Recommendation Systems",
+        "Experimentation",
+        "Model Evaluation",
+        "Model Monitoring",
+        "Responsible AI"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/senior-data-scientist-i-at-elsevier-4464107585",
+      "vacancy_id": "vac-f563f704f36a7477",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "c7303b9a9cd6e411f80c4679d03b48825bc96e05e2893291ae6e358b09cd6633",
+  "source_path": "Vacantes/vacantes_2026-09-10.json",
+  "status": "valid"
+}

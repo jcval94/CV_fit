@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/takeda-senior-data-scientist-85888d2be3.json",
+      "Vacantes/vacantes_2026-09-10.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -36,7 +39,6 @@
       "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json",
       "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
-      "Vacantes/enriched/auto/takeda-senior-data-scientist-85888d2be3.json",
       "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json",
       "Vacantes/enriched/auto/zillow-sr-data-scientist-cdc3441963.json",
       "Vacantes/enriched/dataknow_data_scientist_remote_mexico_2026-08-21.json",
@@ -63,29 +65,31 @@
       "Vacantes/vacantes_2026-09-06.json",
       "Vacantes/vacantes_2026-09-07.json",
       "Vacantes/vacantes_2026-09-08.json",
-      "Vacantes/vacantes_2026-09-09.json",
-      "Vacantes/vacantes_2026-09-10.json"
+      "Vacantes/vacantes_2026-09-09.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "d2f1d238afd61553bac500c18eed71de4691da65-noop",
+  "reindexed_vacancy_ids": [
+    "vac-aa5a49e7562dfce4",
+    "vac-f563f704f36a7477"
+  ],
+  "run_id": "d2f1d238afd61553bac500c18eed71de4691da65",
   "schema_version": 1,
   "source_commit": "d2f1d238afd61553bac500c18eed71de4691da65",
   "source_counts": {
     "deleted": 0,
     "discovered": 59,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 59
+    "unchanged": 57
   },
   "status": "success",
   "vacancy_counts": {
     "active": 42,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 2,
+    "reindexed": 2,
     "semantic_unchanged": 0
   },
   "validation_errors": {}

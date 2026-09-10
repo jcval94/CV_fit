@@ -1,5 +1,5 @@
 {
-  "last_run_id": "1c49d41f0be18a1c1465795914b37fd93a6fea8b-noop",
+  "last_run_id": "d2f1d238afd61553bac500c18eed71de4691da65-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -243,6 +243,14 @@
         "vac-84cc6dffc5671fa7"
       ]
     },
+    "Vacantes/enriched/auto/takeda-senior-data-scientist-85888d2be3.json": {
+      "source_hash": "0060d0f19363c86b38ea68cc3b25ee97ea7c16e4f43dcdf83d9e50d3f30d8853",
+      "state_file": "sources/Vacantes__enriched__auto__takeda-senior-data-scientist-85888d2be3.json--4af998bfedd40f81.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-aa5a49e7562dfce4"
+      ]
+    },
     "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json": {
       "source_hash": "857ceb181af168d623c85c6e615504e70b632339133afe2d035e58b4a76545ba",
       "state_file": "sources/Vacantes__enriched__auto__tilt-finance-data-science-lead-latam-9980025f4f.json--afd3e018c2312d70.json",
@@ -470,6 +478,15 @@
       "state_file": "sources/Vacantes__vacantes_2026-09-09.json--d77ea65c005acd57.json",
       "status": "valid",
       "vacancy_ids": []
+    },
+    "Vacantes/vacantes_2026-09-10.json": {
+      "source_hash": "c7303b9a9cd6e411f80c4679d03b48825bc96e05e2893291ae6e358b09cd6633",
+      "state_file": "sources/Vacantes__vacantes_2026-09-10.json--ed4b39f174e67edf.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-aa5a49e7562dfce4",
+        "vac-f563f704f36a7477"
+      ]
     }
   }
 }
