@@ -1,5 +1,5 @@
 {
-  "last_run_id": "d2f1d238afd61553bac500c18eed71de4691da65-noop",
+  "last_run_id": "a5487baaf46642d861eb55949013f2cfbcc6e244-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -97,6 +97,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-6fe0c8aa95790e4e"
+      ]
+    },
+    "Vacantes/enriched/auto/elsevier-senior-data-scientist-i-dc8a629dfe.json": {
+      "source_hash": "0a3a0f880c488e882dd639a9202ca4941f7ae23c7ac040c302bbd509bfd9a3d8",
+      "state_file": "sources/Vacantes__enriched__auto__elsevier-senior-data-scientist-i-dc8a629dfe.json--49d3069037b3d685.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-f563f704f36a7477"
       ]
     },
     "Vacantes/enriched/auto/etsy-senior-data-scientist-seller-analytics-e28ceeb72e.json": {

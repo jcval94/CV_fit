@@ -2823,15 +2823,21 @@
       "vacancy_content_hash": "859f1641e12d604c4b7895a6df8573adafb322ecdc7f139cc8e48287885515e6"
     },
     "vac-f563f704f36a7477": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************rGQA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "0bf69adbe1de0f3bc8780c1969a7aed0f4e4909e2d799fd151d49c366768eb48",
+      "fingerprint": "2d233af0a0d01232a2636d4e3e6e8a6b5b4c7b346646ea67b5720dc845319b37",
       "generation_logic_version": 6,
       "ready_to_send": false,
-      "reason": "vacancy vac-f563f704f36a7477 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
       "retrieval_mode": "hybrid-rerank",
-      "source_commit": "d2f1d238afd61553bac500c18eed71de4691da65",
-      "status": "SKIPPED_NOT_ELIGIBLE",
-      "vacancy_content_hash": "dfc562db4557b0d8ff8f86c8aaeabf5e5f99ba8dbfa4a874aed3e628f4ebe6f1"
+      "review_required": true,
+      "run_id": "auto-a5487baaf46642d861eb55949013f2cfbcc6e244-vac-f563f704f36a7477",
+      "source_commit": "a5487baaf46642d861eb55949013f2cfbcc6e244",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "e5be7a4fcfcf81664e6ad63b9dd8522ba8188a63ad66e8d7d6dfee0116d01b8d"
     },
     "vac-f681c22e0be1959b": {
       "attempt_estimated_cost_usd": 0,
