@@ -1,0 +1,91 @@
+{
+  "application_language": "en",
+  "city": "Área metropolitana de Ciudad de México, México",
+  "company": "ThetaRay",
+  "company_category": "Producto Tech",
+  "content_hash": "0e1726d5ec1bd22d86ee4524e59e6679995d4a96a1d6d5302c4e3bf5e419dc33",
+  "description": "At ThetaRay, our purpose is to make the world a safer place by protecting the integrity of the global financial system. We do this by putting AI at the core of both our technology and our way of working.<br><br>Our AI-driven solutions help banks and fintech companies worldwide detect and stop serious financial crime, from human trafficking and terrorist financing to sophisticated money laundering, while advanced technology, automation, and AI-driven tools help our teams collaborate smarter, move faster, and continuously improve how we build, deliver, and innovate.<br><br><strong>About the role: <br><br></strong>We are looking for a Data Scientist to turn expertise, initiative, and bold thinking into real impact on the next generation of AI-driven financial crime detection. If you combine strong data science and machine learning capabilities with the ability to translate complex technical solutions into real business value for customers, and if you are motivated by leading end-to-end implementations that sit at the intersection of cutting-edge AI and the world's most critical financial crime challenges, ThetaRay could be your next challenge.<br><br><strong>Responsibilities:<br><br></strong><ul><li> Deliver successful deployment and Pilots</li><li> Manage and design the Customer-specific technical solution throughout the project life cycle</li><li> Technical leadership of Data Science and engineering aspects and team members including partners</li><li> Work on various data sources and apply sophisticated feature engineering capabilities</li><li> Bring and use business knowledge</li><li> Extract insights and actionable recommendations from large volumes of data and Investigate anomalies in Big Data</li><li> Build and manage technical relationships with customers and partners</li><li> Provide product requirements input to the Product Management team</li><li> Train the customers on the system – system usage and monitoring aspects</li><li> Travel to customer locations both domestically and abroad<br><br></li></ul>Requirements:<br><br><ul><li> 2+ years of experience as a data scientist/data engineer/big-data developer</li><li> BSc or equivalent in Mathematics, Statistics, Computer Science, Economics, or another related field</li><li> Must have proven professional experience in data analytics for financial services with strong data mining and forensic skills</li><li> Experience working with customers - an advantage</li><li> Must have Hands-on experience and knowledge of scripting languages: Python/PySpark as well as DS workflow management tools including MLflow, Airflow, etc.</li><li> Experience in NLP or Graph Algorithms - an advantage</li><li> Working experience with Linux OS - an advantage</li><li> Fluent English - written and spoken<br><br></li></ul><strong>Core Competencies<br><br></strong><ul><li> Able to solve tech problems for customers; improvise; cope with unexpected challenges</li><li> Able to drive relevant internal functions to deliver/solve a problem for customers/partners</li><li> A motivated, self-starter who can demonstrate high analytical and technical skills</li><li> Ability to design creative solutions for complex requirements</li><li> Ability to learn and lead projects independently, and to work with minimal supervision with customers (tech &amp; business)</li><li> Strong interpersonal relationship building</li><li> Ability to execute multiple projects and drive key business results under tight deadlines<br><br></li></ul><strong>Please submit your CV in English.</strong>",
+  "fit_gaps": [
+    "El título formal es Data Scientist y el requisito mínimo publicado es 2+ años, considerablemente por debajo del seniority de 9+ años; existe riesgo de sobrecalificación y debe validarse nivel y compensación.",
+    "SQL no aparece como requisito explícito en la descripción recuperada.",
+    "GenAI y experimentación A/B no son componentes centrales de la vacante; NLP y Graph Algorithms aparecen únicamente como experiencia deseable.",
+    "El rol tiene un componente relevante de implementación con clientes y viajes, por lo que es menos puramente product/IC que un Staff Data Scientist interno."
+  ],
+  "fit_score": 96.0,
+  "fit_strengths": [
+    "Ajuste de dominio excepcional: ThetaRay desarrolla soluciones de IA para detección de crimen financiero, fraude y lavado de dinero para bancos y fintechs.",
+    "Requiere experiencia profesional en analítica para servicios financieros, data mining y habilidades forenses, altamente transferibles desde banca, riesgo y detección de fraude.",
+    "Alineación técnica directa con Python y PySpark, además de MLflow y Airflow para gestión de workflows de Data Science y modelos productivos.",
+    "El puesto incluye liderazgo técnico de Data Science e ingeniería, diseño de soluciones específicas para clientes y ownership del ciclo de vida de implementaciones y pilotos.",
+    "Trabaja con feature engineering sofisticado, grandes volúmenes de datos e investigación de anomalías, muy cercano a experiencia en modelos antifraude y detección de patrones.",
+    "La modalidad híbrida en CDMX cumple la segunda prioridad geográfica y el rol requiere inglés fluido para interacción con clientes y equipos internacionales."
+  ],
+  "fit_summary": "Es la oportunidad nueva con mejor alineación sustantiva de esta corrida: combina servicios financieros, detección de fraude/crimen financiero, Python, PySpark, MLflow, Airflow, Big Data y liderazgo técnico end-to-end. Aunque el título y el mínimo de experiencia están por debajo del nivel objetivo, el alcance técnico y de dominio justifica priorizarla y validar seniority/compensación desde el primer contacto.",
+  "identity_key": "e6ba16ea5ebb910529ab598cd4667f2725ea2d83df999a3dc9bd7707bbb3d04e",
+  "jd_fidelity": "full",
+  "jd_fidelity_reasons": [
+    "description_chars=3548",
+    "substantive_requirements=2",
+    "substantive_responsibilities=0",
+    "substantive employer-authored JD detail is preserved"
+  ],
+  "jd_fidelity_score": 70.0,
+  "jd_generation_eligible": true,
+  "language_confidence": 0.98,
+  "language_source": "vacancy_text",
+  "location_raw": "Área metropolitana de Ciudad de México, México",
+  "posted_date": "2026-09-11",
+  "posted_date_raw": "2026-09-11",
+  "provenance": [
+    {
+      "source_commit": "3cc8e1b7243420a5d680af0010c0277c87b427f0",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "78471962e8ef155e8390f6dfc79bff9b783a9fec89fe335108ca133f4125ff3d",
+      "source_native_id": "thetaray-4464549031",
+      "source_path": "Vacantes/enriched/auto/thetaray-data-scientist-67f576a2b7.json",
+      "source_search_date": "2026-09-11",
+      "source_updated_at": null
+    },
+    {
+      "source_commit": "3cc8e1b7243420a5d680af0010c0277c87b427f0",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "f9b0d57ff6e9c651e4c1cd27eaf12d3390df39273a52bc759bd7ec29047a9407",
+      "source_native_id": "thetaray-4464549031",
+      "source_path": "Vacantes/vacantes_2026-09-11.json",
+      "source_search_date": "2026-09-11",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [
+    "{'@type': 'OccupationalExperienceRequirements', 'monthsOfExperience': 24}",
+    "{'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'bachelor degree'}"
+  ],
+  "responsibilities": [],
+  "role_title": "Data Scientist",
+  "salary": "No especificado",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "PySpark",
+    "Machine Learning",
+    "Fraud Detection",
+    "Financial Crime Detection",
+    "AML",
+    "Data Mining",
+    "Feature Engineering",
+    "Anomaly Detection",
+    "Big Data",
+    "MLflow",
+    "Airflow",
+    "NLP",
+    "Graph Algorithms",
+    "Linux",
+    "Technical Leadership"
+  ],
+  "url": "https://mx.linkedin.com/jobs/view/data-scientist-at-thetaray-4464549031",
+  "vacancy_id": "vac-e6ba16ea5ebb9105",
+  "work_model": "Hybrid"
+}

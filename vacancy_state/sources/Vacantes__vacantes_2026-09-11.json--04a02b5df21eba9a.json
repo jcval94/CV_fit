@@ -1,0 +1,86 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Área metropolitana de Ciudad de México, México",
+      "company": "ThetaRay",
+      "company_category": "Producto Tech",
+      "content_hash": "18066e358875a4dbf571a3216e38af2e6fe79c4ecaf48892fd0158e0d10651c4",
+      "description": null,
+      "fit_gaps": [
+        "El título formal es Data Scientist y el requisito mínimo publicado es 2+ años, considerablemente por debajo del seniority de 9+ años; existe riesgo de sobrecalificación y debe validarse nivel y compensación.",
+        "SQL no aparece como requisito explícito en la descripción recuperada.",
+        "GenAI y experimentación A/B no son componentes centrales de la vacante; NLP y Graph Algorithms aparecen únicamente como experiencia deseable.",
+        "El rol tiene un componente relevante de implementación con clientes y viajes, por lo que es menos puramente product/IC que un Staff Data Scientist interno."
+      ],
+      "fit_score": 96.0,
+      "fit_strengths": [
+        "Ajuste de dominio excepcional: ThetaRay desarrolla soluciones de IA para detección de crimen financiero, fraude y lavado de dinero para bancos y fintechs.",
+        "Requiere experiencia profesional en analítica para servicios financieros, data mining y habilidades forenses, altamente transferibles desde banca, riesgo y detección de fraude.",
+        "Alineación técnica directa con Python y PySpark, además de MLflow y Airflow para gestión de workflows de Data Science y modelos productivos.",
+        "El puesto incluye liderazgo técnico de Data Science e ingeniería, diseño de soluciones específicas para clientes y ownership del ciclo de vida de implementaciones y pilotos.",
+        "Trabaja con feature engineering sofisticado, grandes volúmenes de datos e investigación de anomalías, muy cercano a experiencia en modelos antifraude y detección de patrones.",
+        "La modalidad híbrida en CDMX cumple la segunda prioridad geográfica y el rol requiere inglés fluido para interacción con clientes y equipos internacionales."
+      ],
+      "fit_summary": "Es la oportunidad nueva con mejor alineación sustantiva de esta corrida: combina servicios financieros, detección de fraude/crimen financiero, Python, PySpark, MLflow, Airflow, Big Data y liderazgo técnico end-to-end. Aunque el título y el mínimo de experiencia están por debajo del nivel objetivo, el alcance técnico y de dominio justifica priorizarla y validar seniority/compensación desde el primer contacto.",
+      "identity_key": "e6ba16ea5ebb910529ab598cd4667f2725ea2d83df999a3dc9bd7707bbb3d04e",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Área metropolitana de Ciudad de México, México",
+      "posted_date": "2026-09-11",
+      "posted_date_raw": "2026-09-11",
+      "provenance": [
+        {
+          "source_commit": "3cc8e1b7243420a5d680af0010c0277c87b427f0",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "f9b0d57ff6e9c651e4c1cd27eaf12d3390df39273a52bc759bd7ec29047a9407",
+          "source_native_id": "thetaray-4464549031",
+          "source_path": "Vacantes/vacantes_2026-09-11.json",
+          "source_search_date": "2026-09-11",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Data Scientist",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "PySpark",
+        "Machine Learning",
+        "Fraud Detection",
+        "Financial Crime Detection",
+        "AML",
+        "Data Mining",
+        "Feature Engineering",
+        "Anomaly Detection",
+        "Big Data",
+        "MLflow",
+        "Airflow",
+        "NLP",
+        "Graph Algorithms",
+        "Linux",
+        "Technical Leadership"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/data-scientist-at-thetaray-4464549031",
+      "vacancy_id": "vac-e6ba16ea5ebb9105",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "f9b0d57ff6e9c651e4c1cd27eaf12d3390df39273a52bc759bd7ec29047a9407",
+  "source_path": "Vacantes/vacantes_2026-09-11.json",
+  "status": "valid"
+}

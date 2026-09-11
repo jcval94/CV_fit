@@ -1,5 +1,5 @@
 {
-  "last_run_id": "d09613a4018b516dc15b161255fd2d91925be78b-noop",
+  "last_run_id": "3cc8e1b7243420a5d680af0010c0277c87b427f0-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -259,6 +259,14 @@
         "vac-aa5a49e7562dfce4"
       ]
     },
+    "Vacantes/enriched/auto/thetaray-data-scientist-67f576a2b7.json": {
+      "source_hash": "78471962e8ef155e8390f6dfc79bff9b783a9fec89fe335108ca133f4125ff3d",
+      "state_file": "sources/Vacantes__enriched__auto__thetaray-data-scientist-67f576a2b7.json--2b828480cf934357.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-e6ba16ea5ebb9105"
+      ]
+    },
     "Vacantes/enriched/auto/tilt-finance-data-science-lead-latam-9980025f4f.json": {
       "source_hash": "857ceb181af168d623c85c6e615504e70b632339133afe2d035e58b4a76545ba",
       "state_file": "sources/Vacantes__enriched__auto__tilt-finance-data-science-lead-latam-9980025f4f.json--afd3e018c2312d70.json",
@@ -494,6 +502,14 @@
       "vacancy_ids": [
         "vac-aa5a49e7562dfce4",
         "vac-f563f704f36a7477"
+      ]
+    },
+    "Vacantes/vacantes_2026-09-11.json": {
+      "source_hash": "f9b0d57ff6e9c651e4c1cd27eaf12d3390df39273a52bc759bd7ec29047a9407",
+      "state_file": "sources/Vacantes__vacantes_2026-09-11.json--04a02b5df21eba9a.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-e6ba16ea5ebb9105"
       ]
     }
   }
