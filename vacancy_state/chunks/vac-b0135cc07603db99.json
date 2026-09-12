@@ -1,0 +1,39 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-b0135cc07603db99::core",
+      "chunk_type": "core",
+      "content_hash": "3530d321edb7deabd0766710cdb895152508ec4be6356d62306468d1982601a9",
+      "source_paths": [
+        "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json",
+        "Vacantes/vacantes_2026-09-12.json"
+      ],
+      "text": "Role: Lead Data Scientist (AWS) – Advanced English – 100% Remote LATAM - México\nCompany: Sapindex\nCompany category: Otro\nLocation: LATAM / México\nWork model: Remote\nApplication language: en\nJD fidelity: full (60/100)\nJD generation eligible: true\nDescription: ⭐ Lead Data Scientist (AWS) – Advanced English – 100% Remote LATAM 📍 Location: LATAM 🏢 Work Mode: 100% Remote 💼 Contract Type: Freelance 📅 Duration: 3 Months 🗣️ Language: Advanced English (mandatory) 🚀 Role Overview We are looking for a Lead Data Scientist to provide technical leadership across data science initiatives and guide teams in the design and implementation of advanced analytical solutions. 🛠 Responsibilities • Lead and coordinate data science projects. • Strong experience working with AWS data, analytics, and machine learning services. • AWS certifications (Machine Learning, Data Analytics, Solutions Architect, or similar) are desirable. • Define analytical strategies and methodologies. • Mentor and support Data Scientists. • Collaborate with business leaders and stakeholders. • Oversee model development and deployment processes. • Ensure delivery of high-quality analytical solutions. 💻 Requirements • Extensive experience in Data Science leadership roles. • Strong machine learning and statistical modeling expertise. • Advanced Python and SQL skills. • Experience managing stakeholders and technical teams. • Strategic and business-oriented mindset. • Advanced English communication skills (C1 or higher required) 🎁 Benefits • 100% remote work. • International and collaborative environment. • Leadership opportunity within a global project. 📩 Apply now!",
+      "vacancy_id": "vac-b0135cc07603db99"
+    },
+    {
+      "chunk_id": "vac-b0135cc07603db99::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "ae477c27130925cf8c099024ea647f1c85975461ad1d714d2b24db910dd9e2c5",
+      "source_paths": [
+        "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json",
+        "Vacantes/vacantes_2026-09-12.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Statistical Modeling; AWS; AWS Machine Learning Services; Data Science Leadership; Model Deployment; Stakeholder Management; Technical Mentoring",
+      "vacancy_id": "vac-b0135cc07603db99"
+    },
+    {
+      "chunk_id": "vac-b0135cc07603db99::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "749360f09ff597c06c15ce300354ae5b7439b9d43ba9e5356a7f079617398e32",
+      "source_paths": [
+        "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json",
+        "Vacantes/vacantes_2026-09-12.json"
+      ],
+      "text": "Source fit score: 92/100\nSource fit summary: Es la mejor oportunidad nueva no duplicada detectada en esta corrida por combinación de seniority Lead, modalidad 100% remota, Python/SQL, ML, AWS y liderazgo técnico. Se mantiene en prioridad secundaria por tratarse de consultoría y por la duración contractual de tres meses.\nSource strengths: Posición Lead 100% remota para LATAM con adaptación al horario de México, cumpliendo la prioridad principal de modalidad.; Requiere liderazgo técnico en Data Science, coordinación de iniciativas, mentoría y supervisión del desarrollo y despliegue de modelos.; Alineación técnica directa con Python y SQL avanzados, Machine Learning, modelado estadístico y servicios de datos/ML en AWS.; El requisito de inglés avanzado C1+ encaja con un perfil capaz de trabajar en proyectos internacionales.; La experiencia en AWS SageMaker y arquitectura de soluciones end-to-end es transferible al alcance del rol.\nSource gaps: Sapindex es una empresa de servicios/consultoría tecnológica, categoría explícitamente depriorizada frente a compañías de producto, banca o fintech.; El contrato publicado es freelance por 3 meses, lo que reduce significativamente la estabilidad frente a una posición permanente.; No existe foco explícito en banca, fraude, credit scoring, GenAI o experimentación A/B dentro de la descripción publicada.; PySpark no aparece como requisito explícito.",
+      "vacancy_id": "vac-b0135cc07603db99"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-b0135cc07603db99"
+}

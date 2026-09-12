@@ -1,5 +1,5 @@
 {
-  "last_run_id": "9b3dff6a4cf70a065c3240ac5a08d75ee9456c40-noop",
+  "last_run_id": "db3643de4e253cbe7231b20eb2ae5a4a92901c0b-noop",
   "pipeline_version": 5,
   "schema_version": 1,
   "sources": {
@@ -233,6 +233,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-1816ac379c3f1f5c"
+      ]
+    },
+    "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json": {
+      "source_hash": "4eb893df1691e528cd9f77966bce9482a825129c262a2c690a93b05379bb656d",
+      "state_file": "sources/Vacantes__enriched__auto__sapindex-lead-data-scientist-aws-advanced-english-100---a35b783cedc76d86.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-b0135cc07603db99"
       ]
     },
     "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json": {
@@ -510,6 +518,14 @@
       "status": "valid",
       "vacancy_ids": [
         "vac-e6ba16ea5ebb9105"
+      ]
+    },
+    "Vacantes/vacantes_2026-09-12.json": {
+      "source_hash": "a09cdb41d41f230c68cc3755fb7b8a4d14e1d6cd1102ead778fa64a28c35af00",
+      "state_file": "sources/Vacantes__vacantes_2026-09-12.json--f2fa82457c509ec3.json",
+      "status": "valid",
+      "vacancy_ids": [
+        "vac-b0135cc07603db99"
       ]
     }
   }

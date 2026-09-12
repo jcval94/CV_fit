@@ -2462,6 +2462,23 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "a0b8d036ea51c6fd168c9abc87e6378636dd326e4bca326df5de6990facac62d"
     },
+    "vac-b0135cc07603db99": {
+      "attempt_estimated_cost_usd": 0,
+      "attempt_known_cost_usd": 0.0,
+      "cumulative_known_cost_usd": 0.0,
+      "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************rGQA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}",
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "ba8eda4cbdec402becfadf9f09d1ae0dfbf71959bfec566e19e209ecbe9495d0",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "retrieval_mode": "hybrid-rerank",
+      "review_required": true,
+      "run_id": "auto-db3643de4e253cbe7231b20eb2ae5a4a92901c0b-vac-b0135cc07603db99",
+      "source_commit": "db3643de4e253cbe7231b20eb2ae5a4a92901c0b",
+      "status": "FAILED_REVIEW_REQUIRED",
+      "usage_report_file": "usage_report.json",
+      "vacancy_content_hash": "56678fde44a524fb460cdaabddc659e9b0a14405c4ad05db5fdb52ffaa005d6b"
+    },
     "vac-b8bc41ba93efd84c": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "26c4457743eaa5548c34c16ae6c2daaffdbe601b0d7e7a3a197b33e6a3d173b0",

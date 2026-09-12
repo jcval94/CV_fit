@@ -3,7 +3,10 @@
   "paths": {
     "deleted": [],
     "modified": [],
-    "new": [],
+    "new": [
+      "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json",
+      "Vacantes/vacantes_2026-09-12.json"
+    ],
     "quarantined": [],
     "unchanged": [
       "GPTW/enriched/auto/konf-o-ai-ml-engineer-sr-d5951e27cf.json",
@@ -35,7 +38,6 @@
       "Vacantes/enriched/auto/pfizer-data-science-manager-6b0826f58d.json",
       "Vacantes/enriched/auto/relx-lexisnexis-legal-professional-senior-machine-learning-engineer-iii-1286d9a1e4.json",
       "Vacantes/enriched/auto/santander-m-xico-gte-estrateg-decisi-credit-aut-428276aeff.json",
-      "Vacantes/enriched/auto/sapindex-lead-data-scientist-aws-advanced-english-100-remote-latam-m-xico-a1576d1390.json",
       "Vacantes/enriched/auto/scotiabank-subdir-data-science-acd92e9818.json",
       "Vacantes/enriched/auto/spot2-mx-data-scientist-senior-ia-y-experimentaci-n-8baad12db6.json",
       "Vacantes/enriched/auto/takeda-senior-data-scientist-85888d2be3.json",
@@ -68,29 +70,30 @@
       "Vacantes/vacantes_2026-09-08.json",
       "Vacantes/vacantes_2026-09-09.json",
       "Vacantes/vacantes_2026-09-10.json",
-      "Vacantes/vacantes_2026-09-11.json",
-      "Vacantes/vacantes_2026-09-12.json"
+      "Vacantes/vacantes_2026-09-11.json"
     ]
   },
   "pipeline_version": 5,
-  "reindexed_vacancy_ids": [],
-  "run_id": "db3643de4e253cbe7231b20eb2ae5a4a92901c0b-noop",
+  "reindexed_vacancy_ids": [
+    "vac-b0135cc07603db99"
+  ],
+  "run_id": "db3643de4e253cbe7231b20eb2ae5a4a92901c0b",
   "schema_version": 1,
   "source_commit": "db3643de4e253cbe7231b20eb2ae5a4a92901c0b",
   "source_counts": {
     "deleted": 0,
     "discovered": 64,
     "modified": 0,
-    "new": 0,
+    "new": 2,
     "quarantined": 0,
-    "unchanged": 64
+    "unchanged": 62
   },
   "status": "success",
   "vacancy_counts": {
     "active": 44,
     "deleted": 0,
-    "impacted": 0,
-    "reindexed": 0,
+    "impacted": 1,
+    "reindexed": 1,
     "semantic_unchanged": 0
   },
   "validation_errors": {}
