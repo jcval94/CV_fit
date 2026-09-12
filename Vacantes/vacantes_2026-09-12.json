@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-12",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "sapindex-4465673762",
+      "puesto": "Lead Data Scientist (AWS) – Advanced English – 100% Remote LATAM - México",
+      "empresa": "Sapindex",
+      "categoria_empresa": "Otro",
+      "ubicacion": "LATAM / México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 1 día",
+      "porcentaje_ajuste": 92,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Posición Lead 100% remota para LATAM con adaptación al horario de México, cumpliendo la prioridad principal de modalidad.",
+          "Requiere liderazgo técnico en Data Science, coordinación de iniciativas, mentoría y supervisión del desarrollo y despliegue de modelos.",
+          "Alineación técnica directa con Python y SQL avanzados, Machine Learning, modelado estadístico y servicios de datos/ML en AWS.",
+          "El requisito de inglés avanzado C1+ encaja con un perfil capaz de trabajar en proyectos internacionales.",
+          "La experiencia en AWS SageMaker y arquitectura de soluciones end-to-end es transferible al alcance del rol."
+        ],
+        "posibles_gaps": [
+          "Sapindex es una empresa de servicios/consultoría tecnológica, categoría explícitamente depriorizada frente a compañías de producto, banca o fintech.",
+          "El contrato publicado es freelance por 3 meses, lo que reduce significativamente la estabilidad frente a una posición permanente.",
+          "No existe foco explícito en banca, fraude, credit scoring, GenAI o experimentación A/B dentro de la descripción publicada.",
+          "PySpark no aparece como requisito explícito."
+        ],
+        "resumen": "Es la mejor oportunidad nueva no duplicada detectada en esta corrida por combinación de seniority Lead, modalidad 100% remota, Python/SQL, ML, AWS y liderazgo técnico. Se mantiene en prioridad secundaria por tratarse de consultoría y por la duración contractual de tres meses."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Statistical Modeling",
+        "AWS",
+        "AWS Machine Learning Services",
+        "Data Science Leadership",
+        "Model Deployment",
+        "Stakeholder Management",
+        "Technical Mentoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.sapindex.es/lead-data-scientist-aws-advanced-english-100-remote-latam-mexico-nrQIZNuBpjqK/"
+    }
+  ]
+}
