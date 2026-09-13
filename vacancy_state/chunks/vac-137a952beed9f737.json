@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-137a952beed9f737::core",
+      "chunk_type": "core",
+      "content_hash": "7ca4543f097d98e08948df51173f5db5e5449025ee04c94ef1cf223edafdbe5c",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Role: Staff Data Scientist - Quora (Remote)\nCompany: Quora\nCompany category: Producto Tech\nLocation: México / Remote - Multiple Locations\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-137a952beed9f737"
+    },
+    {
+      "chunk_id": "vac-137a952beed9f737::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "e93e4f62d6a869cdcf2a223f80e3d8247776a3b09cf08d23464ab55c87a8e387",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Technologies / capabilities: Python; R; Statistics; A/B Testing; Randomized Controlled Experiments; Causal Inference; Regression; Hypothesis Testing; Presto; Trino; Large-scale Data; Product Analytics; Recommender Systems; Technical Leadership; Mentoring",
+      "vacancy_id": "vac-137a952beed9f737"
+    },
+    {
+      "chunk_id": "vac-137a952beed9f737::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "58c71e8b586d3f8bcc9cd0e9ca878676c518a1ab0a6b6bb8ecbab5b082964681",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Source fit score: 97/100\nSource fit summary: Es la oportunidad nueva de mayor prioridad: Staff real, 100% remota desde México, fuerte en experimentación, causalidad, Python, producto, autonomía y mentoría. El principal trade-off es la ausencia de dominio financiero directo, pero el seniority y el tipo de problemas encajan excepcionalmente bien con un perfil de liderazgo técnico en Data Science.\nSource strengths: Staff-level real con ownership de problemas ambiguos y de alto impacto, participación directa en estrategia de producto y colaboración con liderazgo de la compañía.; Excelente alineación con experimentación: diseño y evaluación de randomized controlled experiments, hypothesis testing y causal inference.; Requiere 7+ años de experiencia cuantitativa, incluyendo 5+ años como Data Scientist y trayectoria comprobada a nivel Senior o Staff.; Alineación fuerte con Python, modelado estadístico, análisis de grandes volúmenes de datos y herramientas distribuidas como Presto/Trino.; Incluye mentoría de otros Data Scientists, elevación de estándares técnicos y definición de metodologías y frameworks para el equipo.; Quora es remote-first y la publicación está abierta explícitamente para México, cumpliendo la máxima prioridad de modalidad.; El ecosistema de la compañía incluye Poe y productos de IA generativa, aunque esta vacante específica trabaja directamente sobre el producto Quora.\nSource gaps: El rol no está enfocado en banca, riesgo, fraude o credit scoring, por lo que la experiencia financiera del perfil no es el diferenciador principal.; SQL no aparece como requisito explícito en la descripción principal recuperada.; PySpark no aparece de forma explícita; la experiencia distribuida solicitada se ejemplifica con Presto/Trino.; Aunque Quora opera también Poe, esta posición está asignada al producto Quora y no es un rol de GenAI puro.",
+      "vacancy_id": "vac-137a952beed9f737"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-137a952beed9f737"
+}

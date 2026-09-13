@@ -1,0 +1,77 @@
+{
+  "application_language": "en",
+  "city": "Ciudad de México, México",
+  "company": "Netflix",
+  "company_category": "Producto Tech",
+  "content_hash": "685e93bdf4bca4ef743f9afb9b1bd6d5b00f90447f0e194b37701d7387a9486b",
+  "description": null,
+  "fit_gaps": [
+    "La publicación no confirma modalidad remota o híbrida; se clasifica conservadoramente como presencial al estar basada en la oficina de Ciudad de México.",
+    "No existe foco en banca, riesgo, fraude o credit scoring.",
+    "GenAI y liderazgo formal de personas no aparecen como componentes centrales del puesto.",
+    "El rol está más orientado a Decision Science, analytics estratégico y modelado estadístico que a arquitectura completa de ML productivo."
+  ],
+  "fit_score": 94.0,
+  "fit_strengths": [
+    "Rol Senior dentro del equipo de Content Data Science and Engineering con ownership de análisis de alto impacto para decisiones de contenido en LATAM.",
+    "Alineación técnica directa con SQL, Python o R y tecnologías distribuidas como Spark, Presto, Hive y S3.",
+    "Requiere modelado estadístico, predictive modeling y capacidad para distinguir incrementalidad de correlación y manejar confounders.",
+    "Incluye experimentación, power calculations e interpretación rigurosa de resultados, alineándose bien con experiencia en A/B testing.",
+    "Muy fuerte componente de stakeholder management, storytelling y traducción de hallazgos analíticos a decisiones de negocio.",
+    "Compañía de producto global con problemas de gran escala, alta autonomía y exposición internacional desde Ciudad de México."
+  ],
+  "fit_summary": "Excelente alternativa de producto global por SQL, Python, Spark, experimentación, modelado estadístico y autonomía. El ajuste técnico y de Decision Science es muy alto, pero queda detrás de Quora porque no se confirmó modalidad remota/híbrida y porque aprovecha menos la experiencia en banca, riesgo y GenAI.",
+  "identity_key": "5c30cdb4a6936db237179c27acb6dac0e6bb2e3afa27204c08f4d2fa58290316",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "Ciudad de México, México",
+  "posted_date": null,
+  "posted_date_raw": "Hace 3 días",
+  "provenance": [
+    {
+      "source_commit": "75820faeb01fb1c8212f3c90a750260560ac0fea",
+      "source_entry_index": 1,
+      "source_format": "vacantes_v1",
+      "source_hash": "b405109aeaf68ac73cbd1b6760f883f84b485daed9a8ff5a98f8229b728f44b3",
+      "source_native_id": "netflix-790317556026",
+      "source_path": "Vacantes/vacantes_2026-09-13.json",
+      "source_search_date": "2026-09-13",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Senior Data Scientist - LATAM Content",
+  "salary": "No especificado para México",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "SQL",
+    "Python",
+    "R",
+    "Spark",
+    "Presto",
+    "Hive",
+    "S3",
+    "Predictive Modeling",
+    "Statistical Modeling",
+    "Experimentation",
+    "Power Calculations",
+    "Causal Reasoning",
+    "Data Visualization",
+    "Product Analytics",
+    "Storytelling"
+  ],
+  "url": "https://explore.jobs.netflix.net/careers/job/790317556026-senior-data-scientist-latam-content-mexico-city-mexico?domain=netflix.com&microsite=netflix.com",
+  "vacancy_id": "vac-5c30cdb4a6936db2",
+  "work_model": "On-site"
+}

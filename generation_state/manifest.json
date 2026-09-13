@@ -282,6 +282,17 @@
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "416028df008e3e4550ab058ce793a683f23635d2be8f087fc50b45109dfbf47c"
     },
+    "vac-137a952beed9f737": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "df0740f43e153882d74aa00197a54acf1ed0bfbec1c8a7c6bcf7f47f77971d1c",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-137a952beed9f737 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "75820faeb01fb1c8212f3c90a750260560ac0fea",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "6a7fdb85b39abcc3d94c05c503a043543f964fb0e7931e2a5a591d203bec917f"
+    },
     "vac-14b95b3407bcb148": {
       "application_bundle_file": "application_bundle_report.json",
       "attempt_known_cost_usd": 0.9179095,
@@ -884,6 +895,17 @@
       "unsupported_requirements": [],
       "usage_report_file": "usage_report.json",
       "vacancy_content_hash": "1aee271b817ceb3be5ac62850e3443528c8b132818933855a01e9c0a82caa681"
+    },
+    "vac-5c30cdb4a6936db2": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "592a9e2011d2113125cb6460d54b7ee2e3c88356d2cbd5f6fbbb81a047138bb2",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-5c30cdb4a6936db2 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "75820faeb01fb1c8212f3c90a750260560ac0fea",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "685e93bdf4bca4ef743f9afb9b1bd6d5b00f90447f0e194b37701d7387a9486b"
     },
     "vac-5cbdd1b45ef6adc3": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",

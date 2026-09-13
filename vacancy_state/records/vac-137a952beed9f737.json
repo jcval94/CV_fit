@@ -1,0 +1,78 @@
+{
+  "application_language": "en",
+  "city": "México / Remote - Multiple Locations",
+  "company": "Quora",
+  "company_category": "Producto Tech",
+  "content_hash": "6a7fdb85b39abcc3d94c05c503a043543f964fb0e7931e2a5a591d203bec917f",
+  "description": null,
+  "fit_gaps": [
+    "El rol no está enfocado en banca, riesgo, fraude o credit scoring, por lo que la experiencia financiera del perfil no es el diferenciador principal.",
+    "SQL no aparece como requisito explícito en la descripción principal recuperada.",
+    "PySpark no aparece de forma explícita; la experiencia distribuida solicitada se ejemplifica con Presto/Trino.",
+    "Aunque Quora opera también Poe, esta posición está asignada al producto Quora y no es un rol de GenAI puro."
+  ],
+  "fit_score": 97.0,
+  "fit_strengths": [
+    "Staff-level real con ownership de problemas ambiguos y de alto impacto, participación directa en estrategia de producto y colaboración con liderazgo de la compañía.",
+    "Excelente alineación con experimentación: diseño y evaluación de randomized controlled experiments, hypothesis testing y causal inference.",
+    "Requiere 7+ años de experiencia cuantitativa, incluyendo 5+ años como Data Scientist y trayectoria comprobada a nivel Senior o Staff.",
+    "Alineación fuerte con Python, modelado estadístico, análisis de grandes volúmenes de datos y herramientas distribuidas como Presto/Trino.",
+    "Incluye mentoría de otros Data Scientists, elevación de estándares técnicos y definición de metodologías y frameworks para el equipo.",
+    "Quora es remote-first y la publicación está abierta explícitamente para México, cumpliendo la máxima prioridad de modalidad.",
+    "El ecosistema de la compañía incluye Poe y productos de IA generativa, aunque esta vacante específica trabaja directamente sobre el producto Quora."
+  ],
+  "fit_summary": "Es la oportunidad nueva de mayor prioridad: Staff real, 100% remota desde México, fuerte en experimentación, causalidad, Python, producto, autonomía y mentoría. El principal trade-off es la ausencia de dominio financiero directo, pero el seniority y el tipo de problemas encajan excepcionalmente bien con un perfil de liderazgo técnico en Data Science.",
+  "identity_key": "137a952beed9f737a0cc12eb9598bfc756b8d11723ba370740d0ed14d5580586",
+  "jd_fidelity": "sparse",
+  "jd_fidelity_reasons": [
+    "description_chars=0",
+    "substantive_requirements=0",
+    "substantive_responsibilities=0",
+    "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+  ],
+  "jd_fidelity_score": 0.0,
+  "jd_generation_eligible": false,
+  "language_confidence": 0.86,
+  "language_source": "role_title",
+  "location_raw": "México / Remote - Multiple Locations",
+  "posted_date": "2026-09-10",
+  "posted_date_raw": "2026-09-10",
+  "provenance": [
+    {
+      "source_commit": "75820faeb01fb1c8212f3c90a750260560ac0fea",
+      "source_entry_index": 0,
+      "source_format": "vacantes_v1",
+      "source_hash": "b405109aeaf68ac73cbd1b6760f883f84b485daed9a8ff5a98f8229b728f44b3",
+      "source_native_id": "quora-4465897976",
+      "source_path": "Vacantes/vacantes_2026-09-13.json",
+      "source_search_date": "2026-09-13",
+      "source_updated_at": null
+    }
+  ],
+  "requirements": [],
+  "responsibilities": [],
+  "role_title": "Staff Data Scientist - Quora (Remote)",
+  "salary": "No especificado para México; referencia publicada solo para EE.UU.: USD 163,560-240,092 + equity + benefits",
+  "schema_version": 2,
+  "seniority": null,
+  "tech_stack": [
+    "Python",
+    "R",
+    "Statistics",
+    "A/B Testing",
+    "Randomized Controlled Experiments",
+    "Causal Inference",
+    "Regression",
+    "Hypothesis Testing",
+    "Presto",
+    "Trino",
+    "Large-scale Data",
+    "Product Analytics",
+    "Recommender Systems",
+    "Technical Leadership",
+    "Mentoring"
+  ],
+  "url": "https://jobs.ashbyhq.com/quora/f130d417-a9ac-479d-ae63-3dca17c260f9",
+  "vacancy_id": "vac-137a952beed9f737",
+  "work_model": "Remote"
+}

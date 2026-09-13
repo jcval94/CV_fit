@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-5c30cdb4a6936db2::core",
+      "chunk_type": "core",
+      "content_hash": "c0c909ef0986f4b77374d3ccbd2be24836aabae938c1a417da703258157e947d",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Role: Senior Data Scientist - LATAM Content\nCompany: Netflix\nCompany category: Producto Tech\nLocation: Ciudad de México, México\nWork model: On-site\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-5c30cdb4a6936db2"
+    },
+    {
+      "chunk_id": "vac-5c30cdb4a6936db2::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "5882d5c70a270645fb4a0af1d297a785af6f26c286d2e08a67d071e9ba3390a9",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Technologies / capabilities: SQL; Python; R; Spark; Presto; Hive; S3; Predictive Modeling; Statistical Modeling; Experimentation; Power Calculations; Causal Reasoning; Data Visualization; Product Analytics; Storytelling",
+      "vacancy_id": "vac-5c30cdb4a6936db2"
+    },
+    {
+      "chunk_id": "vac-5c30cdb4a6936db2::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "dfc1262c589bde6c4b1ea2f36836a030053b3ef0f81edbd0e3134f23c4e9b630",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-13.json"
+      ],
+      "text": "Source fit score: 94/100\nSource fit summary: Excelente alternativa de producto global por SQL, Python, Spark, experimentación, modelado estadístico y autonomía. El ajuste técnico y de Decision Science es muy alto, pero queda detrás de Quora porque no se confirmó modalidad remota/híbrida y porque aprovecha menos la experiencia en banca, riesgo y GenAI.\nSource strengths: Rol Senior dentro del equipo de Content Data Science and Engineering con ownership de análisis de alto impacto para decisiones de contenido en LATAM.; Alineación técnica directa con SQL, Python o R y tecnologías distribuidas como Spark, Presto, Hive y S3.; Requiere modelado estadístico, predictive modeling y capacidad para distinguir incrementalidad de correlación y manejar confounders.; Incluye experimentación, power calculations e interpretación rigurosa de resultados, alineándose bien con experiencia en A/B testing.; Muy fuerte componente de stakeholder management, storytelling y traducción de hallazgos analíticos a decisiones de negocio.; Compañía de producto global con problemas de gran escala, alta autonomía y exposición internacional desde Ciudad de México.\nSource gaps: La publicación no confirma modalidad remota o híbrida; se clasifica conservadoramente como presencial al estar basada en la oficina de Ciudad de México.; No existe foco en banca, riesgo, fraude o credit scoring.; GenAI y liderazgo formal de personas no aparecen como componentes centrales del puesto.; El rol está más orientado a Decision Science, analytics estratégico y modelado estadístico que a arquitectura completa de ML productivo.",
+      "vacancy_id": "vac-5c30cdb4a6936db2"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-5c30cdb4a6936db2"
+}
