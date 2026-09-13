@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-13",
+    "total_vacantes_encontradas": 2,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "quora-4465897976",
+      "puesto": "Staff Data Scientist - Quora (Remote)",
+      "empresa": "Quora",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "México / Remote - Multiple Locations",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-09-10",
+      "porcentaje_ajuste": 97,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Staff-level real con ownership de problemas ambiguos y de alto impacto, participación directa en estrategia de producto y colaboración con liderazgo de la compañía.",
+          "Excelente alineación con experimentación: diseño y evaluación de randomized controlled experiments, hypothesis testing y causal inference.",
+          "Requiere 7+ años de experiencia cuantitativa, incluyendo 5+ años como Data Scientist y trayectoria comprobada a nivel Senior o Staff.",
+          "Alineación fuerte con Python, modelado estadístico, análisis de grandes volúmenes de datos y herramientas distribuidas como Presto/Trino.",
+          "Incluye mentoría de otros Data Scientists, elevación de estándares técnicos y definición de metodologías y frameworks para el equipo.",
+          "Quora es remote-first y la publicación está abierta explícitamente para México, cumpliendo la máxima prioridad de modalidad.",
+          "El ecosistema de la compañía incluye Poe y productos de IA generativa, aunque esta vacante específica trabaja directamente sobre el producto Quora."
+        ],
+        "posibles_gaps": [
+          "El rol no está enfocado en banca, riesgo, fraude o credit scoring, por lo que la experiencia financiera del perfil no es el diferenciador principal.",
+          "SQL no aparece como requisito explícito en la descripción principal recuperada.",
+          "PySpark no aparece de forma explícita; la experiencia distribuida solicitada se ejemplifica con Presto/Trino.",
+          "Aunque Quora opera también Poe, esta posición está asignada al producto Quora y no es un rol de GenAI puro."
+        ],
+        "resumen": "Es la oportunidad nueva de mayor prioridad: Staff real, 100% remota desde México, fuerte en experimentación, causalidad, Python, producto, autonomía y mentoría. El principal trade-off es la ausencia de dominio financiero directo, pero el seniority y el tipo de problemas encajan excepcionalmente bien con un perfil de liderazgo técnico en Data Science."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "R",
+        "Statistics",
+        "A/B Testing",
+        "Randomized Controlled Experiments",
+        "Causal Inference",
+        "Regression",
+        "Hypothesis Testing",
+        "Presto",
+        "Trino",
+        "Large-scale Data",
+        "Product Analytics",
+        "Recommender Systems",
+        "Technical Leadership",
+        "Mentoring"
+      ],
+      "rango_salarial": "No especificado para México; referencia publicada solo para EE.UU.: USD 163,560-240,092 + equity + benefits",
+      "url_postulacion": "https://jobs.ashbyhq.com/quora/f130d417-a9ac-479d-ae63-3dca17c260f9/"
+    },
+    {
+      "id_vacante": "netflix-790317556026",
+      "puesto": "Senior Data Scientist - LATAM Content",
+      "empresa": "Netflix",
+      "categoria_empresa": "Producto Tech",
+      "ubicacion": "Ciudad de México, México",
+      "modalidad": "Presencial",
+      "fecha_publicacion": "Hace 3 días",
+      "porcentaje_ajuste": 94,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Rol Senior dentro del equipo de Content Data Science and Engineering con ownership de análisis de alto impacto para decisiones de contenido en LATAM.",
+          "Alineación técnica directa con SQL, Python o R y tecnologías distribuidas como Spark, Presto, Hive y S3.",
+          "Requiere modelado estadístico, predictive modeling y capacidad para distinguir incrementalidad de correlación y manejar confounders.",
+          "Incluye experimentación, power calculations e interpretación rigurosa de resultados, alineándose bien con experiencia en A/B testing.",
+          "Muy fuerte componente de stakeholder management, storytelling y traducción de hallazgos analíticos a decisiones de negocio.",
+          "Compañía de producto global con problemas de gran escala, alta autonomía y exposición internacional desde Ciudad de México."
+        ],
+        "posibles_gaps": [
+          "La publicación no confirma modalidad remota o híbrida; se clasifica conservadoramente como presencial al estar basada en la oficina de Ciudad de México.",
+          "No existe foco en banca, riesgo, fraude o credit scoring.",
+          "GenAI y liderazgo formal de personas no aparecen como componentes centrales del puesto.",
+          "El rol está más orientado a Decision Science, analytics estratégico y modelado estadístico que a arquitectura completa de ML productivo."
+        ],
+        "resumen": "Excelente alternativa de producto global por SQL, Python, Spark, experimentación, modelado estadístico y autonomía. El ajuste técnico y de Decision Science es muy alto, pero queda detrás de Quora porque no se confirmó modalidad remota/híbrida y porque aprovecha menos la experiencia en banca, riesgo y GenAI."
+      },
+      "stack_clave_detectado": [
+        "SQL",
+        "Python",
+        "R",
+        "Spark",
+        "Presto",
+        "Hive",
+        "S3",
+        "Predictive Modeling",
+        "Statistical Modeling",
+        "Experimentation",
+        "Power Calculations",
+        "Causal Reasoning",
+        "Data Visualization",
+        "Product Analytics",
+        "Storytelling"
+      ],
+      "rango_salarial": "No especificado para México",
+      "url_postulacion": "https://explore.jobs.netflix.net/careers/job/790317556026-senior-data-scientist-latam-content-mexico-city-mexico?domain=netflix.com&microsite=netflix.com"
+    }
+  ]
+}
