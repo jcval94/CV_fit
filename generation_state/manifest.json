@@ -2822,6 +2822,17 @@
       "status": "SKIPPED_NOT_ELIGIBLE",
       "vacancy_content_hash": "87166c1b4ccf56b4779014f12dba6ad31218b23adbb9c104da4bf7774f6ed447"
     },
+    "vac-e373819a283d98c0": {
+      "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
+      "fingerprint": "10284e209f166bf97292f90a6625e877e10bc8b6e9ac90e41c3ea23cbefeaafd",
+      "generation_logic_version": 6,
+      "ready_to_send": false,
+      "reason": "vacancy vac-e373819a283d98c0 is not CV-generation eligible: jd_fidelity=sparse score=0.0. Preserve the employer's original description/requirements/responsibilities before spending model tokens. Details: description_chars=0; substantive_requirements=0; substantive_responsibilities=0; insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity",
+      "retrieval_mode": "hybrid-rerank",
+      "source_commit": "d720c8809a7d751d430c0d9831ab0f7bbe658afd",
+      "status": "SKIPPED_NOT_ELIGIBLE",
+      "vacancy_content_hash": "2d7ac0079b42b09471d6f4d79dd4da91eb245a29693f5c7944396a1b945fdb06"
+    },
     "vac-e678a6f22c3d2512": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
       "fingerprint": "594acfacbdafa9d9557783a0f3bc92d187dca926658dd59108b59c5f397adee9",

@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-e373819a283d98c0::core",
+      "chunk_type": "core",
+      "content_hash": "44779607eced76d158146e44d48ce5ff8559632ef2b6c8e2bd6ed1ec8e3ba764",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-14.json"
+      ],
+      "text": "Role: Senior Data Scientist\nCompany: Kueski\nCompany category: Fintech\nLocation: Guadalajara, Jalisco, México\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-e373819a283d98c0"
+    },
+    {
+      "chunk_id": "vac-e373819a283d98c0::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "5bbd6ffbea7f2f54282650452b281c8e3cf371ded9d63a6ecbdb5f6f835ce1a8",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-14.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Fraud Detection; Credit Risk; Origination Scoring; AML; KYC; Graph Analytics; Network Science; Behavioral Biometrics; A/B Testing; Causal Inference; Uplift Modeling; Treatment Effect Estimation; AWS Machine Learning Services; Production ML; Model Monitoring; Technical Mentoring",
+      "vacancy_id": "vac-e373819a283d98c0"
+    },
+    {
+      "chunk_id": "vac-e373819a283d98c0::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "7f4fd2361ebf1fc9bf91c193ffcfd10f8e6590a8533066e2118ab43432d853f3",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-14.json"
+      ],
+      "text": "Source fit score: 99/100\nSource fit summary: Match excepcional y probablemente el mejor de esta corrida: fintech, fraude, riesgo, crédito, Python/SQL, modelos productivos end-to-end, experimentación, causal inference y mentoría. La única validación crítica es si el requisito de estar basado en Guadalajara admite contratación remota desde CDMX.\nSource strengths: Fintech mexicana líder en BNPL y crédito al consumo, con fuerte alineación con experiencia en banca, riesgo, fraude y decisioning financiero.; El rol combina machine learning, analítica profunda y experimentación con ownership completo del ciclo de vida de modelos, desde feature engineering hasta monitoreo en producción y mejora continua.; Requiere Python y SQL sólidos, además de experiencia práctica con ML y construcción de pipelines productivos.; El dominio deseable incluye fraude organizado, sistemas híbridos reglas + ML para autorización u originación, AML/KYC y experiencia en riesgo, crédito, pricing o comportamiento de clientes.; Valora causal inference, uplift modeling y treatment effect estimation, lo que encaja con experiencia en experimentación y optimización de decisiones.; Incluye mentoría, code reviews, autonomía transversal y participación en recruiting técnico, alineándose con liderazgo técnico senior.; La posición está clasificada como remota y de tiempo completo, cumpliendo la prioridad principal de modalidad.\nSource gaps: PySpark no aparece como requisito explícito en la publicación.; GenAI no es el núcleo del puesto, aunque se espera uso práctico de herramientas y capacidades emergentes de IA dentro del flujo de Data Science.; Aunque la modalidad es remota, la publicación indica que el candidato debe estar basado en Guadalajara, por lo que conviene validar flexibilidad geográfica desde el primer contacto.",
+      "vacancy_id": "vac-e373819a283d98c0"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-e373819a283d98c0"
+}
