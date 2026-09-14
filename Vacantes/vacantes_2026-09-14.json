@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-14",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "kueski-4458311985",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Kueski",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "Guadalajara, Jalisco, México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 1 semana",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Fintech mexicana líder en BNPL y crédito al consumo, con fuerte alineación con experiencia en banca, riesgo, fraude y decisioning financiero.",
+          "El rol combina machine learning, analítica profunda y experimentación con ownership completo del ciclo de vida de modelos, desde feature engineering hasta monitoreo en producción y mejora continua.",
+          "Requiere Python y SQL sólidos, además de experiencia práctica con ML y construcción de pipelines productivos.",
+          "El dominio deseable incluye fraude organizado, sistemas híbridos reglas + ML para autorización u originación, AML/KYC y experiencia en riesgo, crédito, pricing o comportamiento de clientes.",
+          "Valora causal inference, uplift modeling y treatment effect estimation, lo que encaja con experiencia en experimentación y optimización de decisiones.",
+          "Incluye mentoría, code reviews, autonomía transversal y participación en recruiting técnico, alineándose con liderazgo técnico senior.",
+          "La posición está clasificada como remota y de tiempo completo, cumpliendo la prioridad principal de modalidad."
+        ],
+        "posibles_gaps": [
+          "PySpark no aparece como requisito explícito en la publicación.",
+          "GenAI no es el núcleo del puesto, aunque se espera uso práctico de herramientas y capacidades emergentes de IA dentro del flujo de Data Science.",
+          "Aunque la modalidad es remota, la publicación indica que el candidato debe estar basado en Guadalajara, por lo que conviene validar flexibilidad geográfica desde el primer contacto."
+        ],
+        "resumen": "Match excepcional y probablemente el mejor de esta corrida: fintech, fraude, riesgo, crédito, Python/SQL, modelos productivos end-to-end, experimentación, causal inference y mentoría. La única validación crítica es si el requisito de estar basado en Guadalajara admite contratación remota desde CDMX."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Fraud Detection",
+        "Credit Risk",
+        "Origination Scoring",
+        "AML",
+        "KYC",
+        "Graph Analytics",
+        "Network Science",
+        "Behavioral Biometrics",
+        "A/B Testing",
+        "Causal Inference",
+        "Uplift Modeling",
+        "Treatment Effect Estimation",
+        "AWS Machine Learning Services",
+        "Production ML",
+        "Model Monitoring",
+        "Technical Mentoring"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.ashbyhq.com/kueski/37ae63fd-6bb8-4731-9af6-a266dc3f51cf"
+    }
+  ]
+}
