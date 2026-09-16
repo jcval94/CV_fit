@@ -1,0 +1,90 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "México / LATAM (cliente en Ciudad de México)",
+      "company": "Muttdata",
+      "company_category": "Otro",
+      "content_hash": "fe86b8a1315ec5c8d193a177b9204e7d854a6a209b5d30638da55fc01092e669",
+      "description": null,
+      "fit_gaps": [
+        "Muttdata es una empresa de servicios/consultoría de Data & AI, categoría depriorizada frente a compañías de producto, banca o fintech; se conserva por el ajuste extraordinariamente específico del proyecto.",
+        "PySpark y SQL no aparecen como requisitos explícitos en esta vacante concreta.",
+        "No se menciona liderazgo formal de personas ni mentoría como responsabilidad principal.",
+        "El componente GenAI/agentic es deseable, no el núcleo del rol."
+      ],
+      "fit_score": 99.0,
+      "fit_strengths": [
+        "Ajuste de dominio excepcional: ownership directo de un Credit Score productivo, segmentación por probabilidad de default, líneas de crédito dinámicas y expected loss.",
+        "Requiere experiencia demostrable en credit risk, scoring y supervised machine learning, altamente alineada con experiencia bancaria y de riesgo.",
+        "Alineación técnica directa con Python, scikit-learn, XGBoost, MLflow, estadística, validación y producción de modelos mediante PyFunc, model cards y tests.",
+        "Incluye evaluación con AUC-ROC, F1 y calibración de probabilidades, además de segmentación de riesgo A-F bajo estándares de crédito.",
+        "Valora experiencia en servicios financieros, burós de crédito o portafolios de crédito comercial.",
+        "La infraestructura agentic aparece explícitamente como deseable mediante Mosaic AI Agent Framework, agent orchestration y MCP.",
+        "La vacante oficial está publicada como Remote Full Time y fuentes recientes la identifican como abierta para México."
+      ],
+      "fit_summary": "Es el mejor hallazgo nuevo de la corrida: Senior Data Scientist remoto con un problema casi perfectamente transferible desde banca —credit scoring, PD, expected loss, líneas dinámicas, Python/XGBoost, MLflow y producción end-to-end— además de exposición opcional a agentes/MCP. Aunque la empresa es consultoría, el nivel de coincidencia funcional justifica priorizar la postulación.",
+      "identity_key": "67ff92b0c1f8ca689bf832ceab46567f8d3cc7e6b631cf03fa87a27e0d10a1e7",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "México / LATAM (cliente en Ciudad de México)",
+      "posted_date": "2026-09-15",
+      "posted_date_raw": "2026-09-15",
+      "provenance": [
+        {
+          "source_commit": "5f9fb5332104b9168a9c5846b17b5a3070fe9a90",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "a353c2df9fad286b0b40acd2ca23cde3f2da39975ac771bc4aae4c9b84a518af",
+          "source_native_id": "muttdata-796013c7-b441-4ac9-b27c-7b47ee6aab39",
+          "source_path": "Vacantes/vacantes_2026-09-16.json",
+          "source_search_date": "2026-09-16",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Senior Data Scientist - Credit Risk Modeler - Databricks",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "Scikit-learn",
+        "XGBoost",
+        "Machine Learning",
+        "Credit Risk",
+        "Credit Scoring",
+        "Probability of Default",
+        "Expected Loss",
+        "Gradient Boosting",
+        "AUC-ROC",
+        "F1",
+        "Probability Calibration",
+        "MLflow",
+        "PyFunc",
+        "Model Cards",
+        "Databricks",
+        "Mosaic AI Agent Framework",
+        "MCP",
+        "Agent Orchestration"
+      ],
+      "url": "https://jobs.lever.co/muttdata/796013c7-b441-4ac9-b27c-7b47ee6aab39",
+      "vacancy_id": "vac-67ff92b0c1f8ca68",
+      "work_model": "Remote"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "a353c2df9fad286b0b40acd2ca23cde3f2da39975ac771bc4aae4c9b84a518af",
+  "source_path": "Vacantes/vacantes_2026-09-16.json",
+  "status": "valid"
+}

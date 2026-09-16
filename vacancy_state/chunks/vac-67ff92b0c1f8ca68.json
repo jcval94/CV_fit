@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-67ff92b0c1f8ca68::core",
+      "chunk_type": "core",
+      "content_hash": "eda489778bd27316b29c71a1f0f18c79bf05d19e66de08b202bf5045ccd8326f",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-16.json"
+      ],
+      "text": "Role: Senior Data Scientist - Credit Risk Modeler - Databricks\nCompany: Muttdata\nCompany category: Otro\nLocation: México / LATAM (cliente en Ciudad de México)\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-67ff92b0c1f8ca68"
+    },
+    {
+      "chunk_id": "vac-67ff92b0c1f8ca68::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "0362c7bd73cfee50c45b63e356b697e8d955cf1020226f74e928e8ef40df9038",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-16.json"
+      ],
+      "text": "Technologies / capabilities: Python; Scikit-learn; XGBoost; Machine Learning; Credit Risk; Credit Scoring; Probability of Default; Expected Loss; Gradient Boosting; AUC-ROC; F1; Probability Calibration; MLflow; PyFunc; Model Cards; Databricks; Mosaic AI Agent Framework; MCP; Agent Orchestration",
+      "vacancy_id": "vac-67ff92b0c1f8ca68"
+    },
+    {
+      "chunk_id": "vac-67ff92b0c1f8ca68::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "be3c54741c77fc2d02eb22cb390c60a4b8172641d82a53d89323e379c9bdb924",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-16.json"
+      ],
+      "text": "Source fit score: 99/100\nSource fit summary: Es el mejor hallazgo nuevo de la corrida: Senior Data Scientist remoto con un problema casi perfectamente transferible desde banca —credit scoring, PD, expected loss, líneas dinámicas, Python/XGBoost, MLflow y producción end-to-end— además de exposición opcional a agentes/MCP. Aunque la empresa es consultoría, el nivel de coincidencia funcional justifica priorizar la postulación.\nSource strengths: Ajuste de dominio excepcional: ownership directo de un Credit Score productivo, segmentación por probabilidad de default, líneas de crédito dinámicas y expected loss.; Requiere experiencia demostrable en credit risk, scoring y supervised machine learning, altamente alineada con experiencia bancaria y de riesgo.; Alineación técnica directa con Python, scikit-learn, XGBoost, MLflow, estadística, validación y producción de modelos mediante PyFunc, model cards y tests.; Incluye evaluación con AUC-ROC, F1 y calibración de probabilidades, además de segmentación de riesgo A-F bajo estándares de crédito.; Valora experiencia en servicios financieros, burós de crédito o portafolios de crédito comercial.; La infraestructura agentic aparece explícitamente como deseable mediante Mosaic AI Agent Framework, agent orchestration y MCP.; La vacante oficial está publicada como Remote Full Time y fuentes recientes la identifican como abierta para México.\nSource gaps: Muttdata es una empresa de servicios/consultoría de Data & AI, categoría depriorizada frente a compañías de producto, banca o fintech; se conserva por el ajuste extraordinariamente específico del proyecto.; PySpark y SQL no aparecen como requisitos explícitos en esta vacante concreta.; No se menciona liderazgo formal de personas ni mentoría como responsabilidad principal.; El componente GenAI/agentic es deseable, no el núcleo del rol.",
+      "vacancy_id": "vac-67ff92b0c1f8ca68"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-67ff92b0c1f8ca68"
+}
