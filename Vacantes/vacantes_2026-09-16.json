@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-16",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "muttdata-796013c7-b441-4ac9-b27c-7b47ee6aab39",
+      "puesto": "Senior Data Scientist - Credit Risk Modeler - Databricks",
+      "empresa": "Muttdata",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México / LATAM (cliente en Ciudad de México)",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "2026-09-15",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Ajuste de dominio excepcional: ownership directo de un Credit Score productivo, segmentación por probabilidad de default, líneas de crédito dinámicas y expected loss.",
+          "Requiere experiencia demostrable en credit risk, scoring y supervised machine learning, altamente alineada con experiencia bancaria y de riesgo.",
+          "Alineación técnica directa con Python, scikit-learn, XGBoost, MLflow, estadística, validación y producción de modelos mediante PyFunc, model cards y tests.",
+          "Incluye evaluación con AUC-ROC, F1 y calibración de probabilidades, además de segmentación de riesgo A-F bajo estándares de crédito.",
+          "Valora experiencia en servicios financieros, burós de crédito o portafolios de crédito comercial.",
+          "La infraestructura agentic aparece explícitamente como deseable mediante Mosaic AI Agent Framework, agent orchestration y MCP.",
+          "La vacante oficial está publicada como Remote Full Time y fuentes recientes la identifican como abierta para México."
+        ],
+        "posibles_gaps": [
+          "Muttdata es una empresa de servicios/consultoría de Data & AI, categoría depriorizada frente a compañías de producto, banca o fintech; se conserva por el ajuste extraordinariamente específico del proyecto.",
+          "PySpark y SQL no aparecen como requisitos explícitos en esta vacante concreta.",
+          "No se menciona liderazgo formal de personas ni mentoría como responsabilidad principal.",
+          "El componente GenAI/agentic es deseable, no el núcleo del rol."
+        ],
+        "resumen": "Es el mejor hallazgo nuevo de la corrida: Senior Data Scientist remoto con un problema casi perfectamente transferible desde banca —credit scoring, PD, expected loss, líneas dinámicas, Python/XGBoost, MLflow y producción end-to-end— además de exposición opcional a agentes/MCP. Aunque la empresa es consultoría, el nivel de coincidencia funcional justifica priorizar la postulación."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "Scikit-learn",
+        "XGBoost",
+        "Machine Learning",
+        "Credit Risk",
+        "Credit Scoring",
+        "Probability of Default",
+        "Expected Loss",
+        "Gradient Boosting",
+        "AUC-ROC",
+        "F1",
+        "Probability Calibration",
+        "MLflow",
+        "PyFunc",
+        "Model Cards",
+        "Databricks",
+        "Mosaic AI Agent Framework",
+        "MCP",
+        "Agent Orchestration"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.lever.co/muttdata/796013c7-b441-4ac9-b27c-7b47ee6aab39"
+    }
+  ]
+}
