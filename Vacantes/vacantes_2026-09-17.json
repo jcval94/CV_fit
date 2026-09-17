@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-17",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "muttdata-f476bdc4-d3d1-4441-b80f-83e4fd9354ff",
+      "puesto": "Data Analytics Engineer - Feature Engineering - Databricks - #3",
+      "empresa": "Muttdata",
+      "categoria_empresa": "Otro",
+      "ubicacion": "México / LATAM (cliente en Ciudad de México)",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 2 días",
+      "porcentaje_ajuste": 94,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Ajuste de dominio excepcional con banca y riesgo: construye y gobierna las features que alimentan directamente un modelo de Credit Score.",
+          "Trabaja con comportamiento transaccional y crediticio, incluyendo frecuencia, recencia, monto, engagement digital y morosidad.",
+          "Alineación técnica directa con Python y SQL avanzados, Databricks, Unity Catalog, feature engineering, data governance, lineage y calidad de datos.",
+          "Responsabilidad end-to-end sobre consistencia training-production, deployment pipeline, monitoreo y fuente única de verdad para el modelo.",
+          "Valora experiencia con datos financieros y contempla infraestructura agentic mediante Mosaic AI Agent Framework, agent orchestration y MCP.",
+          "Es remote-first para LATAM y el proyecto está asociado a una multinacional con operación en Ciudad de México."
+        ],
+        "posibles_gaps": [
+          "El título formal es Data Analytics Engineer y no Senior/Lead Data Scientist, por lo que queda ligeramente fuera de los roles objetivo estrictos.",
+          "Muttdata es una empresa de servicios/consultoría de Data & AI, categoría depriorizada frente a producto, banca o fintech.",
+          "PySpark, A/B testing y liderazgo formal de personas no aparecen como requisitos explícitos.",
+          "El componente GenAI/agentic es deseable y no el núcleo del puesto."
+        ],
+        "resumen": "Oportunidad nueva con coincidencia funcional extraordinariamente alta por Credit Score, riesgo crediticio, Python/SQL, Databricks y feature engineering productivo. Se incluye pese al título y al carácter consultivo de Muttdata porque el problema de negocio es casi directamente transferible desde experiencia bancaria avanzada."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Databricks",
+        "Unity Catalog",
+        "Feature Engineering",
+        "Credit Scoring",
+        "Credit Risk",
+        "Data Governance",
+        "Data Lineage",
+        "Data Quality",
+        "Feature Store",
+        "Mosaic AI Agent Framework",
+        "MCP",
+        "Agent Orchestration"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://jobs.lever.co/muttdata/f476bdc4-d3d1-4441-b80f-83e4fd9354ff"
+    }
+  ]
+}
