@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-95816b8b8a1a97df::core",
+      "chunk_type": "core",
+      "content_hash": "10b765e2d10ae118cae5adc9603299cc22b8cca0f5395e9d6de2918d3c442a7d",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-17.json"
+      ],
+      "text": "Role: Data Analytics Engineer - Feature Engineering - Databricks - #3\nCompany: Muttdata\nCompany category: Otro\nLocation: México / LATAM (cliente en Ciudad de México)\nWork model: Remote\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-95816b8b8a1a97df"
+    },
+    {
+      "chunk_id": "vac-95816b8b8a1a97df::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "30956621ee12e27e08cf688f480791f55d8da92176809d1403c048366e6cffb7",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-17.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Databricks; Unity Catalog; Feature Engineering; Credit Scoring; Credit Risk; Data Governance; Data Lineage; Data Quality; Feature Store; Mosaic AI Agent Framework; MCP; Agent Orchestration",
+      "vacancy_id": "vac-95816b8b8a1a97df"
+    },
+    {
+      "chunk_id": "vac-95816b8b8a1a97df::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "d150482d411f58113231f6f9fcef924efb25b40c017daf1ab493b028417012df",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-17.json"
+      ],
+      "text": "Source fit score: 94/100\nSource fit summary: Oportunidad nueva con coincidencia funcional extraordinariamente alta por Credit Score, riesgo crediticio, Python/SQL, Databricks y feature engineering productivo. Se incluye pese al título y al carácter consultivo de Muttdata porque el problema de negocio es casi directamente transferible desde experiencia bancaria avanzada.\nSource strengths: Ajuste de dominio excepcional con banca y riesgo: construye y gobierna las features que alimentan directamente un modelo de Credit Score.; Trabaja con comportamiento transaccional y crediticio, incluyendo frecuencia, recencia, monto, engagement digital y morosidad.; Alineación técnica directa con Python y SQL avanzados, Databricks, Unity Catalog, feature engineering, data governance, lineage y calidad de datos.; Responsabilidad end-to-end sobre consistencia training-production, deployment pipeline, monitoreo y fuente única de verdad para el modelo.; Valora experiencia con datos financieros y contempla infraestructura agentic mediante Mosaic AI Agent Framework, agent orchestration y MCP.; Es remote-first para LATAM y el proyecto está asociado a una multinacional con operación en Ciudad de México.\nSource gaps: El título formal es Data Analytics Engineer y no Senior/Lead Data Scientist, por lo que queda ligeramente fuera de los roles objetivo estrictos.; Muttdata es una empresa de servicios/consultoría de Data & AI, categoría depriorizada frente a producto, banca o fintech.; PySpark, A/B testing y liderazgo formal de personas no aparecen como requisitos explícitos.; El componente GenAI/agentic es deseable y no el núcleo del puesto.",
+      "vacancy_id": "vac-95816b8b8a1a97df"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-95816b8b8a1a97df"
+}
