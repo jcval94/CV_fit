@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-26999f318aad1b72::core",
+      "chunk_type": "core",
+      "content_hash": "ddd7551419df00c45334290cff1d02cd55a1fa5f964f106839a73b3d3b572076",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "text": "Role: Financial Data Scientist AI-First\nCompany: ubimia\nCompany category: Otro\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-26999f318aad1b72"
+    },
+    {
+      "chunk_id": "vac-26999f318aad1b72::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "7d3c04f47670ed7ef3b156d29bc86641ee4ee5dbb1284aea424f08e9468c44b0",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; R; Machine Learning; Credit Risk; Credit Modeling; Logistic Regression; Classification Trees; Segmentation; Econometrics; Financial Statistics; Macroeconomic Models; AI-First",
+      "vacancy_id": "vac-26999f318aad1b72"
+    },
+    {
+      "chunk_id": "vac-26999f318aad1b72::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "3687b11e6f6800a3655eb3f3aada7ea10fc26759b8a7ef35a45b6ff9eff6b03b",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "text": "Source fit score: 97/100\nSource fit summary: Vacante nueva de altísima afinidad por riesgo de crédito, servicios financieros, Python, SQL, modelado estadístico y Machine Learning, con modalidad híbrida en CDMX. El encaje de dominio es especialmente fuerte y justifica priorizarla, aunque el componente AI-First parece más declarativo que GenAI productivo y debe validarse el nivel de liderazgo y la frecuencia de trabajo en cliente.\nSource strengths: Ajuste de dominio excepcional: el rol trabaja directamente sobre riesgo de crédito para particulares y empresas y cubre distintas fases del ciclo de vida del crédito.; Requiere desarrollo y seguimiento de modelos con regresión logística, árboles de clasificación, segmentación, Machine Learning, econometría, estadística financiera y modelos macroeconómicos.; Alineación técnica directa con Python y SQL, además de programación estadística y construcción de soluciones analíticas aplicadas a entidades financieras.; La experiencia previa en banca, riesgo, fraude, modelado y analítica avanzada es altamente transferible al problema central de la posición.; La formación cuantitativa y la maestría en Data Science superan los requisitos académicos; el posgrado en estadística, matemáticas o finanzas aparece explícitamente como valorado.; La posición se publica explícitamente como híbrida en Ciudad de México y con mentalidad AI-First, cumpliendo la segunda prioridad de modalidad.\nSource gaps: PySpark no aparece como requisito explícito.; GenAI, agentes y A/B testing no aparecen como responsabilidades concretas pese al posicionamiento AI-First.; La descripción no explicita liderazgo formal de personas o mentoría.; Existe disponibilidad para viajar y posibilidad de trabajar en casa del cliente, por lo que conviene validar la frecuencia presencial real.; La empresa presta soluciones tecnológicas al sector financiero y el rol tiene componente de proyectos para clientes, por lo que queda detrás de una fintech o banco de producto puro en prioridad de empresa.",
+      "vacancy_id": "vac-26999f318aad1b72"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-26999f318aad1b72"
+}

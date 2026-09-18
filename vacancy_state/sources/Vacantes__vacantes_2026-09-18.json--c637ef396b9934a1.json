@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "application_language": "en",
+      "city": "Ciudad de México, México",
+      "company": "ubimia",
+      "company_category": "Otro",
+      "content_hash": "e177b160dbe009b435eb69b60c25bfe63687029d3289eb35d0c157e6ff6a3933",
+      "description": null,
+      "fit_gaps": [
+        "PySpark no aparece como requisito explícito.",
+        "GenAI, agentes y A/B testing no aparecen como responsabilidades concretas pese al posicionamiento AI-First.",
+        "La descripción no explicita liderazgo formal de personas o mentoría.",
+        "Existe disponibilidad para viajar y posibilidad de trabajar en casa del cliente, por lo que conviene validar la frecuencia presencial real.",
+        "La empresa presta soluciones tecnológicas al sector financiero y el rol tiene componente de proyectos para clientes, por lo que queda detrás de una fintech o banco de producto puro en prioridad de empresa."
+      ],
+      "fit_score": 97.0,
+      "fit_strengths": [
+        "Ajuste de dominio excepcional: el rol trabaja directamente sobre riesgo de crédito para particulares y empresas y cubre distintas fases del ciclo de vida del crédito.",
+        "Requiere desarrollo y seguimiento de modelos con regresión logística, árboles de clasificación, segmentación, Machine Learning, econometría, estadística financiera y modelos macroeconómicos.",
+        "Alineación técnica directa con Python y SQL, además de programación estadística y construcción de soluciones analíticas aplicadas a entidades financieras.",
+        "La experiencia previa en banca, riesgo, fraude, modelado y analítica avanzada es altamente transferible al problema central de la posición.",
+        "La formación cuantitativa y la maestría en Data Science superan los requisitos académicos; el posgrado en estadística, matemáticas o finanzas aparece explícitamente como valorado.",
+        "La posición se publica explícitamente como híbrida en Ciudad de México y con mentalidad AI-First, cumpliendo la segunda prioridad de modalidad."
+      ],
+      "fit_summary": "Vacante nueva de altísima afinidad por riesgo de crédito, servicios financieros, Python, SQL, modelado estadístico y Machine Learning, con modalidad híbrida en CDMX. El encaje de dominio es especialmente fuerte y justifica priorizarla, aunque el componente AI-First parece más declarativo que GenAI productivo y debe validarse el nivel de liderazgo y la frecuencia de trabajo en cliente.",
+      "identity_key": "26999f318aad1b7296597b287e188060eb0ae78d9ff53c84a0b5db38cb945d5e",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.86,
+      "language_source": "role_title",
+      "location_raw": "Ciudad de México, México",
+      "posted_date": "2026-09-18",
+      "posted_date_raw": "2026-09-18",
+      "provenance": [
+        {
+          "source_commit": "2799cf5c5b49260efe2dd8f0d60b6634764aa2a1",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "22b0bd491c1476005c760f5d72f242b5a26263aabf415c1d685494e66e18d330",
+          "source_native_id": "ubimia-4466152233",
+          "source_path": "Vacantes/vacantes_2026-09-18.json",
+          "source_search_date": "2026-09-18",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Financial Data Scientist AI-First",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "R",
+        "Machine Learning",
+        "Credit Risk",
+        "Credit Modeling",
+        "Logistic Regression",
+        "Classification Trees",
+        "Segmentation",
+        "Econometrics",
+        "Financial Statistics",
+        "Macroeconomic Models",
+        "AI-First"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/financial-data-scientist-ai-first-ciudad-de-m%C3%A9xico-h%C3%ADbrido-at-ubimia%C2%AE-4466152233",
+      "vacancy_id": "vac-26999f318aad1b72",
+      "work_model": "Hybrid"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "22b0bd491c1476005c760f5d72f242b5a26263aabf415c1d685494e66e18d330",
+  "source_path": "Vacantes/vacantes_2026-09-18.json",
+  "status": "valid"
+}

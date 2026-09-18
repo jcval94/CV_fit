@@ -4630,6 +4630,262 @@
       "text": "Source fit score: 91/100\nSource fit summary: Muy buena opción si se quiere transicionar a Decision Science/Producto con seniority alto y compensación visible.\nSource strengths: Rol senior orientado a decisiones estratégicas, producto, crecimiento e impacto de negocio.; Requiere ownership end-to-end de iniciativas analíticas y trabajo con stakeholders senior.; Fuerte ajuste con experimentación, modelado, storytelling ejecutivo y liderazgo técnico.\nSource gaps: Menor conexión directa con banca, fraude y riesgo.; La fuente oficial de postulación no fue visible; el enlace disponible proviene de un agregador con detalle salarial.",
       "vacancy_id": "vac-21cefd168f6539b4"
     },
+    "vac-26999f318aad1b72::core": {
+      "chunk_type": "core",
+      "content_hash": "ddd7551419df00c45334290cff1d02cd55a1fa5f964f106839a73b3d3b572076",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "terms": {
+        "100": 1,
+        "ai-first": 1,
+        "application": 1,
+        "category": 1,
+        "ciudad": 1,
+        "company": 2,
+        "data": 1,
+        "de": 1,
+        "eligible": 1,
+        "en": 1,
+        "false": 1,
+        "fidelity": 1,
+        "financial": 1,
+        "generation": 1,
+        "hybrid": 1,
+        "jd": 2,
+        "language": 1,
+        "location": 1,
+        "mexico": 2,
+        "model": 1,
+        "otro": 1,
+        "role": 1,
+        "scientist": 1,
+        "sparse": 1,
+        "ubimia": 1,
+        "work": 1
+      },
+      "text": "Role: Financial Data Scientist AI-First\nCompany: ubimia\nCompany category: Otro\nLocation: Ciudad de México, México\nWork model: Hybrid\nApplication language: en\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-26999f318aad1b72"
+    },
+    "vac-26999f318aad1b72::requirements": {
+      "chunk_type": "requirements",
+      "content_hash": "7d3c04f47670ed7ef3b156d29bc86641ee4ee5dbb1284aea424f08e9468c44b0",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "terms": {
+        "ai-first": 1,
+        "capabilities": 1,
+        "classification": 1,
+        "credit": 2,
+        "econometrics": 1,
+        "financial": 1,
+        "learning": 1,
+        "logistic": 1,
+        "machine": 1,
+        "macroeconomic": 1,
+        "modeling": 1,
+        "models": 1,
+        "python": 1,
+        "regression": 1,
+        "risk": 1,
+        "segmentation": 1,
+        "sql": 1,
+        "statistics": 1,
+        "technologies": 1,
+        "trees": 1
+      },
+      "text": "Technologies / capabilities: Python; SQL; R; Machine Learning; Credit Risk; Credit Modeling; Logistic Regression; Classification Trees; Segmentation; Econometrics; Financial Statistics; Macroeconomic Models; AI-First",
+      "vacancy_id": "vac-26999f318aad1b72"
+    },
+    "vac-26999f318aad1b72::source-fit": {
+      "chunk_type": "source-fit",
+      "content_hash": "3687b11e6f6800a3655eb3f3aada7ea10fc26759b8a7ef35a45b6ff9eff6b03b",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-18.json"
+      ],
+      "terms": {
+        "100": 1,
+        "97": 1,
+        "academicos": 1,
+        "ademas": 1,
+        "afinidad": 1,
+        "agentes": 1,
+        "ai-first": 2,
+        "ai-first.": 1,
+        "ajuste": 1,
+        "al": 3,
+        "alineacion": 1,
+        "altamente": 1,
+        "altisima": 1,
+        "analitica": 1,
+        "analiticas": 1,
+        "aparece": 2,
+        "aparecen": 1,
+        "aplicadas": 1,
+        "arboles": 1,
+        "aunque": 1,
+        "avanzada": 1,
+        "banca": 1,
+        "banco": 1,
+        "casa": 1,
+        "cdmx.": 1,
+        "central": 1,
+        "ciclo": 1,
+        "ciudad": 1,
+        "clasificacion": 1,
+        "cliente": 1,
+        "cliente.": 1,
+        "clientes": 1,
+        "como": 4,
+        "componente": 2,
+        "con": 4,
+        "concretas": 1,
+        "construccion": 1,
+        "conviene": 1,
+        "credito": 2,
+        "credito.": 1,
+        "cuantitativa": 1,
+        "cubre": 1,
+        "cumpliendo": 1,
+        "data": 1,
+        "de": 21,
+        "debe": 1,
+        "declarativo": 1,
+        "del": 3,
+        "desarrollo": 1,
+        "descripcion": 1,
+        "detras": 1,
+        "directa": 1,
+        "directamente": 1,
+        "disponibilidad": 1,
+        "distintas": 1,
+        "dominio": 2,
+        "econometria": 1,
+        "el": 6,
+        "empresa": 1,
+        "empresa.": 1,
+        "empresas": 1,
+        "en": 8,
+        "encaje": 1,
+        "entidades": 1,
+        "es": 2,
+        "especialmente": 1,
+        "estadistica": 3,
+        "estadistico": 1,
+        "excepcional": 1,
+        "existe": 1,
+        "experiencia": 1,
+        "explicita": 1,
+        "explicitamente": 2,
+        "explicito.": 1,
+        "fases": 1,
+        "financiera": 1,
+        "financieras.": 1,
+        "financiero": 1,
+        "financieros": 1,
+        "finanzas": 1,
+        "fintech": 1,
+        "fit": 2,
+        "formacion": 1,
+        "formal": 1,
+        "fraude": 1,
+        "frecuencia": 2,
+        "fuerte": 1,
+        "gaps": 1,
+        "genai": 2,
+        "hibrida": 2,
+        "justifica": 1,
+        "la": 10,
+        "learning": 2,
+        "liderazgo": 2,
+        "lo": 2,
+        "logistica": 1,
+        "los": 1,
+        "machine": 2,
+        "macroeconomicos.": 1,
+        "maestria": 1,
+        "mas": 1,
+        "matematicas": 1,
+        "mentalidad": 1,
+        "mentoria.": 1,
+        "mexico": 1,
+        "modalidad": 1,
+        "modalidad.": 1,
+        "modelado": 2,
+        "modelos": 2,
+        "nivel": 1,
+        "no": 3,
+        "nueva": 1,
+        "para": 3,
+        "parece": 1,
+        "particulares": 1,
+        "personas": 1,
+        "pese": 1,
+        "por": 3,
+        "posgrado": 1,
+        "posibilidad": 1,
+        "posicion": 1,
+        "posicion.": 1,
+        "posicionamiento": 1,
+        "presencial": 1,
+        "presta": 1,
+        "previa": 1,
+        "prioridad": 2,
+        "priorizarla": 1,
+        "problema": 1,
+        "productivo": 1,
+        "producto": 1,
+        "programacion": 1,
+        "proyectos": 1,
+        "publica": 1,
+        "puro": 1,
+        "pyspark": 1,
+        "python": 2,
+        "que": 3,
+        "queda": 1,
+        "real.": 1,
+        "regresion": 1,
+        "requiere": 1,
+        "requisito": 1,
+        "requisitos": 1,
+        "responsabilidades": 1,
+        "riesgo": 3,
+        "rol": 2,
+        "science": 1,
+        "score": 1,
+        "se": 1,
+        "sector": 1,
+        "segmentacion": 1,
+        "seguimiento": 1,
+        "segunda": 1,
+        "servicios": 1,
+        "sobre": 1,
+        "soluciones": 2,
+        "source": 4,
+        "sql": 2,
+        "strengths": 1,
+        "summary": 1,
+        "superan": 1,
+        "tecnica": 1,
+        "tecnologicas": 1,
+        "testing": 1,
+        "tiene": 1,
+        "trabaja": 1,
+        "trabajar": 1,
+        "trabajo": 1,
+        "transferible": 1,
+        "una": 1,
+        "vacante": 1,
+        "validar": 1,
+        "validarse": 1,
+        "valorado.": 1,
+        "viajar": 1,
+        "vida": 1
+      },
+      "text": "Source fit score: 97/100\nSource fit summary: Vacante nueva de altísima afinidad por riesgo de crédito, servicios financieros, Python, SQL, modelado estadístico y Machine Learning, con modalidad híbrida en CDMX. El encaje de dominio es especialmente fuerte y justifica priorizarla, aunque el componente AI-First parece más declarativo que GenAI productivo y debe validarse el nivel de liderazgo y la frecuencia de trabajo en cliente.\nSource strengths: Ajuste de dominio excepcional: el rol trabaja directamente sobre riesgo de crédito para particulares y empresas y cubre distintas fases del ciclo de vida del crédito.; Requiere desarrollo y seguimiento de modelos con regresión logística, árboles de clasificación, segmentación, Machine Learning, econometría, estadística financiera y modelos macroeconómicos.; Alineación técnica directa con Python y SQL, además de programación estadística y construcción de soluciones analíticas aplicadas a entidades financieras.; La experiencia previa en banca, riesgo, fraude, modelado y analítica avanzada es altamente transferible al problema central de la posición.; La formación cuantitativa y la maestría en Data Science superan los requisitos académicos; el posgrado en estadística, matemáticas o finanzas aparece explícitamente como valorado.; La posición se publica explícitamente como híbrida en Ciudad de México y con mentalidad AI-First, cumpliendo la segunda prioridad de modalidad.\nSource gaps: PySpark no aparece como requisito explícito.; GenAI, agentes y A/B testing no aparecen como responsabilidades concretas pese al posicionamiento AI-First.; La descripción no explicita liderazgo formal de personas o mentoría.; Existe disponibilidad para viajar y posibilidad de trabajar en casa del cliente, por lo que conviene validar la frecuencia presencial real.; La empresa presta soluciones tecnológicas al sector financiero y el rol tiene componente de proyectos para clientes, por lo que queda detrás de una fintech o banco de producto puro en prioridad de empresa.",
+      "vacancy_id": "vac-26999f318aad1b72"
+    },
     "vac-2de566514601700a::core": {
       "chunk_type": "core",
       "content_hash": "6e104e884b8f88400bb6b9ac4dff9feefdceef518a8b588b0638ca5af48afe0b",
@@ -22002,6 +22258,8 @@
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::core",
@@ -22355,6 +22613,7 @@
     ],
     "97": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-823f77b83c66b2b3::source-fit",
@@ -22474,6 +22733,9 @@
     "academica": [
       "vac-8f02c78bc4e3ec05::core",
       "vac-b968fdbcca798458::core"
+    ],
+    "academicos": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "accelerate": [
       "vac-6d9bdccca1ff49c3::core",
@@ -22785,6 +23047,7 @@
     "ademas": [
       "vac-08cdc2b18dc43994::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-4d221178a483222a::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -22965,6 +23228,9 @@
       "vac-b968fdbcca798458::core",
       "vac-e678a6f22c3d2512::source-fit"
     ],
+    "afinidad": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "africa": [
       "vac-14b95b3407bcb148::core",
       "vac-c3b310c0b6bbeb81::source-fit"
@@ -23006,6 +23272,7 @@
     "agentes": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -23188,9 +23455,13 @@
     "ai-first": [
       "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-ec60c81f6e6eed7e::core"
     ],
     "ai-first.": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-ec60c81f6e6eed7e::source-fit"
     ],
     "ai-powered": [
@@ -23247,6 +23518,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-08cdc2b18dc43994::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4cd82869cadf198d::source-fit",
@@ -23280,6 +23552,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -23393,6 +23666,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -23489,6 +23763,7 @@
     "altamente": [
       "vac-08cdc2b18dc43994::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-8f02c78bc4e3ec05::core",
       "vac-8f02c78bc4e3ec05::source-fit",
@@ -23513,6 +23788,9 @@
     ],
     "alternativos": [
       "vac-6fe0c8aa95790e4e::source-fit"
+    ],
+    "altisima": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "altisimo": [
       "vac-f563f704f36a7477::source-fit"
@@ -23691,6 +23969,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-6cb5f8926375e8d1::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit",
@@ -23707,6 +23986,7 @@
       "vac-06b8a139f4c05252::core",
       "vac-06b8a139f4c05252::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-4085811308aea748::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -24025,6 +24305,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-823f77b83c66b2b3::source-fit",
       "vac-8f02c78bc4e3ec05::source-fit",
@@ -24039,6 +24320,7 @@
     "aparecen": [
       "vac-06b8a139f4c05252::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
@@ -24127,6 +24409,7 @@
       "vac-adb898e887a1d895::core"
     ],
     "aplicadas": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-8f02c78bc4e3ec05::core"
     ],
     "aplicadas.": [
@@ -24208,6 +24491,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -24393,6 +24677,9 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-6d9bdccca1ff49c3::core",
       "vac-84cc6dffc5671fa7::core"
+    ],
+    "arboles": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "architect": [
       "vac-b0135cc07603db99::core"
@@ -24759,6 +25046,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4cd82869cadf198d::source-fit",
@@ -24895,6 +25183,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5cbdd1b45ef6adc3::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
       "vac-89b026f359c34a6e::core",
@@ -25155,6 +25444,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -25215,6 +25505,7 @@
     ],
     "banco": [
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-fda43fe81d1d93f8::core"
     ],
     "banco.": [
@@ -26018,6 +26309,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-3779c9b875b7032d::requirements",
@@ -26193,6 +26485,9 @@
     "carrying": [
       "vac-a675ea74767544e2::core"
     ],
+    "casa": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "case.": [
       "vac-4d221178a483222a::core",
       "vac-631f0119ff49ee6b::core"
@@ -26249,6 +26544,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -26360,6 +26656,7 @@
     "cdmx.": [
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-8e15ef88d6f94d4c::source-fit",
       "vac-e207786358f849fa::source-fit",
       "vac-e373819a283d98c0::source-fit"
@@ -26390,6 +26687,7 @@
       "vac-e678a6f22c3d2512::source-fit"
     ],
     "central": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-84cc6dffc5671fa7::core",
       "vac-89b026f359c34a6e::source-fit",
       "vac-ec60c81f6e6eed7e::source-fit"
@@ -26576,6 +26874,7 @@
     ],
     "ciclo": [
       "vac-04e92192e608ea02::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-88deea25e71219c2::core",
@@ -26660,6 +26959,8 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-0b8d9e2486263c90::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::core",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-5cbdd1b45ef6adc3::core",
@@ -26736,6 +27037,7 @@
       "vac-f563f704f36a7477::source-fit"
     ],
     "clasificacion": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-4cd82869cadf198d::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -26750,6 +27052,7 @@
       "vac-823f77b83c66b2b3::source-fit"
     ],
     "classification": [
+      "vac-26999f318aad1b72::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-4cd82869cadf198d::core",
       "vac-4cd82869cadf198d::requirements",
@@ -26815,12 +27118,14 @@
     ],
     "cliente": [
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::core",
       "vac-95816b8b8a1a97df::core",
       "vac-a6ea4042585a94c8::source-fit",
       "vac-fda43fe81d1d93f8::core"
     ],
     "cliente.": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-b968fdbcca798458::core"
     ],
@@ -26829,6 +27134,7 @@
       "vac-06b8a139f4c05252::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-88deea25e71219c2::core",
       "vac-adb898e887a1d895::core",
@@ -27325,6 +27631,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -27404,6 +27711,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -27631,6 +27939,7 @@
     ],
     "componente": [
       "vac-0b8d9e2486263c90::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -27781,6 +28090,7 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -27863,7 +28173,8 @@
       "vac-67ff92b0c1f8ca68::source-fit"
     ],
     "concretas": [
-      "vac-06b8a139f4c05252::core"
+      "vac-06b8a139f4c05252::core",
+      "vac-26999f318aad1b72::source-fit"
     ],
     "concretos.": [
       "vac-f681c22e0be1959b::source-fit"
@@ -28088,6 +28399,7 @@
     ],
     "construccion": [
       "vac-04e92192e608ea02::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-5cbdd1b45ef6adc3::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -28455,6 +28767,7 @@
     ],
     "conviene": [
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -28779,6 +29092,7 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -28832,6 +29146,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-a6ea4042585a94c8::source-fit",
@@ -28849,6 +29164,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit"
     ],
     "creemos": [
@@ -28939,6 +29255,7 @@
     "cuantitativa": [
       "vac-04e92192e608ea02::requirements",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-6fe2dc93c1fba97b::source-fit",
       "vac-823f77b83c66b2b3::core"
     ],
@@ -28970,6 +29287,9 @@
     "cuautitlan": [
       "vac-fda43fe81d1d93f8::core",
       "vac-fda43fe81d1d93f8::source-fit"
+    ],
+    "cubre": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "cubriendo": [
       "vac-04e92192e608ea02::core",
@@ -29022,6 +29342,7 @@
     ],
     "cumpliendo": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-b0135cc07603db99::source-fit",
       "vac-e373819a283d98c0::source-fit"
     ],
@@ -29164,6 +29485,8 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::source-fit",
@@ -29429,6 +29752,8 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
@@ -29517,6 +29842,7 @@
       "vac-f681c22e0be1959b::source-fit"
     ],
     "debe": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-e373819a283d98c0::source-fit",
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
@@ -29646,6 +29972,9 @@
     ],
     "declaracion": [
       "vac-6fe2dc93c1fba97b::core"
+    ],
+    "declarativo": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "declinar": [
       "vac-fda43fe81d1d93f8::core"
@@ -29778,6 +30107,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -30064,6 +30394,7 @@
       "vac-04e92192e608ea02::core",
       "vac-0b8d9e2486263c90::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-823f77b83c66b2b3::source-fit",
@@ -30098,6 +30429,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -30367,6 +30699,7 @@
     ],
     "detras": [
       "vac-06b8a139f4c05252::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-89b026f359c34a6e::source-fit",
       "vac-b968fdbcca798458::source-fit"
@@ -30552,6 +30885,7 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -30569,6 +30903,7 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -30791,6 +31126,7 @@
       "vac-f681c22e0be1959b::core"
     ],
     "disponibilidad": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-84cc6dffc5671fa7::core",
       "vac-8f02c78bc4e3ec05::core",
@@ -30818,6 +31154,9 @@
     ],
     "distinguir": [
       "vac-5c30cdb4a6936db2::source-fit"
+    ],
+    "distintas": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "distintos": [
       "vac-823f77b83c66b2b3::core"
@@ -30999,6 +31338,7 @@
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4cd82869cadf198d::source-fit",
@@ -31210,7 +31550,11 @@
     "econml.": [
       "vac-84cc6dffc5671fa7::source-fit"
     ],
+    "econometria": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "econometrics": [
+      "vac-26999f318aad1b72::requirements",
       "vac-6fe0c8aa95790e4e::core"
     ],
     "economia": [
@@ -31405,6 +31749,7 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -31487,6 +31832,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -31679,6 +32025,7 @@
       "vac-04e92192e608ea02::core",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-12dc570424d531ae::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -31698,6 +32045,7 @@
       "vac-fda43fe81d1d93f8::core"
     ],
     "empresa.": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-b968fdbcca798458::core"
     ],
     "empresarial": [
@@ -31714,6 +32062,7 @@
     "empresas": [
       "vac-04e92192e608ea02::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-adb898e887a1d895::core",
       "vac-b968fdbcca798458::source-fit",
@@ -31741,6 +32090,8 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::core",
@@ -31846,6 +32197,7 @@
     ],
     "encaje": [
       "vac-04e92192e608ea02::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5cbdd1b45ef6adc3::source-fit",
       "vac-71351017a6b16474::source-fit",
       "vac-fda43fe81d1d93f8::source-fit"
@@ -32142,6 +32494,9 @@
     "enterprise.": [
       "vac-6fe2dc93c1fba97b::core"
     ],
+    "entidades": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "entity": [
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements"
@@ -32356,6 +32711,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -32503,6 +32859,7 @@
     "especialmente": [
       "vac-0b8d9e2486263c90::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-88deea25e71219c2::source-fit",
       "vac-b968fdbcca798458::source-fit",
       "vac-eea30930c49313c6::source-fit",
@@ -32626,6 +32983,7 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
       "vac-0b8d9e2486263c90::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-40287b76d923b07f::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -32644,6 +33002,7 @@
     ],
     "estadistico": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-84cc6dffc5671fa7::core",
@@ -33062,6 +33421,7 @@
     ],
     "excepcional": [
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-823f77b83c66b2b3::source-fit",
       "vac-95816b8b8a1a97df::source-fit",
@@ -33160,6 +33520,7 @@
     ],
     "existe": [
       "vac-0b8d9e2486263c90::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-6fe2dc93c1fba97b::source-fit",
@@ -33277,6 +33638,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -33491,6 +33853,7 @@
     ],
     "explicita": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
       "vac-823f77b83c66b2b3::source-fit",
@@ -33508,6 +33871,7 @@
     ],
     "explicitamente": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-6fe2dc93c1fba97b::source-fit",
@@ -33538,6 +33902,7 @@
     ],
     "explicito.": [
       "vac-0b8d9e2486263c90::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-aa5a49e7562dfce4::source-fit",
       "vac-b0135cc07603db99::source-fit",
       "vac-ec60c81f6e6eed7e::source-fit"
@@ -33714,6 +34079,7 @@
     ],
     "false": [
       "vac-137a952beed9f737::core",
+      "vac-26999f318aad1b72::core",
       "vac-40287b76d923b07f::core",
       "vac-4085811308aea748::core",
       "vac-5c30cdb4a6936db2::core",
@@ -33758,6 +34124,9 @@
     ],
     "farmaceutico": [
       "vac-aa5a49e7562dfce4::source-fit"
+    ],
+    "fases": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "fast": [
       "vac-14b95b3407bcb148::core"
@@ -33864,6 +34233,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -33956,6 +34326,8 @@
       "vac-06b8a139f4c05252::core",
       "vac-08cdc2b18dc43994::core",
       "vac-14b95b3407bcb148::core",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::requirements",
       "vac-4cd82869cadf198d::core",
       "vac-4cd82869cadf198d::source-fit",
       "vac-4d221178a483222a::core",
@@ -33976,6 +34348,7 @@
       "vac-04e92192e608ea02::core",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
       "vac-adb898e887a1d895::core"
     ],
@@ -33985,9 +34358,13 @@
     "financieras": [
       "vac-88deea25e71219c2::core"
     ],
+    "financieras.": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "financiero": [
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-88deea25e71219c2::source-fit",
       "vac-8f02c78bc4e3ec05::core",
@@ -34004,6 +34381,7 @@
     ],
     "financieros": [
       "vac-04e92192e608ea02::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-8f02c78bc4e3ec05::core",
       "vac-8f02c78bc4e3ec05::source-fit",
@@ -34022,6 +34400,7 @@
     "finanzas": [
       "vac-04e92192e608ea02::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-adb898e887a1d895::core"
@@ -34076,6 +34455,7 @@
       "vac-0b8d9e2486263c90::source-fit",
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-40287b76d923b07f::core",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -34139,6 +34519,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -34380,6 +34761,7 @@
     "formacion": [
       "vac-04e92192e608ea02::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-6fe2dc93c1fba97b::source-fit",
       "vac-823f77b83c66b2b3::source-fit",
@@ -34392,6 +34774,7 @@
       "vac-e678a6f22c3d2512::source-fit"
     ],
     "formal": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-95816b8b8a1a97df::source-fit",
@@ -34560,6 +34943,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -34604,6 +34988,7 @@
       "vac-6d9bdccca1ff49c3::core"
     ],
     "frecuencia": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-95816b8b8a1a97df::source-fit"
     ],
     "free": [
@@ -34682,6 +35067,7 @@
       "vac-06b8a139f4c05252::core",
       "vac-137a952beed9f737::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -34878,6 +35264,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -34981,6 +35368,7 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::core",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -35082,6 +35470,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -35909,6 +36298,7 @@
       "vac-0b8d9e2486263c90::core",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-a675ea74767544e2::source-fit",
       "vac-aa5a49e7562dfce4::source-fit",
@@ -36113,6 +36503,7 @@
       "vac-0b8d9e2486263c90::core",
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::core",
       "vac-3779c9b875b7032d::core",
       "vac-4d221178a483222a::core",
       "vac-4d221178a483222a::requirements",
@@ -37709,6 +38100,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -37844,6 +38236,7 @@
       "vac-e1579e279d47b8a9::core"
     ],
     "justifica": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
@@ -38008,6 +38401,7 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -38122,6 +38516,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -38413,6 +38808,8 @@
       "vac-1816ac379c3f1f5c::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-4085811308aea748::requirements",
@@ -38666,6 +39063,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
@@ -38977,6 +39375,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -39020,6 +39419,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -39083,9 +39483,11 @@
       "vac-fda43fe81d1d93f8::core"
     ],
     "logistic": [
+      "vac-26999f318aad1b72::requirements",
       "vac-6fe0c8aa95790e4e::core"
     ],
     "logistica": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core"
     ],
     "logistics": [
@@ -39151,6 +39553,7 @@
       "vac-04e92192e608ea02::core",
       "vac-06b8a139f4c05252::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-4cd82869cadf198d::source-fit",
       "vac-6cb5f8926375e8d1::core",
@@ -39207,6 +39610,8 @@
       "vac-1816ac379c3f1f5c::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-4085811308aea748::requirements",
@@ -39276,6 +39681,12 @@
     "machinelearning": [
       "vac-0b8d9e2486263c90::core"
     ],
+    "macroeconomic": [
+      "vac-26999f318aad1b72::requirements"
+    ],
+    "macroeconomicos.": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "made": [
       "vac-06b8a139f4c05252::core",
       "vac-4cd82869cadf198d::core",
@@ -39284,6 +39695,7 @@
     ],
     "maestria": [
       "vac-06b8a139f4c05252::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-823f77b83c66b2b3::source-fit",
       "vac-84cc6dffc5671fa7::core",
@@ -39557,6 +39969,7 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-40287b76d923b07f::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -39617,6 +40030,7 @@
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-84cc6dffc5671fa7::core",
       "vac-8f02c78bc4e3ec05::core",
@@ -39939,6 +40353,7 @@
       "vac-fda43fe81d1d93f8::core"
     ],
     "mentalidad": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-88deea25e71219c2::core",
       "vac-b968fdbcca798458::core"
     ],
@@ -39969,6 +40384,7 @@
     ],
     "mentoria.": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-aa5a49e7562dfce4::source-fit",
       "vac-e373819a283d98c0::source-fit",
       "vac-e678a6f22c3d2512::source-fit"
@@ -40136,6 +40552,8 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-3779c9b875b7032d::source-fit",
@@ -40479,6 +40897,7 @@
       "vac-0b8d9e2486263c90::core",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -40500,6 +40919,7 @@
     ],
     "modalidad.": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-89b026f359c34a6e::source-fit",
       "vac-b0135cc07603db99::source-fit",
       "vac-e373819a283d98c0::source-fit"
@@ -40521,6 +40941,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -40596,6 +41017,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-4cd82869cadf198d::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -40620,6 +41042,7 @@
       "vac-12dc570424d531ae::core",
       "vac-12dc570424d531ae::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-4cd82869cadf198d::core",
       "vac-4cd82869cadf198d::requirements",
       "vac-5c30cdb4a6936db2::requirements",
@@ -40674,6 +41097,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
@@ -40715,6 +41139,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-4cd82869cadf198d::core",
       "vac-631f0119ff49ee6b::core",
@@ -41340,6 +41765,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-71351017a6b16474::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -41400,6 +41826,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -41589,6 +42016,7 @@
     "nueva": [
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -42380,6 +42808,7 @@
     ],
     "otro": [
       "vac-0b8d9e2486263c90::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-4085811308aea748::core",
@@ -42640,6 +43069,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -42694,6 +43124,7 @@
     ],
     "parece": [
       "vac-06b8a139f4c05252::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-e678a6f22c3d2512::source-fit",
       "vac-f681c22e0be1959b::source-fit",
       "vac-fda43fe81d1d93f8::source-fit"
@@ -42754,6 +43185,9 @@
       "vac-06b8a139f4c05252::core",
       "vac-b968fdbcca798458::core",
       "vac-f681c22e0be1959b::core"
+    ],
+    "particulares": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "particularly": [
       "vac-12dc570424d531ae::core",
@@ -43093,6 +43527,7 @@
     "personas": [
       "vac-04e92192e608ea02::core",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-6fe2dc93c1fba97b::core",
@@ -43124,6 +43559,7 @@
       "vac-b968fdbcca798458::source-fit"
     ],
     "pese": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-95816b8b8a1a97df::source-fit",
       "vac-b8bc41ba93efd84c::source-fit",
       "vac-b968fdbcca798458::source-fit",
@@ -43460,6 +43896,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -43538,10 +43975,12 @@
       "vac-08cdc2b18dc43994::core"
     ],
     "posgrado": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-6fe2dc93c1fba97b::source-fit",
       "vac-b968fdbcca798458::core"
     ],
     "posibilidad": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit"
     ],
     "posible": [
@@ -43550,6 +43989,7 @@
     "posicion": [
       "vac-0b8d9e2486263c90::core",
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-6cb5f8926375e8d1::source-fit",
@@ -43560,8 +44000,12 @@
       "vac-e1579e279d47b8a9::source-fit",
       "vac-e373819a283d98c0::source-fit"
     ],
+    "posicion.": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "posicionamiento": [
-      "vac-12dc570424d531ae::source-fit"
+      "vac-12dc570424d531ae::source-fit",
+      "vac-26999f318aad1b72::source-fit"
     ],
     "posiciones": [
       "vac-89b026f359c34a6e::core"
@@ -43884,6 +44328,7 @@
       "vac-a675ea74767544e2::source-fit"
     ],
     "presencial": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-8f02c78bc4e3ec05::source-fit"
     ],
@@ -43916,6 +44361,7 @@
       "vac-ec60c81f6e6eed7e::core"
     ],
     "presta": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-b968fdbcca798458::source-fit"
     ],
     "prestaciones": [
@@ -43942,6 +44388,7 @@
       "vac-fda43fe81d1d93f8::source-fit"
     ],
     "previa": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-8f02c78bc4e3ec05::source-fit",
       "vac-e678a6f22c3d2512::source-fit",
@@ -44037,6 +44484,7 @@
     ],
     "prioridad": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-8f02c78bc4e3ec05::source-fit",
       "vac-b0135cc07603db99::source-fit",
       "vac-e207786358f849fa::source-fit",
@@ -44102,6 +44550,7 @@
       "vac-89b026f359c34a6e::core"
     ],
     "priorizarla": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
     "privacidad": [
@@ -44190,6 +44639,7 @@
       "vac-ec60c81f6e6eed7e::core"
     ],
     "problema": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -44467,6 +44917,7 @@
     ],
     "productivo": [
       "vac-04e92192e608ea02::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-88deea25e71219c2::source-fit",
       "vac-8e15ef88d6f94d4c::source-fit",
@@ -44513,6 +44964,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4d221178a483222a::core",
@@ -44701,6 +45153,7 @@
     "programacion": [
       "vac-04e92192e608ea02::core",
       "vac-0b8d9e2486263c90::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-88deea25e71219c2::core",
@@ -45008,6 +45461,7 @@
     ],
     "proyectos": [
       "vac-0b8d9e2486263c90::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-6fe2dc93c1fba97b::source-fit",
       "vac-8f02c78bc4e3ec05::core",
@@ -45040,6 +45494,7 @@
     ],
     "publica": [
       "vac-08cdc2b18dc43994::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4d221178a483222a::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit",
@@ -45162,6 +45617,9 @@
     "purely": [
       "vac-6fe2dc93c1fba97b::core"
     ],
+    "puro": [
+      "vac-26999f318aad1b72::source-fit"
+    ],
     "puro.": [
       "vac-06b8a139f4c05252::source-fit",
       "vac-137a952beed9f737::source-fit",
@@ -45203,6 +45661,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::core",
       "vac-3779c9b875b7032d::requirements",
       "vac-3779c9b875b7032d::source-fit",
@@ -45262,6 +45721,8 @@
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
@@ -45469,6 +45930,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
@@ -45511,6 +45973,7 @@
     ],
     "queda": [
       "vac-06b8a139f4c05252::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-89b026f359c34a6e::source-fit",
@@ -45758,6 +46221,7 @@
     "real.": [
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-b8bc41ba93efd84c::source-fit"
     ],
     "reales": [
@@ -46073,6 +46537,7 @@
       "vac-fda43fe81d1d93f8::source-fit"
     ],
     "regresion": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-823f77b83c66b2b3::source-fit"
     ],
@@ -46082,6 +46547,7 @@
     "regression": [
       "vac-12dc570424d531ae::core",
       "vac-137a952beed9f737::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-4cd82869cadf198d::core",
       "vac-4cd82869cadf198d::requirements",
       "vac-6d9bdccca1ff49c3::core",
@@ -46498,6 +46964,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
@@ -46602,6 +47069,7 @@
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-84cc6dffc5671fa7::core",
       "vac-aa5a49e7562dfce4::source-fit",
       "vac-b0135cc07603db99::source-fit",
@@ -46619,6 +47087,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -46749,6 +47218,7 @@
       "vac-04e92192e608ea02::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-84cc6dffc5671fa7::core",
       "vac-8f02c78bc4e3ec05::core",
       "vac-adb898e887a1d895::core",
@@ -47011,6 +47481,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
@@ -47101,6 +47572,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-4cd82869cadf198d::core",
       "vac-4cd82869cadf198d::source-fit",
       "vac-67ff92b0c1f8ca68::core",
@@ -47186,6 +47658,7 @@
       "vac-12dc570424d531ae::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -47231,6 +47704,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -47554,6 +48028,7 @@
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -47617,6 +48092,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-4085811308aea748::core",
@@ -47728,6 +48204,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -47853,6 +48330,7 @@
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -47922,6 +48400,7 @@
       "vac-6d9bdccca1ff49c3::core"
     ],
     "sector": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-84cc6dffc5671fa7::core",
       "vac-88deea25e71219c2::source-fit",
       "vac-8f02c78bc4e3ec05::core"
@@ -47965,6 +48444,7 @@
       "vac-a675ea74767544e2::core"
     ],
     "segmentacion": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -47972,6 +48452,7 @@
       "vac-eea30930c49313c6::source-fit"
     ],
     "segmentation": [
+      "vac-26999f318aad1b72::requirements",
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::requirements",
       "vac-6fe0c8aa95790e4e::requirements"
@@ -47981,6 +48462,7 @@
     ],
     "seguimiento": [
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-b968fdbcca798458::core"
     ],
@@ -47990,6 +48472,7 @@
       "vac-fda43fe81d1d93f8::core"
     ],
     "segunda": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
@@ -48304,6 +48787,7 @@
     "servicios": [
       "vac-04e92192e608ea02::core",
       "vac-04e92192e608ea02::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -48667,6 +49151,7 @@
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-4d221178a483222a::source-fit",
@@ -48805,6 +49290,7 @@
       "vac-0b8d9e2486263c90::core",
       "vac-0b8d9e2486263c90::source-fit",
       "vac-12dc570424d531ae::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
@@ -48931,6 +49417,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -49037,6 +49524,7 @@
     ],
     "sparse": [
       "vac-137a952beed9f737::core",
+      "vac-26999f318aad1b72::core",
       "vac-40287b76d923b07f::core",
       "vac-4085811308aea748::core",
       "vac-5c30cdb4a6936db2::core",
@@ -49133,6 +49621,8 @@
       "vac-1816ac379c3f1f5c::requirements",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::core",
       "vac-2de566514601700a::requirements",
       "vac-2de566514601700a::source-fit",
@@ -49387,6 +49877,7 @@
       "vac-12dc570424d531ae::requirements",
       "vac-137a952beed9f737::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-6cb5f8926375e8d1::core",
       "vac-6fe0c8aa95790e4e::core",
@@ -49525,6 +50016,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -49786,6 +50278,7 @@
       "vac-14b95b3407bcb148::source-fit",
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-40287b76d923b07f::source-fit",
@@ -49827,6 +50320,9 @@
       "vac-f563f704f36a7477::source-fit",
       "vac-f681c22e0be1959b::source-fit",
       "vac-fda43fe81d1d93f8::source-fit"
+    ],
+    "superan": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "superar": [
       "vac-04e92192e608ea02::core",
@@ -50259,6 +50755,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::requirements",
       "vac-2de566514601700a::requirements",
       "vac-3779c9b875b7032d::core",
       "vac-3779c9b875b7032d::requirements",
@@ -50330,6 +50827,7 @@
       "vac-06b8a139f4c05252::source-fit",
       "vac-08cdc2b18dc43994::source-fit",
       "vac-0b8d9e2486263c90::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-5c30cdb4a6936db2::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-823f77b83c66b2b3::core",
@@ -50452,6 +50950,7 @@
       "vac-8f02c78bc4e3ec05::core"
     ],
     "tecnologicas": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-8f02c78bc4e3ec05::core"
     ],
     "tecnologico": [
@@ -50562,6 +51061,7 @@
       "vac-14b95b3407bcb148::core",
       "vac-14b95b3407bcb148::requirements",
       "vac-21cefd168f6539b4::requirements",
+      "vac-26999f318aad1b72::source-fit",
       "vac-631f0119ff49ee6b::core",
       "vac-6d9bdccca1ff49c3::core",
       "vac-6d9bdccca1ff49c3::requirements",
@@ -50831,6 +51331,7 @@
       "vac-8f02c78bc4e3ec05::core"
     ],
     "tiene": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-5cbdd1b45ef6adc3::source-fit",
       "vac-a6ea4042585a94c8::source-fit",
       "vac-e6ba16ea5ebb9105::source-fit"
@@ -51077,6 +51578,7 @@
     ],
     "trabaja": [
       "vac-137a952beed9f737::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-6d9bdccca1ff49c3::source-fit",
       "vac-88deea25e71219c2::core",
@@ -51095,6 +51597,7 @@
     "trabajar": [
       "vac-04e92192e608ea02::requirements",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-6fe2dc93c1fba97b::core",
       "vac-8f02c78bc4e3ec05::core",
       "vac-b0135cc07603db99::source-fit",
@@ -51108,6 +51611,7 @@
       "vac-04e92192e608ea02::core",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-2de566514601700a::requirements",
       "vac-40287b76d923b07f::source-fit",
       "vac-4cd82869cadf198d::source-fit",
@@ -51234,6 +51738,7 @@
       "vac-e678a6f22c3d2512::source-fit"
     ],
     "transferible": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
       "vac-95816b8b8a1a97df::source-fit",
       "vac-b0135cc07603db99::source-fit",
@@ -51385,6 +51890,9 @@
     "treatment": [
       "vac-e373819a283d98c0::requirements",
       "vac-e373819a283d98c0::source-fit"
+    ],
+    "trees": [
+      "vac-26999f318aad1b72::requirements"
     ],
     "trends": [
       "vac-6fe2dc93c1fba97b::core",
@@ -51538,6 +52046,9 @@
       "vac-1816ac379c3f1f5c::source-fit",
       "vac-6cb5f8926375e8d1::source-fit"
     ],
+    "ubimia": [
+      "vac-26999f318aad1b72::core"
+    ],
     "ul": [
       "vac-0b8d9e2486263c90::core",
       "vac-4d221178a483222a::core",
@@ -51602,6 +52113,7 @@
       "vac-08cdc2b18dc43994::source-fit",
       "vac-12dc570424d531ae::source-fit",
       "vac-1816ac379c3f1f5c::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-4085811308aea748::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -51967,6 +52479,7 @@
       "vac-0b8d9e2486263c90::source-fit",
       "vac-137a952beed9f737::source-fit",
       "vac-14b95b3407bcb148::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-3779c9b875b7032d::source-fit",
       "vac-631f0119ff49ee6b::source-fit",
       "vac-67ff92b0c1f8ca68::source-fit",
@@ -52007,6 +52520,7 @@
     ],
     "validar": [
       "vac-1816ac379c3f1f5c::source-fit",
+      "vac-26999f318aad1b72::source-fit",
       "vac-40287b76d923b07f::source-fit",
       "vac-6fe0c8aa95790e4e::source-fit",
       "vac-e373819a283d98c0::source-fit",
@@ -52014,6 +52528,7 @@
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
     "validarse": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-b968fdbcca798458::core",
       "vac-e6ba16ea5ebb9105::source-fit"
     ],
@@ -52060,6 +52575,9 @@
     ],
     "valorado": [
       "vac-b968fdbcca798458::core"
+    ],
+    "valorado.": [
+      "vac-26999f318aad1b72::source-fit"
     ],
     "valoramos": [
       "vac-1816ac379c3f1f5c::core",
@@ -52282,6 +52800,7 @@
       "vac-823f77b83c66b2b3::core"
     ],
     "viajar": [
+      "vac-26999f318aad1b72::source-fit",
       "vac-4cd82869cadf198d::source-fit",
       "vac-8f02c78bc4e3ec05::core"
     ],
@@ -52291,6 +52810,7 @@
     ],
     "vida": [
       "vac-04e92192e608ea02::core",
+      "vac-26999f318aad1b72::source-fit",
       "vac-823f77b83c66b2b3::core",
       "vac-88deea25e71219c2::core",
       "vac-adb898e887a1d895::core",
@@ -52722,6 +53242,7 @@
       "vac-14b95b3407bcb148::requirements",
       "vac-1816ac379c3f1f5c::core",
       "vac-21cefd168f6539b4::core",
+      "vac-26999f318aad1b72::core",
       "vac-2de566514601700a::core",
       "vac-3779c9b875b7032d::core",
       "vac-40287b76d923b07f::core",
@@ -53096,6 +53617,11 @@
       "vac-21cefd168f6539b4::core",
       "vac-21cefd168f6539b4::requirements",
       "vac-21cefd168f6539b4::source-fit"
+    ],
+    "vac-26999f318aad1b72": [
+      "vac-26999f318aad1b72::core",
+      "vac-26999f318aad1b72::requirements",
+      "vac-26999f318aad1b72::source-fit"
     ],
     "vac-2de566514601700a": [
       "vac-2de566514601700a::core",
