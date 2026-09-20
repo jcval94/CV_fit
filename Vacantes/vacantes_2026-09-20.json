@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-20",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "santander-4466418416",
+      "puesto": "Gerente de ciencia de datos",
+      "empresa": "Santander México",
+      "categoria_empresa": "Banca",
+      "ubicacion": "Santa Fe, Ciudad de México, México",
+      "modalidad": "Presencial",
+      "fecha_publicacion": "Hace 1 semana",
+      "porcentaje_ajuste": 98,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Alineación excepcional con banca y riesgo de crédito: desarrolla modelos y soluciones de Ciencia de Datos aplicados a Riesgo de Crédito, Cliente y Negocio Comercial.",
+          "Ownership técnico de punta a punta: entendimiento del problema, preparación de datos, feature engineering, modelado, validación, documentación, implementación y monitoreo.",
+          "Requiere Python y SQL, estadística, modelización predictiva y Machine Learning.",
+          "Incluye evaluación de calibración, estabilidad, generalización y desempeño Out-of-Time, muy alineado con experiencia en model risk y monitoreo.",
+          "Trabaja con equipos de Datos y Tecnología para llevar modelos a producción de forma reproducible y escalable.",
+          "La experiencia previa en servicios financieros, riesgo de crédito y analítica de cliente/comercial es explícitamente valorada."
+        ],
+        "posibles_gaps": [
+          "La publicación recuperada no confirma modalidad híbrida; se clasifica conservadoramente como presencial pese a estar basada en Santa Fe, CDMX.",
+          "El rango solicitado es de 2 a 5 años, por debajo de los 9+ años del perfil, por lo que existe riesgo de sobrecalificación y debe validarse banda salarial y alcance real.",
+          "PySpark, GenAI y A/B testing no aparecen como requisitos explícitos.",
+          "El puesto reporta a un Subdirector de Ciencia de Datos, por lo que parece más un rol de ejecución técnica senior que un track Staff/Lead independiente."
+        ],
+        "resumen": "Oportunidad de ajuste extraordinariamente alto por banca, riesgo de crédito, Python/SQL, modelado end-to-end, calibración, validación OOT, producción y monitoreo. El principal punto a validar antes de priorizarla es la modalidad, ya que la publicación no confirma esquema híbrido, además de la banda/seniority efectivo frente a un perfil de 9+ años."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Credit Risk",
+        "Predictive Modeling",
+        "Feature Engineering",
+        "Probability Calibration",
+        "Out-of-Time Validation",
+        "Model Explainability",
+        "Model Monitoring",
+        "Production ML",
+        "Statistics"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/gerente-de-ciencia-de-datos-at-santander-m%C3%A9xico-4466418416"
+    }
+  ]
+}
