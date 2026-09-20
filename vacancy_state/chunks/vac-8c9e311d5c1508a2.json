@@ -1,0 +1,36 @@
+{
+  "chunks": [
+    {
+      "chunk_id": "vac-8c9e311d5c1508a2::core",
+      "chunk_type": "core",
+      "content_hash": "51d88f2e7ca45fdada83f6dd0cd5c56d95a777a93dfba6f9bf671cb97b4a4424",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-20.json"
+      ],
+      "text": "Role: Gerente de ciencia de datos\nCompany: Santander México\nCompany category: Banca\nLocation: Santa Fe, Ciudad de México, México\nWork model: On-site\nApplication language: und\nJD fidelity: sparse (0/100)\nJD generation eligible: false",
+      "vacancy_id": "vac-8c9e311d5c1508a2"
+    },
+    {
+      "chunk_id": "vac-8c9e311d5c1508a2::requirements",
+      "chunk_type": "requirements",
+      "content_hash": "35a835a88ee907c55446a29a843b598ff338c178b9bdc447dd735e354f7c5bcf",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-20.json"
+      ],
+      "text": "Technologies / capabilities: Python; SQL; Machine Learning; Credit Risk; Predictive Modeling; Feature Engineering; Probability Calibration; Out-of-Time Validation; Model Explainability; Model Monitoring; Production ML; Statistics",
+      "vacancy_id": "vac-8c9e311d5c1508a2"
+    },
+    {
+      "chunk_id": "vac-8c9e311d5c1508a2::source-fit",
+      "chunk_type": "source-fit",
+      "content_hash": "afe4cce767b1c92053ec056f388c2b32123b31abc84d39cabfdb469152882d8d",
+      "source_paths": [
+        "Vacantes/vacantes_2026-09-20.json"
+      ],
+      "text": "Source fit score: 98/100\nSource fit summary: Oportunidad de ajuste extraordinariamente alto por banca, riesgo de crédito, Python/SQL, modelado end-to-end, calibración, validación OOT, producción y monitoreo. El principal punto a validar antes de priorizarla es la modalidad, ya que la publicación no confirma esquema híbrido, además de la banda/seniority efectivo frente a un perfil de 9+ años.\nSource strengths: Alineación excepcional con banca y riesgo de crédito: desarrolla modelos y soluciones de Ciencia de Datos aplicados a Riesgo de Crédito, Cliente y Negocio Comercial.; Ownership técnico de punta a punta: entendimiento del problema, preparación de datos, feature engineering, modelado, validación, documentación, implementación y monitoreo.; Requiere Python y SQL, estadística, modelización predictiva y Machine Learning.; Incluye evaluación de calibración, estabilidad, generalización y desempeño Out-of-Time, muy alineado con experiencia en model risk y monitoreo.; Trabaja con equipos de Datos y Tecnología para llevar modelos a producción de forma reproducible y escalable.; La experiencia previa en servicios financieros, riesgo de crédito y analítica de cliente/comercial es explícitamente valorada.\nSource gaps: La publicación recuperada no confirma modalidad híbrida; se clasifica conservadoramente como presencial pese a estar basada en Santa Fe, CDMX.; El rango solicitado es de 2 a 5 años, por debajo de los 9+ años del perfil, por lo que existe riesgo de sobrecalificación y debe validarse banda salarial y alcance real.; PySpark, GenAI y A/B testing no aparecen como requisitos explícitos.; El puesto reporta a un Subdirector de Ciencia de Datos, por lo que parece más un rol de ejecución técnica senior que un track Staff/Lead independiente.",
+      "vacancy_id": "vac-8c9e311d5c1508a2"
+    }
+  ],
+  "schema_version": 1,
+  "vacancy_id": "vac-8c9e311d5c1508a2"
+}

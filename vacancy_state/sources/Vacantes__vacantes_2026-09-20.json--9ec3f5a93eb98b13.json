@@ -1,0 +1,82 @@
+{
+  "records": [
+    {
+      "application_language": "und",
+      "city": "Santa Fe, Ciudad de México, México",
+      "company": "Santander México",
+      "company_category": "Banca",
+      "content_hash": "f23881a0f46d044b558ecf2b888511419c96196cbdc296bac41e4f786b7892b3",
+      "description": null,
+      "fit_gaps": [
+        "La publicación recuperada no confirma modalidad híbrida; se clasifica conservadoramente como presencial pese a estar basada en Santa Fe, CDMX.",
+        "El rango solicitado es de 2 a 5 años, por debajo de los 9+ años del perfil, por lo que existe riesgo de sobrecalificación y debe validarse banda salarial y alcance real.",
+        "PySpark, GenAI y A/B testing no aparecen como requisitos explícitos.",
+        "El puesto reporta a un Subdirector de Ciencia de Datos, por lo que parece más un rol de ejecución técnica senior que un track Staff/Lead independiente."
+      ],
+      "fit_score": 98.0,
+      "fit_strengths": [
+        "Alineación excepcional con banca y riesgo de crédito: desarrolla modelos y soluciones de Ciencia de Datos aplicados a Riesgo de Crédito, Cliente y Negocio Comercial.",
+        "Ownership técnico de punta a punta: entendimiento del problema, preparación de datos, feature engineering, modelado, validación, documentación, implementación y monitoreo.",
+        "Requiere Python y SQL, estadística, modelización predictiva y Machine Learning.",
+        "Incluye evaluación de calibración, estabilidad, generalización y desempeño Out-of-Time, muy alineado con experiencia en model risk y monitoreo.",
+        "Trabaja con equipos de Datos y Tecnología para llevar modelos a producción de forma reproducible y escalable.",
+        "La experiencia previa en servicios financieros, riesgo de crédito y analítica de cliente/comercial es explícitamente valorada."
+      ],
+      "fit_summary": "Oportunidad de ajuste extraordinariamente alto por banca, riesgo de crédito, Python/SQL, modelado end-to-end, calibración, validación OOT, producción y monitoreo. El principal punto a validar antes de priorizarla es la modalidad, ya que la publicación no confirma esquema híbrido, además de la banda/seniority efectivo frente a un perfil de 9+ años.",
+      "identity_key": "8c9e311d5c1508a231444c431078169f266c475b6159c79b83b64d3787048b2a",
+      "jd_fidelity": "sparse",
+      "jd_fidelity_reasons": [
+        "description_chars=0",
+        "substantive_requirements=0",
+        "substantive_responsibilities=0",
+        "insufficient original JD detail; source-fit commentary and inferred tech stack do not count toward fidelity"
+      ],
+      "jd_fidelity_score": 0.0,
+      "jd_generation_eligible": false,
+      "language_confidence": 0.0,
+      "language_source": "undetermined",
+      "location_raw": "Santa Fe, Ciudad de México, México",
+      "posted_date": null,
+      "posted_date_raw": "Hace 1 semana",
+      "provenance": [
+        {
+          "source_commit": "c9ad5b75e9683e112125839212a94d195774007a",
+          "source_entry_index": 0,
+          "source_format": "vacantes_v1",
+          "source_hash": "f95ddff8972db59b5348f13689b6f57460dae99dd4793a889be3264b85c47a31",
+          "source_native_id": "santander-4466418416",
+          "source_path": "Vacantes/vacantes_2026-09-20.json",
+          "source_search_date": "2026-09-20",
+          "source_updated_at": null
+        }
+      ],
+      "requirements": [],
+      "responsibilities": [],
+      "role_title": "Gerente de ciencia de datos",
+      "salary": "No especificado",
+      "schema_version": 2,
+      "seniority": null,
+      "tech_stack": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Credit Risk",
+        "Predictive Modeling",
+        "Feature Engineering",
+        "Probability Calibration",
+        "Out-of-Time Validation",
+        "Model Explainability",
+        "Model Monitoring",
+        "Production ML",
+        "Statistics"
+      ],
+      "url": "https://mx.linkedin.com/jobs/view/gerente-de-ciencia-de-datos-at-santander-m%C3%A9xico-4466418416",
+      "vacancy_id": "vac-8c9e311d5c1508a2",
+      "work_model": "On-site"
+    }
+  ],
+  "schema_version": 1,
+  "source_hash": "f95ddff8972db59b5348f13689b6f57460dae99dd4793a889be3264b85c47a31",
+  "source_path": "Vacantes/vacantes_2026-09-20.json",
+  "status": "valid"
+}
