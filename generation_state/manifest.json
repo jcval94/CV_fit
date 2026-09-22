@@ -2911,16 +2911,16 @@
       "cumulative_known_cost_usd": 0.0,
       "error": "AuthenticationError: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************rGQA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}",
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
-      "fingerprint": "af5d648bbeb1cd0f2a7ff136b7d913db4c922355b47085602a4fa01f9bf57ae0",
+      "fingerprint": "0259edcf1161f8f02ae9148b16984a1ffc2d9426cbe8dbc6ca42b71ae83d5f4c",
       "generation_logic_version": 6,
       "ready_to_send": false,
       "retrieval_mode": "hybrid-rerank",
       "review_required": true,
-      "run_id": "auto-5ba19dba3eaa34a7592bc34edf3374fdb780fd75-vac-ec60c81f6e6eed7e",
-      "source_commit": "5ba19dba3eaa34a7592bc34edf3374fdb780fd75",
+      "run_id": "auto-1de1352da2eee3ed6dd306cc02c76bd2f50164aa-vac-ec60c81f6e6eed7e",
+      "source_commit": "1de1352da2eee3ed6dd306cc02c76bd2f50164aa",
       "status": "FAILED_REVIEW_REQUIRED",
       "usage_report_file": "usage_report.json",
-      "vacancy_content_hash": "f243dd36759337bf59f7c7ef822c60804d901a654701c9d9e5b21238f2fda107"
+      "vacancy_content_hash": "933f6cd351add3b68d1554f03605a06bb87a619b88b187a9ea23f59c4a6611a8"
     },
     "vac-eea30930c49313c6": {
       "evidence_fingerprint": "8439705a78c63e8882039fc1ea31425e656fb0a038fbdf2f23e7fd7fcb96a715",
