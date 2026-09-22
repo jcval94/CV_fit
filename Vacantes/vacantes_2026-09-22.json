@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "fecha_busqueda": "2026-09-22",
+    "total_vacantes_encontradas": 1,
+    "criterio_temporal": "Últimos 7 días"
+  },
+  "vacantes": [
+    {
+      "id_vacante": "aplazo-4446924626",
+      "puesto": "Senior Data Scientist",
+      "empresa": "Aplazo",
+      "categoria_empresa": "Fintech",
+      "ubicacion": "México",
+      "modalidad": "Remoto",
+      "fecha_publicacion": "Hace 18 horas",
+      "porcentaje_ajuste": 99,
+      "razon_ajuste": {
+        "puntos_fuertes": [
+          "Ajuste de dominio excepcional: fintech BNPL mexicana con trabajo directo en Credit Risk, underwriting, fraude y collections.",
+          "Ownership end-to-end de proyectos de Data Science: datos, modelado, deployment y monitoreo post-lanzamiento.",
+          "Alineación técnica directa con Python, SQL y frameworks estándar de Machine Learning.",
+          "Experiencia con LLMs y GenAI forma parte explícita de los requisitos del rol y la empresa se define como AI-first.",
+          "Experimentación y A/B testing a escala aparecen explícitamente como experiencia altamente valorada.",
+          "Valora experiencia previa en fintech, BNPL, credit risk y fraud modeling, lo que hace especialmente transferible la experiencia bancaria del perfil.",
+          "El rol trabaja transversalmente entre Risk, Growth y AI y colabora directamente con Lead y Staff Data Scientists, con alta autonomía y exposición a decisiones de producto."
+        ],
+        "posibles_gaps": [
+          "El rango publicado solicita 4 a 8 años de experiencia, por debajo de los 9+ años del perfil; conviene validar nivel, banda salarial y posibilidad de evolución hacia Lead/Staff.",
+          "PySpark no aparece como requisito explícito.",
+          "La mentoría o gestión formal de personas no figura como responsabilidad principal, aunque el rol tiene alta autonomía técnica."
+        ],
+        "resumen": "Es el mejor hallazgo nuevo de esta corrida y uno de los matches más completos del pipeline: combina fintech mexicana, crédito, fraude, Python/SQL, ML productivo end-to-end, experimentación, GenAI y ownership. Por alineación de dominio y stack merece prioridad máxima de postulación; el principal punto a validar es que el seniority y compensación estén a la altura de un perfil de 9+ años."
+      },
+      "stack_clave_detectado": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Credit Risk",
+        "Underwriting",
+        "Fraud Modeling",
+        "Collections",
+        "Personalization",
+        "Recommendation Systems",
+        "A/B Testing",
+        "Experimentation",
+        "LLMs",
+        "GenAI",
+        "MLOps",
+        "Feature Pipelines",
+        "Model Monitoring",
+        "Production ML"
+      ],
+      "rango_salarial": "No especificado",
+      "url_postulacion": "https://mx.linkedin.com/jobs/view/senior-data-scientist-at-aplazo-4446924626"
+    }
+  ]
+}
